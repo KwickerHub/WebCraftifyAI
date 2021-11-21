@@ -27,9 +27,9 @@ You'll see the folder structure and file naming standards, please abide by it.
          |-- images
          |-- js
 ```
-* Create all JS files in the ```assets/js``` folder
+* Create all JS files in the ```js``` folder
 
-* Images & icons go in ```assets/images``` & ```assets/icons``` folders respectively
+* Images & icons go in ```images``` & ```icons``` folders respectively
 * Use lowercase letters for file names
 * Use hyphens for naming CSS-classes and IDs, eg ```header-section```. Use readable names.
 * Javascript functions/variables use ``` snake_case``` naming convention.
