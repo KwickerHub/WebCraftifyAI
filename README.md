@@ -41,7 +41,7 @@ You'll see the folder structure and file naming standards, please abide by it.
 
 ### IMPORTANT!
 * Create a new branch for every feature you add, push and create a pull request to the ```dev``` branch.
-* Do not push directly to ```main``` or ```deploy``` branches!
+* Do not push directly to ```main```, ```dev``` or ```deploy``` branches!
 * Use snake_case for branch names.
 * Write descriptive commit messages.
 * Explain what you did in a few words in your pull request comment.
