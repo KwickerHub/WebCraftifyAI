@@ -11,21 +11,18 @@ git clone *repo url here (without asterisks)*
 ```
 You'll see the folder structure and file naming standards, please abide by it.
 * Create a folder for the page you're working on ```pages``` folder.
-* Create ```css```, ```images```, ```js``` folders within the folder you just created. Each page must use different folder and files.
-* Shared js, images, css and icons will be stored in the ```common``` folder.
-* Below is an example for sign up page
+* Create ```css```, ```images```, ```js``` files within the appropriate folders.
+* Below is a sample of the folder structure.
 ```
- |-- common
+ |-- assets
     |-- icons
-    |-- images
+    |-- img
     |-- css
-    |-- js
+    |-- vendor
 
  |-- pages
-     |-- signup
-         |-- css
-         |-- images
-         |-- js
+     -signup.html
+    
 ```
 * Create all JS files in the ```js``` folder
 
