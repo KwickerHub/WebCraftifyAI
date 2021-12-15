@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --light-blue: #40C8E0;
+    --white: #ffffff;
+    --black: #000000;
+    --poppins: 'Poppins', sans-serif;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+#blue-btn{
+    background-color: var(--light-blue);
+    color: var(--white);
+    border: 1px solid var(--light-blue);
+}
+#white-btn{
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--white);
+}
+.text-white{
+    color: var(--white);
+}
+.logo{
+    font-family: var(--poppins);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 60px;
+    color: #FFFFFF;
+}
+nav ul li a{
+    color: var(--black);
+}
+.navbar .navbar-expand-lg .navbar-light{
+    background-color: transparent;
+}
+.banner{
+    background-image: url(../img/banner.png);
+    height: 100vh;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* padding: 40px 0; */
+}
+.text-content{
+    padding-top: 160px ;
+
+}
+.bannar-heading{
+    font-family:var(--poppins);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+}
+.banner-p{
+    font-family:var(--poppins);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    max-width: 80%;
+}
+.banner-btn{
+    background: #008EF5;
+    color: var(--white);
+    border-radius: 4px;
+    padding: 5px;
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    padding: 10px 30px;
+    border: none;
+    margin-top: 20px;
+}
+.section-one{
+    margin-top: 50px;
+    padding: 5px;
+}
+.section-one .p-1{
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--light-blue);
+}
+.section-one .p-2 {
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #2C2C2E;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .text-content{
+        padding-top: 300px ;
+    
+    }
+    .bannar-heading{
+        font-size: 64px;
+    }
+    .banner-p{
+        font-size: 30px;
+        max-width: 80%;
+    }
+    .banner-btn{
+        padding: 10px 50px;
+    }
+}
