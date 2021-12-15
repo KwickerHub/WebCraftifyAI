@@ -38,29 +38,32 @@ nav ul li a{
 .navbar .navbar-expand-lg .navbar-light{
     background-color: transparent;
 }
+.navbar-dark .navbar-nav .nav-link{
+    margin: 0 10px;
+}
 .banner{
     background-image: url(../img/banner.png);
-    height: 100vh;
+    height: 100%;
     /* background-repeat: no-repeat; */
     background-size: cover;
     /* padding: 40px 0; */
 }
 .text-content{
-    padding-top: 160px ;
+    padding-top: 200px ;
 
 }
 .bannar-heading{
     font-family:var(--poppins);
     font-style: normal;
     font-weight: 600;
-    font-size: 60px;
+    font-size: 45px;
 }
 .banner-p{
     font-family:var(--poppins);
     font-style: normal;
     font-weight: normal;
-    font-size: 28px;
-    max-width: 80%;
+    font-size: 24px;
+    max-width: 90%;
 }
 .banner-btn{
     background: #008EF5;
@@ -73,11 +76,13 @@ nav ul li a{
     font-size: 36px;
     padding: 10px 30px;
     border: none;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
-.section-one{
+.section-one, .section-two, .section-three, .section-four{
     margin-top: 50px;
     padding: 5px;
+    /* background: #E5E5E5; */
 }
 .section-one .p-1{
     font-family: var(--poppins);
@@ -94,10 +99,90 @@ nav ul li a{
     color: #2C2C2E;
     margin-top: 10px;
 }
+.section-two .p-1{
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    color: #666666;
+}
+.section-two .p-2{
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #666666;
+}
+.section-three .testimony{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.section-three .testimony-text{
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    color: #000000;
+}
+.testimony-coloured-1{
+    color: var(--light-blue);
+}
+.testimony-coloured-2{
+    color: orange;
+}
+.testimony-coloured-3{
+    color: purple;
+}
+.section-three .testimony-person{
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 33px;
+    color: #666666;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.section-four .box{
+    background-color: #E5E5E5;
+    opacity: 60;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+.section-four .box-sub{
+    margin-bottom: 40px;
+}
+.section-four .box-p{
+    /* color: var(--light-blue); */
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+}
+.section-four .box-p2{
+    color: var(--black);
+    font-family: var(--poppins);
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 76px;
+    letter-spacing: -0.02em;
+}
+.section-four .box-p3{
+    color: #666666;
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 33px;
+}
+
+
 
 @media (min-width: 768px) {
     .text-content{
-        padding-top: 300px ;
+        padding-top: 250px ;
+        padding-bottom: 100px;
     
     }
     .bannar-heading{
@@ -109,5 +194,16 @@ nav ul li a{
     }
     .banner-btn{
         padding: 10px 50px;
+        font-size: 36px;
+        margin-top: 20px;
+    }
+    .section-four .box-p{
+        font-size: 24px;
+    }
+    .section-four .box-p2{
+        line-height: 76px;
+    }
+    .section-four .box-p3{
+        font-size: 24px;
     }
 }
