@@ -12,6 +12,59 @@
 <!-- web font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <!-- //web font -->
+<!-- <script type="text/javascript" src="../assets/vendor/js/access_library.js"></script> -->
+<script type="text/javascript" src="../assets/vendor/js/jQuery_online_3_4_1.js"></script>
+<script>
+	function signUpFunc(){
+		var username, password, email;
+		username = $("#signup_username").val();
+		email = $("#signup_email").val();
+		password = $("#signup_password").val();
+		if(username.length == 0 || password.length == 0){
+			alert("Please All fields are required");
+		}else{
+			alert(username + email + password);
+			// you can change this link depending on what you are doing - Signin: sign_in.php
+			// Also check the requirements from the php file before using it.
+			$.post("../../backend/register_user.php", {
+				username: username,
+				password: password,
+				email: email,
+				key: "gjhtiidsimi09403jfjkdknf"
+			},
+			function(data, status){
+				alert("here already");
+				alert(data + "status: " + status );
+				dataJson = JSON.parse(data);
+				if (dataJson["status"] == "true"){
+					alert("account created successfully");
+					// we can redirect the user to the Dashboard environment...
+					// before the redirect, we can use a successful pop-up...
+				}else{
+					alert("we care having some issues" + dataJson["msg"]);
+					//we can use a pop-up here describing to the user the content in the alert-box
+				}
+				/* document.getElementById("move_design").style.display = "none";
+				//alert("Alerted data Report: "+ data + "\nServer Status: " + status);
+				if (data.includes("error") ){
+					$('.warning_problem').text(data);
+					$('.warning_popup').fadeIn(3000);
+				}
+				else if (data.includes("Singing-in in") ){
+					$('.content_successful').text("signing-in in progress...");
+					document.getElementById("move_design").style.display = "none";
+					$('.signup_side').fadeOut();
+					$('.successful_popup').fadeIn(3000);
+					window.location.assign("theWorld.php");
+				}
+				else{
+					document.getElementById("move_design").style.display = "none";
+					alert("Sign-in issues... Can't Sign-in");
+				} */
+			});
+		}
+	}
+</script>
 </head>
 <body>
 	<!-- main -->
@@ -19,10 +72,10 @@
 		<h1>SignUp Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="#" method="post">
-					<input class="text" type="text" name="Username" placeholder="Username" required="">
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
-					<input class="text" type="password" name="password" placeholder="Password" required="">
+				<form method="post">
+					<input class="text" id="signup_username" type="text" name="KwickerUsername" placeholder="Username" required="">
+					<input class="text email" id="signup_email" type="email"  name="Kwickeremail" placeholder="Email" required="">
+					<input class="text" id="signup_password" type="password" name="Kwickerpassword" placeholder="Password" required="">
 					<br>
 					<div class="wthree-text">
 						<label class="anim">
@@ -31,7 +84,7 @@
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGNUP">
+					<input onclick="signUpFunc()" type="submit" value="SIGNUP">
 				</form>
 				<p>Already have an Account? <a href="login.html"> Login Now!</a></p>
 			</div>
