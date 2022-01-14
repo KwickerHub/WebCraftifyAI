@@ -331,7 +331,7 @@ var $ = function(selector, category){
 					specs.selector + "{ animation-name: fadeIn; animation-duration: "+value+"s; animation-fill-mode: forwards; \
 				animation-iteration-count: 1; animation-timing-function: ease-in; animation-direction: normal; }"																										
 				);
-			//specs.element.setAttribute("style", ("display: "+dis_type+"; opacity: 1;" ));
+			specs.element.setAttribute("style", ("display: "+dis_type+"; opacity: 1;" ));
 
 		return specs;
 	}
@@ -1179,11 +1179,14 @@ $.post = function (url, parameters, callback, error, response){
 	    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
 		xmlhttp.onreadystatechange=function() {
-		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		//if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		var readySo = xmlhttp.readyState > 0 ? 4 : 0;
+		isStatus = xmlhttp.status >= 200 && xmlhttp.status < 300 || xmlhttp.status === 304;
+		if (readySo && isStatus) {
 	      	data = xmlhttp.response;
 	    	status = "successful";
 	      	callback(data, status);
-	    }else{
+	    }/* else{
 	    	status = "error";
 	    	data = xmlhttp.response;
 	    	if (isFunction(error) == false){
@@ -1191,7 +1194,7 @@ $.post = function (url, parameters, callback, error, response){
 	    	}else{
 	    		error(data, status);
 	    	}
-	    }
+	    } */
 	  }
 	xmlhttp.open("POST",url,true);
 	//xmlhttp.setRequestHeader('Content-Type', 'application/json');

@@ -21,7 +21,10 @@
 	
 	var selectedId = 'the_dev_dashboard';
 	var selectedElement;
-	window.onload = main('the_dev_dashboard');
+	window.onload = function(){
+		main('the_dev_dashboard');
+		loadSaveContent();
+	} 
 
 
 	function main(id){
@@ -50,7 +53,7 @@
 
 		newElem.setAttribute("style", defaultStyle);
 		newElem.setAttribute("id", elemId);
-		newElem.setAttribute("ondblclick", "change_selected(event, " + "'"+tag_name+"', '"+ elemId + "')" );
+		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
 
 		//var ref = document.querySelector('#the_dev_dashboard');
 		selectedElement = document.getElementById(selectedId);
@@ -60,10 +63,11 @@
 		//alert(home_msg.indexOf("This is the main dashboard arena"));
 		if ( home_msg.indexOf("This is the main dashboard arena") > -1 ) {
 			//ref.innerHTML = document.createElement(tag_name).toString();
-			var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+ tag_name +'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
+			//var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
 
 			/*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
-			ref.innerHTML = content;
+			ref.innerHTML = "";
+			ref.appendChild(newElem, ref);
 			getElementStyleDetails(elemId);
 			getElementAttrDetails(elemId);
 			selectCreated(elemId, tag_name);
@@ -119,13 +123,15 @@
 
 
 	function change_selected(e, type, id){
-		//alert(e.target.id);
+		alert(e.target.id + " ::: " + id);
 		id = (e.target.id) ? e.target.id : id;
-		selectedId = id;
-		selectedElement = document.getElementById(id);
-		$("#the_selected_elem").text(type + ' - #' + id + ' : Selected');
-		getElementStyleDetails(elemId);
-		getElementAttrDetails(elemId);
+		if(selectedId == id){
+			selectedId = id;
+			selectedElement = document.getElementById(id);
+			$("#the_selected_elem").text(type + ' - #' + id + ' : Selected');
+			getElementStyleDetails(id);
+			getElementAttrDetails(id);
+		}
 	}
 
 	function attr_changed(attribute){
@@ -137,6 +143,8 @@
 			//alert(newValue);
 			if (newValue != null || newValue !="") {
 				document.getElementById(selectedId).setAttribute(attribute, newValue);
+			}else{
+				document.getElementById(selectedId).removeAttribute(attribute);
 			}
 		}else{
 			var newValue = null;
@@ -148,12 +156,12 @@
 		var statusId = "style_"+property+"_status";
 		var propertyValue = "style_"+property;
 		if ( document.getElementById(statusId).checked == true) {
-			//alert("here");
 			var newValue = document.getElementById(propertyValue).value;
-			//alert(newValue);
 			if (newValue != null || newValue !="") {
 				//document.getElementById(selectedId).style.property = newValue;
 				document.getElementById(selectedId).style.cssText += property + ":" + newValue + ";";
+			}else{
+				document.getElementById(selectedId).style.removeProperty(property);
 			}
 		}else{
 			var newValue = null;
@@ -161,6 +169,7 @@
 			document.getElementById(selectedId).style.removeProperty(property);
 		}
 	}
+
 
 	function elem_allowDrop(ev){
 		ev.preventDefault();
@@ -183,15 +192,12 @@
 		elem = document.getElementById(elemId);
 	    if (!elem) return []; // Element does not exist, empty list.
 	    var win = document.defaultView || window, style, styleNode = [];
-	    if (win.getComputedStyle) { // Modern browsers 
+		if (win.getComputedStyle) { // Modern browsers 
 	        style = win.getComputedStyle(elem, '');
 	        for (var i=0; i<style.length; i++) {
-	            //styleNode.push( style[i] + ':' + style.getPropertyValue(style[i]) );
-	            //               ^name ^           ^ value ^
 	            propertyDis = "style_" + style[i].toString();
 	            property = document.getElementById(propertyDis);
 	            if ( property ){
-	            	//alert(propertyDis);
 	            	property.value = style.getPropertyValue(style[i]);
 	            }
 	        }
@@ -201,39 +207,181 @@
 	        	propertyDis = "style_" + name;
 	            property = document.getElementById(propertyDis);
 	            if ( !property ){
-	            	//alert(propertyDis);
 	            	property.value = style[name];
 	            }
-	            //styleNode.push( name + ':' + style[name] );
-	            //alert(name);
 	        }
 	    } else { // Ancient browser..
 	        style = elem.style;
 	        for (var i=0; i<style.length; i++) {
-	            //styleNode.push( style[i] + ':' + style[style[i]] );
-	            //alert(name);
 	            propertyDis = "style_" + style[i].toString();
 	            property = document.getElementById(propertyDis);
 	            if ( !property ){
 	            	//alert(propertyDis);
 	            	property.value = style[style[i]];
-	            	style[style[i]];
+	            	//style[style[i]];
 	            }
 	        }
 	    }
-	    //return styleNode;
 	}
 
 	function getElementAttrDetails(elem_id){
-
+		el = document.getElementById(elem_id);
+		var nodes=[], values=[];
+		for (var att, i = 0, atts = el.attributes, n = atts.length; i < n; i++){
+			attrDis = "attr_" + atts[i].nodeName.toString();
+			attributeArea = document.getElementById(attrDis);
+			if ( attributeArea ){
+				attributeArea.value = atts[i].nodeValue;
+			}
+		}
 	}
 
 
-	function addText(){
+	function bringText(){
+		//alert("here atleast");
+		//$("#text_pop_up_side").fadeIn(0);
+		var alreadyThere = document.getElementById(selectedId).textContent;
+		if (alreadyThere != "") {
+			document.getElementById("theTextPop").value = alreadyThere;
+		}
+		document.getElementById("text_pop_up_side").style.display = "block";
+	}
+
+	function addTextBtn(){
+		//var gotten = $("#theTextPop").val();
+		var gotten = document.getElementById("theTextPop").value
+		addText(gotten);
+	}
+
+
+
+	function addText(text2add){
+		var secElem = document.getElementById(selectedId);
+		var node = document.createTextNode(text2add);
+		secElem.appendChild(node);
+		document.getElementById("text_pop_up_side").style.display = "none";
 		/*var para = document.createElement("p");
-		var node = document.createTextNode("This is new.");
 		para.appendChild(node);*/
 	}
+
+	function removeSelected(){
+		var secElem = document.getElementById(selectedId);
+		secElem.remove();
+	}
+
+	function change2codeMode(){
+		var bodyElem = document.getElementById("the_dev_dashboard");
+		var body = bodyElem.innerHTML;
+		//alert(body);
+		//var textArea = document.getElementById("the_textarea_4_view");
+		//if ( typeof(textArea) != 'undefined' && textArea != null ){
+			var para = document.createElement("textarea");
+			height = "100%";
+			width = "100%";
+			background = colorCodeGenetor(6);
+			color = colorCodeGenetor(6);
+
+			defaultStyle = 'height: '+ height + '; width: '+ width + '; background-color: ' + background + '; ';
+
+			para.setAttribute("style", defaultStyle);
+			para.setAttribute("id", "the_textarea_4_view");
+			para.innerHTML = body;
+			//alert(para);
+			bodyElem.innerHTML = null;
+			bodyElem.append(para);
+		/* }else{
+			alert("already in code view mode");
+		} */
+	}
+
+	function change2webMode(){
+		var bodyElem = document.getElementById("the_dev_dashboard")
+		var body = bodyElem.innerHTML;
+		var textArea = document.getElementById("the_textarea_4_view");
+		if ( typeof(textArea) != 'undefined' && textArea != null ){
+			var para = document.getElementById("the_textarea_4_view").value
+			//alert(para);
+			bodyElem.innerHTML = para;
+		}else{
+			alert("You are already in Web mode")
+		}
+	}
+
+	// copied from W3 school... Thank you W3 schools
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + "; " + expires;
+	}
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1);
+			if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+		}
+		return "";
+	}
+
+	function checkCookie(cookiename) {
+		var cookieName = getCookie(cookiename);
+		ret = false;
+		if (cookieName != "") {
+			//alert("Welcome again " + user);
+			ret = true;
+		} else {
+			/* cookieName = prompt("Please enter your name:", "");
+			if (cookieName != "" && cookieName != null) {
+				setCookie("username", cookieName, 365);
+			} */
+			ret = false;
+		}
+		return ret;
+	}
+
+	function saveDevArena(){
+		var currentPage = window.location.href;
+
+		if (currentPage.includes("?project_title=")){
+			var xmlhttp = new XMLHttpRequest();
+			var pos = currentPage.indexOf("=");
+			var findings = currentPage.slice(pos+1); 
+			//$("#meta_description").attr("content", findings);
+			var cleaned_findings = findings.replace(/%20/g, " ").toString();
+			cleaned_findings = findings.replace(/-/g, " ").toString();
+			cname = "the_dev_enviro_" + cleaned_findings;
+			var cvalue = document.getElementById("the_dev_dashboard").innerHTML
+			//var body = bodyElem;
+			setCookie(cname, cvalue, 1000);
+			/* if ( checkCookie("project_title") ) {
+				cname = "the_dev_enviro_" + cleaned_findings;
+				var cvalue = document.getElementById("the_dev_dashboard").innerHTML
+				//var body = bodyElem;
+				setCookie(cname, cvalue, 1000);
+			}else{
+				cookieName = prompt("Enter your Project Name:", "");
+				projectName = "project_title";
+				if (cookieName != "" && cookieName != null) {
+					setCookie(projectName, cookieName, 1000);
+				}
+			} */
+		}else{
+			alert("could not find project name. Saving as untitle.");
+			var cvalue = document.getElementById("the_dev_dashboard").innerHTML
+			//cname = "the_dev_enviro_" + currentPage;
+			if (cvalue != "" && cvalue != null) {
+				setCookie(currentPage, cvalue, 1000);
+			}
+		}
+	}
+
+	function loadSaveContent(){
+		
+	}
+
 
 	function replaceSelected(){
 		/*var parent = document.getElementById("div1");
@@ -241,7 +389,7 @@
 		parent.replaceChild(para,child);*/
 	}
 
-	function insertB4Child(){
+	function insertElementB4(){
 		/*var element = document.getElementById("div1");
 		var child = document.getElementById("p1");
 		element.insertBefore(para,child);*/
@@ -276,7 +424,7 @@
 .the_content_arena{
 	/*margin-top: 12vh;*/
 	margin-bottom: 70px;
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
 	min-height: 340px;
 	max-height: 90vh;
 	display: block;
@@ -294,27 +442,41 @@
 
 
 .the_left_bar{
-	/*position: fixed;
-	top: 12vh;*/
-	
 	float: left;
 	display: block;
 	max-width: 25%;
 	background-color: #bebebe;
-	
+	overflow: hidden;
+	white-space: nowrap;
+	/* scrollbar-width: none;
+	-ms-overflow-style: none; */
 }
-
+.the_left_bar::-webkit-scrollbar{
+	width: 8px;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #cacdf3;
+}
+.the_left_bar:hover{
+	overflow: scroll;
+}
 .the_right_bar{
-	/*position: fixed;
-	top: 12vh;*/
-	
 	float: right;
 	display: block;
 	max-width: 25%;
 	background-color: #fefefe;/*#fedfed*/
-
+	overflow: hidden;
+	white-space: nowrap;
 }
-
+.the_right_bar::-webkit-scrollbar{
+	width: 8px;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #cacdf3;
+}
+.the_right_bar:hover{
+	overflow: scroll;
+}
 
 .the_panel_selector{
 	max-width: 95%;
@@ -322,9 +484,12 @@
 }
 
 .the_selected_displayer .each_item{
-	overflow-x: scroll;
+	overflow-x: hidden;
 	overflow-wrap: normal;
 	white-space: nowrap;
+}
+.the_selected_displayer .each_item:hover{
+	overflow-x: overflow;
 }
 
 .the_selected_displayer .each_item label{
@@ -369,9 +534,54 @@
 	width: 49%;
 	margin-left: 25%;
 }
+
+.theTextPopUp{
+	width: 50%;
+	height: 180px;
+	padding: 15px;
+	background-color: #000A8B;
+	color: blue;
+	border-radius: 12px;
+	position: absolute;
+	top: 20%;
+	left: 25%;
+	z-index: 1;
+	text-align: center;
+	vertical-align: center;
+	display: none;
+}
+
+.theTextPopUp input{
+	width: 80%;
+	padding: 15px;
+	border-radius: 12px;
+}
+
+.theTextPopUp button{
+	width: 80%;
+	padding: 15px;
+	background-color: #fff;
+	color: #000;
+}
+
+.theTextPopUp button:hover{
+	width: 80%;
+	padding: 15px;
+	background-color: green;
+	color: #fefefe;
+}
+
 </style>
 <div class="the_top_bar">
 	<span><i class="fa fa-file"></i>New</span>
+	<span><i class="fa fa-plus"></i>Add Element</span>
+	<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
+	<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
+	<span onclick="change2codeMode()"><i class="fa fa-code"></i>Code</span>
+	<span onclick="change2webMode()"><i class="fa fa-globe"></i>Web</span>
+	<span onclick="saveDevArena()"><i class="fa fa-save"></i>Save</span>
+	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Insert</span>
+	<!-- <span><i class="fa fa-file"></i>New</span>
 	<span><i class="fa fa-folder-open"></i>Open</span>
 	<span><i class="fa fa-timer"></i>Recent Projects</span>
 	<span><i class="fa fa-save"></i>Save</span>
@@ -387,15 +597,15 @@
 	<span><i class="fa fa-globe"></i>Publish</span>
 	<span><i class="fa fa-share-alt"></i>Share</span>
 	<span><i class="fa fa-eye"></i>Public</span>
-	<span><i class="fa fa-lock"></i>Secured</span>
+	<span><i class="fa fa-lock"></i>Secured</span> -->
 </div>
 
 <div class="the_content_arena">
 	<aside class="the_left_bar">
 		<span style="display: inline-block; padding: 10px;" class="side_panel_controls_block">
-			<span style="padding: 7px; background-color: green; border-radius: 15px;"><i class="fa fa-plus"></i></span>
-			<span style="padding: 7px; background-color: blue; border-radius: 15px;"><i class="fa fa-cog"></i></span>
-			<span style="padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
+			<!-- <span style="padding: 7px; background-color: green; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
+			<span onclick="enableCustomiser(event)" style="padding: 7px; background-color: blue; border-radius: 15px;"><i class="fa fa-cog"></i></span>
+			<span onclick="removeParent(event)" style="padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
 		</span>
 		
 
@@ -654,5 +864,13 @@
  -->
 </div>
 
+<!-- pop up sides -->
+<div id="text_pop_up_side" class="theTextPopUp">
+	<input type="text" id="theTextPop" name="theTextSide">
+	<br/>
+	<button onclick="addTextBtn()">Add</button>
+	<br/><br/>
+</div>
+</div>
 </body>
 </html>
