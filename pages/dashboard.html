@@ -11,6 +11,10 @@
     <!-- fontawesome cdn -->
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+	<meta name="description" id ="meta_description" content="design and build your website here"/>
+	<meta name="keywords" content="web builder, create a website, website maker "/>
+	<link rel='shortcut icon' type='image/x-icon' href='../assets/img/brand_kwickerhub/g83.png' />
+
 	<title>Design and Build</title>
 	<script type="text/javascript" src="../assets/vendor/js/access_library.js"></script>
 	<script type="text/javascript">
@@ -123,14 +127,14 @@
 
 
 	function change_selected(e, type, id){
-		alert(e.target.id + " ::: " + id);
-		id = (e.target.id) ? e.target.id : id;
-		if(selectedId == id){
+		//alert(e.target.id + " ::: " + id);
+		//id = (e.target.id) ? e.target.id : id;
+		if(e.target.id == id){
 			selectedId = id;
 			selectedElement = document.getElementById(id);
 			$("#the_selected_elem").text(type + ' - #' + id + ' : Selected');
-			getElementStyleDetails(id);
-			getElementAttrDetails(id);
+			getElementStyleDetails(selectedId);
+			getElementAttrDetails(selectedId);
 		}
 	}
 
@@ -189,7 +193,7 @@
 	}
 
 	function getElementStyleDetails(elem_id){
-		elem = document.getElementById(elemId);
+		elem = document.getElementById(elem_id);
 	    if (!elem) return []; // Element does not exist, empty list.
 	    var win = document.defaultView || window, style, styleNode = [];
 		if (win.getComputedStyle) { // Modern browsers 
@@ -231,20 +235,60 @@
 			attrDis = "attr_" + atts[i].nodeName.toString();
 			attributeArea = document.getElementById(attrDis);
 			if ( attributeArea ){
-				attributeArea.value = atts[i].nodeValue;
+				if(atts[i].nodeValue != null){
+					attributeArea.value = atts[i].nodeValue;
+				}else{
+					attributeArea.value = null;
+				}
+				
 			}
+		}
+	}
+
+	/* <div id="create_project_pop" class="theTextPopUp">
+	<input type="text" id="the_project_name" name="theTextSide">
+	<br/>
+	<button onclick="">Create</button>
+	<br/><br/>
+</div> */
+	function newProject(){
+		//$("create_project_pop", "id").fadeIn();
+		document.getElementById("create_project_pop").style.display = "block";
+	}
+
+	function makeTheProject(){
+		var projectName = document.getElementById("the_project_name").value;
+		var currentPage = window.location.href;
+
+		if (currentPage.includes("?project_title=")){
+			var pos = currentPage.indexOf("?");
+			var findings = currentPage.slice(0, pos); 
+			//var cleaned_findings = findings.replace(/%20/g, " ").toString();
+			//cleaned_findings = findings.replace(/-/g, " ").toString();
+			//cname = "the_dev_enviro_" + cleaned_findings;
+			currentPage = findings + "?project_title=" + projectName;
+			window.location.assign(currentPage);
+
+		}else{
+			currentPage = currentPage + "?project_title=" + projectName;
+			window.location.assign(currentPage);
 		}
 	}
 
 
 	function bringText(){
-		//alert("here atleast");
-		//$("#text_pop_up_side").fadeIn(0);
 		var alreadyThere = document.getElementById(selectedId).textContent;
 		if (alreadyThere != "") {
 			document.getElementById("theTextPop").value = alreadyThere;
 		}
+
+		/* if (document.getElementById("text_pop_up_side").style.display = "block") {
+			document.getElementById("text_pop_up_side").style.display = "none"
+		}else{
+			document.getElementById("text_pop_up_side").style.display = "block";
+		} */
 		document.getElementById("text_pop_up_side").style.display = "block";
+		
 	}
 
 	function addTextBtn(){
@@ -267,6 +311,7 @@
 	function removeSelected(){
 		var secElem = document.getElementById(selectedId);
 		secElem.remove();
+		selectCreated('the_dev_dashboard', 'div');
 	}
 
 	function change2codeMode(){
@@ -295,7 +340,7 @@
 	}
 
 	function change2webMode(){
-		var bodyElem = document.getElementById("the_dev_dashboard")
+		var bodyElem = document.getElementById("the_dev_dashboard");
 		var body = bodyElem.innerHTML;
 		var textArea = document.getElementById("the_textarea_4_view");
 		if ( typeof(textArea) != 'undefined' && textArea != null ){
@@ -355,31 +400,47 @@
 			cname = "the_dev_enviro_" + cleaned_findings;
 			var cvalue = document.getElementById("the_dev_dashboard").innerHTML
 			//var body = bodyElem;
-			setCookie(cname, cvalue, 1000);
-			/* if ( checkCookie("project_title") ) {
-				cname = "the_dev_enviro_" + cleaned_findings;
-				var cvalue = document.getElementById("the_dev_dashboard").innerHTML
-				//var body = bodyElem;
-				setCookie(cname, cvalue, 1000);
-			}else{
-				cookieName = prompt("Enter your Project Name:", "");
-				projectName = "project_title";
-				if (cookieName != "" && cookieName != null) {
-					setCookie(projectName, cookieName, 1000);
-				}
-			} */
+			setCookie(cname, btoa(cvalue), 1000);
+
 		}else{
 			alert("could not find project name. Saving as untitle.");
 			var cvalue = document.getElementById("the_dev_dashboard").innerHTML
 			//cname = "the_dev_enviro_" + currentPage;
 			if (cvalue != "" && cvalue != null) {
-				setCookie(currentPage, cvalue, 1000);
+				//alert(cvalue);
+				setCookie(currentPage, btoa(cvalue), 1000);
 			}
 		}
 	}
 
 	function loadSaveContent(){
-		
+		var currentPage = window.location.href;
+
+		if (currentPage.includes("?project_title=")){
+			var xmlhttp = new XMLHttpRequest();
+			var pos = currentPage.indexOf("=");
+			var findings = currentPage.slice(pos+1); 
+			var cleaned_findings = findings.replace(/%20/g, " ").toString();
+			cleaned_findings = findings.replace(/-/g, " ").toString();
+			cname = "the_dev_enviro_" + cleaned_findings;
+
+			if (checkCookie(cname) == true) {
+				var gottenStuff = getCookie(cname);
+				var cvalue = document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
+			}else{
+				//alert("Sorry, this project could not be retrieved.");
+			}
+			
+
+		}else{
+			alert("No Project Name. Let's try to retrieve untitle project.");
+
+			if (checkCookie(currentPage) == true) {
+				var gottenStuff = atob(getCookie(currentPage));
+				//alert(gottenStuff);
+				var cvalue = document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
+			}
+		}
 	}
 
 
@@ -393,6 +454,30 @@
 		/*var element = document.getElementById("div1");
 		var child = document.getElementById("p1");
 		element.insertBefore(para,child);*/
+	}
+
+	function enableCustomiser(side){
+		var r = confirm("You are about to enable customisation for the entire page. Are you ready?");
+		if (r == true) {
+			id =(side == "left") ? "theLeftSideBar" : "theRightSideBar";
+			selectedId = id;
+			selectedElement = document.getElementById(id);
+			$("#the_selected_elem").text('aside' + ' - #' + id + ' : Selected');
+			getElementStyleDetails(selectedId);
+			getElementAttrDetails(selectedId);
+		} else {
+			x = "You pressed Cancel!";
+		}
+	}
+
+	function removetheSideBars(side){
+		var r = confirm("You are about to remove the entire bar. Please do not proceed If you have not saved your project");
+		if (r == true) {
+			id =(side == "left") ? "theLeftSideBar" : "theRightSideBar";
+			document.getElementById(id).style.display = "none";
+		} else {
+			x = "You pressed Cancel!";
+		}
 	}
 
 	</script>
@@ -413,6 +498,7 @@
 	text-align: justify;
 	padding-top: 12px;
 	padding-bottom: 12px;
+	cursor: pointer;
 }
 
 
@@ -573,7 +659,7 @@
 
 </style>
 <div class="the_top_bar">
-	<span><i class="fa fa-file"></i>New</span>
+	<span onclick="newProject()"><i class="fa fa-file"></i>New</span>
 	<span><i class="fa fa-plus"></i>Add Element</span>
 	<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
 	<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
@@ -601,11 +687,11 @@
 </div>
 
 <div class="the_content_arena">
-	<aside class="the_left_bar">
+	<aside id="theLeftSideBar" class="the_left_bar">
 		<span style="display: inline-block; padding: 10px;" class="side_panel_controls_block">
 			<!-- <span style="padding: 7px; background-color: green; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
-			<span onclick="enableCustomiser(event)" style="padding: 7px; background-color: blue; border-radius: 15px;"><i class="fa fa-cog"></i></span>
-			<span onclick="removeParent(event)" style="padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
+			<span onclick="enableCustomiser('left')" style="padding: 7px; background-color: blue; border-radius: 15px;"><i class="fa fa-cog"></i></span>
+			<span onclick="removetheSideBars('left')" style="padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
 		</span>
 		
 
@@ -733,11 +819,11 @@
 	</aside>
 
 
-	<aside class="the_right_bar">
-		<span style="display: inline-block; padding: 10px; text-align: right; background-color: #bebebe;" class="side_panel_controls_block">
-			<span style="padding: 7px; background-color: green; color: #fff; border-radius: 15px;"><i class="fa fa-plus"></i></span>
-			<span style="padding: 7px; background-color: blue; color: #fff; border-radius: 15px;"><i class="fa fa-cog"></i></span>
-			<span style="padding: 7px; background-color: red; color: #fff; border-radius: 15px"><i class="fa fa-times"></i></span>
+	<aside id="theRightSideBar" class="the_right_bar">
+		<span style="display: inline-block; padding: 10px; text-align: right; background-color: #bebebe; opacity: 0.6;" class="side_panel_controls_block">
+			<!-- <span style="padding: 7px; background-color: green; color: #fff; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
+			<span onclick="enableCustomiser('right')" style="padding: 7px; background-color: blue; color: #fff; border-radius: 15px;"><i class="fa fa-cog"></i></span>
+			<span onclick="removetheSideBars('right')" style="padding: 7px; background-color: red; color: #fff; border-radius: 15px"><i class="fa fa-times"></i></span>
 		</span>
 		
 
@@ -871,6 +957,15 @@
 	<button onclick="addTextBtn()">Add</button>
 	<br/><br/>
 </div>
+
+<!-- pop up :: the new project -->
+<div id="create_project_pop" class="theTextPopUp">
+	<input type="text" id="the_project_name" name="theTextSide">
+	<br/>
+	<button onclick="makeTheProject()">Create</button>
+	<br/><br/>
+</div>
+
 </div>
 </body>
 </html>

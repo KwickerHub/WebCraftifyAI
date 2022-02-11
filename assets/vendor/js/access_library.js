@@ -1180,9 +1180,10 @@ $.post = function (url, parameters, callback, error, response){
 	}
 		xmlhttp.onreadystatechange=function() {
 		//if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-		var readySo = xmlhttp.readyState > 0 ? 4 : 0;
+		//var readySo = xmlhttp.readyState > 0 ? 4 : 0;
+		//alert(xmlhttp.readyState + "::" + xmlhttp.status);
 		isStatus = xmlhttp.status >= 200 && xmlhttp.status < 300 || xmlhttp.status === 304;
-		if (readySo && isStatus) {
+		if (xmlhttp.readyState == 4 && isStatus) {
 	      	data = xmlhttp.response;
 	    	status = "successful";
 	      	callback(data, status);
