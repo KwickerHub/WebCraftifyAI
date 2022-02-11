@@ -11,7 +11,45 @@
 <!-- //Custom Theme files -->
 <!-- web font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-<!-- //web font -->
+<!-- //Js Libraries -->
+<script type="text/javascript" src="../assets/vendor/js/access_library.js"></script>
+<!-- <script type="text/javascript" src="../assets/vendor/js/jQuery_online_3_4_1.js"></script> -->
+<script>
+	function loginFunc(){
+		$("#processor_shower").fadeIn();
+		var password, email;
+		email = $("#login_email").val();
+		password = $("#login_password").val();
+		if(email.length == 0 || password.length == 0){
+			alert("Please All fields are required");
+		}else{
+			$.post("../../backend/sign_in.php", {
+				password: password,
+				email: email,
+				key: "gjhtiidsimi09403jfjkdknf"
+			},
+			function(data, status){
+				dataJson = JSON.parse(data);
+				if (dataJson["status"] == "true"){
+					$("#processor_shower").fadeOut();
+                    $("#loader_side_success").fadeIn();
+                    $("#msg_success").text(dataJson["msg"]);
+					alert("Login successfully");
+					location.assign("dashboard.html");
+					//location.href = "";
+					// we can redirect the user to the Dashboard environment...
+					// before the redirect, we can use a successful pop-up...
+				}else{
+					$("#processor_shower").fadeOut();
+                    $("#loader_side_error").fadeIn();
+                    $("#msg_error").text(dataJson["msg"]);
+					alert("we care having some issues: " + dataJson["msg"]);
+					//we can use a pop-up here describing to the user the content in the alert-box
+				}
+			});
+		}
+	}
+</script>
 </head>
 <body>
 	<!-- main -->
@@ -20,12 +58,12 @@
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
-					<input class="text" type="text" name="Username" placeholder="Username" required="">
+					<input class="text" id="login_email" type="email" name="email" placeholder="email" required="">
 					<br><br>
-					<input class="text" type="password" name="password" placeholder="Password" required="">
+					<input class="text" id="login_password" type="password" name="password" placeholder="Password" required="">
 					<br>
 					
-					<input type="submit" value="LOGIN">
+					<input onclick="loginFunc()" type="button" value="LOGIN">
 				</form>
 				<p>Don't have an Account? <a href="signup.html"> Register Now!</a></p>
 			</div>
@@ -50,4 +88,84 @@
 	</div>
 	<!-- //main -->
 </body>
+<div id="processor_shower" style="display: none; position: fixed; z-index: 3; top: 10%; left: 20%; width: 60%;">
+    <progress style="width: 100%;" class="the_processor"></progress>
+</div>
+
+
+    <!-- Pop ups Successful-->
+    
+    <style>
+        #loader_side_error{
+            width: 70%;
+            padding: 12px;
+            background-color: blanchedalmond;
+            display: block;
+            z-index: 2;
+            position: absolute;
+            top: 10%;
+            left: 14%;
+            text-align: center;
+        }
+
+        #loader_side_success{
+            width: 70%;
+            padding: 12px;
+            background-color: blanchedalmond;
+            display: block;
+            z-index: 2;
+            position: absolute;
+            top: 10%;
+            left: 14%;
+            text-align: center;
+        }
+
+        .closure{
+            margin-left: 90%;
+            font-size: 23px;
+            width: 25px;
+            padding: 3px;
+            display: block;
+            border: 2px solid #aaaaaa;
+            border-radius: 10px;
+            text-align: center;
+            font-family: arial;
+            background-color: #fefefe;
+            color: red;
+        }
+    </style>
+    <center id="loader_side_error" style="display:none">
+        <span onclick="this.parentElement.style.display='none'" class="closure">x</span>
+        <br/>
+            <div>
+                <svg class="bi bi-x-octagon-fill" width="120px" height="120px" viewBox="0 0 16 16" fill="tomato">
+                <path fill-rule="evenodd" d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm.394 4.708a.5.5 0 0 0-.708-.708L8 7.293 4.854 4.146a.5.5 0 1 0-.708.708L7.293 8l-3.147 3.146a.5.5 0 0 0 .708.708L8 8.707l3.146 3.147a.5.5 0 0 0 .708-.708L8.707 8l3.147-3.146z"/>
+                </svg>
+                <br/><br/>
+                <div>
+                    <label id="msg_error" style="color: #00050A; font-family: tahoma; font-size: 20px;"> 
+                        Error - We are facing some Challenges.
+                    </label>
+                </div>
+            </div>
+        <br/>
+    </center>
+
+	<div id="loader_side_success" style="display:none">
+        <span onclick="this.parentElement.style.display='none'" class="closure">x</span>
+        <br/>
+            <center>
+                <svg class="bi bi-check-circle-fill" width="120px" height="120px" viewBox="0 0 16 16" fill="green">
+                <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <br/><br/>
+                <div>
+                    <label id="msg_success" style="color: #00050A; font-family: tahoma; font-size: 20px;"> 
+                        Process Successful
+                    </label>
+                </div>
+            </center>
+        <br/>
+    </div>
+
 </html>

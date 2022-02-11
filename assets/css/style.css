@@ -200,7 +200,7 @@ input.email, input.text.w3lpass {
   color: #fff;
 }
 
-input[type="submit"] {
+input[type="button"] {
   font-size: .9em;
   color: #fff;
   background: #008ef5;
@@ -214,7 +214,7 @@ input[type="submit"] {
   letter-spacing: 4px;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
   -webkit-transition: .5s all;
   -moz-transition: .5s all;
   -o-transition: .5s all;
@@ -612,7 +612,7 @@ input.checkbox:checked:after {
     margin: 1.5em 0;
   }
 
-  input[type="submit"] {
+  input[type="button"] {
     margin: 2em 0;
   }
 
@@ -675,13 +675,9 @@ input.checkbox:checked:after {
     margin-top: 1.5em;
   }
 
-  input[type="submit"] {
+  input[type="button"] {
     margin: 2em 0 1.5em;
     letter-spacing: 3px;
-  }
-
-  input[type="submit"] {
-    margin: 2em 0 1.5em;
   }
 
   .colorlibcopy-agile {
@@ -737,7 +733,7 @@ input.checkbox:checked:after {
     background-position: 0 0px;
   }
 
-  input[type="submit"] {
+  input[type="button"] {
     margin: 1.5em 0;
     padding: 0.8em;
     font-size: .85em;
