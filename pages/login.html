@@ -22,6 +22,7 @@
 		password = $("#login_password").val();
 		if(email.length == 0 || password.length == 0){
 			alert("Please All fields are required");
+			$("#processor_shower").fadeOut();
 		}else{
 			$.post("../../backend/sign_in.php", {
 				password: password,
@@ -40,10 +41,22 @@
 					// we can redirect the user to the Dashboard environment...
 					// before the redirect, we can use a successful pop-up...
 				}else{
-					$("#processor_shower").fadeOut();
+				    var error_msg = dataJson["msg"].toLowerCase();
+                    $("#processor_shower").fadeOut();
+                    $("#loader_side_error").fadeIn();
+                    if(error_msg.includes("not verified")) {
+                        $("#msg_error").html(error_msg + '<a href="verify.html"><button style="background-color: green; color: #fefefe; padding: 12px; "> Verify Now </button> </a>');
+                        //$("#msg_error").append();
+                    }else{
+                        $("#msg_error").text(error_msg);
+                    }
+					/*$("#processor_shower").fadeOut();
                     $("#loader_side_error").fadeIn();
                     $("#msg_error").text(dataJson["msg"]);
-					alert("we care having some issues: " + dataJson["msg"]);
+                    if(dataJson["msg"].includes("") ){
+                        $("#msg_error").append('<a href="Verify.html"><button style="background-color: green; color: #fefefe; padding: 12px; "> Verify Now </button> </a>');
+                    }
+					alert("we care having some issues: " + dataJson["msg"]);*/
 					//we can use a pop-up here describing to the user the content in the alert-box
 				}
 			});
