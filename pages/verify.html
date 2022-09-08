@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>SignUp Form</title>
+<title>Login Form</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -15,50 +14,38 @@
 <script type="text/javascript" src="../assets/vendor/js/access_library.js"></script>
 <!-- <script type="text/javascript" src="../assets/vendor/js/jQuery_online_3_4_1.js"></script> -->
 <script>
-	function signUpFunc(){
+	function Verify_side(){
 		$("#processor_shower").fadeIn();
-		var username, password, email, agreement;
-		username = $("#signup_username").val();
-		email = $("#signup_email").val();
-		password = $("#signup_password").val();
-		agreecheck = document.getElementById("agreecheck").checked;
-		if(username.length == 0 || password.length == 0){
+		var verify_code = $("#verify_code").val();
+		if(verify_code.length == 0){
 			alert("Please All fields are required");
+			$("#processor_shower").fadeOut();
 		}else{
-			if(agreecheck != true){
-				alert("You should agree to our terms of use.");
-			}else{
-				//alert(username + email + password + agreecheck);
-				// you can change this link depending on what you are doing - Signin: sign_in.php
-				// Also check the requirements from the php file before using it.
-				$.post("../../backend/register_user.php", {
-					username: username,
-					password: password,
-					email: email,
-					key: "gjhtiidsimi09403jfjkdknf"
-				},
-				function(data, status){
-					//alert("Proceed to Sign Up.");
-					//alert(data + "status: " + status );
-					dataJson = JSON.parse(data);
-					if (dataJson["status"] == "true"){
-						$("#processor_shower").fadeOut();
-						$("#loader_side_success").fadeIn();
-						$("#msg_success").text(dataJson["msg"]);
-						//alert("account created successfully");
-						//we can redirect the user to the Dashboard environment...
-						location.assign("verify.html");
-						//before the redirect, we can use a successful pop-up...
-					}else{
-						$("#processor_shower").fadeOut();
-						$("#loader_side_error").fadeIn();
-						$("#msg_error").text(dataJson["msg"]);
-						alert("we care having some issues" + dataJson["msg"]);
-						//we can use a pop-up here describing to the user the content in the alert-box
-					}
-				});
-			}
-			
+			$.post("../../backend/verify_user.php", {
+				unique: verify_code,
+				//email: email,
+				key: "gjhtiidsimi09403jfjkdknf"
+			},
+			function(data, status){
+				dataJson = JSON.parse(data);
+				if (dataJson["status"] == "true"){
+					$("#processor_shower").fadeOut();
+                    $("#loader_side_success").fadeIn();
+                    $("#msg_success").text(dataJson["msg"]);
+					alert("Login successfully");
+					location.assign("dashboard.html");
+				}else{
+					$("#processor_shower").fadeOut();
+                    $("#loader_side_error").fadeIn();
+                    $("#msg_error").text(dataJson["msg"]);
+                    if(dataJson["msg"].includes("not verified") ){
+                        $("#msg_error").append('<a href="Verify.html"><button style="background-color: green; color: #fefefe; padding: 12px; "> Verify Now </button> </a>');
+                    }
+                    
+					alert("we care having some issues: " + dataJson["msg"]);
+					//we can use a pop-up here describing to the user the content in the alert-box
+				}
+			});
 		}
 	}
 </script>
@@ -66,24 +53,16 @@
 <body>
 	<!-- main -->
 	<div class="main-w3layouts wrapper">
-		<h1>SignUp Form</h1>
+		<h1>Verify Email</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form method="post">
-					<input class="text" id="signup_username" type="text" name="KwickerUsername" placeholder="Username" required="">
-					<input class="text email" id="signup_email" type="email"  name="Kwickeremail" placeholder="Email" required="">
-					<input class="text" id="signup_password" type="password" name="Kwickerpassword" placeholder="Password" required="">
-					<br>
-					<div class="wthree-text">
-						<label class="anim">
-							<input id="agreecheck" type="checkbox" class="checkbox" value="off" required="">
-							<span>I Agree To The Terms & Conditions</span>
-						</label>
-						<div class="clear"> </div>
-					</div>
-					<input onclick="signUpFunc()" type="button" value="SIGNUP">
+				<form action="#" method="post">
+					<input class="text" id="verify_code" type="text" name="code" placeholder="Verification code" required="">
+					<br><br>
+					
+					<input onclick="Verify_side()" type="button" value="Verify">
 				</form>
-				<p>Already have an Account? <a href="login.html"> Login Now!</a></p>
+				<p> We sent a verification code to your email. Please enter the verification code above.</p>
 			</div>
 		</div>
 		<!-- copyright -->
@@ -106,7 +85,6 @@
 	</div>
 	<!-- //main -->
 </body>
-
 <div id="processor_shower" style="display: none; position: fixed; z-index: 3; top: 10%; left: 20%; width: 60%;">
     <progress style="width: 100%;" class="the_processor"></progress>
 </div>
@@ -186,5 +164,5 @@
             </center>
         <br/>
     </div>
-	
+
 </html>
