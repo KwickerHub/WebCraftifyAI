@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../assets/css/pop_up_frames.css">
+        <title> Add Element</title>
+    </head>
+
+    <body>
+        <Center>
+            <h3>Add Element</h3>
+            <form action="../../../backend/elements/insert_elements.php" method="POST">
+                <label>
+                    <span class="brief_hint">Element Name: </span> <input name="element_name" class="text_input" type="text"/>
+                </label>
+                <br/><br/>
+                <label>
+                    <span class="brief_hint_textarea">Element Description: </span> <textarea name="element_description" class="text_input" placeholder="Add some description about this Element. What does this Element do?"></textarea>
+                </label>
+                <br/><br/>
+                <input class="button_input" type="button" value="Add">
+            </form>
+        </Center>
+    </body>
+
+</html>

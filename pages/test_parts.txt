@@ -1,0 +1,994 @@
+41 New Icons in 4.7
+ Example ofaddress-book
+ Example ofaddress-book-o
+ Example ofaddress-card
+ Example ofaddress-card-o
+ Example ofbandcamp
+ Example ofbath
+ Example ofbathtub (alias)
+ Example ofdrivers-license (alias)
+ Example ofdrivers-license-o (alias)
+ Example ofeercast
+ Example ofenvelope-open
+ Example ofenvelope-open-o
+ Example ofetsy
+ Example offree-code-camp
+ Example ofgrav
+ Example ofhandshake-o
+ Example ofid-badge
+ Example ofid-card
+ Example ofid-card-o
+ Example ofimdb
+ Example oflinode
+ Example ofmeetup
+ Example ofmicrochip
+ Example ofpodcast
+ Example ofquora
+ Example ofravelry
+ Example ofs15 (alias)
+ Example ofshower
+ Example ofsnowflake-o
+ Example ofsuperpowers
+ Example oftelegram
+ Example ofthermometer (alias)
+ Example ofthermometer-0 (alias)
+ Example ofthermometer-1 (alias)
+ Example ofthermometer-2 (alias)
+ Example ofthermometer-3 (alias)
+ Example ofthermometer-4 (alias)
+ Example ofthermometer-empty
+ Example ofthermometer-full
+ Example ofthermometer-half
+ Example ofthermometer-quarter
+ Example ofthermometer-three-quarters
+ Example oftimes-rectangle (alias)
+ Example oftimes-rectangle-o (alias)
+ Example ofuser-circle
+ Example ofuser-circle-o
+ Example ofuser-o
+ Example ofvcard (alias)
+ Example ofvcard-o (alias)
+ Example ofwindow-close
+ Example ofwindow-close-o
+ Example ofwindow-maximize
+ Example ofwindow-minimize
+ Example ofwindow-restore
+ Example ofwpexplorer
+Web Application Icons
+ Example ofaddress-book
+ Example ofaddress-book-o
+ Example ofaddress-card
+ Example ofaddress-card-o
+ Example ofadjust
+ Example ofamerican-sign-language-interpreting
+ Example ofanchor
+ Example ofarchive
+ Example ofarea-chart
+ Example ofarrows
+ Example ofarrows-h
+ Example ofarrows-v
+ Example ofasl-interpreting (alias)
+ Example ofassistive-listening-systems
+ Example ofasterisk
+ Example ofat
+ Example ofaudio-description
+ Example ofautomobile (alias)
+ Example ofbalance-scale
+ Example ofban
+ Example ofbank (alias)
+ Example ofbar-chart
+ Example ofbar-chart-o (alias)
+ Example ofbarcode
+ Example ofbars
+ Example ofbath
+ Example ofbathtub (alias)
+ Example ofbattery (alias)
+ Example ofbattery-0 (alias)
+ Example ofbattery-1 (alias)
+ Example ofbattery-2 (alias)
+ Example ofbattery-3 (alias)
+ Example ofbattery-4 (alias)
+ Example ofbattery-empty
+ Example ofbattery-full
+ Example ofbattery-half
+ Example ofbattery-quarter
+ Example ofbattery-three-quarters
+ Example ofbed
+ Example ofbeer
+ Example ofbell
+ Example ofbell-o
+ Example ofbell-slash
+ Example ofbell-slash-o
+ Example ofbicycle
+ Example ofbinoculars
+ Example ofbirthday-cake
+ Example ofblind
+ Example ofbluetooth
+ Example ofbluetooth-b
+ Example ofbolt
+ Example ofbomb
+ Example ofbook
+ Example ofbookmark
+ Example ofbookmark-o
+ Example ofbraille
+ Example ofbriefcase
+ Example ofbug
+ Example ofbuilding
+ Example ofbuilding-o
+ Example ofbullhorn
+ Example ofbullseye
+ Example ofbus
+ Example ofcab (alias)
+ Example ofcalculator
+ Example ofcalendar
+ Example ofcalendar-check-o
+ Example ofcalendar-minus-o
+ Example ofcalendar-o
+ Example ofcalendar-plus-o
+ Example ofcalendar-times-o
+ Example ofcamera
+ Example ofcamera-retro
+ Example ofcar
+ Example ofcaret-square-o-down
+ Example ofcaret-square-o-left
+ Example ofcaret-square-o-right
+ Example ofcaret-square-o-up
+ Example ofcart-arrow-down
+ Example ofcart-plus
+ Example ofcc
+ Example ofcertificate
+ Example ofcheck
+ Example ofcheck-circle
+ Example ofcheck-circle-o
+ Example ofcheck-square
+ Example ofcheck-square-o
+ Example ofchild
+ Example ofcircle
+ Example ofcircle-o
+ Example ofcircle-o-notch
+ Example ofcircle-thin
+ Example ofclock-o
+ Example ofclone
+ Example ofclose (alias)
+ Example ofcloud
+ Example ofcloud-download
+ Example ofcloud-upload
+ Example ofcode
+ Example ofcode-fork
+ Example ofcoffee
+ Example ofcog
+ Example ofcogs
+ Example ofcomment
+ Example ofcomment-o
+ Example ofcommenting
+ Example ofcommenting-o
+ Example ofcomments
+ Example ofcomments-o
+ Example ofcompass
+ Example ofcopyright
+ Example ofcreative-commons
+ Example ofcredit-card
+ Example ofcredit-card-alt
+ Example ofcrop
+ Example ofcrosshairs
+ Example ofcube
+ Example ofcubes
+ Example ofcutlery
+ Example ofdashboard (alias)
+ Example ofdatabase
+ Example ofdeaf
+ Example ofdeafness (alias)
+ Example ofdesktop
+ Example ofdiamond
+ Example ofdot-circle-o
+ Example ofdownload
+ Example ofdrivers-license (alias)
+ Example ofdrivers-license-o (alias)
+ Example ofedit (alias)
+ Example ofellipsis-h
+ Example ofellipsis-v
+ Example ofenvelope
+ Example ofenvelope-o
+ Example ofenvelope-open
+ Example ofenvelope-open-o
+ Example ofenvelope-square
+ Example oferaser
+ Example ofexchange
+ Example ofexclamation
+ Example ofexclamation-circle
+ Example ofexclamation-triangle
+ Example ofexternal-link
+ Example ofexternal-link-square
+ Example ofeye
+ Example ofeye-slash
+ Example ofeyedropper
+ Example offax
+ Example offeed (alias)
+ Example offemale
+ Example offighter-jet
+ Example offile-archive-o
+ Example offile-audio-o
+ Example offile-code-o
+ Example offile-excel-o
+ Example offile-image-o
+ Example offile-movie-o (alias)
+ Example offile-pdf-o
+ Example offile-photo-o (alias)
+ Example offile-picture-o (alias)
+ Example offile-powerpoint-o
+ Example offile-sound-o (alias)
+ Example offile-video-o
+ Example offile-word-o
+ Example offile-zip-o (alias)
+ Example offilm
+ Example offilter
+ Example offire
+ Example offire-extinguisher
+ Example offlag
+ Example offlag-checkered
+ Example offlag-o
+ Example offlash (alias)
+ Example offlask
+ Example offolder
+ Example offolder-o
+ Example offolder-open
+ Example offolder-open-o
+ Example offrown-o
+ Example offutbol-o
+ Example ofgamepad
+ Example ofgavel
+ Example ofgear (alias)
+ Example ofgears (alias)
+ Example ofgift
+ Example ofglass
+ Example ofglobe
+ Example ofgraduation-cap
+ Example ofgroup (alias)
+ Example ofhand-grab-o (alias)
+ Example ofhand-lizard-o
+ Example ofhand-paper-o
+ Example ofhand-peace-o
+ Example ofhand-pointer-o
+ Example ofhand-rock-o
+ Example ofhand-scissors-o
+ Example ofhand-spock-o
+ Example ofhand-stop-o (alias)
+ Example ofhandshake-o
+ Example ofhard-of-hearing (alias)
+ Example ofhashtag
+ Example ofhdd-o
+ Example ofheadphones
+ Example ofheart
+ Example ofheart-o
+ Example ofheartbeat
+ Example ofhistory
+ Example ofhome
+ Example ofhotel (alias)
+ Example ofhourglass
+ Example ofhourglass-1 (alias)
+ Example ofhourglass-2 (alias)
+ Example ofhourglass-3 (alias)
+ Example ofhourglass-end
+ Example ofhourglass-half
+ Example ofhourglass-o
+ Example ofhourglass-start
+ Example ofi-cursor
+ Example ofid-badge
+ Example ofid-card
+ Example ofid-card-o
+ Example ofimage (alias)
+ Example ofinbox
+ Example ofindustry
+ Example ofinfo
+ Example ofinfo-circle
+ Example ofinstitution (alias)
+ Example ofkey
+ Example ofkeyboard-o
+ Example oflanguage
+ Example oflaptop
+ Example ofleaf
+ Example oflegal (alias)
+ Example oflemon-o
+ Example oflevel-down
+ Example oflevel-up
+ Example oflife-bouy (alias)
+ Example oflife-buoy (alias)
+ Example oflife-ring
+ Example oflife-saver (alias)
+ Example oflightbulb-o
+ Example ofline-chart
+ Example oflocation-arrow
+ Example oflock
+ Example oflow-vision
+ Example ofmagic
+ Example ofmagnet
+ Example ofmail-forward (alias)
+ Example ofmail-reply (alias)
+ Example ofmail-reply-all (alias)
+ Example ofmale
+ Example ofmap
+ Example ofmap-marker
+ Example ofmap-o
+ Example ofmap-pin
+ Example ofmap-signs
+ Example ofmeh-o
+ Example ofmicrochip
+ Example ofmicrophone
+ Example ofmicrophone-slash
+ Example ofminus
+ Example ofminus-circle
+ Example ofminus-square
+ Example ofminus-square-o
+ Example ofmobile
+ Example ofmobile-phone (alias)
+ Example ofmoney
+ Example ofmoon-o
+ Example ofmortar-board (alias)
+ Example ofmotorcycle
+ Example ofmouse-pointer
+ Example ofmusic
+ Example ofnavicon (alias)
+ Example ofnewspaper-o
+ Example ofobject-group
+ Example ofobject-ungroup
+ Example ofpaint-brush
+ Example ofpaper-plane
+ Example ofpaper-plane-o
+ Example ofpaw
+ Example ofpencil
+ Example ofpencil-square
+ Example ofpencil-square-o
+ Example ofpercent
+ Example ofphone
+ Example ofphone-square
+ Example ofphoto (alias)
+ Example ofpicture-o
+ Example ofpie-chart
+ Example ofplane
+ Example ofplug
+ Example ofplus
+ Example ofplus-circle
+ Example ofplus-square
+ Example ofplus-square-o
+ Example ofpodcast
+ Example ofpower-off
+ Example ofprint
+ Example ofpuzzle-piece
+ Example ofqrcode
+ Example ofquestion
+ Example ofquestion-circle
+ Example ofquestion-circle-o
+ Example ofquote-left
+ Example ofquote-right
+ Example ofrandom
+ Example ofrecycle
+ Example ofrefresh
+ Example ofregistered
+ Example ofremove (alias)
+ Example ofreorder (alias)
+ Example ofreply
+ Example ofreply-all
+ Example ofretweet
+ Example ofroad
+ Example ofrocket
+ Example ofrss
+ Example ofrss-square
+ Example ofs15 (alias)
+ Example ofsearch
+ Example ofsearch-minus
+ Example ofsearch-plus
+ Example ofsend (alias)
+ Example ofsend-o (alias)
+ Example ofserver
+ Example ofshare
+ Example ofshare-alt
+ Example ofshare-alt-square
+ Example ofshare-square
+ Example ofshare-square-o
+ Example ofshield
+ Example ofship
+ Example ofshopping-bag
+ Example ofshopping-basket
+ Example ofshopping-cart
+ Example ofshower
+ Example ofsign-in
+ Example ofsign-language
+ Example ofsign-out
+ Example ofsignal
+ Example ofsigning (alias)
+ Example ofsitemap
+ Example ofsliders
+ Example ofsmile-o
+ Example ofsnowflake-o
+ Example ofsoccer-ball-o (alias)
+ Example ofsort
+ Example ofsort-alpha-asc
+ Example ofsort-alpha-desc
+ Example ofsort-amount-asc
+ Example ofsort-amount-desc
+ Example ofsort-asc
+ Example ofsort-desc
+ Example ofsort-down (alias)
+ Example ofsort-numeric-asc
+ Example ofsort-numeric-desc
+ Example ofsort-up (alias)
+ Example ofspace-shuttle
+ Example ofspinner
+ Example ofspoon
+ Example ofsquare
+ Example ofsquare-o
+ Example ofstar
+ Example ofstar-half
+ Example ofstar-half-empty (alias)
+ Example ofstar-half-full (alias)
+ Example ofstar-half-o
+ Example ofstar-o
+ Example ofsticky-note
+ Example ofsticky-note-o
+ Example ofstreet-view
+ Example ofsuitcase
+ Example ofsun-o
+ Example ofsupport (alias)
+ Example oftablet
+ Example oftachometer
+ Example oftag
+ Example oftags
+ Example oftasks
+ Example oftaxi
+ Example oftelevision
+ Example ofterminal
+ Example ofthermometer (alias)
+ Example ofthermometer-0 (alias)
+ Example ofthermometer-1 (alias)
+ Example ofthermometer-2 (alias)
+ Example ofthermometer-3 (alias)
+ Example ofthermometer-4 (alias)
+ Example ofthermometer-empty
+ Example ofthermometer-full
+ Example ofthermometer-half
+ Example ofthermometer-quarter
+ Example ofthermometer-three-quarters
+ Example ofthumb-tack
+ Example ofthumbs-down
+ Example ofthumbs-o-down
+ Example ofthumbs-o-up
+ Example ofthumbs-up
+ Example ofticket
+ Example oftimes
+ Example oftimes-circle
+ Example oftimes-circle-o
+ Example oftimes-rectangle (alias)
+ Example oftimes-rectangle-o (alias)
+ Example oftint
+ Example oftoggle-down (alias)
+ Example oftoggle-left (alias)
+ Example oftoggle-off
+ Example oftoggle-on
+ Example oftoggle-right (alias)
+ Example oftoggle-up (alias)
+ Example oftrademark
+ Example oftrash
+ Example oftrash-o
+ Example oftree
+ Example oftrophy
+ Example oftruck
+ Example oftty
+ Example oftv (alias)
+ Example ofumbrella
+ Example ofuniversal-access
+ Example ofuniversity
+ Example ofunlock
+ Example ofunlock-alt
+ Example ofunsorted (alias)
+ Example ofupload
+ Example ofuser
+ Example ofuser-circle
+ Example ofuser-circle-o
+ Example ofuser-o
+ Example ofuser-plus
+ Example ofuser-secret
+ Example ofuser-times
+ Example ofusers
+ Example ofvcard (alias)
+ Example ofvcard-o (alias)
+ Example ofvideo-camera
+ Example ofvolume-control-phone
+ Example ofvolume-down
+ Example ofvolume-off
+ Example ofvolume-up
+ Example ofwarning (alias)
+ Example ofwheelchair
+ Example ofwheelchair-alt
+ Example ofwifi
+ Example ofwindow-close
+ Example ofwindow-close-o
+ Example ofwindow-maximize
+ Example ofwindow-minimize
+ Example ofwindow-restore
+ Example ofwrench
+Accessibility Icons
+ Example ofamerican-sign-language-interpreting
+ Example ofasl-interpreting (alias)
+ Example ofassistive-listening-systems
+ Example ofaudio-description
+ Example ofblind
+ Example ofbraille
+ Example ofcc
+ Example ofdeaf
+ Example ofdeafness (alias)
+ Example ofhard-of-hearing (alias)
+ Example oflow-vision
+ Example ofquestion-circle-o
+ Example ofsign-language
+ Example ofsigning (alias)
+ Example oftty
+ Example ofuniversal-access
+ Example ofvolume-control-phone
+ Example ofwheelchair
+ Example ofwheelchair-alt
+Hand Icons
+ Example ofhand-grab-o (alias)
+ Example ofhand-lizard-o
+ Example ofhand-o-down
+ Example ofhand-o-left
+ Example ofhand-o-right
+ Example ofhand-o-up
+ Example ofhand-paper-o
+ Example ofhand-peace-o
+ Example ofhand-pointer-o
+ Example ofhand-rock-o
+ Example ofhand-scissors-o
+ Example ofhand-spock-o
+ Example ofhand-stop-o (alias)
+ Example ofthumbs-down
+ Example ofthumbs-o-down
+ Example ofthumbs-o-up
+ Example ofthumbs-up
+Transportation Icons
+ Example ofambulance
+ Example ofautomobile (alias)
+ Example ofbicycle
+ Example ofbus
+ Example ofcab (alias)
+ Example ofcar
+ Example offighter-jet
+ Example ofmotorcycle
+ Example ofplane
+ Example ofrocket
+ Example ofship
+ Example ofspace-shuttle
+ Example ofsubway
+ Example oftaxi
+ Example oftrain
+ Example oftruck
+ Example ofwheelchair
+ Example ofwheelchair-alt
+Gender Icons
+ Example ofgenderless
+ Example ofintersex (alias)
+ Example ofmars
+ Example ofmars-double
+ Example ofmars-stroke
+ Example ofmars-stroke-h
+ Example ofmars-stroke-v
+ Example ofmercury
+ Example ofneuter
+ Example oftransgender
+ Example oftransgender-alt
+ Example ofvenus
+ Example ofvenus-double
+ Example ofvenus-mars
+File Type Icons
+ Example offile
+ Example offile-archive-o
+ Example offile-audio-o
+ Example offile-code-o
+ Example offile-excel-o
+ Example offile-image-o
+ Example offile-movie-o (alias)
+ Example offile-o
+ Example offile-pdf-o
+ Example offile-photo-o (alias)
+ Example offile-picture-o (alias)
+ Example offile-powerpoint-o
+ Example offile-sound-o (alias)
+ Example offile-text
+ Example offile-text-o
+ Example offile-video-o
+ Example offile-word-o
+ Example offile-zip-o (alias)
+Spinner Icons
+ Example ofcircle-o-notch
+ Example ofcog
+ Example ofgear (alias)
+ Example ofrefresh
+ Example ofspinner
+Form Control Icons
+ Example ofcheck-square
+ Example ofcheck-square-o
+ Example ofcircle
+ Example ofcircle-o
+ Example ofdot-circle-o
+ Example ofminus-square
+ Example ofminus-square-o
+ Example ofplus-square
+ Example ofplus-square-o
+ Example ofsquare
+ Example ofsquare-o
+Payment Icons
+ Example ofcc-amex
+ Example ofcc-diners-club
+ Example ofcc-discover
+ Example ofcc-jcb
+ Example ofcc-mastercard
+ Example ofcc-paypal
+ Example ofcc-stripe
+ Example ofcc-visa
+ Example ofcredit-card
+ Example ofcredit-card-alt
+ Example ofgoogle-wallet
+ Example ofpaypal
+Chart Icons
+ Example ofarea-chart
+ Example ofbar-chart
+ Example ofbar-chart-o (alias)
+ Example ofline-chart
+ Example ofpie-chart
+Currency Icons
+ Example ofbitcoin (alias)
+ Example ofbtc
+ Example ofcny (alias)
+ Example ofdollar (alias)
+ Example ofeur
+ Example ofeuro (alias)
+ Example ofgbp
+ Example ofgg
+ Example ofgg-circle
+ Example ofils
+ Example ofinr
+ Example ofjpy
+ Example ofkrw
+ Example ofmoney
+ Example ofrmb (alias)
+ Example ofrouble (alias)
+ Example ofrub
+ Example ofruble (alias)
+ Example ofrupee (alias)
+ Example ofshekel (alias)
+ Example ofsheqel (alias)
+ Example oftry
+ Example ofturkish-lira (alias)
+ Example ofusd
+ Example ofviacoin
+ Example ofwon (alias)
+ Example ofyen (alias)
+Text Editor Icons
+ Example ofalign-center
+ Example ofalign-justify
+ Example ofalign-left
+ Example ofalign-right
+ Example ofbold
+ Example ofchain (alias)
+ Example ofchain-broken
+ Example ofclipboard
+ Example ofcolumns
+ Example ofcopy (alias)
+ Example ofcut (alias)
+ Example ofdedent (alias)
+ Example oferaser
+ Example offile
+ Example offile-o
+ Example offile-text
+ Example offile-text-o
+ Example offiles-o
+ Example offloppy-o
+ Example offont
+ Example ofheader
+ Example ofindent
+ Example ofitalic
+ Example oflink
+ Example oflist
+ Example oflist-alt
+ Example oflist-ol
+ Example oflist-ul
+ Example ofoutdent
+ Example ofpaperclip
+ Example ofparagraph
+ Example ofpaste (alias)
+ Example ofrepeat
+ Example ofrotate-left (alias)
+ Example ofrotate-right (alias)
+ Example ofsave (alias)
+ Example ofscissors
+ Example ofstrikethrough
+ Example ofsubscript
+ Example ofsuperscript
+ Example oftable
+ Example oftext-height
+ Example oftext-width
+ Example ofth
+ Example ofth-large
+ Example ofth-list
+ Example ofunderline
+ Example ofundo
+ Example ofunlink (alias)
+Directional Icons
+ Example ofangle-double-down
+ Example ofangle-double-left
+ Example ofangle-double-right
+ Example ofangle-double-up
+ Example ofangle-down
+ Example ofangle-left
+ Example ofangle-right
+ Example ofangle-up
+ Example ofarrow-circle-down
+ Example ofarrow-circle-left
+ Example ofarrow-circle-o-down
+ Example ofarrow-circle-o-left
+ Example ofarrow-circle-o-right
+ Example ofarrow-circle-o-up
+ Example ofarrow-circle-right
+ Example ofarrow-circle-up
+ Example ofarrow-down
+ Example ofarrow-left
+ Example ofarrow-right
+ Example ofarrow-up
+ Example ofarrows
+ Example ofarrows-alt
+ Example ofarrows-h
+ Example ofarrows-v
+ Example ofcaret-down
+ Example ofcaret-left
+ Example ofcaret-right
+ Example ofcaret-square-o-down
+ Example ofcaret-square-o-left
+ Example ofcaret-square-o-right
+ Example ofcaret-square-o-up
+ Example ofcaret-up
+ Example ofchevron-circle-down
+ Example ofchevron-circle-left
+ Example ofchevron-circle-right
+ Example ofchevron-circle-up
+ Example ofchevron-down
+ Example ofchevron-left
+ Example ofchevron-right
+ Example ofchevron-up
+ Example ofexchange
+ Example ofhand-o-down
+ Example ofhand-o-left
+ Example ofhand-o-right
+ Example ofhand-o-up
+ Example oflong-arrow-down
+ Example oflong-arrow-left
+ Example oflong-arrow-right
+ Example oflong-arrow-up
+ Example oftoggle-down (alias)
+ Example oftoggle-left (alias)
+ Example oftoggle-right (alias)
+ Example oftoggle-up (alias)
+Video Player Icons
+ Example ofarrows-alt
+ Example ofbackward
+ Example ofcompress
+ Example ofeject
+ Example ofexpand
+ Example offast-backward
+ Example offast-forward
+ Example offorward
+ Example ofpause
+ Example ofpause-circle
+ Example ofpause-circle-o
+ Example ofplay
+ Example ofplay-circle
+ Example ofplay-circle-o
+ Example ofrandom
+ Example ofstep-backward
+ Example ofstep-forward
+ Example ofstop
+ Example ofstop-circle
+ Example ofstop-circle-o
+ Example ofyoutube-play
+Brand Icons
+ Example of500px
+ Example ofadn
+ Example ofamazon
+ Example ofandroid
+ Example ofangellist
+ Example ofapple
+ Example ofbandcamp
+ Example ofbehance
+ Example ofbehance-square
+ Example ofbitbucket
+ Example ofbitbucket-square
+ Example ofbitcoin (alias)
+ Example ofblack-tie
+ Example ofbluetooth
+ Example ofbluetooth-b
+ Example ofbtc
+ Example ofbuysellads
+ Example ofcc-amex
+ Example ofcc-diners-club
+ Example ofcc-discover
+ Example ofcc-jcb
+ Example ofcc-mastercard
+ Example ofcc-paypal
+ Example ofcc-stripe
+ Example ofcc-visa
+ Example ofchrome
+ Example ofcodepen
+ Example ofcodiepie
+ Example ofconnectdevelop
+ Example ofcontao
+ Example ofcss3
+ Example ofdashcube
+ Example ofdelicious
+ Example ofdeviantart
+ Example ofdigg
+ Example ofdribbble
+ Example ofdropbox
+ Example ofdrupal
+ Example ofedge
+ Example ofeercast
+ Example ofempire
+ Example ofenvira
+ Example ofetsy
+ Example ofexpeditedssl
+ Example offa (alias)
+ Example offacebook
+ Example offacebook-f (alias)
+ Example offacebook-official
+ Example offacebook-square
+ Example offirefox
+ Example offirst-order
+ Example offlickr
+ Example offont-awesome
+ Example offonticons
+ Example offort-awesome
+ Example offorumbee
+ Example offoursquare
+ Example offree-code-camp
+ Example ofge (alias)
+ Example ofget-pocket
+ Example ofgg
+ Example ofgg-circle
+ Example ofgit
+ Example ofgit-square
+ Example ofgithub
+ Example ofgithub-alt
+ Example ofgithub-square
+ Example ofgitlab
+ Example ofgittip (alias)
+ Example ofglide
+ Example ofglide-g
+ Example ofgoogle
+ Example ofgoogle-plus
+ Example ofgoogle-plus-circle (alias)
+ Example ofgoogle-plus-official
+ Example ofgoogle-plus-square
+ Example ofgoogle-wallet
+ Example ofgratipay
+ Example ofgrav
+ Example ofhacker-news
+ Example ofhouzz
+ Example ofhtml5
+ Example ofimdb
+ Example ofinstagram
+ Example ofinternet-explorer
+ Example ofioxhost
+ Example ofjoomla
+ Example ofjsfiddle
+ Example oflastfm
+ Example oflastfm-square
+ Example ofleanpub
+ Example oflinkedin
+ Example oflinkedin-square
+ Example oflinode
+ Example oflinux
+ Example ofmaxcdn
+ Example ofmeanpath
+ Example ofmedium
+ Example ofmeetup
+ Example ofmixcloud
+ Example ofmodx
+ Example ofodnoklassniki
+ Example ofodnoklassniki-square
+ Example ofopencart
+ Example ofopenid
+ Example ofopera
+ Example ofoptin-monster
+ Example ofpagelines
+ Example ofpaypal
+ Example ofpied-piper
+ Example ofpied-piper-alt
+ Example ofpied-piper-pp
+ Example ofpinterest
+ Example ofpinterest-p
+ Example ofpinterest-square
+ Example ofproduct-hunt
+ Example ofqq
+ Example ofquora
+ Example ofra (alias)
+ Example ofravelry
+ Example ofrebel
+ Example ofreddit
+ Example ofreddit-alien
+ Example ofreddit-square
+ Example ofrenren
+ Example ofresistance (alias)
+ Example ofsafari
+ Example ofscribd
+ Example ofsellsy
+ Example ofshare-alt
+ Example ofshare-alt-square
+ Example ofshirtsinbulk
+ Example ofsimplybuilt
+ Example ofskyatlas
+ Example ofskype
+ Example ofslack
+ Example ofslideshare
+ Example ofsnapchat
+ Example ofsnapchat-ghost
+ Example ofsnapchat-square
+ Example ofsoundcloud
+ Example ofspotify
+ Example ofstack-exchange
+ Example ofstack-overflow
+ Example ofsteam
+ Example ofsteam-square
+ Example ofstumbleupon
+ Example ofstumbleupon-circle
+ Example ofsuperpowers
+ Example oftelegram
+ Example oftencent-weibo
+ Example ofthemeisle
+ Example oftrello
+ Example oftripadvisor
+ Example oftumblr
+ Example oftumblr-square
+ Example oftwitch
+ Example oftwitter
+ Example oftwitter-square
+ Example ofusb
+ Example ofviacoin
+ Example ofviadeo
+ Example ofviadeo-square
+ Example ofvimeo
+ Example ofvimeo-square
+ Example ofvine
+ Example ofvk
+ Example ofwechat (alias)
+ Example ofweibo
+ Example ofweixin
+ Example ofwhatsapp
+ Example ofwikipedia-w
+ Example ofwindows
+ Example ofwordpress
+ Example ofwpbeginner
+ Example ofwpexplorer
+ Example ofwpforms
+ Example ofxing
+ Example ofxing-square
+ Example ofy-combinator
+ Example ofy-combinator-square (alias)
+ Example ofyahoo
+ Example ofyc (alias)
+ Example ofyc-square (alias)
+ Example ofyelp
+ Example ofyoast
+ Example ofyoutube
+ Example ofyoutube-play
+ Example ofyoutube-square
+Medical Icons
+ Example ofambulance
+ Example ofh-square
+ Example ofheart
+ Example ofheart-o
+ Example ofheartbeat
+ Example ofhospital-o
+ Example ofmedkit
+ Example ofplus-square
+ Example ofstethoscope
+ Example ofuser-md
+ Example ofwheelchair
+ Example ofwheelchair-alt
+ 

@@ -1070,6 +1070,7 @@ var $ = function(selector, category){
 	specs.style = function (css_code){
 
 		//check if style already exist...
+		//alert(specs.selector);
 		var styler_area = document.querySelector('style');
 		//alert(styler_area);
 		if (styler_area == null || styler_area == "" || styler_area == undefined){
@@ -1265,12 +1266,12 @@ function obj_to_string (obj){
 			return obj;*/
 	}
 function addScript (script){
-		var in_script = document.createElement('script');
-		in_script.innerHTML = script.toString();
-		var ref = document.querySelector('head');
-		ref.appendChild(in_script, ref);
-		return in_script;
-	}
+	var in_script = document.createElement('script');
+	in_script.innerHTML = script.toString();
+	var ref = document.querySelector('head');
+	ref.appendChild(in_script, ref);
+	return in_script;
+}
 
 //json_to_url({"maike": "jogn", "paul": "absm"})
 function json_to_url(json){
