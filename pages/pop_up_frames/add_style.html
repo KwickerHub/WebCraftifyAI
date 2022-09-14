@@ -5,31 +5,41 @@
     </head>
 
     <body>
+        <datalist id="the_style_type">
+            <option value="size"></option>
+            <option value="color"></option>
+            <option value="value"></option>
+            <option value="others"></option>
+        </datalist>
 		<center>
-            <h3>Add Style</h3>
-            <div>
-                <label>
-                    <span class="brief_hint">Style Name: </span> <input class="text_input" type="text"/>
-                </label>
-                <br/><br/>
-                <label>
-                    <span class="brief_hint">Style Type: </span> <input class="text_input" type="text"/>
-                </label>
-                <br/><br/>
-                <label>
-                    <span class="brief_hint_textarea">All Possible Values: </span> <textarea class="text_input" placeholder="Add all the possible values that this style can have."></textarea>
-                </label>
-                <br/><br/>
-                <label>
-                    <span class="brief_hint_textarea">Style Description: </span> <textarea class="text_input" placeholder="Add some description about this style. What does this style do?"></textarea>
-                </label>
-                <br/><br/>
-                <label>
-                    <span class="brief_hint_textarea">Default Setting: </span> <textarea class="text_input" placeholder="One value from the Possible values that should be default"></textarea>
-                </label>
-                <br/><br/>
-                <input class="button_input" type="button" value="Add">
-            </div>
+            <form action="../../../backend/style/insert_style.php" method="POST">
+                <h3>Add Style</h3>
+                <div>
+                    <label>
+                        <span class="brief_hint">Style Name: </span> <input class="text_input" name="style_name" placeholder="style name eg height, width etc" type="text" required/>
+                    </label>
+                    <br/><br/>
+                    <label>
+                        <span class="brief_hint">Style Type: </span> <input list="the_style_type" class="text_input" name="type" placeholder="is it a size, color, special, etc? " type="text" required/>
+                        <br/> <b>NOTE: </b> <i> If the style property can be set to a color, size(e.g 10px), value(e.g block). choose others if you are not sure.</i>
+                    </label>
+                    <br/><br/>
+                    <label>
+                        <span class="brief_hint_textarea">All Possible Values: </span> <textarea class="text_input" name="style_values" placeholder="Add all the possible values that this style can have." ></textarea>
+                    </label>
+                    <br/><br/>
+                    <label>
+                        <span class="brief_hint_textarea">Style Description: </span> <textarea class="text_input" name="description"  placeholder="Add some description about this style. What does this style do?" required></textarea>
+                    </label>
+                    <br/><br/>
+                    <label>
+                        <span class="brief_hint_textarea">Default Setting: </span> <textarea class="text_input" name="style_default" placeholder="One value from the Possible values that should be default" ></textarea>
+                    </label>
+                    <br/><br/>
+                    <input class="button_input" type="submit" value="Add"/>
+                </div>
+            </form>
+
         </center>
     </body>
 </html>
