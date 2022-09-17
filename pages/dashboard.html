@@ -77,7 +77,7 @@
 			/*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
 			ref.innerHTML = "";
 			proper_fitting = "\n" + "\t";
-			alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+			//alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
 			ref.append(proper_fitting);
 
 			ref.appendChild(newElem, ref);
@@ -89,7 +89,7 @@
 			proper_fitting = "\n" + "\t";
 			ref.append(proper_fitting);
 			
-			alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+			//alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
 			ref.appendChild(newElem, ref);
 			getElementStyleDetails(elemId);
 			getElementAttrDetails(elemId);
@@ -512,11 +512,57 @@
 		var r = confirm("You are about to remove the entire bar. Please do not proceed If you have not saved your project");
 		if (r == true) {
 			id =(side == "left") ? "theLeftSideBar" : "theRightSideBar";
-			document.getElementById(id).style.display = "none";
+			if (id == "theLeftSideBar") {
+				if (  $("#theLeftSideBar").css("display")  == 'block' ) {
+					document.getElementById('theLeftSideBar').style.display = "none";
+					document.getElementById('leftBarRestore').style.display = "block";
+					scaleViewLayoutAdjust();
+				}
+			}
+			else if (id == "theRightSideBar"){
+				if (  $("#theRightSideBar").css("display")  == 'block' ) {
+					document.getElementById('theRightSideBar').style.display = "none";
+					document.getElementById('rightBarRestore').style.display = "block";
+					scaleViewLayoutAdjust();
+				}
+			}
 		} else {
 			x = "You pressed Cancel!";
 		}
 	}
+
+	//style_position
+	function scaleViewLayoutAdjust(){
+		// if both bars are ON, readjust the main dev
+		if (  $("#theLeftSideBar").css("display")  == 'block' && 
+		 	$("#theRightSideBar").css("display")  == 'block'  ) {
+				document.getElementById('theLeftSideBar').style.width = "20%";
+				document.getElementById('theRightSideBar').style.width = "20%";
+				document.getElementById('the_dev_dashboard').style.width = "60%";
+		}
+		// if one bar is ON, readjust the main dev
+		else if ($("#theLeftSideBar").css("display")  == 'block' && 
+		 	$("#theRightSideBar").css("display")  == 'none'  ) {
+				document.getElementById('theLeftSideBar').style.width = "20%";
+				document.getElementById('theRightSideBar').style.width = "0";
+				document.getElementById('the_dev_dashboard').style.width = "80%";
+		}
+		else if ($("#theLeftSideBar").css("display")  == 'none' && 
+		 	$("#theRightSideBar").css("display")  == 'block'  ) {
+				document.getElementById('theLeftSideBar').style.width = "0";
+				document.getElementById('theRightSideBar').style.width = "20";
+				document.getElementById('the_dev_dashboard').style.width = "80%";
+		}
+		// If none of the bar is ON, readjust the main dev
+		else if ($("#theLeftSideBar").css("display")  == 'none' && 
+		 	$("#theRightSideBar").css("display")  == 'none'  ) {
+				document.getElementById('theLeftSideBar').style.width = "0";
+				document.getElementById('theRightSideBar').style.width = "0";
+				document.getElementById('the_dev_dashboard').style.width = "100%";
+		}
+	}
+
+		
 
 	function removeParent(ev){
 		ev.target.parentElement.style.display = "none";
@@ -1035,6 +1081,26 @@
 		event.target.setAttribute("class", "the_adder_header_ adder_header_selected");
 		load_Adder_maker(adder);
 	}
+
+
+	function handle_side_bars(restore_id){
+		//alert("entered here");
+		if (restore_id == "leftBarRestore") {
+			//alert(document.getElementById('theLeftSideBar').style.display);
+			if (  $("#theLeftSideBar").css("display")  == 'none' ) {
+				document.getElementById('theLeftSideBar').style.display = "block";
+				document.getElementById('leftBarRestore').style.display = "none";
+				scaleViewLayoutAdjust();
+			}
+		}
+		else if (restore_id == "rightBarRestore"){
+			if (  $("#theRightSideBar").css("display")  == 'none' ) {
+				document.getElementById('theRightSideBar').style.display = "block";
+				document.getElementById('rightBarRestore').style.display = "none";
+				scaleViewLayoutAdjust();
+			}
+		}
+	}
 	
 	
 	</script>
@@ -1051,12 +1117,14 @@ body, html{
 .the_top_bar{
 	display: block;
 	width: 100%;
-	height: 10vh;	
+	height: 60px;	
 	top: 0;
 	left: 0;
 	color: #fefefe;
 	background-color: #000;
-	font-size: 14px;
+	/* font-size: 14px; */
+	/* font-family: Georgia, 'Times New Roman', Times, serif; */
+	font-weight: 600;
 	text-align: justify;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -1092,7 +1160,7 @@ body, html{
 .the_left_bar{
 	float: left;
 	display: block;
-	max-width: 18%;
+	max-width: 20%;
 	background-color: #bebebe;
 	overflow: hidden;
 	height: 80vh;
@@ -1132,7 +1200,7 @@ body, html{
 .the_right_bar{
 	float: right;
 	display: block;
-	max-width: 18%;
+	max-width: 20%;
 	background-color: #bebebe;
 	overflow: hidden;
 	height: 80vh;
@@ -1219,7 +1287,7 @@ body, html{
 	color: #000;
 	border: 2px solid #940948;
 	height: 80vh;
-	width: 64%;
+	width: 60%;
 	display: inline-block;
 	text-align: left;
 	/* margin-left: 25%; */
@@ -1412,9 +1480,140 @@ body, html{
     border-width: 5px;
     border-style: solid;
     border-color: transparent black transparent transparent;
-} */
+} 1200 */
+
+@media screen and (min-width: 0px){
+	.the_left_bar{
+		display: none;
+	}
+	.left_bar_restore{
+		display: block;
+	}
+
+	.the_right_bar{
+		display: none;
+	}
+	.right_bar_restore{
+		display: block;
+	}
+
+	.the_dev_body{
+		width: 100%;
+	}
+
+	
+	.the_top_bar{
+		height: 50px;
+	}
+
+	.the_top_bar .dropdown{
+		display: none;
+	}
+
+	.the_top_bar span{
+		position: relative;
+    	display: inline-block;
+		padding: 10px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+
+	
+}
+
+
+@media screen and (min-width: 960px){
+	.the_left_bar{
+		display: block;
+	}
+	.left_bar_restore{
+		display: none;
+	}
+
+	.the_right_bar{
+		display: none;
+	}
+	.right_bar_restore{
+		display: block;
+	}
+	
+
+	.the_dev_body{
+		width: 80%;
+	}
+
+	.the_top_bar{
+		height: 50px;
+	}
+
+	.the_top_bar .dropdown {
+		background-color: transparent;
+		position: relative;
+		display: inline-block;
+	}
+
+	/* .the_top_bar span{
+		position: relative;
+    	display: inline-block;
+		padding: 10px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	} */
+}
+
+@media screen and (min-width: 1200px){
+	.the_left_bar{
+		display: block;
+	}
+	.left_bar_restore{
+		display: none;
+	}
+
+	.the_right_bar{
+		display: block;
+	}
+	.right_bar_restore{
+		display: none;
+	}
+
+	.the_dev_body{
+		width: 60%;
+	}
+
+	.the_top_bar{
+		height: 60px;
+	}
+
+	.the_top_bar .dropdown {
+		background-color: transparent;
+		position: relative;
+		display: inline-block;
+	}
+
+	.the_top_bar .dropdown span{
+    	display: block;
+		padding: 10px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+
+	/* .the_top_bar span{
+		position: relative;
+    	display: inline-block;
+		padding: 10px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	} */
+	
+
+}
+
 </style>
-<div class="the_top_bar">
+<div class="the_top_bar" id="theTopBar">
 	<div class="dropdown">
 		<button class="dropbtn">File</button>
 		<div class="dropdown-content">
@@ -1452,22 +1651,40 @@ body, html{
 		</div>
 	</div>
 	
+	<span onclick="showPopUpById('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
+	<span onclick="showSettingsPage()"><i class="fa fa-cogs"></i>Settings</span>
+	<span onclick="showPopUpById('the_adder_displayer_pop_up')"><i class="fa fa-plus"></i>Contribute</span>
 	
+	<style>
+		.left_bar_restore{
+			position: absolute;
+			left: 0;
+			top: 70px;
+			opacity: 0.5;
+			padding: 7px;
+			background-color: #a4a3d6;
+		}
+		.right_bar_restore{
+			position: absolute;
+			right: 0;
+			top: 70px;
+			opacity: 0.5;
+			padding: 7px;
+			background-color: #a4a3d6;
+		}
+	</style>
 	
-	
-	
-	
-	
-	
-	
-	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Insert</span>
+	<!-- <i id="left_bar_restore" class="fa fa-window-restore"></i>
+	<i id="right_bar_restore" class="fa fa-window-minimize"></i>
+	<i class="fa fa-window-maximize"></i> -->
+	<!-- <span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Insert</span>
 
 	<span onclick="duplicate_children()"><i class="fa fa-pencil"></i>Duplicate</span>
 
-	<span onclick="showPopUpById('the_icon_displayer_pop_up')"><i class="fa fa-pencil"></i>Icons</span>
+	
 	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Font Family</span>
-	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Convert to Module(Dev-Pack)</span>
-	<span onclick="showSettingsPage()"><i class="fa fa-pencil"></i>Settings</span>
+	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Convert to Module(Dev-Pack)</span> -->
+	
 	<!-- <span><i class="fa fa-file"></i>New</span>
 	<span><i class="fa fa-folder-open"></i>Open</span>
 	<span><i class="fa fa-timer"></i>Recent Projects</span>
@@ -1486,13 +1703,17 @@ body, html{
 	<span><i class="fa fa-eye"></i>Public</span>
 	<span><i class="fa fa-lock"></i>Secured</span> -->
 </div>
+<span onclick="handle_side_bars('leftBarRestore')" id="leftBarRestore" class="left_bar_restore"><i class="fa fa-window-restore"></i></span>
+<span onclick="handle_side_bars('rightBarRestore')" id="rightBarRestore" class="right_bar_restore"><i class="fa fa-window-maximize"></i></span>
+
 
 <div class="the_content_arena">
+	
 	<aside id="theLeftSideBar" class="the_left_bar">
 		<span style="display: inline-block; padding: 10px;" class="side_panel_controls_block">
 			<!-- <span style="padding: 7px; background-color: green; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
-			<span onclick="enableCustomiser('left')" style="padding: 7px; background-color: blue; border-radius: 15px;"><i class="fa fa-cog"></i></span>
-			<span onclick="removetheSideBars('left')" style="padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
+			<span onclick="enableCustomiser('left')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px;"><i class="fa fa-cog"></i></span>
+			<span onclick="removetheSideBars('left')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
 		</span>
 		
 		<center>
@@ -1572,15 +1793,21 @@ body, html{
 					</li>
 	
 					<li class="each_item">
-						<input onchange="style_changed('border-left')" id="style_border-left_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border_state">
+						<input onchange="style_changed('border-left')" id="style_border-left_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border-left_state">
 						<label>Border Left</label>
 						<input onkeyup="style_changed('border-left')" id="style_border-left" class="the_input_side" type="text" name="style_border-left_value">
 					</li>
 	
 					<li class="each_item">
-						<input onchange="style_changed('border-right')" id="style_border-right_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border_state">
+						<input onchange="style_changed('border-right')" id="style_border-right_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border-right_state">
 						<label>Border Right</label>
 						<input onkeyup="style_changed('border-right')" id="style_border-right" class="the_input_side" type="text" name="style_border-right_value">
+					</li>
+
+					<li class="each_item">
+						<input onchange="style_changed('border-radius')" id="style_border-radius_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border-radius_state">
+						<label>Border Radius</label>
+						<input onkeyup="style_changed('border-radius')" id="style_border-radius" class="the_input_side" type="text" name="style_border-radius_value">
 					</li>
 	
 					<li class="each_item">
@@ -1643,12 +1870,12 @@ body, html{
 		
 	</aside>
 
-
+	
 	<aside id="theRightSideBar" class="the_right_bar">
 		<span style="display: inline-block; padding: 10px; text-align: right; background-color: #bebebe; opacity: 0.6;" class="side_panel_controls_block">
 			<!-- <span style="padding: 7px; background-color: green; color: #fff; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
-			<span onclick="enableCustomiser('right')" style="padding: 7px; background-color: blue; color: #fff; border-radius: 15px;"><i class="fa fa-cog"></i></span>
-			<span onclick="removetheSideBars('right')" style="padding: 7px; background-color: red; color: #fff; border-radius: 15px"><i class="fa fa-times"></i></span>
+			<span onclick="enableCustomiser('right')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px; color: #fff;"><i class="fa fa-cog"></i></span>
+			<span onclick="removetheSideBars('right')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i></span>
 		</span>
 		
 
@@ -2021,7 +2248,7 @@ body, html{
 		width: 60%;
 		max-height: 65vh;
 		position:fixed;
-		display: block;
+		display: none;
 		top: 15%;
 		left: 20%;
 		background-color: rgba(162, 226, 220, 0.9);
