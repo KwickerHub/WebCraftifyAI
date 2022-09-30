@@ -1,0 +1,167 @@
+align-content  ****** Specifies the alignment of flexible container's items within the flex container.
+align-items  ****** Specifies the default alignment for items within the flex container.
+align-self  ****** Specifies the alignment for selected items within the flex container.
+animation  ****** Specifies the keyframe-based animations.
+animation-delay  ****** Specifies when the animation will start.
+animation-direction  ****** Specifies whether the animation should play in reverse on alternate cycles or not.
+animation-duration  ****** Specifies the number of seconds or milliseconds an animation should take to complete one cycle.
+animation-fill-mode  ****** Specifies how a CSS animation should apply styles to its target before and after it is executing.
+animation-iteration-count  ****** Specifies the number of times an animation cycle should be played before stopping.
+animation-name  ****** Specifies the name of @keyframes defined animations that should be applied to the selected element.
+animation-play-state  ****** Specifies whether the animation is running or paused.
+animation-timing-function  ****** Specifies how a CSS animation should progress over the duration of each cycle.
+backface-visibility  ****** Specifies whether or not the "back" side of a transformed element is visible when facing the user.
+background ****** Defines a variety of background properties within one declaration.
+background-attachment ****** Specify whether the background image is fixed in the viewport or scrolls.
+background-clip  ****** Specifies the painting area of the background.
+background-color ****** Defines an element's background color.
+background-image ****** Defines an element's background image.
+background-origin  ****** Specifies the positioning area of the background images.
+background-position ****** Defines the origin of a background image.
+background-repeat ****** Specify whether/how the background image is tiled.
+background-size  ****** Specifies the size of the background images.
+border ****** Sets the width, style, and color for all four sides of an element's border.
+border-bottom ****** Sets the width, style, and color of the bottom border of an element.
+border-bottom-color ****** Sets the color of the bottom border of an element.
+border-bottom-left-radius  ****** Defines the shape of the bottom-left border corner of an element.
+border-bottom-right-radius  ****** Defines the shape of the bottom-right border corner of an element.
+border-bottom-style ****** Sets the style of the bottom border of an element.
+border-bottom-width ****** Sets the width of the bottom border of an element.
+border-collapse ****** Specifies whether table cell borders are connected or separated.
+border-color ****** Sets the color of the border on all the four sides of an element.
+border-image  ****** Specifies how an image is to be used in place of the border styles.
+border-image-outset  ****** Specifies the amount by which the border image area extends beyond the border box.
+border-image-repeat  ****** Specifies whether the image-border should be repeated, rounded or stretched.
+border-image-slice  ****** Specifies the inward offsets of the image-border.
+border-image-source  ****** Specifies the location of the image to be used as a border.
+border-image-width  ****** Specifies the width of the image-border.
+border-left ****** Sets the width, style, and color of the left border of an element.
+border-left-color ****** Sets the color of the left border of an element.
+border-left-style ****** Sets the style of the left border of an element.
+border-left-width ****** Sets the width of the left border of an element.
+border-radius  ****** Defines the shape of the border corners of an element.
+border-right ****** Sets the width, style, and color of the right border of an element.
+border-right-color ****** Sets the color of the right border of an element.
+border-right-style ****** Sets the style of the right border of an element.
+border-right-width ****** Sets the width of the right border of an element.
+border-spacing ****** Sets the spacing between the borders of adjacent table cells.
+border-style ****** Sets the style of the border on all the four sides of an element.
+border-top ****** Sets the width, style, and color of the top border of an element.
+border-top-color ****** Sets the color of the top border of an element.
+border-top-left-radius  ****** Defines the shape of the top-left border corner of an element.
+border-top-right-radius  ****** Defines the shape of the top-right border corner of an element.
+border-top-style ****** Sets the style of the top border of an element.
+border-top-width ****** Sets the width of the top border of an element.
+border-width ****** Sets the width of the border on all the four sides of an element.
+bottom ****** Specify the location of the bottom edge of the positioned element.
+box-shadow  ****** Applies one or more drop-shadows to the element's box.
+box-sizing  ****** Alter the default CSS box model.
+caption-side ****** Specify the position of table's caption.
+clear ****** Specifies the placement of an element in relation to floating elements.
+clip ****** Defines the clipping region.
+color ****** Specify the color of the text of an element.
+column-count  ****** Specifies the number of columns in a multi-column element.
+column-fill  ****** Specifies how columns will be filled.
+column-gap  ****** Specifies the gap between the columns in a multi-column element.
+column-rule  ****** Specifies a straight line, or "rule", to be drawn between each column in a multi-column element.
+column-rule-color  ****** Specifies the color of the rules drawn between columns in a multi-column layout.
+column-rule-style  ****** Specifies the style of the rule drawn between the columns in a multi-column layout.
+column-rule-width  ****** Specifies the width of the rule drawn between the columns in a multi-column layout.
+column-span  ****** Specifies how many columns an element spans across in a multi-column layout.
+column-width  ****** Specifies the optimal width of the columns in a multi-column element.
+columns  ****** A shorthand property for setting column-width and column-count properties.
+content ****** Inserts generated content.
+counter-increment ****** Increments one or more counter values.
+counter-reset ****** Creates or resets one or more counters.
+cursor ****** Specify the type of cursor.
+direction ****** Define the text direction/writing direction.
+display ****** Specifies how an element is displayed onscreen.
+empty-cells ****** Show or hide borders and backgrounds of empty table cells.
+flex  ****** Specifies the components of a flexible length.
+flex-basis  ****** Specifies the initial main size of the flex item.
+flex-direction  ****** Specifies the direction of the flexible items.
+flex-flow  ****** A shorthand property for the flex-direction and the flex-wrap properties.
+flex-grow  ****** Specifies how the flex item will grow relative to the other items inside the flex container.
+flex-shrink  ****** Specifies how the flex item will shrink relative to the other items inside the flex container.
+flex-wrap  ****** Specifies whether the flexible items should wrap or not.
+float ****** Specifies whether or not a box should float.
+font ****** Defines a variety of font properties within one declaration.
+font-family ****** Defines a list of fonts for element.
+font-size ****** Defines the font size for the text.
+font-size-adjust  ****** Preserves the readability of text when font fallback occurs.
+font-stretch  ****** Selects a normal, condensed, or expanded face from a font.
+font-style ****** Defines the font style for the text.
+font-variant ****** Specify the font variant.
+font-weight ****** Specify the font weight of the text.
+height ****** Specify the height of an element.
+justify-content  ****** Specifies how flex items are aligned along the main axis of the flex container after any flexible lengths and auto margins have been resolved.
+left ****** Specify the location of the left edge of the positioned element.
+letter-spacing ****** Sets the extra spacing between letters.
+line-height ****** Sets the height between lines of text.
+list-style ****** Defines the display style for a list and list elements.
+list-style-image ****** Specifies the image to be used as a list-item marker.
+list-style-position ****** Specifies the position of the list-item marker.
+list-style-type ****** Specifies the marker style for a list-item.
+margin ****** Sets the margin on all four sides of the element.
+margin-bottom ****** Sets the bottom margin of the element.
+margin-left ****** Sets the left margin of the element.
+margin-right ****** Sets the right margin of the element.
+margin-top ****** Sets the top margin of the element.
+max-height ****** Specify the maximum height of an element.
+max-width ****** Specify the maximum width of an element.
+min-height ****** Specify the minimum height of an element.
+min-width ****** Specify the minimum width of an element.
+opacity  ****** Specifies the transparency of an element.
+order  ****** Specifies the order in which a flex items are displayed and laid out within a flex container.
+outline ****** Sets the width, style, and color for all four sides of an element's outline.
+outline-color ****** Sets the color of the outline.
+outline-offset  ****** Set the space between an outline and the border edge of an element.
+outline-style ****** Sets a style for an outline.
+outline-width ****** Sets the width of the outline.
+overflow ****** Specifies the treatment of content that overflows the element's box.
+overflow-x  ****** Specifies the treatment of content that overflows the element's box horizontally.
+overflow-y  ****** Specifies the treatment of content that overflows the element's box vertically.
+padding  ******  Sets the padding on all four sides of the element.
+padding-bottom ****** Sets the padding to the bottom side of an element.
+padding-left ****** Sets the padding to the left side of an element.
+padding-right ****** Sets the padding to the right side of an element.
+padding-top ****** Sets the padding to the top side of an element.
+page-break-after ****** Insert a page breaks after an element.
+page-break-before ****** Insert a page breaks before an element.
+page-break-inside ****** Insert a page breaks inside an element.
+perspective  ****** Defines the perspective from which all child elements of the object are viewed.
+perspective-origin  ****** Defines the origin (the vanishing point for the 3D space) for the perspective property.
+position ****** Specifies how an element is positioned.
+quotes ****** Specifies quotation marks for embedded quotations.
+resize  ****** Specifies whether or not an element is resizable by the user.
+right ****** Specify the location of the right edge of the positioned element.
+tab-size  ****** Specifies the length of the tab character.
+table-layout ****** Specifies a table layout algorithm.
+text-align ****** Sets the horizontal alignment of inline content.
+text-align-last  ****** Specifies how the last line of a block or a line right before a forced line break is aligned when text-align is justify.
+text-decoration ****** Specifies the decoration added to text.
+text-decoration-color  ****** Specifies the color of the text-decoration-line.
+text-decoration-line  ****** Specifies what kind of line decorations are added to the element.
+text-decoration-style  ****** Specifies the style of the lines specified by the text-decoration-line property
+text-indent ****** Indent the first line of text.
+text-justify  ****** Specifies the justification method to use when the text-align property is set to justify.
+text-overflow  ****** Specifies how the text content will be displayed, when it overflows the block containers.
+text-shadow  ****** Applies one or more shadows to the text content of an element.
+text-transform ****** Transforms the case of the text.
+top ****** Specify the location of the top edge of the positioned element.
+transform  ****** Applies a 2D or 3D transformation to an element.
+transform-origin  ****** Defines the origin of transformation for an element.
+transform-style  ****** Specifies how nested elements are rendered in 3D space.
+transition  ****** Defines the transition between two states of an element.
+transition-delay  ****** Specifies when the transition effect will start.
+transition-duration  ****** Specifies the number of seconds or milliseconds a transition effect should take to complete.
+transition-property  ****** Specifies the names of the CSS properties to which a transition effect should be applied.
+transition-timing-function  ****** Specifies the speed curve of the transition effect.
+vertical-align ****** Sets the vertical positioning of an element relative to the current text baseline.
+visibility ****** Specifies whether or not an element is visible.
+white-space ****** Specifies how white space inside the element is handled.
+width ****** Specify the width of an element.
+word-break  ****** Specifies how to break lines within words.
+word-spacing ****** Sets the spacing between words.
+word-wrap  ****** Specifies whether to break words when the content overflows the boundaries of its container.
+z-index ****** Specifies a layering or stacking order for positioned elements.

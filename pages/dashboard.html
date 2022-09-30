@@ -11,8 +11,8 @@
     <!-- fontawesome cdn -->
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-	<meta name="description" id ="meta_description" content="design and build your website here"/>
-	<meta name="keywords" content="html based web builder, make websites with less stress, web builder, create a website, website maker "/>
+	<meta name="description" id ="meta_description" content="Bridging the gap between frontend Developemnt and UI/UX Designs. Introducing the concept of Visual Programming: design and build your website here"/>
+	<meta name="keywords" content="HTML design, html based web builder, make websites with less stress, web builder, create a website, website maker "/>
 	<link rel='shortcut icon' type='image/x-icon' href='../assets/img/brand_kwickerhub/g83.png' />
 
 	<title>Design and Build</title>
@@ -25,11 +25,60 @@
 	
 	var selectedId = 'the_dev_dashboard';
 	var selectedElement;
-	window.onload = function(){
-		//main('the_dev_dashboard');
+	// window.onload = function(){
+	// 	setup();
+	// 	alert(document.readyState);
+	// }
+	
+	//$(document).ready(setup());
+	var the_setuptimer_2 = setInterval(() => {
+		if(document.readyState == "complete"){
+			main('the_dev_dashboard'); clearInterval(the_setuptimer_2);
+		}
+	}, 1000);
+	var the_setuptimer_2 = setInterval(() => {
+		if(document.readyState == "complete"){
+			loadSaveContent(); clearInterval(the_setuptimer_2);
+		}
+	}, 1200);
+	
+	var the_setuptimer_3 = setInterval(() => {
+		if(document.readyState == "complete"){
+			loadElements();; clearInterval(the_setuptimer_3);
+		}
+	}, 1300);
+
+	var the_setuptimer_4 = setInterval(() => {
+		if(document.readyState == "complete"){
+			load_Adder_maker('element'); clearInterval(the_setuptimer_4);
+		}
+	}, 1400);
+	
+	var the_setuptimer_5 = setInterval(() => {
+		if(document.readyState == "complete"){
+			loadAllSides("Style"); clearInterval(the_setuptimer_5);
+		}
+	}, 1500);
+	
+	// window.addEventListener("load",function(event) {
+	// 	var $input2 = document.getElementById('dec');
+	// 	var $input1 = document.getElementById('parenta');
+	// 	$input1.addEventListener('keyup', function() {
+	// 		$input2.value = $input1.value;
+	// 	});
+	// },false);
+
+	//window.addEventListener("load", function(event){main('the_dev_dashboard');}, false);
+	//window.addEventListener("load", function(event){loadSaveContent();}, false);
+	//window.addEventListener("load", function(event){setup();}, false);
+	//window.addEventListener("load", function(event){load_Adder_maker('element');}, false);
+	//window.addEventListener("load", function(event){loadAllSides("Style");}, false);
+	function setup(){
+		main('the_dev_dashboard');
 		loadSaveContent();
 		loadElements();
 		load_Adder_maker('element');
+		loadAllSides("Style");
 	}
 
 	// window.onload = loadSaveContent();
@@ -54,11 +103,17 @@
 		//width = ($("#style_width").val() != "") ? $("#style_width").val() : "120px";
 		//background = ($("#style_background-color").val() != "") ? $("#back_color").val() : "#fed342";
 
-		height = "120px";
-		width = "120px";
+		height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value
+		width =  + document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value ;
 		background = colorCodeGenetor(6);
+		if (document.getElementById("settings_background").checked) {
+			defaultStyle = 'height: '+ height + '; width: '+ width + '; background-color: ' + background + '; ';
+		}else{
+			defaultStyle = 'height: '+ height + '; width: '+ width + '; ';
+		}
+		
 
-		defaultStyle = 'height: '+ height + '; width: '+ width + '; background-color: ' + background + '; ';
+		
 		elemId = generate_strings_id(7);
 		//console.log(elemId);
 		newElem.setAttribute("style", defaultStyle);
@@ -589,11 +644,15 @@
 		ev.target.parentElement.style.display = "none";
 	}
 
+	function removeSpecificId(id){
+		document.getElementById(id).style.display = "none";
+	}
+
 
 	function loadStyles(){
-		$.post("../../backend/style/get_style.php?echo=json", {
-			//password: password,
-			//email: email,
+		display_by = document.getElementById("arrangement_type").value;
+		url = '../../backend/style/get_style.php?echo=json&display_by=' + display_by ;
+		$.post(url, {
 			key: "gjhtiidsimi09403jfjkdknf",
 		},
 		function(data, status){
@@ -619,21 +678,26 @@
 
 
 	function loadAllSides(ev){
-		selected_Id = ev.target.id;
-		selected_Element = document.getElementById(selected_Id);
-		tag = selected_Element.value;
+		if( typeof(ev) == "string" ){
+			tag = ev;
+		}else{
+			selected_Id = ev.target.id;
+			selected_Element = document.getElementById(selected_Id);
+			tag = selected_Element.value;
+		}
 		//alert(tag);
+		display_by = document.getElementById("arrangement_type").value;
 		url = "../../backend/style/get_style.php?echo=raw";
 		if(tag == 'Style'){
-			url = '../../backend/style/get_style.php?echo=raw';
+			url = '../../backend/style/get_style.php?echo=raw&display_by=' + display_by;
 		}else if (tag == 'Assitance/Modules'){
-			url = '../../backend/assistance/get_assistance.php?echo=raw';
+			url = '../../backend/assistance/get_assistance.php?echo=raw&display_by=' + display_by;
 		}else if (tag == 'Attributes'){
-			url = '../../backend/attribute/get_attribute.php?echo=raw';
+			url = '../../backend/attribute/get_attribute.php?echo=raw&display_by=' + display_by;
 		}else if(tag == 'Colors'){
-			url = '../../backend/color/get_color.php?echo=raw';
+			url = '../../backend/colors/get_colors.php?echo=raw&display_by=' + display_by;
 		}else if(tag == 'File'){
-			url = '../../backend/file/get_file.php?echo=raw';
+			url = '../../backend/file/get_file.php?echo=raw&display_by=' + display_by;
 		}
 		//alert(url);
 		$.post(url, {
@@ -672,7 +736,8 @@
 
 
 	function loadElements(){
-		url = '../../backend/elements/get_element.php?echo=raw';
+		display_by = document.getElementById("arrangement_type").value;
+		url = '../../backend/elements/get_element.php?echo=raw&display_by=' + display_by ;
 		$.post(url, {
 			key: "gjhtiidsimi09403jfjkdknf",
 		},
@@ -975,7 +1040,9 @@
 		background = colorCodeGenetor(6);
 		newElem.setAttribute("id", elemId);
 		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
-		newElem.style.backgroundColor = background;
+		if (document.getElementById("settings_duplicate_background").checked == true) {
+			newElem.style.backgroundColor = background;
+		}
 		home_msg = ref.textContent;
 		
 		if ( home_msg.indexOf("This is the main dashboard arena") > -1 ) {
@@ -1005,7 +1072,9 @@
 		background = colorCodeGenetor(6);
 		newElem.setAttribute("id", elemId);
 		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
-		newElem.style.backgroundColor = background;
+		if (document.getElementById("settings_duplicate_background").checked == true) {
+			newElem.style.backgroundColor = background;
+		}
 		
 		return newElem;
 	
@@ -1096,11 +1165,47 @@
 
 	function now_display_adder_maker(event, adder){
 		var head_adders = document.getElementsByClassName('the_adder_header_ adder_header_selected');
-		//alert(head_adders.length);
 		head_adders[0].setAttribute("class", "the_adder_header_");
 
 		event.target.setAttribute("class", "the_adder_header_ adder_header_selected");
 		load_Adder_maker(adder);
+	}
+
+	//TODO::Wanted to create something that will tell the tab to load when opening the pop-up. 
+	function show_icon_popup(area){
+		document.getElementById("the_icon_displayer_pop_up").style.display = "block";
+		iconType = "FontAwesome";
+		display_this_icon_type(iconType);
+	}
+
+
+	function display_this_icon_type(iconType){
+		var head_adders = document.getElementsByClassName('the_icon_header_ icon_header_selected');
+		head_adders[0].setAttribute("class", "the_icon_header_");
+
+		//instead of sending the event, what if we set some unique ID for all the arts/icon categories
+		document.getElementById("icon_type_id_"+iconType).setAttribute("class", "the_icon_header_ icon_header_selected");
+		load_icon_maker(iconType);
+	}
+
+	function load_icon_maker(iconType){
+		display_by = document.getElementById("arrangement_type").value;
+		url_icon = '../../backend/icons/get_icon.php?echo=raw&display_by=' + display_by ;
+
+		var elem = document.getElementById("the_selected_icon_displayer");
+		var ret_value = "";
+		if (iconType == 'FontAwesome') {
+			
+			$.post(url_icon, {
+				key: "gjhtiidsimi09403jfjkdknf",
+			},
+			function(data, status){
+				//alert(data);
+				elem.innerHTML = data;
+			});
+		}else if (iconType == 'GoogleIcon') {
+			elem.innerHTML = "Update Coming Soon.";
+		}		
 	}
 
 
@@ -1277,6 +1382,18 @@ body, html{
 	border-radius: 12px;
 	border: 2px solid #432424;
 	background-color: #000;
+	display: inline-block;
+	position: static;
+	color: #fff;
+	padding: 8px;
+	cursor: pointer;
+}
+
+
+.the_bottom_bar .the_bottom_elems_block{
+	border-radius: 12px;
+	border: 2px solid #432424;
+	background-color: green;
 	display: inline-block;
 	position: static;
 	color: #fff;
@@ -1504,7 +1621,7 @@ body, html{
 
 @media screen and (min-width: 0px){
 	.the_left_bar{
-		display: block;
+		display: none;
 		max-width: 100%;
 		width: 100%;
 		position: fixed;
@@ -1669,7 +1786,7 @@ body, html{
 			<span onclick="duplicate_children()"><i class="fa fa-plus"></i>Duplicate</span>
 			<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
 			<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
-			<span><i class="fa fa-plus"></i>Add Element</span>
+			<!-- <span><i class="fa fa-plus"></i>Add Element</span> -->
 		</div>
 	</div>
 
@@ -1682,6 +1799,15 @@ body, html{
 	</div>
 
 	<div class="dropdown">
+		<button class="dropbtn">View</button>
+		<div class="dropdown-content">
+			<span onclick=""><i class="fa fa-redirect"></i>View page</span>
+			<!-- <span onclick=""><i class="fa fa-globe"></i>Change View</span>
+			<span onclick=""><i class="fa fa-globe"></i>Mobile View</span> -->
+		</div>
+	</div>
+
+	<div class="dropdown">
 		<button class="dropbtn">Help</button>
 		<div class="dropdown-content">
 			<span><i class="fa fa-info"></i>About</span>
@@ -1689,7 +1815,7 @@ body, html{
 		</div>
 	</div>
 	
-	<span onclick="showPopUpById('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
+	<span onclick="show_icon_popup('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
 	<span onclick="showSettingsPage()"><i class="fa fa-cogs"></i>Settings</span>
 	<span onclick="showPopUpById('the_adder_displayer_pop_up')"><i class="fa fa-plus"></i>Contribute</span>
 	
@@ -1760,7 +1886,7 @@ body, html{
 
 
 		<center>
-			<select onclick="loadAllSides(event)" class="the_panel_selector" id="id_4_the_panel_selector">
+			<select onchange="loadAllSides(event)" class="the_panel_selector" id="id_4_the_panel_selector">
 				<option>Style</option>
 				<option>Assitance/Modules</option>
 				<option>Attributes</option>
@@ -2013,7 +2139,7 @@ body, html{
 
 
 <div class="the_bottom_bar" >
-	<span ondragstart="elem_drag(event, 'div')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('div')">div</span>
+	<span ondragstart="elem_drag(event, 'div')" draggable="true" class="the_bottom_elems_block" onclick="add_element_2_dashboard('div')">div</span>
 
 	<span ondragstart="elem_drag(event, 'span')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('span')">span</span>
 
@@ -2099,7 +2225,7 @@ body, html{
 
 </style>
 <div id="the_settings_section_page" class="the_settings_section">
-	<span onclick="removeParent(event)" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
+	<span onclick="removeSpecificId('the_settings_section_page')" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
 	<div>
 		<h2>Project Settings</h2>
 	</div>
@@ -2108,12 +2234,12 @@ body, html{
 		<ul>
 			<li class="setting_item">
 				<label>Default Height</label>
-				<input class="the_input_side" value="120" type="text" name="_height_value">
+				<input class="the_input_side" id="settings_height" value="120" type="text" name="">
 			</li>
 
 			<li class="setting_item">
 				<label>Default Width</label>
-				<input class="the_input_side" value="120" type="text" name="_height_value">
+				<input class="the_input_side" id="settings_width" value="120" type="text" name="">
 			</li>
 
 			<datalist id="setting_size">
@@ -2124,17 +2250,27 @@ body, html{
 			</datalist>
 			<li class="setting_item">
 				<label>Select Size Representation</label>
-				<input class="the_input_side" size="setting_size" value="px" type="text" name="_height_value">
+				<input class="the_input_side" id="settings_size_representation" list="setting_size" value="px" type="text" name="">
+			</li>
+
+			<datalist id="arrangement_type_list">
+				<option value="date-old">By Date - Older </option>
+				<option value="like" default>By Likes </option>
+				<option value="date-new">By Date - Older </option>
+			</datalist>
+			<li class="setting_item">
+				<label>Arrangement</label>
+				<input class="the_input_side" id="arrangement_type" list="arrangement_type_list" type="text" value="like" name="">
 			</li>
 
 			<li class="setting_item">
 				<label>on Create Background Change</label>
-				<input class="the_check_side" type="checkbox" checked value="yes" name="_width_state">
+				<input class="the_check_side" type="checkbox" id="settings_background" checked value="yes" name="">
 			</li>
 
 			<li class="setting_item">
 				<label>on Duplicate Background Change</label>
-				<input class="the_check_side" type="checkbox" checked value="yes" name="_width_state">
+				<input class="the_check_side" type="checkbox" id="settings_duplicate_background" checked value="yes" name="">
 			</li>
 		</ul>
 	<button class="the_save_button">Save</button>
@@ -2239,43 +2375,25 @@ body, html{
 </style>
 <!-- the icon pop-up displayer -->
 <div id="the_icon_displayer_pop_up" class="the_chief_icon">
-	<span onclick="removeParent(event)" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
+	<span onclick="removeSpecificId('the_icon_displayer_pop_up')" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
 
 	<div class="the_icon_headings">
-		<span class="the_icon_header_ icon_header_selected"> Font Awesome Icons </span>
-		<span class="the_icon_header_"> Google Icons </span>
-		<span class="the_icon_header_"> Svg Icons </span>
+		<span onclick="display_this_icon_type('FontAwesome')" id="icon_type_id_FontAwesome" class="the_icon_header_ icon_header_selected"> Font Awesome Icons </span>
+		<span onclick="display_this_icon_type('GoogleIcon')" id="icon_type_id_GoogleIcon" class="the_icon_header_"> Google Icons </span>
+		<!-- <span class="the_icon_header_"> Svg Icons </span>
 		<span class="the_icon_header_"> Vector Icons </span>
 		<span class="the_icon_header_"> Color Icons </span>
 		<span class="the_icon_header_"> Google Icons </span>
 		<span class="the_icon_header_"> Svg Icons </span>
 		<span class="the_icon_header_"> Vector Icons </span>
-		<span class="the_icon_header_"> Color Icons </span>
+		<span class="the_icon_header_"> Color Icons </span> -->
 	</div>
 	<label class="labeled_search_input">Search: <input class="cla_icon_search" type="search" name="icon_search" id="the_icon_search"/> <i class="fa fa-search"></i> </label>
 	<hr/>
-	<div class="the_icon_displayer">
+	<div class="the_icon_displayer" id="the_selected_icon_displayer">
 
-		<span class="individual_icon" onclick="add_FA_icon('bars')"><i class="fa fa-bars"></i><label class="icon_label">Bars</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-cubes"></i><label class="icon_label">Cubes</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-cube"></i><label class="icon_label">Cube</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calendar"></i><label class="icon_label">Calendar</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calculator"></i><label class="icon_label">Calculator</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-car"></i><label class="icon_label">Car</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-cube"></i><label class="icon_label">Cube</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calendar"></i><label class="icon_label">Calendar</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calculator"></i><label class="icon_label">Calculator</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-car"></i><label class="icon_label">Car</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-bars"></i><label class="icon_label">Bars</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-cubes"></i><label class="icon_label">Cubes</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-cube"></i><label class="icon_label">Cube</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calendar"></i><label class="icon_label">Calendar</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calculator"></i><label class="icon_label">Calculator</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-car"></i><label class="icon_label">Car</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-cube"></i><label class="icon_label">Cube</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calendar"></i><label class="icon_label">Calendar</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-calculator"></i><label class="icon_label">Calculator</label></span>
-		<span class="individual_icon" onclick=""><i class="fa fa-car"></i><label class="icon_label">Car</label></span>
+		<!-- <span class="individual_icon" onclick="add_FA_icon('bars')"><i class="fa fa-bars"></i><label class="icon_label">Bars</label></span> -->
+		
 	</div>
 </div>
 
