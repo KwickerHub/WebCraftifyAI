@@ -81,7 +81,7 @@
 		loadAllSides("Style");
 	}
 
-	// window.onload = loadSaveContent();
+	//window.onload = loadSaveContent();
 	// window.onload = loadElements();
 	//window.onload = load_Adder_maker('element');
 		
@@ -157,7 +157,8 @@
 	function selectCreated(id, type){
 		selectedId = id;
 		selectedElement = document.getElementById(id);
-		$("#the_selected_elem").text(type + ' - #' + id + ' : Selected');
+		$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
+		$("#the_selected_elem_right").text(type + ' - #' + id + ' : Selected');
 	}
 
 	function generate_strings_id(length){
@@ -199,7 +200,8 @@
 		if(e.target.id == id){
 			selectedId = id;
 			selectedElement = document.getElementById(id);
-			$("#the_selected_elem").text(type + ' - #' + id + ' : Selected');
+			$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
+			$("#the_selected_elem_right").text(type + ' - #' + id + ' : Selected');
 			getElementStyleDetails(selectedId);
 			getElementAttrDetails(selectedId);
 		}
@@ -555,7 +557,8 @@
 			id =(side == "left") ? "theLeftSideBar" : "theRightSideBar";
 			selectedId = id;
 			selectedElement = document.getElementById(id);
-			$("#the_selected_elem").text('aside' + ' - #' + id + ' : Selected');
+			$("#the_selected_elem_left").text('aside' + ' - #' + id + ' : Selected');
+			$("#the_selected_elem_right").text('aside' + ' - #' + id + ' : Selected');
 			getElementStyleDetails(selectedId);
 			getElementAttrDetails(selectedId);
 		} else {
@@ -677,7 +680,7 @@
 	}
 
 
-	function loadAllSides(ev){
+	function loadAllLeftSides(ev){
 		if( typeof(ev) == "string" ){
 			tag = ev;
 		}else{
@@ -708,9 +711,44 @@
 			//alert(data);
 			//result = data["result"];
 			if (status){
-				$('.full_style_section').html(data);
+				$('.full_left_aside_section').html(data);
 				$('#The_left_header_side').text(tag);
-				
+			}else{
+				console.log('failed to load while using the direct Backend to HTML render.');
+			}
+		});
+	}
+
+	function loadAllRightSides(ev){
+		if( typeof(ev) == "string" ){
+			tag = ev;
+		}else{
+			selected_Id = ev.target.id;
+			selected_Element = document.getElementById(selected_Id);
+			tag = selected_Element.value;
+		}
+		//alert(tag);
+		display_by = document.getElementById("arrangement_type").value;
+		url = "../../backend/style/get_style.php?echo=raw";
+		if(tag == 'Style'){
+			url = '../../backend/style/get_style.php?echo=raw&display_by=' + display_by;
+		}else if (tag == 'Assitance/Modules'){
+			url = '../../backend/assistance/get_assistance.php?echo=raw&display_by=' + display_by;
+		}else if (tag == 'Attributes'){
+			url = '../../backend/attribute/get_attribute.php?echo=raw&display_by=' + display_by;
+		}else if(tag == 'Colors'){
+			url = '../../backend/colors/get_color.php?echo=raw&display_by=' + display_by;
+		}else if(tag == 'File'){
+			url = '../../backend/file/get_file.php?echo=raw&display_by=' + display_by;
+		}
+		//alert(url);
+		$.post(url, {
+			key: "gjhtiidsimi09403jfjkdknf",
+		},
+		function(data, status){
+			if (status){
+				$('.full_right_aside_section').html(data);
+				$('#The_right_header_side').text(tag);
 			}else{
 				console.log('failed to load while using the direct Backend to HTML render.');
 			}
@@ -1886,7 +1924,7 @@ body, html{
 
 
 		<center>
-			<select onclick="loadAllSides(event)" onchange="loadAllSides(event)" class="the_panel_selector" id="id_4_the_panel_selector">
+			<select onclick="loadAllLeftSides(event)" onchange="loadAllLeftSides(event)" class="the_panel_selector" id="id_4_the_panel_selector_left">
 				<option value="Style">Style</option>
 				<option value="Assitance/Modules">Assitance/Modules</option>
 				<option value="Attributes">Attributes</option>
@@ -1905,7 +1943,8 @@ body, html{
 				<option value="100vh"></option>
 			</datalist>
 
-			<div class="full_style_section">
+
+			<div class="full_left_aside_section">
 				<ul>
 					<li class="each_item">
 						<input onchange="style_changed('height')" id="style_height_status" class="the_check_side" type="checkbox" checked value="yes" name="_height_state">
@@ -2042,79 +2081,84 @@ body, html{
 			<span onclick="removetheSideBars('right')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i></span>
 		</span>
 		
+		
 
 		<center>
-			<h6 id="the_selected_elem">Div - Dev Body : Selected</h6>
+			<h6 id="the_selected_elem_right">Div - Dev Body : Selected</h6>
 		</center>
 
 		<center>
-			<select class="the_panel_selector">
-				<option>Attributes</option>
-				<option>Style</option>
-				<option>Assitance</option>
-				<option>Colors</option>
-				<option>File</option>
+			<select onclick="loadAllRightSides(event)" onchange="loadAllRightSides(event)" class="the_panel_selector" id="id_4_the_panel_selector_right">
+				<option value="Attributes">Attributes</option>
+				<option value="Style">Style</option>
+				<option value="Assitance/Modules">Assitance/Modules</option>
+				<option value="Colors">Colors</option>
+				<option value="File">File</option>
 			</select>
 		</center>
 		
 
 		<div class="the_selected_displayer">
-			<h3 class="sider_header" id="The_left_header_side"> Attributes </h3>
+			<h3 class="sider_header" id="The_right_header_side"> Attributes </h3>
 			<datalist id="size">
 				<option value="100px"></option>
 				<option value="100%"></option>
 				<option value="100em"></option>
 				<option value="100vh"></option>
 			</datalist>
-			<ul class="full_attr_section">
-				<li class="each_item">
-					<input onchange="attr_changed('height')" id="attr_height_status" class="the_check_side" type="checkbox" checked value="yes" name="_height_state">
-					<label>Height</label>
-					<input onkeyup="attr_changed('height')" id="attr_height" list="size" class="the_input_side" type="text" name="attr_height_value">
-				</li>
 
-				<li class="each_item">
-					<input onchange="attr_changed('width')" id="attr_width_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-					<label>Width</label>
-					<input onkeyup="attr_changed('width')" id="attr_width" class="the_input_side" type="text" name="_width_value">
-				</li>
-
-				<li class="each_item">
-					<input onchange="attr_changed('background-color')" id="attr_background-color_status" class="the_check_side" checked value="yes"  type="checkbox" name="_height_state">
-					<label>Background Color</label>
-					<input onkeyup="attr_changed('background-color')" id="attr_background-color" class="the_input_side" type="text" name="_color_value">
-				</li>
-
-				<li class="each_item">
-					<input onchange="attr_changed('src')" id="attr_src_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-					<label>Src</label>
-					<input onkeyup="attr_changed('src')" id="attr_src" class="the_input_side" type="text" name="_height_value">
-				</li>
-
-				<li class="each_item">
-					<input onchange="attr_changed('padding')" id="attr_padding_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-					<label>Padding</label>
-					<input onkeyup="attr_changed('padding')" id="attr_padding" class="the_input_side" type="text" name="_height_value">
-				</li>
-
-				<li class="each_item">
-					<input onchange="attr_changed('class')" id="attr_class_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-					<label>Class</label>
-					<input onkeyup="attr_changed('class')" id="attr_class" class="the_input_side" type="text" name="_height_value">
-				</li>
-
-				<li class="each_item">
-					<input onchange="attr_changed('border')" id="attr_border_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-					<label>border</label>
-					<input onkeyup="attr_changed('border')" id="attr_border" class="the_input_side" type="text" name="_height_value">
-				</li>
-
-				<li class="each_item">
-					<input onchange="attr_changed('id')" id="attr_id_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-					<label>id</label>
-					<input onkeyup="attr_changed('id')" id="attr_id" class="the_input_side" type="text" name="_height_value">
-				</li>
-			</ul>
+			<div class="full_right_aside_section">
+				<ul>
+					<li class="each_item">
+						<input onchange="attr_changed('height')" id="attr_height_status" class="the_check_side" type="checkbox" checked value="yes" name="_height_state">
+						<label>Height</label>
+						<input onkeyup="attr_changed('height')" id="attr_height" list="size" class="the_input_side" type="text" name="attr_height_value">
+					</li>
+	
+					<li class="each_item">
+						<input onchange="attr_changed('width')" id="attr_width_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
+						<label>Width</label>
+						<input onkeyup="attr_changed('width')" id="attr_width" class="the_input_side" type="text" name="_width_value">
+					</li>
+	
+					<li class="each_item">
+						<input onchange="attr_changed('background-color')" id="attr_background-color_status" class="the_check_side" checked value="yes"  type="checkbox" name="_height_state">
+						<label>Background Color</label>
+						<input onkeyup="attr_changed('background-color')" id="attr_background-color" class="the_input_side" type="text" name="_color_value">
+					</li>
+	
+					<li class="each_item">
+						<input onchange="attr_changed('src')" id="attr_src_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
+						<label>Src</label>
+						<input onkeyup="attr_changed('src')" id="attr_src" class="the_input_side" type="text" name="_height_value">
+					</li>
+	
+					<li class="each_item">
+						<input onchange="attr_changed('padding')" id="attr_padding_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
+						<label>Padding</label>
+						<input onkeyup="attr_changed('padding')" id="attr_padding" class="the_input_side" type="text" name="_height_value">
+					</li>
+	
+					<li class="each_item">
+						<input onchange="attr_changed('class')" id="attr_class_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
+						<label>Class</label>
+						<input onkeyup="attr_changed('class')" id="attr_class" class="the_input_side" type="text" name="_height_value">
+					</li>
+	
+					<li class="each_item">
+						<input onchange="attr_changed('border')" id="attr_border_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
+						<label>border</label>
+						<input onkeyup="attr_changed('border')" id="attr_border" class="the_input_side" type="text" name="_height_value">
+					</li>
+	
+					<li class="each_item">
+						<input onchange="attr_changed('id')" id="attr_id_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
+						<label>id</label>
+						<input onkeyup="attr_changed('id')" id="attr_id" class="the_input_side" type="text" name="_height_value">
+					</li>
+				</ul>
+			</div>
+			
 
 			<center>
 				<input class="the_add_child_button" type="button" value="Add Child/Tag" name="">
