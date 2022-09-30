@@ -1,14 +1,24 @@
 #  ACES Software Aids 
 
-This is a repository for the front-end of the Software Aids project. 👋
+This is a repository for the front-end of the Software Aids project. 👋 The Aim of this project is to make it extremely easy for people around the world to create and build web pages/content.
 
 ## Setup 🎯
+To avoid the stress, If you know; That your intensions are purely to use this software and not neccessarily to contribute, Visit https://kwickerhub.com and begin using the software. It is safe, simple and less stressful.
 
+But if you intend to contribute, you have to follow the steps below. 
 Firstly, clone this repo using:
 
 ```bash
 git clone *repo URL here (without asterisks)*
 ```
+To have a better experience, you may also want to clone our backend project as the frontend project feeds directly from that API. clone both the backend and frontend in one folder. Enjoy the power of KwickerHub.
+```bash
+git clone *repo URL here of backend (without asterisks)*
+```
+
+read the set-up file in the backend and get the backend strucutures and Database installed.
+import the SQL file into your SQL manager(or PHPmyAdmin)
+open the frontend section in your localhost.
 
 ## Contributions 
 

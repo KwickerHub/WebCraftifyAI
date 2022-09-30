@@ -31,34 +31,34 @@
 	// }
 	
 	//$(document).ready(setup());
-	var the_setuptimer_2 = setInterval(() => {
-		if(document.readyState == "complete"){
-			main('the_dev_dashboard'); clearInterval(the_setuptimer_2);
-		}
-	}, 1000);
-	var the_setuptimer_2 = setInterval(() => {
-		if(document.readyState == "complete"){
-			loadSaveContent(); clearInterval(the_setuptimer_2);
-		}
-	}, 1200);
+	// var the_setuptimer_2 = setInterval(() => {
+	// 	if(document.readyState == "complete"){
+	// 		main('the_dev_dashboard'); clearInterval(the_setuptimer_2);
+	// 	}
+	// }, 1000);
+	// var the_setuptimer_2 = setInterval(() => {
+	// 	if(document.readyState == "complete"){
+	// 		loadSaveContent(); clearInterval(the_setuptimer_2);
+	// 	}
+	// }, 1200);
 	
-	var the_setuptimer_3 = setInterval(() => {
-		if(document.readyState == "complete"){
-			loadElements();; clearInterval(the_setuptimer_3);
-		}
-	}, 1300);
+	// var the_setuptimer_3 = setInterval(() => {
+	// 	if(document.readyState == "complete"){
+	// 		loadElements();; clearInterval(the_setuptimer_3);
+	// 	}
+	// }, 1300);
 
-	var the_setuptimer_4 = setInterval(() => {
-		if(document.readyState == "complete"){
-			load_Adder_maker('element'); clearInterval(the_setuptimer_4);
-		}
-	}, 1400);
+	// var the_setuptimer_4 = setInterval(() => {
+	// 	if(document.readyState == "complete"){
+	// 		load_Adder_maker('element'); clearInterval(the_setuptimer_4);
+	// 	}
+	// }, 1400);
 	
-	var the_setuptimer_5 = setInterval(() => {
-		if(document.readyState == "complete"){
-			loadAllSides("Style"); clearInterval(the_setuptimer_5);
-		}
-	}, 1500);
+	// var the_setuptimer_5 = setInterval(() => {
+	// 	if(document.readyState == "complete"){
+	// 		loadAllSides("Style"); clearInterval(the_setuptimer_5);
+	// 	}
+	// }, 1500);
 	
 	// window.addEventListener("load",function(event) {
 	// 	var $input2 = document.getElementById('dec');
@@ -695,7 +695,7 @@
 		}else if (tag == 'Attributes'){
 			url = '../../backend/attribute/get_attribute.php?echo=raw&display_by=' + display_by;
 		}else if(tag == 'Colors'){
-			url = '../../backend/colors/get_colors.php?echo=raw&display_by=' + display_by;
+			url = '../../backend/colors/get_color.php?echo=raw&display_by=' + display_by;
 		}else if(tag == 'File'){
 			url = '../../backend/file/get_file.php?echo=raw&display_by=' + display_by;
 		}
@@ -1886,12 +1886,12 @@ body, html{
 
 
 		<center>
-			<select onchange="loadAllSides(event)" class="the_panel_selector" id="id_4_the_panel_selector">
-				<option>Style</option>
-				<option>Assitance/Modules</option>
-				<option>Attributes</option>
-				<option>Colors</option>
-				<option>File</option>
+			<select onclick="loadAllSides(event)" onchange="loadAllSides(event)" class="the_panel_selector" id="id_4_the_panel_selector">
+				<option value="Style">Style</option>
+				<option value="Assitance/Modules">Assitance/Modules</option>
+				<option value="Attributes">Attributes</option>
+				<option value="Colors">Colors</option>
+				<option value="File">File</option>
 			</select>
 		</center>
 		
@@ -2162,6 +2162,8 @@ body, html{
 	<span ondragstart="elem_drag(event, 'img')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('img')">img</span>
 
 	<span ondragstart="elem_drag(event, 'center')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('center')">center</span>
+
+	<em style="color: #ffffff;" onclick="loadElements()">more >> </em>
 
 </div>
 
