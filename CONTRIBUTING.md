@@ -2,9 +2,12 @@
 
 This is a repository for the front-end of the Software Aids project. 👋
 
+##PLEASE WATCH THIS VIDEO FOR A COMPLETE GUIDE
+https://youtu.be/p2z3frymoiU
+
 ## Setup 🎯
 
-Firstly, clone this repo using:
+Firstly, you have to fork the repo before you clone the repo using:
 
 ```bash
 git clone *repo URL here (without asterisks)*
