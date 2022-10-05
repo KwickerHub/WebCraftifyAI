@@ -762,35 +762,52 @@ function loadElements(){
 
 function save_file(project_name, project_content, project_description, type){
     var ret = "";
+    //alert("entered here");
     if (type == "new") {
         url = '../../backend/projects/add_project.php';	
     }else{
         url = '../../backend/projects/save_project.php';
     }
     $.post(url, {
-        user_id: 34,
+        user_id: 0,
         project_name: project_name,
         project_description: project_description,
         project_content: project_content,
         key: "gjhtiidsimi09403jfjkdknf"
     },
     function(data, status){
-        //alert(data);
-        //dataJson = JSON.parse(data);
-        //result = data["result"];
+        
         if (status){
-            //$('.the_bottom_bar').html(data);
-            //$('#The_left_header_side').text(tag);
-            ret = data;
             if (type == "new"){
+                alert(data);
                 dataJson = JSON.parse(data);
+                console.log(dataJson);
                 if (dataJson["status"] == "true"){
                     var currentPage = window.location.href;
                     currentPage = currentPage + "?project_title=" + project_name;
-                    window.location.assign(currentPage);
+                    window.oepn(currentPage, "_blank");
                     //saveDevArena();
-                }else{
+                }else if(dataJson["msg"].includes("Invalid User")){
+                    //let us take the person to the log-in page
+                    alert("You are logged out. We will be redirecting you to Register(or Login) in a new tab ");
+                    window.open("signup.html", "_blank");
+                }
+                else{
                     alert("We are facing some challenges with creating this project." );
+                }
+            }else{
+                alert(data);
+                dataJson = JSON.parse(data);
+                console.log(dataJson);
+                if (dataJson["status"] == "true"){
+                    alert("project saved!!!");
+                }else if(dataJson["msg"].includes("Invalid User")){
+                    //let us take the person to the log-in page
+                    alert("You are currently logged out. We will be redirecting you to Register(or Login) in a new tab");
+                    window.open("signup.html", "_blank");
+                }
+                else{
+                    alert("We are facing some challenges with saving this project. It may have been deleted or move" );
                 }
             }
         }else{
@@ -834,29 +851,42 @@ function loadSaveContent(){
         },
         function(data, status){
             if (status){
-                dataJson = JSON.parse(data);
                 //alert(data);
+                dataJson = JSON.parse(data);
                 //alert(dataJson['project']['project_location']);
-                $.post('../../backend/projects/load_saved_content.php', {
-                    user_id: 34, 
-                    project_name: project_name, 
-                    project_location: dataJson['project']['project_location'],
-                    key: "gjhtiidsimi09403jfjkdknf",
-                },
-                function(data, status){
-                    //dataJson = JSON.parse(data);
-                    //alert(data);
-                    if (status){
-                        if (data != "") {
-                            $('#the_dev_dashboard').html(data);	
+                if (dataJson["status"] == "true"){
+                    //var currentPage = window.location.href;
+                    //currentPage = currentPage + "?project_title=" + project_name;
+                    //window.location.assign(currentPage);
+                    //saveDevArena();
+                    $.post('../../backend/projects/load_saved_content.php', {
+                        user_id: 34, 
+                        project_name: project_name, 
+                        project_location: dataJson['project']['project_location'],
+                        key: "gjhtiidsimi09403jfjkdknf",
+                    },
+                    function(data, status){
+                        //dataJson = JSON.parse(data);
+                        //alert(data);
+                        if (status){
+                            if (data != "") {
+                                $('#the_dev_dashboard').html(data);	
+                            }else{
+                                alert('could not load project');
+                            }
+                            //$('#The_left_header_side').text(tag);
                         }else{
-                            alert('could not load project');
+                            console.log('failed to load project. But made the first connection.');
                         }
-                        //$('#The_left_header_side').text(tag);
-                    }else{
-                        console.log('failed to load project. But made the first connection.');
-                    }
-                });
+                    });
+                }else if(dataJson["msg"].includes("Invalid User")){
+                    //let us take the person to the log-in page
+                    window.open("login.html", "_blank");
+                }
+                else{
+                    alert("We are facing some challenges with loading this project." );
+                }
+                
             }else{
                 console.log('failed to load saved project.');
             }
