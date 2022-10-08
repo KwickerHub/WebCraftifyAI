@@ -14,8 +14,9 @@ b{
 }
 .section{
 	width: 100%;
-	min-height: 110vh;
+	/* min-height: 110vh; */
 	background-color: #ddd;
+	display: inline-block;
 }
 .container{
 	width: 80%;
