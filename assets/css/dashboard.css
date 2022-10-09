@@ -127,6 +127,9 @@ body, html{
 	max-width: 95%;
 	min-width: 60%;
 }
+.each_item + .each_item{
+	margin-top: 10px;
+}
 
 .the_selected_displayer .each_item{
 	overflow-x: hidden;
@@ -139,6 +142,16 @@ body, html{
 
 .the_selected_displayer .each_item label{
 	width: 80px;
+	text-overflow: ellipsis;
+	
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+.the_selected_displayer .each_item label:hover{
+	overflow: visible; 
+    white-space: normal;
+    height:auto;
 }
 
 
@@ -733,4 +746,37 @@ body, html{
     border-radius: 9px;
     background-color: #000;
     color: #fff;
+}
+
+/*media queries for settings body*/
+@media only screen and (max-width: 900px){
+	
+	.the_settings_section .settings_body{
+		left: 10%;
+		width: 80%;
+		top: 24%;
+
+	}
+	.settings_body ul{
+		margin-bottom:1%;
+		padding-left: 9%;
+	}
+	.the_settings_section .setting_item {
+		padding:2%;
+	}
+	#the_settings_section_page{
+	top: 18%;
+    left: 12.5%;
+		width: 75%;
+    padding: 2%;	
+	}
+	.the_input_side{
+		display: block; 
+		margin:auto; 
+	}
+	.the_settings_section .settings_body .the_save_button{
+		width: 40%;
+		padding: 2%;
+
+	}
 }
