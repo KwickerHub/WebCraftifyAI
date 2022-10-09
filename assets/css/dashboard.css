@@ -127,6 +127,9 @@ body, html{
 	max-width: 95%;
 	min-width: 60%;
 }
+.each_item + .each_item{
+	margin-top: 10px;
+}
 
 .the_selected_displayer .each_item{
 	overflow-x: hidden;
@@ -139,6 +142,16 @@ body, html{
 
 .the_selected_displayer .each_item label{
 	width: 80px;
+	text-overflow: ellipsis;
+	
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+.the_selected_displayer .each_item label:hover{
+	overflow: visible; 
+    white-space: normal;
+    height:auto;
 }
 
 
