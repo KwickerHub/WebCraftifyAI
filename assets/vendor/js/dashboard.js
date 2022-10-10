@@ -107,7 +107,20 @@ function add_element_2_dashboard (tag_name) {
         //ref.innerHTML = document.createElement(tag_name).toString();
         //var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
         /*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
-        ref.innerHTML = "";
+      
+        // This is the innerHTML of the development dashboard
+      ref.innerHTML = ""; 
+var your_comment = `
+<head>
+<title> #Particular Project Name</title>
+<script>
+    //Plugin Start
+    //##
+    //Plugin End 
+</script>
+</head> 
+`;
+ ref.innerHTML= your_comment;  
         proper_fitting = "\n" + "\t";
         //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
         ref.append(proper_fitting);
