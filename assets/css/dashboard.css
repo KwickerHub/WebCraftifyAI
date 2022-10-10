@@ -747,3 +747,36 @@ body, html{
     background-color: #000;
     color: #fff;
 }
+
+/*media queries for settings body*/
+@media only screen and (max-width: 900px){
+	
+	.the_settings_section .settings_body{
+		left: 10%;
+		width: 80%;
+		top: 24%;
+
+	}
+	.settings_body ul{
+		margin-bottom:1%;
+		padding-left: 9%;
+	}
+	.the_settings_section .setting_item {
+		padding:2%;
+	}
+	#the_settings_section_page{
+	top: 18%;
+    left: 12.5%;
+		width: 75%;
+    padding: 2%;	
+	}
+	.the_input_side{
+		display: block; 
+		margin:auto; 
+	}
+	.the_settings_section .settings_body .the_save_button{
+		width: 40%;
+		padding: 2%;
+
+	}
+}
