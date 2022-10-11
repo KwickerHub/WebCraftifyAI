@@ -109,7 +109,7 @@
 
 	//global selectedElement = '#the_dev_dashboard';
 
-	function add_element_2_dashboard (tag_name) {
+	function add_element_2_dashboard (tag_name,shape) {
 		//specs.element.setAttribute(attribute, value);
 		selectedId = "the_design_dashboard";
 		var newElem = document.createElement(tag_name);
@@ -127,7 +127,9 @@
 			defaultStyle = 'height: '+ height + '; width: '+ width + '; ';
 		}
 		
-
+		if (shape === 'circle'){
+			defaultStyle += 'border-radius: 50%;'
+		}
 		
 		elemId = generate_strings_id(7);
 		//console.log(elemId);
@@ -1391,8 +1393,8 @@
 			<span class="the_menu_icons"><i class="fa fa-bars"></i></span>
 			<span onclick="changeMode(0)" class="the_menu_icons"><i class="fa fa-arrows-alt"></i></span>
 			<span onclick="changeMode(1)" class="the_menu_icons"><i class="fa fa-expand"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('span')"><i class="fa fa-stop"></i></span>
-			<span class="the_menu_icons"><i class="fa fa-circle"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','sqaure')"><i class="fa fa-stop"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','circle')"><i class="fa fa-circle"></i></span>
 			<span class="the_menu_icons"><i class="fa fa-plus"></i></span>
 			<span class="the_menu_icons"><i class="fa fa-font"></i></span>
 			<span class="the_menu_icons" onclick="showSettingsPage()"><i class="fa fa-wrench"></i></span>
