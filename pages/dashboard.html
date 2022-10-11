@@ -1,89 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assets/css/dashboard.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- fontawesome cdn -->
-     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<!-- fontawesome cdn -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-	<meta name="description" id ="meta_description" content="Bridging the gap between frontend Developemnt and UI/UX Designs. Introducing the concept of Visual Programming: design and build your website here"/>
-	<meta name="keywords" content="HTML design, html based web builder, make websites with less stress, web builder, create a website, website maker "/>
+	<meta name="description" id="meta_description"
+		content="Bridging the gap between frontend Developemnt and UI/UX Designs. Introducing the concept of Visual Programming: design and build your website here" />
+	<meta name="keywords"
+		content="HTML design, html based web builder, make websites with less stress, web builder, create a website, website maker " />
 	<link rel='shortcut icon' type='image/x-icon' href='../assets/img/brand_kwickerhub/g83.png' />
 
 	<title>Design and Build</title>
 	<script type="text/javascript" src="../assets/vendor/js/access_library.js"></script>
-	<script type="text/javascript" src="../assets/vendor/js/dashboard.js"></script>
+	<script type="text/javascript" defer src="../assets/vendor/js/dashboard.js"></script>
 </head>
+
 <body>
 
-<div class="the_top_bar" id="theTopBar">
-	<div class="dropdown">
-		<button class="dropbtn">File</button>
-		<div class="dropdown-content">
-			<span onclick="newProject()"><i class="fa fa-file"></i>New</span>
-			<span onclick="saveDevArena()"><i class="fa fa-save"></i>Save<span class="tooltiptext">Tooltip text</span></span>
-			<span onclick="loadSaveContent()"><i class="fa fa-file-o"></i>Load Project</span>
-			<span onclick="loadSaveContent()"><i class="fa fa-file-text-o"></i>Open</span>
-			<!-- <span onclick="saveDevArenaAsCookie()"><i class="fa fa-save"></i>Save in Cookie</span> -->
+	<div class="the_top_bar" id="theTopBar">
+		<div class="dropdown">
+			<button class="dropbtn">File</button>
+			<div class="dropdown-content">
+				<span onclick="newProject()"><i class="fa fa-file"></i>New</span>
+				<span onclick="saveDevArena()"><i class="fa fa-save"></i>Save<span id="toolTipText"
+						class="tooltiptext">more</span></span>
+				<span onclick="loadSaveContent()"><i class="fa fa-file-o"></i>Load Project</span>
+				<span onclick="loadSaveContent()"><i class="fa fa-file-text-o"></i>Open</span>
+				<!-- <span onclick="saveDevArenaAsCookie()"><i class="fa fa-save"></i>Save in Cookie</span> -->
+			</div>
 		</div>
-	</div>
 
-	<div class="dropdown">
-		<button class="dropbtn">Edit</button>
-		<div class="dropdown-content">
-			<span onclick="duplicate_children()"><i class="fa fa-plus"></i>Duplicate</span>
-			<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
-			<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
-			<!-- <span><i class="fa fa-plus"></i>Add Element</span> -->
+		<div class="dropdown">
+			<button class="dropbtn">Edit</button>
+			<div class="dropdown-content">
+				<span onclick="duplicate_children()"><i class="fa fa-plus"></i>Duplicate</span>
+				<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
+				<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
+				<!-- <span><i class="fa fa-plus"></i>Add Element</span> -->
+			</div>
 		</div>
-	</div>
 
-	<div class="dropdown">
-		<button class="dropbtn">Mode</button>
-		<div class="dropdown-content">
-			<span onclick="change2codeMode()"><i class="fa fa-code"></i>Code</span>
-			<span onclick="change2webMode()"><i class="fa fa-globe"></i>Web</span>
+		<div class="dropdown">
+			<button class="dropbtn">Mode</button>
+			<div class="dropdown-content">
+				<span onclick="change2codeMode()"><i class="fa fa-code"></i>Code</span>
+				<span onclick="change2webMode()"><i class="fa fa-globe"></i>Web</span>
+			</div>
 		</div>
-	</div>
 
-	<div class="dropdown">
-		<button class="dropbtn">View</button>
-		<div class="dropdown-content">
-			<span onclick=""><i class="fa fa-external-link"></i>View page</span>
-			<!-- <span onclick=""><i class="fa fa-globe"></i>Change View</span>
+		<div class="dropdown">
+			<button class="dropbtn">View</button>
+			<div class="dropdown-content">
+				<span onclick=""><i class="fa fa-external-link"></i>View page</span>
+				<!-- <span onclick=""><i class="fa fa-globe"></i>Change View</span>
 			<span onclick=""><i class="fa fa-globe"></i>Mobile View</span> -->
+			</div>
 		</div>
-	</div>
 
-	<div class="dropdown">
-		<button class="dropbtn">Help</button>
-		<div class="dropdown-content">
-			<span><i class="fa fa-info"></i>About</span>
-			<span><i class="fa fa-question"></i>Help/Tutorial</span>
+		<div class="dropdown">
+			<button class="dropbtn">Help</button>
+			<div class="dropdown-content">
+				<span><i class="fa fa-info"></i>About</span>
+				<span><i class="fa fa-question"></i>Help/Tutorial</span>
+			</div>
 		</div>
-	</div>
-	
-	<span onclick="show_icon_popup('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
-	<span onclick="showSettingsPage()"><i class="fa fa-cogs"></i>Settings</span>
-	<span onclick="showPopUpById('the_adder_displayer_pop_up')"><i class="fa fa-plus"></i>Contribute</span>
-	
-	<!-- <i id="left_bar_restore" class="fa fa-window-restore"></i>
+
+		<span onclick="show_icon_popup('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
+		<span onclick="showSettingsPage()"><i class="fa fa-cogs"></i>Settings</span>
+		<span onclick="showPopUpById('the_adder_displayer_pop_up')"><i class="fa fa-plus"></i>Contribute</span>
+		<div class="pop-up" id="popUp">Use this option to save your project to the serve to avoid loss of data.</div>
+		<!-- <i id="left_bar_restore" class="fa fa-window-restore"></i>
 	<i id="right_bar_restore" class="fa fa-window-minimize"></i>
 	<i class="fa fa-window-maximize"></i> -->
-	<!-- <span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Insert</span>
+		<!-- <span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Insert</span>
 
 	<span onclick="duplicate_children()"><i class="fa fa-pencil"></i>Duplicate</span>
 
 	
 	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Font Family</span>
 	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Convert to Module(Dev-Pack)</span> -->
-	
-	<!-- <span><i class="fa fa-file"></i>New</span>
+
+		<!-- <span><i class="fa fa-file"></i>New</span>
 	<span><i class="fa fa-folder-open"></i>Open</span>
 	<span><i class="fa fa-timer"></i>Recent Projects</span>
 	<span><i class="fa fa-save"></i>Save</span>
@@ -100,431 +107,529 @@
 	<span><i class="fa fa-share-alt"></i>Share</span>
 	<span><i class="fa fa-eye"></i>Public</span>
 	<span><i class="fa fa-lock"></i>Secured</span> -->
-</div>
-<span onclick="handle_side_bars('leftBarRestore')" id="leftBarRestore" class="left_bar_restore"><i class="fa fa-window-restore"></i></span>
-<span onclick="handle_side_bars('rightBarRestore')" id="rightBarRestore" class="right_bar_restore"><i class="fa fa-window-maximize"></i></span>
+	</div>
+	<span onclick="handle_side_bars('leftBarRestore')" id="leftBarRestore" class="left_bar_restore"><i
+			class="fa fa-window-restore"></i></span>
+	<span onclick="handle_side_bars('rightBarRestore')" id="rightBarRestore" class="right_bar_restore"><i
+			class="fa fa-window-maximize"></i></span>
 
 
-<div class="the_content_arena">
-	
-	<aside id="theLeftSideBar" class="the_left_bar">
-		<span style="display: inline-block; padding: 10px;" class="side_panel_controls_block">
-			<!-- <span style="padding: 7px; background-color: green; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
-			<span onclick="enableCustomiser('left')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px;"><i class="fa fa-cog"></i></span>
-			<span onclick="removetheSideBars('left')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
-		</span>
-		
-		<center>
-			<h6 id="the_selected_elem_left">Div - Dev Body : Selected</h6>
-		</center>
+	<div class="the_content_arena">
 
-
-		<center>
-			<select onclick="loadAllLeftSides(event)" onchange="loadAllLeftSides(event)" class="the_panel_selector" id="id_4_the_panel_selector_left">
-				<option value="Style">Style</option>
-				<option value="Assitance/Modules">Assitance/Modules</option>
-				<option value="Attributes">Attributes</option>
-				<option value="Colors">Colors</option>
-				<option value="File">File</option>
-			</select>
-		</center>
-		
-
-		<div class="the_selected_displayer">
-			<h3 class="sider_header" id="The_left_header_side"> Style </h3>
-			<datalist id="size">
-				<option value="100px"></option>
-				<option value="100%"></option>
-				<option value="100em"></option>
-				<option value="100vh"></option>
-			</datalist>
-
-
-			<div class="full_left_aside_section">
-				<ul>
-					<li class="each_item">
-						<input onchange="style_changed('height')" id="style_height_status" class="the_check_side" type="checkbox" checked value="yes" name="_height_state">
-						<label>Height</label>
-						<input onkeyup="style_changed('height')" id="style_height" list="size" class="the_input_side" type="text" name="style_height_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('width')" id="style_width_status"  class="the_check_side" type="checkbox" checked value="yes" name="_width_state">
-						<label>Width</label>
-						<input onkeyup="style_changed('width')" id="style_width" class="the_input_side" type="text" name="style_width_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('display')" id="style_display_status"  class="the_check_side" type="checkbox" checked value="yes" name="_display_state">
-						<label>Display</label>
-						<input onkeyup="style_changed('display')" id="style_display" class="the_input_side" type="text" name="style_display_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('position')" id="style_position_status"  class="the_check_side" type="checkbox" checked value="yes" name="_position_state">
-						<label>Position</label>
-						<input onkeyup="style_changed('position')" id="style_position" class="the_input_side" type="text" name="style_position_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('background-color')" id="style_background-color_status"  class="the_check_side" checked value="yes" type="checkbox" name="_background-color_state">
-						<label>Background Color</label>
-						<input onkeyup="style_changed('background-color')" id="style_background-color" class="the_input_side" type="text" name="style_background-color_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('color')" id="style_color_status"  class="the_check_side" checked value="yes" type="checkbox" name="_color_state">
-						<label>Color</label>
-						<input onkeyup="style_changed('color')" id="style_color" class="the_input_side" type="text" name="style_color_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('padding')" id="style_padding_status"  class="the_check_side" type="checkbox" checked value="yes" name="_padding_state">
-						<label>Padding</label>
-						<input onkeyup="style_changed('padding')" id="style_padding" class="the_input_side" type="text" name="style_padding_value">
-					</li>
-	
-	
-					<li class="each_item">
-						<input onchange="style_changed('border')" id="style_border_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border_state">
-						<label>Border</label>
-						<input onkeyup="style_changed('border')" id="style_border" class="the_input_side" type="text" name="style_border_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('border-left')" id="style_border-left_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border-left_state">
-						<label>Border Left</label>
-						<input onkeyup="style_changed('border-left')" id="style_border-left" class="the_input_side" type="text" name="style_border-left_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('border-right')" id="style_border-right_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border-right_state">
-						<label>Border Right</label>
-						<input onkeyup="style_changed('border-right')" id="style_border-right" class="the_input_side" type="text" name="style_border-right_value">
-					</li>
-
-					<li class="each_item">
-						<input onchange="style_changed('border-radius')" id="style_border-radius_status"  class="the_check_side" type="checkbox" checked value="yes" name="_border-radius_state">
-						<label>Border Radius</label>
-						<input onkeyup="style_changed('border-radius')" id="style_border-radius" class="the_input_side" type="text" name="style_border-radius_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('font-size')" id="style_font-size_status"  class="the_check_side" type="checkbox" checked value="yes" name="_font-size_state">
-						<label>Font Size</label>
-						<input onkeyup="style_changed('font-size')" id="style_font-size" class="the_input_side" type="text" name="style_font-size_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('font-weight')" id="style_font-weight_status"  class="the_check_side" type="checkbox" checked value="yes" name="_font-weight_state">
-						<label>Font Weight</label>
-						<input onkeyup="style_changed('font-weight')" id="style_font-weight" class="the_input_side" type="text" name="style_font-weight_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('font-family')" id="style_font-family_status"  class="the_check_side" type="checkbox" checked value="yes" name="_font-family_state">
-						<label>Font Family</label>
-						<input onkeyup="style_changed('font-family')" id="style_font-family" class="the_input_side" type="text" name="style_font-family_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('float')" id="style_float_status"  class="the_check_side" type="checkbox" checked value="yes" name="_float_state">
-						<label>Float</label>
-						<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text" name="style_float_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('margin')" id="style_margin_status"  class="the_check_side" type="checkbox" checked value="yes" name="_margin_state">
-						<label>Margin</label>
-						<input onkeyup="style_changed('margin')" id="style_margin" class="the_input_side" type="text" name="style_margin_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('margin-left')" id="style_margin-left_status"  class="the_check_side" type="checkbox" checked value="yes" name="_margin-left_state">
-						<label>Margin Left</label>
-						<input onkeyup="style_changed('margin-left')" id="style_margin-left" class="the_input_side" type="text" name="style_margin-left_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="style_changed('margin-right')" id="style_margin-right_status"  class="the_check_side" type="checkbox" checked value="yes" name="_margin-right_state">
-						<label>Margin Right</label>
-						<input onkeyup="style_changed('margin-right')" id="style_margin-right" class="the_input_side" type="text" name="style_margin-right_value">
-					</li>
-				
-				</ul>
-				
-			</div>
+		<aside id="theLeftSideBar" class="the_left_bar">
+			<span style="display: inline-block; padding: 10px;" class="side_panel_controls_block">
+				<!-- <span style="padding: 7px; background-color: green; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
+				<span onclick="enableCustomiser('left')"
+					style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px;"><i
+						class="fa fa-cog"></i></span>
+				<span onclick="removetheSideBars('left')"
+					style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px"><i
+						class="fa fa-times"></i></span>
+			</span>
 
 			<center>
-				<input class="the_add_child_button" type="button" value="Add Child/Tag" name="">
+				<h6 id="the_selected_elem_left">Div - Dev Body : Selected</h6>
 			</center>
 
 
-			<!-- <em>Except on rare occasions, the may be no need to use the Submit Button</em>
+			<center>
+				<select onclick="loadAllLeftSides(event)" onchange="loadAllLeftSides(event)" class="the_panel_selector"
+					id="id_4_the_panel_selector_left">
+					<option value="Style">Style</option>
+					<option value="Assitance/Modules">Assitance/Modules</option>
+					<option value="Attributes">Attributes</option>
+					<option value="Colors">Colors</option>
+					<option value="File">File</option>
+				</select>
+			</center>
+
+
+			<div class="the_selected_displayer">
+				<h3 class="sider_header" id="The_left_header_side"> Style </h3>
+				<datalist id="size">
+					<option value="100px"></option>
+					<option value="100%"></option>
+					<option value="100em"></option>
+					<option value="100vh"></option>
+				</datalist>
+
+
+				<div class="full_left_aside_section">
+					<ul>
+						<li class="each_item">
+							<input onchange="style_changed('height')" id="style_height_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>Height</label>
+							<input onkeyup="style_changed('height')" id="style_height" list="size"
+								class="the_input_side" type="text" name="style_height_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('width')" id="style_width_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_width_state">
+							<label>Width</label>
+							<input onkeyup="style_changed('width')" id="style_width" class="the_input_side" type="text"
+								name="style_width_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('display')" id="style_display_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_display_state">
+							<label>Display</label>
+							<input onkeyup="style_changed('display')" id="style_display" class="the_input_side"
+								type="text" name="style_display_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('position')" id="style_position_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_position_state">
+							<label>Position</label>
+							<input onkeyup="style_changed('position')" id="style_position" class="the_input_side"
+								type="text" name="style_position_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('background-color')" id="style_background-color_status"
+								class="the_check_side" checked value="yes" type="checkbox"
+								name="_background-color_state">
+							<label>Background Color</label>
+							<input onkeyup="style_changed('background-color')" id="style_background-color"
+								class="the_input_side" type="text" name="style_background-color_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('color')" id="style_color_status" class="the_check_side"
+								checked value="yes" type="checkbox" name="_color_state">
+							<label>Color</label>
+							<input onkeyup="style_changed('color')" id="style_color" class="the_input_side" type="text"
+								name="style_color_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('padding')" id="style_padding_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_padding_state">
+							<label>Padding</label>
+							<input onkeyup="style_changed('padding')" id="style_padding" class="the_input_side"
+								type="text" name="style_padding_value">
+						</li>
+
+
+						<li class="each_item">
+							<input onchange="style_changed('border')" id="style_border_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_border_state">
+							<label>Border</label>
+							<input onkeyup="style_changed('border')" id="style_border" class="the_input_side"
+								type="text" name="style_border_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('border-left')" id="style_border-left_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_border-left_state">
+							<label>Border Left</label>
+							<input onkeyup="style_changed('border-left')" id="style_border-left" class="the_input_side"
+								type="text" name="style_border-left_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('border-right')" id="style_border-right_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_border-right_state">
+							<label>Border Right</label>
+							<input onkeyup="style_changed('border-right')" id="style_border-right"
+								class="the_input_side" type="text" name="style_border-right_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('border-radius')" id="style_border-radius_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_border-radius_state">
+							<label>Border Radius</label>
+							<input onkeyup="style_changed('border-radius')" id="style_border-radius"
+								class="the_input_side" type="text" name="style_border-radius_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('font-size')" id="style_font-size_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_font-size_state">
+							<label>Font Size</label>
+							<input onkeyup="style_changed('font-size')" id="style_font-size" class="the_input_side"
+								type="text" name="style_font-size_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('font-weight')" id="style_font-weight_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_font-weight_state">
+							<label>Font Weight</label>
+							<input onkeyup="style_changed('font-weight')" id="style_font-weight" class="the_input_side"
+								type="text" name="style_font-weight_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('font-family')" id="style_font-family_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_font-family_state">
+							<label>Font Family</label>
+							<input onkeyup="style_changed('font-family')" id="style_font-family" class="the_input_side"
+								type="text" name="style_font-family_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('float')" id="style_float_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_float_state">
+							<label>Float</label>
+							<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text"
+								name="style_float_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('margin')" id="style_margin_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_margin_state">
+							<label>Margin</label>
+							<input onkeyup="style_changed('margin')" id="style_margin" class="the_input_side"
+								type="text" name="style_margin_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('margin-left')" id="style_margin-left_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_margin-left_state">
+							<label>Margin Left</label>
+							<input onkeyup="style_changed('margin-left')" id="style_margin-left" class="the_input_side"
+								type="text" name="style_margin-left_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="style_changed('margin-right')" id="style_margin-right_status"
+								class="the_check_side" type="checkbox" checked value="yes" name="_margin-right_state">
+							<label>Margin Right</label>
+							<input onkeyup="style_changed('margin-right')" id="style_margin-right"
+								class="the_input_side" type="text" name="style_margin-right_value">
+						</li>
+
+					</ul>
+
+				</div>
+
+				<center>
+					<input class="the_add_child_button" type="button" value="Add Child/Tag" name="">
+				</center>
+
+
+				<!-- <em>Except on rare occasions, the may be no need to use the Submit Button</em>
 			<center>
 				<input class="the_panel_submitter" value="Submit Changes" type="button" name="">
 			</center> -->
-			
-		</div>
-		
-	</aside>
 
-	
-	<aside id="theRightSideBar" class="the_right_bar">
-		<span style="display: inline-block; padding: 10px; text-align: right; background-color: #bebebe; opacity: 0.6;" class="side_panel_controls_block">
-			<!-- <span style="padding: 7px; background-color: green; color: #fff; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
-			<span onclick="enableCustomiser('right')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px; color: #fff;"><i class="fa fa-cog"></i></span>
-			<span onclick="removetheSideBars('right')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i></span>
-		</span>
-		
-		
-
-		<center>
-			<h6 id="the_selected_elem_right">Div - Dev Body : Selected</h6>
-		</center>
-
-		<center>
-			<select onclick="loadAllRightSides(event)" onchange="loadAllRightSides(event)" class="the_panel_selector" id="id_4_the_panel_selector_right">
-				<option value="Attributes">Attributes</option>
-				<option value="Style">Style</option>
-				<option value="Assitance/Modules">Assitance/Modules</option>
-				<option value="Colors">Colors</option>
-				<option value="File">File</option>
-			</select>
-		</center>
-		
-
-		<div class="the_selected_displayer">
-			<h3 class="sider_header" id="The_right_header_side"> Attributes </h3>
-			<datalist id="size">
-				<option value="100px"></option>
-				<option value="100%"></option>
-				<option value="100em"></option>
-				<option value="100vh"></option>
-			</datalist>
-
-			<div class="full_right_aside_section">
-				<ul>
-					<li class="each_item">
-						<input onchange="attr_changed('height')" id="attr_height_status" class="the_check_side" type="checkbox" checked value="yes" name="_height_state">
-						<label>Height</label>
-						<input onkeyup="attr_changed('height')" id="attr_height" list="size" class="the_input_side" type="text" name="attr_height_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="attr_changed('width')" id="attr_width_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-						<label>Width</label>
-						<input onkeyup="attr_changed('width')" id="attr_width" class="the_input_side" type="text" name="_width_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="attr_changed('background-color')" id="attr_background-color_status" class="the_check_side" checked value="yes"  type="checkbox" name="_height_state">
-						<label>Background Color</label>
-						<input onkeyup="attr_changed('background-color')" id="attr_background-color" class="the_input_side" type="text" name="_color_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="attr_changed('src')" id="attr_src_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-						<label>Src</label>
-						<input onkeyup="attr_changed('src')" id="attr_src" class="the_input_side" type="text" name="_height_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="attr_changed('padding')" id="attr_padding_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-						<label>Padding</label>
-						<input onkeyup="attr_changed('padding')" id="attr_padding" class="the_input_side" type="text" name="_height_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="attr_changed('class')" id="attr_class_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-						<label>Class</label>
-						<input onkeyup="attr_changed('class')" id="attr_class" class="the_input_side" type="text" name="_height_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="attr_changed('border')" id="attr_border_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-						<label>border</label>
-						<input onkeyup="attr_changed('border')" id="attr_border" class="the_input_side" type="text" name="_height_value">
-					</li>
-	
-					<li class="each_item">
-						<input onchange="attr_changed('id')" id="attr_id_status" class="the_check_side" type="checkbox" checked value="yes"  name="_height_state">
-						<label>id</label>
-						<input onkeyup="attr_changed('id')" id="attr_id" class="the_input_side" type="text" name="_height_value">
-					</li>
-				</ul>
 			</div>
-			
+
+		</aside>
+
+
+		<aside id="theRightSideBar" class="the_right_bar">
+			<span
+				style="display: inline-block; padding: 10px; text-align: right; background-color: #bebebe; opacity: 0.6;"
+				class="side_panel_controls_block">
+				<!-- <span style="padding: 7px; background-color: green; color: #fff; border-radius: 15px;"><i class="fa fa-plus"></i></span> -->
+				<span onclick="enableCustomiser('right')"
+					style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px; color: #fff;"><i
+						class="fa fa-cog"></i></span>
+				<span onclick="removetheSideBars('right')"
+					style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px; color: #fff;"><i
+						class="fa fa-times"></i></span>
+			</span>
+
+
 
 			<center>
-				<input class="the_add_child_button" type="button" value="Add Child/Tag" name="">
+				<h6 id="the_selected_elem_right">Div - Dev Body : Selected</h6>
+			</center>
+
+			<center>
+				<select onclick="loadAllRightSides(event)" onchange="loadAllRightSides(event)"
+					class="the_panel_selector" id="id_4_the_panel_selector_right">
+					<option value="Attributes">Attributes</option>
+					<option value="Style">Style</option>
+					<option value="Assitance/Modules">Assitance/Modules</option>
+					<option value="Colors">Colors</option>
+					<option value="File">File</option>
+				</select>
 			</center>
 
 
-			<em>Except on rare occasions, the may be no need to use the Submit Button</em>
-			<center>
-				<input class="the_panel_submitter" value="Submit Changes" type="button" name="">
-			</center>
-			
+			<div class="the_selected_displayer">
+				<h3 class="sider_header" id="The_right_header_side"> Attributes </h3>
+				<datalist id="size">
+					<option value="100px"></option>
+					<option value="100%"></option>
+					<option value="100em"></option>
+					<option value="100vh"></option>
+				</datalist>
+
+				<div class="full_right_aside_section">
+					<ul>
+						<li class="each_item">
+							<input onchange="attr_changed('height')" id="attr_height_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>Height</label>
+							<input onkeyup="attr_changed('height')" id="attr_height" list="size" class="the_input_side"
+								type="text" name="attr_height_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="attr_changed('width')" id="attr_width_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>Width</label>
+							<input onkeyup="attr_changed('width')" id="attr_width" class="the_input_side" type="text"
+								name="_width_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="attr_changed('background-color')" id="attr_background-color_status"
+								class="the_check_side" checked value="yes" type="checkbox" name="_height_state">
+							<label>Background Color</label>
+							<input onkeyup="attr_changed('background-color')" id="attr_background-color"
+								class="the_input_side" type="text" name="_color_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="attr_changed('src')" id="attr_src_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>Src</label>
+							<input onkeyup="attr_changed('src')" id="attr_src" class="the_input_side" type="text"
+								name="_height_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="attr_changed('padding')" id="attr_padding_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>Padding</label>
+							<input onkeyup="attr_changed('padding')" id="attr_padding" class="the_input_side"
+								type="text" name="_height_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="attr_changed('class')" id="attr_class_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>Class</label>
+							<input onkeyup="attr_changed('class')" id="attr_class" class="the_input_side" type="text"
+								name="_height_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="attr_changed('border')" id="attr_border_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>border</label>
+							<input onkeyup="attr_changed('border')" id="attr_border" class="the_input_side" type="text"
+								name="_height_value">
+						</li>
+
+						<li class="each_item">
+							<input onchange="attr_changed('id')" id="attr_id_status" class="the_check_side"
+								type="checkbox" checked value="yes" name="_height_state">
+							<label>id</label>
+							<input onkeyup="attr_changed('id')" id="attr_id" class="the_input_side" type="text"
+								name="_height_value">
+						</li>
+					</ul>
+				</div>
+
+
+				<center>
+					<input class="the_add_child_button" type="button" value="Add Child/Tag" name="">
+				</center>
+
+
+				<em>Except on rare occasions, the may be no need to use the Submit Button</em>
+				<center>
+					<input class="the_panel_submitter" value="Submit Changes" type="button" name="">
+				</center>
+
+			</div>
+		</aside>
+
+		<div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)" class="the_dev_body" id="the_dev_dashboard"
+			ondblclick="change_selected(event, 'div', 'the_dev_dashboard')">
+			<b>This is the main dashboard arena. Drag html tag here and add more attributes and styles to them</b>
 		</div>
-	</aside>
 
-	<div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)" class="the_dev_body" id="the_dev_dashboard" ondblclick="change_selected(event, 'div', 'the_dev_dashboard')">
-		<b>This is the main dashboard arena. Drag html tag here and add more attributes and styles to them</b>
 	</div>
-	
-</div>
 
 
 
 
-<div class="the_bottom_bar" >
-	<span ondragstart="elem_drag(event, 'div')" draggable="true" class="the_bottom_elems_block" onclick="add_element_2_dashboard('div')">div</span>
+	<div class="the_bottom_bar">
+		<span ondragstart="elem_drag(event, 'div')" draggable="true" class="the_bottom_elems_block"
+			onclick="add_element_2_dashboard('div')">div</span>
 
-	<span ondragstart="elem_drag(event, 'span')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('span')">span</span>
+		<span ondragstart="elem_drag(event, 'span')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('span')">span</span>
 
-	<span ondragstart="elem_drag(event, 'p')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('p')">p</span>
+		<span ondragstart="elem_drag(event, 'p')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('p')">p</span>
 
-	<span ondragstart="elem_drag(event, 'h1')" draggable="true" class="the_bottom_elems_block" onclick="add_element_2_dashboard('h1')">h1</span>
+		<span ondragstart="elem_drag(event, 'h1')" draggable="true" class="the_bottom_elems_block"
+			onclick="add_element_2_dashboard('h1')">h1</span>
 
-	<span ondragstart="elem_drag(event, 'h2')" draggable="true" class="the_bottom_elems_block" onclick="add_element_2_dashboard('h2')">h2</span>
+		<span ondragstart="elem_drag(event, 'h2')" draggable="true" class="the_bottom_elems_block"
+			onclick="add_element_2_dashboard('h2')">h2</span>
 
-	<span ondragstart="elem_drag(event, 'h3')" draggable="true" class="the_bottom_elems_block" onclick="add_element_2_dashboard('h3')">h3</span>
+		<span ondragstart="elem_drag(event, 'h3')" draggable="true" class="the_bottom_elems_block"
+			onclick="add_element_2_dashboard('h3')">h3</span>
 
-	<span ondragstart="elem_drag(event, 'input')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('input')">input</span>
+		<span ondragstart="elem_drag(event, 'input')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('input')">input</span>
 
-	<span ondragstart="elem_drag(event, 'ul')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('ul')">div</span>
+		<span ondragstart="elem_drag(event, 'ul')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('ul')">div</span>
 
-	<span ondragstart="elem_drag(event, 'li')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('li')">li</span>
+		<span ondragstart="elem_drag(event, 'li')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('li')">li</span>
 
-	<span ondragstart="elem_drag(event, 'button')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('button')">button</span>
+		<span ondragstart="elem_drag(event, 'button')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('button')">button</span>
 
-	<span ondragstart="elem_drag(event, 'img')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('img')">img</span>
+		<span ondragstart="elem_drag(event, 'img')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('img')">img</span>
 
-	<span ondragstart="elem_drag(event, 'center')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('center')">center</span>
+		<span ondragstart="elem_drag(event, 'center')" draggable="true" class="the_bottom_elems"
+			onclick="add_element_2_dashboard('center')">center</span>
 
-	<em style="color: #ffffff;" onclick="loadElements()">more >> </em>
+		<em style="color: #ffffff;" onclick="loadElements()">more >> </em>
 
-</div>
-
-<!-- pop up sides -->
-<div id="text_pop_up_side" class="theTextPopUp">
-	<span onclick="removeParent(event)" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
-	<br/><br/>
-	<input type="text" placeholder="Enter some text content." id="theTextPop" name="theTextSide">
-	<br/><br/>
-	<button onclick="addTextBtn()">Add</button>
-	<br/><br/>
-</div>
-
-<!-- pop up :: the new project -->
-<div id="create_project_pop" class="theTextPopUp">
-	<span onclick="removeParent(event)" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
-	<br/><br/>
-	<input type="text" placeholder="Project Name" id="the_project_name" name="theTextSide">
-	<br/>
-	<textarea id="the_project_description" placeholder="Project Description"></textarea>
-	<br/><br/>
-	<button onclick="makeTheProject()">Create</button>
-	<br/><br/>
-</div>
-
-</div>
-<!-- pop up for the settings sections -->
-<div id="the_settings_section_page" class="the_settings_section">
-	<span onclick="removeSpecificId('the_settings_section_page')" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
-	<div>
-		<h2>Project Settings</h2>
 	</div>
-	<div class="settings_body">
-		<br/>
-		<ul>
-			<li class="setting_item">
-				<label>Default Height</label>
-				<input class="the_input_side" id="settings_height" value="120" type="text" name="">
-			</li>
 
-			<li class="setting_item">
-				<label>Default Width</label>
-				<input class="the_input_side" id="settings_width" value="120" type="text" name="">
-			</li>
-
-			<datalist id="setting_size">
-				<option value="px">Pixels</option>
-				<option value="%">Percentage</option>
-				<option value="em">em</option>
-				<option value="vh">View Port Height</option>
-			</datalist>
-			<li class="setting_item">
-				<label>Select Size Representation</label>
-				<input class="the_input_side" id="settings_size_representation" list="setting_size" value="px" type="text" name="">
-			</li>
-
-			<datalist id="arrangement_type_list">
-				<option value="date-old">By Date - Older </option>
-				<option value="like" default>By Likes </option>
-				<option value="date-new">By Date - Older </option>
-			</datalist>
-			<li class="setting_item">
-				<label>Arrangement</label>
-				<input class="the_input_side" id="arrangement_type" list="arrangement_type_list" type="text" value="like" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>on Create Background Change</label>
-				<input class="the_check_side" type="checkbox" id="settings_background" checked value="yes" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>on Duplicate Background Change</label>
-				<input class="the_check_side" type="checkbox" id="settings_duplicate_background" checked value="yes" name="">
-			</li>
-		</ul>
-	<button class="the_save_button">Save</button>
-	<br/><br/>
+	<!-- pop up sides -->
+	<div id="text_pop_up_side" class="theTextPopUp">
+		<span onclick="removeParent(event)"
+			style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i
+				class="fa fa-times"></i> Close</span>
+		<br /><br />
+		<input type="text" placeholder="Enter some text content." id="theTextPop" name="theTextSide">
+		<br /><br />
+		<button onclick="addTextBtn()">Add</button>
+		<br /><br />
 	</div>
-</div>
-<!-- the icon pop-up displayer -->
-<div id="the_icon_displayer_pop_up" class="the_chief_icon">
-	<span onclick="removeSpecificId('the_icon_displayer_pop_up')" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
 
-	<div class="the_icon_headings">
-		<span onclick="display_this_icon_type('FontAwesome')" id="icon_type_id_FontAwesome" class="the_icon_header_ icon_header_selected"> Font Awesome Icons </span>
-		<span onclick="display_this_icon_type('GoogleIcon')" id="icon_type_id_GoogleIcon" class="the_icon_header_"> Google Icons </span>
-		<!-- <span class="the_icon_header_"> Svg Icons </span>
+	<!-- pop up :: the new project -->
+	<div id="create_project_pop" class="theTextPopUp">
+		<span onclick="removeParent(event)"
+			style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i
+				class="fa fa-times"></i> Close</span>
+		<br /><br />
+		<input type="text" placeholder="Project Name" id="the_project_name" name="theTextSide">
+		<br />
+		<textarea id="the_project_description" placeholder="Project Description"></textarea>
+		<br /><br />
+		<button onclick="makeTheProject()">Create</button>
+		<br /><br />
+	</div>
+
+	</div>
+	<!-- pop up for the settings sections -->
+	<div id="the_settings_section_page" class="the_settings_section">
+		<span onclick="removeSpecificId('the_settings_section_page')"
+			style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i
+				class="fa fa-times"></i> Close</span>
+		<div>
+			<h2>Project Settings</h2>
+		</div>
+		<div class="settings_body">
+			<br />
+			<ul>
+				<li class="setting_item">
+					<label>Default Height</label>
+					<input class="the_input_side" id="settings_height" value="120" type="text" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>Default Width</label>
+					<input class="the_input_side" id="settings_width" value="120" type="text" name="">
+				</li>
+
+				<datalist id="setting_size">
+					<option value="px">Pixels</option>
+					<option value="%">Percentage</option>
+					<option value="em">em</option>
+					<option value="vh">View Port Height</option>
+				</datalist>
+				<li class="setting_item">
+					<label>Select Size Representation</label>
+					<input class="the_input_side" id="settings_size_representation" list="setting_size" value="px"
+						type="text" name="">
+				</li>
+
+				<datalist id="arrangement_type_list">
+					<option value="date-old">By Date - Older </option>
+					<option value="like" default>By Likes </option>
+					<option value="date-new">By Date - Older </option>
+				</datalist>
+				<li class="setting_item">
+					<label>Arrangement</label>
+					<input class="the_input_side" id="arrangement_type" list="arrangement_type_list" type="text"
+						value="like" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>on Create Background Change</label>
+					<input class="the_check_side" type="checkbox" id="settings_background" checked value="yes" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>on Duplicate Background Change</label>
+					<input class="the_check_side" type="checkbox" id="settings_duplicate_background" checked value="yes"
+						name="">
+				</li>
+			</ul>
+			<button class="the_save_button">Save</button>
+			<br /><br />
+		</div>
+	</div>
+	<!-- the icon pop-up displayer -->
+	<div id="the_icon_displayer_pop_up" class="the_chief_icon">
+		<span onclick="removeSpecificId('the_icon_displayer_pop_up')"
+			style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i
+				class="fa fa-times"></i> Close</span>
+
+		<div class="the_icon_headings">
+			<span onclick="display_this_icon_type('FontAwesome')" id="icon_type_id_FontAwesome"
+				class="the_icon_header_ icon_header_selected"> Font Awesome Icons </span>
+			<span onclick="display_this_icon_type('GoogleIcon')" id="icon_type_id_GoogleIcon" class="the_icon_header_">
+				Google Icons </span>
+			<!-- <span class="the_icon_header_"> Svg Icons </span>
 		<span class="the_icon_header_"> Vector Icons </span>
 		<span class="the_icon_header_"> Color Icons </span>
 		<span class="the_icon_header_"> Google Icons </span>
 		<span class="the_icon_header_"> Svg Icons </span>
 		<span class="the_icon_header_"> Vector Icons </span>
 		<span class="the_icon_header_"> Color Icons </span> -->
-	</div>
-	<label class="labeled_search_input">Search: <input class="cla_icon_search" type="search" name="icon_search" id="the_icon_search"/> <i class="fa fa-search"></i> </label>
-	<hr/>
-	<div class="the_icon_displayer" id="the_selected_icon_displayer">
+		</div>
+		<label class="labeled_search_input">Search: <input class="cla_icon_search" type="search" name="icon_search"
+				id="the_icon_search" /> <i class="fa fa-search"></i> </label>
+		<hr />
+		<div class="the_icon_displayer" id="the_selected_icon_displayer">
 
-		<!-- <span class="individual_icon" onclick="add_FA_icon('bars')"><i class="fa fa-bars"></i><label class="icon_label">Bars</label></span> -->
-		
-	</div>
-</div>
+			<!-- <span class="individual_icon" onclick="add_FA_icon('bars')"><i class="fa fa-bars"></i><label class="icon_label">Bars</label></span> -->
 
-<!-- the icon pop-up displayer -->
-<div id="the_adder_displayer_pop_up" class="the_chief_adders">
-	<span onclick="removeParent(event)" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
-
-	<div class="the_adders_headings">
-		<span onclick="now_display_adder_maker(event, 'element')" class="the_adder_header_ adder_header_selected"> Add Elements </span>
-		<span onclick="now_display_adder_maker(event, 'attribute')" class="the_adder_header_"> Add Attributes </span>
-		<span onclick="now_display_adder_maker(event, 'style')" class="the_adder_header_"> Add Style </span>
-		<span onclick="now_display_adder_maker(event, 'module')" class="the_adder_header_"> Make Modules </span>
+		</div>
 	</div>
 
-	<hr/>
-	<div class="the_Selected_displayer" id="the_selected_adder_display">
-		
+	<!-- the icon pop-up displayer -->
+	<div id="the_adder_displayer_pop_up" class="the_chief_adders">
+		<span onclick="removeParent(event)"
+			style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i
+				class="fa fa-times"></i> Close</span>
+
+		<div class="the_adders_headings">
+			<span onclick="now_display_adder_maker(event, 'element')" class="the_adder_header_ adder_header_selected">
+				Add Elements </span>
+			<span onclick="now_display_adder_maker(event, 'attribute')" class="the_adder_header_"> Add Attributes
+			</span>
+			<span onclick="now_display_adder_maker(event, 'style')" class="the_adder_header_"> Add Style </span>
+			<span onclick="now_display_adder_maker(event, 'module')" class="the_adder_header_"> Make Modules </span>
+		</div>
+
+		<hr />
+		<div class="the_Selected_displayer" id="the_selected_adder_display">
+
+		</div>
 	</div>
-</div>
 
 </body>
-</html>
 
+</html>
