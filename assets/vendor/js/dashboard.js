@@ -71,81 +71,74 @@ function main(id) {
 
 //global selectedElement = '#the_dev_dashboard';
 
-function add_element_2_dashboard(tag_name) {
-  //specs.element.setAttribute(attribute, value);
-  var newElem = document.createElement(tag_name);
+function add_element_2_dashboard (tag_name) {
+    //specs.element.setAttribute(attribute, value);
+    var newElem = document.createElement(tag_name);
 
-  //height = ($("#style_height").val() != "") ? $("#style_height").val() : "120px";
-  //width = ($("#style_width").val() != "") ? $("#style_width").val() : "120px";
-  //background = ($("#style_background-color").val() != "") ? $("#back_color").val() : "#fed342";
+    //height = ($("#style_height").val() != "") ? $("#style_height").val() : "120px";
+    //width = ($("#style_width").val() != "") ? $("#style_width").val() : "120px";
+    //background = ($("#style_background-color").val() != "") ? $("#back_color").val() : "#fed342";
 
-  height =
-    document.getElementById("settings_height").value +
-    document.getElementById("settings_size_representation").value;
-  width =
-    +document.getElementById("settings_width").value +
-    document.getElementById("settings_size_representation").value;
-  background = colorCodeGenetor(6);
-  if (document.getElementById("settings_background").checked) {
-    defaultStyle =
-      "height: " +
-      height +
-      "; width: " +
-      width +
-      "; background-color: " +
-      background +
-      "; ";
-  } else {
-    defaultStyle = "height: " + height + "; width: " + width + "; ";
-  }
+    height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value
+    width =  + document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value ;
+    background = colorCodeGenetor(6);
+    if (document.getElementById("settings_background").checked) {
+        defaultStyle = 'height: '+ height + '; width: '+ width + '; background-color: ' + background + '; ';
+    }else{
+        defaultStyle = 'height: '+ height + '; width: '+ width + '; ';
+    }
+  
+    elemId = generate_strings_id(7);
+    //console.log(elemId);
+    newElem.setAttribute("style", defaultStyle);
+    newElem.setAttribute("id", elemId);
+    newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
 
-  elemId = generate_strings_id(7);
-  //console.log(elemId);
-  newElem.setAttribute("style", defaultStyle);
-  newElem.setAttribute("id", elemId);
-  newElem.setAttribute(
-    "ondblclick",
-    "change_selected(event, " +
-      "'" +
-      tag_name +
-      "' , " +
-      "'" +
-      elemId +
-      "'" +
-      ")"
-  );
+    //var ref = document.querySelector('#the_dev_dashboard');
+    selectedElement = document.getElementById(selectedId);
+    var ref = selectedElement;
+    home_msg = ref.textContent;
+    //alert("flow o");
+    //alert(home_msg.indexOf("This is the main dashboard arena"));
+    if ( home_msg.indexOf("This is the main dashboard arena") > -1 ) {
+        //ref.innerHTML = document.createElement(tag_name).toString();
+        //var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
+        /*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
+      
+        // This is the innerHTML of the development dashboard
+      ref.innerHTML = ""; 
+var your_comment = `
+<head>
+<title> #Particular Project Name</title>
+<script>
+    //Plugin Start
+    //##
+    //Plugin End 
+</script>
+</head> 
+`;
+ ref.innerHTML= your_comment;  
+        proper_fitting = "\n" + "\t";
+        //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+        ref.append(proper_fitting);
 
-  //var ref = document.querySelector('#the_dev_dashboard');
-  selectedElement = document.getElementById(selectedId);
-  var ref = selectedElement;
-  home_msg = ref.textContent;
-  //alert("flow o");
-  //alert(home_msg.indexOf("This is the main dashboard arena"));
-  if (home_msg.indexOf("This is the main dashboard arena") > -1) {
-    //ref.innerHTML = document.createElement(tag_name).toString();
-    //var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
-    /*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
-    ref.innerHTML = "";
-    proper_fitting = "\n" + "\t";
-    //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
-    ref.append(proper_fitting);
-
-    ref.appendChild(newElem, ref);
-    getElementStyleDetails(elemId);
-    getElementAttrDetails(elemId);
-    selectCreated(elemId, tag_name);
-  } else {
-    proper_fitting = "\n" + "\t";
-    ref.append(proper_fitting);
-
-    //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
-    ref.appendChild(newElem, ref);
-    getElementStyleDetails(elemId);
-    getElementAttrDetails(elemId);
-    selectCreated(elemId, tag_name);
-  }
-
-  //ref.appendChild(newElem, ref);
+        ref.appendChild(newElem, ref);
+        getElementStyleDetails(elemId);
+        getElementAttrDetails(elemId);
+        selectCreated(elemId, tag_name);
+    
+    }else{
+        proper_fitting = "\n" + "\t";
+        ref.append(proper_fitting);
+        
+        //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+        ref.appendChild(newElem, ref);
+        getElementStyleDetails(elemId);
+        getElementAttrDetails(elemId);
+        selectCreated(elemId, tag_name);
+    }
+    
+    //ref.appendChild(newElem, ref);
 }
 
 function selectCreated(id, type) {
@@ -831,6 +824,7 @@ function loadElements() {
     {
       key: "gjhtiidsimi09403jfjkdknf",
     },
+
     function (data, status) {
       //dataJson = JSON.parse(data);
       //alert(data);
@@ -887,9 +881,9 @@ function save_file(project_name, project_content, project_description, type) {
       }
     }
   );
-
   return ret;
 }
+
 
 function saveDevArena() {
   if (get_url_data("project_title") != "") {
