@@ -32,8 +32,10 @@
 			<button class="dropbtn">File</button>
 			<div class="dropdown-content">
 				<span onclick="newProject()"><i class="fa fa-file"></i>New</span>
-				<span onclick="saveDevArena()"><i class="fa fa-save"></i>Save<span id="toolTipText"
-						class="tooltiptext">more</span></span>
+				<span onclick="saveDevArena()"><i class="fa fa-save"></i>Save
+          <span id="toolTipText" class="tooltiptext">more</span>
+         </span>
+
 				<span onclick="loadSaveContent()"><i class="fa fa-file-o"></i>Load Project</span>
 				<span onclick="loadSaveContent()"><i class="fa fa-file-text-o"></i>Open</span>
 				<!-- <span onclick="saveDevArenaAsCookie()"><i class="fa fa-save"></i>Save in Cookie</span> -->
@@ -77,9 +79,12 @@
 
 		<span onclick="show_icon_popup('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
 		<span onclick="showSettingsPage()"><i class="fa fa-cogs"></i>Settings</span>
-		<span onclick="showPopUpById('the_adder_displayer_pop_up')"><i class="fa fa-plus"></i>Contribute</span>
+		<span onclick="showPopUpById('the_adder_displayer_pop_up'); now_display_adder_maker(event, 'element')"><i class="fa fa-plus"></i>Contribute</span>
 		<div class="pop-up" id="popUp">Use this option to save your project to the serve to avoid loss of data.</div>
-		<!-- <i id="left_bar_restore" class="fa fa-window-restore"></i>
+
+		<!-- <span onclick="showPopUpById('the_adder_displayer_pop_up'); now_display_adder_maker(event, 'element')"><i
+				class="fa fa-plus .the_adder_header_ adder_header_selected"></i>Contribute</span>
+    <i id="left_bar_restore" class="fa fa-window-restore"></i>
 	<i id="right_bar_restore" class="fa fa-window-minimize"></i>
 	<i class="fa fa-window-maximize"></i> -->
 		<!-- <span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Insert</span>
@@ -110,8 +115,6 @@
 </div>
 <span onclick="handle_side_bars('leftBarRestore')" id="leftBarRestore" class="left_bar_restore"><i class="fa fa-caret-left fa-2x" aria-hidden="true"></i></span>
 <span onclick="handle_side_bars('rightBarRestore')" id="rightBarRestore" class="right_bar_restore"><i class="fas fa-caret-right fa-2x" aria-hidden="true"></i></span>
-
-
 
 	<div class="the_content_arena">
 
@@ -176,7 +179,45 @@
 								type="checkbox" checked value="yes" name="_display_state">
 							<label>Display</label>
 							<input onkeyup="style_changed('display')" id="style_display" class="the_input_side"
-								type="text" name="style_display_value">
+								type="text" name="style_display_value" list="style_display_data_list">
+							<datalist id="style_display_data_list">
+								<optgroup label="Precomposed Values">
+									<option value="block">block</option>
+									<option value="inline">inline</option>
+									<option value="inline-block">inline-block</option>
+									<option value="flex">flex</option>
+									<option value="inline-flex">inline-flex</option>
+									<option value="grid">grid</option>
+									<option value="inline-grid">inline-grid</option>
+									<option value="flow-root">flow-root</option>
+								</optgroup>
+								<optgroup label="Box Generation">
+									<option value="none">none</option>
+									<option value="contents">contents</option>
+								</optgroup>
+								<optgroup label="Two-value Syntax">
+									<option value="block flow">block flow</option>
+									<option value="inline flow">inline flow</option>
+									<option value="inline flow-root">inline flow-root</option>
+									<option value="block flex">block flex</option>
+									<option value="inline flex">inline flex</option>
+									<option value="block grid">block grid</option>
+									<option value="inline grid">inline grid</option>
+									<option value="block flow-root">block flow-root</option>
+								</optgroup>
+								<optgroup label="Other Values">
+									<option value="table">table</option>
+									<option value="table-row">table-row</option>
+									<option value="list-item">list-item</option>
+								</optgroup>
+								<optgroup label="Global values">
+									<option value="inherit">inherit</option>
+									<option value="initial">initial</option>
+									<option value="revert">revert</option>
+									<option value="revert-layer">revert-layer</option>
+									<option value="unset">unset</option>
+								</optgroup>
+							</datalist>
 						</li>
 
 						<li class="each_item">
@@ -184,7 +225,21 @@
 								class="the_check_side" type="checkbox" checked value="yes" name="_position_state">
 							<label>Position</label>
 							<input onkeyup="style_changed('position')" id="style_position" class="the_input_side"
-								type="text" name="style_position_value">
+								type="text" name="style_position_value" list="style_position_data_list">
+							<datalist id="style_position_data_list">
+								<option value="static">static</option>
+								<option value="relative">relative</option>
+								<option value="absolute">absolute</option>
+								<option value="fixed">fixed</option>
+								<option value="sticky">sticky</option>
+								<optgroup label="Global values">
+									<option value="inherit">inherit</option>
+									<option value="initial">initial</option>
+									<option value="revert">revert</option>
+									<option value="revert-layer">revert-layer</option>
+									<option value="unset">unset</option>
+								</optgroup>
+							</datalist>
 						</li>
 
 						<li class="each_item">
@@ -270,16 +325,28 @@
 						</li>
 
 						<li class="each_item">
-							<input onchange="style_changed('float')" id="style_float_status" class="the_check_side"
-								type="checkbox" checked value="yes" name="_float_state">
+
+							<input onchange="style_changed('float')" id="style_float_status" class="the_check_side"	type="checkbox" checked value="yes" name="_float_state">
 							<label>Float</label>
-							<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text"
-								name="style_float_value">
+							<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text" name="style_float_value" list="style_float_data_list">
+							<datalist id="style_float_data_list">
+								<option value="left">left</option>
+								<option value="right">right</option>
+								<option value="none">none</option>
+								<option value="inline-start">inline-start</option>
+								<option value="inline-end">inline-end</option>
+								<optgroup label="Global values">
+									<option value="inherit">inherit</option>
+									<option value="initial">initial</option>
+									<option value="revert">revert</option>
+									<option value="revert-layer">revert-layer</option>
+									<option value="unset">unset</option>
+								</optgroup>
+							</datalist>
 						</li>
 
 						<li class="each_item">
-							<input onchange="style_changed('margin')" id="style_margin_status" class="the_check_side"
-								type="checkbox" checked value="yes" name="_margin_state">
+							<input onchange="style_changed('margin')" id="style_margin_status" class="the_check_side" type="checkbox" checked value="yes" name="_margin_state">
 							<label>Margin</label>
 							<input onkeyup="style_changed('margin')" id="style_margin" class="the_input_side"
 								type="text" name="style_margin_value">
@@ -442,73 +509,14 @@
 			</div>
 		</aside>
 
-		<div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)" class="the_dev_body" id="the_dev_dashboard"
+		<!-- <div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)" class="the_dev_body" id="the_dev_dashboard"
 			ondblclick="change_selected(event, 'div', 'the_dev_dashboard')">
 			<b>This is the main dashboard arena. Drag html tag here and add more attributes and styles to them</b>
-		</div>
+		</div> -->
+
 
 	<div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)" class="the_dev_body" id="the_dev_dashboard" ondblclick="change_selected(event, 'div', 'the_dev_dashboard')">
-	<!-- This is for the Dashboard project;
-Tools:
-*Bootstrap: to improve the overall responsiveness of the project on all devices
-*Favicon: To aesthetically improve the project
-*Google Fonts
-Background:
-* Define color for text, background, buttons, hover color and active color(Use three dominant colors)
-* Improve UI(3D_buttons, color_gradients, box_shadow)
-Features
-For the general features use appropriate UI design patterns(easy to identify icons, good font) to help guide users.
-
-Features like links and buttons should perform in a way that users can unconsciously see them everywhere.
-.*Change color when features are on hover or active
-* Add Favicons for aesthetics
-* improve border design around buttons
-
-Div “the_top_bar”
-Position the link_text with icons at the right end of the nav width.
-
-*for the span element, add space around link_texts and icons
-Still on the span element: For mobile and small devices
-Add a "grid-alt" icon from box icon to replace the span elements// on hover, the span elememts will be displayed as dropdown.
-
-Sidebar on the_content_arena:
-* Sidebar should be hidden and displayed only when the restore- icon is clicked.
-* Use caret right and left icon to replace the leftBarRestore and rightBarRestore (The caret icon is predictable by users) to collapse either sidebars.
-the_selected_displayer on the sidebar
-Improve the UI
-
-Div “full_left_aside_section”
-For improved user-experience
-*add dropdown options in the form box so users can select options provided instead of typing
-eg(display —inline, flex, grid options).
-*Adding a color picker for the color attributes in case the user is unsure of the Hex or rgba code
-Text with class ” each_item”
-*For long text behind the box; set text_overflow to ellipses and on hover full text is displayed to user.
-
-The_bottom_bar
-*Remove the margin above the_bottom_bar
-*alignitems to center
-*space around the items
-
-pop_up_frames
-*if two pop_up_frames are simultaneously opened, clicking on one should display it over the other.
-
-Div class"create_project_pop"
-Div class"the_settings_section_page"
-Restyle the Div container
-Div class"the_adder_heading"
-*the close button on the pop_up_frames do not close the pop-up
-*remove the scrollbar on hover and use color change instead
-Make modules
-*Place bullets near the texts
-
-
-
- -->
- 
 		<b>This is the main dashboard arena. Drag html tag here and add more attributes and styles to them</b>
-	   
-
 	</div>
 
 
@@ -517,7 +525,6 @@ Make modules
 	<div class="the_bottom_bar">
 		<span ondragstart="elem_drag(event, 'div')" draggable="true" class="the_bottom_elems_block"
 			onclick="add_element_2_dashboard('div')">div</span>
-
 
 	<span ondragstart="elem_drag(event, 'span')" draggable="true" class="the_bottom_elems" onclick="add_element_2_dashboard('span')">span</span>  <!--unchanged-->
 
