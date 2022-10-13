@@ -985,7 +985,8 @@ function loadSaveContent(){
         //data = post_request('../../backend/projects/get_project_details.php', 
         //{user_id: 34, project_name: project_name, key: "gjhtiidsimi09403jfjkdknf"}, "json");
         //alert(await data);
-
+      }
+    }
 
 function saveDevArena() {
   if (get_url_data("project_title") != "") {
