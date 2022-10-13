@@ -718,23 +718,19 @@ function loadAllLeftSides(ev) {
   if (tag == "Style") {
     url = "../../backend/style/get_style.php?echo=raw&display_by=" + display_by;
   } else if (tag == "Assitance/Modules") {
-    url =
-      "../../backend/assistance/get_assistance.php?echo=raw&display_by=" +
+    url = "../../backend/assistance/get_assistance.php?echo=raw&display_by=" +
       display_by;
   } else if (tag == "Attributes") {
-    url =
-      "../../backend/attribute/get_attribute.php?echo=raw&display_by=" +
+    url = "../../backend/attribute/get_attribute.php?echo=raw&display_by=" +
       display_by;
   } else if (tag == "Colors") {
-    url =
-      "../../backend/colors/get_color.php?echo=raw&display_by=" + display_by;
+    url = "../../backend/colors/get_color.php?echo=raw&display_by=" + display_by;
   } else if (tag == "File") {
     url = "../../backend/file/get_file.php?echo=raw&display_by=" + display_by;
   }
   //alert(url);
   $.post(
-    url,
-    {
+    url, {
       key: "gjhtiidsimi09403jfjkdknf",
     },
     function (data, status) {
@@ -767,16 +763,13 @@ function loadAllRightSides(ev) {
   if (tag == "Style") {
     url = "../../backend/style/get_style.php?echo=raw&display_by=" + display_by;
   } else if (tag == "Assitance/Modules") {
-    url =
-      "../../backend/assistance/get_assistance.php?echo=raw&display_by=" +
+    url = "../../backend/assistance/get_assistance.php?echo=raw&display_by=" +
       display_by;
   } else if (tag == "Attributes") {
-    url =
-      "../../backend/attribute/get_attribute.php?echo=raw&display_by=" +
+    url = "../../backend/attribute/get_attribute.php?echo=raw&display_by=" +
       display_by;
   } else if (tag == "Colors") {
-    url =
-      "../../backend/colors/get_color.php?echo=raw&display_by=" + display_by;
+    url = "../../backend/colors/get_color.php?echo=raw&display_by=" + display_by;
   } else if (tag == "File") {
     url = "../../backend/file/get_file.php?echo=raw&display_by=" + display_by;
   }
@@ -815,15 +808,24 @@ function post_request(url, parameters, type) {
   });
 }
 
-function loadElements() {
+function loadElements(){
   display_by = document.getElementById("arrangement_type").value;
-  url =
-    "../../backend/elements/get_element.php?echo=raw&display_by=" + display_by;
-  $.post(
-    url,
-    {
+  url = '../../backend/elements/get_element.php?echo=raw&display_by=' + display_by ;
+  $.post(url, {
       key: "gjhtiidsimi09403jfjkdknf",
-    },
+  },
+  function(data, status){
+      //dataJson = JSON.parse(data);
+      //alert(data);
+      //result = data["result"];
+      if (status){
+          $('.the_bottom_bar').html(data);
+          //$('#The_left_header_side').text(tag);
+      }else{
+          console.log('failed to load while using the direct Backend to HTML render.');
+      }
+  });
+}
 
 function save_file(project_name, project_content, project_description, type){
     var ret = "";
