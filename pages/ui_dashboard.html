@@ -143,6 +143,7 @@
 		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
 		newElem.setAttribute("onmouseenter", "mouseEnterMe(event)");
 		newElem.setAttribute("onmouseleave", "mouseLeaveMe(event)");
+		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
 
 		//var ref = document.querySelector('#the_dev_dashboard');
 		selectedElement = document.getElementById(selectedId);
@@ -173,6 +174,7 @@
 			getElementStyleDetails(elemId);
 			getElementAttrDetails(elemId);
 			selectCreated(elemId, tag_name);
+			showPopUpById("the_ui_style_bar");
 		}
 		
 		//ref.appendChild(newElem, ref);
@@ -182,7 +184,7 @@
 		selectedId = id;
 		selectedElement = document.getElementById(id);
 		//$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
-		//$("#the_selected_elem_right").text(type + ' - #' + id + ' : Selected');
+		//$("#the_style_identity_box").text(type + ' - #' + id + ' : Selected');
 	}
 
 	function generate_strings_id(length){
@@ -304,30 +306,30 @@
 		if(e.target.id == id){
 			selectedId = id;
 			selectedElement = document.getElementById(id);
-			$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
-			$("#the_selected_elem_right").text(type + ' - #' + id + ' : Selected');
+			//$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
+			$("#the_style_identity_box").text(type + ' - #' + id + ' : Selected');
 			getElementStyleDetails(selectedId);
-			getElementAttrDetails(selectedId);
+			//getElementAttrDetails(selectedId);
 		}
 	}
 
-	function attr_changed(attribute){
-		var statusId = "attr_"+attribute+"_status";
-		var attrValue = "attr_"+attribute;
-		if ( document.getElementById(statusId).checked == true) {
+	// function attr_changed(attribute){
+	// 	var statusId = "attr_"+attribute+"_status";
+	// 	var attrValue = "attr_"+attribute;
+	// 	if ( document.getElementById(statusId).checked == true) {
 
-			var newValue = document.getElementById(attrValue).value;
-			//alert(newValue);
-			if (newValue != null || newValue !="") {
-				document.getElementById(selectedId).setAttribute(attribute, newValue);
-			}else{
-				document.getElementById(selectedId).removeAttribute(attribute);
-			}
-		}else{
-			var newValue = null;
-			document.getElementById(selectedId).removeAttribute(attribute);
-		}
-	}
+	// 		var newValue = document.getElementById(attrValue).value;
+	// 		//alert(newValue);
+	// 		if (newValue != null || newValue !="") {
+	// 			document.getElementById(selectedId).setAttribute(attribute, newValue);
+	// 		}else{
+	// 			document.getElementById(selectedId).removeAttribute(attribute);
+	// 		}
+	// 	}else{
+	// 		var newValue = null;
+	// 		document.getElementById(selectedId).removeAttribute(attribute);
+	// 	}
+	// }
 
 	function style_changed(property){
 		var statusId = "style_"+property+"_status";
@@ -358,7 +360,12 @@
 	            propertyDis = "style_" + style[i].toString();
 	            property = document.getElementById(propertyDis);
 	            if ( property ){
-	            	property.value = style.getPropertyValue(style[i]);
+					if (style[i].includes("color")) {
+						//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+						property.value = rgbToHex(style.getPropertyValue(style[i]));
+					}else{
+						property.value = style.getPropertyValue(style[i]);
+					}
 	            }
 	        }
 	    } else if (elem.currentStyle) { // IE 
@@ -382,6 +389,19 @@
 	            }
 	        }
 	    }
+	}
+
+	function componentToHex(c) {
+		var hex = c.toString(16);
+		return hex.length == 1 ? "0" + hex : hex;
+	}
+
+	function rgbToHex(rgbColor) {
+		individual_code = rgbColor.replace(/[rgb() ]/g, "");
+		individual_code = individual_code.split(",");
+		r = parseInt(individual_code[0].trim()), g = parseInt(individual_code[1].trim()); b = parseInt(individual_code[2].trim());
+		//console.log(individual_code + g);
+		return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 	}
 
 	function getElementAttrDetails(elem_id){
@@ -644,8 +664,7 @@
 			id =(side == "left") ? "theLeftSideBar" : "theRightSideBar";
 			selectedId = id;
 			selectedElement = document.getElementById(id);
-			$("#the_selected_elem_left").text('aside' + ' - #' + id + ' : Selected');
-			$("#the_selected_elem_right").text('aside' + ' - #' + id + ' : Selected');
+			$("#the_style_identity_box").text('aside' + ' - #' + id + ' : Selected');
 			getElementStyleDetails(selectedId);
 			getElementAttrDetails(selectedId);
 		} else {
@@ -736,6 +755,14 @@
 
 	function removeSpecificId(id){
 		document.getElementById(id).style.display = "none";
+	}
+
+	function toggleSpecificId(){
+		if(document.getElementById(id).style.display == "none"){
+			document.getElementById(id).style.display = "block";
+		}else{
+			document.getElementById(id).style.display = "none";
+		}
 	}
 
 
@@ -1385,7 +1412,315 @@
 </style>
 </head>
 <body>
-	
+	<style>
+		.the_style_identity_bar{
+			position: absolute;
+			display: none;
+			width: 25%;
+			height:80vh;
+			background-color: #fff;
+			right: 0;
+			overflow-y: scroll;
+			border-radius: 12px;
+			/* transform: translateY(50%); */
+			bottom: 0;
+			top: 0;
+			margin: auto;
+			text-align: right;
+		}
+		.the_style_identity_bar .each_item{
+			padding: 5px;
+			overflow-x: hidden;
+		}
+
+		.the_style_identity_bar .each_item:hover{
+			overflow-x: scroll;
+		}
+
+		.the_style_identity_bar .each_item label{
+			width: 80px;
+			text-overflow: ellipsis;
+			overflow:hidden;
+			white-space: nowrap;
+			margin-top: 4px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+
+		.the_style_identity_bar .each_item label:hover{
+	  		overflow: visible; 
+			white-space: normal;
+			height:auto;
+		}
+
+
+		.the_style_identity_bar .each_item .the_check_side{
+			border-radius: 7px;
+			padding: 2px;
+		}
+
+		.the_style_identity_bar .each_item .the_input_side{
+			width: 180px;
+		}
+
+		.the_style_ui_display_items{
+			width: 100%;
+			text-align: center;
+		}
+		.side_panel_controls_block{
+			/* width: 100%; */
+			/* background-color: #bebebe;  */
+			text-align: center;
+		}
+	</style>
+
+
+<aside id="the_ui_style_bar" class="the_style_identity_bar">
+	<span class="side_panel_controls_block" style="display: inline-block; padding: 10px; text-align: right; opacity: 0.6;">
+		<!-- <span onclick="enableCustomiser('right')"
+			style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px; color: #fff;"><i
+				class="fa fa-cog"></i></span> -->
+		<span onclick="removeSpecificId('the_ui_style_bar')"
+			style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px; color: #fff;"><i
+				class="fa fa-times"></i></span>
+	</span>
+	<br/>
+
+
+	<center>
+		<h6 id="the_style_identity_box"> The UI Dashboard : Selected</h6>
+	</center>
+
+	<div id="the_side_ui_style" class="the_style_ui_display_items">
+		<ul>
+			<li class="each_item">
+				<input onchange="style_changed('background-color')" id="style_background-color_status"
+					class="the_check_side" checked value="yes" type="checkbox"
+					name="_background-color_state">
+				<label>Background Color</label>
+				<input onkeyup="style_changed('background-color')" id="style_background-color"
+					class="the_input_side" type="color" name="style_background-color_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('color')" id="style_color_status" class="the_check_side"
+					checked value="yes" type="checkbox" name="_color_state">
+				<label>Color</label>
+				<input onkeyup="style_changed('color')" id="style_color" class="the_input_side" type="color"
+					name="style_color_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('height')" id="style_height_status" class="the_check_side"
+					type="checkbox" checked value="yes" name="_height_state">
+				<label>Height</label>
+				<input onkeyup="style_changed('height')" id="style_height" list="size"
+					class="the_input_side" type="text" name="style_height_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('width')" id="style_width_status" class="the_check_side"
+					type="checkbox" checked value="yes" name="_width_state">
+				<label>Width</label>
+				<input onkeyup="style_changed('width')" id="style_width" class="the_input_side" type="text"
+					name="style_width_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('display')" id="style_display_status" class="the_check_side"
+					type="checkbox" checked value="yes" name="_display_state">
+				<label>Display</label>
+				<input onkeyup="style_changed('display')" id="style_display" class="the_input_side"
+					type="text" name="style_display_value" list="style_display_data_list">
+				<datalist id="style_display_data_list">
+					<optgroup label="Precomposed Values">
+						<option value="block">block</option>
+						<option value="inline">inline</option>
+						<option value="inline-block">inline-block</option>
+						<option value="flex">flex</option>
+						<option value="inline-flex">inline-flex</option>
+						<option value="grid">grid</option>
+						<option value="inline-grid">inline-grid</option>
+						<option value="flow-root">flow-root</option>
+					</optgroup>
+					<optgroup label="Box Generation">
+						<option value="none">none</option>
+						<option value="contents">contents</option>
+					</optgroup>
+					<optgroup label="Two-value Syntax">
+						<option value="block flow">block flow</option>
+						<option value="inline flow">inline flow</option>
+						<option value="inline flow-root">inline flow-root</option>
+						<option value="block flex">block flex</option>
+						<option value="inline flex">inline flex</option>
+						<option value="block grid">block grid</option>
+						<option value="inline grid">inline grid</option>
+						<option value="block flow-root">block flow-root</option>
+					</optgroup>
+					<optgroup label="Other Values">
+						<option value="table">table</option>
+						<option value="table-row">table-row</option>
+						<option value="list-item">list-item</option>
+					</optgroup>
+					<optgroup label="Global values">
+						<option value="inherit">inherit</option>
+						<option value="initial">initial</option>
+						<option value="revert">revert</option>
+						<option value="revert-layer">revert-layer</option>
+						<option value="unset">unset</option>
+					</optgroup>
+				</datalist>
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('position')" id="style_position_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_position_state">
+				<label>Position</label>
+				<input onkeyup="style_changed('position')" id="style_position" class="the_input_side"
+					type="text" name="style_position_value" list="style_position_data_list">
+				<datalist id="style_position_data_list">
+					<option value="static">static</option>
+					<option value="relative">relative</option>
+					<option value="absolute">absolute</option>
+					<option value="fixed">fixed</option>
+					<option value="sticky">sticky</option>
+					<optgroup label="Global values">
+						<option value="inherit">inherit</option>
+						<option value="initial">initial</option>
+						<option value="revert">revert</option>
+						<option value="revert-layer">revert-layer</option>
+						<option value="unset">unset</option>
+					</optgroup>
+				</datalist>
+			</li>
+			
+			<li class="each_item">
+				<input onchange="style_changed('border-radius')" id="style_border-radius_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_border-radius_state">
+				<label>Border Radius</label>
+				<input onkeyup="style_changed('border-radius')" id="style_border-radius"
+					class="the_input_side" type="text" name="style_border-radius_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('padding')" id="style_padding_status" class="the_check_side"
+					type="checkbox" checked value="yes" name="_padding_state">
+				<label>Padding</label>
+				<input onkeyup="style_changed('padding')" id="style_padding" class="the_input_side"
+					type="text" name="style_padding_value">
+			</li>
+
+
+			<li class="each_item">
+				<input onchange="style_changed('border')" id="style_border_status" class="the_check_side"
+					type="checkbox" checked value="yes" name="_border_state">
+				<label>Border</label>
+				<input onkeyup="style_changed('border')" id="style_border" class="the_input_side"
+					type="text" name="style_border_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('border-left')" id="style_border-left_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_border-left_state">
+				<label>Border Left</label>
+				<input onkeyup="style_changed('border-left')" id="style_border-left" class="the_input_side"
+					type="text" name="style_border-left_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('border-right')" id="style_border-right_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_border-right_state">
+				<label>Border Right</label>
+				<input onkeyup="style_changed('border-right')" id="style_border-right"
+					class="the_input_side" type="text" name="style_border-right_value">
+			</li>
+
+			<h3>Fonts</h3>
+			<li class="each_item">
+				<input onchange="style_changed('font-size')" id="style_font-size_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_font-size_state">
+				<label>Font Size</label>
+				<input onkeyup="style_changed('font-size')" id="style_font-size" class="the_input_side"
+					type="text" name="style_font-size_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('font-weight')" id="style_font-weight_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_font-weight_state">
+				<label>Font Weight</label>
+				<input onkeyup="style_changed('font-weight')" id="style_font-weight" class="the_input_side"
+					type="text" name="style_font-weight_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('font-family')" id="style_font-family_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_font-family_state">
+				<label>Font Family</label>
+				<input onkeyup="style_changed('font-family')" id="style_font-family" class="the_input_side"
+					type="text" name="style_font-family_value">
+			</li>
+
+			<h3>Position</h3>
+
+			<li class="each_item">
+
+				<input onchange="style_changed('float')" id="style_float_status" class="the_check_side"	type="checkbox" checked value="yes" name="_float_state">
+				<label>Float</label>
+				<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text" name="style_float_value" list="style_float_data_list">
+				<datalist id="style_float_data_list">
+					<option value="left">left</option>
+					<option value="right">right</option>
+					<option value="none">none</option>
+					<option value="inline-start">inline-start</option>
+					<option value="inline-end">inline-end</option>
+					<optgroup label="Global values">
+						<option value="inherit">inherit</option>
+						<option value="initial">initial</option>
+						<option value="revert">revert</option>
+						<option value="revert-layer">revert-layer</option>
+						<option value="unset">unset</option>
+					</optgroup>
+				</datalist>
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('top')" id="style_top_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_top_state">
+				<label>Top</label>
+				<input onkeyup="style_changed('top')" id="style_top"
+					class="the_input_side" type="text" name="style_top_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('bottom')" id="style_bottom_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_bottom_state">
+				<label>Bottom</label>
+				<input onkeyup="style_changed('bottom')" id="style_bottom"
+					class="the_input_side" type="text" name="style_bottom_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('left')" id="style_left_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_left_state">
+				<label>Left</label>
+				<input onkeyup="style_changed('left')" id="style_left"
+					class="the_input_side" type="text" name="style_left_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="style_changed('right')" id="style_right_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_right_state">
+				<label>Right</label>
+				<input onkeyup="style_changed('right')" id="style_right"
+					class="the_input_side" type="text" name="style_right_value">
+			</li>
+
+
+		</ul>
+
+	</div>
+	</aside>
+	<!-- this is the main body enviroment. -->
 	<div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)"  class="the_display_enviroment" id="the_design_dashboard">
 		<!-- <span id="unique_span" onmouseenter="mouseEnterMe(event)" onmouseleave="mouseLeaveMe(event)" ondragstart="elem_drag(event, 'span')" draggable="true" style="height: 120px; width: 120px; background-color: blue; position: absolute;">
 		</span> -->
