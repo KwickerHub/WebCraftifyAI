@@ -127,7 +127,7 @@ html {
   min-width: 60%;
 }
 .each_item + .each_item{
-	margin-top: 10px;
+	margin-top: 4px;
 }
 
 .the_selected_displayer .each_item {
@@ -136,19 +136,20 @@ html {
   white-space: nowrap;
 }
 .the_selected_displayer .each_item:hover {
-  overflow-x: overflow;
+  overflow-x: scroll;
 }
 
 .the_selected_displayer .each_item label{
 	width: 80px;
 	text-overflow: ellipsis;
-	
-    overflow:hidden;
-    white-space: nowrap;
+  overflow:hidden;
+  white-space: nowrap;
+  margin-top: 4px;
+  vertical-align: bottom;
 }
 
 .the_selected_displayer .each_item label:hover{
-	overflow: visible; 
+	  overflow: visible; 
     white-space: normal;
     height:auto;
 }
