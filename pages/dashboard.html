@@ -46,6 +46,15 @@
 			<button class="dropbtn">Edit</button>
 			<div class="dropdown-content">
 				<span onclick="duplicate_children()"><i class="fa fa-plus"></i>Duplicate</span>
+				<script>document.addEventListener("keydown", e=>{
+					e.preventDefault();
+					if(
+						e.key.toLowerCase()==="d" && e.ctrlKey
+					){
+						// alert("hey!");
+						duplicate_children();
+					}
+				});</script>
 				<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
 				<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
 				<!-- <span><i class="fa fa-plus"></i>Add Element</span> -->
