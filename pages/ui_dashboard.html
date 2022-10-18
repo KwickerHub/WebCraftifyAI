@@ -109,7 +109,7 @@
 
 	//global selectedElement = '#the_dev_dashboard';
 
-	function add_element_2_dashboard (tag_name,shape) {
+	function add_element_2_dashboard (tag_name,type) {
 		//specs.element.setAttribute(attribute, value);
 		selectedId = "the_design_dashboard";
 		var newElem = document.createElement(tag_name);
@@ -120,17 +120,21 @@
 		//ondragstart="" draggable="true" style="height: 120px; width: 120px; background-color: blue; position: absolute;"
 		height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value
 		width =  + document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value ;
+		radius =  + document.getElementById("settings_radius").value + document.getElementById("settings_size_representation").value ;
 		background = colorCodeGenetor(6);
+		defaultStyle = ""
+
+		if (type === 'text'){
+			newElem.innerHTML = "<input style=\"background-color: " + background + "; position: absolute; right: 45%, left: 45%;\" type=\"text\" />"
+		} else if (type === 'circle'){
+			defaultStyle += 'border-radius: 50%;' + 'height: '+ radius + '; width: '+ radius + ';';
+		} else {
+			defaultStyle += 'height: '+ height + '; width: '+ width + ';'
+		}
+
 		if (document.getElementById("settings_background").checked) {
-			defaultStyle = 'height: '+ height + '; width: '+ width + '; background-color: ' + background + '; position: absolute; right: 45%, left: 45%;';
-		}else{
-			defaultStyle = 'height: '+ height + '; width: '+ width + '; ';
+			defaultStyle +='background-color: ' + background + '; position: absolute; right: 45%, left: 45%;';
 		}
-		
-		if (shape === 'circle'){
-			defaultStyle += 'border-radius: 50%;'
-		}
-		
 		elemId = generate_strings_id(7);
 		//console.log(elemId);
 		newElem.setAttribute("style", defaultStyle);
@@ -1396,7 +1400,7 @@
 			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','sqaure')"><i class="fa fa-stop"></i></span>
 			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','circle')"><i class="fa fa-circle"></i></span>
 			<span class="the_menu_icons"><i class="fa fa-plus"></i></span>
-			<span class="the_menu_icons"><i class="fa fa-font"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','text')"><i class="fa fa-font"></i></span>
 			<span class="the_menu_icons" onclick="showSettingsPage()"><i class="fa fa-wrench"></i></span>
 		</div>
 	</center>
@@ -1452,6 +1456,11 @@
 			<li class="setting_item">
 				<label>Default Width</label>
 				<input class="the_input_side" id="settings_width" value="120" type="text" name="">
+			</li>
+
+			<li class="setting_item">
+				<label>Default Width</label>
+				<input class="the_input_side" id="settings_radius" value="120" type="text" name="">
 			</li>
 
 			<datalist id="setting_size">
