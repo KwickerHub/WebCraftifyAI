@@ -137,7 +137,7 @@ var your_comment = `
         getElementAttrDetails(elemId);
         selectCreated(elemId, tag_name);
     }
-    loadSaveContent();
+    saveDevArena();
     //ref.appendChild(newElem, ref);
 }
 
