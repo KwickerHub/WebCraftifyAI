@@ -7,11 +7,19 @@
     --poppins: 'Poppins', sans-serif;
 
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
 }
+
+div .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+
 #blue-btn{
     background-color: var(--light-blue);
     color: var(--white);
@@ -62,7 +70,7 @@ nav ul li a{
     font-family:var(--poppins);
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 16px;
     max-width: 90%;
 }
 .banner-btn{
@@ -161,11 +169,12 @@ nav ul li a{
     font-size: 20px;
 }
 .section-four .box-p2{
+    width: 100%;
     color: var(--black);
     font-family: var(--poppins);
     font-weight: bold;
-    font-size: 50px;
-    line-height: 76px;
+    font-size: 30px;
+    line-height: 50px;
     letter-spacing: -0.02em;
 }
 .section-four .box-p3{

@@ -14,7 +14,7 @@ A clear and concise description.
 This are the possible files you should contribute to
 
 **Possible Lines of Code**
-You can should not add above the possible lines of code. (if given)
+You should not add above the possible lines of code. (if given)
 
 **Result or Final Looks**
 After the changes or additions, What do we except.
