@@ -121,11 +121,22 @@
 		height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value
 		width =  + document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value ;
 		radius =  + document.getElementById("settings_radius").value + document.getElementById("settings_size_representation").value ;
+		image_blob = document.getElementById("settings_image").files[0];
 		background = colorCodeGenetor(6);
 		defaultStyle = ""
 
 		if (type === 'text'){
 			newElem.innerHTML = "<input style=\"background-color: " + background + "; position: absolute; right: 45%, left: 45%;\" type=\"text\" />"
+		} else if (type === 'image') {
+			if (image_blob.length() > 0){
+				let reader = new FileReader();
+				reader.onload = function (fileEvent) {
+					newElem.innerHTML = "<img width=\"" + width + "\" height=" + height + " src=\"" + fileEvent.srcElement.result + "\"/>";
+				}
+				reader.readAsDataURL(image_blob);
+			} else {
+				alert("The default image was not selected");
+			}
 		} else if (type === 'circle'){
 			defaultStyle += 'border-radius: 50%;' + 'height: '+ radius + '; width: '+ radius + ';';
 		} else {
@@ -1734,7 +1745,7 @@
 			<span onclick="changeMode(1)" class="the_menu_icons"><i class="fa fa-expand"></i></span>
 			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','sqaure')"><i class="fa fa-stop"></i></span>
 			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','circle')"><i class="fa fa-circle"></i></span>
-			<span class="the_menu_icons"><i class="fa fa-plus"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','image')"><i class="fa fa-plus"></i></span>
 			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','text')"><i class="fa fa-font"></i></span>
 			<span class="the_menu_icons" onclick="showSettingsPage()"><i class="fa fa-wrench"></i></span>
 		</div>
@@ -1796,6 +1807,11 @@
 			<li class="setting_item">
 				<label>Default Width</label>
 				<input class="the_input_side" id="settings_radius" value="120" type="text" name="">
+			</li>
+
+			<li class="setting_item">
+				<label>Default image</label>
+				<input class="the_input_side" id="settings_image" value="120" type="text" name="" accept="image/*">
 			</li>
 
 			<datalist id="setting_size">
