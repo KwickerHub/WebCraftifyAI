@@ -108,14 +108,14 @@ function add_element_2_dashboard (tag_name) {
         // This is the innerHTML of the development dashboard
       ref.innerHTML = ""; 
 var your_comment = `
-<head>
+<!--- <head>
 <title> #Particular Project Name</title>
 <script>
     //Plugin Start
     //##
     //Plugin End 
 </script>
-</head> 
+</head>  --->
 `;
  ref.innerHTML= your_comment;  
         proper_fitting = "\n" + "\t";
@@ -137,7 +137,7 @@ var your_comment = `
         getElementAttrDetails(elemId);
         selectCreated(elemId, tag_name);
     }
-    saveDevArena();
+    saveDevArena(true);
     //ref.appendChild(newElem, ref);
 }
 
@@ -334,9 +334,14 @@ function getElementAttrDetails(elem_id) {
 <button onclick="">Create</button>
 <br/><br/>
 </div> */
-function newProject() {
+function newProject(conditionFalse) {
   //$("create_project_pop", "id").fadeIn();
-  document.getElementById("create_project_pop").style.display = "block";
+  if(conditionFalse){
+    document.getElementById("project_create_state").value = "force";
+    document.getElementById("create_project_pop").style.display = "block";
+  }else{
+    document.getElementById("create_project_pop").style.display = "block";
+  }
 }
 
 function contains_special_char(str) {
@@ -357,6 +362,7 @@ function contains_special_char(str) {
 
 function makeTheProject() {
   var projectName = document.getElementById("the_project_name").value;
+  var conditionFalse = document.getElementById("project_create_state").value;
   var currentPage = window.location.href;
   //projectName = projectName.replace(/ /g, "_").toString();
   //alert(projectName);
@@ -369,12 +375,16 @@ function makeTheProject() {
     projectName = projectName.replace(/ /g, "_").toString();
     //alert(projectName);
     if (currentPage.includes("?project_title=")) {
-      saveDevArena();
+      if(conditionFalse == "force"){
+        var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+        var project_description = document.getElementById("the_project_description").value;
+        save_file(projectName, cvalue, project_description, "new");
+      }else{
+        saveDevArena();
+      }
     } else {
       var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-      var project_description = document.getElementById(
-        "the_project_description"
-      ).value;
+      var project_description = document.getElementById("the_project_description").value;
       value = save_file(projectName, cvalue, project_description, "new");
     }
   }
@@ -827,7 +837,7 @@ function loadElements(){
   });
 }
 
-function save_file(project_name, project_content, project_description, type){
+function save_file(project_name, project_content, project_description, type, alertOff){
     var ret = "";
     //alert("entered here");
     if (type == "new") {
@@ -846,13 +856,21 @@ function save_file(project_name, project_content, project_description, type){
         
         if (status){
             if (type == "new"){
-                alert(data);
+                (alertOff == true) ? console.log(data) : alert(data);
                 dataJson = JSON.parse(data);
                 console.log(dataJson);
-                if (dataJson["status"] == "true"){
+                if (dataJson["status"] == "true"){  
                     var currentPage = window.location.href;
-                    currentPage = currentPage + "?project_title=" + project_name;
-                    window.oepn(currentPage, "_blank");
+                    if(currentPage.includes("?")){
+                      var split_currentPage = currentPage.split("?");
+                      console.log(split_currentPage + currentPage);
+                      currentPage = split_currentPage[0] + "?project_title=" + project_name;
+                    }else{
+                      currentPage = currentPage + "?project_title=" + project_name;
+                    }
+                    //currentPage = currentPage + "?project_title=" + project_name;
+                    window.open(currentPage, "_blank");
+                    
                     //saveDevArena();
                 }else if(dataJson["msg"].includes("Invalid User")){
                     //let us take the person to the log-in page
@@ -863,15 +881,23 @@ function save_file(project_name, project_content, project_description, type){
                     alert("We are facing some challenges with creating this project." );
                 }
             }else{
-                alert(data);
+                (alertOff == true) ? console.log(data) : alert(data);
                 dataJson = JSON.parse(data);
                 console.log(dataJson);
                 if (dataJson["status"] == "true"){
-                    alert("project saved!!!");
+                    //alert("project saved!!!");
+                    (alertOff == true) ? console.log("project saved"): alert("project saved.") ;
                 }else if(dataJson["msg"].includes("Invalid User")){
                     //let us take the person to the log-in page
                     alert("You are currently logged out. We will be redirecting you to Register(or Login) in a new tab");
                     window.open("signup.html", "_blank");
+                }
+                else if(dataJson["msg"] == "This has not been created"){
+                    var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+                    if (cvalue != "" && cvalue != null) {
+                      newProject(true);
+                      //saveDevArena();
+                    }
                 }
                 else{
                     alert("We are facing some challenges with saving this project. It may have been deleted or move" );
@@ -949,14 +975,14 @@ function loadSaveContent(){
       }
     }
 
-function saveDevArena() {
+function saveDevArena(alertOff) {
   if (get_url_data("project_title") != "") {
     var project_name = get_url_data("project_title");
     var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
     var project_description = document.getElementById(
       "the_project_description"
     ).value;
-    save_file(project_name, cvalue, project_description, "exist");
+    save_file(project_name, cvalue, project_description, "exist", alertOff);
     // if(contains_special_char(project_name)){
     // 	alert("Project name should not include any of the special characters: "+ "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]");
     // }else{
