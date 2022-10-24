@@ -22,7 +22,7 @@
 	global width = $("attr_width");
 	global background = $("back_color");*/
 	
-	var selectedId = 'the_dev_dashboard';
+	var selectedId = 'the_design_dashboard';
 	var selectedElement;
 	var pointerX = -1;
 	var pointerY = -1;
@@ -85,11 +85,18 @@
 	//window.addEventListener("load", function(event){load_Adder_maker('element');}, false);
 	//window.addEventListener("load", function(event){loadAllSides("Style");}, false);
 	function setup(){
-		//main('the_dev_dashboard');
-		//loadSaveContent();
-		//loadElements();
-		//load_Adder_maker('element');
-		//loadAllSides("Style");
+		// This is the set-up function where all the required components or required data will
+		// be loaded.  
+		// Same/in the likeness of the function  main('the_dev_dashboard'); -- Start
+		// -- End
+		// Same/in the likeness of the function loadSaveContent();  -- Start
+		// -- End
+		// Same/in the likeness of the function loadElements(); -- Start
+		// -- End
+		// Same/in the likeness of the function load_Adder_maker('element'); -- Start
+		// -- End
+		// Same/in the likeness of the function  loadAllSides("Style"); -- Start
+		// -- End
 	}
 
 	//window.onload = loadSaveContent();
@@ -109,26 +116,38 @@
 
 	//global selectedElement = '#the_dev_dashboard';
 
-	function add_element_2_dashboard (tag_name,type) {
+	function add_element_2_dashboard (tag_name,type, preference_override) {
 		//specs.element.setAttribute(attribute, value);
-		selectedId = "the_design_dashboard";
+		//selectedId = "the_design_dashboard";
 		var newElem = document.createElement(tag_name);
+		if (preference_override) {
+			 if ( document.getElementById("create_children").checked == true) {
+				newElem = document.createElement("div");
+			 }else{
+				newElem = document.createElement("span");
+				selectedId = "the_design_dashboard";
+			 }
+		}
 
 		//height = ($("#style_height").val() != "") ? $("#style_height").val() : "120px";
 		//width = ($("#style_width").val() != "") ? $("#style_width").val() : "120px";
 		//background = ($("#style_background-color").val() != "") ? $("#back_color").val() : "#fed342";
 		//ondragstart="" draggable="true" style="height: 120px; width: 120px; background-color: blue; position: absolute;"
-		height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value
-		width =  + document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value ;
-		radius =  + document.getElementById("settings_radius").value + document.getElementById("settings_size_representation").value ;
-		image_blob = document.getElementById("settings_image").files[0];
+		height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value;
+		width =  document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value;
+		radius = document.getElementById("settings_diameter").value + document.getElementById("settings_size_representation").value;
+		font_size = document.getElementById("settings_font_size").value + document.getElementById("settings_size_representation").value;
+		//image_blob = document.getElementById("settings_image").files[0];
+		image_path = document.getElementById("settings_image").value;
 		background = colorCodeGenetor(6);
-		defaultStyle = ""
+		defaultStyle = "";
 
 		if (type === 'text'){
-			newElem.innerHTML = "<input style=\"background-color: " + background + "; position: absolute; right: 45%, left: 45%;\" type=\"text\" />"
+			newElem.innerHTML = "Hello World. ABC ";
+			defaultStyle += 'height: '+ height + '; width: '+ width + '; font-size: '+ font_size + ';';
+			document.getElementById("the_fonts_subsection").scrollIntoView();
 		} else if (type === 'image') {
-			if (image_blob.length() > 0){
+			/* if (image_blob.length() > 0){
 				let reader = new FileReader();
 				reader.onload = function (fileEvent) {
 					newElem.innerHTML = "<img width=\"" + width + "\" height=" + height + " src=\"" + fileEvent.srcElement.result + "\"/>";
@@ -136,11 +155,20 @@
 				reader.readAsDataURL(image_blob);
 			} else {
 				alert("The default image was not selected");
+			} */
+			if(image_path.length > 0){
+				newElem = document.createElement("img");
+				newElem.setAttribute("src", image_path);
+				defaultStyle += 'height: '+ height + '; width: '+ width + ';';
+				document.getElementById("the_image_subsection").scrollIntoView();
+			}else{
+				alert("The default image was not selected");
 			}
+
 		} else if (type === 'circle'){
 			defaultStyle += 'border-radius: 50%;' + 'height: '+ radius + '; width: '+ radius + ';';
 		} else {
-			defaultStyle += 'height: '+ height + '; width: '+ width + ';'
+			defaultStyle += 'height: '+ height + '; width: '+ width + ';';
 		}
 
 		if (document.getElementById("settings_background").checked) {
@@ -152,7 +180,6 @@
 		newElem.setAttribute("id", elemId);
 		newElem.setAttribute("draggable", "true");
 		newElem.setAttribute("ondragstart", "elem_drag(event, 'span')");
-		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
 		newElem.setAttribute("onmouseenter", "mouseEnterMe(event)");
 		newElem.setAttribute("onmouseleave", "mouseLeaveMe(event)");
 		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
@@ -175,6 +202,7 @@
 			ref.appendChild(newElem, ref);
 			getElementStyleDetails(elemId);
 			getElementAttrDetails(elemId);
+			getElementInnerHTML(elemId);
 			selectCreated(elemId, tag_name);
 		
 		}else{
@@ -185,6 +213,7 @@
 			ref.appendChild(newElem, ref);
 			getElementStyleDetails(elemId);
 			getElementAttrDetails(elemId);
+			getElementInnerHTML(elemId);
 			selectCreated(elemId, tag_name);
 			showPopUpById("the_ui_style_bar");
 		}
@@ -321,6 +350,7 @@
 			//$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
 			$("#the_style_identity_box").text(type + ' - #' + id + ' : Selected');
 			getElementStyleDetails(selectedId);
+			getElementInnerHTML(selectedId);
 			//getElementAttrDetails(selectedId);
 		}
 	}
@@ -358,6 +388,23 @@
 			var newValue = null;
 			//document.getElementById(selectedId).style.height = null;
 			document.getElementById(selectedId).style.removeProperty(property);
+		}
+	}
+	
+	function inner_changed(property){
+		var statusId = "inner_"+property+"_status";
+		var textValue = "inner_"+property;
+		if ( document.getElementById(statusId).checked == true) {
+			var newValue = document.getElementById(textValue).value;
+			if (newValue != null || newValue !="") {
+				//document.getElementById(selectedId).style.property = newValue;
+				document.getElementById(selectedId).innerHTML = newValue;
+			}else{
+				//document.getElementById(selectedId).style.removeProperty(property);
+				document.getElementById(selectedId).innerHTML = "";
+			}
+		}else{
+			document.getElementById(selectedId).innerHTML = null;
 		}
 	}
 
@@ -401,6 +448,14 @@
 	            }
 	        }
 	    }
+	}
+
+	function getElementInnerHTML(elem_id){
+		elem = document.getElementById(elem_id);
+		name = "font-text";
+	    innerDis = "inner_" + name;
+		property = document.getElementById(innerDis);
+		property.value = elem.innerHTML;
 	}
 
 	function componentToHex(c) {
@@ -1439,6 +1494,7 @@
 			top: 0;
 			margin: auto;
 			text-align: right;
+			z-index: 10;
 		}
 		.the_style_identity_bar .each_item{
 			padding: 5px;
@@ -1647,7 +1703,15 @@
 					class="the_input_side" type="text" name="style_border-right_value">
 			</li>
 
-			<h3>Fonts</h3>
+			<h3 id="the_fonts_subsection">Fonts</h3>
+			<li class="each_item">
+				<input onchange="inner_changed('font-text')" id="inner_font-text_status"
+					class="the_check_side" type="checkbox" checked value="yes" name="_font-text_state">
+				<label>Text</label>
+				<input onkeyup="inner_changed('font-text')" id="inner_font-text" class="the_input_side"
+					type="text" name="inner_font-text_value">
+			</li>
+
 			<li class="each_item">
 				<input onchange="style_changed('font-size')" id="style_font-size_status"
 					class="the_check_side" type="checkbox" checked value="yes" name="_font-size_state">
@@ -1727,13 +1791,30 @@
 					class="the_input_side" type="text" name="style_right_value">
 			</li>
 
+			<h3 id="the_image_subsection">Image</h3>
+			<li class="each_item">
+				<input onchange="attr_changed('src')" id="attr_src_status" class="the_check_side"
+					type="checkbox" checked value="yes" name="_src_state">
+				<label>Src</label>
+				<input onkeyup="attr_changed('src')" id="attr_src" class="the_input_side" type="text"
+					name="_src_value">
+			</li>
+
+			<li class="each_item">
+				<input onchange="attr_changed('alt')" id="attr_alt_status" class="the_check_side"
+					type="checkbox" checked value="yes" name="_alt_state">
+				<label>Alt</label>
+				<input onkeyup="attr_changed('alt')" placeholder="possible image description" id="attr_alt" class="the_input_side" type="text"
+					name="_alt_value">
+			</li>
+
 
 		</ul>
 
 	</div>
 	</aside>
 	<!-- this is the main body enviroment. -->
-	<div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)"  class="the_display_enviroment" id="the_design_dashboard">
+	<div ondragover="elem_allowDrop(event)" ondblclick="change_selected(event, 'div', 'the_design_dashboard')" ondrop="elem_drop(event)"  class="the_display_enviroment" id="the_design_dashboard">
 		<!-- <span id="unique_span" onmouseenter="mouseEnterMe(event)" onmouseleave="mouseLeaveMe(event)" ondragstart="elem_drag(event, 'span')" draggable="true" style="height: 120px; width: 120px; background-color: blue; position: absolute;">
 		</span> -->
 	</div>
@@ -1743,10 +1824,10 @@
 			<span class="the_menu_icons"><i class="fa fa-bars"></i></span>
 			<span onclick="changeMode(0)" class="the_menu_icons"><i class="fa fa-arrows-alt"></i></span>
 			<span onclick="changeMode(1)" class="the_menu_icons"><i class="fa fa-expand"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','sqaure')"><i class="fa fa-stop"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','circle')"><i class="fa fa-circle"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','image')"><i class="fa fa-plus"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('span','text')"><i class="fa fa-font"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','sqaure', true)"><i class="fa fa-stop"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','circle', true)"><i class="fa fa-circle"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','image', true)"><i class="fa fa-plus"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','text', true)"><i class="fa fa-font"></i></span>
 			<span class="the_menu_icons" onclick="showSettingsPage()"><i class="fa fa-wrench"></i></span>
 		</div>
 	</center>
@@ -1775,6 +1856,12 @@
 	position: fixed;
 	left: 25%;
 	border-radius: 12px;
+	overflow-y: hidden;
+	height: 40vh;
+}
+
+.the_settings_section .settings_body:hover{
+	overflow-y: scroll;
 }
 
 .the_settings_section .settings_body .the_save_button{
@@ -1796,7 +1883,7 @@
 		<ul>
 			<li class="setting_item">
 				<label>Default Height</label>
-				<input class="the_input_side" id="settings_height" value="120" type="text" name="">
+				<input class="the_input_side" id="settings_height"  value="120" type="text" name="">
 			</li>
 
 			<li class="setting_item">
@@ -1805,13 +1892,18 @@
 			</li>
 
 			<li class="setting_item">
-				<label>Default Width</label>
-				<input class="the_input_side" id="settings_radius" value="120" type="text" name="">
+				<label>Default Diameter</label>
+				<input class="the_input_side" id="settings_diameter" value="120" type="text" name="">
+			</li>
+
+			<li class="setting_item">
+				<label>Default Diameter</label>
+				<input class="the_input_side" id="settings_font_size" value="16" type="text" name="">
 			</li>
 
 			<li class="setting_item">
 				<label>Default image</label>
-				<input class="the_input_side" id="settings_image" value="120" type="text" name="" accept="image/*">
+				<input class="the_input_side" id="settings_image" value="../assets/img/hubpeople.png" type="text" name="" accept="image/*">
 			</li>
 
 			<datalist id="setting_size">
@@ -1844,6 +1936,12 @@
 				<label>on Duplicate Background Change</label>
 				<input class="the_check_side" type="checkbox" id="settings_duplicate_background" checked value="yes" name="">
 			</li>
+
+			<li class="setting_item">
+				<label>Create Children</label>
+				<input class="the_check_side" type="checkbox" id="create_children" value="no" name="">
+			</li>
+
 		</ul>
 	<button class="the_save_button">Save</button>
 	<br/><br/>

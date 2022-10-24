@@ -4,10 +4,12 @@ global background = $("back_color");*/
 
 var selectedId = "the_dev_dashboard";
 var selectedElement;
-// window.onload = function(){
-// 	setup();
-// 	alert(document.readyState);
-// }
+window.onload = function(){
+	//setup();
+	//alert(document.readyState);
+  //saveSettingsCookies();
+  loadSettingsCookies();
+}
 
 //$(document).ready(setup());
 // var the_setuptimer_2 = setInterval(() => {
@@ -486,7 +488,7 @@ function setCookie(cname, cvalue, exdays) {
 function getCookie(cname) {
   var name = cname + "=";
   var ca = document.cookie.split(";");
-  console.log(ca);
+  //console.log(ca);
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
     while (c.charAt(0) == " ") c = c.substring(1);
@@ -1482,3 +1484,47 @@ toolTipText.onclick = (event) => {
     popUp.classList.toggle("active");
   }, 4000);
 };
+
+
+function saveSettingsCookies(closePop_up){
+  all_set_elements = document.getElementsByClassName("setting_item");
+  for (let s_index = 0; s_index < all_set_elements.length; s_index++) {
+    const element = all_set_elements[s_index];
+    var get_the_input = element.getElementsByTagName("input");
+    var setting = get_the_input[0];
+    //console.log(get_the_input[0].id + get_the_input[0].value);
+    setCookie(setting.id, setting.value, 1000);
+
+    if (closePop_up) {
+      removeSpecificId("the_settings_section_page");
+    }
+  }
+
+}
+
+
+function loadSettingsCookies(closePop_up){
+  all_set_elements = document.getElementsByClassName("setting_item");
+  for (let s_index = 0; s_index < all_set_elements.length; s_index++) {
+    const element = all_set_elements[s_index];
+    var get_the_input = element.getElementsByTagName("input");
+    
+    setting = get_the_input[0];
+    console.log(get_the_input[0].id + get_the_input[0].value);
+    //setCookie(setting.id, setting.value, 1000);
+    the_setting_id = setting.id.toString();
+    if ( checkCookie(the_setting_id) ) {
+      console.log("getting in");
+      theStoredCookie = getCookie(the_setting_id);
+      the_element = document.getElementById(the_setting_id);
+      the_element.value = theStoredCookie;
+      if( theStoredCookie === "yes" || theStoredCookie === "no"){
+        the_element.setAttribute("checked", "true");
+      }
+    }
+
+    if (closePop_up) {
+      removeSpecificId("the_settings_section_page");
+    }
+  }
+}
