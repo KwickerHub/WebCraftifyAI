@@ -1729,5 +1729,4 @@ function takeThemTo(whereTo){
     url = "profilepage.html";
     window.open(url, "_blank");
   }
-
 }
