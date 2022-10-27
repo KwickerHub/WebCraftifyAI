@@ -5,10 +5,11 @@ global background = $("back_color");*/
 var selectedId = "the_dev_dashboard";
 var selectedElement;
 window.onload = function(){
-	//setup();
+  console.log("running the setup function.");
+	setup();
 	//alert(document.readyState);
   //saveSettingsCookies();
-  loadSettingsCookies();
+  //loadSettingsCookies();
 }
 
 //$(document).ready(setup());
@@ -53,13 +54,200 @@ window.onload = function(){
 //window.addEventListener("load", function(event){loadSaveContent();}, false);
 //window.addEventListener("load", function(event){setup();}, false);
 //window.addEventListener("load", function(event){load_Adder_maker('element');}, false);
-//window.addEventListener("load", function(event){loadAllSides("Style");}, false);
-function setup() {
-  main("the_dev_dashboard");
-  loadSaveContent();
-  loadElements();
-  load_Adder_maker("element");
-  loadAllSides("Style");
+window.addEventListener("load", function(event){loadSaveContent();}, false);
+// function setup() {
+//   main("the_dev_dashboard");
+//   loadSaveContent();
+//   loadElements();
+//   load_Adder_maker("element");
+// }
+
+function setup(){
+  // This is the set-up function where all the required components or required data will
+  // be loaded.  
+  // Same/in the likeness of the function  main('the_dev_dashboard'); -- Start
+  // -- End
+  // Same/in the likeness of the function loadSaveContent();  -- Start
+  if (get_url_data("project_title") != ""){
+    var project_name = get_url_data("project_title");
+    $.post('../../backend/projects/get_project_details.php', {
+        user_id: 34, 
+        project_name: project_name, 
+        key: "gjhtiidsimi09403jfjkdknf",
+    },
+    function(data, status){
+        if (status){
+            //alert(data);
+            dataJson = JSON.parse(data);
+            //alert(dataJson['project']['project_location']);
+            if (dataJson["status"] == "true"){
+                //var currentPage = window.location.href;
+                //currentPage = currentPage + "?project_title=" + project_name;
+                //window.location.assign(currentPage);
+                //saveDevArena();
+                $.post('../../backend/projects/load_saved_content.php', {
+                    user_id: 34, 
+                    project_name: project_name, 
+                    project_location: dataJson['project']['project_location'],
+                    key: "gjhtiidsimi09403jfjkdknf",
+                },
+                function(data, status){
+                    //dataJson = JSON.parse(data);
+                    //alert(data);
+                    if (status){
+                        if (data != "") {
+                            $('#the_dev_dashboard').html(data);	
+                        }else{
+                            alert('could not load project');
+                        }
+                        //$('#The_left_header_side').text(tag);
+                    }else{
+                        console.log('failed to load project. But made the first connection.');
+                    }
+                });
+            }else if(dataJson["msg"].includes("Invalid User")){
+                //let us take the person to the log-in page
+                window.open("login.html", "_blank");
+            }
+            else{
+                alert("We are facing some challenges with loading this project." );
+            }
+            
+        }else{
+            console.log('failed to load saved project.');
+            alert("project has failed to load. check your Network.");
+        }
+    });
+    
+
+    //This will be the future of all POST request on this platform or all our scripts. this will help reduce the lines of code drastically
+    //data = post_request('../../backend/projects/get_project_details.php', 
+    //{user_id: 34, project_name: project_name, key: "gjhtiidsimi09403jfjkdknf"}, "json");
+    //alert(await data);
+  }else {
+    alert("No Project Name. Let's try to save this project first before we retrieve");
+    newProject();
+  }
+  // -- End
+  // Same/in the likeness of the function loadElements(); -- Start
+  // -- End
+  // Same/in the likeness of the function load_Adder_maker('element'); -- Start
+  // -- End
+  // Same/in the likeness of the function  loadAllRightSides(ev); -- Start
+  ev = "Attributes";
+  if (typeof ev == "string") {
+    tag = ev;
+  } else {
+    selected_Id = ev.target.id;
+    selected_Element = document.getElementById(selected_Id);
+    tag = selected_Element.value;
+  }
+  //alert(tag);
+  display_by = document.getElementById("arrangement_type").value;
+  url = "../../backend/style/get_style.php?echo=raw";
+  if (tag == "Style") {
+    url = "../../backend/style/get_style.php?echo=raw&display_by=" + display_by;
+  } else if (tag == "Assitance/Modules") {
+    url = "../../backend/assistance/get_assistance.php?echo=raw&display_by=" +
+      display_by;
+  } else if (tag == "Attributes") {
+    url = "../../backend/attribute/get_attribute.php?echo=raw&display_by=" +
+      display_by;
+  } else if (tag == "Colors") {
+    url = "../../backend/colors/get_color.php?echo=raw&display_by=" + display_by;
+  } else if (tag == "File") {
+    url = "../../backend/file/get_file.php?echo=raw&display_by=" + display_by;
+  }
+  //alert(url);
+  $.post(
+    url,
+    {
+      key: "gjhtiidsimi09403jfjkdknf",
+    },
+    function (data, status) {
+      if (status) {
+        $(".full_right_aside_section").html(data);
+        $("#The_right_header_side").text(tag);
+      } else {
+        console.log(
+          "failed to load while using the direct Backend to HTML render."
+        );
+      }
+    }
+  );
+  // -- End
+
+  // Same/in the likeness of the function  loadAllLeftSides(ev); -- Start
+  ev = "Style";
+  if (typeof ev == "string") {
+    tag = ev;
+  } else {
+    selected_Id = ev.target.id;
+    selected_Element = document.getElementById(selected_Id);
+    tag = selected_Element.value;
+  }
+  //alert(tag);
+  display_by = document.getElementById("arrangement_type").value;
+  url = "../../backend/style/get_style.php?echo=raw";
+  if (tag == "Style") {
+    url = "../../backend/style/get_style.php?echo=raw&display_by=" + display_by;
+  } else if (tag == "Assitance/Modules") {
+    url = "../../backend/assistance/get_assistance.php?echo=raw&display_by=" +
+      display_by;
+  } else if (tag == "Attributes") {
+    url = "../../backend/attribute/get_attribute.php?echo=raw&display_by=" +
+      display_by;
+  } else if (tag == "Colors") {
+    url = "../../backend/colors/get_color.php?echo=raw&display_by=" + display_by;
+  } else if (tag == "File") {
+    url = "../../backend/file/get_file.php?echo=raw&display_by=" + display_by;
+  }
+  //alert(url);
+  $.post(
+    url, {
+      key: "gjhtiidsimi09403jfjkdknf",
+    },
+    function (data, status) {
+      //dataJson = JSON.parse(data);
+      //alert(data);
+      //result = data["result"];
+      if (status) {
+        $(".full_left_aside_section").html(data);
+        $("#The_left_header_side").text(tag);
+      } else {
+        console.log(
+          "failed to load while using the direct Backend to HTML render."
+        );
+      }
+    }
+  );
+  // -- End
+
+  // Same/in the likeness of the function function loadSettingsCookies(closePop_up)
+  closePop_up = false;
+  all_set_elements = document.getElementsByClassName("setting_item");
+  for (let s_index = 0; s_index < all_set_elements.length; s_index++) {
+    const element = all_set_elements[s_index];
+    var get_the_input = element.getElementsByTagName("input");
+    
+    setting = get_the_input[0];
+    //console.log(get_the_input[0].id + get_the_input[0].value);
+    //setCookie(setting.id, setting.value, 1000);
+    the_setting_id = setting.id.toString();
+    if ( checkCookie(the_setting_id) ) {
+      //console.log("getting in");
+      theStoredCookie = getCookie(the_setting_id);
+      the_element = document.getElementById(the_setting_id);
+      the_element.value = theStoredCookie;
+      if( theStoredCookie === "yes" || theStoredCookie === "no"){
+        the_element.setAttribute("checked", "true");
+      }
+    }
+
+    if (closePop_up) {
+      removeSpecificId("the_settings_section_page");
+    }
+  }
 }
 
 //window.onload = loadSaveContent();
@@ -925,6 +1113,7 @@ function loadSaveContent(){
         function(data, status){
             if (status){
                 //alert(data);
+                //console.log(data);
                 dataJson = JSON.parse(data);
                 //alert(dataJson['project']['project_location']);
                 if (dataJson["status"] == "true"){
@@ -1527,4 +1716,18 @@ function loadSettingsCookies(closePop_up){
       removeSpecificId("the_settings_section_page");
     }
   }
+}
+
+function takeThemTo(whereTo){
+  if(whereTo === "render"){
+    url = "view_render.php";
+    window.open(url, "_blank");
+  }else if (whereTo === "ui_dashboard"){
+    url = "ui_dashboard.html";
+    window.open(url, "_blank");
+  }else if (whereTo === "profile"){
+    url = "profilepage.html";
+    window.open(url, "_blank");
+  }
+
 }
