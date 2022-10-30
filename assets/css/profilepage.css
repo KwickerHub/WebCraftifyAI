@@ -53,6 +53,12 @@ header {
 	font-weight: 700;
 }
 
+.edit-icon {
+	font-size: 1rem;
+	font-weight: 700;
+	border: none;
+}
+
 .profile-pic-container {
 	position: relative;
 	overflow: hidden;
