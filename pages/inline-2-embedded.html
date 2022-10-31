@@ -54,7 +54,7 @@ body{
         }
         theoutter.value = _helem.innerHTML;
 
-        if (setting['grouped_style'] == false){
+        if (setting['grouped_style'] === false){
             theoutter.value += '<style>' +result+ '</style>';
         }
         add_style_somewhere("head");
@@ -85,18 +85,19 @@ body{
             for (let index = 0; index < array.length; index++) {
                 const element = array[index];
                 elem_InlineStyle = get_style_and_remove(element);
-                if (elem_InlineStyle != null || elem_InlineStyle !="null" ){
+                if (elem_InlineStyle){
                     unique_id = generate_strings_id(7);
                     element.setAttribute('data-kwickerId', unique_id);
                     //document.getElementById().tagName;
+                    console.log(elem_InlineStyle);
                     result = result + element.tagName+"[data-kwickerId="+unique_id+"] { " + elem_InlineStyle + "}";
-                    //console.log(result);
+                   
                 }
                 
                 if(element.childElementCount > 0){
                     beginConvert(element);
                 }
-                console.log(result);
+                
             }
         }
         //console.log(val);
