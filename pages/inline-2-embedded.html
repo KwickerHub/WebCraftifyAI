@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>   
+<body>
+<h1>Convert Inline style to Embedded </h1>
+<textarea  id="inline_css" ></textarea> <br>
+<button id="the_convertButton" onclick="theconverter({visible: true, grouped_style: false})"> Convert</button> <br>
+<textarea  id="embedded_css"></textarea> 
+<div id="thehiddenmister" hidden> </div>
+
+<style>
+body{
+    text-align: center;
+}
+#inline_css{
+    height: 40vh;
+    width: 100%;
+}
+
+#the_convertButton{
+    padding: 12px;
+    width: 80%;
+    background-color: blue;
+    color: beige;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#embedded_css{
+    height: 40vh;
+    width: 100%;
+}
+</style>
+
+<script>
+    var result = '';
+    function theconverter(setting = {visible: boolean, grouped_style: boolean}){
+        const theinputer = document.getElementById("inline_css");
+        const theoutter = document.getElementById("embedded_css");
+
+        var _helem = document.getElementById("thehiddenmister");
+        _helem.innerHTML = theinputer.value;
+        //var val = _helem.innerHTML;
+        beginConvert(_helem);
+        if (setting['visible'] == true){
+            _helem.removeAttribute("hidden");
+        }
+        theoutter.value = _helem.innerHTML;
+
+        if (setting['grouped_style'] == false){
+            theoutter.value += '<style>' +result+ '</style>';
+        }
+        add_style_somewhere("head");
+        
+    }
+
+    function generate_strings_id(length){
+        var alhpa_lets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x','y', 'z'];
+
+        var code = '';
+        for (var i=0; i < length; i++) { 
+            if(i==0){
+                code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length )];
+            }
+            else if (Math.floor(Math.random() * 2) == 1) {
+                code = code + Math.floor(Math.random() * 10 ).toString();
+            }else{
+                code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length )];
+            }
+        }
+        return code;
+    }
+
+    function beginConvert(_helem){
+        count_children = _helem.childElementCount;
+        if(count_children > 0){
+            array = _helem.children;
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                elem_InlineStyle = get_style_and_remove(element);
+                if (elem_InlineStyle != null || elem_InlineStyle !="null" ){
+                    unique_id = generate_strings_id(7);
+                    element.setAttribute('data-kwickerId', unique_id);
+                    //document.getElementById().tagName;
+                    result = result + element.tagName+"[data-kwickerId="+unique_id+"] { " + elem_InlineStyle + "}";
+                    //console.log(result);
+                }
+                
+                if(element.childElementCount > 0){
+                    beginConvert(element);
+                }
+                console.log(result);
+            }
+        }
+        //console.log(val);
+        //theoutter.innerHTML = val;
+    }
+
+    function get_style_and_remove(elem){
+        var style = elem.getAttribute('style');
+        //elem.setAttribute('style', null);
+        elem.removeAttribute("style");
+        return style;
+    }
+
+    function add_style_somewhere(area){
+        var emStyles = document.getElementsByTagName('style');
+        if (emStyles.length > 0) {
+            emStyles[0].append(result);
+        }else{
+            var newStyle = document.createElement("style");
+            newStyle.innerHTML = result;
+            document.body.append(newStyle);
+        }
+    }
+
+</script>
+
+<span onclick="removetheSideBars('left')" style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px"><i class="fa fa-times"></i></span>
+
+</body>
+</html>
