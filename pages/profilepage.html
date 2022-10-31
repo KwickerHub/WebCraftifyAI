@@ -16,6 +16,7 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+    <script type="text/javascript" defer src="../assets/vendor/js/profile_page.js"></script>
     <title>Profile-Page</title>
 </head>
 <body>
@@ -31,6 +32,7 @@
                 <div class="user-details">
                     <div class="profile-pic-container">
                         <img src="../assets/img/anonymous_image.png" alt="Anonymous Profile Pic" class="profile-pic">
+
                     </div>
                     <p class="username">Jill Anderson</p>
                     <p class="user-title">UI Designer</p>
@@ -53,8 +55,12 @@
                 </div>
             </div>
             <div class="section bio">
-                <p class="section-header">Bio</p>
-                <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p class="section-header" style="display: inherit;">Bio&nbsp;&nbsp;<button class="edit-icon edit_button" id="edit-btn" onclick="editBio()"><i class='fas fa-edit'></i></button></p>
+                <p class="section-content" id="def_block" style="display: block"></p>
+                <div id="text_id" class="edit-section" style="display: none">
+                        <textarea cols="50" rows="5" name="text" id="textarea"></textarea>
+                        <p><button onclick="saveBio()">Save</button></p>
+                </div>
             </div>
             <div class="section projects">
                 <p class="section-header">Projects</p>
