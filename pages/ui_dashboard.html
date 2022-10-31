@@ -1446,6 +1446,20 @@
 			}
 		}
 	}
+
+	function showTopBar(){
+		var topBar = document.getElementById("theTopBar");
+		// if (topBar.getAttribute("hidden")) {
+		// 	topBar.removeAttribute("hidden");
+		// }else{
+		// 	topBar.setAttribute("hidden", true);
+		// }
+		if (topBar.style.display == "" || topBar.style.display == "inline-block") {
+			topBar.style.display = "none"
+		} else {
+			topBar.style.display = "inline-block"
+		}
+	}
 	
 	
 	</script>
@@ -1479,6 +1493,358 @@
 </style>
 </head>
 <body>
+	<div class="the_top_bar" id="theTopBar">
+		<style>
+			.the_top_bar {
+				display: block;
+				width: 100%;
+				height: 60px;
+				top: 0;
+				left: 0;
+				color: #fefefe;
+				background-color: #000;
+				/* font-size: 14px; */
+				/* font-family: Georgia, 'Times New Roman', Times, serif; */
+				font-weight: 600;
+				text-align: justify;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				cursor: pointer;
+				}
+
+				.the_top_bar span {
+				padding: 1px;
+				}
+
+				
+.theTextPopUp {
+  width: 50%;
+  height: auto;
+  padding: 15px;
+  background-color: #000a8b;
+  color: blue;
+  border-radius: 12px;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  z-index: 1;
+  text-align: center;
+  vertical-align: center;
+  display: none;
+}
+
+.theTextPopUp input {
+  width: 80%;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.theTextPopUp textarea {
+  width: 80%;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.theTextPopUp button {
+  width: 80%;
+  padding: 15px;
+  background-color: #fff;
+  color: #000;
+}
+
+.theTextPopUp button:hover {
+  width: 80%;
+  padding: 15px;
+  background-color: green;
+  color: #fefefe;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  /* background-color: #4CAF50; */
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content span {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content span:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; */
+  color: wheat;
+}
+
+.dropdown-content span .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.dropdown-content span:hover .tooltiptext {
+  visibility: visible;
+  /* top: -5px;
+    left: 105%; */
+
+  /* Left
+	top: -5px;
+    right: 105%; */
+
+  /* Top
+	width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; */
+}
+
+/* At the bottom of the tooltip */
+.dropdown-content span .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* At the bottom of the tooltip */
+/* .dropdown-content span .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+} */
+
+/*  To the left of the tooltip */
+/* .dropdown-content span .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;  
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+} 1200 */
+.pop-up {
+  color: black;
+  background-color: white;
+  border-color: 2px solid black;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 100;
+  cursor: default;
+}
+.active {
+  opacity: 1;
+}
+				
+@media screen and (min-width: 0px) {
+  .the_top_bar {
+    height: 50px;
+  }
+
+  .the_top_bar .dropdown {
+    display: none;
+  }
+
+  .the_top_bar span {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .the_top_bar {
+    height: 50px;
+  }
+
+  .the_top_bar .dropdown {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .the_top_bar {
+    height: 60px;
+  }
+
+  .the_top_bar .dropdown {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+  }
+
+  .the_top_bar .dropdown span {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* .the_top_bar span{
+		position: relative;
+    	display: inline-block;
+		padding: 10px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	} */
+}
+		</style>
+
+		<div class="dropdown">
+			<button class="dropbtn">File</button>
+			<div class="dropdown-content">
+				<span onclick="newProject()"><i class="fa fa-file"></i>New</span>
+				<span onclick="saveDevArena()"><i class="fa fa-save"></i>Save
+          <span id="toolTipText" class="tooltiptext">more</span>
+         </span>
+
+				<span onclick="loadSaveContent()"><i class="fa fa-file-o"></i>Load Project</span>
+				<span onclick="loadSaveContent()"><i class="fa fa-file-text-o"></i>Open</span>
+				<!-- <span onclick="saveDevArenaAsCookie()"><i class="fa fa-save"></i>Save in Cookie</span> -->
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">Edit</button>
+			<div class="dropdown-content">
+				<span onclick="duplicate_children()"><i class="fa fa-plus"></i>Duplicate</span>
+				<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
+				<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
+				<!-- <span><i class="fa fa-plus"></i>Add Element</span> -->
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">Mode</button>
+			<div class="dropdown-content">
+				<span onclick="change2codeMode()"><i class="fa fa-code"></i>Code</span>
+				<span onclick="change2webMode()"><i class="fa fa-globe"></i>Web</span>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">Pages</button>
+			<div class="dropdown-content">
+				<span onclick="takeThemTo('render')"><i class="fa fa-external-link"></i>Render page</span>
+				<span onclick="takeThemTo('ui_dashboard')"><i class="fa fa-external-link"></i>UI Dashboard</span>
+				<span onclick="takeThemTo('profile')"><i class="fa fa-external-link"></i>Profile page</span>
+				<!-- <span onclick=""><i class="fa fa-globe"></i>Change View</span>
+			<span onclick=""><i class="fa fa-globe"></i>Mobile View</span> -->
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">Help</button>
+			<div class="dropdown-content">
+				<span><i class="fa fa-info"></i>About</span>
+				<span><i class="fa fa-question"></i>Help/Tutorial</span>
+			</div>
+		</div>
+
+		<span onclick="show_icon_popup('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
+		<span onclick="showSettingsPage()"><i class="fa fa-cogs"></i>Settings</span>
+		<span onclick="showPopUpById('the_adder_displayer_pop_up'); now_display_adder_maker(event, 'element')"><i class="fa fa-plus"></i>Contribute</span>
+		<div class="pop-up" id="popUp">Use this option to save your project to the serve to avoid loss of data.</div>
+
+		<!-- <span onclick="showPopUpById('the_adder_displayer_pop_up'); now_display_adder_maker(event, 'element')"><i
+				class="fa fa-plus .the_adder_header_ adder_header_selected"></i>Contribute</span>
+    <i id="left_bar_restore" class="fa fa-window-restore"></i>
+	<i id="right_bar_restore" class="fa fa-window-minimize"></i>
+	<i class="fa fa-window-maximize"></i> -->
+		<!-- <span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Insert</span>
+
+	<span onclick="duplicate_children()"><i class="fa fa-pencil"></i>Duplicate</span>
+
+	
+	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Font Family</span>
+	<span onclick="insertElementB4()"><i class="fa fa-pencil"></i>Convert to Module(Dev-Pack)</span> -->
+
+		<!-- <span><i class="fa fa-file"></i>New</span>
+	<span><i class="fa fa-folder-open"></i>Open</span>
+	<span><i class="fa fa-timer"></i>Recent Projects</span>
+	<span><i class="fa fa-save"></i>Save</span>
+	<span><i class="fa fa-search"></i>Search</span>
+	<span><i class="fa fa-search-plus"></i>Replace</span>
+	<span><i class="fa fa-plus"></i>Add Library</span>
+
+	<span><i class="fa fa-plus"></i>Change Parent</span>
+
+	<span><i class="fa fa-pencil"></i>Edit</span>
+	<span><i class="fa fa-code"></i>Code</span>
+
+	<span><i class="fa fa-globe"></i>Publish</span>
+	<span><i class="fa fa-share-alt"></i>Share</span>
+	<span><i class="fa fa-eye"></i>Public</span>
+	<span><i class="fa fa-lock"></i>Secured</span> -->
+	</div>
 	<style>
 		.the_style_identity_bar{
 			position: absolute;
@@ -1821,7 +2187,7 @@
 
     <center>
 		<div class="bottom_bar_end">
-			<span class="the_menu_icons"><i class="fa fa-bars"></i></span>
+			<span onclick="showTopBar()" class="the_menu_icons"><i class="fa fa-bars"></i></span>
 			<span onclick="changeMode(0)" class="the_menu_icons"><i class="fa fa-arrows-alt"></i></span>
 			<span onclick="changeMode(1)" class="the_menu_icons"><i class="fa fa-expand"></i></span>
 			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','sqaure', true)"><i class="fa fa-stop"></i></span>
