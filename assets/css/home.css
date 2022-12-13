@@ -216,3 +216,11 @@ nav ul li a{
         font-size: 24px;
     }
 }
+
+/* Home page mobile view, for login sign-in & button.. */
+@media screen and (max-width:600px) {
+    .sign-in {
+        position: absolute;
+        top: 2.3rem;
+    }
+}
