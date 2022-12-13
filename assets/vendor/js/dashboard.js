@@ -1730,3 +1730,401 @@ function takeThemTo(whereTo){
     window.open(url, "_blank");
   }
 }
+
+
+
+
+
+let expand_tags = () => {
+  let dif = 10
+  let dif2 = 20
+
+  let ccc = document.getElementById("the_dev_dashboard");
+  ccc.style.position="relative"
+        
+  expand = false
+  
+  
+  ccc.onmousemove = (e) => {
+    console.log(selectedId,",,,,,,,,,,,,,,,")
+    let pa = e.currentTarget
+    console.log(e, "of", e.offsetY)
+    console.log(e.clientY - e.currentTarget.getBoundingClientRect().y)
+    let ch = e.toElement
+    let extools = ccc.querySelector(".extools")
+
+            
+
+    //    console.log(expand)
+    if (e.path.includes(extools)) {
+      ch = e.path[e.path.findIndex(e => e == extools) + 1]
+
+
+    }
+    // console.log(expand)
+    if ((ch == pa || !pa.contains(e.toElement)) && !expand) {
+      if (extools) {
+        // ccc.removeChild(extools)
+      }
+      return
+    }
+
+   
+    let height = ch.offsetHeight
+    let width = ch.offsetWidth
+    //    clix
+    //    cliy
+    let ofx = e.clientX - e.currentTarget.getBoundingClientRect().x
+    let ofy = e.clientY - e.currentTarget.getBoundingClientRect().y
+
+    let x = ch.getBoundingClientRect().x - pa.getBoundingClientRect().x
+    let y = ch.getBoundingClientRect().y - pa.getBoundingClientRect().y
+
+    let cx = x + width / 2
+    let cy = y + height / 2
+
+
+    style = `
+       position:absolute;
+       top:${y - dif}px;
+       left:${x - dif}px;
+       height:${height + dif2}px;
+       width:${width + dif2}px;
+       z-index:40;
+       
+       `
+
+    over(style, ch, { x, y, cx, cy, height, width, ofx, ofy })
+    // console.log(pa.getBoundingClientRect(),ch.getBoundingClientRect())
+    // console.log()
+
+    // e.currentTarget.pa
+
+  }
+
+
+
+
+
+
+
+  let over = (style, tag, val,) => {
+    let extools = ccc.querySelector(".extools")
+    if (!expand || !selectedId) {
+
+
+      if (extools) {
+        ccc.removeChild(extools)
+      }
+      console.log("jfjfj")
+                
+      let parent = document.createElement("div")
+      let con = document.createElement("div")
+      child = [1, 2, 3, 4,].map((e) => document.createElement("div"));
+      let constyle = `
+                    position :relative;
+                    width:100%;
+                    height:100%;
+
+        
+        
+            
+            `
+
+     
+
+      parent.setAttribute("style", style)
+      parent.setAttribute("class", "extools")
+      parent.appendChild(con)
+
+      con.setAttribute("style", constyle)
+      child.forEach(e => {
+        let style = `
+                width:10px;
+                height:10px;
+                border-radius:50%;
+                background-color:black;
+                position:absolute
+                `
+
+        e.setAttribute("style", style)
+        con.appendChild(e)
+
+        e.onmousedown = () => {
+          expand =
+          {
+            c: e, tag, ...val, parent
+          }
+          console.log(e, "lkskskskskskskks")
+        }
+
+
+
+
+      });
+
+      let [c1, c2, c3, c4,] = child
+
+
+      c1.style.left = "0px"
+      c1.style.top = "0px"
+      c1.style.cursor = "nw-resize"
+      c1.setAttribute("data", "c1")
+
+      c2.style.left = "0px"
+      c2.setAttribute("data", "c2")
+      c2.style.cursor = "ne-resize"
+      c2.style.bottom = "0px"
+
+      c3.style.right = "0px"
+      c3.style.cursor = "nw-resize"
+      c3.setAttribute("data", "c3")
+      c3.style.bottom = "0px"
+
+      c4.style.right = "0px"
+      c4.setAttribute("data", "c4")
+      c4.style.cursor = "ne-resize"
+      c4.style.top = "0px"
+
+      ccc.appendChild(parent)
+      parent.onmouseleave = (e) => {
+                       
+        if (!expand) {
+          ccc.removeChild(parent)
+
+        }
+      }
+      //   let pa2 = document.createElement("div")
+      //   pa2.style.height = `${ccc.offsetHeight}px`
+      //   pa2.style.width = `${ccc.offsetWidth}px`   
+      //   pa2.style.position = `absolute`
+      //   pa2.setAttribute("class")   
+      //   ccc.appendChild(pa2)
+      console.log(expand, "notexpand")
+    }
+    // console.log(expand,"expand")
+    
+
+    if (expand && selectedId &&  expand.tag==document.getElementById(selectedId)) {
+
+      let c = expand.c
+
+      console.log(c.getAttribute("data"))
+      expand.parent.style.border = "1px dashed grey";
+      
+      // console.log(expand.parent)
+      // console.log(c.getAttribute("data"))
+      let y;
+      let x;
+      let cy;
+      let cx;
+      switch (c.getAttribute("data")) {
+        case "c3":
+
+          (() => {
+
+             y = Math.abs(expand.height + (val.ofy - (expand.y + expand.height) - dif2))
+             cy = y + dif2
+             x = Math.abs(expand.width + (val.ofx - (expand.x + expand.width) - dif2))
+             cx = x + dif2
+            // if (y > -1) {
+
+            //   expand.tag.style.height = `${y}px`
+            //   expand.parent.style.height = `${cy}px`
+            // }
+            // if (x > -1) {
+
+            //   expand.tag.style.width = `${x}px`
+            //   expand.parent.style.width = `${cx}px`
+            // }
+            // let xpoint = expand.tag.getBoundingClientRect().x - ccc.getBoundingClientRect().x
+            // let ypoint = expand.tag.getBoundingClientRect().y - ccc.getBoundingClientRect().y
+            // // console.log(xpoint, expand.tag.getBoundingClientRect().x, expand.x)
+            // expand.parent.style.top = `${ypoint - dif}px`
+            // expand.parent.style.left = `${xpoint - dif}px`
+
+
+          })()
+          // expand.tag.style.marginLeft="auto"
+          // expand.tag.style.marginTop="auto"
+
+
+
+
+
+          break;
+        case "c4":
+          (() => {
+
+
+             cy = expand.height + dif2 + (expand.y - dif - val.ofy)
+             y = cy - dif2
+            // let  x = expand.width + (val.ofx - (expand.x + expand.width) - dif2) 
+            // let  cx = x+dif2
+             cx = expand.width + dif2 + (val.ofx - (expand.x + dif + expand.width + dif2))
+             x = cx - dif2
+
+            // console.log(x)
+            // if (x > -1) {
+            //   expand.tag.style.width = `${x}px`
+
+            //   expand.parent.style.width = `${cx}px`
+            // }
+
+            // if (y > -1) {
+
+            //   expand.tag.style.height = `${y}px`
+
+            //   expand.parent.style.height = `${cy}px`
+            // }
+            // console.log(top,val.ofy)
+
+
+            // let xpoint = expand.tag.getBoundingClientRect().x - ccc.getBoundingClientRect().x
+            // let ypoint = expand.tag.getBoundingClientRect().y - ccc.getBoundingClientRect().y
+            // // console.log(xpoint, expand.tag.getBoundingClientRect().x,expand.x)
+            // expand.parent.style.top = `${ypoint - dif}px`
+            // expand.parent.style.left = `${xpoint - dif}px`
+
+          })()
+
+
+
+
+
+
+          break;
+
+        case "c2":
+          (() => {
+
+            // console.log("c2")
+
+
+             y = expand.height + dif2 + (val.ofy - (expand.y - dif + expand.height + dif) - dif2)
+             cy = y + dif2
+            // let  x = expand.width + (val.ofx - (expand.x + expand.width) - dif2) 
+            // let  cx = x+dif2
+             cx = expand.width + dif2 - (val.ofx - (expand.x - dif))
+             x = cx - dif2
+
+
+            // if (y > -1) {
+
+            //   expand.tag.style.height = `${y}px`
+     
+            //   expand.parent.style.height = `${cy}px`
+            // }
+            // if (x > -1) {
+
+            //   expand.tag.style.width = `${x}px`
+      
+            //   expand.parent.style.width = `${cx}px`
+            // }
+
+            // let xpoint = expand.tag.getBoundingClientRect().x - ccc.getBoundingClientRect().x
+            // let ypoint = expand.tag.getBoundingClientRect().y - ccc.getBoundingClientRect().y
+            // // console.log(xpoint, expand.tag.getBoundingClientRect().x,expand.x)
+            // expand.parent.style.top = `${ypoint - dif}px`
+            // expand.parent.style.left = `${xpoint - dif}px`
+
+          })()
+
+
+
+
+
+
+          break;
+
+
+
+
+
+
+        case "c1":
+          (() => {
+
+
+             cy = expand.height + dif2 + (expand.y - dif - val.ofy)
+
+             y = cy - dif2
+            // let  x = expand.width + (val.ofx - (expand.x + expand.width) - dif2) 
+            // let  cx = x+dif2
+             cx = expand.width + dif2 - (val.ofx - (expand.x - dif))
+             x = cx - dif2
+
+
+           
+
+           
+
+          })()
+
+
+
+
+
+
+          break;
+      }
+ if (y > -1) {
+   expand.tag.style.height = `${y}px`;
+
+   expand.parent.style.height = `${cy}px`;
+ }
+
+ if (x > -1) {
+   expand.tag.style.width = `${x}px`;
+
+   expand.parent.style.width = `${cx}px`;
+ }
+ let xpoint =
+   expand.tag.getBoundingClientRect().x - ccc.getBoundingClientRect().x;
+ let ypoint =
+   expand.tag.getBoundingClientRect().y - ccc.getBoundingClientRect().y;
+ // console.log(xpoint, expand.tag.getBoundingClientRect().x,expand.x)
+ expand.parent.style.top = `${ypoint - dif}px`;
+ expand.parent.style.left = `${xpoint - dif}px`;
+
+    }
+
+
+
+
+    // c1.onmo = (e) => {
+
+    //     if (id != selectedId) {
+    //         return
+    //     }
+
+    //     tag.style.position = "absolute"
+
+    //     move()
+    // }
+
+
+
+
+
+
+
+
+
+  }
+  ccc.onmouseup = () => {
+    expand = false
+  }
+  ccc.onmouseup = () => {
+    expand = false
+  }
+  
+
+
+}
+
+
+expand_tags()
+
+
+init(document.getElementById("the_dev_dashboard"));
