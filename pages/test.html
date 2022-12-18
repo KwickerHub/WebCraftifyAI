@@ -5,6 +5,43 @@
 	<title>Test Samples</title>
 </head>
 <body>
+	<div className="card" style={{background:"-webkit-gradient(linear, left top, right top, from(#000), color-stop(50%, #000), color-stop(50%, #fff))"}}/>
+	<button style={{backgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`, }} >
+	<div id="progress-spinner" style={{
+		background: `conic-gradient(rgb(3, 133, 255) ${progress}%, rgb(242, 242, 242) ${progress}%)`
+	}}></div>
+	<script>
+		var str = `<span onclick="enableCustomiser('left')"
+					style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px;"><i
+						class="fa fa-cog"></i></span>
+				<span onclick="removetheSideBars('left')"
+					style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px"><i
+						class="fa fa-times"></i></span>`;
+		
+		var splitted_str = str.split("<");
+		var new_str = "";
+		console.log(splitted_str);
+		for (let index = 1; index < splitted_str.length; index++) {
+			const style_area = splitted_str[index];
+			if(style_area[0] == "/"){
+				console.log("closing side");
+			}else{
+				if (style_area.includes("style")) {
+					console.log("worth considering: " + style_area);
+					new_style_area = style_area.split("style");
+					if (new_style_area.indexOf('"') < new_style_area.indexOf("'")) {
+						style = new_style_area.slice( new_style_area.indexOf('"'), new_style_area[new_style_area.indexOf('"')+1].indexOf('"') );
+						new_str = new_str + style;
+					}else{
+						style = new_style_area.slice( new_style_area.indexOf("'"), new_style_area[new_style_area.indexOf('"')+1].indexOf("'") );
+						new_str = new_str + style;
+					}
+				}
+				
+			}
+		}
+		console.log(new_str);
+	</script>
 <h2>Test Page</h2>
 <p>You can test anything or any functionality here. Just for developers... </p>
 </body>
