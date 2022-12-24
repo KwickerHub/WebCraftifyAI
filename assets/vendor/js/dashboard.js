@@ -408,38 +408,44 @@ function change_selected(e, type, id) {
 }
 
 function attr_changed(attribute) {
-  var statusId = "attr_" + attribute + "_status";
-  var attrValue = "attr_" + attribute;
-  if (document.getElementById(statusId).checked == true) {
-    var newValue = document.getElementById(attrValue).value;
-    //alert(newValue);
-    if (newValue != null || newValue != "") {
-      document.getElementById(selectedId).setAttribute(attribute, newValue);
+  if (selectedId) {
+    
+    var statusId = "attr_" + attribute + "_status";
+    var attrValue = "attr_" + attribute;
+    if (document.getElementById(statusId).checked == true) {
+      var newValue = document.getElementById(attrValue).value;
+      //alert(newValue);
+      if (newValue != null || newValue != "") {
+        document.getElementById(selectedId).setAttribute(attribute, newValue);
+      } else {
+        document.getElementById(selectedId).removeAttribute(attribute);
+      }
     } else {
+      var newValue = null;
       document.getElementById(selectedId).removeAttribute(attribute);
     }
-  } else {
-    var newValue = null;
-    document.getElementById(selectedId).removeAttribute(attribute);
   }
 }
 
 function style_changed(property) {
-  var statusId = "style_" + property + "_status";
-  var propertyValue = "style_" + property;
-  if (document.getElementById(statusId).checked == true) {
-    var newValue = document.getElementById(propertyValue).value;
-    if (newValue != null || newValue != "") {
-      //document.getElementById(selectedId).style.property = newValue;
-      document.getElementById(selectedId).style.cssText +=
-        property + ":" + newValue + ";";
+  if (selectedId) {
+    
+    var statusId = "style_" + property + "_status";
+    var propertyValue = "style_" + property;
+    if (document.getElementById(statusId).checked == true) {
+      var newValue = document.getElementById(propertyValue).value;
+      if (newValue != null || newValue != "") {
+        //document.getElementById(selectedId).style.property = newValue;
+        document.getElementById(selectedId).style.cssText +=
+          property + ":" + newValue + ";";
+      } else {
+        document.getElementById(selectedId).style.removeProperty(property);
+      }
     } else {
+      var newValue = null;
+      //document.getElementById(selectedId).style.height = null;
       document.getElementById(selectedId).style.removeProperty(property);
     }
-  } else {
-    var newValue = null;
-    //document.getElementById(selectedId).style.height = null;
-    document.getElementById(selectedId).style.removeProperty(property);
   }
 }
 
@@ -1730,3 +1736,8 @@ function takeThemTo(whereTo){
     window.open(url, "_blank");
   }
 }
+
+
+
+
+
