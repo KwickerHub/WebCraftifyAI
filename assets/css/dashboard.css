@@ -290,6 +290,7 @@ html {
   background-color: transparent;
   position: relative;
   display: inline-block;
+  z-index: 999;
 }
 
 /* Dropdown Content (Hidden by Default) */
