@@ -260,7 +260,7 @@ function main(id) {
 }
 
 //global selectedElement = '#the_dev_dashboard';
-
+var save_state = true;
 function add_element_2_dashboard (tag_name) {
     //specs.element.setAttribute(attribute, value);
     var newElem = document.createElement(tag_name);
@@ -327,7 +327,9 @@ var your_comment = `
         getElementAttrDetails(elemId);
         selectCreated(elemId, tag_name);
     }
-    saveDevArena(true);
+    if(save_state){
+      saveDevArena(true);
+    }
     //ref.appendChild(newElem, ref);
 }
 
@@ -1173,30 +1175,36 @@ function loadSaveContent(){
     }
 
 function saveDevArena(alertOff) {
-  if (get_url_data("project_title") != "") {
-    var project_name = get_url_data("project_title");
-    var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-    var project_description = document.getElementById(
-      "the_project_description"
-    ).value;
-    save_file(project_name, cvalue, project_description, "exist", alertOff);
-    // if(contains_special_char(project_name)){
-    // 	alert("Project name should not include any of the special characters: "+ "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]");
-    // }else{
-    // 	var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-    // 	var project_description = document.getElementById("the_project_description").value;
-    // 	save_file(project_name, cvalue, project_description);
-    // }
-  } else {
-    alert(
-      "could not find project name. However, You can save this project now."
-    );
-    var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-    if (cvalue != "" && cvalue != null) {
-      newProject();
-      //saveDevArena();
+    if (get_url_data("project_title") != "") {
+      var project_name = get_url_data("project_title");
+      var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+      var project_description = document.getElementById(
+        "the_project_description"
+      ).value;
+      save_file(project_name, cvalue, project_description, "exist", alertOff);
+      // if(contains_special_char(project_name)){
+      // 	alert("Project name should not include any of the special characters: "+ "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]");
+      // }else{
+      // 	var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+      // 	var project_description = document.getElementById("the_project_description").value;
+      // 	save_file(project_name, cvalue, project_description);
+      // }
+    } else {
+      alert(
+        "could not find project name. However, You can save this project now."
+      );
+      var save_ = confirm("Would you like to save this project");
+      if (save_ == true) {
+        var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+        if (cvalue != "" && cvalue != null) {
+          newProject();
+          //saveDevArena();
+        }
+      } else {
+        save_state = false;
+      }
+      
     }
-  }
 }
 
 
