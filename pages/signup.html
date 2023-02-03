@@ -38,8 +38,8 @@
 					key: "gjhtiidsimi09403jfjkdknf"
 				},
 				function(data, status){
-					alert("Proceed to Sign Up.");
-					alert(data + "status: " + status );
+					//alert("Proceed to Sign Up.");
+					console.log(data + "status: " + status );
 					dataJson = JSON.parse(data);
 					if (dataJson["status"] == "true"){
 						$("#processor_shower").fadeOut();
