@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Describe the bug**
+**Describe the issue**
 A clear and concise description.
 
 **File/Files you will work on**
