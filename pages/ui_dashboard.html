@@ -1794,7 +1794,7 @@
 			<button class="dropbtn">Pages</button>
 			<div class="dropdown-content">
 				<span onclick="takeThemTo('render')"><i class="fa fa-external-link"></i>Render page</span>
-				<span onclick="takeThemTo('ui_dashboard')"><i class="fa fa-external-link"></i>UI Dashboard</span>
+				<span onclick="takeThemTo('dashboard.html')"><i class="fa fa-external-link"></i>Dashboard</span>
 				<span onclick="takeThemTo('profile')"><i class="fa fa-external-link"></i>Profile page</span>
 				<!-- <span onclick=""><i class="fa fa-globe"></i>Change View</span>
 			<span onclick=""><i class="fa fa-globe"></i>Mobile View</span> -->
@@ -2313,6 +2313,13 @@
 	<br/><br/>
 	</div>
 </div>
+
+<script>
+	function takeThemTo(url) {
+  window.location.replace(url);
+}
+
+</script>
 </body>
 </html>
 
