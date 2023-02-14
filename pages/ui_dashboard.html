@@ -569,6 +569,12 @@
 		/*var para = document.createElement("p");
 		para.appendChild(node);*/
 	}
+		
+	document.addEventListener("keydown", function (event) {
+        if (event.key === "Delete" && document.getElementById(selectedId)) {
+          removeSelected();
+        }
+      });
 
 	function removeSelected(){
 		var r = confirm("You are about to remove the selected element");
