@@ -1749,6 +1749,9 @@ function takeThemTo(whereTo){
   }else if (whereTo === "profile"){
     url = "profilepage.html";
     window.open(url, "_blank");
+  }else if (whereTo === "dashboard"){
+    url = "dashboard.html";
+    window.open(url, "_blank");
   }
 }
 
