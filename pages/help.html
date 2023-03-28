@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Page</title>
+    <link rel="stylesheet"  type="text/css" href="../assets/css/help.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="faq-accordion.css" />
+  </head>
+  
+  <body>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">HELP PAGE</h1>
+        <p class="lead">Frequently Asked Questions</p>
+      </div>
+    </div>
+    
+
+    <div class="faq-container">      
+      <div class="faq">
+        <div class="question-container">
+          <h2>Q. What is KwickerHub?</h2>
+          <div class="toggle-btn">
+            <p>+</p>
+          </div>
+        </div>
+        <div class="answer">
+          <p>A. KwickerHub is a platform where you cancreate UI templates easily.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question-container">
+          <h2>Q. Is it free?</h2>
+          <div class="toggle-btn">
+            <p>+</p>
+          </div>
+        </div>
+        <div class="answer">
+          <p>A.Yes. It is free.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question-container">
+          <h2>Q. Is it useful for any type of UI/UX?</h2>
+          <div class="toggle-btn">
+            <p>+</p>
+          </div>
+        </div>
+        <div class="answer">
+          <p>A. Yes.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question-container">
+          <h2>Q. How to use KwickerHub?</h2>
+          <div class="toggle-btn">
+            <p>+</p>
+          </div>
+        </div>
+        <div class="answer">
+          <p>A. Follow the steps to use KwickerHub efficiently : </p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="question-container">
+          <h2>Q. How can I add tags?</h2>
+          <div class="toggle-btn">
+            <p>+</p>
+          </div>
+        </div>
+        <div class="answer">
+          <p>A. Follow the steps to add tags :</p>
+        </div>
+      </div>
+    </div>
+    
+
+   
+    
+  </body>
+</html>
+
+<script>
+  const questionContainers = document.querySelectorAll('.question-container');
+const answers = document.querySelectorAll('.answer');
+let activeAnswer = answers[0];
+
+// Adds the visible class to the first answer and rotate class to the first toggle button
+questionContainers[0].querySelector('.toggle-btn p').classList.add('rotate');
+activeAnswer.classList.add('visible');
+
+questionContainers.forEach((container, index) => {
+  container.addEventListener('click', () => {
+    const answer = answers[index];
+    const toggleBtn = container.querySelector('.toggle-btn p');
+
+    if (activeAnswer !== null && activeAnswer !== answer) {
+      const activeToggleBtn = activeAnswer.previousElementSibling.querySelector('.toggle-btn p');
+      activeToggleBtn.classList.remove('rotate');
+      activeAnswer.classList.remove('visible');
+    }
+
+    toggleBtn.classList.toggle('rotate');
+
+    if (answer.classList.contains('visible')) {
+      answer.classList.remove('visible');
+      activeAnswer = null;
+    } else {
+      answers.forEach(a => {
+        a.classList.remove('visible');
+      });
+      answer.classList.add('visible');
+      activeAnswer = answer;
+    }
+  });
+});
+
+</script>
+
+
+
+
+
+
+<section class="content">
+  <h3 class="content__heading">Ask a question</h1>
+  <form class="content__form contact-form">
+    <div class="testing">
+      <p>Does this do anything?</p>
+    </div>
+    <div class="contact-form__input-group">
+      <label class="contact-form__label" for="name">Name*</label>
+      <input class="contact-form__input contact-form__input--text" id="name" name="name" type="text"/>
+    </div>
+    <div class="contact-form__input-group">
+      <label class="contact-form__label" for="email">Email Address*</label>
+      <input class="contact-form__input contact-form__input--email" id="email" name="email" type="email"/>
+    </div>
+  
+    <div class="contact-form__input-group">
+      <label class="contact-form__label" for="message">Enter a question</label>
+      <textarea class="contact-form__input contact-form__input--textarea" id="message" name="message" rows="6" cols="65"></textarea>
+    </div>
+   
+    <input name="authentication" type="hidden" value="Token 1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/>
+    <div>
+    <input name:"query" type="hidden" id="demo" value="query:{}"/>
+    </div>
+    
+    <button class="contact-form__button" type="submit">Submit</button>
+  </form>
+</section>
+<!-- <div class="results">
+  <h2 class="results__heading">Form Data</h2>
+  <pre class="results__display-wrapper"><code class="results__display"></code></pre>
+</div> -->
+
+<script>
+
+const isValidElement = element => {
+  return element.name && element.value;
+};
+
+
+const getSelectValues = options =>
+  [].reduce.call(
+    options,
+    (values, option) => {
+      return option.selected ? values.concat(option.value) : values;
+    },
+    []
+  );
+
+ */
+const formToJSON_deconstructed = elements => {
+  // This is the function that is called on each element of the array.
+  const reducerFunction = (data, element) => {
+    // Add the current field to the object.
+    data[element.name] = element.value;
+
+    // For the demo only: show each step in the reducer’s progress.
+    console.log(JSON.stringify(data));
+
+    return data;
+  };
+
+  // This is used as the initial value of `data` in `reducerFunction()`.
+  const reducerInitialValue = {};
+
+  // To help visualize what happens, log the inital value, which we know is `{}`.
+  console.log("Initial `data` value:", JSON.stringify(reducerInitialValue));
+
+  // Now we reduce by `call`-ing `Array.prototype.reduce()` on `elements`.
+  const formData = [].reduce.call(
+    elements,
+    reducerFunction,
+    reducerInitialValue
+  );
+
+  // The result is then returned for use elsewhere.
+  return formData;
+};
+
+/**
+ * Retrieves input data from a form and returns it as a JSON object.
+ * @param  {HTMLFormControlsCollection} elements  the form elements
+ * @return {Object}                               form data as an object literal
+ */
+const formToJSON = elements =>
+  [].reduce.call(
+    elements,
+    (data, element) => {
+      // Make sure the element has the required properties and should be added.
+      if (isValidElement(element) && isValidValue(element)) {
+        /*
+     * Some fields allow for more than one value, so we need to check if this
+     * is one of those fields and, if so, store the values as an array.
+     */
+        if (isCheckbox(element)) {
+          data[element.name] = (data[element.name] || []).concat(element.value);
+        } else if (isMultiSelect(element)) {
+          data[element.name] = getSelectValues(element);
+        } else {
+          data[element.name] = element.value;
+        }
+      }
+
+      return data;
+    },
+    {}
+  );
+
+/**
+ * A handler function to prevent default submission and run our custom script.
+ * @param  {Event} event  the submit event triggered by the user
+ * @return {void}
+ */
+const handleFormSubmit = event => {
+  // Stop the form from submitting since we’re handling that with AJAX.
+  event.preventDefault();
+
+  // Call our function to get the form data.
+  const data = formToJSON(form.elements);
+
+  // Demo only: print the form data onscreen as a formatted JSON object.
+  const dataContainer = document.getElementsByClassName("results__display")[0];
+
+  // Use `JSON.stringify()` to make the output valid, human-readable JSON.
+  dataContainer.textContent = JSON.stringify(data, null, "  ");
+
+  // ...this is where we’d actually do something with the form data...
+};
+
+/*
+ * This is where things actually get started. We find the form element using
+ * its class name, then attach the `handleFormSubmit()` function to the 
+ * `submit` event.
+ */
+var form = document.getElementsByClassName("contact-form")[0];
+if (form){
+	form.addEventListener("submit", handleFormSubmit, false);
+}
+
+/* adding more background info to grab from user */
+function myFunction() {
+	var z = document.getElementById("query").value;
+  var x = navigator.userAgent;
+	var y = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var obj = {"browser_timezone" : String(y),"user_agent" : String(x),"query": String(z)};
+    var myJSON = JSON.stringify(obj);
+    document.getElementById("demo").innerHTML = myJSON;
+}
+if(window.attachEvent) {
+    window.attachEvent('onload', myFunction);
+} else {
+    if(window.onload) {
+        var curronload = window.onload;
+        var newonload = function(evt) {
+            curronload(evt);
+            myFunction(evt);
+        };
+        window.onload = newonload;
+    } else {
+        window.onload = myFunction;
+    }
+}
+</script>
