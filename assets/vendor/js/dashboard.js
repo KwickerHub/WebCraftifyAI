@@ -617,6 +617,13 @@ function addText(text2add) {
     para.appendChild(node);*/
 }
 
+// When a user presses "delete" on the key board,
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Delete") {
+    removeSelected();
+  }
+});
+
 function removeSelected() {
   var r = confirm("You are about to remove the selected element");
   if (r == true) {
@@ -1741,6 +1748,9 @@ function takeThemTo(whereTo){
     window.open(url, "_blank");
   }else if (whereTo === "profile"){
     url = "profilepage.html";
+    window.open(url, "_blank");
+  }else if (whereTo === "dashboard"){
+    url = "dashboard.html";
     window.open(url, "_blank");
   }
 }

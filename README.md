@@ -3,7 +3,7 @@
 This is a repository for the front-end of the Software Aids project. 👋 The Aim of this project is to make it extremely easy for people around the world to create and build web pages/content.
 
 ## Setup 🎯
-To avoid the stress, If you know; That your intensions are purely to use this software and not neccessarily to contribute, Visit https://kwickerhub.com and begin using the software. It is safe, simple and less stressful.
+To avoid the stress, If you know; That your intensions are purely to use this software and not neccessarily to contribute, Visit http://kwickerhub.com and begin using the software. It is safe, simple and less stressful.
 
 But if you intend to contribute, you have to follow the steps below. 
 Firstly, clone this repo using:
