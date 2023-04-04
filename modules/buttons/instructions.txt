@@ -1,0 +1,1 @@
+Add only buttons to this folder. Only html styled buttons should be added here. Remember to name the buttons properly

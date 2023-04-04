@@ -660,8 +660,9 @@ function change2codeMode() {
   para.setAttribute("id", "the_textarea_4_view");
   para.innerHTML = body;
   //alert(para);
-  bodyElem.innerHTML = null;
-  bodyElem.append(para);
+  // bodyElem.innerHTML = null;
+  // bodyElem.append(para);
+  bodyElem.innerHTML = para;
   /* }else{
         alert("already in code view mode");
     } */
@@ -1197,9 +1198,7 @@ function saveDevArena(alertOff) {
       // 	save_file(project_name, cvalue, project_description);
       // }
     } else {
-      alert(
-        "could not find project name. However, You can save this project now."
-      );
+      //alert("could not find project name. However, You can save this project now.");
       var save_ = confirm("Would you like to save this project");
       if (save_ == true) {
         var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
