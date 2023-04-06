@@ -1741,7 +1741,7 @@ function loadSettingsCookies(closePop_up){
 
 function takeThemTo(whereTo){
   if(whereTo === "render"){
-    url = "view_render.php";
+    url = "ui_dashboard.php";
     window.open(url, "_blank");
   }else if (whereTo === "ui_dashboard"){
     url = "ui_dashboard.html";
