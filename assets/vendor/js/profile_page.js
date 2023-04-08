@@ -20,19 +20,21 @@ function saveBio() {
 }
 
 window.onload = function () {
-  console.log("hii");
+
   // var bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>";
   // var x = document.getElementById("def_block");
   // x.innerHTML = bio;
   var y = document.getElementById("textarea");
   y.innerHTML = bio;
-  $.post("../../backend/profile_page.php", {
+  $.get("../../backend/profile_page.php", {
     
   },
   function(data, status){
+    dataJson = JSON.parse(data);
+    if(dataJson["status"] == "True"){
             alert(data);
             console.log(data);
-            dataJson = JSON.parse(data);
+            
             var name=dataJson["name"];
             var z=document.getElementById("nameid");
             z.innerHTML=name;
@@ -66,6 +68,7 @@ window.onload = function () {
             var achievements=dataJson["achievements"];
             var j=document.getElementById("achievements");
             j.innerHTML=achievements;
+    }
 
             
 

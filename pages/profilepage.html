@@ -10,30 +10,17 @@
     <link rel='shortcut icon' type='image/x-icon' href='assets/img/brand_kwickerhub/g83.png' />
     <!-- fontawesome cdn -->
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <script type="text/javascript" src="../assets/vendor/js/jQuery_online_3_4_1.js"></script> 
 
     <!-- slider -->
     <link
     rel="stylesheet"
     href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <script type="text/javascript" defer src="../assets/vendor/js/profile_page.js"></script>
     <title>Profile-Page</title>
 </head>
-<script>
-function profile(){
-$.post("../../backend/profile.php", {
-				id:$_SESSION['userid'],
-				email: $_SESSION['email'],
-				key: "gjhtiidsimi09403jfjkdknf"
-			},
-			function(data, status){
-                alert(data);
-				
-			});}
-
-</script>
 <body>
     <div id="profile-page" class="container">
         <div class="content">
@@ -51,7 +38,8 @@ $.post("../../backend/profile.php", {
                     </div>
                     <p class="section-content" id="nameid"></p>
                     <p class="user-title" id="designation">UI Designer</p>
-                    <p class="user-description" id="intro"><i class="fa fa-quote-left quote quote-left" aria-hidden="true"></i><i class="fa fa-quote-right quote quote-right" aria-hidden="true"></i></p>
+                    <p> <i> <span id="intro"> </span> </i></p>
+                    <!--<p class="user-description" id="intro"><i class="fa fa-quote-left quote quote-left" aria-hidden="true"></i><i class="fa fa-quote-right quote quote-right" aria-hidden="true"></i></p>-->
                 </div>
                 <div class="user-extras">
                     <p>Age:  <span class="user-extras-title" id="age"></span> </p>
