@@ -1,1 +1,7 @@
-Similar to Carousel but creates focus on 1 image/media-file. Waiting for the user to slider over for the next display.
+Similar to Carousel but creates focus on one image/media-file. Waiting for the user to slider over for the next display.
+
+
+
+In adding a Module, You need to create the html file containing the module and drop it in the relative folder.
+
+You do not need to add the default <!DOCTYPE>, <html>, <head>, <body> etc. You can just go straight to the point by starting with your <div>, adding your <style>, and perhaps a <script> tag. 

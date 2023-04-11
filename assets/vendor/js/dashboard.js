@@ -4,6 +4,7 @@ global background = $("back_color");*/
 
 var selectedId = "the_dev_dashboard";
 var selectedElement;
+var view_mode = 0; // 0 is web_mode, 1 is code_mode
 window.onload = function(){
   console.log("running the setup function.");
 	setup();
@@ -54,7 +55,7 @@ window.onload = function(){
 //window.addEventListener("load", function(event){loadSaveContent();}, false);
 //window.addEventListener("load", function(event){setup();}, false);
 //window.addEventListener("load", function(event){load_Adder_maker('element');}, false);
-window.addEventListener("load", function(event){loadSaveContent();}, false);
+//window.addEventListener("load", function(event){loadSaveContent();}, false);
 // function setup() {
 //   main("the_dev_dashboard");
 //   loadSaveContent();
@@ -640,29 +641,37 @@ function change2codeMode() {
   var body = bodyElem.innerHTML;
   //alert(body);
   //var textArea = document.getElementById("the_textarea_4_view");
-  //if ( typeof(textArea) != 'undefined' && textArea != null ){
-  var para = document.createElement("textarea");
-  height = "100%";
-  width = "100%";
-  background = colorCodeGenetor(6);
-  color = colorCodeGenetor(6);
+  if ( view_mode == 1 ){
+    alert("You are already in code mode");
+  }else{
+    var para = document.createElement("textarea");
+    height = "100%";
+    width = "100%";
+    background = colorCodeGenetor(6);
+    color = colorCodeGenetor(6);
 
-  defaultStyle =
-    "height: " +
-    height +
-    "; width: " +
-    width +
-    "; background-color: " +
-    background +
-    "; ";
+    defaultStyle =
+      "height: " +
+      height +
+      "; width: " +
+      width +
+      "; background-color: " +
+      background +
+      "; ";
 
-  para.setAttribute("style", defaultStyle);
-  para.setAttribute("id", "the_textarea_4_view");
-  para.innerHTML = body;
-  //alert(para);
-  // bodyElem.innerHTML = null;
-  // bodyElem.append(para);
-  bodyElem.innerHTML = para;
+    para.setAttribute("style", defaultStyle);
+    para.setAttribute("id", "the_textarea_4_view");
+    para.innerHTML = body;
+    //alert(para);
+    bodyElem.innerHTML = null;
+    bodyElem.append(para);
+    view_mode = 1;
+  }
+    
+    //bodyElem.append = para;
+  
+
+  
   /* }else{
         alert("already in code view mode");
     } */
@@ -672,13 +681,18 @@ function change2webMode() {
   var bodyElem = document.getElementById("the_dev_dashboard");
   var body = bodyElem.innerHTML;
   var textArea = document.getElementById("the_textarea_4_view");
-  if (typeof textArea != "undefined" && textArea != null) {
-    var para = document.getElementById("the_textarea_4_view").value;
-    //alert(para);
-    bodyElem.innerHTML = para;
-  } else {
+  if ( view_mode == 0 ){
     alert("You are already in Web mode");
+  }else{
+    if (typeof textArea != "undefined" && textArea != null) {
+      var para = document.getElementById("the_textarea_4_view").value;
+      bodyElem.innerHTML = para;
+    } else {
+      console.log("Mode Error: In trying to change from code to web mode");
+    }
+    view_mode = 0;
   }
+  
 }
 
 // copied from W3 school... Thank you W3 schools

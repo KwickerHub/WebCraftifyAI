@@ -1,5 +1,4 @@
-Anything that contains some media files and is arranged in a vertical order should be put here...
-
+A vertically aranged display of media files(videos, images etc)
 
 In adding a Module, You need to create the html file containing the module and drop it in the relative folder.
 
