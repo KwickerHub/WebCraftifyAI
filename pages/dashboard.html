@@ -156,11 +156,84 @@
 			<div class="the_selected_displayer">
 				<h3 class="sider_header" id="The_left_header_side"> Style </h3>
 				<datalist id="size">
+					<option value="inherit">inherit</option>
+					<option value="initial">initial</option>
 					<option value="100px"></option>
 					<option value="100%"></option>
 					<option value="100em"></option>
 					<option value="100vh"></option>
 				</datalist>
+
+				<datalist id="style_position_data_list">
+					<option value="static">static</option>
+					<option value="relative">relative</option>
+					<option value="absolute">absolute</option>
+					<option value="fixed">fixed</option>
+					<option value="sticky">sticky</option>
+					<optgroup label="Global values">
+						<option value="inherit">inherit</option>
+						<option value="initial">initial</option>
+						<option value="revert">revert</option>
+						<option value="revert-layer">revert-layer</option>
+						<option value="unset">unset</option>
+					</optgroup>
+				</datalist>
+
+				<datalist id="style_display_data_list">
+					<optgroup label="Precomposed Values">
+						<option value="block">block</option>
+						<option value="inline">inline</option>
+						<option value="inline-block">inline-block</option>
+						<option value="flex">flex</option>
+						<option value="inline-flex">inline-flex</option>
+						<option value="grid">grid</option>
+						<option value="inline-grid">inline-grid</option>
+						<option value="flow-root">flow-root</option>
+					</optgroup>
+					<optgroup label="Box Generation">
+						<option value="none">none</option>
+						<option value="contents">contents</option>
+					</optgroup>
+					<optgroup label="Two-value Syntax">
+						<option value="block flow">block flow</option>
+						<option value="inline flow">inline flow</option>
+						<option value="inline flow-root">inline flow-root</option>
+						<option value="block flex">block flex</option>
+						<option value="inline flex">inline flex</option>
+						<option value="block grid">block grid</option>
+						<option value="inline grid">inline grid</option>
+						<option value="block flow-root">block flow-root</option>
+					</optgroup>
+					<optgroup label="Other Values">
+						<option value="table">table</option>
+						<option value="table-row">table-row</option>
+						<option value="list-item">list-item</option>
+					</optgroup>
+					<optgroup label="Global values">
+						<option value="inherit">inherit</option>
+						<option value="initial">initial</option>
+						<option value="revert">revert</option>
+						<option value="revert-layer">revert-layer</option>
+						<option value="unset">unset</option>
+					</optgroup>
+				</datalist>
+
+				<datalist id="style_float_data_list">
+					<option value="left">left</option>
+					<option value="right">right</option>
+					<option value="none">none</option>
+					<option value="inline-start">inline-start</option>
+					<option value="inline-end">inline-end</option>
+					<optgroup label="Global values">
+						<option value="inherit">inherit</option>
+						<option value="initial">initial</option>
+						<option value="revert">revert</option>
+						<option value="revert-layer">revert-layer</option>
+						<option value="unset">unset</option>
+					</optgroup>
+				</datalist>
+
+				
 
 
 				<div class="full_left_aside_section">
@@ -187,44 +260,7 @@
 							<label>Display</label>
 							<input onkeyup="style_changed('display')" id="style_display" class="the_input_side"
 								type="text" name="style_display_value" list="style_display_data_list">
-							<datalist id="style_display_data_list">
-								<optgroup label="Precomposed Values">
-									<option value="block">block</option>
-									<option value="inline">inline</option>
-									<option value="inline-block">inline-block</option>
-									<option value="flex">flex</option>
-									<option value="inline-flex">inline-flex</option>
-									<option value="grid">grid</option>
-									<option value="inline-grid">inline-grid</option>
-									<option value="flow-root">flow-root</option>
-								</optgroup>
-								<optgroup label="Box Generation">
-									<option value="none">none</option>
-									<option value="contents">contents</option>
-								</optgroup>
-								<optgroup label="Two-value Syntax">
-									<option value="block flow">block flow</option>
-									<option value="inline flow">inline flow</option>
-									<option value="inline flow-root">inline flow-root</option>
-									<option value="block flex">block flex</option>
-									<option value="inline flex">inline flex</option>
-									<option value="block grid">block grid</option>
-									<option value="inline grid">inline grid</option>
-									<option value="block flow-root">block flow-root</option>
-								</optgroup>
-								<optgroup label="Other Values">
-									<option value="table">table</option>
-									<option value="table-row">table-row</option>
-									<option value="list-item">list-item</option>
-								</optgroup>
-								<optgroup label="Global values">
-									<option value="inherit">inherit</option>
-									<option value="initial">initial</option>
-									<option value="revert">revert</option>
-									<option value="revert-layer">revert-layer</option>
-									<option value="unset">unset</option>
-								</optgroup>
-							</datalist>
+							
 						</li>
 
 						<li class="each_item">
@@ -233,20 +269,7 @@
 							<label>Position</label>
 							<input onkeyup="style_changed('position')" id="style_position" class="the_input_side"
 								type="text" name="style_position_value" list="style_position_data_list">
-							<datalist id="style_position_data_list">
-								<option value="static">static</option>
-								<option value="relative">relative</option>
-								<option value="absolute">absolute</option>
-								<option value="fixed">fixed</option>
-								<option value="sticky">sticky</option>
-								<optgroup label="Global values">
-									<option value="inherit">inherit</option>
-									<option value="initial">initial</option>
-									<option value="revert">revert</option>
-									<option value="revert-layer">revert-layer</option>
-									<option value="unset">unset</option>
-								</optgroup>
-							</datalist>
+							
 						</li>
 
 						<li class="each_item">
@@ -254,15 +277,24 @@
 								class="the_check_side" checked value="yes" type="checkbox"
 								name="_background-color_state">
 							<label>Background Color</label>
+							<input onchange="style_changed('background-color')" id="style_background-color"
+								class="the_input_side" type="color" name="style_background-color_value">
+						</li>
+
+						<!-- <li class="each_item">
+							<input onchange="style_changed('background-color')" id="style_background-color_status"
+								class="the_check_side" checked value="yes" type="checkbox"
+								name="_background-color_state">
+							<label>Background Color</label>
 							<input onkeyup="style_changed('background-color')" id="style_background-color"
 								class="the_input_side" type="text" name="style_background-color_value">
-						</li>
+						</li> -->
 
 						<li class="each_item">
 							<input onchange="style_changed('color')" id="style_color_status" class="the_check_side"
 								checked value="yes" type="checkbox" name="_color_state">
 							<label>Color</label>
-							<input onkeyup="style_changed('color')" id="style_color" class="the_input_side" type="text"
+							<input onkeyup="style_changed('color')" id="style_color" class="the_input_side" type="color"
 								name="style_color_value">
 						</li>
 
@@ -336,20 +368,7 @@
 							<input onchange="style_changed('float')" id="style_float_status" class="the_check_side"	type="checkbox" checked value="yes" name="_float_state">
 							<label>Float</label>
 							<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text" name="style_float_value" list="style_float_data_list">
-							<datalist id="style_float_data_list">
-								<option value="left">left</option>
-								<option value="right">right</option>
-								<option value="none">none</option>
-								<option value="inline-start">inline-start</option>
-								<option value="inline-end">inline-end</option>
-								<optgroup label="Global values">
-									<option value="inherit">inherit</option>
-									<option value="initial">initial</option>
-									<option value="revert">revert</option>
-									<option value="revert-layer">revert-layer</option>
-									<option value="unset">unset</option>
-								</optgroup>
-							</datalist>
+							
 						</li>
 
 						<li class="each_item">

@@ -154,6 +154,11 @@ html {
     height:auto;
 }
 
+.the_selected_displayer .each_item .the_input_side{
+  width: 180px;
+
+}
+
 .the_bottom_bar .the_bottom_elems {
   border-radius: 12px;
   border: 2px solid #432424;
