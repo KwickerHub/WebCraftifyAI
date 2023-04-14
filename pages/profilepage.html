@@ -10,12 +10,14 @@
     <link rel='shortcut icon' type='image/x-icon' href='assets/img/brand_kwickerhub/g83.png' />
     <!-- fontawesome cdn -->
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <script type="text/javascript" src="../assets/vendor/js/jQuery_online_3_4_1.js"></script> 
 
     <!-- slider -->
     <link
     rel="stylesheet"
     href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+
     <script type="text/javascript" defer src="../assets/vendor/js/profile_page.js"></script>
     <title>Profile-Page</title>
 </head>
@@ -34,15 +36,16 @@
                         <img src="../assets/img/anonymous_image.png" alt="Anonymous Profile Pic" class="profile-pic">
 
                     </div>
-                    <p class="username">Jill Anderson</p>
-                    <p class="user-title">UI Designer</p>
-                    <p class="user-description"><i class="fa fa-quote-left quote quote-left" aria-hidden="true"></i>Spend my days designing beautiful websites and applications with a focus on User Experience. Execute on the full spectrum, from ideation to mock-ups to coding to user testing. Live by the words: you can't use up creativity.<i class="fa fa-quote-right quote quote-right" aria-hidden="true"></i></p>
+                    <p class="section-content" id="nameid"></p>
+                    <p class="user-title" id="designation">UI Designer</p>
+                    <p> <i> <span id="intro"> </span> </i></p>
+                    <!--<p class="user-description" id="intro"><i class="fa fa-quote-left quote quote-left" aria-hidden="true"></i><i class="fa fa-quote-right quote quote-right" aria-hidden="true"></i></p>-->
                 </div>
                 <div class="user-extras">
-                    <p><span class="user-extras-title">Age:</span> 26</p>
-                    <p><span class="user-extras-title">Location:</span> Brooklyn</p>
-                    <p><span class="user-extras-title">Status:</span> Silver Member</p>
-                    <p>Joined July, 2021</p>
+                    <p>Age:  <span class="user-extras-title" id="age"></span> </p>
+                    <p>Location:  <span class="user-extras-title" id="location"></span> </p>
+                    <p>Status:  <span class="user-extras-title" id="status"></span> </p>
+                    <p>Joined date:  <span class="user-extras-title" id="date"></span> </p>
                     <ul class="user-skills">
                         <li class="tag">Figma</li>
                         <li class="tag">Sketch</li>
@@ -55,7 +58,8 @@
                 </div>
             </div>
             <div class="section bio">
-                <p class="section-header" style="display: inherit;">Bio&nbsp;&nbsp;<button class="edit-icon edit_button" id="edit-btn" onclick="editBio()"><i class='fas fa-edit'></i></button></p>
+                <p class="section-header"  style="display: inherit;">Bio&nbsp;&nbsp;<button class="edit-icon edit_button" id="edit-btn" onclick="editBio()"><i class='fas fa-edit'></i></button></p>
+                <p class="section-header" id="bio" style="display: inherit;">Bio&nbsp;&nbsp;<button class="edit-icon edit_button" id="edit-btn" onclick="editBio()"><i class='fas fa-edit'></i></button></p>
                 <p class="section-content" id="def_block" style="display: block"></p>
                 <div id="text_id" class="edit-section" style="display: none">
                         <textarea cols="50" rows="5" name="text" id="textarea"></textarea>
@@ -65,22 +69,19 @@
             <div class="section projects">
                 <p class="section-header">Projects</p>
                 <ul>
-                    <li>Project 1</li>
-                    <li>Project 2</li>
+                    <li id="project1">Project 1</li>
                 </ul>
             </div>
             <div class="section goals">
-                <p class="section-header">Contributions</p>
+                <p class="section-header">Skills</p>
                 <ul>
-                    <li>Contribution 1</li>
-                    <li>Contribution 2</li>
+                    <li id="skills">Contribution 1</li>
                 </ul>
             </div>
             <div class="section Achivements">
-                <p class="section-header">Achievements</p>
+                <p class="section-header" >Achievements</p>
                 <ul>
-                    <li>Award 1</li>
-                    <li>Award 2</li>
+                    <li id="achievements">Award 1</li>
                 </ul>
             </div>
             <div class="section">
