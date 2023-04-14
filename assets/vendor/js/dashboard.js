@@ -135,47 +135,35 @@ function setup(){
   // Same/in the likeness of the function load_Adder_maker('element'); -- Start
   // -- End
   // Same/in the likeness of the function  loadAllRightSides(ev); -- Start
-  ev = "Attributes";
-  if (typeof ev == "string") {
-    tag = ev;
-  } else {
-    selected_Id = ev.target.id;
-    selected_Element = document.getElementById(selected_Id);
-    tag = selected_Element.value;
-  }
+  // var ev_riglt = "Attributes";
+  // if (typeof ev_riglt == "string") {
+  //   var tag_right = ev_riglt;
+  // } 
+  //else {
+  //   selected_Id = ev.target.id;
+  //   selected_Element = document.getElementById(selected_Id);
+  //   tag = selected_Element.value;
+  // }
   //alert(tag);
+  /* var ev_riglt = "Attributes";
   display_by = document.getElementById("arrangement_type").value;
-  url = "../../backend/style/get_style.php?echo=raw";
-  if (tag == "Style") {
-    url = "../../backend/style/get_style.php?echo=raw&display_by=" + display_by;
-  } else if (tag == "Assitance/Modules") {
-    url = "../../backend/assistance/get_assistance.php?echo=raw&display_by=" +
-      display_by;
-  } else if (tag == "Attributes") {
-    url = "../../backend/attribute/get_attribute.php?echo=raw&display_by=" +
-      display_by;
-  } else if (tag == "Colors") {
-    url = "../../backend/colors/get_color.php?echo=raw&display_by=" + display_by;
-  } else if (tag == "File") {
-    url = "../../backend/file/get_file.php?echo=raw&display_by=" + display_by;
-  }
-  //alert(url);
+  var url_ed = "../../backend/style/get_attribute.php?echo=raw";
   $.post(
-    url,
+    url_ed,
     {
       key: "gjhtiidsimi09403jfjkdknf",
     },
-    function (data, status) {
+    function (value_ed, status) {
       if (status) {
-        $(".full_right_aside_section").html(data);
-        $("#The_right_header_side").text(tag);
+        $(".full_right_aside_section").html(value_ed);
+        $("#The_right_header_side").text(ev_riglt);
       } else {
         console.log(
           "failed to load while using the direct Backend to HTML render."
         );
       }
     }
-  );
+  ); */
   // -- End
 
   // Same/in the likeness of the function  loadAllLeftSides(ev); -- Start
@@ -469,7 +457,7 @@ function elem_drop(ev) {
   add_element_2_dashboard(tag);
 }
 
-function getElementStyleDetails(elem_id) {
+/* function getElementStyleDetails(elem_id) {
   elem = document.getElementById(elem_id);
   if (!elem) return []; // Element does not exist, empty list.
   var win = document.defaultView || window,
@@ -508,6 +496,57 @@ function getElementStyleDetails(elem_id) {
       }
     }
   }
+} */
+
+function getElementStyleDetails(elem_id){
+  elem = document.getElementById(elem_id);
+    if (!elem) return []; // Element does not exist, empty list.
+    var win = document.defaultView || window, style, styleNode = [];
+  if (win.getComputedStyle) { // Modern browsers 
+        style = win.getComputedStyle(elem, '');
+        for (var i=0; i<style.length; i++) {
+            propertyDis = "style_" + style[i].toString();
+            property = document.getElementById(propertyDis);
+            if ( property ){
+        if (style[i].includes("color")) {
+          //console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+          property.value = rgbToHex(style.getPropertyValue(style[i]));
+        }else{
+          property.value = style.getPropertyValue(style[i]);
+        }
+            }
+        }
+    } else if (elem.currentStyle) { // IE 
+        style = elem.currentStyle;
+        for (var name in style) {
+          propertyDis = "style_" + name;
+            property = document.getElementById(propertyDis);
+            if ( !property ){
+              //property.value = style[name];
+        if (style[name].includes("color")) {
+          //console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+          property.value = rgbToHex(style.getPropertyValue(style[name]));
+        }else{
+          property.value = style.getPropertyValue(style[name]);
+        }
+            }
+        }
+    } else { // Ancient browser..
+        style = elem.style;
+        for (var i=0; i<style.length; i++) {
+            propertyDis = "style_" + style[i].toString();
+            property = document.getElementById(propertyDis);
+            if ( !property ){
+              //property.value = style[style[i]];
+              if (style[style[i]].includes("color")) {
+                //console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+                property.value = rgbToHex(style.getPropertyValue(style[style[i]]));
+              }else{
+                property.value = style.getPropertyValue(style[style[i]]);
+              }
+            }
+        }
+    }
 }
 
 function getElementAttrDetails(elem_id) {
@@ -1461,6 +1500,21 @@ function make_colorsBox_go() {
     }
   }
 }
+
+// using below functions to convert from different color modes/standards
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(rgbColor) {
+  individual_code = rgbColor.replace(/[rgb() ]/g, "");
+  individual_code = individual_code.split(",");
+  r = parseInt(individual_code[0].trim()), g = parseInt(individual_code[1].trim()); b = parseInt(individual_code[2].trim());
+  //console.log(individual_code + g);
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
 
 function duplicate_element(elem, ref) {
   var secElem = elem ? elem : document.getElementById(selectedId);

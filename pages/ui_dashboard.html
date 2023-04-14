@@ -434,7 +434,13 @@
 	        	propertyDis = "style_" + name;
 	            property = document.getElementById(propertyDis);
 	            if ( !property ){
-	            	property.value = style[name];
+	            	//property.value = style[name];
+					if (style[name].includes("color")) {
+						//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+						property.value = rgbToHex(style.getPropertyValue(style[name]));
+					}else{
+						property.value = style.getPropertyValue(style[name]);
+					}
 	            }
 	        }
 	    } else { // Ancient browser..
@@ -443,9 +449,13 @@
 	            propertyDis = "style_" + style[i].toString();
 	            property = document.getElementById(propertyDis);
 	            if ( !property ){
-	            	//alert(propertyDis);
-	            	property.value = style[style[i]];
-	            	//style[style[i]];
+	            	//property.value = style[style[i]];
+					if (style[style[i]].includes("color")) {
+						//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+						property.value = rgbToHex(style.getPropertyValue(style[style[i]]));
+					}else{
+						property.value = style.getPropertyValue(style[style[i]]);
+					}
 	            }
 	        }
 	    }
@@ -1467,9 +1477,43 @@
 			topBar.style.display = "inline-block"
 		}
 	}
-	
-	
-	</script>
+
+/* 	
+// declare a global array with a capacity of 20
+let dev_state = new Array(20);
+
+// declare an index to keep track of the front of the queue
+let front = 0;
+
+// declare a function to add new elements to the array
+function dev_state_changed(state) {
+  // add the new element to the back of the queue
+  dev_state[(front + dev_state.length) % dev_state.length] = state;
+  // move the front of the queue forward
+  front = (front + 1) % dev_state.length;
+}
+
+// example usage
+dev_state_changed('ready');
+dev_state_changed('running');
+dev_state_changed('stopped');
+
+console.log(dev_state); // logs ['ready', 'running', 'stopped', undefined, undefined, ..., undefined]
+
+//Another Way of solving thesame problem
+// declare global array dev_state with maximum length of 20
+let dev_state = new Array(20);
+
+// function to add state to dev_state array
+function dev_state_changed(state) {
+  // remove the first element if array is full
+  if (dev_state.length === 20) {
+    dev_state.shift();
+  }
+  // add state to the end of the array
+  dev_state.push(state);
+} */
+</script>
 
 <style>
 	.bottom_bar_end{
@@ -1591,6 +1635,7 @@
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 500;
 }
 
 /* Links inside the dropdown */
@@ -1939,7 +1984,7 @@
 					class="the_check_side" checked value="yes" type="checkbox"
 					name="_background-color_state">
 				<label>Background Color</label>
-				<input onkeyup="style_changed('background-color')" id="style_background-color"
+				<input onchange="style_changed('background-color')" id="style_background-color"
 					class="the_input_side" type="color" name="style_background-color_value">
 			</li>
 
@@ -1947,7 +1992,7 @@
 				<input onchange="style_changed('color')" id="style_color_status" class="the_check_side"
 					checked value="yes" type="checkbox" name="_color_state">
 				<label>Color</label>
-				<input onkeyup="style_changed('color')" id="style_color" class="the_input_side" type="color"
+				<input onchange="style_changed('color')" id="style_color" class="the_input_side" type="color"
 					name="style_color_value">
 			</li>
 

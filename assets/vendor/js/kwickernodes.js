@@ -111,8 +111,12 @@ let init = (ccc) => {
            };
            
            `;
-
-      over(style, ch, { x, y, cx, cy, height, width, ofx, ofy }, pa);
+           
+      // Trying the avoid the extool from covering the text mode...
+      if(ch.id != "the_textarea_4_view"){
+        over(style, ch, { x, y, cx, cy, height, width, ofx, ofy }, pa);
+      }
+      
     };
 
     if (selected.selectedtag && !selected.selectedparent) {
