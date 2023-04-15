@@ -1,0 +1,14 @@
+.danger-button{
+    background-color:red;
+    padding:10px;
+    border-width: 0;
+    border-radius:5px;
+    color:#ffffff;
+    font-weight:500;
+    font-size:30px;
+}
+
+.radiation-logo{
+    height:30px;
+    width:30px;
+}
