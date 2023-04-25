@@ -1,0 +1,70 @@
+<div>
+    <style>
+      .create-profile-button{        
+        padding:0px;
+        height:40px;
+        width: 200px;
+        border-width: 0;
+        border-radius:3px;
+        color:#ffffff;
+        font-size:15px;
+        font-weight: 100;
+        display: flex;
+        align-items: end;
+        overflow: hidden;
+      }
+      .create-profile{
+        background-color:#FF971C;
+        height: inherit;
+        width: inherit;
+        display: inherit;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+      }
+      .create-profile-text{
+        padding-top: 2px;
+        padding-left: 5px;
+      }
+      .create-profile-icon{
+        background-color: rgb(255, 255, 255);
+        height: 40px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid white;
+        position: relative;
+        left: -1px;
+
+      }
+      .underline-g{
+        position: absolute;
+        z-index: 10;
+        height: 3px;
+        width: inherit;
+        background-color: rgba(0, 0, 0, 0.196);
+        border-end-end-radius: 3px;
+        border-end-start-radius: 3px;
+      }
+    </style>
+    <div>
+        <button class="create-profile-button">
+            <div class="create-profile-icon">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 7.063C16.5 10.258 14.57 13 12 13c-2.572 0-4.5-2.742-4.5-5.938C7.5 3.868 9.16 2 12 2s4.5 1.867 4.5 5.063zM4.102 20.142C4.487 20.6 6.145 22 12 22c5.855 0 7.512-1.4 7.898-1.857a.416.416 0 0 0 .09-.317C19.9 18.944 19.106 15 12 15s-7.9 3.944-7.989 4.826a.416.416 0 0 0 .091.317z" 
+                    fill="#FF971C"/></svg>           
+            </div>
+            <div class="create-profile">
+            <div class="arrow-right"></div>
+                <span class="create-profile-text">CREATE PROFILE</span>
+            </div>
+            <div class="underline-g"></div>            
+        </button>
+    </div>
+</div>
