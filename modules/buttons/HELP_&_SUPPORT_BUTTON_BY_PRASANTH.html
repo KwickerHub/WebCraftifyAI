@@ -1,0 +1,71 @@
+<div>
+    <style>
+      .help-button{        
+        padding:0px;
+        height:40px;
+        width: 200px;
+        border-width: 0;
+        border-radius:3px;
+        color:#ffffff;
+        font-size:15px;
+        font-weight: 100;
+        display: flex;
+        align-items: end;
+        overflow: hidden;
+      }
+      .help{
+        background-color:#8AB334;
+        height: inherit;
+        width: inherit;
+        display: inherit;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+      }
+      .help-text{
+        padding-top: 2px;
+        padding-left: 5px;
+      }
+      .help-icon{
+        background-color: rgb(255, 255, 255);
+        height: 40px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid white;
+        position: relative;
+        left: -1px;
+
+      }
+      .underline-g{
+        position: absolute;
+        z-index: 10;
+        height: 3px;
+        width: inherit;
+        background-color: rgba(0, 0, 0, 0.196);
+        border-end-end-radius: 3px;
+        border-end-start-radius: 3px;
+      }
+    </style>
+    <div>
+        <button class="help-button">
+            <div class="help-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#8AB334" width="25px" height="25px" viewBox="0 0 24 24">
+                    <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                </svg>         
+            </div>
+            <div class="help">
+            <div class="arrow-right"></div>
+                <span class="help-text">HELP & SUPPORT</span>
+            </div>
+            <div class="underline-g"></div>            
+        </button>
+    </div>
+</div>
