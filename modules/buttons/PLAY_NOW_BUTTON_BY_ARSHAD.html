@@ -1,0 +1,81 @@
+<div>
+  <style>
+    .button {
+      background-color: rgb(255, 255, 255);
+      width: 250px;
+      height: 50px;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 1px 1px 2px 1px grey;
+    }
+
+    .inner-left {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-left p {
+      color: rgb(54, 116, 168);
+      position: absolute;
+      left: 30%;
+      margin: 0;
+      font-size: 1rem;
+      font-family: sans-serif;
+    }
+
+    .circle-up {
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      width: 50%;
+      height: 50%;
+      top: 0;
+      left: 0;
+      border-radius: 0 0 20px 0;
+    }
+
+    .circle-down {
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      width: 50%;
+      height: 50%;
+      bottom: 0;
+      left: 0;
+      border-radius: 0 20px 0 0;
+    }
+
+    .inner-right {
+      position: absolute;
+      background-color: rgb(54, 116, 168);
+      width: 40%;
+      height: 100%;
+      right: 0;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .play {
+      position: absolute;
+      left: 70%;
+      top: 30%;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-left: 15px solid #ffffff;
+      border-bottom: 10px solid transparent;
+    }
+  </style>
+
+  <div class="button">
+    <div class="inner-left">
+      <p><strong>PLAY NOW</strong></p>
+    </div>
+    <div class="inner-right">
+      <div class="circle-up"></div>
+      <div class="play"></div>
+      <div class="circle-down"></div>
+    </div>
+  </div>
+</div>

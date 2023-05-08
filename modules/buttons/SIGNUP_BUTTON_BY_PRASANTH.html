@@ -1,0 +1,77 @@
+<div>
+    <style>
+      .sign-up-button{        
+        padding:0px;
+        height:40px;
+        width: 175px;
+        border-width: 0;
+        border-radius:3px;
+        color:#ffffff;
+        font-size:15px;
+        font-weight: 100;
+        display: flex;
+        align-items: end;
+        overflow: hidden;
+      }
+      .sign-up{
+        background-color:#F8003C;
+        height: inherit;
+        width: inherit;
+        display: inherit;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+      }
+      .sign-up-text{
+        padding-top: 2px;
+        padding-left: 5px;
+      }
+      .sign-up-icon{
+        background-color: rgb(255, 255, 255);
+        height: 40px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid white;
+        position: relative;
+        left: -1px;
+
+      }
+      .underline-g{
+        position: absolute;
+        z-index: 10;
+        height: 3px;
+        width: inherit;
+        background-color: rgba(0, 0, 0, 0.196);
+        border-end-end-radius: 3px;
+        border-end-start-radius: 3px;
+      }
+    </style>
+    <div>
+        <button class="sign-up-button">
+            <div class="sign-up-icon">
+                <svg fill="#F8003C" width="20px" height="20px" viewBox="0 0 32.00 32.00" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.064"/>
+                    
+                    <g id="SVGRepo_iconCarrier"> <title>pencil</title> <path d="M0 32l12-4 20-20-8-8-20 20zM4 28l2.016-5.984 4 4zM8 20l12-12 4 4-12 12z"/> </g>
+                    
+                </svg>         
+            </div>
+            <div class="sign-up">
+            <div class="arrow-right"></div>
+                <span class="sign-up-text">SIGN UP NOW</span>
+            </div>
+            <div class="underline-g"></div>            
+        </button>
+    </div>
+</div>
