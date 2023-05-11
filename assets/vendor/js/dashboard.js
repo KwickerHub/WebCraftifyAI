@@ -15,8 +15,11 @@ var the_limit_4_undo = 50 // 50 undo or redo states. this is the maximum number 
 let dev_state_collections = new Array(the_limit_4_undo); // The array containing a collection of various development.
 var undo_redo_state = 0;
 var front_present = 0;
-var the_state_saver_ender ;
+var the_state_saver_ender ; // relative to timer that listens to changes
+var the_state_saver; // the variable that houses different cahnges on the main dashboard.
 var previous_state_of_project;
+
+
 
 window.onscroll = function(){
   if(selectedElement != null || selectedElement != "undefined" ){
@@ -26,20 +29,28 @@ window.onscroll = function(){
   }
 }
 
-window.onclose = function(){
+/* window.onclose = function(){
   if(typeof the_state_saver_ender != "undefined" || typeof the_state_saver_ender != null){
     the_state_saver_ender = window.clearInterval(the_state_saver);
   }
-}
+} */
+
+/* window.setInterval(function(){
+  console.log("hello gear");
+}, 500); */
 
 window.onload = function(){
   main_dash_env = document.getElementById(d_main_d_);
   the_entire_page = document.querySelector("body");
 
-  //var the_state_saver = window.setInterval(observe_the_state(), 1000);
+  window.setInterval(function(){
+    observe_the_state();
+  }, 30000);
+
+  //the_state_saver = window.setInterval(, 2000);
 
   //making an observer object and observing all the content in the dev dashboard.
-  var observer = new MutationObserver(function(mutations){
+  /* var observer = new MutationObserver(function(mutations){
     observe_the_state();
   });
 
@@ -47,7 +58,7 @@ window.onload = function(){
     attributes: true,
     childList: true,
     characterData: true,
-  });
+  }); */
 
   console.log("running the setup function.");
 	setup();
@@ -113,12 +124,7 @@ window.onload = function(){
       scale_drag_state_timer = window.setInterval(increase_size(event, "se"), 1000);
       console.log("Now we can make the increase");
       //scale_drag_state = 0; // we then have to return the scale drag state to zero.
-    }/* else{
-      if(scale_drag_state_timer){
-        scale_drag_state = 0;
-        window.clearInterval(scale_drag_state_timer);
-      }
-    } */
+    }
   }, false); 
 
   the_box_braggable.addEventListener('mouseup', function(event){
@@ -406,33 +412,44 @@ function dev_state_changed(state) {
   dev_state_collections[(front_present + dev_state_collections.length) % dev_state_collections.length] = state;
   // move the front of the queue forward
   front_present = (front_present + 1) % dev_state_collections.length;
+  undo_redo_state = front_present;
 }
 
 function redo(){
+  //kill the timer first or the observer before adding from here and then set it back.
+  remove_pop_();
   if(main_dash_env != null || main_dash_env != "undefined" ){
-    if( front_present > 0){
+    if( front_present > 0 && front_present <= undo_redo_state){
       front_present = front_present + 1;
-      observer.unobserve(main_dash_env);
+      //observer.unobserve(main_dash_env);
+      /* if(dev_state_collections[front_present] == "undefined"){
+
+      }else{
+
+      } */
       var current_dev_content = dev_state_collections[front_present];
       main_dash_env.innerHTML = current_dev_content;
+      console.log("trying to redo it");
+      console.log(front_present);
     }
   }
 }
 
 function undo(){
+  remove_pop_();
   if(main_dash_env != null || main_dash_env != "undefined" ){
     //fit_box_with_selected_size(selectedElement);
     //undo_redo_state = front_present
     
-    if( front_present > 0){
+    if( front_present > 0 && front_present <= undo_redo_state){
       front_present = front_present - 1;
-      observer.unobserve(main_dash_env);
+      //observer.unobserve(main_dash_env);
       var current_dev_content = dev_state_collections[front_present];
       main_dash_env.innerHTML = current_dev_content;
     }
     //dev_state_changed(current_dev_content);
     //console.log(dev_state_collections);
-    console.log("trying to recover some details...");
+    console.log("trying to undo details...");
     console.log(front_present);
 
   }
@@ -447,8 +464,23 @@ function observe_the_state(){
         console.log(dev_state_collections);
         previous_state_of_project = current_dev_content;
       }
+      console.log(front_present);
+      console.log("the notice me of states");
     }
     //main_dash_env = document.getElementById(d_main_d_);
+}
+
+function remove_pop_(){
+  /* if( typeof scale_drag_state_timer != "undefined" || scale_drag_state == 1 ){
+      scale_drag_state = 0;
+      scale_drag_state_timer = window.clearInterval(scale_drag_state_timer);
+      console.log("scale deactivated");
+    } */
+
+    if(scale_drag_state == 0){
+      var the_size_draggers = document.getElementById("the_mighty_scale_fitter");
+      the_size_draggers.style.display = "none";
+    }
 }
 
 function add_element_2_dashboard (tag_name) {
@@ -531,8 +563,12 @@ function add_element_2_dashboard (tag_name) {
 function selectCreated(id, type) {
   selectedId = id;
   selectedElement = document.getElementById(id);
-  $("#the_selected_elem_left").text(type + " - #" + id + " : Selected");
-  $("#the_selected_elem_right").text(type + " - #" + id + " : Selected");
+  if( typeof selectedElement != "undefined" ){
+    fit_box_with_selected_size(selectedElement);
+    $("#the_selected_elem_left").text(type + " - #" + id + " : Selected");
+    $("#the_selected_elem_right").text(type + " - #" + id + " : Selected");
+  }
+  
 }
 
 function generate_strings_id(length) {
