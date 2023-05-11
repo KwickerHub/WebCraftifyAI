@@ -3,11 +3,157 @@ global width = $("attr_width");
 global background = $("back_color");*/
 
 var selectedId = "the_dev_dashboard";
+// the main_dash would be the main reference to the main dashboard. as it is const
+let d_main_d_ = "the_dev_dashboard";
+let main_dash_env; 
 var selectedElement;
 var view_mode = 0; // 0 is web_mode, 1 is code_mode
+var scale_drag_state = 0; // This helps in telling us weather to drag the project or not.
+var scale_drag_state_timer; // the timer to monitor the drag/mouse movement
+var save_state = true; // This helps in telling us wether to fire the save project function
+var the_limit_4_undo = 50 // 50 undo or redo states. this is the maximum number of records.
+let dev_state_collections = new Array(the_limit_4_undo); // The array containing a collection of various development.
+var undo_redo_state = 0;
+var front_present = 0;
+var the_state_saver_ender ; // relative to timer that listens to changes
+var the_state_saver; // the variable that houses different cahnges on the main dashboard.
+var previous_state_of_project;
+
+
+
+window.onscroll = function(){
+  if(selectedElement != null || selectedElement != "undefined" ){
+    fit_box_with_selected_size(selectedElement);
+    //TODO::
+    //when the scroll bar is used the offset and top, left positions becomes wrong
+  }
+}
+
+/* window.onclose = function(){
+  if(typeof the_state_saver_ender != "undefined" || typeof the_state_saver_ender != null){
+    the_state_saver_ender = window.clearInterval(the_state_saver);
+  }
+} */
+
+/* window.setInterval(function(){
+  console.log("hello gear");
+}, 500); */
+
 window.onload = function(){
+  main_dash_env = document.getElementById(d_main_d_);
+  the_entire_page = document.querySelector("body");
+
+  window.setInterval(function(){
+    observe_the_state();
+  }, 30000);
+
+  //the_state_saver = window.setInterval(, 2000);
+
+  //making an observer object and observing all the content in the dev dashboard.
+  /* var observer = new MutationObserver(function(mutations){
+    observe_the_state();
+  });
+
+  observer.observe(main_dash_env, {
+    attributes: true,
+    childList: true,
+    characterData: true,
+  }); */
+
   console.log("running the setup function.");
 	setup();
+
+  // handling the increase in size/scaling when dot is dragged on screen...
+  var the_box_braggable = document.getElementById("the_mighty_scale_fitter");
+  let se_d_dot_ = "_se_directional";
+  let se_dot = document.getElementById(se_d_dot_); 
+  se_dot.addEventListener('mousedown', function(event){
+    //console.log(event.clientX);
+    event.preventDefault();
+    if (event.target.id == se_d_dot_) {
+      scale_drag_state = 1;
+      console.log("scale activated");
+    }
+  }, false); 
+
+  se_dot.addEventListener('mouseup', function(event){
+    //console.log(event.clientX);
+    event.preventDefault();
+    scale_drag_state = 0;
+    console.log("scale deactivated");
+  }, false); 
+
+  main_dash_env.addEventListener('mouseup', function(event){
+    //console.log(event.clientX);
+    event.preventDefault();
+    if( typeof scale_drag_state_timer != "undefined" || scale_drag_state == 1 ){
+      scale_drag_state = 0;
+      scale_drag_state_timer = window.clearInterval(scale_drag_state_timer);
+      console.log("scale deactivated");
+    }
+    
+  }, false); 
+
+  main_dash_env.addEventListener('mousemove', function(event){
+    //console.log(event.clientX);
+    event.preventDefault();
+    if(scale_drag_state == 1) {
+    //if(scale_drag_state == 1 && event.target.id == d_main_d_) {
+      scale_drag_state_timer = window.setInterval(increase_size(event, "se"), 1000);
+      console.log("Now we can make the increase");
+      //scale_drag_state = 0; // we then have to return the scale drag state to zero.
+    }/* else{
+      if(scale_drag_state_timer){
+        scale_drag_state = 0;
+        window.clearInterval(scale_drag_state_timer);
+      }
+    } */
+  }, false); 
+
+  main_dash_env.addEventListener('scroll', function(event){
+    //event.preventDefault();
+    fit_box_with_selected_size(selectedElement);
+    
+  }, false); 
+
+  the_box_braggable.addEventListener('mousemove', function(event){
+    //console.log(event.clientX);
+    event.preventDefault();
+    if(scale_drag_state == 1) {
+    //if(scale_drag_state == 1 && event.target.id == d_main_d_) {
+      scale_drag_state_timer = window.setInterval(increase_size(event, "se"), 1000);
+      console.log("Now we can make the increase");
+      //scale_drag_state = 0; // we then have to return the scale drag state to zero.
+    }
+  }, false); 
+
+  the_box_braggable.addEventListener('mouseup', function(event){
+    //console.log(event.clientX);
+    event.preventDefault();
+    if( typeof scale_drag_state_timer != "undefined" || scale_drag_state == 1 ){
+      scale_drag_state = 0;
+      scale_drag_state_timer = window.clearInterval(scale_drag_state_timer);
+      console.log("scale deactivated");
+    }
+  }, false); 
+
+
+  the_box_braggable.addEventListener('click', function(event){
+    //console.log(event.clientX);
+    /* event.preventDefault();
+    if( typeof scale_drag_state_timer != "undefined" || scale_drag_state == 1 ){
+      scale_drag_state = 0;
+      scale_drag_state_timer = window.clearInterval(scale_drag_state_timer);
+      console.log("scale deactivated");
+      
+    } */
+    if(scale_drag_state == 0){
+      var the_size_draggers = document.getElementById("the_mighty_scale_fitter");
+      the_size_draggers.style.display = "none";
+    }
+    
+  }, false); 
+
 	//alert(document.readyState);
   //saveSettingsCookies();
   //loadSettingsCookies();
@@ -249,7 +395,94 @@ function main(id) {
 }
 
 //global selectedElement = '#the_dev_dashboard';
-var save_state = true;
+
+// function to add state to dev_state array
+/* function dev_state_changed(state) {
+  // remove the first element if array is full
+  if (dev_state_collections.length === the_limit_4_undo) {
+    dev_state_collections.shift();
+  }
+  // add state to the end of the array
+  dev_state_collections.push(state);
+} */
+
+// declare a function to add new elements to the array
+function dev_state_changed(state) {
+  // add the new element to the back of the queue
+  dev_state_collections[(front_present + dev_state_collections.length) % dev_state_collections.length] = state;
+  // move the front of the queue forward
+  front_present = (front_present + 1) % dev_state_collections.length;
+  undo_redo_state = front_present;
+}
+
+function redo(){
+  //kill the timer first or the observer before adding from here and then set it back.
+  remove_pop_();
+  if(main_dash_env != null || main_dash_env != "undefined" ){
+    if( front_present > 0 && front_present <= undo_redo_state){
+      front_present = front_present + 1;
+      //observer.unobserve(main_dash_env);
+      /* if(dev_state_collections[front_present] == "undefined"){
+
+      }else{
+
+      } */
+      var current_dev_content = dev_state_collections[front_present];
+      main_dash_env.innerHTML = current_dev_content;
+      console.log("trying to redo it");
+      console.log(front_present);
+    }
+  }
+}
+
+function undo(){
+  remove_pop_();
+  if(main_dash_env != null || main_dash_env != "undefined" ){
+    //fit_box_with_selected_size(selectedElement);
+    //undo_redo_state = front_present
+    
+    if( front_present > 0 && front_present <= undo_redo_state){
+      front_present = front_present - 1;
+      //observer.unobserve(main_dash_env);
+      var current_dev_content = dev_state_collections[front_present];
+      main_dash_env.innerHTML = current_dev_content;
+    }
+    //dev_state_changed(current_dev_content);
+    //console.log(dev_state_collections);
+    console.log("trying to undo details...");
+    console.log(front_present);
+
+  }
+}
+
+function observe_the_state(){
+    if(main_dash_env != null || main_dash_env != "undefined" ){
+      //fit_box_with_selected_size(selectedElement);
+      var current_dev_content = main_dash_env.innerHTML;
+      if ( current_dev_content != previous_state_of_project){
+        dev_state_changed(current_dev_content);
+        console.log(dev_state_collections);
+        previous_state_of_project = current_dev_content;
+      }
+      console.log(front_present);
+      console.log("the notice me of states");
+    }
+    //main_dash_env = document.getElementById(d_main_d_);
+}
+
+function remove_pop_(){
+  /* if( typeof scale_drag_state_timer != "undefined" || scale_drag_state == 1 ){
+      scale_drag_state = 0;
+      scale_drag_state_timer = window.clearInterval(scale_drag_state_timer);
+      console.log("scale deactivated");
+    } */
+
+    if(scale_drag_state == 0){
+      var the_size_draggers = document.getElementById("the_mighty_scale_fitter");
+      the_size_draggers.style.display = "none";
+    }
+}
+
 function add_element_2_dashboard (tag_name) {
     //specs.element.setAttribute(attribute, value);
     var newElem = document.createElement(tag_name);
@@ -258,8 +491,8 @@ function add_element_2_dashboard (tag_name) {
     //width = ($("#style_width").val() != "") ? $("#style_width").val() : "120px";
     //background = ($("#style_background-color").val() != "") ? $("#back_color").val() : "#fed342";
 
-    height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value
-    width =  + document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value ;
+    height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value;
+    width = document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value ;
     background = colorCodeGenetor(6);
     if (document.getElementById("settings_background").checked) {
         defaultStyle = 'height: '+ height + '; width: '+ width + '; background-color: ' + background + '; ';
@@ -272,50 +505,55 @@ function add_element_2_dashboard (tag_name) {
     newElem.setAttribute("style", defaultStyle);
     newElem.setAttribute("id", elemId);
     newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
+    newElem.setAttribute("onclick", "select_precise(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
 
     //var ref = document.querySelector('#the_dev_dashboard');
     selectedElement = document.getElementById(selectedId);
     var ref = selectedElement;
-    home_msg = ref.textContent;
-    //alert("flow o");
-    //alert(home_msg.indexOf("This is the main dashboard arena"));
-    if ( home_msg.indexOf("This is the main dashboard arena") > -1 ) {
-        //ref.innerHTML = document.createElement(tag_name).toString();
-        //var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
-        /*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
-      
-        // This is the innerHTML of the development dashboard
-      ref.innerHTML = ""; 
-var your_comment = `
-<!--- <head>
-<title> #Particular Project Name</title>
-<script>
-    //Plugin Start
-    //##
-    //Plugin End 
-</script>
-</head>  --->
-`;
- ref.innerHTML= your_comment;  
-        proper_fitting = "\n" + "\t";
-        //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
-        ref.append(proper_fitting);
+    if(ref != null){
 
-        ref.appendChild(newElem, ref);
-        getElementStyleDetails(elemId);
-        getElementAttrDetails(elemId);
-        selectCreated(elemId, tag_name);
-    
-    }else{
-        proper_fitting = "\n" + "\t";
-        ref.append(proper_fitting);
+      home_msg = ref.textContent;
+      //alert("flow o");
+      //alert(home_msg.indexOf("This is the main dashboard arena"));
+      if ( home_msg.indexOf("This is the main dashboard arena") > -1 ) {
+          //ref.innerHTML = document.createElement(tag_name).toString();
+          //var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
+          /*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
         
-        //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
-        ref.appendChild(newElem, ref);
-        getElementStyleDetails(elemId);
-        getElementAttrDetails(elemId);
-        selectCreated(elemId, tag_name);
+          // This is the innerHTML of the development dashboard
+        ref.innerHTML = ""; 
+  var your_comment = `
+  <!--- <head>
+  <title> #Particular Project Name</title>
+  <script>
+      //Plugin Start
+      //##
+      //Plugin End 
+  </script>
+  </head>  --->
+  `;
+  ref.innerHTML= your_comment;  
+          proper_fitting = "\n" + "\t";
+          //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+          ref.append(proper_fitting);
+
+          ref.appendChild(newElem, ref);
+          getElementStyleDetails(elemId);
+          getElementAttrDetails(elemId);
+          selectCreated(elemId, tag_name);
+      
+      }else{
+          proper_fitting = "\n" + "\t";
+          ref.append(proper_fitting);
+          
+          //alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+          ref.appendChild(newElem, ref);
+          getElementStyleDetails(elemId);
+          getElementAttrDetails(elemId);
+          selectCreated(elemId, tag_name);
+      }
     }
+    
     if(save_state){
       saveDevArena(true);
     }
@@ -325,8 +563,12 @@ var your_comment = `
 function selectCreated(id, type) {
   selectedId = id;
   selectedElement = document.getElementById(id);
-  $("#the_selected_elem_left").text(type + " - #" + id + " : Selected");
-  $("#the_selected_elem_right").text(type + " - #" + id + " : Selected");
+  if( typeof selectedElement != "undefined" ){
+    fit_box_with_selected_size(selectedElement);
+    $("#the_selected_elem_left").text(type + " - #" + id + " : Selected");
+    $("#the_selected_elem_right").text(type + " - #" + id + " : Selected");
+  }
+  
 }
 
 function generate_strings_id(length) {
@@ -391,11 +633,120 @@ function change_selected(e, type, id) {
   if (e.target.id == id) {
     selectedId = id;
     selectedElement = document.getElementById(id);
-    $("#the_selected_elem_left").text(type + " - #" + id + " : Selected");
-    $("#the_selected_elem_right").text(type + " - #" + id + " : Selected");
+    document.getElementById("the_selected_elem_left").innerHTML = type + " - #" + id + " : Selected";
+    document.getElementById("the_selected_elem_right").innerHTML = type + " - #" + id + " : Selected";
+    //$("#the_selected_elem_left").text(type + " - #" + id + " : Selected");
+    //$("#the_selected_elem_right").text(type + " - #" + id + " : Selected");
     getElementStyleDetails(selectedId);
     getElementAttrDetails(selectedId);
   }
+}
+
+function select_precise(e, type, id){
+  if (e.target.id == id) {
+      selectedId = id;
+
+      elem_id = selectedId;
+      
+      if(id != "" || document.getElementById(id) ){
+        selectedElement = document.getElementById(id);
+        document.getElementById("the_selected_elem_left").innerHTML = type + " - #" + id + " : Selected";
+        document.getElementById("the_selected_elem_right").innerHTML = type + " - #" + id + " : Selected";
+        getElementStyleDetails(selectedId);
+        getElementAttrDetails(selectedId);
+        fit_box_with_selected_size(selectedElement);
+      }
+
+  }
+}
+
+function fit_box_with_selected_size(selectedElement){
+    //the addition part of displaying the box for shape decrease or increase.
+    //var d_body = document.querySelector('body');
+    var the_size_draggers = document.getElementById("the_mighty_scale_fitter");
+    //the_size_draggers.style.display = "block";
+    //the_size_draggers.setAttribute("class", "maindiv");
+    //console.log("fit master fixing up: running...");
+
+    d_height = selectedElement.style.height;
+    d_width = selectedElement.style.width;
+    //d_left = selectedElement.offsetLeft;
+    //d_offsetTop = selectedElement.offsetTop;
+
+    d_left = selectedElement.offsetLeft;
+    d_offsetTop = selectedElement.offsetTop - main_dash_env.scrollTop;
+
+    //console.log("the offset: "+ selectedElement.offsetTop + "main elem: "+ selectedElement.scrollTop);
+    //console.log("the scroll length: "+ main_dash_env.scrollTop);
+
+    default_styler = 'width : ' + d_width  + ';' + 'height : ' + d_height + ';' + 'left : ' + d_left + 'px; ' + 'top : ' + d_offsetTop + 'px; display: block';
+
+    the_size_draggers.setAttribute("style", default_styler);
+}
+
+  // I would be making the functionality for the dots. the size-changer dots...
+  
+  
+  //se_dot.ondrag 
+  /* main_dash.addEventListener('dragover', function(e){
+        e.preventDefault();
+        console.log("needed type");
+        var w_se = e.clientX - selectedElement.offsetLeft;
+        var h_se = e.clientY - selectedElement.offsetTop;
+        //document.getElementById("the_dev_dashboard")
+        // document.body.addEventListener('mousemove', function(event){
+        //   console.log(event.clientX);
+        // }, false);
+        console.log(e.clientX);
+        console.log(selectedElement.offsetLeft);
+        //pointer_elemY = ev.clientY;
+        //console
+        selectedElement.style.height = h_se + "px";
+        selectedElement.style.width = w_se + "px";
+      }, false);
+  se_dot.addEventListener('dragstart', function(event){
+        //console.log(event.clientX);
+        event.preventDefault();
+        console.log("needed type");
+        var w_se = event.clientX - selectedElement.offsetLeft;
+        var h_se = event.clientY - selectedElement.offsetTop;
+        //document.getElementById("the_dev_dashboard")
+        // document.body.addEventListener('mousemove', function(event){
+        //   console.log(event.clientX);
+        // }, false);
+        console.log(event.clientX);
+        console.log(selectedElement.offsetLeft);
+        //pointer_elemY = ev.clientY;
+        //console
+        selectedElement.style.height = h_se + "px";
+        selectedElement.style.width = w_se + "px";
+      }, true); */
+
+
+
+
+function increase_size(ev, type){
+  //selectCreated.
+  
+  //ev.preventDefault();
+  //selectedElement = document.getElementById(id);
+  //elem = ev.target;  console.log("enter increaser size");
+  //event_ = window.Event
+  if(type == "se"){
+    //console.log("needed type"); //main_dash_env.scrollTop
+    var w_se = ev.clientX - selectedElement.offsetLeft + main_dash_env.scrollTop;
+    var h_se = ev.clientY - selectedElement.offsetTop+ main_dash_env.scrollTop;
+    //console.log(ev.clientX);
+    //console.log(selectedElement.offsetLeft);
+    selectedElement.style.height = h_se + "px";
+    selectedElement.style.width = w_se + "px";
+
+    fit_box_with_selected_size(selectedElement);
+
+    getElementAttrDetails(elem_id);
+    getElementStyleDetails(elem_id);
+  }
+  //selectedElement.style.height = 400 + "px";
 }
 
 function attr_changed(attribute) {
@@ -448,6 +799,7 @@ function elem_drag(ev, tag) {
   //alert(e.target.id);
   //ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.setData("content", tag);
+  ev.dataTransfer
 }
 
 function elem_drop(ev) {
@@ -1385,7 +1737,7 @@ function the_add_colors(id, angle, color, type) {
         ", " +
         color +
         "); \
-        }"
+        }", "#"+d_main_d_
     );
   } else {
     var repeat_struture = document.getElementById("the_chief_master_repeat");
@@ -1427,7 +1779,7 @@ function the_add_colors(id, angle, color, type) {
         color +
         "); \
         }"
-    );
+    , "#"+d_main_d_);
   }
 }
 

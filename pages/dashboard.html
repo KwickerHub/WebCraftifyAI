@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="../assets/css/dashboard.css">
 	<!-- Bootstrap CSS -->
 <!-- <script defer src="../assets/vendor/js/kwikertools.js"></script> -->
-<script defer src="../assets/vendor/js/kwickernodes.js"></script>
-	
+<!-- <script defer src="../assets/vendor/js/kwickernodes.js"></script>
+	 -->
 	
 	<!-- <script src="https://gist.github.com/MaverickDe/5ac35ec358ace5cf0d5ae92d18e9da70" type="text/javascript"></script> -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -53,6 +53,8 @@
 				<span onclick="duplicate_children()"><i class="fa fa-plus"></i>Duplicate</span>
 				<span onclick="bringText()"><i class="fa fa-font"></i>Text</span>
 				<span onclick="removeSelected()"><i class="fa fa-trash"></i>Remove</span>
+				<span onclick="undo()"><i class="fa fa-undo"></i>Undo</span>
+				<span onclick="redo()"><i class="fa fa-redo"></i>Redo</span>
 				<!-- <span><i class="fa fa-plus"></i>Add Element</span> -->
 			</div>
 		</div>
@@ -540,14 +542,14 @@
 			<b>This is the main dashboard arena. Drag html tag here and add more attributes and styles to them</b>
 		</div> -->
 
-
+	<!-- This is the main dashboard area where all the magic is done... LOL. -->
 	<div ondragover="elem_allowDrop(event)" ondrop="elem_drop(event)" class="the_dev_body" id="the_dev_dashboard" ondblclick="change_selected(event, 'div', 'the_dev_dashboard')">
 		<b>This is the main dashboard arena. Drag html tag here and add more attributes and styles to them</b>
 	</div>
 
 
 
-
+	<!-- This is the bottom dashboard of the dashboard page -->
 	<div class="the_bottom_bar">
 		<span ondragstart="elem_drag(event, 'div')" draggable="true" class="the_bottom_elems_block"
 			onclick="add_element_2_dashboard('div')">div</span>
@@ -718,6 +720,58 @@
 		</div>
 	</div>
 
+
+	<!-- POP UP: This the scale pop up that shows the selected element. It also takes the shape of the selected element. -->
+	<div class="maindiv" id="the_mighty_scale_fitter">
+		<div ondragstart="increase_size(ev, 'nw')" class="lefttop dot"></div>
+        <div ondragstart="increase_size(ev, 'sw')"  class="leftbottom dot"></div>
+        <div ondragstart="increase_size(ev, 'ne')"  class="righttop dot" data="c3"></div>
+        <div ondragstart="increase_size(ev, 'se')" draggable="true" id="_se_directional"  class="rightbottom dot"></div>
+        <style>
+  
+        .maindiv {
+          /* background: blue; */
+          display: none;
+          position: absolute;
+          /* opacity: 0; */
+        }
+        
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            background: #ff0000;
+            position: absolute;
+        }
+        
+        .lefttop {
+            cursor: nw-resize;
+            top: 0;
+            left: 0;
+        }
+        
+        .leftbottom {
+            bottom: 0;
+            left: 0;
+            cursor: sw-resize;
+        }
+        
+        .righttop {
+          right: 0px; 
+          cursor: ne-resize; 
+          top: 0px;
+          
+        }
+        
+        .rightbottom {
+            right: 0;
+            bottom: 0;
+            cursor: se-resize;
+			background-color: #000;
+        }
+        
+        </style>
+	</div>
 </body>
 
 </html>

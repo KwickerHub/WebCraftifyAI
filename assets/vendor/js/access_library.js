@@ -1067,7 +1067,7 @@ var $ = function(selector, category){
 		return specs;
 	}
 
-	specs.style = function (css_code){
+	specs.style = function (css_code, insertion_Area='head'){
 
 		//check if style already exist...
 		//alert(specs.selector);
@@ -1076,7 +1076,7 @@ var $ = function(selector, category){
 		if (styler_area == null || styler_area == "" || styler_area == undefined){
 			var style = document.createElement('style');
 			style.innerHTML = css_code;
-			var ref = document.querySelector('head');
+			var ref = document.querySelector(insertion_Area);
 			ref.appendChild(style, ref);
 			return specs;
 		}else{
