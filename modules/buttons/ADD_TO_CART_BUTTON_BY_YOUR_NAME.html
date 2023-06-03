@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_div {
+            background-color: #181616dc;
+            padding: 12px;
+            width: 25%;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            align-items: center;
+            border-radius: 40px;
+            max-height: 100px;
+        }
+
+        .left_div,
+        .right_div {
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 100px solid #00aaff;
+            position: relative;
+            border-radius: 40px;
+        }
+
+        .left_div::after,
+        .right_div::after {
+            content: "";
+            position: absolute;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 40px solid #fff;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .right_div {
+            transform: rotate(180deg);
+        }
+
+        .middle_div {
+            flex: 1;
+            z-index: 1000;
+            font-weight: 600;
+        }
+
+        .right_div>img {
+            width: 45px;
+            height: 45px;
+            z-index: 2000;
+            margin-left: -85px;
+            color: #fcfcfc;
+            font-weight: 600;
+            margin-top: -21px;
+            transform: rotate(180deg);
+        }
+
+
+        .cart-icon {
+            fill: #000;
+            width: 24px;
+            height: 24px;
+            z-index: 2000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <div class="btn">
+            <div class="left_div">
+
+            </div>
+            <div class="middle_div">
+                ADD TO CART
+            </div>
+            <div class="right_div">
+                <img src="../buttons/images_and_icons/shopping_cart_icon.png" alt="cart.png" />
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
