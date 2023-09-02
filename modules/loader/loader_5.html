@@ -1,0 +1,58 @@
+<svg width="200" height="200" viewBox="0 0 100 100" data-value="50">
+  <circle r="35" cx="50" cy="50" />
+  <path
+    class="meter"
+    d="M5,50a45,45 0 1,0 90,0a45,45 0 1,0 -90,0"
+    stroke-dashoffset="282.78302001953125"
+    stroke-dasharray="282.78302001953125"
+  />
+  <text
+    x="50"
+    y="50"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-size="20"
+    font-family="Arial, Helvetica, sans-serif"
+  ></text>
+</svg>
+
+<style>
+  svg {
+    display: inline-flex;
+    vertical-align: bottom;
+    width: 200px;
+    height: 200px;
+  }
+
+  circle {
+    fill: #656565;
+  }
+
+  .meter {
+    stroke-width: 8px;
+    stroke: #0071e6;
+    fill: none;
+    transition: stroke-dashoffset 1s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+    transform-origin: center center;
+    transform: rotate(-90deg) scaleX(-1);
+  }
+
+  text {
+    fill: #ffffff;
+  }
+</style>
+
+<script>
+  const meters = document.querySelectorAll("svg[data-value] .meter");
+
+  meters.forEach((path) => {
+    let length = path.getTotalLength();
+
+    let value = parseInt(path.parentNode.getAttribute("data-value"));
+    let to = length * ((100 - value) / 100);
+
+    path.getBoundingClientRect();
+    path.style.strokeDashoffset = Math.max(0, to);
+    path.nextElementSibling.textContent = `${value}%`;
+  });
+</script>
