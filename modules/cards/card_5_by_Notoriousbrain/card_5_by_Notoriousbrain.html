@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>  
+    <div class="center-div">
+      <div class="card">
+        <div class="left-side">
+          <div class="toggle-div">
+            <div class="toggle-btn" onclick="toggleCheckbox(1)">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1" class="circle"></label>
+            </div>
+            <div class="toggle-btn" onclick="toggleCheckbox(2)">
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2" class="circle"></label>
+            </div>
+          </div>
+
+          <div class="check-div">
+            <input type="checkbox" class="check-btn" />
+            <input type="checkbox" class="check-btn" />
+          </div>
+
+          <div class="radio-div">
+            <input type="radio" class="radio-btn"  name="radio-group" />
+            <input type="radio" class="radio-btn"  name="radio-group" />
+          </div>
+
+          <div class="button-btn">
+            <button class="btn-1">Button</button>
+            <button class="btn-2">Button</button>
+          </div>
+        </div>
+        <div class="middle-side">
+            <div class="clock-container">
+                <div id="clock-border">
+                 <div id="hour"></div>
+                 <div id="minute"></div>
+                 <div id="second"></div>
+                 <div id="dot-circle"></div>
+
+               </div>
+            </div>
+            <div class="design">
+                <img src="../images_and_icons/paint.svg" alt="paint" class="paint">
+                <p class="design-text">Neumorphic Design</p>
+                <img src="../images_and_icons/close.svg" alt="close" class="close">
+            </div>
+            <div class="media">
+                <img src="../images_and_icons/play.svg" alt="play" class="play" onclick="togglePlayPause()">
+                <img src="../images_and_icons/pause.svg" alt="pause" class="pause" onclick="togglePlayPause()">
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="tab-div">
+                <div id="tab-1" class="font-color" onclick="selectTab('tab-1')">Tab 1</div>
+                <div id="tab-2" class="font-color" onclick="selectTab('tab-2')">Tab 2</div>
+                <div id="tab-3" class="font-color" onclick="selectTab('tab-3')">Tab 3</div>
+            </div>
+
+            <div class="search-div">
+                <img src="../images_and_icons/search.svg" alt="search" class="search-icon">
+                <input type="text" placeholder="Search..." class="search-text">
+            </div>
+
+            <div class="type-div">
+                <input type="text" placeholder="Type anything..." class="search-text">
+            </div>
+
+            <div class="icons-div">
+               <div class="icons-style" onclick="swapIcon(this)">  
+                <img src="../images_and_icons/home.svg" alt="home" class="icons">
+                <img src="../images_and_icons/alt-home.svg" alt="home" class="icons" style="display: none;">
+               </div>
+               <div class="icons-style" onclick="swapIcon(this)">
+                <img src="../images_and_icons/user.svg" alt="user" class="icons">
+                <img src="../images_and_icons/alt-user.svg" alt="user" class="icons" style="display: none;">
+               </div>
+               <div class="icons-style" onclick="swapIcon(this)">
+                <img src="../images_and_icons/setting.svg" alt="setting" class="icons">
+                <img src="../images_and_icons/alt-setting.svg" alt="setting" class="icons" style="display: none;">
+               </div>
+            </div>
+            <div class="slider-div">
+             <div class="slider">
+               <input type="range" name="slid" id="slide">
+               </div>
+             </div>
+             </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
