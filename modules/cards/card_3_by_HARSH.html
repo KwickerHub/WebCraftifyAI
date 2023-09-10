@@ -1,0 +1,79 @@
+<style>
+
+    .card{
+        width: 350px;
+        height: 550px;
+        background: #304683;
+        border-radius: 20px;
+        transition: 0.5s;
+        box-shadow: 1px 1px 10px #000;
+        overflow: hidden;
+    
+    }
+    
+    .image{
+        height: 550px;
+        width: 350px;
+    
+    }
+    .image .profile-img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .intro{
+        box-sizing: border-box;
+        height: 180px;
+        width: 350px;
+        background-color: #0be73b;
+        position: absolute;
+        bottom: 100px;
+        border-radius: 20px;
+        transition: 0.5s;
+        
+    }
+    .intro h1{
+        font-size: 45px;
+        font-weight: 700;
+        color: black;
+        padding: 10px;
+        margin: 5px;
+    }
+    .intro p{
+        font-size: 15px;
+        font-weight: 600;
+        color: #000;
+        padding: 10px;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .card:hover .intro{
+        height: 280px;
+        bottom: 100px;
+        background: #09ff9d;
+    }
+    .card:hover p{
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .card:hover img{
+        transform: scale(1.1) rotate(-3deg);
+        transition: 0.5s;
+    }
+    
+    </style>
+    
+            <div class="card">
+                <div class="image">
+                    <img src="images_and_icons/pexels-valeria-boltneva-15913452.jpg" alt="" class="profile-img">
+                </div>
+                <div class="intro">
+                    <h1>Make your choice right now!</h1>
+                    <p>
+                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis voluptas velit eaque? Provident, porro aut! Adipisci, atque.
+                    </p>
+                </div>
+            </div>
+    
