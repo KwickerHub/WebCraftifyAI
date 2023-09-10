@@ -1,0 +1,77 @@
+<style>
+    
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: whitesmoke;
+}
+.card{
+   height: 500px; 
+   margin: 50px;
+   box-shadow: 5px 5px 20px black;
+   overflow: hidden;
+   border-radius: 10px;
+}
+.image{
+    height: 500px;
+    width: 350px;
+    border-radius: 10px;
+    transition: .5s;
+}
+.intro {
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: relative;
+    color: white;
+    transition: all .5s;
+}
+
+.title {
+    transform: translateY(calc(-100% - 20px - 20px));
+    transition: transform .5s;
+}
+
+.card:hover .title {
+    transform: translateY(0);
+}
+
+.heading{
+   margin: 20px;
+   margin-bottom: 0;
+   font-size: 40px; 
+}
+.paragraph{
+    font-size: 20px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .intro{
+    transform: translateY(-100%);
+}
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+
+</style>
+
+
+    <div class="container">
+        <div class="card">
+            <img class="image" src="images_and_icons/puppy.jpeg" alt="">
+            <div class="intro">
+                <h1 class="title heading">Card Heading</h1>
+                <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat est quisquam quo omnis dolores, ipsa, blanditiis assumenda eius tempore temporibus ipsum earum deserunt, ut facilis optio! Eveniet ad unde fugiat!</p>
+                <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <!-- more stuff can go here -->
+            </div>
+        </div>
+    </div>
+
