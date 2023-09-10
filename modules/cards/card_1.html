@@ -1,23 +1,68 @@
-!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="card_1.css">
-</head>
-<body>
-    <div class="card">
-        <div class="image">
-            <img src="images_and_icons/jonathan-petersson-gQhWMkYh3Yc-unsplash.jpg" alt="" class="profile-img">
-        </div>
-        <div class="text-data">
-            <h3>Equilibrium #3429</h3>
-            <p>Our Equlibrium collection promotes
-              balance and calm.</p>
-              
-            <h4>&#169; Creation of Harsh Shukla</h4>
-        </div>
+    <style>
+.card{
+    position: relative;
+    width: 350px;
+    height: 550px;
+    background: #304683;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 1px 1px 10px #000;
+  
+}
+
+.image{
+    position: relative;
+    height: 290px;
+    width: 350px;
+    padding: 10px;
+    
+}
+.image .profile-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.text-data h3{
+    color: aliceblue;
+    padding: 15px;
+    font-size: 25px;
+    margin-left: 10px;
+    text-align:start;
+    font-weight: 700;
+    text-decoration: underline #e2dbdb;
+}
+.text-data p{
+    margin-left: 15px;
+    padding: 15px;
+    font-size: 19px;
+    text-align: center;
+    font-weight: 200;
+    color: rgb(196, 196, 196);
+    border-bottom: 2px solid  #242439;
+    padding-bottom: 80px;
+    margin-right: 15px;
+}
+.text-data h4{
+    font-size: 15px;
+    margin: 17px;
+    font-weight: 500;
+    color: #dcdee3;
+    margin-left: 80px;
+}
+    </style>
+
+    
+<div class="card">
+    <div class="image">
+        <img src="images_and_icons/jonathan-petersson-gQhWMkYh3Yc-unsplash.jpg" alt="" class="profile-img">
     </div>
-</body>
-</html>
+    <div class="text-data">
+        <h3>Equilibrium #3429</h3>
+        <p>Our Equlibrium collection promotes
+          balance and calm.</p>
+          
+        <h4>&#169; Creation of Harsh Shukla</h4>
+    </div>
+</div>
+
