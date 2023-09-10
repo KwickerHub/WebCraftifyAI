@@ -1,13 +1,8 @@
-:root{
+<style>
+  :root{
     --blues: linear-gradient(60deg, rgb(167, 156, 255), rgb(89, 71, 222));
 }
 
-html{
-    background-color: #e7f4ff;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .center-div{
     max-height: 100vh;
     max-width: 100vw;
@@ -483,3 +478,201 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
 }
+
+</style>
+
+<script>
+  function toggleCheckbox(checkboxNumber) {
+  const checkbox = document.getElementById(`checkbox${checkboxNumber}`);
+  const toggleBtn = document.querySelector(
+      `.toggle-btn:nth-child(${checkboxNumber})`
+      );
+
+  checkbox.checked = !checkbox.checked; 
+
+    if (checkbox.checked) {
+        toggleBtn.classList.add("toggle-transition");
+    } else {
+        toggleBtn.classList.remove("toggle-transition");
+    }
+}
+
+
+setInterval(() => {
+  d = new Date();
+  hr = d.getHours();
+  min = d.getMinutes();
+  sec = d.getSeconds();
+  hr_rotation = 30 * hr + min / 2; 
+  min_rotation = 6 * min;
+  sec_rotation = 6 * sec;
+
+  hour.style.transform = `rotate(${hr_rotation}deg)`;
+  minute.style.transform = `rotate(${min_rotation}deg)`;
+  second.style.transform = `rotate(${sec_rotation}deg)`;
+}, 1000);
+
+function togglePlayPause() {
+  const playIcon = document.querySelector(".play");
+  const pauseIcon = document.querySelector(".pause");
+
+  if (playIcon.style.display !== "none") {
+    playIcon.style.display = "none";
+    pauseIcon.style.display = "block";
+  } else {
+    playIcon.style.display = "block";
+    pauseIcon.style.display = "none";
+  }
+}
+
+let selectedTabId = "tab-1"; 
+document.getElementById(selectedTabId).classList.add("selected-tab");
+document.getElementById(selectedTabId).classList.remove("font-color");
+
+function selectTab(tabId) {
+  document.getElementById(selectedTabId).classList.remove("selected-tab");
+  document.getElementById(selectedTabId).classList.add("font-color");
+
+  document.getElementById(tabId).classList.add("selected-tab");
+
+  selectedTabId = tabId;
+}
+
+
+const handle = document.getElementById("handle");
+const slider = document.querySelector(".slider");
+const track = document.getElementById("track");
+let isDragging = false;
+
+handle.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  slider.classList.add("active");
+  handle.style.transition = "none";
+  const offsetX = e.clientX - handle.getBoundingClientRect().left;
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const x = e.clientX - offsetX - slider.getBoundingClientRect().left;
+    const maxX = slider.clientWidth - handle.clientWidth;
+    const minX = 0;
+
+    if (x >= minX && x <= maxX) {
+      handle.style.left = `${x}px`;
+      track.style.width = `${x}px`;
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    slider.classList.remove("active");
+
+    const currentPosition = parseFloat(handle.style.left);
+    console.log("Current Position:", currentPosition);
+
+    document.removeEventListener("mousemove", () => {});
+    document.removeEventListener("mouseup", () => {});
+  });
+});
+
+  function swapIcon(iconDiv) {
+    const icons = iconDiv.querySelectorAll(".icons");
+    icons.forEach((icon) => (icon.style.display = "none"));
+
+   
+    icons[1].style.display = "block";
+    setTimeout(() => {
+      icons[1].style.display = "none";
+      icons[0].style.display = "block";
+    }, 100); 
+  }
+</script>
+
+    <div class="center-div">
+      <div class="card">
+        <div class="left-side">
+          <div class="toggle-div">
+            <div class="toggle-btn" onclick="toggleCheckbox(1)">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1" class="circle"></label>
+            </div>
+            <div class="toggle-btn" onclick="toggleCheckbox(2)">
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2" class="circle"></label>
+            </div>
+          </div>
+
+          <div class="check-div">
+            <input type="checkbox" class="check-btn" />
+            <input type="checkbox" class="check-btn" />
+          </div>
+
+          <div class="radio-div">
+            <input type="radio" class="radio-btn"  name="radio-group" />
+            <input type="radio" class="radio-btn"  name="radio-group" />
+          </div>
+
+          <div class="button-btn">
+            <button class="btn-1">Button</button>
+            <button class="btn-2">Button</button>
+          </div>
+        </div>
+        <div class="middle-side">
+            <div class="clock-container">
+                <div id="clock-border">
+                 <div id="hour"></div>
+                 <div id="minute"></div>
+                 <div id="second"></div>
+                 <div id="dot-circle"></div>
+
+               </div>
+            </div>
+            <div class="design">
+                <img src="./images_and_icons/paint.svg" alt="paint" class="paint">
+                <p class="design-text">Neumorphic Design</p>
+                <img src="./images_and_icons/close.svg" alt="close" class="close">
+            </div>
+            <div class="media">
+                <img src="./images_and_icons/play.svg" alt="play" class="play" onclick="togglePlayPause()">
+                <img src="./images_and_icons/pause.svg" alt="pause" class="pause" onclick="togglePlayPause()">
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="tab-div">
+                <div id="tab-1" class="font-color" onclick="selectTab('tab-1')">Tab 1</div>
+                <div id="tab-2" class="font-color" onclick="selectTab('tab-2')">Tab 2</div>
+                <div id="tab-3" class="font-color" onclick="selectTab('tab-3')">Tab 3</div>
+            </div>
+
+            <div class="search-div">
+                <img src="./images_and_icons/search.svg" alt="search" class="search-icon">
+                <input type="text" placeholder="Search..." class="search-text">
+            </div>
+
+            <div class="type-div">
+                <input type="text" placeholder="Type anything..." class="search-text">
+            </div>
+
+            <div class="icons-div">
+               <div class="icons-style" onclick="swapIcon(this)">  
+                <img src="./images_and_icons/home.svg" alt="home" class="icons">
+                <img src="./images_and_icons/alt-home.svg" alt="home" class="icons" style="display: none;">
+               </div>
+               <div class="icons-style" onclick="swapIcon(this)">
+                <img src="./images_and_icons/user.svg" alt="user" class="icons">
+                <img src="./images_and_icons/alt-user.svg" alt="user" class="icons" style="display: none;">
+               </div>
+               <div class="icons-style" onclick="swapIcon(this)">
+                <img src="./images_and_icons/setting.svg" alt="setting" class="icons">
+                <img src="./images_and_icons/alt-setting.svg" alt="setting" class="icons" style="display: none;">
+               </div>
+            </div>
+            <div class="slider-div">
+             <div class="slider">
+               <input type="range" name="slid" id="slide">
+               </div>
+             </div>
+             </div>
+        </div>
+      </div>
+    </div>
+</html>
