@@ -1,0 +1,44 @@
+<div class="images_body">
+  <div class="image_container">
+    <img src="images_and_icons/image1.jpg" alt="Image 1" />
+    <img src="images_and_icons/image2.jpg" alt="Image 2" />
+    <img src="images_and_icons/image3.jpg" alt="Image 3" />
+    <img src="images_and_icons/image4.jpg" alt="Image 4" />
+    <img src="images_and_icons/image5.jpg" alt="Image 5" />
+    <img src="images_and_icons/image6.jpg" alt="Image 6" />
+  </div>
+</div>
+
+<style>
+  .images_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    height: 98vh;
+    width: 98vw;
+  }
+  .image_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    row-gap: 4vh;
+   column-gap: 4vh;
+    position: relative;
+    align-content: center;
+    width: 100%;
+    margin: 0 15vw;
+  }
+
+  .image_container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  /* @media (min-width: 900px) {
+  .image_container
+   { grid-template-columns: repeat(3, 1fr);
+ }
+} */
+
+</style>
