@@ -1,0 +1,74 @@
+<div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style for the main container */
+    .container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 100vh; /* Make the container full height of the viewport */
+      background: linear-gradient(135deg, #7df9ff, #072997e5);
+    }
+
+    /* Style for the grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      gap: 60px; /* Adjust the gap between grid items */
+      justify-content: center; /* Center horizontally within the container */
+      align-items: center; /* Center vertically within the container */
+    }
+
+    /* Style for individual grid items */
+    .grid-item {
+      background-color: aliceblue;
+      text-align: center;
+      border-radius: 10px;
+      width: 100%; /* Adjust the width of the grid items as needed */
+      border: 2px solid rgb(133, 120, 120);
+    }
+
+    /* Style for the images inside grid items */
+    .grid-item img {
+      width: 200px; /* Adjust the width as needed to make the images larger */
+      height: 200px; /* Adjust the height as needed to maintain aspect ratio */
+      animation: fadeIn 1.7s forwards; /* Fade in animation for images */
+    }
+
+    /* Keyframe animation to fade in the images one by one */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <div class="container">
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="images_and_icons/arrow-right.svg" alt="SVG 1" />
+      </div>
+      <div class="grid-item">
+        <img src="images_and_icons/arrow-left.svg" alt="SVG 2" />
+      </div>
+      <div class="grid-item">
+        <img src="images_and_icons/arrow-up.svg" alt="SVG 3" />
+      </div>
+      <div class="grid-item">
+        <img src="images_and_icons/arrow-down.svg" alt="SVG 4" />
+      </div>
+      <div class="grid-item">
+        <img src="images_and_icons/arrow-uturn-left.svg" alt="SVG 5" />
+      </div>
+      <div class="grid-item">
+        <img src="images_and_icons/arrow-uturn-right.svg" alt="SVG 6" />
+      </div>
+    </div>
+  </div>
+</div>
