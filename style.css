@@ -7,7 +7,7 @@ footer1{
 #face:hover{
   background-color:  rgb(48, 115, 183);
 }
-#faces:hover{
+#twitter:hover{
     background-color: rgb(95, 145, 195);
   }
   #google:hover{
@@ -15,4 +15,13 @@ footer1{
   }
   #insta:hover{
     background: linear-gradient(to bottom right, #ff3399 19%, #ff9933 90%);
+  }
+  #link:hover{
+    background-color: rgb(57, 111, 165);
+  }
+  .nav-link:hover{
+    color: navy !important;
+  }
+  .nav-item:hover{
+    color: navy !important;
   }
