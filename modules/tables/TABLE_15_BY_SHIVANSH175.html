@@ -1,0 +1,143 @@
+<div class="container">
+    <div class="content">
+        <h1>Pricing Table Template</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab distinctio quisquam perferendis adipisci odio consequatur architecto voluptatibus culpa animi sed!</p>
+        <button id="btn">Lorem ipsum dolor sit.</button>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item" id="grid-item1"></div>
+        <div class="grid-item" id="grid-item2">lorem</div>
+        <div class="grid-item" id="grid-item3">lorem</div>
+        <div class="grid-item" id="grid-item4">lorem</div>
+        <div class="grid-item" id="grid-item5">lorem </div>
+        <div class="grid-item" id="grid-item6">$29</div>
+        <div class="grid-item" id="grid-item7">$59</div>
+        <div class="grid-item" id="grid-item8">$139</div>
+        <div class="grid-item" id="grid-item9">lorem</div>
+        <div class="grid-item" id="grid-item10">Lorem, ipsum.</div>
+        <div class="grid-item" id="grid-item11">Lorem, ipsum.</div>
+        <div class="grid-item" id="grid-item12">Lorem, ipsum.</div>
+        <div class="grid-item" id="grid-item13">Lorem</div>
+        <div class="grid-item" id="grid-item14">lorem ipsum.</div>
+        <div class="grid-item" id="grid-item15">Lorem</div>
+        <div class="grid-item" id="grid-item16">Lorem, ipsum.</div>
+        <div class="grid-item" id="grid-item17">Lorem</div>
+        <div class="grid-item" id="grid-item18">lorem</div>
+        <div class="grid-item" id="grid-item19">lorem</div>
+        <div class="grid-item" id="grid-item20">lorem</div>
+        <div class="grid-item" id="grid-item21">lorem</div>
+        <div class="grid-item" id="grid-item22">lorem</div>
+        <div class="grid-item" id="grid-item23">lorem</div>
+        <div class="grid-item" id="grid-item24">lorem</div>
+        <div class="grid-item" id="grid-item25"></div>
+        <div class="grid-item" id="grid-item26"><button>Lorem, ipsum dolor.</button></div>
+        <div class="grid-item" id="grid-item27"><button>Lorem, ipsum dolor.</button></div>
+        <div class="grid-item" id="grid-item28"><button>Lorem, ipsum dolor.</button></div>
+    </div>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            text-align: center;
+            flex-direction: column;
+        }
+        .content h1{
+            margin-bottom: 0px;
+            color: #9D9BE7;
+        }
+        .content p{
+            width: 60%;
+            color: #B6B6B6;
+        }
+        #btn{
+            line-height: 2.5;
+            background-color: #4BA4EB;
+            color: white;
+            padding:5px 30px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .grid-container{
+            margin-top: 2rem;
+            width: 90%;
+            /* border: 1px solid red; */
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 37px 60px 37px 37px 37px 37px 52px;
+            display: grid;
+            align-content: center;
+            /* justify-content: space-around; */
+        }
+        .grid-item{
+            text-align: center;
+            padding: 10px 5px;
+            border: 0.1px solid rgb(171, 171, 171);
+        }
+        #grid-item1{
+            border: none;
+        }
+        #grid-item5,#grid-item9,#grid-item13,#grid-item17,#grid-item21{
+            text-align: left;
+        }
+        #grid-item6,#grid-item7,#grid-item8{
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
+        #grid-item7,#grid-item27 button{
+            background-color: #4886EB;
+        }
+        #grid-item6,#grid-item26 button{
+            background-color: #7CBFF3;
+        }
+        #grid-item8,#grid-item28 button{
+            background-color: #7072EB;
+        }
+        #grid-item5{
+            padding-top: 20px;
+        }
+        .grid-item button{
+            padding: 7px 20px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+        }
+        #grid-item26,#grid-item27,#grid-item28{
+            padding: 10px;
+        }
+        button:hover{
+            scale: 1.05;
+        }
+        .grid-item:hover{
+            background-color: rgb(232, 232, 232);
+            transform: translateY(-1px);
+        }
+        @media screen and (max-width:770px) {
+            .grid-container{
+                width: 100%;
+            }
+            .content{
+                width: 100%;
+            }
+            .content p{
+                width: 90%;
+            }
+            #grid-item26,#grid-item27,#grid-item28{
+                height: fit-content;
+            }
+            
+        }
+    </style>
+</div>
