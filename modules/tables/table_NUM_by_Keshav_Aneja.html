@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      table {
+        border: 0px;
+        border-collapse: collapse;
+        font-family: sans-serif;
+        color: #aeaeae;
+      }
+      tr {
+        background-color: #282b32;
+      }
+      th {
+        color: white;
+        font-size: 0.8rem;
+        width: 12rem;
+      }
+      th span {
+        font-size: 1.8rem;
+      }
+      td {
+        padding: 2rem;
+        padding-block: 1.2rem;
+      }
+      tr td:nth-child(1) {
+        padding-left: 0.8rem;
+      }
+      tr td:not(:nth-child(1)) {
+        text-align: center;
+      }
+      thead tr {
+        height: 8rem;
+      }
+      table tr:nth-child(1) th:nth-child(2) {
+        background-color: #00be9c;
+      }
+      table tr:nth-child(1) th:nth-child(3) {
+        background-color: #3babf3;
+      }
+      table tr:nth-child(1) th:nth-child(4) {
+        background-color: #de5454;
+      }
+      .main-heading {
+        text-transform: uppercase;
+        padding-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <table class="styled-table">
+        <colgroup>
+          <col />
+          <col span="1" style="text-align: center" />
+          <col style="text-align: center" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="main-heading">Packages</th>
+            <th>Basic <br /><br /><span>$29</span></th>
+            <th>Standard<br /><br /><span>$29</span></th>
+            <th>Advanced<br /><br /><span>$29</span></th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Users</td>
+          <td>1 User</td>
+          <td>3 User</td>
+          <td>5 Users</td>
+        </tr>
+        <tr>
+          <td>Email Services</td>
+          <td>100+ Emails</td>
+          <td>300+ Emails</td>
+          <td>1000+ Emails</td>
+        </tr>
+        <tr>
+          <td>Service Available</td>
+          <td>8 hours</td>
+          <td>12 hours</td>
+          <td>16 hours</td>
+        </tr>
+        <tr>
+          <td>Validity</td>
+          <td>1 Year</td>
+          <td>2 Year</td>
+          <td>3 Year</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
