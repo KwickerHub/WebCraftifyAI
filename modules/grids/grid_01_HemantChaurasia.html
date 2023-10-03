@@ -1,0 +1,71 @@
+<div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white; 
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .gridItem {
+      background-color: aliceblue;
+      text-align: center;
+      border-radius: 6px;
+      width: 100%;
+      border: 2px solid rgb(0, 0, 0);
+    }
+
+    .gridItem img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      animation: fadeIn 1.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <div class="container">
+    <div class="gridContainer">
+      <div class="gridItem">
+        <img src="images_and_icons/sample1.svg" alt="SAMPLE 1">
+      </div>
+      <div class="gridItem">
+        <img src="images_and_icons/sample2.svg" alt="SAMPLE 2">
+      </div>
+      <div class="gridItem">
+        <img src="images_and_icons/sample3.svg" alt="SAMPLE 3">
+      </div>
+      <div class="gridItem">
+        <img src="images_and_icons/sample4.svg" alt="SAMPLE 4">
+      </div>
+      <div class="gridItem">
+        <img src="images_and_icons/sample5.svg" alt="SAMPLE 5">
+      </div>
+      <div class="gridItem">
+        <img src="images_and_icons/sample6.svg" alt="SAMPLE 6">
+      </div>
+    </div>
+  </div>
+</div>
