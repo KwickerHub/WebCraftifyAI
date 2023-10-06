@@ -1,0 +1,67 @@
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <div class="image-gallery">
+        <div class="image-container">
+          <div class="image-item" style="background-image: url('nature1.jpeg');"></div>
+          <div class="image-item" style="background-image: url('nature2.jpeg');"></div>
+          <div class="image-item" style="background-image: url('nature3.jpeg');"></div>
+          <div class="image-item" style="background-image: url('nature4.jpeg');"></div>
+          <div class="image-item" style="background-image: url('nature5.jpeg');"></div>
+          <div class="image-item" style="background-image: url('nature6.jpeg');"></div>
+        </div>
+      </div>
+      
+      <style>
+        .image-gallery {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: auto;
+          height: 98vh;
+          width: 98vw;
+          background-color: #8EACCD;
+        }
+        .image-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); 
+          place-items: center;
+          row-gap: 2em;
+          column-gap: 0.25em; 
+          position: static;
+          align-content: center;
+          width: 100%;
+          margin: 3em;
+        }
+      
+        .image-item {
+          width: 500px;
+          height: 300px;
+          background-size: cover;
+          background-position: center;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: opacity 1s ease-in-out;
+        }
+        
+        .image-item.fade-out {
+          opacity: 0;
+        }
+      </style>
+      
+      <script>
+        $(document).ready(function(){
+          $(".image-item").click(function(){
+            var $image = $(this);
+
+            
+            $image.addClass("fade-out");
+
+           
+            setTimeout(function() {
+              $image.removeClass("fade-out");
+            }, 1000); 
+          });
+        });
+      </script>
+
