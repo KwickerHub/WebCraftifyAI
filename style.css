@@ -1,8 +1,24 @@
+/* body{
+    background-color: rgb(219, 229, 230);
+    color: black;
+} */
+h{
+    background-color: #0ebac5;
+}
+h1{
+    color: black;
+    
+}
+p{
+    color: black;
+}
+
 footer1{
     display: flex;
     align-items: center;
     justify-self: center;
     background-color: aqua;
+
 }
 #face:hover{
   background-color:  rgb(48, 115, 183);
@@ -20,8 +36,78 @@ footer1{
     background-color: rgb(57, 111, 165);
   }
   .nav-link:hover{
-    color: navy !important;
+    /* color: navy !important; */
+    color: black;
   }
   .nav-item:hover{
     color: navy !important;
   }
+
+  .main{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width:220.52px;
+    min-height: 56px;
+    font-family: calibri;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.5s linear;
+}
+
+span {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+ion-icon {
+    font-size: 2em;
+    transition: all 0.5s linear;
+}
+
+.btn:hover ion-icon {
+    transform: rotate(-90deg);
+
+}
+
+div {
+    position: relative;
+}
+
+
+
+   
+
+    
+    #blue-btn {
+        background-color: #007BFF; /* Blue background color */
+        color: #fff;             /* White text color */
+        padding: 5px 10px;       /* Padding for the button content */
+        border: none;            /* Remove the default button border */
+        border-radius: 5px;      /* Add rounded corners */
+        cursor: pointer;         /* Change cursor to pointer on hover */
+        text-decoration: none;   /* Remove underlines from the link */
+        font-size: 12px;         /* Font size */
+      
+        /* Set a fixed width and height for the button */
+        width: 80px; /* Adjust the width as needed */
+        height: 30px; /* Adjust the height as needed */
+      }
+      
+      #blue-btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+      }
+      
