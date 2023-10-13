@@ -1,0 +1,94 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        position: relative;
+        text-align: center;
+    }
+    #head {
+        width: 100%;
+        max-height: 100vh;
+        object-fit: cover;
+    }
+    .overlay {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 1.2rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .btn {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .features {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .feature {
+        margin: 20px;
+    }
+    .feature img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+    .feature span {
+        display: block;
+        color: rgb(225, 11, 54);
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img id="head" src="images_and_icons/messi.svg">
+    <div class="overlay">
+        <h1 class="title">FUTURE</h1>
+        <h1 class="title">LEGENDS</h1>
+        <p class="description">The beauty of football is that everybody has a unique set of skills that they can use to become legends in the game.</p>
+        <button class="btn">View More</button>
+    </div>
+    <div class="features">
+        <div class="feature">
+            <img src="images_and_icons/messiBack.svg" alt="FOOTBALL LESSONS">
+            <span>FOOTBALL LESSONS</span>
+        </div>
+        <div class="feature">
+            <img src="images_and_icons/messiBack.svg" alt="FOOTBALL MEMBERSHIP">
+            <span>FOOTBALL MEMBERSHIP</span>
+        </div>
+        <div class="feature">
+            <img src="images_and_icons/messiBack.svg" alt="FOOTBALL PROGRAMS">
+            <span>FOOTBALL PROGRAMS</span>
+        </div>
+    </div>
+</div>
