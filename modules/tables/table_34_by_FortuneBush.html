@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            height: 100vh; /* 设置body的高度为100%视窗高度 */
+            display: flex;
+            justify-content: center; /* 在水平方向上居中 */
+            align-items: center; /* 在垂直方向上居中 */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%; /* 为了让表格不占满整个页面，你可以设置一个合适的宽度 */
+            margin: auto; /* 将表格置于页面中央 */
+            border: 0; /* 去除边框线 */
+        }
+
+        th, td {
+            border: 0; /* 去除每个单元格的边框线 */
+            /*border: 1px solid #dddddd;*/
+            text-align: center;
+            padding: 8px;
+            width: 100px; /* 设置单元格宽度 */
+            height: 30px; /* 设置单元格高度 */
+        }
+
+        /* 第1、3、5行的第1、3列为黑色 */
+        tr:nth-child(odd) td:nth-child(odd),
+        tr:nth-child(odd) td:nth-child(3),
+        tr:nth-child(odd) td:nth-child(5) {
+            background-color: black;
+            color: white;
+        }
+
+        /* 第2，4列为绿色 */
+        tr:nth-child(odd) td:nth-child(2),
+        tr:nth-child(odd) td:nth-child(4) {
+            background-color: #81fa60;
+            color: black;
+        }
+
+        /* 第2、4、6行的底色为白色 */
+        tr:nth-child(even) {
+            background-color: white;
+        }
+
+        /* 第3和5行的第2和4列底色变为浅灰色 */
+        tr:nth-child(3) td:nth-child(2),
+        tr:nth-child(3) td:nth-child(4),
+        tr:nth-child(5) td:nth-child(2),
+        tr:nth-child(5) td:nth-child(4) {
+            background-color: lightgray; /* 设置底色为浅灰色 */
+        }
+
+        /* 第2、3、4、5行字体变小 */
+        tr:nth-child(2) td,
+        tr:nth-child(3) td,
+        tr:nth-child(4) td,
+        tr:nth-child(5) td {
+            font-size: 12px; /* 设置字体大小为12像素 */
+        }
+
+        /* 第1、6行字体加粗 */
+        tr:nth-child(1) td,
+        tr:nth-child(6) td {
+            font-weight: bold; /* 设置字体为粗体 */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>COLUMN 1</td>
+            <td>COLUMN 2</td>
+            <td>COLUMN 3</td>
+            <td>COLUMN 4</td>
+        </tr>
+        <tr>
+            <td>Item #1</td>
+            <td>Description</td>
+            <td>Food</td>
+            <td>$5.00</td>
+        </tr>
+        <tr>
+            <td>Item #2</td>
+            <td>Description</td>
+            <td>Food</td>
+            <td>$10.00</td>
+        </tr>
+        <tr>
+            <td>Item #3</td>
+            <td>Description</td>
+            <td>Food</td>
+            <td>$12.00</td>
+        </tr>
+        <tr>
+            <td>Item #4</td>
+            <td>Description</td>
+            <td>Food</td>
+            <td>$8.00</td>
+        </tr>
+        <tr>
+            <td>All Items</td>
+            <td>Description</td>
+            <td>Four Food</td>
+            <td>$35.00</td>
+        </tr>
+    </table>
+
+</body>
+</html>

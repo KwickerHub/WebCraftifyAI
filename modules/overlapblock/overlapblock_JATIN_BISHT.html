@@ -1,0 +1,94 @@
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .main-cont {
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+     .main-cont > h1{
+        margin-top: 30px;
+     }
+    .red-cont {
+        width: 100%;
+        height: 30%;
+        background-color: rgb(253, 90, 90);
+        margin-bottom: 10%;
+    }
+
+    .upper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 20%;
+    }
+
+    .big-img {
+        background-image: url("https://images.unsplash.com/photo-1530345729349-ab5c8e483492?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+        position: absolute;
+        width: 80%;
+        height: 60%;
+        z-index: 0.9;
+        bottom: 5%;
+        background-size: contain;
+    }
+
+    .card {
+        width: 280px;
+        height: 280px;
+        background-color: aquamarine;
+        z-index: 2;
+    }
+
+    .image {
+        background-image: url("https://images.unsplash.com/photo-1648183185045-7a5592e66e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2042&q=80");
+        background-size: cover;
+        margin-right: 40px;
+
+    }
+
+    .text {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        line-height: 38px;
+        align-items: center;
+
+    }
+
+    .text>p {
+        margin: 30px;
+        font-size: 27px;
+        text-align: left;
+    }
+
+    p>span {
+        font-size: 14px;
+    }
+
+    span>a {
+        color: aliceblue;
+    }
+</style>
+<div class="main-cont">
+    <h1>What We Do</h1>
+    <div class="upper">
+        <div class="card image">
+        </div>
+        <div class="card text">
+            <p> We have several business and industrial parks with available space for your business.
+                <span>Images from <a href="https://unsplash.com/">unsplash</a></span>
+            </p>
+
+        </div>
+    </div>
+    <div class="big-img">
+    </div>
+    <div class="red-cont">
+    </div>
+</div>

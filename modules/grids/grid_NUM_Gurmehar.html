@@ -1,0 +1,203 @@
+<div>
+    
+    <style>
+        .gg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            min-height: 100vh;
+            margin: 0px;
+            background-color: black;
+            color: white;
+        }
+
+        .gg-grid {
+            display: grid;
+
+            justify-content: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            grid-gap: 2rem;
+
+        }
+
+        .item {
+            display: flex;
+            width: 250px;
+            height: 200px;
+            border-radius: 40px;
+            margin: 20px 12px;
+            padding: 20px 12px;
+        }
+
+        #item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            width: 588px;
+            background-color: #fff5e3;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 55px;
+            text-align: left;
+            flex-direction: row;
+            font-weight: 900;
+
+        }
+
+        #item2 {
+            background-color: rgb(106 106 183);
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #item3 {
+            background-color: #bdffff;
+            color: black;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #item4 {
+            background-color: #d49c12;
+            color: black;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #item5 {
+            background-color: #aab3b7;
+            color: black;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box1para {
+            position: relative;
+            bottom: 64px;
+        }
+
+        #smalltextb1 {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            left: 20px;
+            bottom: 2px;
+            font-weight: 100;
+
+        }
+
+        .imgitem2 {
+            width: 50px;
+            /* Specify the width and height */
+            height: 50px;
+            background-image: url('../grids/images_and_icons/gg-settings.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            position: relative;
+            bottom: 7px;
+            right: 92px;
+        }
+
+        .imgitem3 {
+            width: 50px;
+            /* Specify the width and height */
+            height: 50px;
+            background-image: url('../grids/images_and_icons/gg-star.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            position: relative;
+            bottom: 7px;
+            right: 92px;
+        }
+
+        .imgitem4 {
+            width: 50px;
+            /* Specify the width and height */
+            height: 50px;
+            background-image: url('../grids/images_and_icons/gg-bulb.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            position: relative;
+            bottom: 7px;
+            right: 92px;
+        }
+
+        .imgitem5 {
+            width: 50px;
+            /* Specify the width and height */
+            height: 50px;
+            background-image: url('../grids/images_and_icons/gg-settings.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            position: relative;
+            bottom: 7px;
+            right: 92px;
+        }
+
+        .sub-header {
+            font-family: 'Sanchez', serif;
+            font-weight: bolder;
+        }
+    </style>
+    <div class="gg-container">
+        <div class="gg-grid">
+            <div class="item" id="item1">
+                <p id="box1para">Save more and get visibilty for your business <span id="smalltextb1"><br>Sample text .
+                        Click to select the text element</span></p>
+            </div>
+            <div class="item" id="item2">
+                <div class="imgitem2">
+
+                </div>
+                <div class="textitem2">
+                    <h3 class="sub-header">SMS Marketing</h3>
+                    <p>Sample text. Click to select the next element</p>
+                </div>
+            </div>
+            <div class="item" id="item3">
+                <div class="imgitem3">
+
+                </div>
+                <div class="textitem3">
+                    <h3 class="sub-header">Marketing</h3>
+                    <p>Sample text. Click to select the next element</p>
+                </div>
+            </div>
+            <div class="item" id="item4">
+                <div class="imgitem4">
+
+                </div>
+                <div class="textitem4">
+                    <h3 class="sub-header">Website Optimisation</h3>
+                    <p>Sample text. Click to select the next element</p>
+                </div>
+            </div>
+            <div class="item" id="item5">
+                <div class="imgitem5">
+
+                </div>
+                <div class="textitem5">
+                    <h3 class="sub-header">SMS Marketing</h3>
+                    <p>Sample text. Click to select the next element</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
