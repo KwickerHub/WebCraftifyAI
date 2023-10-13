@@ -1,0 +1,138 @@
+<style>
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #2c2828;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .styled-table thead tr {
+    text-align: left;
+    font-size: large;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 60px;
+    border-left: 1px solid #b3afaf;
+  }
+
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .FirstColumnHead {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .SecondColumnHead {
+    background-color: #dc921c;
+    color: #ffffff;
+  }
+  .ThirdColumnHead {
+    background-color: #db1c1c;
+    color: #ffffff;
+  }
+  .FourthColumnHead {
+    background-color: #1acad3;
+    color: #ffffff;
+  }
+  .price1 {
+    font-size: x-large;
+    color: #dc921c;
+  }
+  .price2 {
+    font-size: x-large;
+    color: #db1c1c;
+  }
+  .price3 {
+    font-size: x-large;
+    color: #1acad3;
+  }
+  .tickMark {
+    color: orange;
+    font-size: x-large;
+    font-weight: bolder;
+  }
+  .button {
+    background-color: #f55656;
+    border-radius: 24px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 12px;
+    padding: 10px 22px;
+    text-decoration: none;
+  }
+
+  .FirstColumn {
+    text-align: left;
+  }
+</style>
+
+<div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th class="FirstColumnHead">COMPARE ALL PLANS</th>
+        <th class="SecondColumnHead">STARTER</th>
+        <th class="ThirdColumnHead">ADVANCE</th>
+        <th class="FourthColumnHead">ENTERPRISE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="FirstColumn">1st Month Management Cost</td>
+        <td>$ 400</td>
+        <td>$ 900</td>
+        <td>$ 1200</td>
+      </tr>
+      <tr>
+        <td class="FirstColumn">Following Month</td>
+        <td class="price1">$ 300</td>
+        <td class="price2">$ 700</td>
+        <td class="price3">$ 900</td>
+      </tr>
+      <tr>
+        <td class="FirstColumn">Delivery Time Frame</td>
+        <td>3-6 Months</td>
+        <td>3-6 Months</td>
+        <td>3-6 Months</td>
+      </tr>
+      <tr>
+        <td class="FirstColumn">Support 24/7</td>
+        <td>-</td>
+        <td class="tickMark">&check;</td>
+        <td class="tickMark">&check;</td>
+      </tr>
+      <tr>
+        <td class="FirstColumn">Certificate</td>
+        <td>-</td>
+        <td class="tickMark">&check;</td>
+        <td class="tickMark">&check;</td>
+      </tr>
+      <tr>
+        <td class="FirstColumn">
+          Guranteed Keywords Ranking in First Page of Google
+        </td>
+        <td>18</td>
+        <td>20</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <td class="FirstColumn"></td>
+        <td><button class="button">Buy Now</button></td>
+        <td><button class="button">Buy Now</button></td>
+        <td><button class="button">Buy Now</button></td>
+      </tr>
+      <!-- and so on... -->
+    </tbody>
+  </table>
+</div>
