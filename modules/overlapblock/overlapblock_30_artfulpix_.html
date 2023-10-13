@@ -1,0 +1,100 @@
+<div>
+  <div class="container">
+    <div>
+      <div class="card">
+        <div class="image">
+          <img src="./images_and_icons/1.svg" alt="" class="icon" />
+        </div>
+        <h2>SPA RELAX</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+          justo sagittis suscipit ultrices.
+        </p>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./images_and_icons/2.svg" alt="" class="icon" />
+        </div>
+        <h2>MASSAGES</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+          justo sagittis suscipit ultrices.
+        </p>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./images_and_icons/3.svg" alt="" class="icon" />
+        </div>
+        <h2>BODY WRAP</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+          justo sagittis suscipit ultrices.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    background-image: url(./images_and_icons/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    font-family: sans-serif;
+    position: relative;
+  }
+
+  .container > div {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 70%;
+  }
+
+  .card {
+    background-color: rgba(218, 218, 218, 0.3);
+    backdrop-filter: blur(1px);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .card h2 {
+    color: #f632ab;
+    font-size: 2rem;
+  }
+
+  .card p {
+    font-size: 1.6rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    margin-top: 0;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  .card .image {
+    background-color: #f632ab;
+    width: 5rem;
+    aspect-ratio: 1;
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+  }
+</style>
