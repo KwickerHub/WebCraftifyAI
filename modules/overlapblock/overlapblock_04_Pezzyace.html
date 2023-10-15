@@ -1,0 +1,120 @@
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .body{
+    height: 100vh;
+  }
+  .top{
+    background: url(images_and_icons/billionphotos18572711.jpg) no-repeat;
+    background-size: cover;
+  }
+  .top img{
+    position: relative;
+    width: 100%;
+    margin-top: -160px;
+    z-index: 1;
+  }
+  .top div{
+    position: absolute;
+    top: 80px;
+    left: 120px;
+    z-index: 50;
+  }
+  .top div h2{
+    width: 20%;
+    font-size: 50px;
+    color: white;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .top div h2 span{
+    font-weight: 900;
+    font-family: "Changa One";
+  }
+  .top div p{
+    width: 40%;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    color: white;
+    font-weight: 15px;
+
+  }
+  .top div button{
+    border: none;
+    cursor: pointer;
+    background-color: #ee0f54;
+    padding: 10px 20px;
+    font-weight: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .bottom{
+    background-color: #fff;
+    position: relative;
+    z-index: 30;
+    height: 250px;
+  }
+  .bottom section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 65%;
+    margin: 0 auto;
+    position: absolute;
+    margin-top: -100px;
+    z-index: 100;
+    align-items: center;
+    left: 17.5%;
+  }
+  .bottom section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom section div img{
+    width: 220px;
+    border-radius: 100%;
+    border: 8px solid #fff;
+    height: 220px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 3px black;
+  }
+  .bottom section div p{
+    color: rgb(255, 75, 75);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+  }
+</style>
+<div class="body">
+  <section class="top">
+    <img src="images_and_icons/billionpho1852711.jpg" alt="">
+    <div>
+      <h2>Future <span>Legends</span></h2>
+      <p> Skateboarding is amazing training for surfing and we see time and again that their practice on the skateboard translates to the water. </p>
+      <button>View more</button>
+    </div>
+  </section>
+  <section class="bottom">
+    <section>
+      <div>
+        <img src="images_and_icons/Skate.png" alt="">
+        <p>Lessons</p>
+      </div>
+      <div>
+        <img src="images_and_icons/female.png" alt="">
+        <p>Membership</p>
+      </div>
+      <div>
+        <img src="images_and_icons/Skate2.png" alt="">
+        <p>programs</p>
+      </div>
+    </section>
+  </section>
+</div>
