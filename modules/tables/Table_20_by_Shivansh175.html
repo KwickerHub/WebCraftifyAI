@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="grid-container">
+        <div class="grid-item" id="grid-item1">lorem</div>
+        <div class="grid-item" id="grid-item2">lorem</div>
+        <div class="grid-item" id="grid-item3">lorem</div>
+        <div class="grid-item" id="grid-item4">lorem</div>
+        <div class="grid-item" id="grid-item5">lorem </div>
+        <div class="grid-item" id="grid-item6">lorem</div>
+        <div class="grid-item" id="grid-item7">lorem</div>
+        <div class="grid-item" id="grid-item8">lorem</div>
+        <div class="grid-item" id="grid-item9">lorem</div>
+        <div class="grid-item" id="grid-item10">Lorem.</div>
+        <div class="grid-item" id="grid-item11">Lorem.</div>
+        <div class="grid-item" id="grid-item12">Lorem.</div>
+        <div class="grid-item" id="grid-item13">Lorem</div>
+        <div class="grid-item" id="grid-item14">lorem.</div>
+        <div class="grid-item" id="grid-item15">Lorem</div>
+        <div class="grid-item" id="grid-item16">Lorem</div>
+        <div class="grid-item" id="grid-item17">Lorem</div>
+        <div class="grid-item" id="grid-item18">lorem</div>
+        <div class="grid-item" id="grid-item19">lorem</div>
+        <div class="grid-item" id="grid-item20">lorem</div>
+        <div class="grid-item" id="grid-item21">lorem</div>
+        <div class="grid-item" id="grid-item22">lorem</div>
+        <div class="grid-item" id="grid-item23">lorem</div>
+        <div class="grid-item" id="grid-item24">lorem</div>
+        <div class="grid-item" id="grid-item25">lorem</div>
+    </div>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            text-align: center;
+            flex-direction: column;
+        }
+        .content h1{
+            margin-bottom: 0px;
+            color: #282B32;
+        }
+        .content p{
+            width: 60%;
+            color: #282B32;
+        }
+        .grid-container{
+            margin-top: 2rem;
+            width: 70%;
+            /* border: 1px solid red; */
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto auto auto auto auto;
+            display: grid;
+            align-content: center;
+            /* justify-content: space-around; */
+        }
+        .grid-item{
+            text-align: center;
+            padding: 10px 5px;
+            background-color: #d8d8d8;
+            color: #282B32;
+            /* border-left: 0.1px solid #ADAFB2;
+            border-right: 0.1px solid #ADAFB2; */
+        }
+        #grid-item1,#grid-item3,#grid-item2,#grid-item4,#grid-item5{
+            background-color: #4070EF;
+            color: white;
+        }
+        #grid-item6,#grid-item8,#grid-item10,#grid-item11,#grid-item13,#grid-item15,#grid-item16,#grid-item18,#grid-item20,#grid-item21,#grid-item23,#grid-item25{
+            background-color: #f8faff;
+        }
+        @media screen and (max-width:770px) {
+            .grid-container{
+                width: 100%;
+            }
+            .content{
+                width: 100%;
+            }
+            .content p{
+                width: 90%;
+            }
+            #grid-item26,#grid-item27,#grid-item28{
+                height: fit-content;
+            }
+
+        }
+    </style>
+</div>

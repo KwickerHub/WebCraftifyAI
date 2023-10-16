@@ -1,0 +1,103 @@
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .body{
+    background-color: rgb(199, 225, 234);
+    height: 100vh;
+    overflow: hidden;
+  }
+  .top img{
+    position: relative;
+    width: 100%;
+    margin-top: -120px;
+    z-index: 10;
+  }
+  .option-section{
+    position: relative;
+    background-color: rgb(199, 225, 234);
+    margin-top: -350px;
+    height: 300px;
+    z-index: 100;
+  }
+  .option-section section{
+    position: absolute;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: -100px;
+    left: 15%;
+  }
+  .first-option, .second-option, .third-option{
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .first-option{
+    background-color: rgb(0, 110, 255);
+  }
+  .second-option{
+    background-color: rgb(135, 217, 244);
+  }
+  .third-option{
+    background-color: rgb(255, 213, 0);
+  }
+  .first-option h2, .second-option h2, .third-option h2{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .first-option p, .second-option p, .third-option p{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  .first-option button, .second-option button, .third-option button{
+    width: 70%;
+    margin: 0 auto;
+    border: none;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .link{
+    text-align: center;
+    padding-top: 150px;
+  }
+  .link span{
+    color: blue;
+  }
+</style>
+<div class="body">
+  <section class="top">
+    <img src="images_and_icons/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg" alt="">
+  </section>
+  <section class="option-section">
+    <section>
+      <div class="first-option">
+        <h2>Accounting & Tax</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo exercitationem eligendi commodi facilis a, eaque temporibus cumque labore itaque! Modi, perspiciatis repudiandae repellat sunt consequatur accusamus quaerat accusantium minima.</p>
+        <button>Read More</button>
+      </div>
+      <div class="second-option">
+        <h2>Business Planning</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo exercitationem eligendi commodi facilis a, eaque temporibus cumque labore itaque! Modi, perspiciatis repudiandae repellat sunt consequatur accusamus quaerat accusantium minima.</p>
+        <button>Read More</button>
+      </div>
+      <div class="third-option">
+        <h2>Employment Issues</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo exercitationem eligendi commodi facilis a, eaque temporibus cumque labore itaque! Modi, perspiciatis repudiandae repellat sunt consequatur accusamus quaerat accusantium minima.</p>
+        <button>Read More</button>
+      </div>
+    </section>
+    <p class="link">Image from <span>Unsplash</span></p>
+  </section>
+</div>
