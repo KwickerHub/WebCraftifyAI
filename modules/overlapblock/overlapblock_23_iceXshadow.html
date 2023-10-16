@@ -1,0 +1,95 @@
+<div>
+    <div class="container">
+        <div>
+            <div class="card" style="background-color: #1CBCEC;">
+                <div class="image">
+                    <img src="./images_and_icons/graduation-hat.svg" alt="grad" class="icon" >
+                </div>
+                <h2>SPECIAL EDUCATION</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Ipsum nostrum alias fuga adipisci distinctio sit voluptas optio animi explicabo 
+                obcaecati maiores porro enim at laudantium, maxime itaque harum vitae corrupti?</p>
+            </div>
+            <div class="card" style="background-color: #FF601F;">
+                <div class="image">
+                    <img src="./images_and_icons/study.svg" alt="study" class="icon" >
+                </div>
+                <h2>BOOK & LIBRARY</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Ipsum nostrum alias fuga adipisci distinctio sit voluptas optio animi explicabo 
+                obcaecati maiores porro enim at laudantium, maxime itaque harum vitae corrupti?</p>
+            </div>
+            <div class="card" style="background-color: #F7BF24;">
+                <div class="image">
+                    <img src="./images_and_icons/teach.svg" alt="teach" class="icon" >
+                </div>
+                <h2>CERTIFIED TEACHERS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Ipsum nostrum alias fuga adipisci distinctio sit voluptas optio animi explicabo 
+                obcaecati maiores porro enim at laudantium, maxime itaque harum vitae corrupti?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* div,h2,p {
+        outline: 1px solid salmon;
+    } */
+    .container {
+        margin: 2em;
+        margin-top: 0;
+        background-image: url(./images_and_icons/background_23.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        position: relative;
+    }
+
+    .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img{
+        height: 30%;
+        width: 30%;
+    }
+
+    .icon {
+        filter: invert(1);
+    }
+
+    .container>div {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1rem;
+        padding-bottom: 6%;
+    }
+
+    .card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(1px);
+        height: fit-content;
+        width: 300px;
+        padding: 30px;
+    }
+
+    .card h2, p {
+        font-family: Figtree;
+        color: white;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+</style>
