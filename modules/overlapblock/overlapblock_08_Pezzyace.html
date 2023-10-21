@@ -1,0 +1,106 @@
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .body{
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+  }
+  article{
+    position: absolute;
+    background-color: rgb(255, 146, 250);
+    height: 100vh;
+    width: 100vw;
+    top: 50%;
+  }
+  .container-one{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+  .one{
+    padding: 70px 20px;
+    background-color: rgb(162, 124, 62);
+  }
+  .one h2{
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .one p{
+    color: white;
+    line-height: 1.7;
+  }
+  .side-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .two, .three{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+  }
+  .two-one{
+    background-color: lightblue;
+    height: 200px;
+    width: 100%;
+  }
+  .two-two{
+    background-color: lightpink;
+    height: 100%;
+    width: 100%;
+  }
+  .three-one{
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .three-one p{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .three-two{
+    background-color: lightblue;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+<body>
+  <article></article>
+  <div class="body">
+    <div class="container-one">
+      <div class="one">
+        <h2>Build Your Amazing Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur rerum iure voluptatem minima consectetur adipisicing elit. Doloremque eaque praesentium autem placeat enim ipsa pariatur facere molestiae? Iste in quae, deleniti magni, numquam sed debitis ex, delectus temporibus eligendi neque porro. Quod doloremque temporibus architecto facilis animi incidunt amet, consectetur rerum iure voluptatem minima</p>
+      </div>
+      <div class="side-container">
+        <div class="two">
+          <div class="two-one"></div>
+          <div class="two-two"></div>
+        </div>
+        <div class="three">
+          <div class="three-one">
+            <p>We are creative agency</p>
+          </div>
+          <div class="three-two"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-two">
+      <div class="four"></div>
+      <div class="five">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quaerat accusamus similique eos explicabo deleniti esse. Ipsum exercitationem numquam eligendi eius non quaerat neque perferendis ab error minus tenetur blanditiis hic dolor ducimus, magnam sunt praesentium veniam quis deleniti molestiae ratione nesciunt officiis. Numquam, nisi aliquam.</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </div>
+</body>
