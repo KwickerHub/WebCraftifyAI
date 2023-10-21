@@ -11,10 +11,16 @@
   }
   article{
     position: absolute;
-    background-color: rgb(255, 146, 250);
+    background: url(images_and_icons/40ca0ee707da85a9ba8bdd65ada9f156.jpeg) no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     top: 50%;
+  }
+  article div{
+    background-color: #00000055;
+    height: 100%;
+    width: 100%;
   }
   .container-one{
     display: grid;
@@ -25,7 +31,7 @@
   }
   .one{
     padding: 70px 20px;
-    background-color: rgb(162, 124, 62);
+    background-color: rgb(201, 150, 68);
   }
   .one h2{
     margin-bottom: 20px;
@@ -48,34 +54,90 @@
     width: 100%;
   }
   .two-one{
-    background-color: lightblue;
-    height: 200px;
+    background: url(images_and_icons/img\ \(5\).jpeg) no-repeat;
+    background-size: cover;
+    height: 230px;
     width: 100%;
   }
   .two-two{
-    background-color: lightpink;
-    height: 100%;
+    background: url(images_and_icons/img\ \(6\).jpeg) no-repeat;
+    background-size: cover;
+    height: 230px;
     width: 100%;
   }
   .three-one{
     display: inline-flex;
     align-items: center;
-    height: 100%;
+    height:230px;
     width: 100%;
   }
   .three-one p{
-    font-size: 40px;
+    font-size: 45px;
     text-transform: uppercase;
     font-weight: 700;
+    color: rgb(234, 185, 106);
+    padding-right: 10px;
   }
   .three-two{
-    background-color: lightblue;
-    height: 100%;
+    background: url(images_and_icons/img\ \(4\).jpeg) no-repeat;
+    background-size: cover;
+    height: 230px;
     width: 100%;
+  }
+  .container-two{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  .four{
+    height: 230px;
+    width: 100%;
+    background: url(images_and_icons/img\ \(1\).jpeg) no-repeat;
+    background-size: cover;
+  }
+  .five{
+    padding: 10px 30px;
+    background-color: #fff;
+  }
+  .five p{
+    margin-bottom: 30px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .five button{
+    padding: 10px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .five button:hover{
+    background-color: #000;
+    color: #fff;
+  }
+  @media(width <= 540px){
+    .body{
+      width: 100%;
+      background: #fff;
+    }
+    .container-one{
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      grid-template-columns: 1fr;
+    }
+    .two, .three, .container-two{
+      grid-template-columns: 1fr;
+    }
+    .container-two{
+      padding-bottom: 50p;
+    }
   }
 </style>
 <body>
-  <article></article>
+  <article> <div></div></article>
   <div class="body">
     <div class="container-one">
       <div class="one">
