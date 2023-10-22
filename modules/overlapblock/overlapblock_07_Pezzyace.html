@@ -1,0 +1,149 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu:wght@500&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .top{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+  }
+  .design{
+    position: absolute;
+    width: 895px;
+    height: 795px;
+    top: -237px;
+    left: -231px;
+    background: linear-gradient(45deg, #3a0e63, #d631ff);
+    transform: rotate(56deg);
+    border-radius: 90px;
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding-top: 100px;
+  }
+  .left h1{
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 30px;
+  }
+  .left p{
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px;
+  }
+  .left button{
+    background-color: transparent;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .left button:hover{
+    background-color: white;
+    color: #d631ff;
+  }
+  .right{
+    width: 100%;
+  }
+  .right img{
+    width: 100%;
+  }
+  .bottom{
+    position: relative;
+    margin-top: -50px;
+    z-index: 60;
+    height: 200px;
+  }
+  .bottom-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: -100px 0 30px 0;
+    left: 10%;
+  }
+  .bottom-wrapper section{ 
+    background-color: white;
+    padding: 20px;
+  }
+  .bottom-wrapper section p{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+  }
+  .bottom-wrapper section button{
+    border-radius: 100%;
+    border: none;
+    background-color: transparent;
+  }
+  .bottom-wrapper section button img{
+    width: 40px;
+  }
+  .water h2{
+    color: rgb(55, 195, 255);
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .carved h2{
+    color: #c04a87;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .curved h2{
+    color:  #3a0e63;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+</style>
+<div>
+  <div class="design"></div>
+  <div class="top">
+    <div class="left">
+      <h1>Discover a world without limits</h1>
+      <p>It doesn't take a genius to see why switching to the Galaxy S9 | S9+ is a good idea.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="right">
+      <img src="images_and_icons/86.png" alt="">
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottom-wrapper">
+      <section class="water">
+        <h2>Water Tested</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem!</p>
+        <button><img src="images_and_icons/arrow-narrow-up-svgrepo-com.svg" alt=""></button>
+      </section>
+      <section class="carved">
+        <h2>Carved frame</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem!</p>
+        <button><img src="images_and_icons/arrow-narrow-up-svgrepo-com.svg" alt=""></button>
+      </section>
+      <section class="curved">
+        <h2>Curved Glass</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem!</p>
+        <button><img src="images_and_icons/arrow-narrow-up-svgrepo-com.svg" alt=""></button>
+      </section>
+    </div>
+  </div>
+</div>

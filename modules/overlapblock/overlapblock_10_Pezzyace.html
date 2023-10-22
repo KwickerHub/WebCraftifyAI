@@ -1,0 +1,119 @@
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: #e1e1e1;
+  }
+  .container{
+    width: 70%;
+    margin: 0 auto;
+    padding:  50px 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 70px;
+  }
+  .img-container{
+    background: url(images_and_icons/img\ \(7\).jpg) no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 100%;
+    margin: 70px 0 0 100px;
+    position: relative;
+    z-index: 50;
+  }
+  article{
+    position: absolute;
+    height: 75%;
+    width: 150px;
+    top: 80px;
+    left: 320px;
+    background-color: purple;
+    z-index: 10;
+  }
+  .card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 70px;
+    position: relative;
+    z-index: 30;
+  }
+  .card-one{
+    background-color: #cf233d;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+  .card-one h4{
+    Text-transform: uppercase;
+    letter-spacing: 2;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .card-one h1{
+    font-size: 25px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .card-one p{
+    color: #fff;
+  }
+  .card-one p span{
+    text-decoration: underline;
+  }
+  .card-two{
+    background-color: #fff;
+    padding: 35px 25px;
+    width: 85%;
+  }
+  .card-two h3{
+    color: #cf233d;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .card-two p{
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  .card-two button{
+    padding: 7px 23px;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .card-two button:hover{
+    background-color: #cf233d;;
+    color: #fff;
+    border-color: #cf233d;
+  }
+</style>
+<div>
+  <div class="container">
+    <div class="img-container">
+
+    </div>
+    <article>
+
+    </article>
+    <div class="card-container">
+      <div class="card-one">
+        <h4>Online shop</h4>
+        <h1>Ice cream delivery to all 50 states</h1>
+        <p>Images from <span>Freepik</span></p>
+      </div>
+      <div class="card-two">
+        <h3>Ice cream and vegan ice cream</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aut unde aliquam velit eligendi ipsa qui nihil ut ipsum inventore, fuga, ad accusamus. Unde, itaque! Ipsum vitae non obcaecati eligendi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolores voluptatum ab ipsam</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>

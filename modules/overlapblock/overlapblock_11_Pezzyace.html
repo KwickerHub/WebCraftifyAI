@@ -1,0 +1,100 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .top{
+    background: url(images_and_icons/img\ \(8\).jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-top: -180px;
+  }
+  .bottom{
+    background-color: white;
+    height: 350px;
+    position: relative;
+  }
+  .card-container{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    left: 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-top: -100px;
+    position: absolute;
+  }
+  .card-one, .card-two, .card-three{
+    padding: 70px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-one h2, .card-two h2, .card-three h2{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+  }
+  .card-one p, .card-two p, .card-three p{
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+  }
+  .card-one{
+    background-color: #604043;
+  }
+  .card-two{
+    background-color: #3da9c9;
+  }
+  .card-three{
+    background-color: #ae6f4e;
+  }
+  button{
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 0px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .link{
+    text-align: center;
+    padding: 280px 0 20px;
+  }
+  .link span{
+    text-decoration: underline;
+  }
+</style>
+<div>
+  <div class="container">
+    <div class="top"></div>
+    <div class="bottom">
+      <div class="card-container">
+        <div class="card-one">
+          <h2>Our mission</h2>
+          <p>Our Club promotes and friendship through running.</p>
+          <button>More</button>
+        </div>
+        <div class="card-two">
+          <h2>Traning</h2>
+          <p>Our trainers will keep you challenged and engaged</p>
+          <button>More</button>
+        </div>
+        <div class="card-three">
+          <h2>Membership</h2>
+          <p>$200/year (includes weekly workout and training shirt)</p>
+          <button>More</button>
+        </div>
+      </div>
+      <p class="link">images from <span>Freepik</span></p>
+    </div>
+  </div>
+</div>

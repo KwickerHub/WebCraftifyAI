@@ -1,0 +1,142 @@
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .top{
+      height: 100vh;
+      width: 100vw;
+      background: url(images_and_icons/fesrfmin.jpg) no-repeat;
+      background-size: contain;
+    }
+    .bottom{
+      background-color: white;
+      height: 400px;
+      position: relative;
+    }
+    .container{
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      left: 10%;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-top: -100px;
+      position: absolute;
+    }
+    .beginners, .advanced, .workshop, .tours{
+      padding: 35px 25px;
+    }
+    .beginners{
+      background-color: rgb(91, 91, 91);
+    }
+    .advanced{
+      background-color: rgb(144, 144, 144);
+    }
+    .workshop{
+      background-color: rgb(58, 135, 236);
+    }
+    .tours{
+      background-color: rgb(100, 151, 255);
+    }
+    .beginners h1, .advanced h1,  .workshop h1,  .tours h1{
+      color: white;
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+    .beginners h2, .advanced h2,  .workshop h2,  .tours h2{
+      color: white;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    .beginners p, .advanced p,  .workshop p,  .tours p{
+      color: white;
+      font-size: 15px;
+      margin-bottom: 30px;
+      width: 80%;
+    }
+    .beginners button, .advanced button,  .workshop button,  .tours button{
+      border: none;
+      border-radius: 100%;
+      background-color: white;
+      padding: 10px;
+    }
+    .beginners svg g path{
+      stroke: rgb(91, 91, 91);
+    }
+    .advanced svg g path{
+      stroke: rgb(144, 144, 144);
+    }
+    .workshop svg g path{
+      stroke: rgb(58, 135, 236);
+    }
+    .tours svg g path{
+      stroke: rgb(100, 151, 255);
+    }
+    .link{
+      text-align: center;
+      padding-top: 300px;
+    }
+    .link span{
+      color: rgb(58, 135, 236);
+    }
+    </style>
+<body>
+  <div class="body">
+    <div class="top"></div>
+    <div class="bottom">
+      <section class="container">
+        <div class="beginners">
+          <h1>01</h1>
+          <h2>For Beginners</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipi sicing elit. Quos distinctio quasi sequi.</p>
+          <button>
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>            
+              <g id="SVGRepo_iconCarrier"> <path d="M9 6L15 12L9 18" stroke="#ffffff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+            </svg>
+          </button>
+        </div>
+        <div class="advanced">
+          <h1>02</h1>
+          <h2>Advanced Level</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipi sicing elit. Quos distinctio quasi sequi.</p>
+          <button>
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>            
+              <g id="SVGRepo_iconCarrier"> <path d="M9 6L15 12L9 18" stroke="#ffffff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+            </svg>
+          </button>
+        </div>
+        <div class="workshop">
+          <h1>03</h1>
+          <h2>Workshops</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipi sicing elit. Quos distinctio quasi sequi.</p>
+          <button>
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>            
+              <g id="SVGRepo_iconCarrier"> <path d="M9 6L15 12L9 18" stroke="#ffffff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+            </svg>
+          </button>
+        </div>
+        <div class="tours">
+          <h1>04</h1>
+          <h2>Street Art Tours</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipi sicing elit. Quos distinctio quasi sequi.</p>
+          <button>
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>            
+              <g id="SVGRepo_iconCarrier"> <path d="M9 6L15 12L9 18" stroke="#ffffff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <p class="link">Image from <span>Freepik</span></p>
+    </div>
+  </div>
+</body>
+</html>

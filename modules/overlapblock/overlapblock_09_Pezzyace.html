@@ -1,0 +1,92 @@
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container h1{
+    font-size: 35px;
+    margin: 50px 0 10px;
+    text-align: center;
+  }
+  .container .details{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .wrapper{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+  .wrapper .card img{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .wrapper .card h3{
+    font-size: 18px;
+    font-weight: 700;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .wrapper .card p{
+    width: 90%;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 11px;
+  }
+  @media(width <= 540px) {
+    .wrapper{
+      width: 90%;
+      grid-template-columns: 1fr;
+    }
+  }
+  @media(541px <= width <= 768px) {
+    .wrapper{
+      width: 90%;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+<div>
+  <div class="container">
+    <h1>Latest Projects</h1>
+    <p class="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, odit.</p>
+    <div class="wrapper">
+      <div class="card">
+        <img src="images_and_icons/img (4).jpeg" alt="">
+        <h3>Designers are meant to be loved, not to be understood.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quae doloribus suscipit ullam minima ducimus!</p>
+      </div>
+      <div class="card">
+        <img src="images_and_icons/img (5).jpeg" alt="">
+        <h3>A digital studio crafting beautiful experiences.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quae doloribus suscipit ullam minima ducimus!</p>
+      </div>
+      <div class="card">
+        <img src="images_and_icons/img (6).jpeg" alt="">
+        <h3>Good design is a lot like clear thinking made visual.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quae doloribus suscipit ullam minima ducimus!</p>
+      </div>
+      <div class="card">
+        <img src="images_and_icons/img (3).jpeg" alt="">
+        <h3>Good design is a lot like clear thinking made visual.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quae doloribus suscipit ullam minima ducimus!.</p>
+      </div>
+      <div class="card">
+        <img src="images_and_icons/img (2).jpeg" alt="">
+        <h3>We combine smart design with rich craft technology.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quae doloribus suscipit ullam minima ducimus!</p>
+      </div>
+      <div class="card">
+        <img src="images_and_icons/img (1).jpeg" alt="">
+        <h3>Design is the conscious effort to impose a meaningful order.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quae doloribus suscipit ullam minima ducimus!</p>
+      </div>
+    </div>
+  </div>
+</div>
