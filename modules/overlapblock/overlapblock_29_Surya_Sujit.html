@@ -6,8 +6,7 @@
         <div class="at"></div>
         <div class="main"></div>
         <div class="TRX">
-          TRX <br>  
-          TRAINING</div>
+          TRX TRAINING</div>
         <div class="text-1 ">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae nam labore omnis aperiam dolore qui aut possimus maiores ipsum accusantium dicta quia sint, repudiandae veniam, nobis placeat, vero asperiores nesciunt maxime cum! Et pariatur corporis iusto ad ab explicabo deleniti?
           <br>
@@ -31,12 +30,16 @@
     font-family: 'Poppins', sans-serif;
   }
   .show {
-    width: 90vw;
-    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* width: 85vw; */
+    height: 100vh;
   }
 
   .container {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: grid;
     grid-template-columns: 0.5fr 0.6fr 0.9fr 2fr 1.6fr 0.4fr;
@@ -52,6 +55,7 @@
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   }
 
   .at{
@@ -85,12 +89,20 @@
     grid-area: 4 / 2 / 6 / 4;
     background-color: rgb(243, 70, 27);
     color: whitesmoke;
-    font-size: 3rem;
+    font-size: clamp(0.5vh, 3rem, 4vw);
     object-fit: contain;
     display: grid;
     align-items: end;
     padding: 0.5rem;
     font-weight: bold;
+    word-wrap: break-word;
+  }
+
+  @media screen and (max-width: 768px) {
+  .TRX {
+    width: 100%; 
+    height: auto; 
+  }
   }
 
   .main {
