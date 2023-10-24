@@ -1,0 +1,45 @@
+<div class="image-container">
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+        <image x="0" y="0" width="100%" height="100%" xlink:href="images_and_icons/reshot-icon-basketball-court-6QRLMAG4UH.svg" />
+        <text x="100" y="50" text-anchor="middle" alignment-baseline="middle" fill="#fff" font-size="26">Let's Play</text>
+        <text x="100" y="15" text-anchor="middle" alignment-baseline="middle" fill="#fff" font-size="20" transform="rotate(-90 100 100)">Red</text>
+        <text x="100" y="15" text-anchor="middle" alignment-baseline="middle" fill="#fff" font-size="20" transform="rotate(90 100 100)">Blue</text>
+        <text x="100" y="150" text-anchor="middle" alignment-baseline="middle" fill="blue" font-size="26" id = "link">Start!!!</text>
+        </a>
+    </svg>
+</div>
+
+<style>
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #link:hover{
+        cursor: pointer;
+    }
+
+</style>
+
+<script>
+    const Link = document.getElementById("link");
+    Link.addEventListener("click", function() {
+        window.location.href = "https://poki.com/en/g/basketball-legends-2020";
+    });
+</script>
