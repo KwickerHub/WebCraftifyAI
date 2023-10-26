@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Illustration & Art Guide</title>
+        <style>
+            body {
+                background-image: url('https://via.placeholder.com/1200x800');
+                background-size: cover;
+                color: white;
+                font-family: sans-serif;
+                background-repeat: no-repeat;
+            }
+
+            .illustration-art-guide {
+                position: relative;
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                text-align: center;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .illustration-art-guide img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .header-img-text {
+                position: absolute;
+                font-size: 5rem;
+                font-weight: bold;
+                padding-top: 40rem;
+                text-transform: uppercase;
+                animation: fadeIn 2s ease-in-out;
+            }
+
+            .outline-before-text {
+                position: absolute;
+                background-color: #FFA500;
+                margin-top: 26rem;
+                width: 200px;
+                height: 20px;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="illustration-art-guide">
+            <div class="outline-before-text"></div>
+            <div class="header-img-text">
+                Illustration <br>& Art Guide
+            </div>
+        </div>
+    </body>
+
+</html>
