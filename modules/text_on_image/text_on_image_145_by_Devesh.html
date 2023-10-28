@@ -1,0 +1,155 @@
+<div id="container">
+  <p id="heading1">SITE IS CURRENTLY</p>
+  <h1 id="heading2">BREWING</h1>
+  <h2 id="heading3">YOUR COFFEE</h2>
+  <p id="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor
+  </p>
+  <button id="button">READ MORE</button>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500&display=swap");
+
+  #container {
+    background-image: url("./images_and_icons/Background_145.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  #container * {
+    margin: 14px;
+  }
+
+  #heading1 {
+    font-family: "Montserrat", Trebuchet MS, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+
+  #heading2 {
+    font-family: "Bebas Neue";
+    font-size: 104px;
+  }
+
+  #heading3 {
+    font-size: 86px;
+    padding-bottom: 86px;
+  }
+
+  #text {
+    font-size: 18px;
+  }
+
+  #button {
+    --color: #e0e0e0;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+  }
+
+  #button::before,
+  #button::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+  }
+
+  #button::before {
+    top: -1em;
+    left: -1em;
+  }
+
+  #button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+
+  #button:hover::before,
+  #button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+
+  #button:hover {
+    color: rgb(10, 25, 30);
+  }
+
+  #button:active {
+    filter: brightness(0.8);
+  }
+
+  @media screen and (max-width: 768px) {
+    #container * {
+      margin: 10px 15px;
+    }
+    #heading1 {
+      font-size: 22px;
+    }
+    #heading2 {
+      font-size: 52px;
+    }
+    #heading3 {
+      font-size: 60px;
+      padding-bottom: 56px;
+    }
+    #text {
+      font-size: 16px;
+    }
+    #button {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    #container * {
+      margin: 10px 15px;
+    }
+    #heading1 {
+      font-size: 18px;
+    }
+    #heading2 {
+      font-size: 40px;
+    }
+    #heading3 {
+      font-size: 52px;
+      padding-bottom: 36px;
+    }
+    #text {
+      font-size: 14px;
+    }
+    #button {
+      font-size: 14px;
+    }
+  }
+</style>
