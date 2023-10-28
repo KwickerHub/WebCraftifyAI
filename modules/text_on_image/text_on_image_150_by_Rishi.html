@@ -1,0 +1,74 @@
+<div>
+    <section id="home">
+        <p>Welcome to Mytourstravel</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad quae repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+        <button id="book">Book Now</button>
+    </section>
+</div>
+<style>
+
+    #home{
+    display: flex;
+    flex-direction: column;
+    /* padding: 31px 200px; */
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 100vh; */
+    /* position: relative; */
+
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('./images_and_icons/bg.jpg') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home span{
+    color: black;
+    text-align: center;
+    
+    font-size: 1.8rem;
+    padding: 12px;
+    
+
+}
+
+#home p{
+    color: black;
+    text-align: center; 
+    font-size: 3.8rem;
+    font-family: 'bree serif',serif;
+    padding-top: 12px;
+    margin-top: 150px;
+}
+
+#book{
+    padding: 4px 8px;
+    border-radius: 9px;
+    margin: 8px;
+    font-size: 26px;
+    cursor: pointer;
+    background-color: rgb(197, 238, 238);
+}
+
+@media screen and (max-width: 768px) {
+    #home p{
+        font-size: 2.8rem;
+    }
+    #home span{
+        font-size: 1.2rem;
+    }
+    #book{
+        font-size: 1.2rem;
+    }
+}
+</style>
