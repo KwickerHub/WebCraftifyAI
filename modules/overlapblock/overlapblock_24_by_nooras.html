@@ -1,0 +1,84 @@
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .body{
+      background-color: rgb(199, 225, 234);
+      height: 100vh;
+      overflow: hidden;
+    }
+    .top img{
+      position: relative;
+      width: 100%;
+      margin-top: -100px;
+      z-index: 10;
+    }
+    .option-section{
+      position: relative;
+      background-color: rgb(199, 225, 234);
+      margin-top: -350px;
+      height: 300px;
+      z-index: 100;
+    }
+    .option-section section{
+      position: absolute;
+      width: 70%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      margin-top: -100px;
+      left: 15%;
+    }
+    .first-option, .second-option, .third-option{
+      padding: 20px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .first-option{
+      background-color: rgb(0, 110, 255);
+    }
+    .second-option{
+      background-color: rgb(247, 0, 0);
+    }
+    .third-option{
+      background-color: rgb(255, 213, 0);
+    }
+    .first-option h2, .second-option h2, .third-option h2{
+      text-align: center;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .first-option p, .second-option p, .third-option p{
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+  </style>
+  <div class="body">
+    <section class="top">
+      <img src="images_and_icons/24_by_nooras.jpg" alt="">
+    </section>
+    <section class="option-section">
+      <section>
+        <div class="first-option">
+          <img width="80" height="80" src="https://img.icons8.com/dotty/80/FFFFFF/camera.png" alt="camera"/>
+          <h2>Why Us?</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo exercitationem eligendi commodi facilis a, eaque temporibus cumque labore itaque!</p>
+        </div>
+        <div class="second-option">
+          <img width="80" height="80" src="https://img.icons8.com/external-others-phat-plus/64/FFFFFF/external-aeroplane-airport-outline-others-phat-plus.png" alt="external-aeroplane-airport-outline-others-phat-plus"/>
+          <h2>Plan & Book</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo exercitationem eligendi commodi facilis a, eaque temporibus cumque labore itaque!</p>
+        </div>
+        <div class="third-option">
+          <img width="80" height="80" src="https://img.icons8.com/external-ddara-lineal-ddara/64/FFFFFF/external-Bag-pack-gaming-gambling-ddara-lineal-ddara.png" alt="external-Bag-pack-gaming-gambling-ddara-lineal-ddara"/>
+          <h2>Holiday Tours</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo exercitationem eligendi commodi facilis a, eaque temporibus cumque labore itaque!</p>
+        </div>
+      </section>
+    </section>
+  </div>
