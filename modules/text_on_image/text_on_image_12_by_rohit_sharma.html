@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Illustration & Art Guide</title>
+        <script src="https://kit.fontawesome.com/52994bef05.js" crossorigin="anonymous"></script>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-image: url('./images_and_icons/background12.jpg');
+                background-size: cover;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                background-repeat: no-repeat;
+            }
+
+            .main-header {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .header-content h3 {
+                text-align: center;
+                font-size: 50px;
+                padding-block: 20px;
+            }
+
+            .header-content p {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .header-button button {
+                padding-inline: 20px;
+                padding-block: 10px;
+                font-size: 15px;
+                border-radius: 10px;
+                border: none;
+                margin-inline: 10px;
+                margin-block: 30px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            .left-btn {
+                background: rgb(206, 146, 4);
+                color: #fff;
+
+            }
+
+            .left-btn:hover {
+                color: rgb(255, 255, 255);
+                background: none;
+                border: 2px solid rgb(206, 146, 4) !important;
+                cursor: pointer;
+
+            }
+
+
+
+            .right-btn {
+                color: rgb(255, 255, 255);
+                background: none;
+                border: 2px solid rgb(206, 146, 4) !important;
+
+            }
+
+            .right-btn:hover {
+                color: rgb(255, 255, 255);
+                background: rgb(206, 146, 4);
+
+                cursor: pointer;
+
+            }
+
+            .header-cards-list {
+                display: flex;
+                gap: 3%;
+            }
+
+            .card {
+                background-color: rgb(206, 146, 4);
+                padding-inline: 40px;
+                padding-block: 20px;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .card i {
+                font-size: 30px;
+                padding-block: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main-header">
+            <div class="header-content">
+                <h3>Where can I camp</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta voluptates qui esse fuga. Lorem
+                    ipsum dolor sit amet</p>
+            </div>
+            <div class="header-button">
+                <button class="left-btn">Know More</button>
+                <button class="right-btn">Book Now</button>
+            </div>
+            <div class="header-cards-list">
+                <div class="card">
+                    <i class="fa-brands fa-old-republic"></i>
+                    <p>First</p>
+                </div>
+                <div class="card">
+                    <i class="fa fa-land-mine-on"></i>
+                    <p>Second</p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-galactic-senate"></i>
+                    <p>Third</p>
+                </div>
+                <div class="card">
+                    <i class="fa fa-jedi"></i>
+                    <p>Fourth</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
