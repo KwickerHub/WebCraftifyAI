@@ -1,62 +1,68 @@
-<div class="content">
-    <p class="white-text small-text">para1</p>
-    <p class="white-text medium-text">para2</p>
-    <p class="white-text large-text">para3</p>
+<div class="module-container">
+    <div class="content">
+        <p class="white-text small-text">para1</p>
+        <p class="white-text medium-text">para2</p>
+        <p class="white-text large-text">para3</p>
+    </div>
+    <!-- change the path for your use-->
+    <img src="assets/img/Ellipse (1).png" alt="" class="top-left-image"> 
+    <img src="assets/img/banner.png" alt="" class="image-right-bottom">
 </div>
-<!-- change the path for your use-->
-<img src="path1" alt="" class="top-left-image"> 
-<img src="path2" alt="" class="image-right-bottom">
 
 <style>
-    body {
-        
-        background-color: #FFC0BD; /* or any color uset */
+    .module-container {
+        width: 100%; /* fits any parent tag */
+        background-color: #FFC0BD;
         font-family: Arial, sans-serif;
-        color: #333;
     }
-   .top-left-image {
-        width: 280px; 
-        height: auto; 
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        z-index: 1; 
+
+    .top-left-image {
+        width: 280px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
-   .image-right-bottom {
+
+    .image-right-bottom {
         position: absolute;
         bottom: 10px;
         right: 10px;
-        width: 700px; 
+        width: 700px;
         opacity: 0.9;
         z-index: 0;
     }
-  
-  .white-text {
+
+    .white-text {
         color: white;
         margin: 20px;
     }
+
     .small-text {
         font-size: 14px;
-         z-index:3;
+        z-index: 3;
     }
 
     .medium-text {
         font-size: 18px;
-        z-index:3;
+        z-index: 3;
     }
 
     .large-text {
         font-size: 24px;
-        z-index:3;
+        z-index: 3;
     }
+
     .content {
         display: flex;
         flex-direction: column;
-        justify-content: center; 
-        align-items: center;     
-        height: 100vh;   
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 </style>
+
 
 <script>
     // YOUR SCRIPT if any
