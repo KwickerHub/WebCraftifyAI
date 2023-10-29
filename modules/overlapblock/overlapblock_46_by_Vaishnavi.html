@@ -1,0 +1,47 @@
+<style>
+    body {
+        background-image: url(images_and_icons/background.svg);
+    }
+
+    .main {
+        height: auto;
+        width: 100%;
+        /* background-color: white; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 100px;
+    }
+
+    .box {
+        height: 150px;
+        width: 150px;
+        margin: 20px;
+        /* background-color: black; */
+        z-index: 1;
+    }
+
+    .second {
+        position: relative;
+        height: 200px;
+        width: 80%;
+        margin: 20px;
+        /* background-color: red; */
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+<div class='main'>
+    <div class='first'>
+        <img src='modules/overlapblock/images_and_icons/image_vaishnavi.jpeg' alt='Image 1'>
+        <img src='modules/overlapblock/images_and_icons/image_vaishnavi.jpeg' alt='Image 2'>
+    </div>
+    <img src='modules/overlapblock/images_and_icons/image_vaishnavi.jpeg' alt='Image 3' class='second'>
+</div>
