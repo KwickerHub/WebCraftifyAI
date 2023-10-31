@@ -1,0 +1,53 @@
+﻿Kwickerhub Website Redesign
+
+## Introduction
+This pull request presents a UI/UX redesign of the Kwickerhub website. 
+## Design Overview
+The Kwickerhub website serves as a drag-and-drop web design tool that helps developers and designers build websites more efficiently and reduce development.
+
+The primary objective of this redesign is to enhance the overall user experience, make it more flexible, professional, and user-friendly. 
+
+Full-screen and immersive:* Developers and designers love to have the entire screen to themselves, so we want our new dashboard to fill the entire browser window.
+*Professional and polished:* Our current use of colors on the dashboard page is not very professional, so we're looking for a redesign that will give our dashboard a more polished and sophisticated look.
+
+## Design Process
+This involved:
+- Using the carried out research overview provided by client, to understand potential user's needs and preferences.     Conducting competitive analysis.
+- Wireframing and prototyping to visualize the proposed changes.
+- Due to time limitations (there wasn't enough usability testing but additional testing will be conducted as time goes by and the needed iterations will be implemented in the design)
+
+## Design Rationale
+The redesign focuses on providing designers with a flexible website layout while enhancing usability and accessibility. The color palette and typography were chosen to ensure a friendly, more professional look.
+
+## Design Assets
+Text-Roboto, Space Grotesque, Inter.
+Colors: can be seen in local variables of files
+- Link to Figma design: https://www.figma.com/file/339QiWed710DvzjHPry2jb/Kwickerhub?type=design&mode=design&t=dx5zfnrPICNAur20-1
+- Wireframes and prototypes demonstrating the new UI/UX.
+- Design assets and components 
+created using Figma.
+
+## Design Mockups
+Included in this pull request are wireframes and prototypes of web designer dashboard pages:
+- The Web design dashboard page [Wireframe & Prototypes]
+- Dashboard components and icons [Wireframes & Prototypes]
+
+## Design Guidelines
+The redesign utilizes the official logo and a new color scheme to maintain a friendly and professional brand identity across all pages of the website.
+
+## Design Implementation
+The technical implementation of this redesign involves changes to the HTML structure and the introduction of new CSS classes to facilitate the design. components and icons that can be exported to SVG, PNG, jpg formats as per needs. 
+I hope developers can successfully implement the new design.
+
+##Conclusion
+- If there is need for the redesign of the Home page, Profile page, and other components regarding these pages.......or any issues regarding the designs, please feel free to contact me..
+
+*The UI Design Dashboard page ( included in a separate PR).
+
+------------Goodluck with your project---------
+
+
+
+
+
+
