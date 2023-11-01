@@ -1,0 +1,97 @@
+<div id="container">
+    <h1 id="heading1">READY</h1>
+    <h1 id="heading1">TO WORK</h1>
+    <h1 id="heading1">WITH US ?</h1>
+    <p id="text">Images from Freepik</p>
+    <button id="button">Learn More</button>
+</div>
+
+
+<style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
+    body{
+        margin: 0;
+    }
+
+    #container{
+        width: 100vw;
+        height: 100vh;
+        background-image: url("images_and_icons/background_145.jpg");
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #heading1{
+        font-family: 'PT Sans',sans-serif;
+        font-size: 10rem;
+        color: red;
+        margin: 0;
+        text-shadow: 0px -2px 0px rgba(255,255,255,1);
+        margin-left: 100px;
+    }
+
+    #text{
+        text-underline-position: below;
+        font-family: 'PT Sans', sans-serif;
+        text-decoration: underline;
+        text-decoration-color: crimson;
+        font-size: 16px;
+        margin-left: 100px;
+    }
+
+    #button{
+        text-transform: uppercase;
+        width: fit-content;
+        padding: 10px;
+        color: white;
+        background-color: red;
+        border-color: red;
+        border-radius: 6px;
+        box-shadow: unset;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 24px;
+        margin-left: 100px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        #heading1 {
+            font-size: 8rem;
+            margin-left: 50px;
+        }
+        #text{
+            margin-left: 50px;
+        }
+        #button {
+            font-size: 16px;
+            margin-left: 50px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        #heading1 {
+            font-size: 7rem;
+            margin-left: 25px;
+        }
+        #text{
+            margin-left: 25px;
+        }
+        #button {
+            font-size: 16px;
+            margin-left: 25px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        #heading1 {
+            font-size: 5rem;
+        }
+        #button {
+            font-size: 16px;
+        }
+    }
+</style>
