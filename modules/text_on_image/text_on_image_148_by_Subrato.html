@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="background-div">
+    <img
+      class="image circle"
+      src="images_and_icons/background_148.png"
+      alt=""
+    />
+  </div>
+
+  <div class="foreground-div">
+    <div class="text">
+      <h1>YUMMY</h1>
+      <p>
+        I am very foodie. I love to eat and cook. The food gives us energy.
+        Without food, there is no life. There are so many dishes available in
+        today’s world some like Indian foods like Biryani, Dosa, Pav Bhaji, Pani
+        Puri etc whereas some like western foods like Pizza, Burger, Noodles
+        etc.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    margin: 0;
+  }
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    overflow: hidden;
+  }
+
+  .foreground-div {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 278.667 249.333'%3E%3Cpath d='M180.667 241.312c-2.934-.585-11.674-3.475-19.422-6.423-25.582-9.732-51.653-12.294-69.912-6.869-28.044 8.333-57.49-2.086-72.82-25.766-11.716-18.096-13.875-39.355-5.849-57.587 5.663-12.865 22.62-28.053 43.328-38.81 16.96-8.81 32.436-25.911 36.672-40.524 5.617-19.38 16.564-33.203 32.774-41.386 21.072-10.637 48.072-8.973 67.764 4.177 13.62 9.095 21.308 20.715 26.655 40.288 5.17 18.927 11.694 29.45 30.661 49.459 13.489 14.23 18.55 22.53 22.138 36.304 9.766 37.492-16.039 76.837-56.676 86.414-9.13 2.152-26.37 2.505-35.313.723z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    padding: 5vw;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .background-div {
+    position: absolute;
+  }
+
+  .text {
+    max-width: 25vw;
+    text-align: center;
+    color: white;
+    margin-left: 50%;
+    margin-top: 14vh;
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  .image {
+    height: 400px;
+    width: 400px;
+    z-index: 1;
+    margin-right: 33vw;
+    margin-bottom: 18vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    .foreground-div {
+      height: 350px;
+      width: 350px;
+    }
+    .image {
+      height: 250px;
+      width: 250px;
+      margin-right: 38vw;
+    }
+    .text {
+      max-width: unset;
+      font-size: small;
+      margin-left: 15vw;
+      margin-top: 10vh;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .container {
+      padding: 24px;
+    }
+    .background-div {
+      margin-top: -30%;
+    }
+    .foreground-div {
+      width: calc(100% - 85px);
+      margin-left: -20%;
+      padding: 30px;
+    }
+    .text {
+      max-width: unset;
+    }
+    .image {
+      max-height: 200px;
+      max-width: 200px;
+    }
+  }
+</style>
