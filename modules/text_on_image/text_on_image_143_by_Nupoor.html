@@ -1,0 +1,129 @@
+<div class="container">
+    <div class="container__text">
+        <div class="line"></div>
+        <h1>Buy & Sell</h1>
+        <h1>Crypto</h1>
+        <p>Invest in Crypto</p>
+        <div class="container__form">
+            <input type="text" placeholder="Enter your email ID"/>
+            <button>SUBSCRIBE</button>
+        </div>
+    </div>
+    <div class="container__img">
+        <img src='./images_and_icons/image_143.png'/>
+    </div>
+</div>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    .container {
+        background-color: rgb(13, 13, 119);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        color:  #b79b00;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .container__text {
+        width: 50%;
+        padding: 20px;
+        margin-left: 100px;
+    }
+
+    .line {
+        width: 180px;
+        height: 3px;
+        background-color: #b79b00;
+    }
+    
+    .container__text > h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 96px;
+    }
+
+    .container__form {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        text-align: center;
+    }
+
+    .container__form input {
+        padding: 10px;
+        border: 3px solid #d7bb18;
+        background-color: transparent;
+        border-radius: 5px;
+        outline: none;
+        margin: 10px 0px;
+    }
+
+    .container__form input:focus {
+        border: 4px solid #937f0d;
+    }
+
+    .container__form button {
+        margin: 10px 0px;
+        font-size: 16px;
+        background-color: #b79b00;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .container__form button:hover{
+        transform: scale(1.05);
+        background-color: #937f0d;
+    }
+
+    .container__img {
+        width: 50%;
+    }
+    
+    .container__img img {
+        width: 70%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .container__text > h1 {
+            font-size: 80px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .container__text > h1 {
+            font-size: 60px;
+        }
+        .container__text {
+            margin-left: 50px;
+        }
+        .container__form {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        .container {
+            flex-direction: column;
+        }
+        .container__text, .container__img {
+            margin: 0;
+            width: 80%;
+        }
+        .container__img {
+            text-align: center;
+        }
+        .container__form {
+            width: 100%;
+        }
+    }
+</style>
