@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Roboto+Slab:wght@400;500;900&display=swap');
+
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+
+    #container {
+        background-image: url('./images_and_icons/medium-shot-man-wearing-vr-glasses.jpg');
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        font-family: 'Roboto Slab', serif;
+
+    }
+
+
+    #container * {
+        margin: 20px;
+    }
+
+    #inner-container-1 {
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        box-shadow: 9px 5px 10px 3px rgba(6, 9, 6, 0.4);
+        backdrop-filter: blur(10px);
+        margin-top: 80px;
+        text-align: left;
+        width: 85%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #inner-container-2 {
+        overflow: hidden;
+        width: 85%;
+        backdrop-filter: blur(10px);
+        margin-top: 14vw;
+        border-radius: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        text-align: right;
+    }
+
+    #divider {
+        border-top: 4px solid #fff;
+        margin-top: -12;
+        width: 100px;
+        margin-left: 127px;
+
+    }
+
+    #heading3 {
+        font-size: 65px;
+        letter-spacing: 2px;
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: -15px;
+    }
+
+    #text {
+        text-align: left;
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    
+
+    ::-webkit-scrollbar {
+        width: 0.1px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #3498dbc5;
+        /* Set the color of the scrollbar thumb */
+        border-radius: 6px;
+        /* Set the border radius of the thumb */
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+        /* Set the color of the scrollbar track */
+    }
+
+    /* For Firefox */
+    /* Note: Firefox uses its own scrollbar pseudo-elements */
+    * {
+        scrollbar-width: thin;
+        /* Set the width of the scrollbar */
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #3498dbd1;
+        /* Set the color of the scrollbar thumb */
+        border-radius: 6px;
+        /* Set the border radius of the thumb */
+    }
+
+    *::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+        /* Set the color of the scrollbar track */
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        #container {
+            font-size: 80%;
+        }
+
+        #heading3 {
+            font-size: 40px;
+        }
+
+        #text {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        #container * {
+            margin: 10px 15px;
+        }
+
+        #heading3 {
+            font-size: 52px;
+        }
+
+        #text {
+            font-size: 14px;
+        }
+
+        #inner-container-2 {
+            text-align: center;
+            background-color: transparent;
+        }
+    }
+</style>
+
+<body>
+    <div id="container">
+
+        <div id="inner-container-1">
+            <h1 id="heading3">Innovation in the IT industry</h1>
+            <p id="text">Anam Mahi ❤️</p>
+            <div id="divider"></div>
+        </div>
+
+
+        <div id="inner-container-2">
+            <h3>IT INDUSTRY INNOVATION</h3>
+            <h3>DISCOVER IT</h3>
+            <h3>LATEST POSTS</h3>
+            <h3>ABOUT US</h3>
+        </div>
+
+    </div>
+    
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector("#inner-container-1"), {
+            max: 25,
+            speed: 400
+        });
+        VanillaTilt.init(document.querySelector("#inner-container-2"), {
+            max: 25,
+            speed: 400
+        });
+        // Get the scrollbar element
+        const scrollbar = document.querySelector('.gradient-scrollbar');
+
+        // Listen for the scroll event
+        scrollbar.addEventListener('scroll', () => {
+            // Calculate the percentage scrolled
+            const scrolledPercentage = (scrollbar.scrollTop / (scrollbar.scrollHeight - scrollbar.clientHeight)) * 100;
+
+            // Set the gradient color based on the scroll position
+            scrollbar.style.scrollbarColor = `transparent transparent, linear-gradient(to right, #ff7e5f ${scrolledPercentage}%, #4e54c8 ${scrolledPercentage}%)`;
+        });
+
+    </script>
+</body>
+
+</html>
