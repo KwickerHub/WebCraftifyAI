@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('./images_and_icons/sample.jpg'); /* Replace with the path to your image */
+      background-size: contain; /* Ensure the entire image is visible without stretching */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Do not repeat the background image */
+      color: black; /* Set text color to black */
+      font-family: 'Arial', sans-serif; /* Choose a suitable font */
+      padding: 20px; /* Add padding to the body as needed */
+      margin: 0; /* Remove default margin to ensure the background covers the entire viewport */
+      height: 100vh; /* Set the height to cover the full viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Align content to the left */
+    }
+
+    .content {
+      max-width: 800px; /* Limit the width of the content */
+      text-align: left; /* Align text to the left */
+      margin-left: 100px; /* Add left margin to the content */
+      padding: 100px 20px 100px; /* Reduce top padding to move the text up */
+    }
+
+    .content h1 {
+      font-family: 'Times New Roman', Times, serif; /* Set the font to Times New Roman */
+      font-size: 30px;
+    }
+
+    .content h1:nth-child(2) {
+      font-family: 'Calibri', sans-serif; /* Set the font to Calibri for the second h1 element */
+      font-size: 30px; /* Increase font size for the second h1 element */
+    }
+
+    .content h1:nth-child(n+3) {
+      font-family: 'Arial', sans-serif; /* Set the font to Arial for the third and subsequent h1 elements */
+      font-size: 30px; /* Set font size for the third and subsequent h1 elements */
+    }
+
+    .button {
+      display: inline-block; /* Display as an inline-block to allow for padding */
+      background-color: #996515; /* Set button background color to dark yellow */
+      color: white; /* Set button text color to white */
+      padding: 10px 20px; /* Add padding to the button */
+      border: none; /* Remove button border */
+      border-radius: 15px; /* Increase border-radius for more curve */
+      font-size: 16px; /* Set button text size */
+      text-decoration: none; /* Remove default underline for anchor tags */
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Add color change transition */
+    }
+
+    .button:hover {
+      background-color: #d2a26b; /* Change background color on hover */
+    }
+  </style>
+  <title>Add text to a background</title>
+</head>
+<body>
+
+<div class="content">
+ 
+  <h1>LEARN ANYTIME, ANYWHERE</h1>
+  <h1>LANGUAGE</h1>
+  <h1>LEARNING</h1>
+  <h1>ONLINE</h1>
+  <a href="#" class="button">Join Now</a>
+
+</div>
+
+</body>
+</html>
