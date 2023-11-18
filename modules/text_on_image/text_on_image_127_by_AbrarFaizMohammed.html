@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online University</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
+          
+        body{
+            background-image: url("./images_and_icons/bacjgroundImage127.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Nunito', sans-serif;
+        }
+        .main-container{
+             position: absolute;
+             top:60%;
+             left: 50%;              
+             transform: translate(-50%,-50%);
+             color: white;
+             background:transparent;
+             justify-content: center;
+             text-align: center;
+        }
+        .pageTitle{
+            width: 400px;            
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin:0 auto;     
+            background:transparent;
+        }
+        .coursesTitle{
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: #e6e6e6;
+            margin-top: 20px;;
+        }
+        .buttions-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 5px;            
+            margin-top: 30px;
+        }        
+        .course:hover{
+            background-color: #ebebeb;
+        }
+        .course{
+            width: max-content;
+            height: 25px;
+            background-color: #ffb433;
+            border-radius: 20px;
+            padding:10px;
+            color: black;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .coursesInformation-container{
+          margin-top: 75px;
+        }
+/* Design for mobile */
+        @media only screen and (max-width:431px)
+        {
+            body{
+                background-image: url("./images_and_icons/backgroundImage127-mobile.png");
+            }
+            .buttions-container{
+                display: flex;
+                flex-direction:column;
+            }
+            .course{
+                margin:0 auto;
+            }
+            .pageTitle{          
+                width: 385px;            
+                font-size: 2.19rem;
+            }
+        }
+    /*Design for ipad*/
+    @media only screen and ((max-width:1280px) and (min-width:430px))
+    {
+        body{
+            background-image: url("./images_and_icons/backgroundImage127-mobile.png");
+        }
+        .buttions-container{
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="pageTitle">Online University Of In-Demand Professions</h1>
+        <div class="coursesInformation-container">
+        <h3 class="coursesTitle">Our Courses</h3>
+        <div id="btnContainer" class="buttions-container">
+            <div id="btn1" class="course">FullStack Development</div>
+            <div id="btn2" class="course">Artificial Intelligence</div>
+            <div id="btn3" class="course">Business Administration</div>
+            <div id="btn4" class="course">Healthcare Administration</div>
+        </div>
+    </div>
+    </div>
+    
+<script>
+   var courseBtn1 = document.getElementById("btn1");
+   var courseBtn2 = document.getElementById("btn2");
+   var courseBtn3 = document.getElementById("btn3");
+   var courseBtn4 = document.getElementById("btn4");
+
+   courseBtn1.addEventListener('click',()=>{
+    console.log(courseBtn1.innerText);
+   });
+   courseBtn2.addEventListener('click',()=>{
+    console.log(courseBtn2.innerText);
+   });
+   courseBtn3.addEventListener('click',()=>{
+    console.log(courseBtn3.innerText);
+   });
+   courseBtn4.addEventListener('click',()=>{
+    console.log(courseBtn4.innerText);
+   });
+
+</script>
+</body>
+</html>
