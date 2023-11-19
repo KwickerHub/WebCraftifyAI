@@ -1,0 +1,72 @@
+<div>
+    <div class="container">
+        <div class="foreground-div">
+            <div class="text">
+                <h1><span class="explore">EXPLORE WISDOM</span></h1>
+                <p>
+                    "Books are a uniquely portable magic." - Stephen King
+                    <br>
+                    Dive into the world of knowledge and imagination through the pages of a good book.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        background-repeat: no-repeat;
+        background-image: url("https://source.unsplash.com/800x600/?books");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .foreground-div {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text {
+        color: rgb(250, 252, 252);
+        background-color: rgba(7, 7, 7, 0.5);
+        padding: 20px;
+        border-radius: 20px;
+        line-height: 2.5;
+        overflow: auto;
+    }
+
+    .explore {
+        color: #d7f3bb;
+        line-height: 3.5;
+    }
+
+    .text h1, .text p {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .text {
+            font-size: small;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .container {
+            padding: 24px;
+        }
+
+        .foreground-div {
+            padding: 2vw;
+        }
+    }
+</style>
