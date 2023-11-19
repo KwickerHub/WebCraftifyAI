@@ -1907,7 +1907,7 @@ function duplicate_element(elem, ref) {
     getElementStyleDetails(elemId);
     getElementAttrDetails(elemId);
     selectCreated(elemId, tag_name);
-  }
+  } 
 }
 
 function clone_element(elem) {
@@ -1946,7 +1946,7 @@ function duplicate_children(elem, ref) {
   var ref = ref ? ref : secElem.parentElement;
   var mainParent = clone_element(secElem);
   count_children = secElem.childElementCount;
-
+  
   if (ref.textContent.indexOf("This is the main dashboard arena") > -1) {
     ref.innerHTML = "";
     ref.appendChild(mainParent, ref);
@@ -1973,6 +1973,11 @@ function duplicate_children(elem, ref) {
     }
   }
 }
+document.addEventListener("keydown", function (event) {
+  if (event.ctrlKey && event.key === "d") {
+    duplicate_children();
+  }
+});
 
 function showSettingsPage() {
   document.getElementById("the_settings_section_page").style.display = "block";
