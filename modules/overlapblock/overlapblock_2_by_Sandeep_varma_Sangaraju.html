@@ -73,6 +73,35 @@
             top: 90%; /* Adjust this value as needed to move the text down */
             left: 50%;
         }
+        @media screen and (max-width: 1024px) {
+            .service-blocks-container {
+                top: 50%; 
+                width: 90%; 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .service-block {
+                width: 100%; 
+                margin: 0 0 20px; 
+                
+                
+            }
+        }
+
+        
+        @media screen and (max-width: 600px) {
+            .service-block {
+                padding: 10px; 
+            }
+            .footer-text {
+                font-size: 1em; 
+                padding: 15px 0; 
+                position: relative; 
+                top: initial; 
+                left: initial; 
+                transform: none; 
+            }
+        }
     </style>
 </head>
 <body>
