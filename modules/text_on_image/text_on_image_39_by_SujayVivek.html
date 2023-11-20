@@ -1,0 +1,94 @@
+<div class="entire-container">
+    <div class="background-image">
+        <img src="./images_and_icons/background-image39.jpg" alt="">
+    </div>
+    <div class="box-text-content">
+         <div class="titlePart"><h2>About Studio</h2></div>
+        <div class="descPart">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga hic iure provident aspernatur recusandae praesentium iusto qui dolorem assumenda? Optio, iste. Distinctio numquam nihil enim libero voluptatibus doloribus, perferendis minima deserunt rem totam eligendi excepturi aut perspiciatis quas corrupti neque quaerat sed eos quasi ex atque. Cumque, repellendus distinctio. Nemo?</div>
+        <button>Click Here</button>
+    </div>
+    
+</div>
+<style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+    .background-image img{
+        width: 100%;
+        height: 100%;
+    }
+    .box-text-content{
+        /* color: white; */
+        position: absolute;
+        top:25vh;
+        width: 30vw;
+        /* margin: 40px; */
+        margin-left: 90px;
+        
+    }
+    .box-text-content h2{
+        font-size: 40px;
+        font-weight: 800;
+
+    }
+
+    .box-text-content .descPart{
+        text-align: left;
+        line-height: 18px;
+        margin-bottom: 40px;
+        font-size: 18px;
+        font-weight: 300 ;
+    }
+    .box-text-content button{
+        color: white;
+        /* font-size: 3px; */
+        background-color: rgba(0, 225, 255, 0.541);
+        border-radius: 8px;
+        /* border: 2px solid black ;
+         */
+        box-shadow: 2px 5px black;
+         /* transform: scale(2); */
+        height: 30px;
+        width: 90px;
+    }
+    .box-text-content .button:hover{
+        /* box-shadow: 5px 5px gray; */
+    }
+    .background-image{
+        /* url('./images_and_icons/background-image39.jpg'); */
+        /* background-size: cover; */
+      /* max-height: 100vh; */
+       
+         -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+    .entire-container{
+        background-color: rebeccapurple;
+        /* background-image: url('./images_and_icons/background-image39.jpg'); */
+        /* background-image: url('./images_and_icons/background-image39'); */
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        /* -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
+    }
+    .background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+    z-index: 1; /* Ensure this pseudo-element is above other content */
+    pointer-events: none; /* Allow interaction with the underlying elements */
+}
+
+
+
+</style>
