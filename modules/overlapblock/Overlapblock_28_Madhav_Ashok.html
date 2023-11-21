@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Site</title>
+  <style>
+    body {
+      background-image: url('./images_and_icons/Bg5.jpg');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      color: #000000;
+    }
+
+    .images-container {
+      position: relative;
+      margin-top: 50px;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+    }
+
+    .image1 {
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .image2 {
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .image3 {
+      top: 50px;
+      left: 350px; 
+      z-index: 3;
+    }
+
+    .image4 {
+      top: 70px;
+      left: 400px; 
+      z-index: 4;
+    }
+
+    .line-text {
+      font-size: 60px;
+      margin-top: -300px;
+      margin-right: 40%;
+    }
+
+    .paragraph {
+      font-size: 18px;
+      margin-top: -50px;
+      margin-right: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="images-container">
+    <img src="./images_and_icons/Bg1.jpeg" alt="Image 1" class="image1">
+    <img src="./images_and_icons/Bg0.jpg" alt="Image 2" class="image2">
+    <img src="./images_and_icons/bg3.jpg" alt="Image 3" class="image3">
+    <img src="./images_and_icons/Bg4.jpeg" alt="Image 4" class="image4">
+  </div>
+  <p class="line-text">Explore the Distant Corners of the world!</p>
+  <p class="paragraph">Traveling opens doors to new cultures, breathtaking landscapes, and unforgettable experiences. It's a journey that broadens horizons, fuels curiosity, and creates lasting memories. Whether exploring historic landmarks, immersing oneself in diverse traditions, or simply savoring the beauty of nature's wonders, travel encompasses a world of discovery. It's a chance to embrace the unknown, connect with people from different walks of life, and find inspiration in the unfamiliar. Traveling isn't just about reaching destinations; it's about the transformative journey that enriches the soul and leaves an indelible mark on one's life.!</p>
+</body>
+</html>
