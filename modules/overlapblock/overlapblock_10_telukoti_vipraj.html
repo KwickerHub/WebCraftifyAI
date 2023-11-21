@@ -1,0 +1,178 @@
+<div id="container">
+  <!-- <div id="card-container"> -->
+  <h1 id="heading">Discover a world without limits</h1>
+  <div id="description">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor
+    </p>
+    <button id="read-more-button">Learn More</button>
+  </div>
+  <div id="cards-container">
+    <div id="card">
+      <h1 id="feature-heading-1">Water Tested</h1>
+      <p id="feature-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor
+      </p>
+      <p id="navigation-button">&#8594;</p>
+    </div>
+    <div id="card">
+      <h1 id="feature-heading-2">Curved Frame</h1>
+      <p id="feature-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor
+      </p>
+      <p id="navigation-button">&#8594;</p>
+    </div>
+    <div id="card">
+      <h1 id="feature-heading-3">Curved Glass</h1>
+      <p id="feature-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor
+      </p>
+      <p id="navigation-button">&#8594;</p>
+    </div>
+  </div>
+  <!-- </div> -->
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+
+  #container {
+    background-image: url("images_and_icons/image_vipraj_1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #heading {
+    font-size: 24px;
+    margin-bottom: 0;
+    color: white;
+  }
+
+  #description {
+    font-size: 12px;
+    margin-top: 10px;
+    width: 70%;
+    color: white;
+  }
+
+  #read-more-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    font-size: 14px;
+    border: 3px solid white;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  #cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20%;
+
+    & #card {
+      width: 25%;
+      background-color: white;
+      padding: 20px;
+      text-align: left;
+    }
+
+    & #feature-heading-1 {
+      color: #004f92;
+      font-size: 24px;
+    }
+
+    & #feature-heading-2 {
+      color: #ff0090;
+      font-size: 24px;
+    }
+
+    & #feature-heading-3 {
+      color: darkorchid;
+      font-size: 24px;
+    }
+
+    & #feature-description {
+      color: black;
+    }
+
+    & #navigation-button {
+      font-size: 48px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #container * {
+      margin: 10px 15px;
+    }
+
+    #heading {
+      font-size: 20px;
+    }
+
+    #cards-container {
+      margin: 20px;
+    }
+
+    #card {
+      width: 25%;
+    }
+
+    #description {
+      font-size: 12px;
+    }
+
+    #read-more-button {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    #container * {
+      margin: 10px 15px;
+    }
+
+    #heading1 {
+      font-size: 16px;
+    }
+
+    #cards-container {
+      margin: 20px;
+    }
+
+    #card {
+      width: 25%;
+    }
+
+    #description {
+      font-size: 10px;
+    }
+
+    #read-more-button {
+      font-size: 14px;
+    }
+  }
+</style>
