@@ -1,0 +1,131 @@
+<div id="container">
+    <div id="inner-container">
+        <h2 id="heading2" style="font-weight: bolder;">vision</h2>
+        <p id="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum. 
+        </p>
+        <p style="color: white;
+        font-size: 18px;letter-spacing: 1.5px;margin-bottom: 17px;">image from <a href="https://www.freepik.com" class="freepik-link" target="_blank">Freepik</a></p>
+        <button id="button">LIRE LA SUITE</button>
+    </div>
+    
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Vision&display=swap');
+
+body {
+  font-family: 'Vision', montserrate;
+}
+    
+    #container {
+        background-image: url('./images_and_icons/bg_67.jpeg');
+        height: 120%;
+        width: 100%;
+        color: black;
+        background-size: cover;
+    }
+
+   
+    #inner-container{
+        font-family: sans-serif;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 19%;
+        bottom: 20%;
+        left: 7%;
+        color: white;
+    }
+
+    #heading2 {
+        font-family: montserrate, sans-serif;
+        width: 30%;
+        font-weight: bold;
+        color: #f1a40e;
+        font-size: 75px;
+        text-align: left;
+        text-decoration: solid;
+        margin-bottom: 25px;
+        
+    }
+    .freepik-link {
+        text-decoration: none;
+        color: #F1A40E; 
+        padding: 0px; 
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
+        padding-left: 0;
+        margin-bottom: 17px;
+        
+    }
+    #inner-container p:nth-of-type(2){
+        margin-right: 0;
+        padding-right: 0;
+    }
+   
+    #text {
+        max-width: 620px;
+        color: white;
+        font-size: 18px;
+        text-align: justify;
+        line-height: 150%;
+        letter-spacing: 1.7px;
+        margin-bottom: 17px;
+       
+    }
+
+    #button {
+        padding: 18px 30px;
+        background-color: transparent;
+        font-size: 17px;
+        width: 225px;
+        border: 3px solid #F1A40E;
+        cursor: pointer;
+        background-color: #f1a40e;
+        color: white;
+        font-weight: bold;
+        margin-top: 17px;
+        letter-spacing: 2.7px;
+        border-radius: 50px;
+
+    }
+    
+
+    @media screen and (max-width: 768px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        
+        #heading2 {
+            font-size: 52px;
+        }
+       
+        #text {
+            font-size: 16px;
+        }
+        #button {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        #heading2 {
+            font-size: 40px;
+        }
+       
+        #text {
+            font-size: 14px;
+        }
+        #button {
+            font-size: 14px;
+        }
+    }
+</style>
