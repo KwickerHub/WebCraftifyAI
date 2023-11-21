@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>THOUGHTFUL<br>COLLOBORATIVE<br>& <br>INSIGHTFUL</h1>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2><img class="Future" src="./images_and_icons/future_45.svg"></h2>
+                <h3>Future</h3>
+                <p>Excepteur sint occaecat</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2><img class="Building" src="./images_and_icons/building_45.svg"></h2>
+                <h3>Building</h3>
+                <p>Excepteur sint occaecat</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2><img class="Industry" src="./images_and_icons/factory_45.svg"></h2>
+                <h3>Industry</h3>
+                <p>Excepteur sint occaeca</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:monospace;
+        }
+        img
+        {
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+        h1
+        {
+            font-size: 80px;
+            font-style: italic;
+            background: linear-gradient(to right, orange, white);
+            -webkit-background-clip: text;
+            color: transparent;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background: url(./images_and_icons/background_45.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            opacity: 0.85;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100%;
+            margin: 0; 
+        }
+        
+        .container
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            z-index: 1;
+        }
+        .container .card
+        {
+            position: relative;
+            width: 280px;
+            height: 400px;
+            margin: 30px;
+            box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+            border-radius: 15px;
+            background: rgba(255,255,255,0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            border-left: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+        }
+        .container .card .content
+        {
+            padding: 20px;
+            text-align: center;
+            transform: translateY(257px);
+            opacity: 1;
+            transition: 0.5s;
+        }
+        .container .card:hover .content{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        .container .card .content h2, img
+        {
+            position: absolute;
+            top: -66px;
+            right: 30px;
+            font-size: 8em;
+            color: rgba(255,255,255,0.1);
+            pointer-events: none;
+        }
+        .container .card .content h3{
+            font-size: 2.7em;
+            font-weight: bolder;
+            color:white;
+            z-index: 1;
+        }
+        .container .card .content p
+        {
+            font-size: 1em;
+            font-weight: bolder;
+            color: black;
+            
+        }
+        .container .card .content a{
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            margin-top: 15px;
+            background-attachment: white;
+            color: black;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+    
+</body>
+</html>
