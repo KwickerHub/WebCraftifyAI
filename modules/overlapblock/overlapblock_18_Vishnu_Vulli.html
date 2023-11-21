@@ -26,6 +26,8 @@
             flex: 1;
             background-image: url('./images_and_icons/OLB_18.jpeg');
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             width: 100%;
             height: 75%;
         }
@@ -48,7 +50,7 @@
             border-radius: 10px;
         }
 
-        .container2 {
+        /* .container2 {
             flex: 1;
             display: flex;
             justify-content: center;
@@ -58,12 +60,26 @@
             position: absolute;
             top: 60%;
             width: 100%;
+        } */
+
+        .container2 {
+            flex: 1;
+            flex-direction: row;
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            top: 60%;
+            gap: 20px;
+            width: 100%;
         }
         
         .end{
             text-align: center;
             padding: 50px;
-            position: absolute;
+            position: relative;
             top: 85%;
             width: 100%;
         }
@@ -72,7 +88,24 @@
             color: black;
         }
 
+        @media (max-width: 900px) {
+        .container2 {
+            grid-template-columns: 100%; /* Single column layout on smaller screens */
+        }
 
+        .container1{
+            background-size: cover;
+        }
+
+        .textBox1,
+        .textBox2,
+        .textBox3 {
+            height: auto; /* Allow the height to adjust based on content */
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+    }
         
     </style>
 </head>
