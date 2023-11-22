@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table</title>
+<!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+<style>.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.pricing-table th, .pricing-table td {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.pricing-table th {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.pricing-table td {
+  background-color: #ffffff;
+}
+
+/* .pricing-table tr:nth-child(even) td {
+  background-color: white;
+} */
+.pricing-table tr:nth-child(odd) td {
+  background-color: white;
+}
+.pricing-table td:first-child {
+  text-align: left;
+}
+
+.button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #cc8400;
+}
+
+/* Other styles remain the same, only adding the hover effect here */
+.pricing-table tr:hover {
+  background-color: #ffa500; /* This is the orange color for the hover effect */
+   /* Changing text color to white for better contrast */
+}
+
+/* To prevent the header from changing color on hover, reset its background */
+.pricing-table thead tr:hover {
+  /* background-color: #f8f8f8; This is the original color of the header */ 
+  background-color: darkgrey;
+  color: #333; /* Resetting text color to original */
+}
+.header-section {
+  text-align: center;
+  background-color: white; /* Or any color you want for the background */
+  padding: 20px;
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+  margin-bottom: 30px; /* To add some space between the header and the pricing table */
+}
+
+.header-section h1 {
+  color: #333;
+  margin: 0 0 10px; /* No margin at the top, default margin on the sides, and 10px margin at the bottom */
+}
+
+.header-section p {
+  color: #666;
+  margin-bottom: 20px; /* Space before the button */
+}
+
+.free-trial-button {
+  padding: 10px 25px;
+  background-color: #ffa500; /* Orange color for the button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.free-trial-button:hover {
+  background-color: #cc8400; /* A darker orange for hover effect */
+}
+
+.button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: white; /* Set button background to white */
+  color: #333; /* Set text color to dark */
+  border: 1px solid #ffa500; /* Orange border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+  background-color: #ffa500; /* Change background to orange on hover */
+  color: white; /* Change text color to white on hover */
+}
+.pricing-section {
+  padding: 3em; /* Increased padding to add more space inside the pricing-section */
+  margin: 3em auto; /* Adds space outside the pricing-section, and centers it horizontally */
+  max-width: calc(100% - 6em); /* Adjusts the maximum width to allow for padding on the sides */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+.features-heading td {
+  font-weight: bold;
+  background-color: orange; /* Solid orange color */
+  border: 1px solid #ddd; /* Ensure the border is applied */
+}
+
+/* Additional styles to ensure borders are visible between cells */
+.pricing-table td {
+  border-right: 1px solid #ddd;
+}
+
+.features-heading td {
+  font-weight: bold;
+  background-color: #ffedd9; /* Light orange color */
+  color: #333; /* Dark text color for contrast */
+  border: 1px solid #ddd; /* Ensure the border is applied */
+}
+
+/* Additional styles to ensure borders are visible between cells */
+.pricing-table td {
+  border-right: 1px solid #ddd;
+}
+</style>
+<div class="header-section">
+  <h1>Pick a plan</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <button class="free-trial-button">start your free trial</button>
+</div>
+  
+<div class="pricing-section">
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Basic</th>
+        <th>Standard</th>
+        <th>Advanced</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monthly price</td>
+        <td><b>$29</b></td>
+        <td><b>$59</b></td>
+        <td><b>$139</b></td>
+      </tr>
+      <tr class="features-heading">
+        <td>FEATURES</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Users</td>
+        <td>1 full user</td>
+        <td>5 full users</td>
+        <td>Custom users</td>
+      </tr>
+      <tr>
+        <td>Unlimited read-only users</td>
+        <td>1,000 Email Previews</td>
+        <td>2,000 Email Previews</td>
+        <td>Custom Email Previews</td>
+      </tr>
+      <tr>
+        <td>Contacts</td>
+        <td>5 contacts per client</td>
+        <td>25 contacts per client</td>
+        <td>Unlimited contacts</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button class="button">Choose Plan</button></td>
+        <td><button class="button">Choose Plan</button></td>
+        <td><button class="button">Choose Plan</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
