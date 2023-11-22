@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharath's Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./images_and_icons/scattered-forcefields.svg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            color: black;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+		
+		h1,p{
+			animation: myFadeIn 3s ease-in-out;
+		}
+
+		#hidden-text{
+			opacity: 0;
+			font-size:1.2em;
+            transition: opacity 0.5s ease-in-out;
+		}
+		
+		#hidden-text.show{
+			opacity:1;
+			display:block;
+		}
+		
+        button {
+            padding: 12px 24px;
+            font-size: 1em;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 50px; 
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            margin-top: 20px;
+            animation: myFadeIn 2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: green;
+            color: white;
+            transform: scale(1.05); 
+        }
+		
+		@keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes myFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Page</h1>
+        <p>This is some centered text with styling on a beautiful background.</p>
+		<div id="hidden-text"></div>
+        <button onclick="myFunction()">Click me!</button>
+    </div>
+
+    <script>
+        function myFunction() {
+            var outputDiv = document.getElementById("hidden-text");
+            outputDiv.classList.toggle("show");
+            if (outputDiv.classList.contains("show")) {
+                outputDiv.textContent = "Click button again to hide text!";
+            } else {
+                outputDiv.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>
