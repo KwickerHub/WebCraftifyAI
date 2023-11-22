@@ -1,0 +1,110 @@
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 0%;
+            margin: 0%;
+            display: flex;
+        }
+
+        .bg-col {
+            background-color: #E3DAD1;
+            height: 100vh;
+            width: 40%;
+            margin-left: 35%;
+            position: fixed;
+            z-index: -1;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .butterfly-img {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .butterfly-img-2 {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            transform: translateX(-50%);
+            width: 20%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .text {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            height: 50%;
+            top: 5%;
+            left: 3%;
+            width: 30%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 3%;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            text-align: start;
+        }
+
+        .text button {
+            padding: 15px 40px;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: medium;
+            cursor: pointer;
+        }
+
+        .text label {
+            padding-top: 15px;
+            font-size: large;
+            font-weight: 500;
+            align-items: start;
+            padding-bottom: 15px;
+        }
+
+        .text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .text p {
+            font-size: small;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-col"></div>
+        <img class="background-image" src="https://source.unsplash.com/800x600/?butterfly" alt="Butterfly Theme Background">
+        <img class="butterfly-img" src="https://source.unsplash.com/800x600/?butterfly" alt="Butterfly">
+        <div class="text">
+            <label>Butterfly Wisdom</label>
+            <h1>Embrace Transformation And The Beauty Of New Beginnings.</h1>
+        </div>
+    </div>
+</body>
+
