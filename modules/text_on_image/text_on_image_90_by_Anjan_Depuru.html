@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page with Background Image</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .bg {
+            background-image: url('./images_and_icons/background_90.jpg'); /* Replace with your actual image file */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black; /* Adjusted text color for contrast */
+            text-align: center;
+            background-color: white; /* White background for content */
+            padding: 20px; /* Added padding */
+            border-radius: none; /* Optional: Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for depth */
+            max-width: 550px; /* Set a max-width for the content */
+            margin: auto; 
+
+        }
+
+        h1{
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .heading-part2 {
+            text-align: center; /* Center-align the second part of the heading */
+            display: block; /* Make it a block element */
+           
+        }
+
+        p{
+            font-size: medium;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            background-color: black;
+            border-radius: 2px;
+            padding: 15px 35px;
+            color: white;
+            border: none; /* Added to remove default border */
+            cursor: pointer; /* Changes cursor to indicate it's clickable */
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .content {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg">
+    <div class="content">
+        <h1>Increase your website<br><span class="heading-part2">traffic with us!</span></h1>
+        <p>Sample text. Click to Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Pharetra magna ac placerat vestibulum.</p>
+        <button class="button">Read More</button>
+    </div>
+</div>
+
+</body>
+</html>
