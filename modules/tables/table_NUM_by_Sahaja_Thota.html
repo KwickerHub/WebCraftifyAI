@@ -1,0 +1,158 @@
+<style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Georgia', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+  
+    .book-themed-table {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 1em;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      background-color: #ffffff;
+      color: #333333;
+      text-align: center;
+    }
+  
+    .book-themed-table thead tr {
+      background-color: #c8b49d; /* Light brown background for header row */
+      color: #ffffff;
+      font-size: large;
+      font-weight: bold;
+    }
+  
+    .book-themed-table th,
+    .book-themed-table td {
+      padding: 12px;
+      border-left: 1px solid #b3afaf;
+    }
+  
+    .FirstColumnHead {
+      background-color: #c8b49d; /* Light brown background for column header */
+      color: #ffffff;
+    }
+  
+    .SecondColumnHead {
+      background-color: #a86a42; /* Brownish background for column header */
+      color: #ffffff;
+    }
+  
+    .ThirdColumnHead {
+      background-color: #dcd0c0; /* Lighter brown background for column header */
+      color: #ffffff;
+    }
+  
+    .FourthColumnHead {
+      background-color: #9c6644; /* Darker brown background for column header */
+      color: #ffffff;
+    }
+  
+    .price1 {
+      font-size: x-large;
+      color: #a86a42; /* Brownish color for price text */
+    }
+  
+    .price2 {
+      font-size: x-large;
+      color: #9c6644; /* Darker brown color for price text */
+    }
+  
+    .price3 {
+      font-size: x-large;
+      color: #dcd0c0; /* Lighter brown color for price text */
+    }
+  
+    .tickMark {
+      color: #4caf50; /* Green color for tick mark */
+      font-size: x-large;
+      font-weight: bolder;
+    }
+  
+    .button {
+      background-color: #a86a42; /* Brownish button background */
+      border-radius: 24px;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: 'Georgia', serif;
+      font-size: 14px;
+      padding: 10px 22px;
+      text-decoration: none;
+    }
+  
+    .FirstColumn {
+      text-align: left;
+    }
+  
+    .book-icon {
+      font-size: 36px;
+      color: #a86a42; /* Brownish color for the book icon */
+    }
+  </style>
+  
+  <div>
+    <span class="book-icon">&#128214;</span>
+    <table class="book-themed-table">
+      <thead>
+        <tr>
+          <th class="FirstColumnHead">BOOK COMPARISON</th>
+          <th class="SecondColumnHead">PAPERBACK</th>
+          <th class="ThirdColumnHead">HARDCOVER</th>
+          <th class="FourthColumnHead">COLLECTOR'S EDITION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td class="FirstColumn">1st Month Management Cost</td>
+            <td>$ 400</td>
+            <td>$ 900</td>
+            <td>$ 1200</td>
+          </tr>
+          <tr>
+            <td class="FirstColumn">Following Month</td>
+            <td class="price1">$ 300</td>
+            <td class="price2">$ 700</td>
+            <td class="price3">$ 900</td>
+          </tr>
+          <tr>
+            <td class="FirstColumn">Delivery Time Frame</td>
+            <td>3-6 Months</td>
+            <td>3-6 Months</td>
+            <td>3-6 Months</td>
+          </tr>
+          <tr>
+            <td class="FirstColumn">Support 24/7</td>
+            <td>-</td>
+            <td class="tickMark">&#10004;</td>
+            <td class="tickMark">&#10004;</td>
+          </tr>
+          <tr>
+            <td class="FirstColumn">Certificate</td>
+            <td>-</td>
+            <td class="tickMark">&#10004;</td>
+            <td class="tickMark">&#10004;</td>
+          </tr>
+          <tr>
+            <td class="FirstColumn">Guaranteed Keywords Ranking</td>
+            <td>18</td>
+            <td>20</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td class="FirstColumn"></td>
+            <td><button class="button">Buy Now</button></td>
+            <td><button class="button">Buy Now</button></td>
+            <td><button class="button">Buy Now</button></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  
