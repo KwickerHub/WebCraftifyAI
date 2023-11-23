@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Schedule</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            text-align: center;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        .content h1 {
+            margin-bottom: 0px;
+            color: #3498db;
+        }
+
+        .content p {
+            width: 60%;
+            color: #34495e;
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .styled-table thead tr {
+            text-align: left;
+            font-size: large;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 20px;
+            border-left: 1px solid #bdc3c7;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #bdc3c7;
+        }
+
+        .DayColumnHead {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        .StudyColumnHead {
+            background-color: #e67e22;
+            color: #ffffff;
+        }
+
+        .NotesColumnHead {
+            background-color: #1abc9c;
+            color: #ffffff;
+        }
+
+        .TaskColumnHead {
+            background-color: #9b59b6;
+            color: #ffffff;
+        }
+
+        .FirstColumn {
+            text-align: left;
+        }
+
+        .tickMark {
+            color: #2ecc71;
+        }
+
+        .crossMark {
+            color: #e74c3c;
+        }
+
+        .circleMark {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Weekly Study Schedule</h1>
+            <p>Plan your study schedule for the week with dedicated time for computer science subjects.</p>
+        </div>
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th class="DayColumnHead">DAY</th>
+                    <th class="StudyColumnHead">SUBJECT</th>
+                    <th class="StudyColumnHead">STUDY TIME</th>
+                    <th class="NotesColumnHead">NOTES</th>
+                    <th class="TaskColumnHead">ADDITIONAL TASK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="FirstColumn">Monday</td>
+                    <td>Data Structures</td>
+                    <td>2 hours</td>
+                    <td>Review Linked Lists <span class="tickMark">&#10004;</span></td>
+                    <td>Prepare for quiz <span class="tickMark">&#10004;</span></td>
+                </tr>
+                <tr>
+                    <td class="FirstColumn">Tuesday</td>
+                    <td>Algorithms</td>
+                    <td>1.5 hours</td>
+                    <td>Solve practice problems <span class="circleMark">&#9711;</span></td>
+                    <td>Read Chapter 5 <span class="crossMark">&#10007;</span></td>
+                </tr>
+                <tr>
+                    <td class="FirstColumn">Wednesday</td>
+                    <td>Database Management</td>
+                    <td>2.5 hours</td>
+                    <td>Read Chapter 3 <span class="tickMark">&#10004;</span></td>
+                    <td>Work on group project <span class="crossMark">&#10007;</span></td>
+                </tr>
+                <tr>
+                    <td class="FirstColumn">Thursday</td>
+                    <td>Computer Networks</td>
+                    <td>2 hours</td>
+                    <td>Prepare for quiz <span class="circleMark">&#9711;</span></td>
+                    <td>Design webpage layout <span class="crossMark">&#10007;</span></td>
+                </tr>
+                <tr>
+                    <td class="FirstColumn">Friday</td>
+                    <td>Software Engineering</td>
+                    <td>1.5 hours</td>
+                    <td>Work on group project <span class="tickMark">&#10004;</span></td>
+                    <td>Review file systems <span class="crossMark">&#10007;</span></td>
+                </tr>
+                <tr>
+                    <td class="FirstColumn">Saturday</td>
+                    <td>Web Development</td>
+                    <td>2 hours</td>
+                    <td>Design webpage layout <span class="tickMark">&#10004;</span></td>
+                    <td>Prepare for quiz <span class="crossMark">&#10007;</span></td>
+                </tr>
+                <tr>
+                    <td class="FirstColumn">Sunday</td>
+                    <td>Operating Systems</td>
+                    <td>1.5 hours</td>
+                    <td>Review file systems <span class="circleMark">&#9711;</span></td>
+                    <td>Solve practice problems <span class="tickMark">&#10004;</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
