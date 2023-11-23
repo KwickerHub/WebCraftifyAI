@@ -1,0 +1,140 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="main-container">
+        <div class="textbox">
+            <h2 class="heading1">Mission and Vision</h2>
+            <p class="content1">Industry-leading products and customer service worldwide, 
+                with a demonstrated commitment to sustainability.</p>
+            <p class="link">Image from <a href="">Freepik</a></p>
+            <button id="button1">READ MORE</button>        
+        </div>    
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    body{
+        margin: 0px;
+    }
+    .main-container{
+        height: 100%;
+        width: 100%;
+        background-image: url("background_img_521.jpg");
+        background-size:cover ;
+    }
+
+    .textbox{
+        position: absolute;
+        height: 340px;
+        width: 460px;
+        background-color: white;
+        border-radius: 45px;
+        margin-top: 80px;
+        margin-left: 80px;
+        padding: 0px 25px 25px 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: left;
+
+    }
+
+    .heading1{
+        font-size: 45px;
+        font-weight: 800px;
+        text-align: left;
+
+    }
+
+    .content1{
+        font-weight: 200px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: -25px;
+    }
+
+    .link{
+        font-size: 21px;
+    }
+
+    #button1 {
+      height: 50px;
+      width: 180px;
+      margin-top: 20px;
+      color: white;
+      background-color: rgb(255, 115, 0);
+      padding: 2px 2px 2px 2px;
+      border-radius: 50px;
+      font-size: x-small;
+      font-weight: 600px;
+      border: none;
+      letter-spacing: 2px;
+    }
+
+    
+    @media screen and (max-width:1025px){
+        .main-container{
+            background-size: cover;
+            background-position: 40%;
+        }
+        .textbox{
+            margin: 80px;
+            height: 890px;
+            width: 560px;
+        }
+
+        .heading1{
+            font-size: 90px;
+        }
+
+        .content1{
+            font-size: 42px;
+            line-height: 60px;
+        }
+
+        .link{
+            font-size: 42px;
+        }
+
+        #button1{
+            width: 370px;
+            height: 110px;
+            font-size: 25px;
+            font-weight: 800;
+        }
+    }
+
+
+    @media screen and (max-width:431px){
+        .textbox{
+            position: absolute;
+            margin-left: 0px;
+            top:50px;
+            left: 65px;
+            right: 0;
+            bottom: 0;
+            height: 515px;
+            width: 240px;
+        }
+
+        .heading1{
+            font-size: 40px;
+        }
+
+        .content1{
+            margin-top: -10px;
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        .link{
+            font-size: 20px;
+        }
+
+        #button1{
+            width: 200px;
+            height: 70px;
+            font-size: 15px;
+            font-weight: 800;
+        }
+    }
+
+
+
+</style>
