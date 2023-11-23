@@ -1,0 +1,149 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="main-container">
+    <div class="imgcontainer">
+        <img src="background_img_511.png" class="img" alt="alternate_text">
+    </div>
+    <div class="textbox">
+        <h2 class="heading1">EXPLORE MORE WITH OUR AGENCY</h2>
+        <p class="content1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident.</p>
+        <button id="button1" onclick="displayValue()">LEARN MORE</button>        
+    </div>    
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+.main-container{
+    height: 100%;
+    width: 100%;
+    /* background-image: url("background_img_511.png"); */
+    background-color: #f0990c;
+    /* background-repeat:no-repeat;
+    background-position: 50% 0%; */
+}
+
+.imcontainer{
+    height: 100%;
+    width: 100%;
+}
+
+.img{
+    position: absolute;
+    height: 890px;
+    width: 610px;
+
+    background-size: contain;
+    top: 0;
+    left: 47%;
+    object-fit: cover;
+    /* object-position: center; */
+}
+
+.textbox{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-color: rgb(243, 219, 0);
+    top: 75px;
+    left: 75px;
+    border-left: solid 20px #248be7;
+    padding: 0px 25px 25px 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+
+}
+
+.heading1{
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: left;
+
+}
+
+.content1{
+    color: white;
+    font-weight: 200;
+    font-size: 23px;
+    line-height: 30px;
+    margin-top: -20px;
+}
+
+#button1 {
+  height: 70px;
+  width: 210px;
+  margin-top: 20px;
+  color: #248be7;
+  background-color: white;
+  padding: 2px 2px 2px 2px;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1025px){
+    .textbox{
+        z-index: 1;
+        height: 600px;
+        width: 500px;
+        top: 85px;
+        left: 85px;
+    }
+    .img{
+        z-index: 2;
+        left: 160px;
+        top:500px
+    }
+
+    .heading1{
+        font-size: 70px;
+    }
+
+    .content1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 431px){
+    .textbox{
+        z-index: 1;
+        height: 300px;
+        width: 260px;
+        top: 25px;
+        left: 30px;
+    }
+    .img{
+        z-index: 2;
+        height: 525px;
+        width: 400px;
+        left: 0px;
+        top:415px
+    }
+
+    .heading1{
+        font-size: 30px;
+    }
+
+    .content1{
+        font-size: 16px;
+    }
+    #button1{
+        height: 40px;
+        width: 170px;
+        font-size: 10px;
+        margin-top: 0px;
+    }
+}
+
+</style>
+<script>
+    function displayValue(){
+        alert("Hello Vamshi !!");
+    }
+</script>
