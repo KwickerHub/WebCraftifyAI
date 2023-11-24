@@ -1,105 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharath's Page</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('./images_and_icons/scattered-forcefields.svg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Arial', sans-serif;
-            color: black;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-		
-		h1,p{
-			animation: myFadeIn 3s ease-in-out;
-		}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url("images_and_icons/background_40.jpeg") no-repeat center center fixed;
+      background-size: cover; /* Cover the entire viewport */
+      background-position: center; /* Center the background image */
+      color: #fff; /* Set text color to white or another contrasting color */
+    }
 
-		#hidden-text{
-			opacity: 0;
-			font-size:1.2em;
-            transition: opacity 0.5s ease-in-out;
-		}
-		
-		#hidden-text.show{
-			opacity:1;
-			display:block;
-		}
-		
-        button {
-            padding: 12px 24px;
-            font-size: 1em;
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            margin-top: 20px;
-            animation: myFadeIn 2s ease-in-out;
-        }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
 
-        button:hover {
-            background-color: green;
-            color: white;
-            transform: scale(1.05); 
-        }
-		
-		@keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
+    h1 {
+      font-size: 48px;
+      line-height: 1.2;
+    }
 
-            100% {
-                opacity: 1;
-            }
-        }
+    p {
+      font-size: 24px;
+    }
 
-        @keyframes myFadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+    nav {
+      margin-top: 10px;
+    }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 20px;
+      color: #fff;
+      border: 2px solid #fff; /* Add a white border */
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: transparent; /* Set background color to transparent */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Page</h1>
-        <p>This is some centered text with styling on a beautiful background.</p>
-		<div id="hidden-text"></div>
-        <button onclick="myFunction()">Click me!</button>
-    </div>
 
-    <script>
-        function myFunction() {
-            var outputDiv = document.getElementById("hidden-text");
-            outputDiv.classList.toggle("show");
-            if (outputDiv.classList.contains("show")) {
-                outputDiv.textContent = "Click button again to hide text!";
-            } else {
-                outputDiv.textContent = "";
-            }
-        }
-    </script>
+  <section>
+    <h1>Join Accenture's <br>
+       virtual program for <br>
+        new perspectives</h1>
+    <nav>
+      <a href="#about">about us</a>|
+      <a href="#news">news</a>|
+      <a href="#reviews">reviews</a>|
+      <a href="#articles">articles</a>|
+      <a href="#future">#future</a>
+    </nav>
+    <br>
+    <button>LEARN MORE</button>
+  </section>
+
 </body>
 </html>
