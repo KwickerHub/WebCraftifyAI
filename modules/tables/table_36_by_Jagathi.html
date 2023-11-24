@@ -1,9 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Schedule</title>
+<div class="container">
+    <div class="grid-container">
+        <div class="grid-item" id="grid-item1">COLUMN I</div>
+        <div class="grid-item" id="grid-item2">COLUMN II</div>
+        <div class="grid-item" id="grid-item3">COLUMN III</div>
+        <div class="grid-item" id="grid-item4">COLUMN IIII</div>
+        <div class="grid-item" id="grid-item5">COLUMN IIIII </div>
+        <div class="grid-item" id="grid-item6">Item #1</div>
+        <div class="grid-item" id="grid-item7">Description</div>
+        <div class="grid-item" id="grid-item8">Description</div>
+        <div class="grid-item" id="grid-item9">Description</div>
+        <div class="grid-item" id="grid-item10">Description</div>
+        <div class="grid-item" id="grid-item11">Item #2</div>
+        <div class="grid-item" id="grid-item12">Description</div>
+        <div class="grid-item" id="grid-item13">Description</div>
+        <div class="grid-item" id="grid-item14">Description</div>
+        <div class="grid-item" id="grid-item15">Description</div>
+        <div class="grid-item" id="grid-item16">Item #3</div>
+        <div class="grid-item" id="grid-item17">Description</div>
+        <div class="grid-item" id="grid-item18">Description</div>
+        <div class="grid-item" id="grid-item19">Description</div>
+        <div class="grid-item" id="grid-item20">Description</div>
+        <div class="grid-item" id="grid-item21">Item #4</div>
+        <div class="grid-item" id="grid-item22">Description</div>
+        <div class="grid-item" id="grid-item23">Description</div>
+        <div class="grid-item" id="grid-item24">Description</div>
+        <div class="grid-item" id="grid-item25">Description</div>
+    </div>
     <style>
         .container {
             display: flex;
@@ -11,161 +33,54 @@
             justify-content: center;
             align-items: center;
             width: 100%;
+            height: 100vh;
         }
 
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            text-align: center;
-            flex-direction: column;
-            margin-bottom: 2rem;
-        }
-
-        .content h1 {
-            margin-bottom: 0px;
-            color: #3498db;
-        }
-
-        .content p {
-            width: 60%;
-            color: #34495e;
-        }
-
-        .styled-table {
-            border-collapse: collapse;
-            font-size: 0.9em;
-            font-family: sans-serif;
-            min-width: 90%;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-            background-color: #ecf0f1;
-            color: #2c3e50;
-            text-align: center;
+        .grid-container {
             margin-top: 2rem;
+            width: 70%; 
+            height: 170vh; 
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 0;
+            align-content: center;
         }
 
-        .styled-table thead tr {
-            text-align: left;
-            font-size: large;
+        .grid-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #d8d8d8;
+            color: #282B32;
         }
 
-        .styled-table th,
-        .styled-table td {
-            padding: 12px 20px;
-            border-left: 1px solid #bdc3c7;
+        #grid-item1,
+        #grid-item3,
+        #grid-item2,
+        #grid-item4,
+        #grid-item5 {
+            background-color: #4070EF;
+            color: white;
         }
 
-        .styled-table tbody tr {
-            border-bottom: 1px solid #bdc3c7;
+        #grid-item6,
+        #grid-item8,
+        #grid-item10,
+        #grid-item11,
+        #grid-item13,
+        #grid-item15,
+        #grid-item16,
+        #grid-item18,
+        #grid-item20,
+        #grid-item21,
+        #grid-item23,
+        #grid-item25 {
+            background-color: #f8faff;
         }
 
-        .DayColumnHead {
-            background-color: #3498db;
-            color: #ffffff;
-        }
-
-        .StudyColumnHead {
-            background-color: #e67e22;
-            color: #ffffff;
-        }
-
-        .NotesColumnHead {
-            background-color: #1abc9c;
-            color: #ffffff;
-        }
-
-        .TaskColumnHead {
-            background-color: #9b59b6;
-            color: #ffffff;
-        }
-
-        .FirstColumn {
-            text-align: left;
-        }
-
-        .tickMark {
-            color: #2ecc71;
-        }
-
-        .crossMark {
-            color: #e74c3c;
-        }
-
-        .circleMark {
-            color: #f39c12;
+        @media screen and (max-width: 770px) {
+            .grid-container {
+                width: 100%;
+            }
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <h1>Weekly Study Schedule</h1>
-            <p>Plan your study schedule for the week with dedicated time for computer science subjects.</p>
-        </div>
-
-        <table class="styled-table">
-            <thead>
-                <tr>
-                    <th class="DayColumnHead">DAY</th>
-                    <th class="StudyColumnHead">SUBJECT</th>
-                    <th class="StudyColumnHead">STUDY TIME</th>
-                    <th class="NotesColumnHead">NOTES</th>
-                    <th class="TaskColumnHead">ADDITIONAL TASK</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="FirstColumn">Monday</td>
-                    <td>Data Structures</td>
-                    <td>2 hours</td>
-                    <td>Review Linked Lists <span class="tickMark">&#10004;</span></td>
-                    <td>Prepare for quiz <span class="tickMark">&#10004;</span></td>
-                </tr>
-                <tr>
-                    <td class="FirstColumn">Tuesday</td>
-                    <td>Algorithms</td>
-                    <td>1.5 hours</td>
-                    <td>Solve practice problems <span class="circleMark">&#9711;</span></td>
-                    <td>Read Chapter 5 <span class="crossMark">&#10007;</span></td>
-                </tr>
-                <tr>
-                    <td class="FirstColumn">Wednesday</td>
-                    <td>Database Management</td>
-                    <td>2.5 hours</td>
-                    <td>Read Chapter 3 <span class="tickMark">&#10004;</span></td>
-                    <td>Work on group project <span class="crossMark">&#10007;</span></td>
-                </tr>
-                <tr>
-                    <td class="FirstColumn">Thursday</td>
-                    <td>Computer Networks</td>
-                    <td>2 hours</td>
-                    <td>Prepare for quiz <span class="circleMark">&#9711;</span></td>
-                    <td>Design webpage layout <span class="crossMark">&#10007;</span></td>
-                </tr>
-                <tr>
-                    <td class="FirstColumn">Friday</td>
-                    <td>Software Engineering</td>
-                    <td>1.5 hours</td>
-                    <td>Work on group project <span class="tickMark">&#10004;</span></td>
-                    <td>Review file systems <span class="crossMark">&#10007;</span></td>
-                </tr>
-                <tr>
-                    <td class="FirstColumn">Saturday</td>
-                    <td>Web Development</td>
-                    <td>2 hours</td>
-                    <td>Design webpage layout <span class="tickMark">&#10004;</span></td>
-                    <td>Prepare for quiz <span class="crossMark">&#10007;</span></td>
-                </tr>
-                <tr>
-                    <td class="FirstColumn">Sunday</td>
-                    <td>Operating Systems</td>
-                    <td>1.5 hours</td>
-                    <td>Review file systems <span class="circleMark">&#9711;</span></td>
-                    <td>Solve practice problems <span class="tickMark">&#10004;</span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+</div>
