@@ -1,92 +1,102 @@
-<style>
-    body {
-        margin: 0;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    .container {
-        height: 100%;
-        width: 100%;
-        background: url("images_and_icons/background_72.jpg") no-repeat center center fixed;
-        background-size: cover;
-        overflow: hidden;
-        margin: 0;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Information</title>
+    <style>
+        body {
+            text-align: center;
+            color: white; /* Set the default text color to white */
+            background: url("images_and_icons/background_72.jpg") no-repeat center center fixed;
+            background-size: cover; /* Set the background image to cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+        }
 
-    .header {
-        font-family: "Verdana", sans-serif;
-        text-shadow: 1px 1px 6px deepskyblue;
-        color: beige;
-        letter-spacing: 0.8px;
-    }
+        h1 {
+            font-size: 36px;
+            margin-top: 50px;
+            color: white; /* Set the text color to white */
+        }
 
-    .content-container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 2rem;
-    }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
 
-    .content-wrapper {
-        margin-bottom: 1.5rem;
-    }
+        section {
+            text-align: center; /* Center the text within the section */
+            margin: 20px;
+            width: 30%;
+            padding-right: 20px;
+            color: white; /* Set the text color to white */
+        }
 
-    .about-content {
-        text-align: center;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-            "Lucida Sans", Arial, sans-serif;
-        margin-bottom: 0.5rem;
-        font-size: 1.125rem;
-    }
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid white; /* Set the border color to white */
+        }
 
-    .read-more-btn {
-        margin-top: 1rem;
-        padding: 0.75rem;
-        border-style: none;
-        border-radius: 1.125rem;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background: linear-gradient(45deg, cyan, transparent);
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: bold;
-        color: darkgreen;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-            "Lucida Sans", Arial, sans-serif;
-        font-size: 1.25rem;
-    }
+        .learn-more-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white; /* Set the text color to white */
+            background-color: transparent; /* Set background color to transparent */
+            border: 2px solid white; /* Set border color to white */
+            border-radius: 20px; /* Set border-radius for a rectangular circle shape */
+            cursor: pointer;
+        }
 
-    .read-more-btn:hover {
-        background: linear-gradient(45deg, orange, transparent);
-        -webkit-transform: translateX(1px);
-        transform: translateX(1px);
-    }
+        /* Increase the font size of the sample text */
+        section p {
+            font-size: 18px;
+        }
+    </style>
+</head>
 
-    .content-title {
-        color: lightgray;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-            "Lucida Sans", Arial, sans-serif;
-        letter-spacing: 0.8px;
-    }
-</style>
+<body>
 
-<div class="container">
-    <div class="content-container">
-        <h1 class="header">LOVE WITH COLORS</h1>
-        <div class="content-wrapper">
-            <p class="about-content content-title">
-                THE SKY SPEAKS MANY COLORS
+    <h1>General information about <br> reserving with us</h1>
+
+    <div class="flex-container">
+        <section>
+            <h2>HOW TO RESERVE</h2>
+            <hr> <!-- Horizontal line below "How to reserve" -->
+            <p>
+                Sample text. Click to select the <br>
+                text box. Click again or double click <br>
+                to start editing the text.
             </p>
-            <p class="about-content">
-                This is a repository for the front end of the LOVE WITH COLOR project.
+            <button class="learn-more-button">LEARN MORE</button>
+        </section>
+
+        <section>
+            <h2>CAMPING TYPES</h2>
+            <hr> <!-- Horizontal line below "Camping types" -->
+            <p>
+                Sample text. Click to select the <br>
+                text box. Click again or double click <br>
+                to start editing the text.
             </p>
-            <p class="about-content">
-                The project delivers the LOVE WITH COLOR quotes.
+            <button class="learn-more-button">LEARN MORE</button>
+        </section>
+
+        <section>
+            <h2>SERVICES AND AMENITIES</h2>
+            <hr> <!-- Horizontal line below "Services and Amenities" -->
+            <p>
+                Sample text. Click to select the <br>
+                text box. Click again or double click <br>
+                to start editing the text.
             </p>
-        </div>
-        <button class="read-more-btn">
-            Read more
-        </button>
+            <button class="learn-more-button">LEARN MORE</button>
+        </section>
     </div>
-</div>
+
+</body>
+
+</html>
