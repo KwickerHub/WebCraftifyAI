@@ -1,0 +1,125 @@
+<div class="main-container">
+    <div class="inner-container">
+        <div class="container-1">
+            <div class="adjust1">
+                <h2 class="heading1">Who We Are</h2>
+                <p class="content1">Sample text. Click to select the text box. Click again or double click to start editing the text. 
+                  Nec ultrices dui sapien eget mi proin sed libero. Aliquam eleifend mi in nulla posuere. 
+                  Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare.</p>
+                <button id="button1" onclick="displayinfo()">LEARN MORE</button>        
+            </div>
+        </div>
+        <div class="container-2">
+            <img src="Img1_326_vamshi_Mummadi.jpg" alt="alternatetext" id="img1">
+        </div>
+        <div class="container-3">
+            <img src="Img2_326_vamshi_Mummadi.jpg" alt="alternatetext" id="img2">
+        </div>
+        <div class="container-4">
+            <div class="adjust2">
+                <h2>What We Do</h2>
+                <p>Aliquam eleifend mi in nulla posuere. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. 
+                  Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis.</p>
+                <p>Images from <a href="">Freepik</a></p>    
+            </div>
+        </div>    
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+    body{
+      overflow: hidden;
+    }
+    .main-container {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 40px;
+      bottom: 0px;
+      overflow: auto;
+    }
+  
+    .inner-container {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: grid;
+      grid-template-columns: 700px 700px;
+      gap: 15px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  
+    .container-1,
+    .container-2,
+    .container-3,
+    .container-4 {
+      height: 100%;
+      width: 100%;
+    }
+  
+    .adjust1,
+    .adjust2 {
+      position: relative;
+      justify-content: left;
+      margin: 45px 0px 0px 30px;
+      width: 90%;
+    }
+  
+    #img1,
+    #img2 {
+      width: 700px;
+      height: 300px;
+      border-radius: 30px;
+    }
+  
+    #button1 {
+      height: 50px;
+      width: 140px;
+      background-color: rgb(165, 233, 63);
+      padding: 2px 2px 2px 2px;
+      border-radius: 50px;
+      font-size: x-small;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+  
+    @media screen and (max-width: 1025px) {
+
+      body{
+        overflow: auto;
+      }
+
+      .main-container{
+        overflow: auto;
+      }
+      .inner-container {
+        width: 700px;
+        display: grid;
+        grid-template-rows: 550px 300px 300px 550px;
+        grid-template-columns: 1fr; 
+        justify-content: center; 
+        gap: 20px;
+        margin: 0px auto;
+      }
+      .container-1,
+      .container-4 {
+        width:100%;
+        font-size: 35px;
+      }
+  
+      .container-2,
+      .container-3 {
+        width: max-content;
+      }
+    }
+  </style>
+  <script>
+    function displayinfo(){
+      alert("Button click working!!");
+    }
+  </script>
+
