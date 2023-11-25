@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ice Cream Delivery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ececec; /* Adjust the background color as needed */
+  }
+  .container {
+    position: relative; /* Set the container to relative for absolute positioning of children */
+    width: 100%;
+    max-width: 960px; /* Adjust as needed */
+    margin: auto;
+    padding-top: 50px; /* Add some space at the top */
+  }
+  .shadow-box {
+    position: absolute;
+    width: 200px; /* Narrow width for the shadow */
+    height: 700px; /* Elongated height for the shadow */
+    background-color: #96a9bb; /* Grey color */
+    z-index: 1; /* Ensure it's behind other elements */
+    top: 60px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .image-section {
+    background-image: url('images_and_icons/ol10img.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 50%; /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
+    position: absolute;
+    left: -5%; /* Adjust as needed */
+    top: 100px; /* Adjust as needed */
+    z-index: 2;
+  }
+  .promo-section {
+    background-color: #e63946;
+    color: white;
+    padding: 1em;
+    width: 390px; /* Adjust width to match design */
+    height: 260px; /* Adjust height to make it square */
+    position: absolute;
+    left: 50%; /* Align with the right edge of the image section */
+    top: 30px;
+    z-index: 3; /* Above the shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+  }
+  .content-section {
+    background-color: white;
+    padding: 25px;
+    width: 60%;
+    height: 355px; /* Adjust as needed */
+    position: absolute;
+    left: 50%; /* Align with the right edge of the image section */
+    top: 380px; /* Adjust so it's lower than the promo-section */
+    z-index: 2; /* Same level as image, but it will naturally stack on top because it comes later in the HTML */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .content-section h2 {
+    margin-top: 40px;
+    color: #e63946;
+  }
+  .content-section p {
+    font-size: 16px;
+  }
+  .button {
+    border: 2px solid #090909;
+    background-color: white;
+    color: #0b0a0a;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="shadow-box"></div>
+  <div class="image-section">
+    <!-- Image is set as a background -->
+  </div>
+  <div class="promo-section">
+    <div>Online Shop</div> <!-- Additional line added here -->
+    <div>Ice cream delivery to all 50 states</div>
+  </div>  
+  <div class="content-section">
+    <h2>Ice Cream & Vegan Ice Cream</h2>
+    <p>Wholesome ingredients. Sustainable sourcing. Our concept empowers local artisans & farmers to reach a broader market and provides you with a dose of deliciousness. Artisan made with organic, non-GMO ingredients & handcrafted textures and flavors.</p>
+    <a href="#" class="button">Shop Now</a>
+  </div>
+</div>
+
+</body>
+</html>
