@@ -1,0 +1,91 @@
+<div style="background: url('/Users/vamsikrishnapasam/Downloads/p1.jpg') no-repeat center center; background-size: cover; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; text-align: right; padding-right: 10%;">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;900&display=swap');
+
+
+        .content {
+            color: #FFFFFF;
+            font-family: 'Open Sans', sans-serif;
+            /* Animation */
+            animation: slideIn 1s ease forwards;
+            padding: 0 2%; /* Add padding to ensure there is space from the border */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        
+
+ .title{
+    line-height: 1;
+    font-size: 5.5rem;
+    font-weight: 900; /* Keep this at the maximum weight supported by Open Sans */
+    color: #633be2 !important;
+    text-shadow:
+        -1px -1px 0 #633be2,
+         1px -1px 0 #633be2,
+        -1px  1px 0 #633be2,
+         1px  1px 0 #633be2; /* This text-shadow will create a thicker appearance */
+    -webkit-text-stroke: 1px #633be2;
+    margin: 20px 0;
+    max-width: 600px; /* Control the width to make the text wrap */
+    word-wrap: break-word; /* Ensure words can break and wrap */
+ }
+        .subtitle {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin: 20px 0;
+            color: #111111;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .freepik-link {
+            text-decoration: none;
+            border-bottom: 1px solid #FFFFFF;
+            transition: border-color 0.3s, text-decoration-color 0.3s;
+        }
+
+        .freepik-link:hover {
+            border-bottom: 1px solid red;
+        }
+
+        .learn-more-btn {
+            background-image: linear-gradient(to right, #23bdf3, #633be2);
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            /* Use the same animation as .content */
+            animation: slideIn 1s ease forwards;
+
+        }
+
+        .learn-more-btn:hover {
+            background-color: #5039d1;
+        }
+    </style>
+    
+    <div class="content">
+        <h1 class="title">WE CREATE MEANINGFUL BRANDS</h1>
+        <p class="subtitle">Images from <a href="https://www.freepik.com/vectors/background" class="freepik-link" target="_blank">Freepik</a></p>
+        <a href="#" class="learn-more-btn">LEARN MORE</a>
+    </div>
+</div>
+
+<script>
+    // No JavaScript is needed for the animation
+</script>
