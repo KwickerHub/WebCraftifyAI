@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 321</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 54px;
+      font-weight: bolder;
+      margin-bottom: 20px; /* Adjust the margin as needed */
+    }
+
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px 10px;
+      background-color: white;
+      padding: 10px;
+      padding-bottom: 40px;
+      text-align: center;
+      width: 90%; /* Increased width */
+      margin: 0 auto; /* Center the grid */
+      margin-bottom: 20px;
+      height: 50%;
+    }
+
+    .grid-item {
+      background-color: white;
+      border: 1px solid white;
+      padding: 30px;
+      font-size: 16px; /* Adjusted font size for better readability */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px; /* Adjust the value to control the roundness */
+      height: 200px; /* Adjust the height as needed */
+      width: 100%;
+      height: 100px;
+      margin: 20px 0;
+      box-sizing: border-box;
+    }
+
+    .grid-item img {
+      width: auto;
+      height: auto; /* Make the image fill the container */
+      max-width: 100%; /* Ensure the image doesn't stretch beyond its original size */
+      max-height: 100%
+      /*border-radius: 50%; Make the image circular */
+      border-radius: 15px; /* Optional: Match the border-radius of the container */
+      object-fit: cover; /* Ensure the image covers the entire container */
+      margin-bottom: 10px;
+}
+
+    .yellow {
+      background-color: #f1c40f;
+      color: white; /* Added text color for better visibility */
+      height: 250px; /* Adjust the height as needed */
+      border-radius: 15px; /* Optional: Match the border-radius of the container */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .purple {
+      background-color: #9b59b6;
+      color: white;
+      height: 300px; /* Adjust the height as needed */
+      border-radius: 15px; /* Optional: Match the border-radius of the container */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      object-fit: 20%;
+    }
+
+    .blue {
+      background-color: #3498db;
+      color: white;
+      height: 300px; /* Adjust the height as needed */
+      border-radius: 15px; /* Optional: Match the border-radius of the container */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      object-fit: 20%;
+    }
+
+    .grid-item i {
+      font-size: 30px; /* Adjusted font size for better visibility */
+      margin-bottom: 10px;
+    }
+
+    .grid-item p {
+      color: #333; /* Changed text color for better visibility */
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <center>
+    <h1 style="font-size: 54px; font-weight: bolder;"> We'll help manage your business</h1>
+  </center>
+
+  
+  <div class="grid-container">
+    <div class="grid-item yellow">
+      <img src="./images_and_icons/business7.png" alt="Money" width="10%" height="5%">
+      <i class="fas fa-rocket"></i>
+      
+    </div>
+    <div class="grid-item purple">
+      <img src="./images_and_icons/business4.png" alt="Rocket" width="10%" height="5%">
+      <i class="fas fa-chess"></i>
+      <p>STARTUPS</p>
+    </div>
+    <div class="grid-item blue">
+      <img src="./images_and_icons/business5.jpeg" alt="Horse" width="10%" height="5%">
+      <i class="fas fa-bullhorn"></i>
+      <p>STRATEGY</p>
+    </div>
+    <div class="grid-item yellow">
+      <img src="./images_and_icons/business6.jpeg" alt="Coinheap" width="10%" height="5%">
+       <i class="fas fa-comments"></i>
+       <p>CONSULTATIONS</p>
+    </div>
+    <div class="grid-item purple">
+      <img src="./images_and_icons/business2.jpeg" alt="Money" width="10%" height="5%">
+      <i class="fas fa-chart-line"></i>
+      <p>MARKETING</p>
+    </div>
+    <div class="grid-item blue">
+      <img src="./images_and_icons/business3.1.jpeg" alt="Money" width="10%" height="5%">
+      <i class="fas fa-hand-holding-usd"></i>
+      <p>INVESTMENT</p>
+    </div>
+  </div>
+
+</body>
+</html>

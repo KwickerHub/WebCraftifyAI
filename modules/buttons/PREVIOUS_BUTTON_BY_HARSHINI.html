@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previous Button</title>
+<style>
+  .button-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .previous-btn {
+    padding: 10px 20px;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .previous-btn:hover {
+    background-color: #009ACD;
+  }
+  .previous-btn:active {
+    background-color: #007A99;
+  }
+  .previous-btn:focus {
+    box-shadow: 0 0 0 2px rgba(0,191,255,0.5);
+  }
+  .previous-btn:before {
+    content: '◀️';
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="button-container">
+  <button class="previous-btn" onclick="goPrevious()">PREVIOUS</button>
+</div>
+
+<script>
+  function goPrevious() {
+    // JavaScript to handle the previous action
+    alert("Go to the previous page or handle the click event.");
+  }
+</script>
+
+</body>
+</html>
