@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efficient Solutions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: url('./images_and_icons/focus_bg.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        .header {
+            padding: 2em;
+            border-radius: 15px;
+            max-width: 45%;
+            margin-left: 3rem;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 0.25em;
+        }
+
+        .header h1 span {
+            font-weight: normal; /* Normal font weight for the rest */
+        }
+
+        .header p {
+            font-size: 1em;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 2em;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            padding: 10px 25px;
+            text-decoration: none;
+            color: white;
+            border-radius: 25px; /* This gives the pill shape */
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* subtle shadow */
+        }
+
+        .cta-button.primary {
+            background-color: #0751cb; /* Bright blue */
+        }
+
+        .cta-button.secondary {
+            background-color: #000000; /* Darker grey */
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .header {
+                max-width: 90%;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .header p {
+                font-size: 0.9em;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+   
+    <h1> WORKS FOR YOU,<span>EVEN WHEN YOU AREN'T WORKING</span></h1>
+    <p>Our innovative solutions ensure that your business thrives — round the clock, without constant supervision.</p>
+    <p class="image-source">Image from: <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.distancelearning.txst.edu%2Fcorrespondence-studies%2Fstudent-information-guide%2Fresources%2Ftutoring.html&psig=AOvVaw3G_DlMlv4DmlrY9MhknRQ2&ust=1700513561682000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCLD5mvH40IIDFQAAAAAdAAAAABAE" target="_blank">Distance Learning at Texas State University</a></p>
+
+    <div class="cta-buttons">
+        <button class="cta-button primary">Get Started Now</button>
+        <button class="cta-button secondary">Our Services</button>
+    </div>
+</div>
+
+</body>
+</html>
