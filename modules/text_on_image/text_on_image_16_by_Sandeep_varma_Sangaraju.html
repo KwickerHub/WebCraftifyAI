@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Delivery Service</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('./images_and_icons/background_16.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    height: 100vh;
+    color: #ffffff;
+    padding-left: 10%;
+  }
+  .content {
+    max-width: 600px; /* Adjust based on your layout */
+  }
+  h1 {
+    font-size: 2em; /* Large text for 'Yummy. Fast. Available.' */
+    margin-bottom: 0.1em;
+  }
+  p, .click-now {
+    font-size: 0.9em; /* Smaller text for descriptive paragraph */
+    margin-bottom: 1em;
+  }
+  .click-away { /* This class is for the 'Click' text color */
+    color: #0099ff; /* Color of 'Click' text to match the button */
+  }
+  .button {
+    background-color: #0099ff; /* Color of the button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+  }
+</style>
+</head>
+<body>
+
+<div class="content">
+  <h1>Yummy.</h1>
+  <h1>Fast.</h1>
+  <h1>Available.</h1>
+  <p>Indulge in flavors that tantalize your palate, savor the speed of our service, and relish the convenience we bring right to your doorstep. Our culinary delights are crafted to satisfy your cravings any time of the day. Whether it's a healthy salad bursting with freshness or a decadent dessert to sweeten the moment, we're here to serve you swiftly and splendidly. Experience the blend of taste, velocity, and accessibility. With us, gourmet cuisine is just a <span class="click-away">Click away</span>.</p>
+  <button class="button">Order Online</button>
+</div>
+
+<script>
+  // JavaScript for the button functionality
+  document.querySelector('.button').addEventListener('click', function() {
+    alert('Thank you for ordering!');
+  });
+</script>
+
+</body>
+</html>
