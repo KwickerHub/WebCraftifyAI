@@ -1,0 +1,190 @@
+<div class="container">
+    <div class="content">
+        <h1>Pricing Table Template</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.</p>
+        <button id="btn">Start your free trail</button>
+    </div>
+    <table class="grid-container">
+        <tr>
+            <th>
+            </th>
+            <th>BASIC</th>
+            <th>STANDARD</th>
+            <th>ADVANCED</th>
+        </tr>
+        <tr>
+            <td>Monthly price</td>
+            <td class="price basic">$29</td>
+            <td class="price standard">$59</td>
+            <td class="price advanced">$139</td>
+        </tr>
+        <tr>
+            <td>Users</td>
+            <td>1 full user</td>
+            <td>5 full users</td>
+            <td>Custom users</td>
+        </tr>
+        <tr>
+            <td>Unlimited read-only users</td>
+            <td>1,000 Email Previews</td>
+            <td>2,000 Email Previews</td>
+            <td>Custom Email Previews</td>
+        </tr>
+        <tr>
+            <td>Contacts</td>
+            <td>5 contacts per client</td>
+            <td>25 contacts per client</td>
+            <td>Unlimited contacts</td>
+        </tr>
+        <tr>
+            <td>Coffee</td>
+            <td>5 cups</td>
+            <td>8 cups</td>
+            <td>10 cups</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td>
+                <button1 type="button">choose plan</button>
+            </td>
+            <td>
+                <button2 type="button">choose plan</button>
+            </td>
+            <td>
+                <button3 type="button">choose plan</button>
+            </td>
+        </tr>
+    </table>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .content h1 {
+            margin-bottom: 0px;
+            color: #6762f9;
+        }
+
+        .content p {
+            width: 60%;
+            color: #050000;
+        }
+
+        #btn {
+            line-height: 2.5;
+            background-color: #4BA4EB;
+            color: white;
+            padding: 5px 30px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        table.grid-container {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .grid-container th,
+        .grid-container td {
+            text-align: center;
+            padding: 10px 5px;
+            border: 0.1px solid rgb(171, 171, 171);
+        }
+
+        .grid-container th {
+            background-color: white;
+            color: black;
+        }
+
+        .grid-container td {
+            background-color: white;
+        }
+
+        .grid-container .price {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .grid-container .basic {
+            background-color: #7CBFF3;
+        }
+
+        .grid-container .standard {
+            background-color: #4886EB;
+        }
+
+        .grid-container .advanced {
+            background-color: #7072EB;
+        }
+
+
+        .grid-container button1 {
+            padding: 7px 20px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            background-color: #7CBFF3;
+        }
+
+        .grid-container button2 {
+            padding: 7px 20px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            background-color: #4886EB;
+        }
+
+        .grid-container button3 {
+            padding: 7px 20px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            background-color: #7072EB;
+        }
+
+        .grid-container button:hover {
+            scale: 1.05;
+        }
+
+        @media screen and (max-width:770px) {
+            .grid-container {
+                width: 100%;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            .content p {
+                width: 90%;
+            }
+
+            .grid-container button {
+                width: 100%;
+                margin: 4px 0;
+            }
+        }
+    </style>

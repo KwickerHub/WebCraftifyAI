@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Solutions</title>
+<style>
+  body, h1, p, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('images_and_icons/background_image_33.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .headline {
+    color: #fff;
+    width: 60%;
+  }
+
+  .headline h1 {
+    font-size: 3rem;
+    margin-bottom: 7rem;
+    margin-left: 3rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1;
+  }
+
+  .headline p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    font-family:'Arial', sans-serif;
+    position: absolute;
+    top:25%;
+    left:60%;
+
+  }
+  .form-container h2, .form-container p {
+    color: white;
+    text-align: left;
+  }
+  .form-container p{
+    padding-bottom: 15px;
+    color: rgb(208, 206, 206);
+  }
+  .form-content {
+  background-color: rgb(80, 115, 230); /* Apply the blue background color here */
+  border-radius: 40px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 50%;
+  padding-bottom: 20px;
+}
+
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .form-container input,
+  .form-container textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .form-container input[type="submit"] {
+    color: rgb(8, 8, 8);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 30%;
+
+  }
+
+  .form-container input[type="submit"]:hover {
+    background-color: #003d82;
+  }
+  .headline2 {
+  position: absolute; /* This takes the element out of the flow and positions it relative to its parent */
+  top: 10%; /* Align to the top of the container */
+  left: 80%; /* Center horizontally */
+  transform: translateX(-50%); /* Align center properly */
+  z-index: 2; /* Ensures it lays on top of the form-container */
+  width: 100%; /* Ensures the content width matches the container width */
+  text-align: center; /* Center the text */
+  color: white; /* Text color */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="headline">
+    <h1>Preparing For Your Success,<br>
+        We Provide Truly Prominent IT Solutions.</h1>
+  </div>
+
+  <div class="form-container">
+    <h2>Make an Appointment</h2>
+    <p>Get in touch and discover how we can help. We aim to be in touch.</p>
+    <div class="form-content">
+    <form action="#!">
+      <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+      <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
+      <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

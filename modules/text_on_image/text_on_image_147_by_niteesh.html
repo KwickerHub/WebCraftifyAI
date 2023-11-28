@@ -1,0 +1,93 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: Arial, sans-serif;
+    }
+
+    div {
+        position: relative;
+        
+        margin: 0 auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        color: white;
+        width: 500px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
+
+   
+
+    .bg-img{
+        background-image: url(images/background-\ 147_n.jpg);
+        background-size: cover;
+        background-position: center ;
+        background-repeat: no-repeat ;
+        height: 100vh;
+
+    }
+
+    .oval-button {
+  
+  border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #c5f436;
+    color: rgb(0, 0, 0);
+    }
+
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        button {
+            flex-basis: 100%;
+        }
+    }
+</style>
+<div class="bg-img">
+    <!-- <img src="GettyImages-89179706.webp" alt="building"> -->
+    <div class="overlay">
+    <h1>Engineers &amp; Contractors</h1>
+    
+    <p>we hire contractors and engineers</p>
+    
+        <div>
+            <button class="oval-button" style="background-color: #c5f436; ">Read more</button>
+            <button class="oval-button" style="background-color: #c5f436; ">About us</button>
+            <button class="oval-button" style="background-color: #c5f436; ">Contact</button>
+            <button class="oval-button" style="background-color: #c5f436; ">sign up</button>
+        </div>
+    </div>
+</div>

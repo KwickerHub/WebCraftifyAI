@@ -1,0 +1,81 @@
+<style>
+
+  .full-bg-image {
+    background: url('./images_and_icons/task1-o.png') no-repeat center center;
+    background-size: cover;
+    position: fixed; /* Use fixed to cover the whole page */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keep the image in the background */
+  }
+
+  .content {
+    position: absolute;
+    top: 36%; /* Adjust this value to move content up or down */
+    left: 15%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px; /* Adjust as needed */
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 3.22em; /* Adjust font size as needed */
+    margin-bottom: 0.6em; /* Add some space below the heading */
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  p {
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin-bottom: 0.5em; /* Add some space below the paragraph */
+    font-weight: 300;
+  }
+
+  .credit {
+    font-size: 1em; /* Adjust font size for the image credit */
+    font-weight: 300;
+  }
+
+  a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2e8b57; /* Slightly less dark green text color */
+  background: #FFF; /* White background for the button */
+  padding: 1.2em 3.5em; /* Padding for height and width */
+  border-radius: 10px;
+  font-size: 0.75em; /* Font size for the button text */
+  letter-spacing: 0.10em; /* Added letter spacing */
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.underline {
+  text-decoration: none; /* Removes default underline */
+  border-bottom: 0.6px solid #FFF; /* Creates a custom underline with white color */
+  padding-bottom: 2px; /* Adjusts space between text and underline */
+  display: inline-block; /* Allows padding on an inline element */
+}
+
+.spaced-line {
+  display: block;
+  margin-top: 0.5em; /* Adjusts space above the span, effectively between lines */
+}
+
+
+</style>
+
+<div class="full-bg-image"></div>
+
+<div class="content">
+  <h3>Visual Design <br>& Art Director <br></h3>
+  <p>Hi, I am Mark, focusing on <span class="spaced-line">creating emotional experiences. </span></p> <br>
+  <p1>Image from <span class="underline">Freepik</span><br> <br> </p1>
+  <a href="#">READ MORE</a>
+</div>

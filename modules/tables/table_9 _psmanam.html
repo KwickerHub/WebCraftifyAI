@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            text-align: center;
+            color: grey;
+            margin-top: 50px; /* Adjust as needed */
+        }
+        p {
+            text-align: center;
+            color: black;
+            margin-top: 20px; /* This pushes the paragraph down from the heading */
+        }
+        table {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+th {
+    padding: 10px;
+}
+td{
+    padding: 15px;
+}
+.first-header {
+    text-align: left;
+    background-color: #E6E6E6;
+    color: black;
+    width: 30%; /* Set specific width for the first column */
+}
+.second-header {
+    text-align: center;
+    background-color: #A9A9A9;
+    color: white;
+}
+.third-header {
+            text-align: center;
+            background-color: #DB7070; /* Moderately dark red */
+            color: white;
+        }
+.fourth-header {
+    text-align: center;
+    background-color: #90EE90; /* Light green background */
+    color: white;
+}
+
+#bas {
+  background-color: rgb(129, 232, 129);
+  text-align: center;
+}
+#std {
+  background-color: rgb(0, 187, 255);
+  text-align: center;
+}
+#adv {
+  background-color: rgb(255, 68, 0);
+  text-align: center;
+}
+.wkly-prc {
+  height: 50px;
+  text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+choose-plan {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .choose-plan:hover {
+    background-color: #45a049;
+  }
+
+  #fr1 {
+    align:center ;
+    font-size: 20px;
+    color: #808080;
+    font-weight: bolder;
+  }
+
+  #fr2 {
+    align:center ;
+    font-size: 20px;
+    background-color: #E6E6E6;
+    color: #DB7070;
+    font-weight: bolder;
+  }
+
+  #fr3 {
+    align:center ;
+    font-size: 20px;
+    color: #90EE90;
+    font-weight: bolder;
+  }
+
+  #fr4 {
+    background-color: #E6E6E6;
+  }
+
+
+  .third-button { background-color: #DB7070; }
+
+  .checkmark { color: #90EE90;}
+
+  .third-button{ color: white;}
+
+  .t1{background-color: white;}
+
+  button {
+    padding: 10px 20px;/* Increased padding for larger buttons */
+    margin: 10px auto;
+    font-size: 14px; 
+  }
+</style>
+</head>
+<body>
+
+    <h1>Promotion Plans</h1>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+<table>
+<tr>
+    <th class="first-header">Compare All Plans</th>
+    <th class="second-header">Enterprise</th>
+    <th class="third-header">Advance</th>
+    <th class="fourth-header">Starter</th>
+</tr>
+<tr>
+    <td>Following Month</td>
+    <td id="fr1", align="center">$ 900</td>
+    <td id="fr2", align="center">$ 700</td>
+    <td id="fr3", align="center">$ 300</td>
+    </tr>
+    <tr>
+
+        <tr>
+            <td>Delivery Time frame</td>
+            <td align="center">3-6 Months</td>
+            <td id="fr4", align="center">3-6 Months</td>
+            <td align="center">3-6 Months</td>
+            </tr>
+            <tr>
+                <td>Support 24/7</td>
+                <td class="checkmark", align="center">&#10004;</td>
+                <td class="checkmark", id="fr4", align="center">&#10004;</td>
+                <td align="center">-</td>
+            </tr>
+
+            <tr>
+                <td>Certificate</td>
+                <td class="checkmark", align="center">&#10004;</td>
+                <td class="checkmark", id="fr4", align="center">&#10004;</td>
+                <td align="center">-</td>
+            </tr>
+
+            <tr>
+                <td>Guranteed Knowledge Ranking in First Page of Google</td>
+                <td align="center">28</td>
+                <td align="center", id="fr4">20</td>
+                <td align="center">18</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td align="center"><button class="t1">CHOOSE PLAN</button></td>
+                <td align="center", id="fr4", class="third-button"><button class="button third-button">CHOOSE PLAN</button></td>
+                <td align="center"><button class="t1">CHOOSE PLAN</button></td>
+            </tr>
+    
+    </table>
+    </body>
+    </html>
+
+

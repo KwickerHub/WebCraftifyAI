@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid_340</title>
+    <style>
+
+        body{
+            margin: 0;
+            text-align: center;
+            background-color: #292d33;
+            color: white;
+            font-family: Roboto,sans-serif;
+        }
+        h2{
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-weight: 100;
+        }
+        .container{
+            margin-top: 10%;
+            margin-right: 5% ;
+            margin-left: 5%;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        .image{
+            background-size: cover;
+            border-radius: 100%;
+        }
+
+        .text h4{
+            font-size: 1.375rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .text p{
+            margin-top: 0;
+            padding: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .text h5{
+            font-size: 1.25rem;
+            line-height: 1.2;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    }
+}
+    </style>
+</head>
+<body>
+    <h2>We bake fresh, handmade bread,<br> pastries and cakes every day</h2>
+    <div class="container">
+        <div class="image" style="background-image: url('./images_and_icons/image1_340.jpeg'); width: 255px; height: 255px;"></div>
+        <div class="text" width="255" height="255">
+            <h4>Sourdough Loaf</h4>
+            <p>Ingredients:<br>flour, water, salt, and levain</p>
+            <h5><i><b>$4.65</b></i></h5>
+        </div>
+        <div class="image" style="background-image: url('./images_and_icons/image2_340.jpeg'); width: 255px; height: 255px;"></div>
+        <div class="text" width="255" height="255">
+            <h4>Baguette</h4>
+            <p>Ingredients:<br>flour, water, salt, and yeast</p>
+            <h5><i><b>$3.05</b></i></h5>
+        </div>
+        <div class="text" width="255" height="255">
+            <h4>Farmer's Loaf</h4>
+            <p>Ingredients:<br>Flour, Water, Time, Yeast and Salt.</p>
+            <h5><i><b>$5.50</b></i></h5>
+        </div>
+        <div class="image" style="background-image: url('./images_and_icons/image3_340.jpeg'); width: 255px; height: 255px;"></div>
+        <div class="text" width="255" height="255">
+            <h4>Round Bread</h4>
+            <p>Ingredients:<br>Flour, Yeast, Salt, Water</p>
+            <h5><i><b>$5.15</b></i></h5>
+        </div>
+        <div class="image" style="background-image: url('./images_and_icons/image4_340.jpeg'); width: 255px; height: 255px;"></div>
+    </div>
+</body>
+</html>
