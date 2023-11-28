@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="container">
+        <div class="card" id="one">
+            <div class="content">
+                <h2><img class="Camera" src="./images_and_icons/camera_235.svg"></h2>
+                <h3>Why Us?</h3>
+                <p>We have been creating roundtrips for 17 years and we are determined to provide you with the trip.</p>
+            </div>
+        </div>
+        <div class="card" id="two">
+            <div class="content">
+                <h2><img class="Plan" src="./images_and_icons/plane_235.svg"></h2>
+                <h3>Plan & Book</h3>
+                <p>You are in charge! Create your own roundtrip with our extensive services with cars,hotels and flights.</p>
+            </div>
+        </div>
+        <div class="card" id="three">
+            <div class="content">
+                <h2><img class="Holiday" src="./images_and_icons/backpack_235.svg"></h2>
+                <h3>Holiday Tours</h3>
+                <p>Book travel tours worldwide including adventure and cultural tours from leading providers including intrepid, trafalgar and contiki</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        img {
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+            margin-left: 20%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(./images_and_icons/family_235.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            opacity: 0.9;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: 50% 20%;
+            height: 80%;
+            margin: 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            padding: 25px;
+            background-color: transparent;
+            box-shadow: white;
+            margin-top: -15%;
+        }
+
+        .container .card {
+            position: relative;
+            width: 280px;
+            height: 400px;
+            margin: 10px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: grayscale(5);
+            margin-top: 35%;
+        }
+/*
+        .container .card {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            padding: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            margin: 20px;
+            border-radius: 5px;
+        }*/
+        .container .card .content h3 {
+            font-size: 2em;
+            font-weight: bolder;
+            color: white;
+            z-index: 1;
+            margin-left: 15%;
+        }
+
+        .container .card .content p {
+            font-size: 1em;
+            font-weight: bolder;
+            color: white;
+            text-align: center; 
+            margin-top: 7%;
+        }
+
+        .container .card .content a {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            margin-top: 15px;
+            background-attachment: white;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        #one {
+            background-color: blue;
+        }
+        #two {
+            background-color: red;
+        }
+
+        #three {
+            background-color: goldenrod;
+        }
+
+    </style>
+</body>
+</html>
