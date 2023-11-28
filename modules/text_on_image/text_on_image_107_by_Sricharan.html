@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page with Background Image</title>
+    <style>
+        .image-container {
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: calc(50% + 50px); /* Position below the last statement */
+            left: 130px; /* Align with the left margin of the text */
+            width: 300px; /* Set a specific width for the image */
+            text-align: center; /* Center the image within the container */
+            height: 150px;
+            margin-top: 53px;
+        }
+        .image-container img {
+            width: 170%; /* Image will take up full container width */
+            height: 115%; /* Image will take up full container height */
+        }
+        .image {
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: calc(50% + 130px); /* Position below the last statement */
+            left: 230px; /* Align with the left margin of the text */
+            width: 600px; /* Set a specific width for the image */
+            text-align: center; /* Center the image within the container */
+            margin-left: 350px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .bg {
+            background-image: url('./images_and_icons/bg107.jpg'); /* Replace with your actual image file */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+
+        
+        h1 {
+            color: white;
+            font-size: 100px;
+            margin-top: -500px; /* Removed the margin to better control positioning */
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: 50%; /* Center vertically */
+            left: 0; /* Align to the left */
+            transform: translateY(-50%); /* Offset by half of its own height for perfect centering */
+            width: 100%; /* Full width to maintain text alignment */
+            text-align: left; /* Align the text to the left */
+            padding-left: 200px; /* Add some padding on the left if needed */
+        }
+        h2 {
+            color: white;
+            font-size: 100px;
+            margin-top: -400px; /* Removed the margin to better control positioning */
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: 50%; /* Center vertically */
+            left: 0; /* Align to the left */
+            transform: translateY(-50%); /* Offset by half of its own height for perfect centering */
+            width: 100%; /* Full width to maintain text alignment */
+            text-align: left; /* Align the text to the left */
+            padding-left: 200px; /* Add some padding on the left if needed */
+        }
+
+        .heading-part2 {
+            text-align: center; /* Center-align the second part of the heading */
+            display: block; /* Make it a block element */
+           
+        }
+
+        p{
+            font-size: medium;
+            margin-bottom: 35px;
+        }
+        
+        .button {
+            background-color: black;
+            border-radius: 2px;
+            padding: 15px 35px;
+            color: white;
+            border: none; /* Added to remove default border */
+            cursor: pointer; /* Changes cursor to indicate it's clickable */
+        }
+        h3 {
+            color: white;
+            font-size: 35px;
+            margin-top: -250px; /* Removed the margin to better control positioning */
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: 50%; /* Center vertically */
+            left: 0; /* Align to the left */
+            transform: translateY(-50%); /* Offset by half of its own height for perfect centering */
+            width: 100%; /* Full width to maintain text alignment */
+            text-align: left; /* Align the text to the left */
+            padding-left: 200px; /* Add some padding on the left if needed */
+           
+
+        }
+        h4 {
+            color: white;
+            font-size: 35px;
+            margin-top: -150px; /* Removed the margin to better control positioning */
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: 50%; /* Center vertically */
+            left: 0; /* Align to the left */
+            transform: translateY(-50%); /* Offset by half of its own height for perfect centering */
+            width: 100%; /* Full width to maintain text alignment */
+            text-align: left; /* Align the text to the left */
+            padding-left: 200px; /* Add some padding on the left if needed */
+           
+
+        }
+        h5 {
+            color: white;
+            font-size: 35px;
+            margin-top: -100px; /* Removed the margin to better control positioning */
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: 50%; /* Center vertically */
+            left: 0; /* Align to the left */
+            transform: translateY(-50%); /* Offset by half of its own height for perfect centering */
+            width: 100%; /* Full width to maintain text alignment */
+            text-align: left; /* Align the text to the left */
+            padding-left: 200px; /* Add some padding on the left if needed */
+           
+
+        }
+        h6 {
+            color: white;
+            font-size: 35px;
+            margin-top: -50px; /* Removed the margin to better control positioning */
+            position: absolute; /* Absolute positioning relative to .bg div */
+            top: 50%; /* Center vertically */
+            left: 0; /* Align to the left */
+            transform: translateY(-50%); /* Offset by half of its own height for perfect centering */
+            width: 100%; /* Full width to maintain text alignment */
+            text-align: left; /* Align the text to the left */
+            padding-left: 200px; /* Add some padding on the left if needed */
+           
+
+        }
+        h3 span {
+            border-bottom: 1px solid white; /* White line under the word 'Freepik' */
+            padding-bottom: 3px; /* Optional: space between text and line */
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .content {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg">
+    <h1>Available for your</h1>
+    <h2>Smartphones</h2>
+    <h3>Image from <span>Freepik</span></h3>
+    <h4>Search all the open positions on the web. Get</h4>
+    <h5>your own personalized salary estimates. Read</h5>
+    <h6>reviews on over 30000+ companies worldwide.</h6>
+    <div class="image-container">
+        <img src="./images_and_icons/bg_apple.png" alt="Descriptive Text"> <!-- Replace with your actual image file -->
+    </div>
+    <div class="image">
+        <img src="./images_and_icons/bg_google.webp" alt="Descriptive Text"> <!-- Replace with your actual image file -->
+    </div>
+</div>
+
+</body>
+</html>
