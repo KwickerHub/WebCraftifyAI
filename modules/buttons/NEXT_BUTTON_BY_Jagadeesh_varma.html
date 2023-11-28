@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Button with Double Triangle</title>
+<style>
+
+  .gradient-button {
+    background: linear-gradient(to right, #9C27B0, #E040FB); /* Gradient background */
+    border: none; /* No border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* No underline on text */
+    display: inline-block; /* Allows setting dimensions */
+    font-size: 16px; /* Text size */
+    margin: 10px 30px; /* Margin around the button */
+    cursor: pointer; /* Cursor becomes a hand icon when hovered */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Drop shadow */
+    position: relative; /* For positioning the icon */
+  }
+
+  /* Larger white triangle */
+  .gradient-button:before {
+    content: '\25B6'; /* Unicode for triangle right arrow */
+    color: white; /* White color */
+    font-size: 50px; /* 50% larger icon size */
+    position: absolute;
+    left: -20px; /* Space from the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%) scale(1.1); /* Center vertically */
+    z-index: 0; /* Above the purple triangle */
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    
+  }
+
+  /* Larger purple triangle */
+  .gradient-button:after {
+    content: '\25B6'; /* Unicode for triangle right arrow */
+    color: purple; /* Purple color */
+    font-size: 50px; /* 50% larger icon size */
+    position: absolute;
+    left: -30px; /* Slightly behind the white triangle */
+    top: 43%; /* Center vertically */
+    transform: translateY(-50%);  /* Center vertically and slightly larger for overlap */
+    z-index: 1; /* Below the white triangle */
+text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+  }
+</style>
+</head>
+<body>
+
+<button class="gradient-button">NEXT</button>
+
+</body>
+</html>
