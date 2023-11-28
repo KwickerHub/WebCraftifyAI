@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the tops of the flex items */
+    max-width: 1200px; /* Adjust the max width as necessary */
+    margin: auto;
+    padding: 40px 20px; /* Increased padding */
+  }
+  .text-block {
+    width: 48%; /* Adjust width to allow for margins and padding */
+  
+  }
+  .title {
+    font-size: 48px; /* Increased font size for the heading */
+    color: #000; /* Black color text */
+    margin-bottom: 20px; /* Space between title and paragraph */
+  }
+  .description {
+    font-size: 18px; /* Slightly larger paragraph font size */
+    color: #666; /* Gray color text */
+    margin-bottom: 20px; /* Space between paragraph and bullet points */
+  }
+  .bullet-points {
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for bullet points */
+    gap: 5px; /* Spacing between bullet point columns */
+  }
+  .bullet-points ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+  }
+  .bullet-points li:before {
+    content: "\25B6";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+  .bullet-points li {
+    font-size: 20px; /* List item font size */
+    color: #666; /* Gray color text */
+    margin-bottom: 10px; /* Space between bullet points */
+    line-height: 1.5; /* Adjust line height for readability */
+  }
+  .image-block {
+    width: 48%; /* Adjust width to allow for margins and padding */
+  }
+  .image-block img {
+    width: 100%; /* Image takes full width of its container */
+    height: auto;
+    display: block; /* Prevents inline default space */
+  }
+</style>
+
+<div class="container">
+  <div class="text-block">
+    <div class="title">What Is Going To Happen?</div>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet risus a mauris sagittis rhoncus quis id metus. Pellentesque non nisl auctor, dignissim nibh vel, malesuada leo. Vivamus sit amet venenatis felis. Vivamus laoreet nec libero quis porta. Proin mattis sit amet felis eu cursus. Aenean sed ligula pulvinar, aliquet nibh et, sodales ex. Duis at feugiat mauris, ut euismod erat. Donec quis ligula orci. Aliquam quis tristique nisl, in mollis velit. Aenean sodales nisl bibendum gravida mollis. Phasellus pretium turpis quis quam lobortis, vel consequat neque ultricies. Image from <a href="https://www.freepik.com" target="_blank">Freepik</a> </p>
+    <div class="bullet-points">
+      <ul>
+        <li>First bullet point</li>
+        <li>Second bullet point</li>
+        <li>Third bullet point</li>
+        <li>Fourth bullet point</li>
+        <li>Fifth bullet point</li>
+        <li>Sixth bullet point</li>
+      </ul>
+      <ul>
+        <li>Seventh bullet point</li>
+        <li>Eighth bullet point</li>
+        <li>Ninth bullet point</li>
+        <li>Tenth bullet point</li>
+        <li>Eleventh bullet point</li>
+        <li>Twelfth bullet point</li>
+      </ul>
+    </div>
+  </div>
+  <div class="image-block">
+    <img src="./images_and_icons/322im.jpeg" alt="Descriptive Alt Text">
+  </div>
+</div>
