@@ -1,0 +1,117 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap');
+  /* Basic Reset */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* Background Image */
+  .background-image {
+    position: relative;
+    width: 100vw; /* Viewport width */
+    height: 60vh; /* Viewport height */
+    background: url('./images_and_icons/background_11.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  /* Overlay Content */
+  .overlay {
+    position: absolute;
+    top: 50vh;
+    bottom: 15%;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center; /* This will space your content boxes evenly */
+    
+  }
+
+  /* Content Boxes */
+  .info-box {
+    width: 18%; /* Adjust width as needed */
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0.5%; /* Adjust the space between the boxes */
+  }
+
+  /* You can adjust the colors accordingly */
+  .mission { background-color: rgb(116, 55, 50); } /* Dark red*/
+  .training { background-color: rgb(2, 171, 201) } /* Dark blue*/
+  .membership { background-color: rgb(156, 105, 62); } /* Brown*/
+
+  /* Text Styles */
+  .heading {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .paragraph {
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 24px;
+    word-wrap: break-word;
+  }
+  .link-class {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+  }
+  .link-class:after {
+    content: '';
+    position: absolute;
+    width: 21%; 
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -5px; /* Adjust the position of the underline */
+  }
+  .attribution {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center; /* Center the text */
+    position: absolute; /* Position it at the bottom */
+    width: 100%; /* Full width */
+    bottom: 5%; /* At the bottom of the page */
+    padding: 10px 0; /* Some padding at the top and bottom */
+    font-size: 12px; /* Smaller font size */
+    color: #666; /* A lighter color for the attribution text */
+  }
+  .image-source {
+    color: black;
+  }
+ 
+</style>
+
+
+
+<div class="background-image">
+    <div class="overlay">
+      <div class="info-box mission">
+        <h1 class="heading">Our Mission</h1>
+        <p class="paragraph">Our Club promotes and friendship through running.</p>
+        <a class="link-class" href="#">More</a>
+      </div>
+      <div class="info-box training">
+        <h1 class="heading">Training</h1>
+        <p class="paragraph">Our trainers will keep you challenged and engaged.</p>
+        <a class="link-class" href="#">More</a>
+      </div>
+      <div class="info-box membership">
+        <h1 class="heading">Membership</h1>
+        <p class="paragraph">$200/year (includes weekly workout and training shirt)</p>
+        <a class="link-class" href="#">More</a>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    <p>Image from <a class="image-source" href="https://www.freepik.com" target="_blank">Freepik</a></p>
+  </div>
+
