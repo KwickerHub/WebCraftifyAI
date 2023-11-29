@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Table</title>
+  <style>
+    /* Styles for the pricing table */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .pricing-table th, .pricing-table td {
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .pricing-table th {
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .pricing-table td {
+      background-color: #ffffff;
+    }
+
+    .pricing-table tr:nth-child(odd) td {
+      background-color: white;
+    }
+
+    .pricing-table td:first-child {
+      text-align: left;
+    }
+
+    /* Styles for the buttons */
+    .button {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #ffa500;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #cc8400;
+      color: white;
+    }
+
+    /* Styles for the header section */
+    .header-section {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header-section h1 {
+      color: #333;
+      margin: 0 0 10px;
+    }
+
+    .header-section p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .free-trial-button {
+      padding: 10px 25px;
+      background-color: #ffa500;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .free-trial-button:hover {
+      background-color: #cc8400;
+    }
+
+    /* Styles for the pricing section */
+    .pricing-section {
+      padding: 3em;
+      margin: 3em auto;
+      max-width: calc(100% - 6em);
+      box-sizing: border-box;
+    }
+
+    /* Styles for the feature headings */
+    .features-heading td {
+      font-weight: bold;
+      background-color: orange;
+      border: 1px solid #ddd;
+    }
+
+    /* Additional border styles */
+    .pricing-table td {
+      border-right: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <h1>Pick a plan</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <button class="free-trial-button">start your free trial</button>
+  </div>
+  
+  <div class="pricing-section">
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Basic</th>
+          <th>Standard</th>
+          <th>Advanced</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monthly price</td>
+          <td><b>$29</b></td>
+          <td><b>$59</b></td>
+          <td><b>$139</b></td>
+        </tr>
+        <tr class="features-heading">
+          <td>FEATURES</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Users</td>
+          <td>1 full user</td>
+          <td>5 full users</td>
+          <td>Custom users</td>
+        </tr>
+        <tr>
+          <td>Unlimited read-only users</td>
+          <td>1,000 Email Previews</td>
+          <td>2,000 Email Previews</td>
+          <td>Custom Email Previews</td>
+        </tr>
+        <tr>
+          <td>Contacts</td>
+          <td>5 contacts per client</td>
+          <td>25 contacts per client</td>
+          <td>Unlimited contacts</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button class="button">Choose Plan</button></td>
+          <td><button class="button">Choose Plan</button></td>
+          <td><button class="button">Choose Plan</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
