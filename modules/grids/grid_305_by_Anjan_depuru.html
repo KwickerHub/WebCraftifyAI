@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overlay Cards on Background</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .bg-image {
+    background-image: url('./images_and_icons/people image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5% 0;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 0px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 180px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  #card1 { background-color: lightblue; }
+  #card2 { background-color: white; }
+  #card3 { background-color: lightblue; }
+  #card4 { background-color: white; }
+
+  .card h2 {
+    font-size: 27px;
+    color: #333;
+    margin: 0 0 10px 0;
+  }
+
+  #card1 h2 {
+    font-size: 35px;
+  }
+  #card1 p {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+    padding-bottom: 30px;
+  }
+
+  .card p {
+    font-size: 18px;
+    color: #666;
+    margin: 0 0 30px 0;
+    padding-bottom: 10px;
+  }
+
+  .card .more-link {
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
+    padding-top: 15px;
+    display: block;
+  }
+
+  
+ #card4 p {
+    margin-bottom: 30px;
+  }
+
+  #card4 .more-link {
+    padding-top: 10px; 
+}
+@media (max-width: 900px) {
+  .card {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: calc(100% - 20px); 
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-image">
+  <div class="card-container">
+    <div class="card" id="card1">
+      <h2>About Us</h2>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    </div>
+    <div class="card" id="card2">
+      <h2>Property Managers for Management Companies</h2>
+      <p>Sample text. Click to select the Text Element.</p>
+      <span class="more-link">More</span>
+    </div>
+    <div class="card" id="card3">
+      <h2>Helping clients grow faster than the market</h2>
+      <p>Sample text. Click to select the Text Element.</p>
+      <span class="more-link">More</span>
+    </div>
+    <div class="card" id="card4">
+      <h2>Proactive & Reactive Maintenance</h2>
+      <p>Sample text. Click to select the Text Element.</p>
+      <span class="more-link">More</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

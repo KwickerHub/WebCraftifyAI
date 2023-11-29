@@ -1,0 +1,216 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="main-container">
+  <h1 class="title">Building Process</h1>
+  <p class="title-desc">
+    Every building starts with a concept and a design. Turn your vision into a
+    reality<br />
+    with planning and design.
+  </p>
+  <div class="background-band"></div>
+  <div class="cards-container">
+    <div class="card1">
+      <div class="concept-image"></div>
+      <p class="card-title">Concept</p>
+      <p class="card-information">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, eos!
+        Ipsum veniam, magni, eos beatae ut incidunt vero ullam iusto, aperiam
+        enim vitae sequi corporis nostrum! Sed rem explicabo cumque.
+      </p>
+      <div class="card-link-container">
+        <a href="" class="card-link">MORE</a>
+      </div>
+    </div>
+    <div class="card2">
+      <div class="prototyping-image"></div>
+      <p class="card-title">Prototyping</p>
+      <p class="card-information">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, eos!
+        Ipsum veniam, magni, eos beatae ut incidunt vero ullam iusto, aperiam
+        enim vitae sequi corporis nostrum! Sed rem explicabo cumque.
+      </p>
+      <div class="card-link-container">
+        <a href="" class="card-link">MORE</a>
+      </div>
+    </div>
+    <div class="card3">
+      <div class="building-image"></div>
+      <p class="card-title">Building</p>
+      <p class="card-information card3-info">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, eos!
+        Ipsum veniam, magni, eos beatae ut incidunt vero ullam iusto, aperiam
+        enim vitae sequi corporis nostrum! Sed rem explicabo cumque.
+      </p>
+      <div class="card-link-container card3-link">
+        <a href="" class="card-link">MORE</a>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Sacramento&display=swap");
+  body {
+    margin: 0;
+  }
+  .main-container {
+    width: 100%;
+    height: 130%;
+    background-color: #e5e5e5;
+  }
+  .title {
+    margin-bottom: 0px;
+  }
+  .title,
+  .title-desc {
+    text-align: center;
+  }
+  .background-band {
+    width: 100%;
+    height: 250px;
+    background-color: #e7812f;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .cards-container {
+    width: 100%;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 350px 350px 350px;
+    gap: 15px;
+    z-index: 2;
+    background: transparent;
+    justify-content: center;
+  }
+  .card1,
+  .card2,
+  .card3 {
+    width: 250px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+  }
+  .card1 {
+    position: relative;
+    top: 5%;
+  }
+  .card2 {
+    position: relative;
+    top: 25%;
+  }
+  .card3 {
+    position: relative;
+    top: 50%;
+  }
+  .concept-image {
+    background-image: url("img1.jpg");
+  }
+  .prototyping-image {
+    background-image: url("img2.jpg");
+  }
+  .building-image {
+    background-image: url("img3.jpg");
+  }
+  .concept-image,
+  .prototyping-image,
+  .building-image {
+    width: 100%;
+    height: 165px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  .card-title {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    margin: 10px 0;
+  }
+  .card-information {
+    margin: 0;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    line-height: 25px;
+  }
+  .card-link {
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    border-bottom: solid 2px black;
+  }
+  .card-link-container {
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    margin-top: 15px;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-image: radial-gradient(
+      circle,
+      #e7812f,
+      #ff9189,
+      #ffb5cf,
+      #f9ddf7,
+      #ffffff
+    );
+    border-radius: 12px;
+    scrollbar-width: thin;
+  }
+  @media (width>=1921px) {
+    .cards-container {
+      top: 35%;
+    }
+    .main-container {
+      height: 100%;
+    }
+  }
+  @media (1900px>=width>542px) {
+    .cards-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+    .card3 {
+      top: 30%;
+      grid-column: span 2;
+      width: 600px;
+    }
+    .building-image {
+      background-size: cover;
+      background-position: 20%;
+      height: 300px;
+    }
+    .card3-info {
+      height: 50px;
+      width: 100%;
+    }
+    .card3-link {
+      margin-top: 30px;
+    }
+    .background-band {
+      height: 350px;
+      top: 15%;
+    }
+  }
+  @media (width<=542px) {
+    .cards-container {
+      display: grid;
+      grid-template-columns: none;
+      grid-template-rows: auto auto auto;
+      gap: 10px;
+    }
+    .main-container {
+      height: 2000px;
+    }
+    .background-band {
+      height: 600px;
+      top: 40%;
+    }
+  }
+</style>

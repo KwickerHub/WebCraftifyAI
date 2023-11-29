@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover a World Without Limits</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images_and_icons/background_7.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .banner {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            position: relative;
+            text-align: left;
+        }
+        .banner .main-title {
+            font-size: 5em;
+            letter-spacing: 1px;
+            padding-left: 40px;
+            line-height: 1;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            padding-left: 40px;
+            line-height: 1.5;
+        }
+        .banner p {
+            font-size: 1em;
+        }
+        .banner button {
+            background-color: #673ab7;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        .banner button:hover {
+            background-color: #5d3e8c;
+        }
+        .feature-cards {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px auto;
+            max-width: 1200px;
+            position: relative;
+            top: 150px; /* Moves the cards down */
+        }
+        .card:last-child {
+            margin-right: 0;
+        }
+        .card::after {
+            content: '→';
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+            font-size: 35px;
+            color: #080709;
+            z-index: 4;
+            margin-left: 19px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            flex: 4;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* More pronounced shadow */
+            margin-right: 70px;
+            color: black;
+            margin-top: -100px;
+            border: 8px ; /* Thicker border */
+            position: relative; 
+            z-index: 2; 
+        }
+
+        .phones {
+            position: absolute;
+            top: 45%;
+            left: 66.666%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .phones img {
+            max-width: 100%;
+            height: auto;
+        }
+        h3{
+            font-size: 2em;
+            text-align: left;
+        }
+        .water{
+            color:rgb(13, 215, 255);
+        }
+        .curved{
+            color: rgb(125, 125, 169);
+        }
+        .carved{
+            color:  rgb(224, 141, 202);
+        }
+        .para{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="main-title">Discover a world</div>
+        <div class="main-title">without limits</div>
+        <p class="subtitle"> It doesn’t take a genius to see why the Galaxy S9 | S9+ is a great idea.<br> grab one before its too late.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="phones">
+        <img src="images_and_icons/background_7_mob.jpg" alt="Mobile Phones">
+    </div>
+    <div class="feature-cards">
+        <div class="card">
+            <h3 class="water">Water Tested</h3>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="card">
+            <h3 class="carved">Carved Frame</h3>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="card">
+            <h3 class="curved">Curved Glass</h3>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+</body>
+</html>

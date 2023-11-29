@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh; 
+        }
+
+        .top {
+            height: 75vh; 
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .top img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay-container {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            color: #fff;
+            z-index: 2;
+        }
+
+        .overlay-container h3 {
+            font-size: 1.5em;
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: 25px;
+            font-family: Roboto ,sans-serif;
+            font-weight: 300;
+        }
+
+        .overlay-container h1 {
+            margin: 0;
+            text-transform: none;
+            font-size: 7.5rem;
+            font-family: cursive;
+            line-height: 1;
+            font-weight: 400;
+            color: yellow;
+        }
+
+        .overlay-container h2 {
+            margin: 0;
+            font-style: italic;
+            font-family: Julee;
+            font-size: 3rem;
+        }
+
+        .overlay-container button {
+            background-color: grey;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .bottom {
+            position: relative;
+            background-color: #fff;     
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            top: -50px; 
+            z-index: 1;
+           
+        }
+
+        .card-container .card-one,
+        .card-container .card-two,
+        .card-container .card-three {
+            width: 25%; 
+            position: relative;
+            height: 60vh; 
+            z-index: 2;
+            overflow: hidden;
+            border: 15px solid white;
+           
+        }
+
+        .card-container img {
+            width: 100%;
+            height: 70%;
+            display: block;
+            
+        }
+
+        .card-container p {
+            text-align: start;
+            margin: 15px 0;
+            color: red;
+        }
+
+        @media (max-width: 768px) {
+          
+            .card-container {
+                flex-direction: column;
+                align-items: center; 
+            }
+
+            .card-container .card-one,
+            .card-container .card-two,
+            .card-container .card-three {
+                width: 70%; 
+                margin-bottom: 20px; 
+            }
+        }
+       
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="top">
+                <img src="images_and_icons/flower1.png" alt="">
+                <div class="overlay-container">
+                    <h3>BEAUTIFUL</h3>
+                    <h1>Blooms</h1>
+                    <h2>For Every Occasion</h2>
+                    <button>Place an Order</button>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="card-container">
+                    <div class="card-one">
+                        <img src="images_and_icons/flowercard-1.jpg" alt="">
+                        <p>WEDDINGS FLOWERS</p>
+                    </div>
+                    <div class="card-two">
+                        <img src="images_and_icons/flowercard-2.jpg" alt="">
+                        <p>PRIVATE EVENTS</p>
+                    </div>
+                    <div class="card-three">
+                        <img src="images_and_icons/flowercard-3.jpg" alt="">
+                        <p>BIRTHDAYS BOUQUETS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

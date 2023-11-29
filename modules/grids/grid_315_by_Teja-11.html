@@ -1,0 +1,49 @@
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .grid-item {
+        background-color: #ffffff;
+        border: 2px solid #e1e1e1;
+        padding: 15px;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .grid-item-text {
+        margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <img src="modules/grid/images_and_icons/geometricpatterns.png" alt="Abstract Geometric Pattern">
+        <div class="grid-item-text">Elegant Geometric Design</div>
+    </div>
+    <div class="grid-item">
+        <img src="modules/grid/images_and_icons/linespattern.png" alt="Lines patterns">
+        <div class="grid-item-text">Lines patterns</div>
+    </div>
+    <div class="grid-item">
+        <img src="modules/grid/images_and_icons/FuturisticTechVision.png" alt="Stylized Technology Concept">
+        <div class="grid-item-text">Futuristic Tech Vision</div>
+    </div>
+</div>

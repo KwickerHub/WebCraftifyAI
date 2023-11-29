@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: rgb(202, 211, 230);
+      position: relative;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      background-color: transparent;
+      padding: 20px; /* Increase padding for better spacing */
+      width: 800px; /* Increase the width of the entire grid-container */
+      height: 600px; /* Increase the height of the entire grid-container */
+      z-index: 1;
+    }
+
+    .navy-blue-block {
+      background-color: #263149;
+      height: 50vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .grid-container > div {
+      background-color: transparent; /* Set the background color to transparent */
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+      position: relative;
+    }
+
+    .expert-text {
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 50px;
+      /* font-weight: bold; */
+      text-align: center;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .item1 {
+      grid-area: 1 / 1 / span 2 / span 2;
+      position: relative;
+    }
+
+    .item1-text {
+      color: #fff;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Oswald', sans-serif;
+      /* font-weight: bold; */
+      font-size: 30px;
+      text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 16px;
+    }
+
+    .item2 {
+      grid-area: 3/1;
+    }
+
+    .item3 {
+      grid-area: 3/2;
+    }
+
+    .item6 {
+      grid-area: 2 / 3 / span 2 / span 2;
+    }
+
+    .free-pick {
+      font-family: "Open Sans", sans-serif;
+      text-align: center;
+      font-size: 20px;
+
+    }
+
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .call-icon {
+      max-width: 50px; /* Adjust the size as needed */
+      max-height: 50px; /* Adjust the size as needed */
+      margin-right: 0px; /* Adjust the spacing as needed */
+      margin-left: -170px; /* Adjusted left margin */
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="expert-text">
+      <h3> Speak to our expert<br>at &nbsp;
+        <img src="./images_and_icons/call.png" class="call-icon"> &nbsp;&nbsp;
+        <a href="https://nicepage.com/website-templates" style="color: #ff0000; text-decoration: none;">1-800-453-6744</a>
+      </h3>
+    </div>
+
+    <div class="grid-container">
+      <div class="item1">
+        <img src="./images_and_icons/one_issue335_1.jpeg" alt="Image 1">
+        <div class="item1-text">Dolomite Alps</div>
+      </div>
+      <div class="item2">
+        <img src="./images_and_icons/one_issue335_2.jpeg" alt="Image 2">
+        <div class="item1-text">Nepal</div>
+      </div>
+      <div class="item3">
+        <img src="./images_and_icons/one_issue335_3.jpeg" alt="Image 3">
+        <div class="item1-text">Kenia</div>
+      </div>
+      <div class="item4">
+        <img src="./images_and_icons/one_issue335_4.jpeg" alt="Image 4">
+        <div class="item1-text">Iceland</div>
+      </div>
+      <div class="item5">
+        <img src="./images_and_icons/one_issue335_5.jpeg" alt="Image 5">
+        <div class="item1-text">Ethiopia</div>
+      </div>
+      <div class="item6">
+        <img src="./images_and_icons/one_issue335_6.jpeg" alt="Image 6">
+        <div class="item1-text">New Zeland</div>
+      </div>
+    </div>
+    <div class = "free-pick"><p><i>Images from  <a href="" style="color: #000000; text-decoration: none;"><u>Freepik</u></a></i></p></div>
+  </div>
+  <div class="navy-blue-block"></div>
+
+  
+</body>
+</html>

@@ -1,0 +1,99 @@
+<div>
+    <div class="box-container">
+        <div class="box">
+            <h1>01</h1>
+            <h3>PROJECT</h3>
+            <img class="icon" src="./images_and_icons/320-instagram.svg">
+        </div>
+        <div class="box">
+            <img src="./images_and_icons/320-1.jpg">
+        </div>
+        <div class="box">
+            <h1>02</h1>
+            <h3>PROJECT</h3>
+            <img class="icon"  src="./images_and_icons/320-instagram.svg">
+        </div>
+        <div class="box">
+            <img src="./images_and_icons/320-2.png">
+        </div>
+        <div class="box">
+            <img src="./images_and_icons/320-3.jpg">
+        </div>
+        <div class="box">
+            <h1>03</h1>
+            <h3>PROJECT</h3>
+            <img class="icon"  src="./images_and_icons/320-instagram.svg">
+        </div>
+        <div class="box">
+            <img src="./images_and_icons/320-4.jpg">
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam nihil laborum ipsa, illo eum cupiditate quas modi.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20vh;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.box-container .box{
+    border-radius: 2px;
+    background: white;
+    text-align: left;
+    padding-left: 0px;
+    width: 15vw;
+    height: 30vh;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box-container .box:last-child{
+    background-color: #da9552;
+}
+
+.box-container .box:last-child p{
+    color: #fff;
+    font-size: 14px;
+    width: 80%;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+}
+
+.box-container .box img{
+    background-size: contain;
+    height: 30vh;
+    width: 15vw;
+}
+
+.box-container .box .icon{
+    height: 6vh;
+    color: #da9552;
+    margin-left: -35%;
+}
+
+.box-container .box h1{
+    color: #000;
+    font-size: 3em;
+    padding: 10px 0;
+    padding-left: 15px;
+}
+
+.box-container .box h3{
+    color: #000;
+    font-size: 18px;
+    padding: 10px 0;
+    padding-left: 15px;
+}
+</style>

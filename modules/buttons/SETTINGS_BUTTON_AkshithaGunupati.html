@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+    .settings-button {
+      text-align: center;
+      background-image: url('./images_and_icons/settings.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      padding: 50px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, filter 0.3s ease;
+    }
+
+    .settings-button:hover {
+      filter: none;
+      filter: blur(1px);
+    }
+
+    .settings-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 35px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <button class="settings-button">
+    <a href="" class="settings-link">Setting</a>
+  </button>
+</body>
+</html>

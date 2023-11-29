@@ -1,0 +1,135 @@
+<div class="background-image">
+    <div class="text-block">
+        <section class="heading">Digital Agency</section>
+        <section class="details"><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing elit duis. Et netus et malesuada fames. Elementum sagittis vitae et leo.</section>
+        <section class="sub-details"><br><br>Image from <a href="https://www.freepik.com" target="_blank">Freepik</a></section>
+        <img src="./images_and_icons/background_46_sub_image.png" class="laptop-image" alt="Laptop image">
+        <button class="buttn"><b>READ MORE<b></button>
+    </div>
+    
+</div>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    button {
+    font-family: 'Google Sans', sans-serif;
+    }
+    a {
+        color: white;
+    }
+    .background-image {
+    background-image: url('./images_and_icons/background_46.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    }
+    .text-block {
+        height: 70%;
+        width: 50%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 20%;
+        margin-top: 5%;
+    }
+
+    
+    .heading {
+        font-size: 6vw;
+        font-family: 'Google Sans', sans-serif;
+    }
+    @media screen and (max-width: 600px) {
+      .heading {
+        font-size: 4vw;
+        font-family: 'Google Sans', sans-serif; /* Adjust font size for smaller screens */
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .heading {
+        font-size: 3vw;
+        font-family: 'Google Sans', sans-serif; /* Adjust font size for smaller screens */
+      }
+    }
+
+
+    .details {
+        font-size: 1vw;
+        font-family: 'Google Sans', sans-serif;
+    }
+    @media screen and (max-width: 600px) {
+        .details {
+            font-size: 0.8vw;
+            font-family: 'Google Sans', sans-serif; /* Adjust font size for screens with a width of 600 pixels or less */
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .details {
+            font-size: 0.6vw;
+            font-family: 'Google Sans', sans-serif; /* Further adjust font size for screens with a width of 400 pixels or less */
+        }
+    }
+
+    .sub-details {
+        font-size: 1vw; 
+        font-family: 'Google Sans', sans-serif;
+    }
+    @media screen and (max-width: 600px) {
+        .sub-details {
+            font-size: 0.8vw;
+            font-family: 'Google Sans', sans-serif; /* Adjust font size for screens with a width of 600 pixels or less */
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .sub-details {
+            font-size: 0.6vw;
+            font-family: 'Google Sans', sans-serif; /* Further adjust font size for screens with a width of 400 pixels or less */
+        }
+    }
+
+
+    .laptop-image {
+        position: absolute;
+        top: 40%;
+        right: 50%;
+        left: 40%;
+        transform: translate(50%, -50%);
+        max-width: 70%;
+        height: auto;
+        width: auto;
+        max-height: 50%;
+    }
+    .buttn {
+        background: rgb(236, 95, 43);
+        border-radius: 0.5vw;
+        border: none;
+        margin-top: 2vw;
+        padding: 0.7vw 4vw 0.7vw;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.2s ease-in-out;
+        font-size: 2vw;
+        font-family: 'Google Sans', sans-serif;
+        
+    }
+    .buttn:hover {
+    transform: scale(1.1);
+    }
+    .buttn:active {
+    transform: scale(1.2);
+}
+</style>

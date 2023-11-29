@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Interior Design</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .text-section {
+            position: absolute;
+            top: 200px;
+            left: 100px; /* Adjust the left position as needed */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start; /* Align to the left */
+            width: 22%; /* Adjust the width as needed */
+        }
+
+        
+        .text-section h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 0;
+            text-align: start;
+        }
+
+        .text-section p:first-child {
+            color: #070707;
+            text-align: start;
+            font-weight: 900;
+        }
+        
+        .text-section p:last-child {
+            color: #080808;
+            text-align: start;
+        }
+
+        .text-section button {
+            background-color: #FFD700;
+            color: #050404;
+            border: none;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 0;
+            font-weight: bold;
+            margin-top: 20px;
+            align-self: flex-start;
+        }
+
+        .image-section {
+            position: fixed;
+            width: 730px; 
+            height: 730px;/* Adjust the width as needed */
+            top: 50px;
+            right: 50px;
+           
+            
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 600px;
+            background-color: #FFD700;
+            padding: 20px;
+            width: 330px;
+            height: 180px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .overlay p:first-child {
+            font-size: 1.5em;
+            margin-top: 0em;
+            margin-bottom: 0.5em;
+        }
+
+        .overlay p:last-child {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-section">
+        <p>HIGHLY RECOMMENDED</p>
+        <h1>Modern Interior Design in 2017.</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <button>Read More</button>
+    </div>
+    <div class="overlay">
+        <p>Who We Are</p>
+        <p>Great to stay on top of the process</p>
+    </div>
+    <div class="image-section">
+        <!-- Replace 'path-to-your-image.jpg' with the actual path to your image -->
+        <img src="images_and_icons/36.jpeg" alt="Interior Design" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<div>
+
+    <style>
+        a {
+            text-decoration: unset;
+        }
+
+        #add-to-cart-button {
+            display: inline-block;
+            border-radius: 9px;
+            background-color: #05823b;
+            /* border: 1px solid darkgreen;*/
+            padding: 20px 40px;
+            text-align: center;
+            position: relative;
+            border-left: 12px solid #272727;
+            border-right: 12px solid #272727;
+        }
+
+        #add-to-cart-button:before,
+        #add-to-cart-button:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            width: 0;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        #add-to-cart-button:before {
+            left: 0;
+            border-top: 29px solid transparent;
+            border-bottom: 29px solid transparent;
+            border-right: 20px solid #272727;
+        }
+
+        #add-to-cart-button:after {
+            right: 0;
+            border-top: 29px solid transparent;
+            border-bottom: 29px solid transparent;
+            border-left: 20px solid #272727;
+        }
+
+        .inner_btn {
+            margin: 20px 0px 20px 0px;
+        }
+
+        /* .inner_btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 11px;
+    transform: rotate(135deg);
+    top: 6px;
+    right: 0;
+    border-color: #272727;
+}
+.inner_btn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 11px;
+    transform: rotate(-45deg);
+    top: 6px;
+    left: 0;
+    border-color: #272727;
+}*/
+
+
+
+        .arrow {
+
+            cursor: pointer;
+            height: 60px;
+            left: 10%;
+            position: absolute;
+            top: 48%;
+            transform: translateX(-50%) translateY(-50%);
+            transition: transform 0.1s;
+            width: 35px;
+
+        }
+
+        .arrow.oth {
+            transform: rotate(-180deg);
+            top: 1%;
+            right: 0 !important;
+            left: 80% !important;
+        }
+
+        .arrow-top,
+        .arrow-bottom {
+            background-color: #272727;
+            height: 3px;
+            left: -5px;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+
+        .arrow-top:after,
+        .arrow-bottom:after {
+            background-color: #fff;
+            content: "";
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all 0.15s;
+        }
+
+        .arrow-top {
+            transform: rotate(55deg);
+            transform-origin: bottom right;
+        }
+
+        .arrow-top:after {
+            left: 100%;
+            right: 0;
+            transition-delay: 0s;
+        }
+
+        .arrow-bottom {
+            transform: rotate(-55deg);
+            transform-origin: top right;
+        }
+
+        .arrow-bottom:after {
+            left: 0;
+            right: 100%;
+            transition-delay: 0.15s;
+        }
+    </style>
+    <div id="add-to-cart-button">
+        <!--div class="inner_btn"-->
+        <div class="arrow">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+        </div>
+        <a href="#">
+            <span style="color: white;">ADD TO CART</span>
+        </a>
+        <!--/div-->
+        <div class="arrow oth">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+        </div>
+    </div>
+
+</div>
