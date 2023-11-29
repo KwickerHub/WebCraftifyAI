@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 Page Not Found</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('./images_and_icons/background_137.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .error-code {
+    font-size: 5em; /* Adjusted for larger displays */
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .message {
+    font-size: 50px;
+    font-family: 'poppins';
+    margin: 10px 0 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .contact-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #5563de;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 2;
+  }
+  .contact-button:hover {
+    background-color: #6c7ae0;
+  }
+  .astronaut {
+    width: 250px; /* Adjust the size as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  /* Background overlay to mimic the shading effect */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 50, 0.7);
+    z-index: 1;
+  }
+  /* Additional styles for responsive adjustments might be required */
+</style>
+</head>
+<body>
+
+<div class="overlay"></div> <!-- Shading overlay -->
+<div class="container">
+    <div class="message">Looks like you're lost in space</div><br>
+
+  <div class="error-code">4<img src="./images_and_icons/404.png" alt="Astronaut" class="astronaut"></div><br><br>
+  Image from <a href="https://www.freepik.com/vectors/business" class="u-active-none u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" target="_blank">Freepik</a>
+<br>
+<br>
+  <a href="mailto:contact@example.com" class="contact-button">Contact us</a>
+</div>
+
+</body>
+</html>

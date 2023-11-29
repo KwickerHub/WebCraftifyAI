@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Agency - Your Adventure Starts Here</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        color: white;
+        background-image: url("images_and_icons/543im.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .hero-section {
+        width: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .hero-section .agency-name {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+        opacity: 0.9;
+    }
+    .hero-section h1 {
+        font-size: 4em;
+        margin: 0.5em 0 0.2em 0;
+        line-height: 1;
+    }
+    .hero-section p {
+        font-size: 1.2em;
+        opacity: 0.7;
+        margin-bottom: 2em;
+    }
+    .hero-section button {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 40px; 
+    }
+    @media (min-width: 768px) {
+        .hero-section {
+            max-width: 1200px;
+            margin-left: auto;
+            padding-left: 80px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="agency-name">TRAVEL AGENCY</div>
+        <h1>Your<br>Adventure<br>Starts Here</h1>
+        <p>Design From Front</p>
+        <button onclick="startPlanning()">Start Planning</button>
+    </div>
+
+    <script>
+        function startPlanning() {
+            console.log('Start planning your adventure');
+        }
+    </script>
+</body>
+</html>

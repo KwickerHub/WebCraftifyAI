@@ -1,0 +1,84 @@
+<script src="https://kit.fontawesome.com/59fd3ac906.js" crossorigin="anonymous"></script>
+<div class="main-container">
+ <h1 class="title">Pro​file</h1>
+ <p class="desc">I am professional graphic designer</p>
+ <div class="Outer-img-container"><div class="inner-img-container"></div></div>
+ <p class="more-info">Lorem ipsum dolor sit, amet consectetur<br/> adipisicing elit. Aperiam, unde?</p>
+<div class="buttonClick" onclick="buttonClick()">VIEW PORTFOLIO</div>
+<div class="icons">
+<a class="links" href=""><i class="fa-brands fa-twitter"></i></a>
+<a class="links" href=""><i class="fa-brands fa-facebook"></i></a>
+<a class="links" href=""><i class="fa-brands fa-instagram"></i></a>
+<a class="links" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+<a class="links" href=""><i class="fa-brands fa-pinterest-p"></i></a>
+</div>
+</div>
+<style>
+    body{
+        margin: 0px;
+    }
+    .main-container{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-image: url("img1.png");
+        background-size: cover;
+        background-repeat: no-repeat;        
+        color: white;
+    }
+    .title{
+        margin: 0px;
+        padding-top: 25px;
+        margin-bottom: 20px;
+    }
+    .desc{
+        margin-bottom: 20px;
+    }
+    .more-info{
+        margin: 35px 0px;
+    }
+    .Outer-img-container{
+        width: 95px;
+        height: 95px;
+        border: solid 1px #f249a1 ;
+        margin: 20px auto;
+        border-radius: 50%;
+        background-color: #f249a1;
+    }
+    .links{
+        text-decoration: none;
+        color: white;
+        margin: 0px 10px;
+    }
+    .inner-img-container{
+        width: 80px;
+        height: 80px;
+        border: solid 1px #f249a1;
+        margin: 7px;
+        border-radius: 50%;
+        background-image: url("img2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;    
+    }
+    .buttonClick{
+        width: 150px;
+        height: 23px;
+        border: solid 1px white;
+        padding-bottom:7px;
+        padding-top: 18px;
+        margin: 25px auto;
+        font-size: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .buttonClick:hover
+    {
+        background-color: white;
+        color: black;
+    }
+</style>
+<script>
+    function buttonClick(){
+        alert("Hey!!");
+    }
+</script>
