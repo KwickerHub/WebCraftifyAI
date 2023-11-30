@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table Template</title>
+<style>
+  body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .pricing-table-container {
+    max-width: 960px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .pricing-table-header {
+    margin-bottom: 20px;
+  }
+  .pricing-table-header h2 {
+  font-family: 'Times New Roman', sans-serif; /* or 'Helvetica', sans-serif; or a custom font-family if you have one */
+  font-size: 35px; /* or larger, depending on your exact needs */
+  font-weight: bold; /* for bold text */
+  line-height: 1.2; /* or other value for spacing out lines of text */
+  margin-bottom: 10px; /* adjust as needed for space below the header */
+ }
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .pricing-number {
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+  .pricing-table th {
+    background-color: #c7c6c6;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  .pricing-table th:not(:last-child) {
+    border-right: 1px solid #ddd;
+  }
+  .pricing-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    background-color: #e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .highlight {
+    background-color: #000000;
+  }
+  .highlight1 {
+    background-color: #c7c6c6;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .normal-text {
+  font-weight: normal;
+}
+
+  /* New styles for features row */
+  .features-row, .features-row td {
+    background-color: #c7c6c6; 
+    border: 1px solid #ddd; 
+  }
+</style>
+</head>
+<body>
+
+<div class="pricing-table-container">
+  <div class="pricing-table-header">
+    <h2>Pricing Table Template</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span></br> tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Basic Price<br><span class="normal-text">Lorem ipsum dolor sit amet</span></th>
+        <th>Standard Price<br><span class="normal-text">Lorem ipsum dolor sit amet</span></th>
+        <th>Advanced Price<br><span class="normal-text">Lorem ipsum dolor sit amet</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monthly price</td>
+        <td class="highlight pricing-number">$29</td>
+        <td class="pricing-number">$59</td>
+        <td class="pricing-number">$139</td>
+      </tr>
+      <tr class="features-row">
+        <td class="highlight1">Features</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Storage</td>
+        <td>1 Gb</td>
+        <td>10 Gb</td>
+        <td>20 Gb</td>
+      </tr>
+      <tr>
+        <td>People</td>
+        <td>2</td>
+        <td>20</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <td>Fraud analysis</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>24/7 support</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Consultation</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><a href="#" class="button">Choose Plan</a></td>
+        <td><a href="#" class="button">Choose Plan</a></td>
+        <td><a href="#" class="button">Choose Plan</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

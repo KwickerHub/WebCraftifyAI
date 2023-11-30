@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example</title>
+    <style>
+        body {
+            background-color: #f1c50e; /* Even rows and page background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif; /* Common font for the whole page */
+        }
+        table {
+            width: 90%;
+            max-width: 1200px;
+            border-collapse: collapse;
+            margin: 20px 0; /* Added a bit of margin around the table for spacing */
+        }
+        th, td {
+            width: 25%;
+            height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            border: none; /* Borders are not visible */
+        }
+        th {
+            background-color: black; /* Headers have a black background */
+            color: white;
+            font-size: larger; /* Slightly larger font for headers */
+        }
+        tr:nth-child(odd) {
+            background-color: #f3d553; /* Odd rows color */
+            color: black;
+        }
+        tr:nth-child(even) {
+            background-color: #f1c50e; /* Even rows color */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Header1</th> <!-- Changed to semantic <th> for headers -->
+            <th>Header2</th>
+            <th>Header3</th>
+            <th>Header4</th>
+        </tr>
+        <tr>
+            <td>Row1</td>
+            <td>Row2</td>
+            <td>Row3</td>
+            <td>Row4</td>
+        </tr>
+        <tr>
+            <td>Row1</td>
+            <td>Row2</td>
+            <td>Row3</td>
+            <td>Row4</td>
+        </tr>
+        <tr>
+            <td>Row1</td>
+            <td>Row2</td>
+            <td>Row3</td>
+            <td>Row4</td>
+        </tr>
+        <tr>
+            <td>Row1</td>
+            <td>Row2</td>
+            <td>Row3</td>
+            <td>Row4</td>
+        </tr>
+    </table>
+</body>
+</html>

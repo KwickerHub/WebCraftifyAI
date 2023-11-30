@@ -1,0 +1,111 @@
+<div id="container">
+    <title>Vevo Black</title>
+    <div id="inner-container">
+        <h2 id="heading2">Vevo Black</h2>
+        <p id="text">CASE STUDY</p>
+        <p style="margin-left: 3.5%; margin-top: 25%; width:75%;text-align: justify" >Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+        </p>
+    </div>
+    
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Vision&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+    
+    
+    #container {
+        overflow: hidden;
+        background-position: left 100 top 100;
+        background-image: url('./images_and_icons/bg_27.jpeg');
+        position: absolute;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 95%;
+        width: 99%;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: 'Kaisei Opti', serif;
+        text-align: left;
+    }
+
+    #container * {
+        margin: 30px;
+        
+    }
+
+    #inner-container{
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        
+    }
+    #inner-container p:nth-of-type(2){
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    #heading2 {
+       
+        font-family: 'Roboto', sans-serif; /* This is a bold sans-serif font from Google Fonts */
+        font-weight: 700; /* 700 is the weight for bold text */
+        font-size: 94px; /* Adjust as needed */
+        color: white; /* The text color */
+        letter-spacing: 3px; /* Creates space between each letter */
+        text-align: left;
+        margin-left: 3.5%;
+        margin-top: 34%;
+    }
+   
+    #inner-container p:nth-of-type(2){
+        margin-right: 0;
+        padding-right: 0;
+    }
+   
+    #text {
+        font-family: 'Arial Narrow', sans-serif; /* This is a commonly available condensed sans-serif font */
+        font-size: 22px; /* Adjust the size as needed */
+        font-weight: bold; 
+        margin-top: -30%;
+        color: #FFF; /* Sets the text color to white */
+        text-transform: uppercase; /* Ensures all letters are uppercase */
+        letter-spacing: 2px; /* Increases spacing between letters slightly */
+        margin-left: 3.5%
+        
+    }
+
+    
+    
+
+    @media screen and (max-width: 768px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        
+        #heading2 {
+            font-size: 52px;
+        }
+       
+        #text {
+            font-size: 16px;
+        }
+       
+    }
+
+    @media screen and (max-width: 520px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        #heading2 {
+            font-size: 40px;
+        }
+       
+        #text {
+            font-size: 14px;
+        }
+        
+    }
+</style>
