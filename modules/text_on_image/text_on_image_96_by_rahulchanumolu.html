@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text on Image</title>
+    <style>
+        .container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+        }
+
+        
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: black; 
+            text-align: center; 
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./images_and_icons/background_96_rahul.jpeg" class="image">
+        <div class="text-overlay">
+            <h1>You can have brilliant ideas, but if you can't get them across, your ideas won't get you anywhere. - Lee Iacocca</h1>
+        </div>
+    </div>
+</body>
+</html>
