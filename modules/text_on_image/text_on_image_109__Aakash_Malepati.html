@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Courses</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background: url('./images_and_icons/i109.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    /* overflow-y: scroll; Enable scrolling */
+  }
+
+  .overlay {
+    position: fixed; /* Change to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1; 
+  }
+
+  .container {
+    position: relative;
+    z-index: 2; /* Above the overlay */
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 50px; /* Add some space at the top */
+  }
+
+  .courses {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100% - 100px); /* Account for the header height */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 3; /* Above the overlay */
+  }
+
+  .course {
+    text-align: center;
+    color: #fff; /* White text */
+    flex-basis: 20%; /* Adjust the width of each box */
+    margin: 1%; /* Provide spacing between boxes */
+  }
+
+  .button {
+    background-color: #ffcc00;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 1rem;
+    z-index: 4; /* Above everything to be clickable */
+  }
+
+  .button:hover {
+    background-color: #cca800;
+  }
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+  <div class="header">
+    Our Courses
+  </div>
+  <div class="courses">
+    <div class="course">
+      <h2>Design</h2>
+      <p>Sample text. Information about the design course.</p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+    <div class="course">
+      <h2>Programming</h2>
+      <p>Sample text. Details about programming courses.</p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+    <div class="course">
+      <h2>Marketing</h2>
+      <p>Sample text. Insights into marketing strategies.</p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+    <div class="course">
+      <h2>Business</h2>
+      <p>Sample text. Business course essentials.</p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
