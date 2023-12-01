@@ -1,0 +1,82 @@
+
+    <style>
+        body {
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+        }
+        h1 {
+            font-size: 4em; /* Adjusts the size of the text */
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 2%; /* Add space between the heading and the button */
+            font-family: 'Arial', sans-serif; /* Changes the font style */
+            font-weight: bold; /* Makes the font bold */
+            color: white; /* Changes the text color *
+        }
+		p {
+			color: white; /* Example text color */
+			text-align: left;
+			max-width: 100%;
+			margin-top: 0;
+			margin-bottom: 5%; /* Spacing around the paragraph */
+			font-family: Arial, sans-serif; /* Optional: font style */
+			
+		}
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full height of the viewport */
+            background-image: url('./images_and_icons/skback117.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 40%; /* Adjust as needed */
+            height: 65%; /* Adjust as needed */
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 1px;
+            border-left: 20px solid darkred; /* 2px dark red border on the left */
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            justify-content: center;
+            align-items: left;
+            padding: 20px; /* Add some padding */
+        }
+        .learn-more-button {
+            padding: 10px 20px;
+			width: 45%;
+			height: 50px;
+			margin-top: 5%;
+            font-size: 16px;
+            color: #fff;
+			align-items: left;
+            background-color: Red; /* Bootstrap primary color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .learn-more-button:hover {
+            background-color: #8b0000; /* Darker shade for hover effect */
+        }
+        @media (max-width: 600px) {
+            .card {
+                width: 80%; /* Smaller width on smaller screens */
+            }
+        }
+    </style>
+    <div class="background-container">
+        <div class="card">
+            <h1>Explore More with our Agency</h1> <!-- Heading -->
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p><!-- Informational text -->
+            <button class="learn-more-button">Learn More</button> <!-- Button below the heading -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code if any specific interactivity is required
+    </script>
