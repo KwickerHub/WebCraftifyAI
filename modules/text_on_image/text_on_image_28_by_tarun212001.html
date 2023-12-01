@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Part</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .background-container {
+            background-image: url('./images_and_icons/background28.jpg'); /* Set your background image here */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .left-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+            padding: 50px;
+            border-top-right-radius: 50px; /* Adjust the border radius as needed */
+            border-bottom-right-radius: 50px; /* Adjust the border radius as needed */
+            border-top-left-radius: 50px; /* Adjust the border radius for the left side */
+            border-bottom-left-radius: 50px; /* Adjust the border radius for the left side */
+            width: 25%; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the container horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Move content to the top */
+            align-items: flex-start; /* Align content to the left */
+            height: 40%; /* Increase the height */
+            position: relative; /* This is necessary for positioning to work */
+            left: -480px; /* Move left to match the curve */
+            top: -188px; /* Move up slightly */
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .learn-more-button {
+            background-color: #5b3404;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px; /* Apply border-radius to create curved edges */
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+            margin-left: 20px; /* Adjust the margin to move closer to the curve */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="left-container">
+            <h1>Find yourself outside at a cozy Camp this month.</h1>
+            <p>Habitant morbi tristique senectus et. Nec dui
+            nunc mattis enimut tellus. Semper auctor
+            neque vitae tempus quam pellentesquenec
+            nam aliquam.</p>
+            <p>This is an image from <a href="https://www.freepik.com" style="text-decoration: underline;">Freepik</a>.</p>
+            <a href="#" class="learn-more-button">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>
