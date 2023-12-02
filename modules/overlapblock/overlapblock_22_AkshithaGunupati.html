@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .about-us {
+      color: black;
+      font-family: 'Alex Brush', cursive;
+      text-align: center;
+      font-size: 90px;
+    }
+
+    .content {
+      text-align: justify;
+      font-family: 'Open Sans', sans-serif;
+      padding: 0px;
+      max-width: 800px;
+    }
+
+    .image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image {
+      max-width: 100%;
+    }
+
+    .tiles {
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: center;
+      width: 100%;
+      margin-top: 280px; /* Adjusted margin to place the tiles somewhat lower */
+    }
+
+    .tile {
+      background-color: rgba(255, 255, 255, 0.9); /* Increased opacity */
+      padding: 10px;
+      border-radius: 0px;
+    }
+
+    .green-circle {
+      background-color: #6ba413;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+    }
+
+    .green-circle img {
+      width: 90%;
+      height: 90%;
+      border-radius: 10%;
+    }
+
+    .green-circle2 img {
+      width: 90%;
+      height: 90%;
+      border-radius: 10%;
+    }
+
+    .special-offers,
+    .special-deals,
+    .special-promotions {
+      color: #6ba413;
+      font-weight: bold;
+    }
+
+    .additional-text {
+      font-family: 'Open Sans', sans-serif;
+      color: black;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .enlarge-image {
+      width: 150%;
+      height: 150%;
+    }
+  </style>
+  <title>Text and Image</title>
+</head>
+<body>
+
+<div>
+  <p class="about-us">About Us</p>
+  <p class = "content"><i>Buy seasonal organic recipe boxes, fruit & veg online at Riverford & order fresh organic meat from our expert butchers. Organic farming is an alternative food production method which prioritizes sustainable production practices, respectful use of the countryside and concern for animal welfare.</i></p>
+</div>
+
+<div class="image-container">
+  <img class="image" src="./images_and_icons/veggies.jpeg" alt="Your Image Description">
+  <div class="tiles">
+    <div class="tile">
+      <div class="green-circle">
+        <img src="./images_and_icons/cali.png" alt="Cali Image">
+      </div>
+      <p class="special-offers">Special Offers</p>
+      <p class="additional-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+    </div>
+    <div class="tile">
+      <div class="green-circle">
+        <img src="./images_and_icons/fish.png" alt="Fish Image">
+      </div>
+      <p class="special-deals">Frozen Food</p>
+      <p class="additional-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+    </div>
+    <div class="tile">
+      <div class="green-circle">
+        <img src="./images_and_icons/cheese.png" alt="Cheese Image" class="enlarge-image">
+      </div>
+      <p class="special-promotions">Eggs and Cheese</p>
+      <p class="additional-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

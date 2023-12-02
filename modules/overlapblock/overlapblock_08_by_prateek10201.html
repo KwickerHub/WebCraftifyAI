@@ -1,0 +1,211 @@
+<div>
+  <div class="background"></div>
+  <div class="sect">
+    <div class="containers">
+      <div class="box">
+        <div class="content">
+          <h3>Build your Amazing Website</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste id
+            consequatur, doloribus, porro eos error, minima corporis facilis
+            consequuntur earum aliquid veritatis harum itaque saepe neque magni
+            similique iure odio. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Distinctio molestias, deserunt illo blanditiis
+            voluptates ipsam magnam, perferendis corrupti atque provident neque
+            reiciendis aperiam labore deleniti voluptate beatae dolorum iusto
+            recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content"></div>
+      </div>
+      <div class="box">
+        <div class="content"></div>
+      </div>
+      <div class="box">
+        <div class="content">
+          <h4>WE ARE CREATIVE AGENCY</h4>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content"></div>
+      </div>
+      <div class="box">
+        <div class="content"></div>
+      </div>
+      <div class="box">
+        <div class="content">
+          <p class="subtext">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, est
+            modi! Ipsum iure ipsam eum suscipit minus illo dicta a explicabo!
+            Vitae maxime hic sint minima saepe officia, nihil aliquid! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <button class="btn">READ MORE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("./images_and_icons/background_08.jpg");
+    background-size: contain;
+    top: 30%;
+    z-index: -1;
+  }
+  .background::before {
+    background-color: rgba(0, 0, 0, 0.3);
+    content: "";
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+  .sect {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 75vh;
+    z-index: 1;
+  }
+
+  .containers {
+    position: fixed;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: minmax(210px, auto);
+    margin: 20px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+  }
+
+  .containers .box {
+    width: 250px;
+    padding: 20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #ffffff;
+    transition: 0.5s;
+  }
+
+  .containers .box .content {
+    height: 100%;
+  }
+  .containers .box img {
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .containers .box:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 400px;
+    background-color: #efc76d;
+  }
+
+  .containers .box:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 200px;
+    height: 170px;
+    background: url("./images_and_icons/3_08.jpg");
+    background-size: cover;
+  }
+  .containers .box:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 200px;
+    height: 170px;
+    background: url("./images_and_icons/2_08.jpg");
+    background-size: cover;
+  }
+  .containers .box:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 200px;
+    height: 170px;
+    background: transparent;
+  }
+
+  h4 {
+    font-size: 40px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: left;
+    color: #efc76d;
+  }
+  .containers .box:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 200px;
+    height: 170px;
+    background: url("./images_and_icons/1_08.jpg");
+    background-size: cover;
+  }
+  .containers .box:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 170px;
+    background: url("./images_and_icons/4_333.png");
+    background-size: cover;
+  }
+
+  .containers .box:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 1;
+    width: 460px;
+    background-color: white;
+  }
+
+  .containers .box h2 {
+    font-size: 80px;
+    color: white;
+  }
+
+  h3 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: medium;
+    padding-top: 30px;
+  }
+
+  .subtext {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    color: black;
+    padding-top: 0px;
+    line-height: 25px;
+  }
+
+  .btn {
+    margin-top: 30px;
+    transform: translateX(-170%);
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+  }
+</style>

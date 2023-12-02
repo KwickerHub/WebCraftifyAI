@@ -1,0 +1,106 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+
+    body {
+        margin: 0;
+    }
+
+    #container {
+        background-image: url('images_and_icons/background-60.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        width: 100%;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Change to center to align content in the center */
+        text-align: center;
+        font-family: 'Kaisei Opti', serif;
+    }
+
+    #container * {
+        margin: 20px;
+    }
+
+    #inner-container {
+        text-align: left;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Change to flex-start to align items at the start */
+        margin-left: -25%;
+    }
+
+    #heading2 {
+        letter-spacing: 2px;
+        font-size: 30px;
+        text-align: left;
+        margin-left: 0; /* Adjusted to start from the left */
+    }
+
+    #text {
+        max-width: 450px;
+        font-size: 18px;
+        margin-left: 0; /* Adjusted to start from the left */
+    }
+
+    #button {
+        padding: 15px 30px;
+        background-color: yellow;
+        font-size: 18px;
+        width: 225px;
+        border: 3px solid yellow;
+        cursor: pointer;
+        color: black;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: -2px;
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        #heading2 {
+            font-size: 22px;
+        }
+        #text {
+            font-size: 16px;
+        }
+        #button {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        #heading2 {
+            font-size: 40px;
+        }
+        #text {
+            font-size: 14px;
+        }
+        #button {
+            font-size: 14px;
+        }
+    }
+</style>
+<div id="container">
+    <div id="inner-container">
+        <h2 id="heading2">Works for you, <br> even when you<br> aren't working</h2>
+        <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, ea commodo consequat. nisi ut aliquip ex ea commodo consequat. 
+        </p>
+        <p id="text">Images from <a href="#" style="text-decoration: none; color: black;">Freepik</a></p>
+        <button id="button"><a style="text-decoration: none; color: black;" href="#">READ MORE</a></button>
+    </div>
+</div>
+
+

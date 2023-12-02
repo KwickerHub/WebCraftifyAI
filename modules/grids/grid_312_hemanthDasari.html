@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal width */
+    gap: 10px; /* Space between grid items */
+    max-width: 1200px; /* Adjust the max width as needed */
+    margin: auto; /* Center the grid horizontally */
+    padding: 20px;
+  }
+
+  .grid-item {
+    width: 350;
+    height: 350;
+    text-align: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: center;   
+  }
+
+  .grid-item img {
+    max-width: 100%; /* Ensures image does not overflow its container */
+    border-radius: 50%; /* Makes the image round */
+    width: 205px;
+    height: 205px;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .read-more {
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00cec9;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .read-more:hover {
+    background-color: #0984e3;
+  }
+
+  .desc-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    
+    background-color: hsl(0, 0%, 95%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
+  }
+
+ 
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <!-- Row 1 -->
+  <div></div>
+  <div  class=" grid-item">
+    <img src="./images_and_icons/pexels-photo-3914752.jpg" alt="Image Description" ;>
+    
+  </div>
+  <div class="desc-container grid-item "><b>About Us</b>
+    <p style="color:  grey;">we were not the first home cleaning company 
+        in the UK, we take pride in being market.</p>
+    <a   class="read-more">READ MORE</a>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="desc-container grid-item"><b>What We Do</b><p style="color:  grey;"> we were not the first home cleaning company 
+    in the UK, we take pride in being market.</p>
+    <a   class="read-more">READ MORE</a>
+ </div>
+  <div class="grid-item">
+    <img src="./images_and_icons/pexels-mohamed-abdelsadig-3196486.jpg" alt="Image Description">
+    
+  </div>
+  <div class="grid-item"></div>
+
+  <!-- Row 3 -->
+  <div class="grid-item"></div>
+  <div class="grid-item">
+    <img src="./images_and_icons/pexels-harry-shum-12694483.jpg" alt="Image Description">
+     
+  </div>
+  <div class="desc-container grid-item"><b>Who We Are</b><p style="color:grey;"> we were not the first home cleaning company 
+    in the UK, we take pride in being market.</p>
+    <a   class="read-more">READ MORE</a>
+  </div>
+</div>
+
+</body>
+</html>

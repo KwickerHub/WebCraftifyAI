@@ -1,0 +1,115 @@
+<div class="body">
+    <div class="content">
+        <h2>One of the fastest way to gain business success</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo assumenda fuga deleniti non placeat voluptates numquam corrupti, cumque ut ipsa aliquam velit doloribus optio eligendi ratione praesentium molestiae eius? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dolorem eum, recusandae assumenda accusantium, architecto, tempore temporibus corporis dignissimos dolor quas nostrum non totam quisquam magni nesciunt accusamus sunt laborum!</p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>About Our Company</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam praesentium, earum debitis unde ipsa</p>
+                <button>Lorem ipsum</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content yellow">
+                <h2>Our Mission</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam praesentium, earum debitis unde ipsa</p>
+                <button>Lorem ipsum</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    min-height: 100vh;
+}
+
+h2{
+    font-size: 3em;
+    padding: 20px;
+    width: 40vw;
+    padding-left: 15vw;
+}
+
+p{
+    padding: 20px;
+    width: 38vw;
+    font-size: 12px;
+    margin-top: -20vh;
+    margin-left: 50vw;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 50px 0px 10px;
+}
+
+.container .card{
+    position: relative;
+    display: flex;
+    width: 550px;
+    height: 350px;
+    background-color: aqua;
+    border-radius: 20px;
+    background-image: url("./images_and_icons/336-1.jpg");
+    background-size: contain;
+}
+
+.container .card:nth-last-child(1){
+    background-image: url("./images_and_icons/336-2.jpg");
+    background-size: contain;
+}
+
+.container .card .content{
+    position: absolute;
+    top: 200px;
+    left: 160px;
+    width: 350px;
+    height: 200px;
+    background: #333;
+    border-radius: 20px;
+    background-color: #1947fd;
+}
+
+.container .card .content.yellow{
+    background-color: #fca601;
+}
+
+.container .card .content h2{
+    font-size: 2em;
+    font-weight: normal;
+    padding: 20px;
+    color: white;
+}
+
+.container .card .content p{
+    font-weight: normal;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    color: white;
+    width: 330px;
+    margin: 0;
+
+}
+
+.container .card .content button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    padding-left: 20px;
+}
+</style>

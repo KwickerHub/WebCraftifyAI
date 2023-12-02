@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staggered Circles with Centered Text</title>
+<style>
+  .container {
+    display: flex;
+    height: 100vh;
+    max-width: 950px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-grid {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-gap: 40px;
+    margin: 0 40px 0 0;
+  }
+  .icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .icon:nth-child(odd) {
+    right: 75px;
+  }
+  .icon:nth-child(even) {
+    left: -20px;
+  }
+  .content {
+    text-align: center;
+    max-width: 450px;
+  }
+  .content h2 {
+    font-size: 50px;
+    margin: 0;
+  }
+  .content h2 .highlight {
+    font-size: 80px;
+    font-weight: bold;
+    display: block;
+  }
+  .signup-button {
+    background-color: #7D3C98;
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="icon-grid">
+    <div class="icon" style="background-image: url('./images_and_icons/issue_328_icon_1.jpg');"></div>
+    <div class="icon" style="background-image: url('./images_and_icons/issue_328_icon_2.jpg');"></div>
+    <div class="icon" style="background-image: url('./images_and_icons/issue_328_icon_3.jpg');"></div>
+    <div class="icon" style="background-image: url('./images_and_icons/issue_328_icon_4.jpg');"></div>
+  </div>
+  <div class="content">
+    <h2>Sign up for a</h2>
+    <h2 class="highlight">FREE 3 Day Trial</h2>
+    <p>Join the gym that's open 24/7</p>
+    <a href="#signup" class="signup-button">START FREE TRIAL</a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Button</title>
+<style>
+  .button-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  .login-btn {
+    
+    padding: 10px 50px;
+    background-color: #03c79e;
+    color: white;
+    border: none;
+    border-radius: 20px 20px 20px 20px; /* Creates rounded edges */
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    position: relative; /* For the pseudo-elements */
+    overflow: hidden; /* Hide overflow */
+  }
+  .login-btn:hover {
+    background-color: #03c79e;
+  }
+  .login-btn:active {
+    background-color: #03c79e;
+  }
+  .login-btn:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .btn-cr{
+
+    position: absolute;
+    left: 44%;
+    top: 36.5%;
+    transform: translateY(-50%) scale(0.7);
+    width: 54px;
+    height: 54px;
+    background-color: #03c79e;
+    background-color: rgba(3, 199, 158, 0.8);
+    border: none;
+    border-radius: 50%;
+
+  }
+</style>
+</head>
+<body>
+
+<div class="button-container">
+  <button class="login-btn" onclick="login()">LOGIN</button>
+  <div class="btn-cr"></div>
+</div>
+
+<script>
+  function login() {
+    // JavaScript to handle the login action
+    alert("Perform login action here.");
+  }
+</script>
+
+</body>
+</html>

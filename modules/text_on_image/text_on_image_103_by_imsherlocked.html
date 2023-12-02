@@ -1,0 +1,49 @@
+<div>
+    <p>Design is thinking made visual </p>
+</div>
+
+<style>
+
+        div{
+            margin: 0;
+            padding: 0;
+            background-image: url("images_and_icons/backgroud_103_imsherlocked.jpg");
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        p {
+  --color1: rgb(230, 9, 57);
+  --color2: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 80px;
+  text-align: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color1),
+    var(--color1) 30px,
+    var(--color2) 30px,
+    var(--color2) 60px
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: 40s linear 0s infinite move;
+}
+
+@keyframes move {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: 1000px;
+  }
+}
+
+</style>
+
+   

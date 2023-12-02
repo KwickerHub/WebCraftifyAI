@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Educational Course Landing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('./images_and_icons/background_151.jpeg');
+            background-size: contain; 
+            
+        
+            color: white;
+        }
+
+        .text-on-image {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .header-img-text {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 4vw; 
+            font-weight: bold;
+            color: rgb(4, 0, 24);
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header-img-text p {
+            font-size: 2vw;
+            margin-top: 10px;
+        }
+
+        .my-button {
+            padding: 12px 24px;
+            font-size: 1em;
+            background-color: #6a0572;
+            color: white;
+            border: none;
+            border-radius: 50px; 
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            margin-top: 20px;
+            animation: buttonFadeIn 2s ease-in-out;
+        }
+
+        .my-button:hover {
+            background-color: #ffdd57;
+            color: #6a0572;
+            transform: scale(1.05); 
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes buttonFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            body {
+                background-size: cover; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-on-image">
+        <div class="header-img-text">
+            Introduction to Web Development Course
+            <p>Enroll now and master the basics of HTML, CSS, and JavaScript!</p>
+           
+        </div>
+        <button class="my-button my-button-animation">Enroll Now</button>
+    </div>
+</body>
+
+</html>
