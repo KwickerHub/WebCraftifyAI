@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #dddddd; /* Add this line to add borders */
+}
+.table-header {
+  height: 60px;
+}
+th {
+  text-align:center;
+}
+#bas {
+  background-color: rgb(129, 232, 129);
+}
+#std {
+  background-color: rgb(0, 187, 255);
+}
+#adv {
+  background-color: rgb(255, 68, 0);
+}
+.wkly-prc {
+  height: 50px;
+}
+h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+.choose-plan {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 16px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.choose-plan:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<h2>Pricing Table Template</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ultricies integer quis auctor elit.
+</p>
+
+<table>
+  <tr class="table-header">
+    <th></th>
+    <th >BASIC</th>
+    <th >STANDARD</th>
+    <th >ADVANCED</th>
+  </tr>
+  
+  <tr class="wkly-prc">
+    <td>Weekly price</td>
+    <td id="bas">$ 29</td>
+    <td id="std">$ 59</td>
+    <td id="adv">$ 139</td>
+  </tr>
+  
+  <tr>
+    <td>Storage</td>
+    <td>1GB</td>
+    <td>10GB</td>
+    <td>50GB</td>
+  </tr>
+  
+  <tr>
+    <td>People</td>
+    <td>3</td>
+    <td>20</td>
+    <td>Unlimited</td>
+  </tr>
+  
+  <tr>
+    <td>Cups of Coffee</td>
+    <td>10</td>
+    <td>15</td>
+    <td>30</td>
+  </tr>
+  
+  <tr>
+    <td>JIT support</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td>Consultation</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td></td> <!-- Empty cell for alignment -->
+    <td><button class="choose-plan">CHOOSE PLAN</button></td>
+    <td><button class="choose-plan">CHOOSE PLAN</button></td>
+    <td><button class="choose-plan">CHOOSE PLAN</button></td>
+  </tr>
+</table>
+
+</body>
+</html>
