@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Use viewport height to ensure minimum height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  .background-image {
+    background-image: url('./images_and_icons/i112.jpg');
+    height: 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .container {
+    width: 350px; /* Set a fixed width */
+    height: 375px; /* Set a fixed height to make it square */
+    background-color: rgba(44, 204, 196);
+    border-radius: 18px;
+    color: white;
+    padding: 20px;
+    padding-bottom: 60px; /* Extra padding at the bottom for the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 40px; /* Move it 40px away from the left or as much as you need */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the button to the bottom */
+    text-align: left;
+}
+  .title {
+    margin-bottom: 15px;
+    font-size: 44px;
+    font-weight: bold;
+  }
+  .content {
+    font-size: 18px;
+    color: #000000;
+  }
+  .title, .content {
+    text-align: left;
+  }
+  .button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 18px;
+    margin-top: 20px; /* Adds some space between the button and the text above it */
+    margin-bottom: 20px;
+  }
+  .content p {
+    line-height: 1.6; /* Adjust the line height for better readability */
+}
+.container .button {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+</style>
+</head>
+<body>
+
+<div class="background-image">
+  <div class="container">
+    <div class="title">
+      Most vegetables are very healthy
+    </div>
+    <div class="content">
+      <p>Habitat morbi tristique senectus et. Nec dui nunc mattis enim ut tellus. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam.</p>
+    </div>
+    <a href=None class="button">Learn more</a>
+  </div>
+</div>
+
+</body>
+</html>
