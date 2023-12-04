@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breads</title>
+<style>
+  .grid-container {
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+  }
+  .grid-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .grid-item img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .grid-item-text {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 2em; 
+    white-space: pre-line; 
+  }
+
+</style>
+</head>
+<body>
+<h1 class="heading">We Bake Fresh, Homemade Bread,<br>Pastries and Cakes Everyday</h1>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="images_and_icons/bread1.jpeg" alt="Sourdough Loaf">
+  </div>
+  <div class="grid-item-text">
+    <h3>SOURDOUGH LOAF</h3>
+    <p>Sample text, consectetur adipiscing.</p>
+    <p>$4.65</p>
+  </div>
+  <div class="grid-item">
+    <img src="images_and_icons/bread2.jpeg" alt="Baguette">
+  </div>
+  <div class="grid-item-text">
+    <h3>BAGUETTE</h3>
+    <p>Small-batch sourdough baguette.</p>
+    <p>$3.05</p>
+  </div>
+  <div class="grid-item-text">
+    <h3>FARMERS LOAF</h3>    
+    <p>Slow-fermented sourdough Rye studded with Kalamata.</p>
+    <p>$5.50</p>
+  </div>
+  <div class="grid-item">
+    <img src="images_and_icons/bread3.jpeg" alt="Farmers Loaf">
+  </div>
+  <div class="grid-item-text">
+    <h3>ROUND BREAD</h3>
+    <p>Made with 100% whole grain flour and high in fiber.</p>
+    <p>$5.15</p>
+  </div>
+  <div class="grid-item">
+    <img src="images_and_icons/bread4.jpeg" alt="Round Bread">
+  </div>
+</div>
+
+<script>
+</script>
+
+</body>
+</html>
