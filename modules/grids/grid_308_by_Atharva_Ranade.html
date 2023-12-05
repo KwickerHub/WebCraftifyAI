@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(82,115,88,255); /* Light grey background color */
+        }
+
+        .image-grid {
+            position: relative;
+            width: 40%; /* Adjust as needed */
+            height: 90%; /* Adjust as needed */
+            margin-left: 200px;
+           
+        }
+
+        .image-grid img {
+            position: absolute;
+            /*width: 25%; /* Adjust as needed */
+            height: 45%; /* Adjust as needed */
+            object-fit: cover;
+            margin: 20px;
+        }
+
+        .image-grid img.center {
+            top: 25% ;
+            left: 32.5% ;
+        }
+
+        .image-grid img.top.left {
+            top: 0;
+            left: 0;
+        }
+
+        .image-grid img.bottom.left {
+            bottom: 0;
+            left: 0;
+        }
+
+        .image-grid img.top.right {
+            top: 0;
+            right: 0;
+        }
+
+        .image-grid img.bottom.right {
+            bottom: 0;
+            right:0;
+
+        }
+
+        .textbox {
+            position: relative;
+            flex: 1;
+            padding: 20px;
+            color: white;
+            margin-right: 250px;
+            left: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h3{
+            font-size: 20px;
+        }
+        h2{
+            font-size: 50px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-grid">
+        <img src="./images_and_icons/grid_308_by_Atharva_Ranade_Image1.png" alt="Image 1" class="top left">
+        <img src="./images_and_icons/grid_308_by_Atharva_Ranade_Image2.png" alt="Image 2" class="top right">
+        <img src="./images_and_icons/grid_308_by_Atharva_Ranade_Image3.png" alt="Image 3" class="bottom left">
+        <img src="./images_and_icons/grid_308_by_Atharva_Ranade_Image4.png" alt="Image 4" class="bottom right">
+        <img src="./images_and_icons/grid_308_by_Atharva_Ranade_Image5.png" alt="Image 5" class="center">
+    </div>
+
+    <div class="textbox">
+        <h2>How We Help</h2>
+        <h3>Agile</h3>
+        <p>Become faster, more flexible, and intensely customer-focused</p>
+        <h3>Customer Experience</h3>
+        <p>Deliver great customer experiences that increase loyalty and decrease costs</p>
+        <h3>People and Organisation</h3>
+        <p>Improve performancesby ensuring your people can deliver on your strategy</p>
+    </div>
+
+</body>
+</html>
