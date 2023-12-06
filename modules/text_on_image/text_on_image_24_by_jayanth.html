@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Card</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .contact-card {
+        background-image: url('./images_and_icons/bg_24.PNG'); /* Replace with your image path */
+        background-color: #ff6464; /* This should match the background color of your image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100vh;
+        padding-right: 50px; /* Adjust as needed */
+        padding-left: 20%; /* This will create a gap between the image and the text */
+    }
+    .info {
+        max-width: 500px; /* Adjust as needed */
+        color: black; /* Changed text color to black */
+    }
+    .button {
+        background-color: #ffd700;
+        color: black;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    .image-credit {
+        color: rgb(14, 13, 13);
+        text-decoration: none;
+        display: block; /* This makes the link take up the entire line */
+        margin-top: 10px; /* Adjust as needed for spacing */
+    }
+</style>
+</head>
+<body>
+    <div class="contact-card">
+        <div class="info">
+            <h1>We can do it together</h1>
+            <p>Professional designer combines his photography degree with his marketing degree to find the right balance between creativity and commercial sense. Vincent is an experienced all-round photographer and moved to Stirling at the end of 2017.</p>
+            <button class="button" onclick="window.location='https://nicepage.online/'">Contacts</button>
+            <a href="https://www.freepik.com/vectors/computer" class="image-credit">Image from Freepik</a>
+            <p>Phone: 1 (232) 252 55 22</p>
+            <p>Location: 75 Street Sample, WI 63025</p>
+            <p>Mail: template@sample.com</p>
+        </div>
+    </div>
+<script>
+    // JavaScript can be added here if needed
+</script>
+</body>
+</html>

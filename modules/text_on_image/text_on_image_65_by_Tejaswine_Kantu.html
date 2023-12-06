@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image with Text</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('images_and_icons/background_65.jpg');
+      background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.1em;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    button {
+        padding: 20px 20px;
+        border: 2px solid white; /* White border */
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        background-color: #FFD700; 
+        border: none; 
+        color: black; 
+        text-align: center; 
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: white; /* Change to white on hover */
+        color: navy; /* Text color changes on hover */
+    }
+
+    .text-container {
+        position: absolute;
+        bottom: 0;
+        top:10px;
+        left: 45%;
+        transform: translateX(-50%);
+        width: 37%;
+        height: 30%;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        color: white;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .yellow-bar {
+        position: absolute;
+        top: 0%;
+        right: 110%;
+        /* transform: translateY(-30%) translateX(-70%); */
+        width: 10px;
+        height: 435px;
+        background-color: #FFD700;
+    }
+    .next_to_yellow {
+        position: absolute;
+        top: 16%;
+        right: 3%;
+        transform: translateY(-50%);
+        width: 400px;
+        height: 100px; 
+        /* background-color: aqua; */
+    }
+
+  </style>
+</head>
+<body>
+  <div style="width: 100%; overflow: hidden; background-color: #FFD700;">
+    <div class="text-container">
+        <h1>Luxury Interior Design Studio</h1>
+    </div>
+    <div class="next_to_yellow">
+        <div class="yellow-bar"></div>
+        <p style="font-size: 20px; color: white;">We embark on each design with a unique approach and fresh outlook, delivering tailor-made interiors which reflect our clients’ personality, lifestyle and values. Neque aliquam vestibulum morbi blandit cursus risus. Nisi est sit amet facilisis.
+        </br></br>
+        Image by <a href="https://www.freepik.com/photos/background" style="color: inherit"> Freepik</a></p>
+        <button>LEARN MORE</button>
+      </div>
+  </div>
+  
+</body>
+</html>
