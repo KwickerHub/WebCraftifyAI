@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transform: scale(0.9,1);
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            width: 35%;
+            margin: auto;
+        }
+
+        table {
+            position: relative;
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px 0;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        th, td {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color:rgb(240, 240, 240); /* Light grey */
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(220, 220, 220); /* Dark grey */
+        }
+
+        .choose-plan {
+            text-align: center;
+        }
+
+        .choose-plan button {
+            padding: 10px;
+            background-color: #fa0a9e;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .first.row{
+            height:75px;
+        }
+        .row{
+            height: 50px;
+        }
+
+        .bold{
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            text-align: center;
+            text-shadow: 0px 1px, 1px 0px, 1px 0px;
+        }
+        .button{
+            text-align: center;
+        }
+        button{
+            border-radius: 25px;
+            width:50%;
+        }
+        .col{
+            text-align: center;
+        }
+        .first.col{
+            font-weight: bold;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pricing Table Template</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>FEATURES</th>
+                <th class="col">DAILY</th>
+                <th class="col">MONTHLY</th>
+                <th class="col">YEAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class=" first row">
+                <td class="first col">Pricing</td>
+                <td class="bold">$ 29</td>
+                <td class="bold">$ 59</td>
+                <td class="bold">$ 99</td>
+            </tr>
+            <tr class ="row">
+                <td class="first col">10-hour training</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td class="first col">Coffee and training</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td class="first col">Individual consulting</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td class="first col">Certificate</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class=" row choose-plan">
+                <td></td>
+                <td class="button">
+                    <button>CHOOSE PLAN</button>
+                </td>
+                <td class="button">
+                    <button>CHOOSE PLAN</button>
+                </td>
+                <td class="button">
+                    <button>CHOOSE PLAN</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

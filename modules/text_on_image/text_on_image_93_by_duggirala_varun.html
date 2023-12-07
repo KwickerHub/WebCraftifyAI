@@ -1,0 +1,106 @@
+<div class="titleinspirational-showrooms">
+    <div class="container">
+        <p class="title">Visit Our Inspirational</p>
+        <p class="title">Showrooms <span class="highlighted">Today!</span></p>
+        <div class="text-content">
+            <p>Explore our Crafts to select the best for you.</p>
+            <p>Get expert advice on how to start adding to your home.</p>
+            <p>Amazing accessories await you at our Showroom.</p>
+            <p>Come & purchase with the finest premium touch.</p>
+        </div>
+        <button class="learn-more-btn" onclick="learnMore()">LEARN MORE</button>
+        <p class="image-credit">Image from Unsplash</p>
+    </div>
+</div>
+
+<style>
+        * {
+        margin: 0;
+        padding: 0;
+    }
+    .titleinspirational-showrooms {
+        background-image: url('images_and_icons/background_93.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; 
+        width: 100vw; 
+        display: flex;
+        align-items: start; 
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 60px 60px 70px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .title, .highlighted {
+        color: white;
+        font-size: 3em;
+        margin: 0;
+        line-height: 1;
+        display: block;
+    }
+
+    .highlighted {
+        font-size: 1.5em;
+        font-weight: bold;
+        display: inline;
+    }
+
+    .text-content p {
+        margin: 0;
+        line-height: 1.6;
+        padding-top: 10px;
+        color: #cbeddb;
+    }
+
+    .learn-more-btn {
+        padding: 10px 20px;
+        background-color: rgb(102, 143, 113);
+        border: none;
+        color: #b0cbc6;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .learn-more-btn:hover {
+        background-color: #367357;
+        color: white;
+    }
+
+    .image-credit {
+        font-size: 0.8em;
+        margin-top: 20px;
+        color: #297655;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .title, .highlighted {
+            font-size: 1.5em;
+        }
+
+        .highlighted {
+            font-size: 1.7em;
+        }
+    }
+</style>
+
+<script>
+    function learnMore() {
+        alert('Learn More button clicked!');
+    }
+</script>

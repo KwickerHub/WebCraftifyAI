@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article Layout - Solo: A Star Wars Story</title>
+<style>
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  .article-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    position: relative;
+  }
+  .left-column {
+    grid-column: 1;
+  }
+  .right-column {
+    grid-column: 2;
+    margin-top: 400px;
+  }
+  .headline {
+    font-size: 57px;
+    margin-bottom: 50px; 
+  }
+  .byline {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 90px; 
+  }
+  .image-container {
+    position: relative;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: url('path-to-play-button-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+  .article-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .floating-image-container {
+    position: absolute;
+    top: 0;
+    left: 720px;
+    width: 680px;
+    height: 660px;
+  }
+</style>
+</head>
+<body>
+
+<div class="article-container">
+  <div class="left-column">
+    <div>
+      <div class="headline">Solo: A Star Wars Story disappoints at the box office</div>
+      <div class="byline">Takings for the Han Solo prequel were up to a third below expectations – the franchise’s worst result for a live actioner since Attack of the ClonesEarnings less than expected as movie fails to achieve orbit</div>
+    </div>
+    <div class="image-container">
+        <img src="images_and_icons/ol3img1.jpg" alt="Image related to the article" />
+    </div>
+  </div>
+
+  <div class="right-column">
+    <div class="article-text">
+      Solo: A Star Wars Story has performed disappointingly on its box-office debut, recording much poorer results than the previous Star Wars standalone, Rogue One, and becoming the lowest-performing live-action Star Wars film at the US box office since Star Wars: Episode II – Attack of the Clones in 2002.
+      <br><br>
+      After its US release on the Memorial day weekend, Solo, starring Alden Ehrenreich, took an estimated $83.3m (£63m) for its first three days, well short of Rogue One’s $155.1m for the same period. With an extra day’s results for the “four-day weekend”, Solo has reached an estimated $103m – but that is well down on the projected take of $130m -$150m. Solo’s figures are also well behind Episode III – Revenge of the Sith’s $158.4m in 2005, which also benefited from a four-day opening weekend.
+    </div>
+  </div>
+</div>
+
+<div class="floating-image-container">
+  <div class="image-container">
+    <img src="images_and_icons/video.jpg" alt="Another related image" />
+    <div class="play-button"></div>
+  </div>
+</div>
+
+</body>
+</html>

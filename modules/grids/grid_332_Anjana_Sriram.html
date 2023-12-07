@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-Grid Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://source.unsplash.com/1920x1080/?nature'); 
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            width: 100%;
+            border: 2px solid #ddd;
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+
+        .grid-item:nth-child(1) {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .grid-item:nth-child(2) {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        .grid-item:nth-child(3) {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .grid-item:nth-child(4) {
+            background-color: #f39c12;
+            color: #fff;
+        }
+
+        .grid-item h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: inherit;
+        }
+
+        .grid-item p {
+            margin-top: 0.25em;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-item">
+            <h3>Grid 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Grid 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Grid 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Grid 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</body>
+</html>

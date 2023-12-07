@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cozy Camp</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        height: 100vh;
+        background-image: url('./images_and_icons/bg_28.PNG'); /* Replace with the path to your image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align to the left side */
+        padding-left: 10%; /* Padding from the left side */
+    }
+    .overlay {
+        background-color: white;
+        border-radius: 25px;
+        padding: 50px;
+        max-width: 500px;
+    }
+    .overlay h1 {
+        color: #000;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 20px;
+    }
+    .overlay p {
+        color: #000;
+        font-family: 'Open Sans', sans-serif;
+        text-align: justify;
+        hyphens: auto;
+    }
+    .overlay .learn-more-button {
+        padding: 10px 20px; /* Medium padding for medium-sized button */
+        background-color: #ad0a0a;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 50px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1em; /* Medium font size */
+        display: block; /* Make the button a block to fill the width */
+        width: fit-content; /* Adjust width to content */
+        margin-top: 20px; /* Space from the text above */
+    }
+    .overlay .image-credit {
+        color: #000;
+        font-size: 0.9em;
+        margin-top: 15px;
+        display: block; /* Ensure this is on its own line */
+    }
+    .overlay .image-credit a {
+        color: black; /* Freepik link color set to black */
+        text-decoration: underline; /* Underline Freepik link */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="overlay">
+        <h1>Find yourself<br>outside at a cozy<br>Camp this month.</h1>
+        <p>Habitant morbi tristique senectus et. Nec<br>dui nunc mattis enim ut tellus. Semper<br>auctor neque vitae tempus quam<br>pellentesque nec nam aliquam.</p>
+        <p class="image-credit">Image from <a href="https://www.freepik.com/" style="color: black;">Freepik</a></p>
+        <a href="https://nicepage.review/" class="learn-more-button">Learn More</a>
+    </div>
+</div>
+<script>
+    // JavaScript can be added here if needed
+</script>
+</body>
+</html>

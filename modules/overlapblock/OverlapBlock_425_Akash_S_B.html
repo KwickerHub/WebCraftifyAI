@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation</title>
+    <style>
+        body {
+            background-image: url(images_and_icons/Background_425.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            color: white;
+            width: 40%;
+            margin: 15% 0 0 5%; 
+            padding: 10 40px;
+            text-align: left; 
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: rgb(249, 249, 248);
+        }
+
+        p {
+            color: rgb(248, 248, 247);
+        }
+
+        input,
+        button {
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 50%;
+            box-sizing: border-box;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        input:hover,
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        input:focus,
+        button:focus {
+            outline: none;
+        }
+
+        input::placeholder {
+            color: white;
+        }
+
+        input[type="button"] {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 20px;
+        }
+
+        input[type="button"]:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .grid-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 180px;
+        }
+
+        .grid-item {
+            background-color: white;
+            width: 25%;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-item::before {
+            content: "";
+            display: block;
+            padding-top: 5%;
+        }
+
+        .grid-item .content {
+            flex: 3;
+            text-align: top;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .grid-item .content p {
+            color: black; 
+            margin-top: 0;
+        }
+
+        .grid-item .arrow {
+            margin-top: auto;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Discover a world without limits</h1>
+        <p>In a world without limits, boundaries dissolve into the horizon, and possibilities stretch beyond the imaginable.</p>
+        <input type="button" value="Learn More">
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="content">
+                <h2 style="color: rgb(55, 0, 255);">Water Tested</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="arrow">➊</div>
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                <h2 style="color: rgb(111, 0, 255);">Carved Frame</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="arrow">➋</div>
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                <h2 style="color: rgb(157, 0, 255);">Carved Glass</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="arrow">➌</div>
+        </div>
+    </div>
+</body>
+</html>
