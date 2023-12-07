@@ -8,7 +8,7 @@
         .main-container {
             text-align: center;
             padding: 20px;
-            background-image: url('./images_and_icons//Bg5.jpeg');
+            background-image: url('./images_and_icons/J_image.jpg');
             background-size: cover;
             background-position: center;
             color: blue;
