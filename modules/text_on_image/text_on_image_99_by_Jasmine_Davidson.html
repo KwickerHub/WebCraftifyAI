@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In The City</title> <!--Text on Image Animation-->
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .image-container:hover .text-overlay {
+            opacity: 1;
+        }
+
+        .text-overlay h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+        .text-overlay p {
+            font-size: 1.2em;
+            margin: 0;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="modules/text_on_image/images_and_icons/in the city background.jpeg" alt="Background Image">
+    <div class="text-overlay">
+        <h1>Your Text Here</h1>
+        <p>Additional Text or Description</p>
+    </div>
+</div>
+
+</body>
+</html>
