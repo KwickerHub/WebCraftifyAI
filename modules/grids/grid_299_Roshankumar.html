@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Background Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-section {
+            background-color: #4CAF50; 
+            height: 30vh;
+            position: relative; 
+        }
+
+        .bottom-section {
+            background-color: #f0f0f0; 
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .center-image {
+            position: absolute;
+            top: 10vh; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            height: 70vh;
+            width: auto;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%; 
+            box-shadow: 0 4px 8px rgba(83, 66, 66, 0.1);
+            height: 50%; 
+        }
+
+        .quote, .description {
+            flex: 1; 
+            padding: 10px;
+        }
+
+        .quote h2 {
+            font-size: 1.5em;
+            text-align: left; 
+        }
+
+        .read-more {
+            background-color: #4CAF50; 
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-section"></div>
+    <img src="images_and_icons/299.png" alt="Center Image" class="center-image">
+    <div class="bottom-section">
+        <div class="content-box">
+            <div class="quote">
+                <h2>"Great design is born from careful balancing act of these forces of nature"</h2>
+            </div>
+            <div class="description">
+                <p>In the realm of design, the harmony between natural elements and human creativity stands paramount. This delicate equilibrium, where the raw beauty of nature meets the refined touch of artistic expression, is where truly great design emerges. It's a dance of light and shadow, form and function, simplicity and complexity.</p>
+                <button class="read-more">Read More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
