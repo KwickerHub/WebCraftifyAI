@@ -1,0 +1,3 @@
+In adding a Module, You need to create the html file containing the module and drop it in the relative folder.
+
+You do not need to add the default <!DOCTYPE>, <html>, <head>, <body> etc. You can just go straight to the point by starting with your <div>, adding your <style>, and perhaps a <script> tag. 
