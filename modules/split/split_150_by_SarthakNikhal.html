@@ -26,7 +26,7 @@
 
 <style>
     #container {
-        display: flex;
+        display: table;
         /* justify-content: space-between; */
         max-width: 100%;
         margin: 0 5%;
@@ -82,14 +82,20 @@
 
     @media (max-width: 768px) {
         #container {
-            flex-direction: column;
+            flex-direction: row;
         }
         #textContainer {
             max-width: 100%;
             padding: 10px 0;
-            order: 1; /* Move text container to the bottom on smaller screens */
+            order: 0; /* Move text container to the top on smaller screens */
         }
-        
+        .image {
+            flex: 1 1 calc(100% - 10px);
+        }
+        #imageSplit {
+            flex-direction: column;
+            align-items: center;
+        }
 
     }
 </style>
