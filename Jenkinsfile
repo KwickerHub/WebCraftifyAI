@@ -45,7 +45,7 @@ pipeline {
       }
       stage('Deploy to Container') {
         steps {
-          sh 'docker run -d -p 80:80 -p 3000:3000 dockerusername/swoc:latest'
+          sh 'docker run -d -p 80:80  dockerusername/swoc:latest'
         }
       }
     }
