@@ -1,0 +1,107 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="container">
+  <div class="left">
+    <img src="images_and_icons/image1.jpg" />
+  </div>
+  <div class="right">
+    <div class="heading">
+      <h1>Dog Care Adivce</h1>
+      <span class="line"></span>
+    </div>
+    <div>
+      <div class="section">
+        <img src="images_and_icons/image2.jpg" class="section-img" />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
+          maxime, aut illo minima veniam praesentium minus, explicabo dolor
+          voluptas
+        </p>
+      </div>
+      <div class="section">
+        <img src="images_and_icons/image3.jpg" class="section-img" />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
+          maxime, aut illo minima veniam praesentium minus, explicabo dolor
+          voluptas
+        </p>
+      </div>
+    </div>
+    <p>Lorem, ipsum dolor</p>
+  </div>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+  .container {
+    display: flex;
+    max-width: 60%;
+    height: 45vh;
+    padding: 30px;
+    margin: auto;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 50px;
+    gap: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+  }
+
+  .left img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .left {
+    flex-basis: 45%;
+    margin-top: -8%;
+  }
+  .right {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .heading h1 {
+    font-size: 35px;
+    margin: 0;
+  }
+
+  .heading .line {
+    width: 45%;
+    height: 1px;
+    background: grey;
+  }
+
+  .section {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .section p {
+    margin: 0;
+    line-height: 22px;
+  }
+  .section-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 990px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+    .left {
+      margin: 0;
+    }
+  }
+</style>
