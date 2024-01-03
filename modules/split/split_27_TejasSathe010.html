@@ -12,7 +12,10 @@
 </div>
 
 <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
     .split-container {
+        font-family: "Poppins", sans-serif;
         position: relative;
         width: 100%;
         height: 100vh;
@@ -38,7 +41,7 @@
         position: absolute;
         top: 0;
         left: 70%;
-        width: 25%;
+        width: 455px;
         height: 100%;
         background-color: rgba(7, 232, 210, 0.8);
         transition: all 0.3s ease-in-out;
@@ -50,7 +53,7 @@
     }
 
     .split-container:hover .split-overlay {
-        width: 25%;
+        width: 455px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -87,6 +90,24 @@
     .overlay-button:hover {
         color: #333;
         background-color: #ffffffa7;
+    }
+
+    @media screen and (max-width: 768px) {
+        .split-overlay {
+            width: 80%;
+        }
+
+        .overlay-heading {
+            font-size: 3em;
+        }
+
+        .overlay-text {
+            font-size: 1em;
+        }
+
+        .overlay-button {
+            font-size: 1em;
+        }
     }
 
 </style>
