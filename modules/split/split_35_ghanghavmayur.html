@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .split-container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .split {
+            box-sizing: border-box;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s;
+        }
+
+        .content-container {
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .right {
+            background-color: #fff;
+            color: #222;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+
+        .split:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .split {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .content-container {
+                width: 100%;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="split-container">
+            <div class="split left">
+                <div class="content-container">
+                    <h1>Your Left Content</h1>
+                    <img src="images_and_icons\mayur L 800x600.jpg" alt="Left Image">
+                </div>
+            </div>
+            <div class="split right">
+                <div class="content-container">
+                    <h1>Your Right Content</h1>
+                    <img src="images_and_icons\mayur R 800x600.jpg" alt="Right Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
