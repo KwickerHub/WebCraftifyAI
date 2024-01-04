@@ -1,0 +1,147 @@
+<style>
+  #split-31-section .classic--background {
+    background-color: #ebecf1;
+  }
+  /* 
+  .leftRightTextBlock {
+    width: 100%;
+    max-width: 700px;
+  } */
+  #split-31-section .heading {
+    font-size: 40px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+  #split-31-section .heading {
+    display: inline-block;
+    position: relative;
+    background-image: linear-gradient(to right, transparent 50%, #f0c40f 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.4s ease-out;
+  }
+
+  #split-31-section .heading:hover {
+    background-position: -100% 0;
+  }
+  #split-31-section .custom-para {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #323232;
+    margin-top: 30px;
+  }
+
+  #split-31-section .leftRightImageBlock {
+    max-width: 50%;
+    background: url(./images_and_icons/couple.jpg);
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+  #split-31-section .custom-btn {
+    background: #000;
+    text-transform: uppercase;
+    padding: 27px 44px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    line-height: 0;
+    transition: color 0.4s linear;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+    text-align: center;
+    text-decoration: none;
+  }
+  #split-31-section .custom-btn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 101%;
+    height: 101%;
+    background: #fff;
+    z-index: 1;
+    transition: transform 0.5s;
+    transition-timing-function: ease;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+    border-radius: 0;
+  }
+  #split-31-section .custom-btn:hover::before {
+    transform: scaleX(1);
+    color: #000 !important;
+    z-index: -1;
+  }
+  #split-31-section a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+  /* dasdad */
+  #split-31-section .flexdiv-content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #split-31-section .large--2 {
+    width: 50%;
+    padding: 25px;
+  }
+
+  #split-31-section p.custom-para.para-bottom {
+    margin-left: 45px;
+  }
+  #split-31-section a.custom-btn.btn-sm.mt-4 {
+    margin-left: 45px;
+  }
+
+  /* @media (max-width: 768px) {
+    .leftRightImageBlock {
+      width: 100%;
+      max-width: 100%;
+      background-size: contain;
+      background-position: center top;
+      height: 340px;
+    }
+
+    .flexdiv-content-center {
+      display: block;
+      align-items: center;
+      justify-content: center;
+    }
+    .mid--1 {
+      min-width: 100%;
+    }
+  } */
+</style>
+<div id="split-31-section" class="split-31-wrapper">
+  <div class="classic--background">
+    <div class="flexdiv-content-center">
+      <div class="large--2 mid--1 order-2">
+        <div class="leftRightTextBlock p-5 mr-md-auto text-start">
+          <h2 class="heading">Some Heading</h2>
+          <p class="custom-para para-bottom">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
+            unde assumenda nesciunt veniam, quam ullam, qui, libero voluptate
+            alias corrupti saepe expedita. Animi, ipsa, ducimus! Repellendus
+            nobis ab iusto minima? Lorem, ipsum dolor, sit amet consectetur
+            adipisicing elit.
+          </p>
+          <a href="/" class="custom-btn btn-sm mt-4">Learn More</a>
+        </div>
+      </div>
+      <div class="large--2 mid--1 leftRightImageBlock order-1"></div>
+    </div>
+  </div>
+</div>
