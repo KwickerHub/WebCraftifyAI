@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Front-end languages</title>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding: 20px;
+    }
+
+    .grid-item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .grid-item:hover img {
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const gridItems = document.querySelectorAll(".grid-item");
+    
+            gridItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    // Add your custom animation or interaction logic here
+                    alert("Grid item clicked!");
+                });
+            });
+        });
+    </script>
+
+
+<!-- Add the following HTML structure for each grid item -->
+<div class="grid-container">
+    <div class="grid-item">
+        <img src="./images_and_icons/grid_348_Anaidasiv.png" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <img src="./images_and_icons/grid_348_1_Anaidasiv.png" alt="Image 2">
+    </div>
+    <div class="grid-item">
+        <img src="./images_and_icons/grid_348_2_Anaidasiv.jpg" alt="Image3">
+    </div>
+    <div class="grid-item">
+        <img src="./images_and_icons/grid_348_3_Anaidasiv.png" alt="Image 4">
+    </div>
+</div>
+</body>
+</html>
