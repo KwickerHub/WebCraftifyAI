@@ -1,0 +1,103 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<div class="button-wrapper">
+    <div class="assignment">
+        <h1>Homework #5.6</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <textarea class="textentry" placeholder="Enter your response"></textarea>
+        <button class="confetti-button">Submit</button>
+    </div>
+</div>
+
+<style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      background: rgb(239, 230, 248);
+      background-size: cover;
+      overflow: hidden;
+      font-family: "Arial";
+    }
+
+    .confetti-button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        height: 50px; /* Adjusted height for better appearance */
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+        color: #fff;
+        text-align: center;
+        background: #247fcf;
+        box-shadow: 3px 3px 8px #303030a4, 3px 3px 8px #2c2c2c7e;
+        transition: 0.5s;
+    }
+  
+
+    .confetti-button:hover {
+        background: #2fdbb6;
+    }
+
+    .confetti-button:active {
+        background: #1da88a;
+    }
+
+    .button-wrapper canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    
+    .textentry {
+      width: 100%;
+      box-sizing: border-box;
+      height: 150px;
+      padding: 10px;
+      border: 2px solid #3498db;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #2c3e50;
+      background-color: #ecf0f1;
+    }
+
+    .assignment {
+      width: 100%; /* Adjusted to 90% for better responsiveness */
+      max-width: 600px; /* Added max-width for larger screens */
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+</style>
+
+<script>
+    document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+        let canvas = document.createElement("canvas");
+        let container = document.getElementsByClassName("button-wrapper")[0];
+        canvas.width = 600;
+        canvas.height = 600;
+
+        container.appendChild(canvas);
+
+        let confetti_button = confetti.create(canvas);
+        confetti_button(
+            {
+                particleCount: 100,
+                startVelocity: 30,
+                spread: 360,
+                origin: {
+                    x: Math.random(),
+                    y: Math.random() - 0.2
+                }
+            }
+        ).then(() => container.removeChild(canvas));
+    });
+</script>
