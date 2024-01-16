@@ -1,0 +1,207 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div>
+  <div class="main-container">
+    <div class="left-container">
+      <div class="left-container-content">
+        <h5 class="sub-heading">CARE FOR YOUR PET WORLDWIDE</h5>
+        <h1 class="heading">Pet Hotel</h1>
+        <p class="para">Welcome to the Pet Hotel! We provide a comfortable and safe environment for your beloved pets.
+          Our experienced staff is dedicated to ensuring the well-being and happiness of your furry friends. Book
+          your pet's stay with us today!</p>
+        <p class="closure">Your furry friends deserve the best care</p>
+        <button class="btn">READ MORE</button>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="right-container-content">
+        <img class="image" src="./images_and_icons/dog.jpg" alt="plant">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .left-container {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-container-content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .right-container {
+    width: 50%;
+    height: 100%;
+    background-color: #F0C40D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-container-content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sub-heading {
+    font-weight: 600;
+    color: #000000a7;
+  }
+
+  .heading {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .para {
+    font-size: 1em;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+  }
+
+  .closure {
+    font-size: .8em;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+    color: #000000a7;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #F0C40D;
+    color: #000;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .btn:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 809px) {
+
+    /* Your CSS rules for mobile devices */
+
+    .main-container {
+      flex-direction: column;
+    }
+
+    .left-container {
+      width: 100%;
+      height: 50%;
+    }
+
+    .left-container-content {
+      width: 80%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .heading {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .para {
+      font-size: .6em;
+      line-height: 1.4;
+    }
+
+    .closure {
+      font-size: .6em;
+      line-height: 1.8;
+    }
+
+    .right-container {
+      width: 100%;
+      height: 50%;
+    }
+
+    .right-container-content {
+      width: 80%;
+      height: 85%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 810px) and (max-width: 1199px) {
+
+    /* Your CSS rules for tablets*/
+    .right-container-content {
+      width: 80%;
+      height: 85%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+</style>
+
+<script>
+  // YOUR SCRIPT if any
+
+</script>
