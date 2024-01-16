@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        .split-container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .split-section {
+            height: 100%;
+        }
+
+        .split-section:nth-child(1) {
+            width: 50%;
+            background: url('https://cdn.pixabay.com/photo/2021/04/06/13/55/audi-6156467_640.jpg');
+            background-size: cover;
+        }
+
+        .split-section:nth-child(2),
+        .split-section:nth-child(3) {
+            width: 25%;
+        }
+
+        .split-section:nth-child(2) {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0_UkHsdZDnE71ZtEivxRhE741tVYWq3La7Q&usqp=CAU');
+            background-size: cover;
+        }
+
+        .split-section:nth-child(3) {
+            background: url('https://images.unsplash.com/photo-1598586958772-8bf368215c2a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyJTIwbGlnaHR8ZW58MHx8MHx8fDA%3D');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="split-container">
+        <div class="split-section"></div>
+        <div class="split-section"></div>
+        <div class="split-section"></div>
+    </div>
+</body>
+</html>
