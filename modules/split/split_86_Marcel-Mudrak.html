@@ -1,0 +1,90 @@
+<div class="images_container">
+    <div class="left">
+        <div class="image">
+            <img class="trees" src="./images_and_icons/trees.jpg" alt="trees">
+
+            <div class="title">
+                <h1>Minimal Landscape</h1>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="image">
+            <img class="desert" src="./images_and_icons/desert.jpg" alt="desert">
+
+            <div class="description">
+                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .images_container {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        max-width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .left {
+        width: 50%;
+        font-size: 2.5vw;
+    }
+
+    .right {
+        width: 50%;
+        font-size: 1.5vw;
+        color: white;
+    }
+
+    .images_container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .images_container .trees {
+        object-position: bottom;
+    }
+
+    .images_container .desert {
+        object-position: top;
+    }
+
+    .images_container .image {
+        position: relative;
+    }
+
+    .images_container .description {
+        /* text-align: center; */
+        position: absolute;
+        bottom: 0;
+        right: 30%;
+        left: 5%;
+    }
+
+    h1 {
+        font-weight: 300;
+    }
+
+    .images_container .title {
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        transition: transform .2s;
+    }
+
+    .images_container .title:hover {
+        transform: scale(0.8);
+    }
+</style>
