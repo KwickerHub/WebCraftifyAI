@@ -1,12 +1,14 @@
 FROM nginx:alpine
 
-RUN apt-get update && apt-get install -y nodejs npm
+RUN apk update \ 
+    && apk add --no-cache nodejs npm \
+    && rm -rf /var/cache/apk/**
 
 WORKDIR /app
 
 COPY . /app
 
-RUN cd /app && npm install
+RUN npm install
 
 EXPOSE 80 
 
