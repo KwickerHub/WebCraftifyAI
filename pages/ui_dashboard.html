@@ -1,616 +1,634 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- fontawesome cdn -->
-     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<!-- fontawesome cdn -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-	<meta name="description" id ="meta_description" content="Bridging the gap between frontend Developemnt and UI/UX Designs. Introducing the concept of Visual Programming: design and build your website here"/>
-	<meta name="keywords" content="Create UI/UX Designs, Make Mock-ups, Create Designs, Make Mobile Designs "/>
+	<meta name="description" id="meta_description"
+		content="Bridging the gap between frontend Developemnt and UI/UX Designs. Introducing the concept of Visual Programming: design and build your website here" />
+	<meta name="keywords" content="Create UI/UX Designs, Make Mock-ups, Create Designs, Make Mobile Designs " />
 	<link rel='shortcut icon' type='image/x-icon' href='../assets/img/brand_kwickerhub/g83.png' />
 
 	<title> Make UI/UX Designs</title>
 	<script type="text/javascript" src="../assets/vendor/js/access_library.js"></script>
 	<script type="text/javascript" src="../assets/vendor/js/ui_dashboard.js"></script>
 	<script type="text/javascript">
-		
-	/*global height = $("attr_height");
-	global width = $("attr_width");
-	global background = $("back_color");*/
-	
-	var selectedId = 'the_design_dashboard';
-	var selectedElement;
-	var pointerX = -1;
-	var pointerY = -1;
-	var pointer_elemX = -1;
-	var pointer_elemY = -1;
-	var theMouseMode = 0;
-	// 0 is normal
-	// 1 is grab/move
-	// 2 is scale/transform
-	// 3 is font arena/mode 
+
+		/*global height = $("attr_height");
+		global width = $("attr_width");
+		global background = $("back_color");*/
+
+		var selectedId = 'the_design_dashboard';
+		var selectedElement;
+		var pointerX = -1;
+		var pointerY = -1;
+		var pointer_elemX = -1;
+		var pointer_elemY = -1;
+		var theMouseMode = 0;
+		// 0 is normal
+		// 1 is grab/move
+		// 2 is scale/transform
+		// 3 is font arena/mode 
 
 
 
-	// window.onload = function(){
-	// 	setup();
-	// 	alert(document.readyState);
-	// }
-	
-	//$(document).ready(setup());
-	// var the_setuptimer_2 = setInterval(() => {
-	// 	if(document.readyState == "complete"){
-	// 		main('the_dev_dashboard'); clearInterval(the_setuptimer_2);
-	// 	}
-	// }, 1000);
-	// var the_setuptimer_2 = setInterval(() => {
-	// 	if(document.readyState == "complete"){
-	// 		loadSaveContent(); clearInterval(the_setuptimer_2);
-	// 	}
-	// }, 1200);
-	
-	// var the_setuptimer_3 = setInterval(() => {
-	// 	if(document.readyState == "complete"){
-	// 		loadElements();; clearInterval(the_setuptimer_3);
-	// 	}
-	// }, 1300);
+		// window.onload = function(){
+		// 	setup();
+		// 	alert(document.readyState);
+		// }
 
-	// var the_setuptimer_4 = setInterval(() => {
-	// 	if(document.readyState == "complete"){
-	// 		load_Adder_maker('element'); clearInterval(the_setuptimer_4);
-	// 	}
-	// }, 1400);
-	
-	// var the_setuptimer_5 = setInterval(() => {
-	// 	if(document.readyState == "complete"){
-	// 		loadAllSides("Style"); clearInterval(the_setuptimer_5);
-	// 	}
-	// }, 1500);
-	
-	// window.addEventListener("load",function(event) {
-	// 	var $input2 = document.getElementById('dec');
-	// 	var $input1 = document.getElementById('parenta');
-	// 	$input1.addEventListener('keyup', function() {
-	// 		$input2.value = $input1.value;
-	// 	});
-	// },false);
+		//$(document).ready(setup());
+		// var the_setuptimer_2 = setInterval(() => {
+		// 	if(document.readyState == "complete"){
+		// 		main('the_dev_dashboard'); clearInterval(the_setuptimer_2);
+		// 	}
+		// }, 1000);
+		// var the_setuptimer_2 = setInterval(() => {
+		// 	if(document.readyState == "complete"){
+		// 		loadSaveContent(); clearInterval(the_setuptimer_2);
+		// 	}
+		// }, 1200);
 
-	//window.addEventListener("load", function(event){main('the_dev_dashboard');}, false);
-	//window.addEventListener("load", function(event){loadSaveContent();}, false);
-	//window.addEventListener("load", function(event){setup();}, false);
-	//window.addEventListener("load", function(event){load_Adder_maker('element');}, false);
-	//window.addEventListener("load", function(event){loadAllSides("Style");}, false);
-	function setup(){
-		// This is the set-up function where all the required components or required data will
-		// be loaded.  
-		// Same/in the likeness of the function  main('the_dev_dashboard'); -- Start
-		// -- End
-		// Same/in the likeness of the function loadSaveContent();  -- Start
-		// -- End
-		// Same/in the likeness of the function loadElements(); -- Start
-		// -- End
-		// Same/in the likeness of the function load_Adder_maker('element'); -- Start
-		// -- End
-		// Same/in the likeness of the function  loadAllSides("Style"); -- Start
-		// -- End
-	}
+		// var the_setuptimer_3 = setInterval(() => {
+		// 	if(document.readyState == "complete"){
+		// 		loadElements();; clearInterval(the_setuptimer_3);
+		// 	}
+		// }, 1300);
 
-	//window.onload = loadSaveContent();
-	// window.onload = loadElements();
-	//window.onload = load_Adder_maker('element');
-		
+		// var the_setuptimer_4 = setInterval(() => {
+		// 	if(document.readyState == "complete"){
+		// 		load_Adder_maker('element'); clearInterval(the_setuptimer_4);
+		// 	}
+		// }, 1400);
 
+		// var the_setuptimer_5 = setInterval(() => {
+		// 	if(document.readyState == "complete"){
+		// 		loadAllSides("Style"); clearInterval(the_setuptimer_5);
+		// 	}
+		// }, 1500);
 
-	function main(id){
-		selectedElement = document.querySelector('#'+id);
-		selectedId = id;
-	};
-	
-	function changeMode(mode){
-		theMouseMode = mode;
-	} 
+		// window.addEventListener("load",function(event) {
+		// 	var $input2 = document.getElementById('dec');
+		// 	var $input1 = document.getElementById('parenta');
+		// 	$input1.addEventListener('keyup', function() {
+		// 		$input2.value = $input1.value;
+		// 	});
+		// },false);
 
-	//global selectedElement = '#the_dev_dashboard';
-
-	function add_element_2_dashboard (tag_name,type, preference_override) {
-		//specs.element.setAttribute(attribute, value);
-		//selectedId = "the_design_dashboard";
-		var newElem = document.createElement(tag_name);
-		if (preference_override) {
-			 if ( document.getElementById("create_children").checked == true) {
-				newElem = document.createElement("div");
-			 }else{
-				newElem = document.createElement("span");
-				selectedId = "the_design_dashboard";
-			 }
+		//window.addEventListener("load", function(event){main('the_dev_dashboard');}, false);
+		//window.addEventListener("load", function(event){loadSaveContent();}, false);
+		//window.addEventListener("load", function(event){setup();}, false);
+		//window.addEventListener("load", function(event){load_Adder_maker('element');}, false);
+		//window.addEventListener("load", function(event){loadAllSides("Style");}, false);
+		function setup() {
+			// This is the set-up function where all the required components or required data will
+			// be loaded.  
+			// Same/in the likeness of the function  main('the_dev_dashboard'); -- Start
+			// -- End
+			// Same/in the likeness of the function loadSaveContent();  -- Start
+			// -- End
+			// Same/in the likeness of the function loadElements(); -- Start
+			// -- End
+			// Same/in the likeness of the function load_Adder_maker('element'); -- Start
+			// -- End
+			// Same/in the likeness of the function  loadAllSides("Style"); -- Start
+			// -- End
 		}
 
-		//height = ($("#style_height").val() != "") ? $("#style_height").val() : "120px";
-		//width = ($("#style_width").val() != "") ? $("#style_width").val() : "120px";
-		//background = ($("#style_background-color").val() != "") ? $("#back_color").val() : "#fed342";
-		//ondragstart="" draggable="true" style="height: 120px; width: 120px; background-color: blue; position: absolute;"
-		height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value;
-		width =  document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value;
-		radius = document.getElementById("settings_diameter").value + document.getElementById("settings_size_representation").value;
-		font_size = document.getElementById("settings_font_size").value + document.getElementById("settings_size_representation").value;
-		//image_blob = document.getElementById("settings_image").files[0];
-		image_path = document.getElementById("settings_image").value;
-		background = colorCodeGenetor(6);
-		defaultStyle = "";
+		//window.onload = loadSaveContent();
+		// window.onload = loadElements();
+		//window.onload = load_Adder_maker('element');
 
-		if (type === 'text'){
-			newElem.innerHTML = "Hello World. ABC ";
-			defaultStyle += 'height: '+ height + '; width: '+ width + '; font-size: '+ font_size + ';';
-			document.getElementById("the_fonts_subsection").scrollIntoView();
-		} else if (type === 'image') {
-			/* if (image_blob.length() > 0){
-				let reader = new FileReader();
-				reader.onload = function (fileEvent) {
-					newElem.innerHTML = "<img width=\"" + width + "\" height=" + height + " src=\"" + fileEvent.srcElement.result + "\"/>";
+
+
+		function main(id) {
+			selectedElement = document.querySelector('#' + id);
+			selectedId = id;
+		};
+
+		function changeMode(mode) {
+			theMouseMode = mode;
+		}
+
+		//global selectedElement = '#the_dev_dashboard';
+
+		function add_element_2_dashboard(tag_name, type, preference_override) {
+			//specs.element.setAttribute(attribute, value);
+			//selectedId = "the_design_dashboard";
+			var newElem = document.createElement(tag_name);
+			if (preference_override) {
+				if (document.getElementById("create_children").checked == true) {
+					newElem = document.createElement("div");
+				} else {
+					newElem = document.createElement("span");
+					selectedId = "the_design_dashboard";
 				}
-				reader.readAsDataURL(image_blob);
+			}
+
+			//height = ($("#style_height").val() != "") ? $("#style_height").val() : "120px";
+			//width = ($("#style_width").val() != "") ? $("#style_width").val() : "120px";
+			//background = ($("#style_background-color").val() != "") ? $("#back_color").val() : "#fed342";
+			//ondragstart="" draggable="true" style="height: 120px; width: 120px; background-color: blue; position: absolute;"
+			height = document.getElementById("settings_height").value + document.getElementById("settings_size_representation").value;
+			width = document.getElementById("settings_width").value + document.getElementById("settings_size_representation").value;
+			radius = document.getElementById("settings_diameter").value + document.getElementById("settings_size_representation").value;
+			font_size = document.getElementById("settings_font_size").value + document.getElementById("settings_size_representation").value;
+			//image_blob = document.getElementById("settings_image").files[0];
+			image_path = document.getElementById("settings_image").value;
+			background = colorCodeGenetor(6);
+			defaultStyle = "";
+
+			if (type === 'text') {
+				newElem.innerHTML = "Hello World. ABC ";
+				defaultStyle += 'height: ' + height + '; width: ' + width + '; font-size: ' + font_size + ';';
+				document.getElementById("the_fonts_subsection").scrollIntoView();
+			} else if (type === 'image') {
+				/* if (image_blob.length() > 0){
+					let reader = new FileReader();
+					reader.onload = function (fileEvent) {
+						newElem.innerHTML = "<img width=\"" + width + "\" height=" + height + " src=\"" + fileEvent.srcElement.result + "\"/>";
+					}
+					reader.readAsDataURL(image_blob);
+				} else {
+					alert("The default image was not selected");
+				} */
+				if (image_path.length > 0) {
+					newElem = document.createElement("img");
+					newElem.setAttribute("src", image_path);
+					defaultStyle += 'height: ' + height + '; width: ' + width + ';';
+					document.getElementById("the_image_subsection").scrollIntoView();
+				} else {
+					alert("The default image was not selected");
+				}
+
+			} else if (type === 'circle') {
+				defaultStyle += 'border-radius: 50%;' + 'height: ' + radius + '; width: ' + radius + ';';
 			} else {
-				alert("The default image was not selected");
-			} */
-			if(image_path.length > 0){
-				newElem = document.createElement("img");
-				newElem.setAttribute("src", image_path);
-				defaultStyle += 'height: '+ height + '; width: '+ width + ';';
-				document.getElementById("the_image_subsection").scrollIntoView();
-			}else{
-				alert("The default image was not selected");
+				defaultStyle += 'height: ' + height + '; width: ' + width + ';';
 			}
 
-		} else if (type === 'circle'){
-			defaultStyle += 'border-radius: 50%;' + 'height: '+ radius + '; width: '+ radius + ';';
-		} else {
-			defaultStyle += 'height: '+ height + '; width: '+ width + ';';
-		}
-
-		if (document.getElementById("settings_background").checked) {
-			defaultStyle +='background-color: ' + background + '; position: absolute; right: 45%, left: 45%;';
-		}
-		elemId = generate_strings_id(7);
-		//console.log(elemId);
-		newElem.setAttribute("style", defaultStyle);
-		newElem.setAttribute("id", elemId);
-		newElem.setAttribute("draggable", "true");
-		newElem.setAttribute("ondragstart", "elem_drag(event, 'span')");
-		newElem.setAttribute("onmouseenter", "mouseEnterMe(event)");
-		newElem.setAttribute("onmouseleave", "mouseLeaveMe(event)");
-		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
-
-		//var ref = document.querySelector('#the_dev_dashboard');
-		selectedElement = document.getElementById(selectedId);
-		var ref = selectedElement;
-		home_msg = ref.textContent;
-		//alert("flow o");
-		//alert(home_msg.indexOf("This is the main dashboard arena"));
-		if ( home_msg.indexOf("This is the main dashboard arena") > -1 ) {
-			//ref.innerHTML = document.createElement(tag_name).toString();
-			//var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
-			/*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
-			ref.innerHTML = "";
-			proper_fitting = "\n" + "\t";
-			//alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
-			ref.append(proper_fitting);
-
-			ref.appendChild(newElem, ref);
-			getElementStyleDetails(elemId);
-			getElementAttrDetails(elemId);
-			getElementInnerHTML(elemId);
-			selectCreated(elemId, tag_name);
-		
-		}else{
-			proper_fitting = "\n" + "\t";
-			ref.append(proper_fitting);
-			
-			//alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
-			ref.appendChild(newElem, ref);
-			getElementStyleDetails(elemId);
-			getElementAttrDetails(elemId);
-			getElementInnerHTML(elemId);
-			selectCreated(elemId, tag_name);
-			showPopUpById("the_ui_style_bar");
-		}
-		
-		//ref.appendChild(newElem, ref);
-	}
-
-	function selectCreated(id, type){
-		selectedId = id;
-		selectedElement = document.getElementById(id);
-		//$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
-		//$("#the_style_identity_box").text(type + ' - #' + id + ' : Selected');
-	}
-
-	function generate_strings_id(length){
-		var alhpa_lets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x','y', 'z'];
-
-		var code = '';
-		for (var i=0; i < length; i++) { 
-			if(i==0){
-				code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length )];
+			if (document.getElementById("settings_background").checked) {
+				defaultStyle += 'background-color: ' + background + '; position: absolute; right: 45%, left: 45%;';
 			}
-			else if (Math.floor(Math.random() * 2) == 1) {
-				code = code + Math.floor(Math.random() * 10 ).toString();
-			}else{
-				code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length )];
+			elemId = generate_strings_id(7);
+			//console.log(elemId);
+			newElem.setAttribute("style", defaultStyle);
+			newElem.setAttribute("id", elemId);
+			newElem.setAttribute("draggable", "true");
+			newElem.setAttribute("ondragstart", "elem_drag(event, 'span')");
+			newElem.setAttribute("onmouseenter", "mouseEnterMe(event)");
+			newElem.setAttribute("onmouseleave", "mouseLeaveMe(event)");
+			newElem.setAttribute("ondblclick", "change_selected(event, " + "'" + tag_name + "' , " + "'" + elemId + "'" + ")");
+
+			//var ref = document.querySelector('#the_dev_dashboard');
+			selectedElement = document.getElementById(selectedId);
+			var ref = selectedElement;
+			home_msg = ref.textContent;
+			//alert("flow o");
+			//alert(home_msg.indexOf("This is the main dashboard arena"));
+			if (home_msg.indexOf("This is the main dashboard arena") > -1) {
+				//ref.innerHTML = document.createElement(tag_name).toString();
+				//var content = '<' + tag_name + ' id="'+elemId+'" ondblclick="change_selected(event, "'+tag_name+'", "'+elemId+'" ) style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';
+				/*'<' + tag_name + ' ondblclick="change_selected(event,'+ '"'+tag_name+'"' , '"'+elemId+'"' +') id="'+elemId+'" style= "height: '+ height + '; width: '+ width + '; background-color: ' + background + ' ;"'   + '></' + tag_name + '>';*/
+				ref.innerHTML = "";
+				proper_fitting = "\n" + "\t";
+				//alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+				ref.append(proper_fitting);
+
+				ref.appendChild(newElem, ref);
+				getElementStyleDetails(elemId);
+				getElementAttrDetails(elemId);
+				getElementInnerHTML(elemId);
+				selectCreated(elemId, tag_name);
+
+			} else {
+				proper_fitting = "\n" + "\t";
+				ref.append(proper_fitting);
+
+				//alert( document.getElementById('the_dev_dashboard').compareDocumentPosition(ref) );
+				ref.appendChild(newElem, ref);
+				getElementStyleDetails(elemId);
+				getElementAttrDetails(elemId);
+				getElementInnerHTML(elemId);
+				selectCreated(elemId, tag_name);
+				showPopUpById("the_ui_style_bar");
 			}
+
+			//ref.appendChild(newElem, ref);
 		}
-		return code;
-	}
 
-	function colorCodeGenetor(length){
-		alhpa_lets = ['a', 'b', 'c', 'd', 'e', 'f'];
-
-		code = '';
-		for (i=0; i < length; i++) { 
-
-			if (Math.floor(Math.random() * 2) == 1) {
-				code = code + Math.floor(Math.random() * 10 ).toString();
-			}else{
-				//alhpa_lets.g
-				code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length )];
-			}
-		}
-		return "#"+code;
-	}
-
-
-	function elem_allowDrop(ev){
-		ev.preventDefault();
-	}
-
-	function elem_drag(ev, tag){
-		//alert(e.target.id);
-		//ev.dataTransfer.setData("text", ev.target.id);
-		ev.dataTransfer.setData("ui_content", ev.target.id);
-		elem = ev.target;
-		//pointerX = ev.clientX;
-		//pointerY = ev.clientY;
-		// valueX = elem.style.width + 0.2;
-		// valueY = elem.style.height + 0.2;
-		// elem.style.transform = "scale("+valueX+", "+valueY+")";
-		
-		pointer_elemX = ev.clientX;
-		pointer_elemY = ev.clientY;
-		//alert(elem.offsetTop);
-	}
-
-	function elem_drop(ev){
-		//alert("done");
-		ev.preventDefault();
-		if(theMouseMode == 0){
-			var tag_id = ev.dataTransfer.getData("ui_content");
-			var tag = document.getElementById(tag_id);
-			
-			chipAddonX = pointer_elemX - tag.offsetLeft;
-			chipAddonY = pointer_elemY - tag.offsetTop;
-			var new_posX = ev.clientX - chipAddonX;
-			var new_posY = ev.clientY - chipAddonY;
-			//alert([tag.offsetLeft, tag.offsetTop, pointer_elemX, pointer_elemY, chipAddonX, new_posX, new_posY]);
-			//style = 'height: 120px; width: 120px; background-color: blue; position: absolute; left: '+ new_posX + 'px; top: ' + new_posY + 'px; ';
-			//tag.setAttribute("style", style);
-			tag.style.left = new_posX + "px";
-			tag.style.top = new_posY+ "px";
-		}else if(theMouseMode == 1){
-			var tag_id = ev.dataTransfer.getData("ui_content");
-			var tag = document.getElementById(tag_id);
-						
-			var chipAddonX = tag.offsetLeft+ parseFloat(tag.style.width) - pointer_elemX;
-			var chipAddonY = tag.offsetTop+ parseFloat(tag.style.height) - pointer_elemY;
-			//pointer_elemY
-			var new_posX = ev.clientX - tag.offsetLeft + chipAddonX;
-			var new_posY = ev.clientY - tag.offsetTop + chipAddonY;
-
-			tag.style.height = new_posY + "px";
-			tag.style.width = new_posX + "px";
-		}
-		
-	}
-
-	function mouseEnterMe(ev){
-		if(theMouseMode == 0){
-			//grab/drag/move
-			elem = ev.target;
-			elem.style.cursor = 'grab';
-			//grab, copy, grabbing, move, default, zoom-in
-		}else if(theMouseMode == 1){
-			//Scale mode
-			elem = ev.target;
-			elem.style.border = '1px dashed white';
-			elem.style.boxShadow = '2px 2px 1px green';
-		}
-	}
-
-	function mouseLeaveMe(ev){
-		if(theMouseMode == 0){
-			//grab/drag/move
-			elem = ev.target;
-			elem.style.cursor = 'default';
-
-		}else if(theMouseMode == 1){
-			//Scale mode
-			elem = ev.target;
-			elem.style.border = 'none';
-			elem.style.boxShadow = 'none';
-		}
-	}
-
-
-	function change_selected(e, type, id){
-		if(e.target.id == id){
+		function selectCreated(id, type) {
 			selectedId = id;
 			selectedElement = document.getElementById(id);
 			//$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
-			$("#the_style_identity_box").text(type + ' - #' + id + ' : Selected');
-			getElementStyleDetails(selectedId);
-			getElementInnerHTML(selectedId);
-			//getElementAttrDetails(selectedId);
+			//$("#the_style_identity_box").text(type + ' - #' + id + ' : Selected');
 		}
-	}
 
-	// function attr_changed(attribute){
-	// 	var statusId = "attr_"+attribute+"_status";
-	// 	var attrValue = "attr_"+attribute;
-	// 	if ( document.getElementById(statusId).checked == true) {
+		function generate_strings_id(length) {
+			var alhpa_lets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-	// 		var newValue = document.getElementById(attrValue).value;
-	// 		//alert(newValue);
-	// 		if (newValue != null || newValue !="") {
-	// 			document.getElementById(selectedId).setAttribute(attribute, newValue);
-	// 		}else{
-	// 			document.getElementById(selectedId).removeAttribute(attribute);
-	// 		}
-	// 	}else{
-	// 		var newValue = null;
-	// 		document.getElementById(selectedId).removeAttribute(attribute);
-	// 	}
-	// }
+			var code = '';
+			for (var i = 0; i < length; i++) {
+				if (i == 0) {
+					code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
+				}
+				else if (Math.floor(Math.random() * 2) == 1) {
+					code = code + Math.floor(Math.random() * 10).toString();
+				} else {
+					code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
+				}
+			}
+			return code;
+		}
 
-	function style_changed(property){
-		var statusId = "style_"+property+"_status";
-		var propertyValue = "style_"+property;
-		if ( document.getElementById(statusId).checked == true) {
-			var newValue = document.getElementById(propertyValue).value;
-			if (newValue != null || newValue !="") {
-				//document.getElementById(selectedId).style.property = newValue;
-				document.getElementById(selectedId).style.cssText += property + ":" + newValue + ";";
-			}else{
+		function colorCodeGenetor(length) {
+			alhpa_lets = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+			code = '';
+			for (i = 0; i < length; i++) {
+
+				if (Math.floor(Math.random() * 2) == 1) {
+					code = code + Math.floor(Math.random() * 10).toString();
+				} else {
+					//alhpa_lets.g
+					code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
+				}
+			}
+			return "#" + code;
+		}
+
+
+		function elem_allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function elem_drag(ev, tag) {
+			//alert(e.target.id);
+			//ev.dataTransfer.setData("text", ev.target.id);
+			ev.dataTransfer.setData("ui_content", ev.target.id);
+			elem = ev.target;
+			//pointerX = ev.clientX;
+			//pointerY = ev.clientY;
+			// valueX = elem.style.width + 0.2;
+			// valueY = elem.style.height + 0.2;
+			// elem.style.transform = "scale("+valueX+", "+valueY+")";
+
+			pointer_elemX = ev.clientX;
+			pointer_elemY = ev.clientY;
+			//alert(elem.offsetTop);
+		}
+
+		function elem_drop(ev) {
+			//alert("done");
+			ev.preventDefault();
+			if (theMouseMode == 0) {
+				var tag_id = ev.dataTransfer.getData("ui_content");
+				var tag = document.getElementById(tag_id);
+
+				chipAddonX = pointer_elemX - tag.offsetLeft;
+				chipAddonY = pointer_elemY - tag.offsetTop;
+				var new_posX = ev.clientX - chipAddonX;
+				var new_posY = ev.clientY - chipAddonY;
+				//alert([tag.offsetLeft, tag.offsetTop, pointer_elemX, pointer_elemY, chipAddonX, new_posX, new_posY]);
+				//style = 'height: 120px; width: 120px; background-color: blue; position: absolute; left: '+ new_posX + 'px; top: ' + new_posY + 'px; ';
+				//tag.setAttribute("style", style);
+				tag.style.left = new_posX + "px";
+				tag.style.top = new_posY + "px";
+			} else if (theMouseMode == 1) {
+				var tag_id = ev.dataTransfer.getData("ui_content");
+				var tag = document.getElementById(tag_id);
+
+				var chipAddonX = tag.offsetLeft + parseFloat(tag.style.width) - pointer_elemX;
+				var chipAddonY = tag.offsetTop + parseFloat(tag.style.height) - pointer_elemY;
+				//pointer_elemY
+				var new_posX = ev.clientX - tag.offsetLeft + chipAddonX;
+				var new_posY = ev.clientY - tag.offsetTop + chipAddonY;
+
+				tag.style.height = new_posY + "px";
+				tag.style.width = new_posX + "px";
+			}
+
+		}
+
+		function mouseEnterMe(ev) {
+			if (theMouseMode == 0) {
+				//grab/drag/move
+				elem = ev.target;
+				elem.style.cursor = 'grab';
+				//grab, copy, grabbing, move, default, zoom-in
+			} else if (theMouseMode == 1) {
+				//Scale mode
+				elem = ev.target;
+				elem.style.border = '1px dashed white';
+				elem.style.boxShadow = '2px 2px 1px green';
+			}
+		}
+
+		function mouseLeaveMe(ev) {
+			if (theMouseMode == 0) {
+				//grab/drag/move
+				elem = ev.target;
+				elem.style.cursor = 'default';
+
+			} else if (theMouseMode == 1) {
+				//Scale mode
+				elem = ev.target;
+				elem.style.border = 'none';
+				elem.style.boxShadow = 'none';
+			}
+		}
+
+
+		function change_selected(e, type, id) {
+			if (e.target.id == id) {
+				selectedId = id;
+				selectedElement = document.getElementById(id);
+				//$("#the_selected_elem_left").text(type + ' - #' + id + ' : Selected');
+				$("#the_style_identity_box").text(type + ' - #' + id + ' : Selected');
+				getElementStyleDetails(selectedId);
+				getElementInnerHTML(selectedId);
+				//getElementAttrDetails(selectedId);
+			}
+		}
+
+		// function attr_changed(attribute){
+		// 	var statusId = "attr_"+attribute+"_status";
+		// 	var attrValue = "attr_"+attribute;
+		// 	if ( document.getElementById(statusId).checked == true) {
+
+		// 		var newValue = document.getElementById(attrValue).value;
+		// 		//alert(newValue);
+		// 		if (newValue != null || newValue !="") {
+		// 			document.getElementById(selectedId).setAttribute(attribute, newValue);
+		// 		}else{
+		// 			document.getElementById(selectedId).removeAttribute(attribute);
+		// 		}
+		// 	}else{
+		// 		var newValue = null;
+		// 		document.getElementById(selectedId).removeAttribute(attribute);
+		// 	}
+		// }
+
+		function style_changed(property) {
+			var statusId = "style_" + property + "_status";
+			var propertyValue = "style_" + property;
+			if (document.getElementById(statusId).checked == true) {
+				var newValue = document.getElementById(propertyValue).value;
+				if (newValue != null || newValue != "") {
+					//document.getElementById(selectedId).style.property = newValue;
+					document.getElementById(selectedId).style.cssText += property + ":" + newValue + ";";
+				} else {
+					document.getElementById(selectedId).style.removeProperty(property);
+				}
+			} else {
+				var newValue = null;
+				//document.getElementById(selectedId).style.height = null;
 				document.getElementById(selectedId).style.removeProperty(property);
 			}
-		}else{
-			var newValue = null;
-			//document.getElementById(selectedId).style.height = null;
-			document.getElementById(selectedId).style.removeProperty(property);
 		}
-	}
-	
-	function inner_changed(property){
-		var statusId = "inner_"+property+"_status";
-		var textValue = "inner_"+property;
-		if ( document.getElementById(statusId).checked == true) {
-			var newValue = document.getElementById(textValue).value;
-			if (newValue != null || newValue !="") {
-				//document.getElementById(selectedId).style.property = newValue;
-				document.getElementById(selectedId).innerHTML = newValue;
-			}else{
-				//document.getElementById(selectedId).style.removeProperty(property);
-				document.getElementById(selectedId).innerHTML = "";
-			}
-		}else{
-			document.getElementById(selectedId).innerHTML = null;
+
+		// Sanitize user input  
+		function sanitizeInput(input) {
+		
+		  	// Encode special characters
+			input = input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+		
+		  	// Remove any script tags
+			input = input.replace(/<\/?script>/gi, "");
+		
+			return input;
 		}
-	}
 
-
-	function getElementStyleDetails(elem_id){
-		elem = document.getElementById(elem_id);
-	    if (!elem) return []; // Element does not exist, empty list.
-	    var win = document.defaultView || window, style, styleNode = [];
-		if (win.getComputedStyle) { // Modern browsers 
-	        style = win.getComputedStyle(elem, '');
-	        for (var i=0; i<style.length; i++) {
-	            propertyDis = "style_" + style[i].toString();
-	            property = document.getElementById(propertyDis);
-	            if ( property ){
-					if (style[i].includes("color")) {
-						//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
-						property.value = rgbToHex(style.getPropertyValue(style[i]));
-					}else{
-						property.value = style.getPropertyValue(style[i]);
-					}
-	            }
-	        }
-	    } else if (elem.currentStyle) { // IE 
-	        style = elem.currentStyle;
-	        for (var name in style) {
-	        	propertyDis = "style_" + name;
-	            property = document.getElementById(propertyDis);
-	            if ( !property ){
-	            	//property.value = style[name];
-					if (style[name].includes("color")) {
-						//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
-						property.value = rgbToHex(style.getPropertyValue(style[name]));
-					}else{
-						property.value = style.getPropertyValue(style[name]);
-					}
-	            }
-	        }
-	    } else { // Ancient browser..
-	        style = elem.style;
-	        for (var i=0; i<style.length; i++) {
-	            propertyDis = "style_" + style[i].toString();
-	            property = document.getElementById(propertyDis);
-	            if ( !property ){
-	            	//property.value = style[style[i]];
-					if (style[style[i]].includes("color")) {
-						//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
-						property.value = rgbToHex(style.getPropertyValue(style[style[i]]));
-					}else{
-						property.value = style.getPropertyValue(style[style[i]]);
-					}
-	            }
-	        }
-	    }
-	}
-
-	function getElementInnerHTML(elem_id){
-		elem = document.getElementById(elem_id);
-		name = "font-text";
-	    innerDis = "inner_" + name;
-		property = document.getElementById(innerDis);
-		property.value = elem.innerHTML;
-	}
-
-	function componentToHex(c) {
-		var hex = c.toString(16);
-		return hex.length == 1 ? "0" + hex : hex;
-	}
-
-	function rgbToHex(rgbColor) {
-		individual_code = rgbColor.replace(/[rgb() ]/g, "");
-		individual_code = individual_code.split(",");
-		r = parseInt(individual_code[0].trim()), g = parseInt(individual_code[1].trim()); b = parseInt(individual_code[2].trim());
-		//console.log(individual_code + g);
-		return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-	}
-
-	function getElementAttrDetails(elem_id){
-		el = document.getElementById(elem_id);
-		var nodes=[], values=[];
-		for (var att, i = 0, atts = el.attributes, n = atts.length; i < n; i++){
-			attrDis = "attr_" + atts[i].nodeName.toString();
-			attributeArea = document.getElementById(attrDis);
-			if ( attributeArea ){
-				if(atts[i].nodeValue != null){
-					attributeArea.value = atts[i].nodeValue;
-				}else{
-					attributeArea.value = null;
+		function inner_changed(property) {
+			var statusId = "inner_" + property + "_status";
+			var textValue = "inner_" + property;
+			if (document.getElementById(statusId).checked == true) {
+				var unsanitizedNewValue = document.getElementById(textValue).value;
+				var newValue = sanitizeInput(unsanitizedNewValue);
+				if (newValue != null || newValue != "") {
+					//document.getElementById(selectedId).style.property = newValue;
+					document.getElementById(selectedId).innerHTML = newValue;
+				} else {
+					//document.getElementById(selectedId).style.removeProperty(property);
+					document.getElementById(selectedId).innerHTML = "";
 				}
-				
+			} else {
+				document.getElementById(selectedId).innerHTML = null;
 			}
 		}
-	}
 
-	/* <div id="create_project_pop" class="theTextPopUp">
-	<input type="text" id="the_project_name" name="theTextSide">
-	<br/>
-	<button onclick="">Create</button>
-	<br/><br/>
-</div> */
-	function newProject(){
-		//$("create_project_pop", "id").fadeIn();
-		document.getElementById("create_project_pop").style.display = "block";
-	}
 
-	function contains_special_char(str){
-		regex = "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]"
-		ret = false;
-
-		array = regex.split("");
-		for (let index = 0; index < array.length; index++) {
-			const element = array[index];
-			if ( str.includes(element) ){
-				ret = true;
-				//alert("Please remove this character:" + element + "from the project name")
-				break;
+		function getElementStyleDetails(elem_id) {
+			elem = document.getElementById(elem_id);
+			if (!elem) return []; // Element does not exist, empty list.
+			var win = document.defaultView || window, style, styleNode = [];
+			if (win.getComputedStyle) { // Modern browsers 
+				style = win.getComputedStyle(elem, '');
+				for (var i = 0; i < style.length; i++) {
+					propertyDis = "style_" + style[i].toString();
+					property = document.getElementById(propertyDis);
+					if (property) {
+						if (style[i].includes("color")) {
+							//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+							property.value = rgbToHex(style.getPropertyValue(style[i]));
+						} else {
+							property.value = style.getPropertyValue(style[i]);
+						}
+					}
+				}
+			} else if (elem.currentStyle) { // IE 
+				style = elem.currentStyle;
+				for (var name in style) {
+					propertyDis = "style_" + name;
+					property = document.getElementById(propertyDis);
+					if (!property) {
+						//property.value = style[name];
+						if (style[name].includes("color")) {
+							//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+							property.value = rgbToHex(style.getPropertyValue(style[name]));
+						} else {
+							property.value = style.getPropertyValue(style[name]);
+						}
+					}
+				}
+			} else { // Ancient browser..
+				style = elem.style;
+				for (var i = 0; i < style.length; i++) {
+					propertyDis = "style_" + style[i].toString();
+					property = document.getElementById(propertyDis);
+					if (!property) {
+						//property.value = style[style[i]];
+						if (style[style[i]].includes("color")) {
+							//console.log("color is: " + style.getPropertyValue(style[i]).toString() + "converted: "+ rgbToHex(style.getPropertyValue(style[i]).toString()));
+							property.value = rgbToHex(style.getPropertyValue(style[style[i]]));
+						} else {
+							property.value = style.getPropertyValue(style[style[i]]);
+						}
+					}
+				}
 			}
-			
 		}
-		return ret;
-	}
 
-	function makeTheProject(){
-		var projectName = document.getElementById("the_project_name").value;
-		var currentPage = window.location.href;
-		//projectName = projectName.replace(/ /g, "_").toString();
-		//alert(projectName);
-		if(contains_special_char(projectName)){
-			alert("Project name should not include any of the special characters: "+ "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]");
-		}else{
-			projectName = projectName.replace(/ /g, "_").toString();
+		function getElementInnerHTML(elem_id) {
+			elem = document.getElementById(elem_id);
+			name = "font-text";
+			innerDis = "inner_" + name;
+			property = document.getElementById(innerDis);
+			property.value = elem.innerHTML;
+		}
+
+		function componentToHex(c) {
+			var hex = c.toString(16);
+			return hex.length == 1 ? "0" + hex : hex;
+		}
+
+		function rgbToHex(rgbColor) {
+			individual_code = rgbColor.replace(/[rgb() ]/g, "");
+			individual_code = individual_code.split(",");
+			r = parseInt(individual_code[0].trim()), g = parseInt(individual_code[1].trim()); b = parseInt(individual_code[2].trim());
+			//console.log(individual_code + g);
+			return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+		}
+
+		function getElementAttrDetails(elem_id) {
+			el = document.getElementById(elem_id);
+			var nodes = [], values = [];
+			for (var att, i = 0, atts = el.attributes, n = atts.length; i < n; i++) {
+				attrDis = "attr_" + atts[i].nodeName.toString();
+				attributeArea = document.getElementById(attrDis);
+				if (attributeArea) {
+					if (atts[i].nodeValue != null) {
+						attributeArea.value = atts[i].nodeValue;
+					} else {
+						attributeArea.value = null;
+					}
+
+				}
+			}
+		}
+
+		/* <div id="create_project_pop" class="theTextPopUp">
+		<input type="text" id="the_project_name" name="theTextSide">
+		<br/>
+		<button onclick="">Create</button>
+		<br/><br/>
+	</div> */
+		function newProject() {
+			//$("create_project_pop", "id").fadeIn();
+			document.getElementById("create_project_pop").style.display = "block";
+		}
+
+		function contains_special_char(str) {
+			regex = "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]"
+			ret = false;
+
+			array = regex.split("");
+			for (let index = 0; index < array.length; index++) {
+				const element = array[index];
+				if (str.includes(element)) {
+					ret = true;
+					//alert("Please remove this character:" + element + "from the project name")
+					break;
+				}
+
+			}
+			return ret;
+		}
+
+		function makeTheProject() {
+			var projectName = document.getElementById("the_project_name").value;
+			var currentPage = window.location.href;
+			//projectName = projectName.replace(/ /g, "_").toString();
 			//alert(projectName);
-			if (currentPage.includes("?project_title=")){
-				saveDevArena();
-			}else{
-				var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-				var project_description = document.getElementById("the_project_description").value;
-				value = save_file(projectName, cvalue, project_description, "new");
-				
+			if (contains_special_char(projectName)) {
+				alert("Project name should not include any of the special characters: " + "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]");
+			} else {
+				projectName = projectName.replace(/ /g, "_").toString();
+				//alert(projectName);
+				if (currentPage.includes("?project_title=")) {
+					saveDevArena();
+				} else {
+					var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+					var project_description = document.getElementById("the_project_description").value;
+					value = save_file(projectName, cvalue, project_description, "new");
+
+				}
 			}
 		}
-	}
 
 
-	function bringText(){
-		var alreadyThere = document.getElementById(selectedId).textContent;
-		if (alreadyThere != "") {
-			document.getElementById("theTextPop").value = alreadyThere;
-		}
+		function bringText() {
+			var alreadyThere = document.getElementById(selectedId).textContent;
+			if (alreadyThere != "") {
+				document.getElementById("theTextPop").value = alreadyThere;
+			}
 
-		/* if (document.getElementById("text_pop_up_side").style.display = "block") {
-			document.getElementById("text_pop_up_side").style.display = "none"
-		}else{
+			/* if (document.getElementById("text_pop_up_side").style.display = "block") {
+				document.getElementById("text_pop_up_side").style.display = "none"
+			}else{
+				document.getElementById("text_pop_up_side").style.display = "block";
+			} */
 			document.getElementById("text_pop_up_side").style.display = "block";
-		} */
-		document.getElementById("text_pop_up_side").style.display = "block";
-		
-	}
 
-	function addTextBtn(){
-		//var gotten = $("#theTextPop").val();
-		var gotten = document.getElementById("theTextPop").value
-		addText(gotten);
-	}
-
-
-
-	function addText(text2add){
-		var secElem = document.getElementById(selectedId);
-		var node = document.createTextNode(text2add);
-		secElem.appendChild(node);
-		document.getElementById("text_pop_up_side").style.display = "none";
-		/*var para = document.createElement("p");
-		para.appendChild(node);*/
-	}
-		
-	document.addEventListener("keydown", function (event) {
-        if (event.key === "Delete" && document.getElementById(selectedId)) {
-          removeSelected();
-        }
-      });
-
-	function removeSelected(){
-		var r = confirm("You are about to remove the selected element");
-		if (r == true) {
-			var secElem = document.getElementById(selectedId);
-			secElem.remove();
-			selectCreated('the_dev_dashboard', 'div');
-		} else {
-			x = "You pressed Cancel!";
 		}
-	}
 
-	function change2codeMode(){
-		var bodyElem = document.getElementById("the_dev_dashboard");
-		var body = bodyElem.innerHTML;
-		//alert(body);
-		//var textArea = document.getElementById("the_textarea_4_view");
-		//if ( typeof(textArea) != 'undefined' && textArea != null ){
+		function addTextBtn() {
+			//var gotten = $("#theTextPop").val();
+			var gotten = document.getElementById("theTextPop").value
+			addText(gotten);
+		}
+
+
+
+		function addText(text2add) {
+			var secElem = document.getElementById(selectedId);
+			var node = document.createTextNode(text2add);
+			secElem.appendChild(node);
+			document.getElementById("text_pop_up_side").style.display = "none";
+			/*var para = document.createElement("p");
+			para.appendChild(node);*/
+		}
+
+		document.addEventListener("keydown", function (event) {
+			if (event.key === "Delete" && document.getElementById(selectedId)) {
+				removeSelected();
+			}
+		});
+
+		function removeSelected() {
+			var r = confirm("You are about to remove the selected element");
+			if (r == true) {
+				var secElem = document.getElementById(selectedId);
+				secElem.remove();
+				selectCreated('the_dev_dashboard', 'div');
+			} else {
+				x = "You pressed Cancel!";
+			}
+		}
+
+		function change2codeMode() {
+			var unsanitizedBodyElem = document.getElementById("the_dev_dashboard");
+			var bodyElem = sanitizeInput(unsanitizedBodyElem);
+			var body = bodyElem.innerHTML;
+			//alert(body);
+			//var textArea = document.getElementById("the_textarea_4_view");
+			//if ( typeof(textArea) != 'undefined' && textArea != null ){
 			var para = document.createElement("textarea");
 			height = "100%";
 			width = "100%";
 			background = colorCodeGenetor(6);
 			color = colorCodeGenetor(6);
 
-			defaultStyle = 'height: '+ height + '; width: '+ width + '; background-color: ' + background + '; ';
+			defaultStyle = 'height: ' + height + '; width: ' + width + '; background-color: ' + background + '; ';
 
 			para.setAttribute("style", defaultStyle);
 			para.setAttribute("id", "the_textarea_4_view");
@@ -618,173 +636,176 @@
 			//alert(para);
 			bodyElem.innerHTML = null;
 			bodyElem.append(para);
-		/* }else{
-			alert("already in code view mode");
-		} */
-	}
-
-	function change2webMode(){
-		var bodyElem = document.getElementById("the_dev_dashboard");
-		var body = bodyElem.innerHTML;
-		var textArea = document.getElementById("the_textarea_4_view");
-		if ( typeof(textArea) != 'undefined' && textArea != null ){
-			var para = document.getElementById("the_textarea_4_view").value
-			//alert(para);
-			bodyElem.innerHTML = para;
-		}else{
-			alert("You are already in Web mode")
-		}
-	}
-
-	// copied from W3 school... Thank you W3 schools
-	function setCookie(cname, cvalue, exdays) {
-		var d = new Date();
-		d.setTime(d.getTime() + (exdays*24*60*60*1000));
-		var expires = "expires="+d.toUTCString();
-		document.cookie = cname + "=" + cvalue + "; " + expires;
-	}
-
-	function getCookie(cname) {
-		var name = cname + "=";
-		var ca = document.cookie.split(';');
-		console.log(ca);
-		for(var i=0; i<ca.length; i++) {
-			var c = ca[i];
-			while (c.charAt(0)==' ') c = c.substring(1);
-			if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-		}
-		return "";
-	}
-
-	function checkCookie(cookiename) {
-		var cookieName = getCookie(cookiename);
-		ret = false;
-		if (cookieName != "") {
-			//alert("Welcome again " + user);
-			ret = true;
-		} else {
-			/* cookieName = prompt("Please enter your name:", "");
-			if (cookieName != "" && cookieName != null) {
-				setCookie("username", cookieName, 365);
+			/* }else{
+				alert("already in code view mode");
 			} */
+		}
+
+		function change2webMode() {
+			var bodyElem = document.getElementById("the_dev_dashboard");
+			var body = bodyElem.innerHTML;
+			var textArea = document.getElementById("the_textarea_4_view");
+			if (typeof (textArea) != 'undefined' && textArea != null) {
+				var unsanitizedPara = document.getElementById("the_textarea_4_view").value
+				var para = sanitizeInput(unsanitizedPara);
+				//alert(para);
+				bodyElem.innerHTML = para;
+			} else {
+				alert("You are already in Web mode")
+			}
+		}
+
+		// copied from W3 school... Thank you W3 schools
+		function setCookie(cname, cvalue, exdays) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+			var expires = "expires=" + d.toUTCString();
+			document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
+
+		function getCookie(cname) {
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+			console.log(ca);
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') c = c.substring(1);
+				if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+			}
+			return "";
+		}
+
+		function checkCookie(cookiename) {
+			var cookieName = getCookie(cookiename);
 			ret = false;
-		}
-		return ret;
-	}
-
-	function saveDevArenaAsCookie(){
-		var currentPage = window.location.href;
-
-		if (currentPage.includes("?project_title=")){
-			var xmlhttp = new XMLHttpRequest();
-			var pos = currentPage.indexOf("=");
-			var findings = currentPage.slice(pos+1); 
-			//$("#meta_description").attr("content", findings);
-			//var cleaned_findings = findings.replace(/%20/g, " ").toString();
-			//cleaned_findings = findings.replace(/-/g, " ").toString();
-			cname = "the_dev_enviro_" + cleaned_findings;
-			var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-			//var body = bodyElem;
-			//alert(cname + "$#$" +  cvalue);
-			setCookie(cname, btoa(cvalue), 1000);
-
-		}else{
-			alert("could not find project name. Saving as untitle.");
-			var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-			//cname = "the_dev_enviro_" + currentPage;
-			if (cvalue != "" && cvalue != null) {
-				//alert(cvalue);
-				setCookie(currentPage, btoa(cvalue), 1000);
+			if (cookieName != "") {
+				//alert("Welcome again " + user);
+				ret = true;
+			} else {
+				/* cookieName = prompt("Please enter your name:", "");
+				if (cookieName != "" && cookieName != null) {
+					setCookie("username", cookieName, 365);
+				} */
+				ret = false;
 			}
+			return ret;
 		}
-	}
 
-	function loadSaveContentAsCookie(){
-		var currentPage = window.location.href;
+		function saveDevArenaAsCookie() {
+			var currentPage = window.location.href;
 
-		if (currentPage.includes("?project_title=")){
-			var xmlhttp = new XMLHttpRequest();
-			var pos = currentPage.indexOf("=");
-			var findings = currentPage.slice(pos+1); 
-			//var cleaned_findings = findings.replace(/%20/g, " ").toString();
-			//cleaned_findings = findings.replace(/-/g, " ").toString();
-			cname = "the_dev_enviro_" + cleaned_findings;
+			if (currentPage.includes("?project_title=")) {
+				var xmlhttp = new XMLHttpRequest();
+				var pos = currentPage.indexOf("=");
+				var findings = currentPage.slice(pos + 1);
+				//$("#meta_description").attr("content", findings);
+				//var cleaned_findings = findings.replace(/%20/g, " ").toString();
+				//cleaned_findings = findings.replace(/-/g, " ").toString();
+				cname = "the_dev_enviro_" + cleaned_findings;
+				var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+				//var body = bodyElem;
+				//alert(cname + "$#$" +  cvalue);
+				setCookie(cname, btoa(cvalue), 1000);
 
-			if (checkCookie(cname) == true) {
-				var gottenStuff = atob(getCookie(cname));
-				document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
-			}else{
-				alert("Sorry, this project could not be retrieved.");
-			}
-			
-
-		}else{
-			alert("No Project Name. Let's try to retrieve untitle project.");
-
-			if (checkCookie(currentPage) == true) {
-				var gottenStuff = atob(getCookie(currentPage));
-				//alert(gottenStuff);
-				document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
-			}
-		}
-	}
-
-
-	function replaceSelected(){
-		/*var parent = document.getElementById("div1");
-		var child = document.getElementById("p1");
-		parent.replaceChild(para,child);*/
-	}
-
-	function insertElementB4(){
-		/*var element = document.getElementById("div1");
-		var child = document.getElementById("p1");
-		element.insertBefore(para,child);*/
-	}
-
-	function enableCustomiser(side){
-		var r = confirm("You are about to enable customisation for the entire page. Are you ready?");
-		if (r == true) {
-			id =(side == "left") ? "theLeftSideBar" : "theRightSideBar";
-			selectedId = id;
-			selectedElement = document.getElementById(id);
-			$("#the_style_identity_box").text('aside' + ' - #' + id + ' : Selected');
-			getElementStyleDetails(selectedId);
-			getElementAttrDetails(selectedId);
-		} else {
-			x = "You pressed Cancel!";
-		}
-	}
-
-	function removetheSideBars(side){
-		var r = confirm("You are about to remove the entire bar. Please do not proceed If you have not saved your project");
-		if (r == true) {
-			id =(side == "left") ? "theLeftSideBar" : "theRightSideBar";
-			if (id == "theLeftSideBar") {
-				if (  $("#theLeftSideBar").css("display")  == 'block' ) {
-					document.getElementById('theLeftSideBar').style.display = "none";
-					document.getElementById('leftBarRestore').style.display = "block";
-					scaleViewLayoutAdjust();
+			} else {
+				alert("could not find project name. Saving as untitle.");
+				var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+				//cname = "the_dev_enviro_" + currentPage;
+				if (cvalue != "" && cvalue != null) {
+					//alert(cvalue);
+					setCookie(currentPage, btoa(cvalue), 1000);
 				}
 			}
-			else if (id == "theRightSideBar"){
-				if (  $("#theRightSideBar").css("display")  == 'block' ) {
-					document.getElementById('theRightSideBar').style.display = "none";
-					document.getElementById('rightBarRestore').style.display = "block";
-					scaleViewLayoutAdjust();
+		}
+
+		function loadSaveContentAsCookie() {
+			var currentPage = window.location.href;
+
+			if (currentPage.includes("?project_title=")) {
+				var xmlhttp = new XMLHttpRequest();
+				var pos = currentPage.indexOf("=");
+				var findings = currentPage.slice(pos + 1);
+				//var cleaned_findings = findings.replace(/%20/g, " ").toString();
+				//cleaned_findings = findings.replace(/-/g, " ").toString();
+				cname = "the_dev_enviro_" + cleaned_findings;
+
+				if (checkCookie(cname) == true) {
+					var unsanitizedGottenStuff = atob(getCookie(cname));
+					var gottenStuff = sanitizeInput(unsanitizedGottenStuff);
+					document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
+				} else {
+					alert("Sorry, this project could not be retrieved.");
+				}
+
+
+			} else {
+				alert("No Project Name. Let's try to retrieve untitle project.");
+
+				if (checkCookie(currentPage) == true) {
+					var unsanitizedGottenStuff = atob(getCookie(currentPage));
+					var gottenStuff = sanitizeInput(unsanitizedGottenStuff);
+					//alert(gottenStuff);
+					document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
 				}
 			}
-		} else {
-			x = "You pressed Cancel!";
 		}
-	}
 
-	//style_position
-	function scaleViewLayoutAdjust(){
-		// if both bars are ON, readjust the main dev
-		if( document.body.clientWidth >= 960 ){
-			if (  $("#theLeftSideBar").css("display")  == 'block' && 
-				$("#theRightSideBar").css("display")  == 'block'  ) {
+
+		function replaceSelected() {
+			/*var parent = document.getElementById("div1");
+			var child = document.getElementById("p1");
+			parent.replaceChild(para,child);*/
+		}
+
+		function insertElementB4() {
+			/*var element = document.getElementById("div1");
+			var child = document.getElementById("p1");
+			element.insertBefore(para,child);*/
+		}
+
+		function enableCustomiser(side) {
+			var r = confirm("You are about to enable customisation for the entire page. Are you ready?");
+			if (r == true) {
+				id = (side == "left") ? "theLeftSideBar" : "theRightSideBar";
+				selectedId = id;
+				selectedElement = document.getElementById(id);
+				$("#the_style_identity_box").text('aside' + ' - #' + id + ' : Selected');
+				getElementStyleDetails(selectedId);
+				getElementAttrDetails(selectedId);
+			} else {
+				x = "You pressed Cancel!";
+			}
+		}
+
+		function removetheSideBars(side) {
+			var r = confirm("You are about to remove the entire bar. Please do not proceed If you have not saved your project");
+			if (r == true) {
+				id = (side == "left") ? "theLeftSideBar" : "theRightSideBar";
+				if (id == "theLeftSideBar") {
+					if ($("#theLeftSideBar").css("display") == 'block') {
+						document.getElementById('theLeftSideBar').style.display = "none";
+						document.getElementById('leftBarRestore').style.display = "block";
+						scaleViewLayoutAdjust();
+					}
+				}
+				else if (id == "theRightSideBar") {
+					if ($("#theRightSideBar").css("display") == 'block') {
+						document.getElementById('theRightSideBar').style.display = "none";
+						document.getElementById('rightBarRestore').style.display = "block";
+						scaleViewLayoutAdjust();
+					}
+				}
+			} else {
+				x = "You pressed Cancel!";
+			}
+		}
+
+		//style_position
+		function scaleViewLayoutAdjust() {
+			// if both bars are ON, readjust the main dev
+			if (document.body.clientWidth >= 960) {
+				if ($("#theLeftSideBar").css("display") == 'block' &&
+					$("#theRightSideBar").css("display") == 'block') {
 					document.getElementById('theLeftSideBar').style.width = "20%";
 					document.getElementById('theRightSideBar').style.width = "20%";
 					document.getElementById('the_dev_dashboard').style.width = "60%";
@@ -792,10 +813,10 @@
 					document.getElementById('theLeftSideBar').style.maxWidth = "20%";
 					document.getElementById('theRightSideBar').style.maxWidth = "20%";
 					document.getElementById('the_dev_dashboard').style.maxWidth = "60%";
-			}
-			// if one bar is ON, readjust the main dev
-			else if ($("#theLeftSideBar").css("display")  == 'block' && 
-				$("#theRightSideBar").css("display")  == 'none'  ) {
+				}
+				// if one bar is ON, readjust the main dev
+				else if ($("#theLeftSideBar").css("display") == 'block' &&
+					$("#theRightSideBar").css("display") == 'none') {
 					document.getElementById('theLeftSideBar').style.width = "20%";
 					document.getElementById('theRightSideBar').style.width = "0";
 					document.getElementById('the_dev_dashboard').style.width = "80%";
@@ -803,9 +824,9 @@
 					document.getElementById('theLeftSideBar').style.maxWidth = "20%";
 					document.getElementById('theRightSideBar').style.maxWidth = "0";
 					document.getElementById('the_dev_dashboard').style.maxWidth = "80%";
-			}
-			else if ($("#theLeftSideBar").css("display")  == 'none' && 
-				$("#theRightSideBar").css("display")  == 'block'  ) {
+				}
+				else if ($("#theLeftSideBar").css("display") == 'none' &&
+					$("#theRightSideBar").css("display") == 'block') {
 					document.getElementById('theLeftSideBar').style.width = "0";
 					document.getElementById('theRightSideBar').style.width = "20%";
 					document.getElementById('the_dev_dashboard').style.width = "80%";
@@ -813,10 +834,10 @@
 					document.getElementById('theLeftSideBar').style.maxWidth = "0";
 					document.getElementById('theRightSideBar').style.maxWidth = "20%";
 					document.getElementById('the_dev_dashboard').style.maxWidth = "80%";
-			}
-			// If none of the bar is ON, readjust the main dev
-			else if ($("#theLeftSideBar").css("display")  == 'none' && 
-				$("#theRightSideBar").css("display")  == 'none'  ) {
+				}
+				// If none of the bar is ON, readjust the main dev
+				else if ($("#theLeftSideBar").css("display") == 'none' &&
+					$("#theRightSideBar").css("display") == 'none') {
 					document.getElementById('theLeftSideBar').style.width = "0";
 					document.getElementById('theRightSideBar').style.width = "0";
 					document.getElementById('the_dev_dashboard').style.width = "100%";
@@ -824,725 +845,735 @@
 					document.getElementById('theLeftSideBar').style.maxWidth = "0";
 					document.getElementById('theRightSideBar').style.maxWidth = "0";
 					document.getElementById('the_dev_dashboard').style.maxWidth = "100%";
+				}
+			} else if (document.body.clientWidth < 960) {
+
 			}
-		}else if( document.body.clientWidth < 960 ){
-			
+
 		}
-		
-	}
 
-		
 
-	function removeParent(ev){
-		ev.target.parentElement.style.display = "none";
-	}
 
-	function removeSpecificId(id){
-		document.getElementById(id).style.display = "none";
-	}
+		function removeParent(ev) {
+			ev.target.parentElement.style.display = "none";
+		}
 
-	function toggleSpecificId(){
-		if(document.getElementById(id).style.display == "none"){
-			document.getElementById(id).style.display = "block";
-		}else{
+		function removeSpecificId(id) {
 			document.getElementById(id).style.display = "none";
 		}
-	}
 
-
-	function loadStyles(){
-		display_by = document.getElementById("arrangement_type").value;
-		url = '../../backend/style/get_style.php?echo=json&display_by=' + display_by ;
-		$.post(url, {
-			key: "gjhtiidsimi09403jfjkdknf",
-		},
-		function(data, status){
-			dataJson = JSON.parse(data);
-			//alert(data);
-			result = dataJson["result"];
-			if (dataJson["status"] == "true"){
-				//$("#processor_shower").fadeOut();
-				//$("#loader_side_success").fadeIn();
-				//$("#msg_success").text(dataJson["msg"]);
-				for (let index = 0; index < result.length; index++) {
-					const element = result[index];
-					description = element['description'];
-					style_name = element['style_name'];
-					//alert(style_name);
-					
-				}
-			}else{
-				console.log('failed to load while using the json_javascript_displayer_function');
-			}
-		});
-	}
-
-
-	function loadAllLeftSides(ev){
-		if( typeof(ev) == "string" ){
-			tag = ev;
-		}else{
-			selected_Id = ev.target.id;
-			selected_Element = document.getElementById(selected_Id);
-			tag = selected_Element.value;
-		}
-		//alert(tag);
-		display_by = document.getElementById("arrangement_type").value;
-		url = "../../backend/style/get_style.php?echo=raw";
-		if(tag == 'Style'){
-			url = '../../backend/style/get_style.php?echo=raw&display_by=' + display_by;
-		}else if (tag == 'Assitance/Modules'){
-			url = '../../backend/assistance/get_assistance.php?echo=raw&display_by=' + display_by;
-		}else if (tag == 'Attributes'){
-			url = '../../backend/attribute/get_attribute.php?echo=raw&display_by=' + display_by;
-		}else if(tag == 'Colors'){
-			url = '../../backend/colors/get_color.php?echo=raw&display_by=' + display_by;
-		}else if(tag == 'File'){
-			url = '../../backend/file/get_file.php?echo=raw&display_by=' + display_by;
-		}
-		//alert(url);
-		$.post(url, {
-			key: "gjhtiidsimi09403jfjkdknf",
-		},
-		function(data, status){
-			//dataJson = JSON.parse(data);
-			//alert(data);
-			//result = data["result"];
-			if (status){
-				$('.full_left_aside_section').html(data);
-				$('#The_left_header_side').text(tag);
-			}else{
-				console.log('failed to load while using the direct Backend to HTML render.');
-			}
-		});
-	}
-
-	function loadAllRightSides(ev){
-		if( typeof(ev) == "string" ){
-			tag = ev;
-		}else{
-			selected_Id = ev.target.id;
-			selected_Element = document.getElementById(selected_Id);
-			tag = selected_Element.value;
-		}
-		//alert(tag);
-		display_by = document.getElementById("arrangement_type").value;
-		url = "../../backend/style/get_style.php?echo=raw";
-		if(tag == 'Style'){
-			url = '../../backend/style/get_style.php?echo=raw&display_by=' + display_by;
-		}else if (tag == 'Assitance/Modules'){
-			url = '../../backend/assistance/get_assistance.php?echo=raw&display_by=' + display_by;
-		}else if (tag == 'Attributes'){
-			url = '../../backend/attribute/get_attribute.php?echo=raw&display_by=' + display_by;
-		}else if(tag == 'Colors'){
-			url = '../../backend/colors/get_color.php?echo=raw&display_by=' + display_by;
-		}else if(tag == 'File'){
-			url = '../../backend/file/get_file.php?echo=raw&display_by=' + display_by;
-		}
-		//alert(url);
-		$.post(url, {
-			key: "gjhtiidsimi09403jfjkdknf",
-		},
-		function(data, status){
-			if (status){
-				$('.full_right_aside_section').html(data);
-				$('#The_right_header_side').text(tag);
-			}else{
-				console.log('failed to load while using the direct Backend to HTML render.');
-			}
-		});
-	}
-
-	function post_request(url, parameters, type){
-		$.post(url, parameters,
-		function(data, status){
-			//alert(data);
-			if (status) {
-				if (type == 'json'){
-					var dataJson = JSON.parse(data);
-					return dataJson;
-				}else{
-					return data;	
-				}
-			}else{
-				return 'could not make a successful post request. ****NOT REACHED****';
-			}
-		});
-	}
-
-
-	function loadElements(){
-		display_by = document.getElementById("arrangement_type").value;
-		url = '../../backend/elements/get_element.php?echo=raw&display_by=' + display_by ;
-		$.post(url, {
-			key: "gjhtiidsimi09403jfjkdknf",
-		},
-		function(data, status){
-			//dataJson = JSON.parse(data);
-			//alert(data);
-			//result = data["result"];
-			if (status){
-				$('.the_bottom_bar').html(data);
-				//$('#The_left_header_side').text(tag);
-			}else{
-				console.log('failed to load while using the direct Backend to HTML render.');
-			}
-		});
-	}
-
-
-	function save_file(project_name, project_content, project_description, type){
-		var ret = "";
-		if (type == "new") {
-			url = '../../backend/projects/add_project.php';	
-		}else{
-			url = '../../backend/projects/save_project.php';
-		}
-		$.post(url, {
-			user_id: 34,
-			project_name: project_name,
-			project_description: project_description,
-			project_content: project_content,
-			key: "gjhtiidsimi09403jfjkdknf"
-		},
-		function(data, status){
-			//alert(data);
-			//dataJson = JSON.parse(data);
-			//result = data["result"];
-			if (status){
-				//$('.the_bottom_bar').html(data);
-				//$('#The_left_header_side').text(tag);
-				ret = data;
-				if (type == "new"){
-					dataJson = JSON.parse(data);
-					if (dataJson["status"] == "true"){
-						var currentPage = window.location.href;
-						currentPage = currentPage + "?project_title=" + project_name;
-						window.location.assign(currentPage);
-						//saveDevArena();
-					}else{
-						alert("We are facing some challenges with creating this project." );
-					}
-				}
-			}else{
-				console.log('issues with saving the content online.');
-			}
-		});
-
-		return ret;
-	}
-
-
-	function saveDevArena(){
-		if (get_url_data("project_title") != ""){
-			var project_name = get_url_data("project_title");
-			var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-			var project_description = document.getElementById("the_project_description").value;
-			save_file(project_name, cvalue, project_description, "exist");
-			// if(contains_special_char(project_name)){
-			// 	alert("Project name should not include any of the special characters: "+ "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]");
-			// }else{
-			// 	var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-			// 	var project_description = document.getElementById("the_project_description").value;
-			// 	save_file(project_name, cvalue, project_description);
-			// }	
-		}else{
-			alert("could not find project name. However, You can save this project now.");
-			var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
-			if (cvalue != "" && cvalue != null) {
-				newProject();
-				//saveDevArena();
+		function toggleSpecificId() {
+			if (document.getElementById(id).style.display == "none") {
+				document.getElementById(id).style.display = "block";
+			} else {
+				document.getElementById(id).style.display = "none";
 			}
 		}
-	}
 
-	function loadSaveContent(){
-		if (get_url_data("project_title") != ""){
-			var project_name = get_url_data("project_title");
-			$.post('../../backend/projects/get_project_details.php', {
-				user_id: 34, 
-				project_name: project_name, 
+
+		function loadStyles() {
+			display_by = document.getElementById("arrangement_type").value;
+			url = '../../backend/style/get_style.php?echo=json&display_by=' + display_by;
+			$.post(url, {
 				key: "gjhtiidsimi09403jfjkdknf",
 			},
-			function(data, status){
-				if (status){
+				function (data, status) {
 					dataJson = JSON.parse(data);
 					//alert(data);
-					//alert(dataJson['project']['project_location']);
-					$.post('../../backend/projects/load_saved_content.php', {
-						user_id: 34, 
-						project_name: project_name, 
-						project_location: dataJson['project']['project_location'],
-						key: "gjhtiidsimi09403jfjkdknf",
-					},
-					function(data, status){
-						//dataJson = JSON.parse(data);
-						//alert(data);
-						if (status){
-							if (data != "") {
-								$('#the_dev_dashboard').html(data);	
-							}else{
-								alert('could not load project');
-							}
-							//$('#The_left_header_side').text(tag);
-						}else{
-							console.log('failed to load project. But made the first connection.');
+					result = dataJson["result"];
+					if (dataJson["status"] == "true") {
+						//$("#processor_shower").fadeOut();
+						//$("#loader_side_success").fadeIn();
+						//$("#msg_success").text(dataJson["msg"]);
+						for (let index = 0; index < result.length; index++) {
+							const element = result[index];
+							description = element['description'];
+							style_name = element['style_name'];
+							//alert(style_name);
+
 						}
-					});
-				}else{
-					console.log('failed to load saved project.');
-				}
-			});
-			
-
-			//This will be the future of all POST request on this platform or all our scripts. this will help reduce the lines of code drastically
-			//data = post_request('../../backend/projects/get_project_details.php', 
-			//{user_id: 34, project_name: project_name, key: "gjhtiidsimi09403jfjkdknf"}, "json");
-			//alert(await data);
-
-			
-		}else{
-			alert("No Project Name. Let's try to save this project first before we retrieve");
-			newProject();
+					} else {
+						console.log('failed to load while using the json_javascript_displayer_function');
+					}
+				});
 		}
-	}
 
 
-	function get_url_data(parameter){
-		var ret = "";
-		var currentPage = window.location.href;
-		var get_all_data = currentPage.indexOf("?");
-		var only_data_side = currentPage.slice(get_all_data+1);
-		//alert(only_data_side);
-		if (only_data_side.includes("&") ){
-			splited_data = only_data_side.split("&");
-			for (let index = 0; index < splited_data.length; index++) {
-				const element = splited_data[index];
-				//alert(element.slice(0, element.indexOf("=")));
-				if (element.slice(0, element.indexOf("=")) == parameter){
-					ret = element.slice(element.indexOf("=") + 1) ;
-				}
+		function loadAllLeftSides(ev) {
+			if (typeof (ev) == "string") {
+				tag = ev;
+			} else {
+				selected_Id = ev.target.id;
+				selected_Element = document.getElementById(selected_Id);
+				tag = selected_Element.value;
 			}
-		}else{
-			//alert(only_data_side.slice(0, only_data_side.indexOf("=")));
-			if (only_data_side.slice(0, only_data_side.indexOf("=")) == parameter){
-				ret = only_data_side.slice(only_data_side.indexOf("=") + 1) ;
+			//alert(tag);
+			display_by = document.getElementById("arrangement_type").value;
+			url = "../../backend/style/get_style.php?echo=raw";
+			if (tag == 'Style') {
+				url = '../../backend/style/get_style.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'Assitance/Modules') {
+				url = '../../backend/assistance/get_assistance.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'Attributes') {
+				url = '../../backend/attribute/get_attribute.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'Colors') {
+				url = '../../backend/colors/get_color.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'File') {
+				url = '../../backend/file/get_file.php?echo=raw&display_by=' + display_by;
 			}
-		}
-		//alert(ret.toString());
-		return ret;
-	}
-
-
-	function get_colors(ev){
-		colors = [];
-		elemClass = document.getElementsByClassName('color_section');
-		for (let index = 0; index < elemClass.length; index++) {
-			if ( document.getElementById('get_only_raw').checked == true) {
-				const element = elemClass[index];
-				str_index = index.toString();
-				//parti_color = document.getElementById('color_input_'+str_index+str_index).value;
-				parti_color_range = document.getElementById('color_side_range_'+str_index+str_index).value;
-				new_Value =  parti_color_range;
-				colors.push(new_Value);
-			}else{
-				const element = elemClass[index];
-				str_index = index.toString();
-				parti_color = document.getElementById('color_input_'+str_index+str_index).value;
-				parti_color_range = document.getElementById('color_side_range_'+str_index+str_index).value;
-				new_Value = (parti_color_range == 0 || parti_color_range == "") ? parti_color : parti_color + " " + parti_color_range +"%";
-				colors.push(new_Value);
-			}
-		}
-		// for (const iterator of elemClass) {
-		//     parti_color = document.getElementsByClassName('color_input1').style.color;
-		//     alert(parti_color);
-		//     parti_color_range = document.getElementsByClassName('color_side_range').style.color;
-		//     new_Value = (parti_color_range == 0 || parti_color_range == "") ? parti_color : parti_color + " " + parti_color_range +"%";
-		//     colors.push(new_Value);
-		// }
-		/* elemClass.forEach(element => {
-
-			parti_color = element.getElementsByClassName('color_input').value;
-			parti_color_range = element.getElementsByClassName('color_side_range').value
-			new_Value = (parti_color_range == 0) ? parti_color : parti_color + " " + parti_color_range +"%";
-			colors.push(new_Value);
-		}); */
-
-		//alert(colors.toString());
-		return colors.toString();
-	}
-
-	function the_add_colors(id, angle, color, type){
-		id = (id.startsWith('#')) ? id.replace('#', '') : id;
-		if (type == 'linear'){
-			var repeat_struture = document.getElementById('the_chief_master_repeat');
-			var value_gotten = (repeat_struture.checked == true) ? "repeating-linear" : "linear";
-			// alert(value_gotten);
-			// alert(angle);
-			// alert(color);
-			// alert(type);
-			$(id.toString(), "id").style('#'+id+'{ \
-				background: '+color+';\
-				background: -webkit-'+value_gotten+'-gradient('+angle+', '+color+'); \
-				background: -o-'+value_gotten+'-gradient('+angle+', '+color+');  \
-				background: -moz-'+value_gotten+'-gradient('+angle+', '+color+'); \
-				background: '+value_gotten+'-gradient('+angle+', '+color+'); \
-			}');
-		}else{
-			var repeat_struture = document.getElementById('the_chief_master_repeat');
-			var value_gotten = (repeat_struture.checked == true) ? "repeating-radial" : "radial";
-			$(id.toString(), "id").style('#'+id+'{ \
-				background: '+color+';\
-				background: -webkit-'+value_gotten+'-gradient('+angle+', '+color+'); \
-				background: -o-'+value_gotten+'-gradient('+angle+', '+color+');  \
-				background: -moz-'+value_gotten+'-gradient('+angle+', '+color+'); \
-				background: '+value_gotten+'-gradient('+angle+', '+color+'); \
-			}');
-		}
-	}
-
-
-	function change_color_displayer(ev){
-		var color = get_colors(ev);
-		// the_color_type = 'background: '+color+';\
-		// background: -webkit-linear-gradient(-90deg, '+color+'); \
-		// background: -o-linear-gradient(-90deg, '+color+');  \
-		// background: -moz-linear-gradient(-90deg, '+color+'); \
-		// background: linear-gradient(-90deg, '+color+');'; 
-		var angle = document.getElementById('colors_angle_getter').value;
-		var type = document.getElementById('type_color_getter').value;
-		the_add_colors('the_color_displayer', angle, color, type);
-		//document.getElementById('the_color_displayer').style.backgroundColor = color;
-	}
-
-	function add_colors_selector(){
-		var new_Elem = document.createElement('LABEL');
-		var already_exist = document.getElementById('already_existing_color_box');
-		var default_val = parseInt(already_exist.value); // This element is created with the fact that we have two already existing color selectors 0 and 1
-		default_val = default_val + 1;
-		var new_val = default_val.toString() + default_val.toString();
-		elem = `<span class="input_text_side">Color:</span>
-			<input class="color_input" id="color_input_`+new_val+`" onchange="change_color_displayer(event)" type="color" value="testing" placeholder="colors picker"/>
-			<input class="color_side_range" id="color_side_range_`+new_val+`" value="0" type="text"/>`;
-		new_Elem.setAttribute("class", 'color_section');
-		new_Elem.innerHTML = elem;
-		document.getElementById('the_color_Selection_boxes').append(new_Elem);
-		already_exist.value = default_val;
-	}
-
-
-	function apply_the_color(ev){
-		var secElem = document.getElementById(selectedId);
-		var color = get_colors(ev);
-		var angle = document.getElementById('colors_angle_getter').value;
-		var type = document.getElementById('type_color_getter').value;
-		//the_add_colors('the_color_displayer', angle, color, type);
-		the_add_colors(selectedId, angle, color, type);
-	}
-
-
-	function make_colorsBox_go(){
-		if ( document.getElementById('get_only_raw').checked == true) {
-			elemClass = document.getElementsByClassName('color_input');
-			for (let index = 0; index < elemClass.length; index++) {
-				const element = elemClass[index];
-				element.style.display = 'none';
-
-				str_index = index.toString();
-				parti_color = document.getElementById('color_input_'+str_index+str_index).value;
-				parti_color_range = document.getElementById('color_side_range_'+str_index+str_index).value = parti_color;
-			}
-		}else{
-			elemClass = document.getElementsByClassName('color_input');
-			for (let index = 0; index < elemClass.length; index++) {
-				const element = elemClass[index];
-				element.style.display = 'inline';
-				str_index = index.toString();
-				parti_color_range = document.getElementById('color_side_range_'+str_index+str_index).value = '0';
-
-			}
-		}
-	}
-
-	function duplicate_element(elem, ref){
-		var secElem = (elem) ? elem : document.getElementById(selectedId);
-		var newElem = secElem.cloneNode();
-		tag_name = newElem.tagName;
-		clone = document.getElementById(selectedId).cloneNode();
-		var ref = (ref) ? ref : secElem.parentElement;
-
-		elemId = generate_strings_id(7);
-		background = colorCodeGenetor(6);
-		newElem.setAttribute("id", elemId);
-		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
-		if (document.getElementById("settings_duplicate_background").checked == true) {
-			newElem.style.backgroundColor = background;
-		}
-		home_msg = ref.textContent;
-		
-		if ( home_msg.indexOf("This is the main dashboard arena") > -1 ) {
-			ref.innerHTML = "";
-			ref.appendChild(newElem, ref);
-			getElementStyleDetails(elemId);
-			getElementAttrDetails(elemId);
-			selectCreated(elemId, tag_name);
-		}else{
-			ref.appendChild(newElem, ref);
-			getElementStyleDetails(elemId);
-			getElementAttrDetails(elemId);
-			selectCreated(elemId, tag_name);
-		}
-		
-	}
-
-	function clone_element(elem){
-		var secElem = (elem) ? elem : document.getElementById(selectedId);
-		var newElem = secElem.cloneNode();
-		tag_name = newElem.tagName;
-		clone = document.getElementById(selectedId).cloneNode();
-		
-		var ref = secElem.parentElement;
-
-		elemId = generate_strings_id(7);
-		background = colorCodeGenetor(6);
-		newElem.setAttribute("id", elemId);
-		newElem.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+elemId+"'"+ ")" );
-		if (document.getElementById("settings_duplicate_background").checked == true) {
-			newElem.style.backgroundColor = background;
-		}
-		
-		return newElem;
-	
-	}
-
-
-	function duplicate_children(elem, ref){
-		var secElem = (elem) ? elem : document.getElementById(selectedId);
-		var ref = (ref) ? ref : secElem.parentElement;
-		var mainParent = clone_element(secElem);
-		count_children = secElem.childElementCount;
-		
-		if ( ref.textContent.indexOf("This is the main dashboard arena") > -1 ) {
-			ref.innerHTML = "";
-			ref.appendChild(mainParent, ref);
-			
-			//getElementStyleDetails(elemId);
-			//getElementAttrDetails(elemId);
-			//selectCreated(elemId, tag_name);
-		}else{
-			ref.appendChild(mainParent, ref);
-			//getElementStyleDetails(elemId);
-			//getElementAttrDetails(elemId);
-			//selectCreated(elemId, tag_name);
-		}
-		
-		//alert(count_children);
-		if(count_children > 0){
-
-			array = secElem.children;
-			for (let index = 0; index < array.length; index++) {
-				const element = array[index];
-				//clone_elem = duplicate_children(element);
-				//ref.appendChild(mainParent, ref);
-				duplicate_children(element, mainParent);
-				//alert(element.id);
-			}
-		}
-	}
-
-	function showSettingsPage(){
-		document.getElementById("the_settings_section_page").style.display = "block";
-	}
-
-	function showPopUpById(id){
-		document.getElementById(id).style.display = "block";
-	}
-
-	function add_FA_icon(icon_name){
-		var secElem = document.getElementById(selectedId);
-		iconId = generate_strings_id(7);
-		
-		tag_name = 'i'
-		var new_icon = document.createElement(tag_name);
-		new_icon.setAttribute("class", 'fa fa-'+icon_name);
-		new_icon.setAttribute("id", iconId);
-		new_icon.setAttribute("ondblclick", "change_selected(event, "+ "'"+tag_name+"' , "+ "'"+iconId+"'"+ ")" );
-
-		// method two
-		// var new_icon_named = 'fa fa-'+icon_name;
-		// var d_new_icon = '<i class="'+new_icon_named+'"></i>';
-		//secElem.innerHTML = d_new_icon;
-
-		secElem.append(new_icon);
-		document.getElementById("the_icon_displayer_pop_up").style.display = "none";
-	}
-
-
-	function load_Adder_maker(adder){
-		var elem = document.getElementById("the_selected_adder_display");
-		var frame = document.createElement('iframe');
-		var adder_url = "";
-		if (adder == 'element') {
-			adder_url = "pop_up_frames/add_element.html";
-		}else if (adder == 'attribute') {
-			adder_url = "pop_up_frames/add_attribute.html";
-		}else if (adder == 'style') {
-			adder_url = "pop_up_frames/add_style.html";
-		}else if (adder == 'module') {
-			adder_url = "pop_up_frames/add_module.html";
-		}else{
-			adder_url = "pop_up_frames/add_element.html";
-		}
-
-		elem.innerHTML = '<iframe style="width: 100%; text-align: center;" src="'+adder_url+'"> </iframe>';
-		
-	}
-
-	function now_display_adder_maker(event, adder){
-		var head_adders = document.getElementsByClassName('the_adder_header_ adder_header_selected');
-		head_adders[0].setAttribute("class", "the_adder_header_");
-
-		event.target.setAttribute("class", "the_adder_header_ adder_header_selected");
-		load_Adder_maker(adder);
-	}
-
-	//TODO::Wanted to create something that will tell the tab to load when opening the pop-up. 
-	function show_icon_popup(area){
-		document.getElementById("the_icon_displayer_pop_up").style.display = "block";
-		iconType = "FontAwesome";
-		display_this_icon_type(iconType);
-	}
-
-
-	function display_this_icon_type(iconType){
-		var head_adders = document.getElementsByClassName('the_icon_header_ icon_header_selected');
-		head_adders[0].setAttribute("class", "the_icon_header_");
-
-		//instead of sending the event, what if we set some unique ID for all the arts/icon categories
-		document.getElementById("icon_type_id_"+iconType).setAttribute("class", "the_icon_header_ icon_header_selected");
-		load_icon_maker(iconType);
-	}
-
-	function load_icon_maker(iconType){
-		display_by = document.getElementById("arrangement_type").value;
-		url_icon = '../../backend/icons/get_icon.php?echo=raw&display_by=' + display_by ;
-
-		var elem = document.getElementById("the_selected_icon_displayer");
-		var ret_value = "";
-		if (iconType == 'FontAwesome') {
-			
-			$.post(url_icon, {
+			//alert(url);
+			$.post(url, {
 				key: "gjhtiidsimi09403jfjkdknf",
 			},
-			function(data, status){
-				//alert(data);
-				elem.innerHTML = data;
-			});
-		}else if (iconType == 'GoogleIcon') {
-			elem.innerHTML = "Update Coming Soon.";
-		}		
-	}
+				function (data, status) {
+					//dataJson = JSON.parse(data);
+					//alert(data);
+					//result = data["result"];
+					data = sanitizeInput(data);
+					if (status) {
+						$('.full_left_aside_section').html(data);
+						$('#The_left_header_side').text(tag);
+					} else {
+						console.log('failed to load while using the direct Backend to HTML render.');
+					}
+				});
+		}
+
+		function loadAllRightSides(ev) {
+			if (typeof (ev) == "string") {
+				tag = ev;
+			} else {
+				selected_Id = ev.target.id;
+				selected_Element = document.getElementById(selected_Id);
+				tag = selected_Element.value;
+			}
+			//alert(tag);
+			display_by = document.getElementById("arrangement_type").value;
+			url = "../../backend/style/get_style.php?echo=raw";
+			if (tag == 'Style') {
+				url = '../../backend/style/get_style.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'Assitance/Modules') {
+				url = '../../backend/assistance/get_assistance.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'Attributes') {
+				url = '../../backend/attribute/get_attribute.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'Colors') {
+				url = '../../backend/colors/get_color.php?echo=raw&display_by=' + display_by;
+			} else if (tag == 'File') {
+				url = '../../backend/file/get_file.php?echo=raw&display_by=' + display_by;
+			}
+			//alert(url);
+			$.post(url, {
+				key: "gjhtiidsimi09403jfjkdknf",
+			},
+				function (data, status) {
+					data = sanitizeInput(data);
+					if (status) {
+						$('.full_right_aside_section').html(data);
+						$('#The_right_header_side').text(tag);
+					} else {
+						console.log('failed to load while using the direct Backend to HTML render.');
+					}
+				});
+		}
+
+		function post_request(url, parameters, type) {
+			$.post(url, parameters,
+				function (data, status) {
+					//alert(data);
+					data = sanitizeInput(data);
+					if (status) {
+						if (type == 'json') {
+							var dataJson = JSON.parse(data);
+							return dataJson;
+						} else {
+							return data;
+						}
+					} else {
+						return 'could not make a successful post request. ****NOT REACHED****';
+					}
+				});
+		}
 
 
-	function handle_side_bars(restore_id){
-		//alert("entered here");
-		if (restore_id == "leftBarRestore") {
-			//alert(document.getElementById('theLeftSideBar').style.display);
-			if (  $("#theLeftSideBar").css("display")  == 'none' ) {
-				document.getElementById('theLeftSideBar').style.display = "block";
-				document.getElementById('leftBarRestore').style.display = "none";
-				scaleViewLayoutAdjust();
+		function loadElements() {
+			display_by = document.getElementById("arrangement_type").value;
+			url = '../../backend/elements/get_element.php?echo=raw&display_by=' + display_by;
+			$.post(url, {
+				key: "gjhtiidsimi09403jfjkdknf",
+			},
+				function (data, status) {
+					//dataJson = JSON.parse(data);
+					//alert(data);
+					//result = data["result"];
+					data = sanitizeInput(data);
+					if (status) {
+						$('.the_bottom_bar').html(data);
+						//$('#The_left_header_side').text(tag);
+					} else {
+						console.log('failed to load while using the direct Backend to HTML render.');
+					}
+				});
+		}
+
+
+		function save_file(project_name, project_content, project_description, type) {
+			var ret = "";
+			if (type == "new") {
+				url = '../../backend/projects/add_project.php';
+			} else {
+				url = '../../backend/projects/save_project.php';
+			}
+			$.post(url, {
+				user_id: 34,
+				project_name: project_name,
+				project_description: project_description,
+				project_content: project_content,
+				key: "gjhtiidsimi09403jfjkdknf"
+			},
+				function (data, status) {
+					//alert(data);
+					//dataJson = JSON.parse(data);
+					//result = data["result"];
+					if (status) {
+						//$('.the_bottom_bar').html(data);
+						//$('#The_left_header_side').text(tag);
+						ret = data;
+						if (type == "new") {
+							dataJson = JSON.parse(sanitizeInput(data));
+							if (dataJson["status"] == "true") {
+								var currentPage = window.location.href;
+								currentPage = currentPage + "?project_title=" + project_name;
+								window.location.assign(currentPage);
+								//saveDevArena();
+							} else {
+								alert("We are facing some challenges with creating this project.");
+							}
+						}
+					} else {
+						console.log('issues with saving the content online.');
+					}
+				});
+
+			return ret;
+		}
+
+
+		function saveDevArena() {
+			if (get_url_data("project_title") != "") {
+				var project_name = get_url_data("project_title");
+				var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+				var project_description = document.getElementById("the_project_description").value;
+				save_file(project_name, cvalue, project_description, "exist");
+				// if(contains_special_char(project_name)){
+				// 	alert("Project name should not include any of the special characters: "+ "!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]");
+				// }else{
+				// 	var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+				// 	var project_description = document.getElementById("the_project_description").value;
+				// 	save_file(project_name, cvalue, project_description);
+				// }	
+			} else {
+				alert("could not find project name. However, You can save this project now.");
+				var cvalue = document.getElementById("the_dev_dashboard").innerHTML;
+				if (cvalue != "" && cvalue != null) {
+					newProject();
+					//saveDevArena();
+				}
 			}
 		}
-		else if (restore_id == "rightBarRestore"){
-			if (  $("#theRightSideBar").css("display")  == 'none' ) {
-				document.getElementById('theRightSideBar').style.display = "block";
-				document.getElementById('rightBarRestore').style.display = "none";
-				scaleViewLayoutAdjust();
+
+		function loadSaveContent() {
+			if (get_url_data("project_title") != "") {
+				var project_name = get_url_data("project_title");
+				$.post('../../backend/projects/get_project_details.php', {
+					user_id: 34,
+					project_name: project_name,
+					key: "gjhtiidsimi09403jfjkdknf",
+				},
+					function (data, status) {
+						if (status) {
+							data = sanitizeInput(data);
+							dataJson = JSON.parse(sanitizeInput(data));
+							//alert(data);
+							//alert(dataJson['project']['project_location']);
+							$.post('../../backend/projects/load_saved_content.php', {
+								user_id: 34,
+								project_name: project_name,
+								project_location: dataJson['project']['project_location'],
+								key: "gjhtiidsimi09403jfjkdknf",
+							},
+								function (data, status) {
+									//dataJson = JSON.parse(data);
+									//alert(data);
+									data = sanitizeInput(data);
+									if (status) {
+										if (data != "") {
+											$('#the_dev_dashboard').html(data);
+										} else {
+											alert('could not load project');
+										}
+										//$('#The_left_header_side').text(tag);
+									} else {
+										console.log('failed to load project. But made the first connection.');
+									}
+								});
+						} else {
+							console.log('failed to load saved project.');
+						}
+					});
+
+
+				//This will be the future of all POST request on this platform or all our scripts. this will help reduce the lines of code drastically
+				//data = post_request('../../backend/projects/get_project_details.php', 
+				//{user_id: 34, project_name: project_name, key: "gjhtiidsimi09403jfjkdknf"}, "json");
+				//alert(await data);
+
+
+			} else {
+				alert("No Project Name. Let's try to save this project first before we retrieve");
+				newProject();
 			}
 		}
-	}
 
-	function showTopBar(){
-		var topBar = document.getElementById("theTopBar");
-		// if (topBar.getAttribute("hidden")) {
-		// 	topBar.removeAttribute("hidden");
-		// }else{
-		// 	topBar.setAttribute("hidden", true);
-		// }
-		if (topBar.style.display == "" || topBar.style.display == "inline-block") {
-			topBar.style.display = "none"
-		} else {
-			topBar.style.display = "inline-block"
+
+		function get_url_data(parameter) {
+			var ret = "";
+			var currentPage = window.location.href;
+			var get_all_data = currentPage.indexOf("?");
+			var only_data_side = currentPage.slice(get_all_data + 1);
+			//alert(only_data_side);
+			if (only_data_side.includes("&")) {
+				splited_data = only_data_side.split("&");
+				for (let index = 0; index < splited_data.length; index++) {
+					const element = splited_data[index];
+					//alert(element.slice(0, element.indexOf("=")));
+					if (element.slice(0, element.indexOf("=")) == parameter) {
+						ret = element.slice(element.indexOf("=") + 1);
+					}
+				}
+			} else {
+				//alert(only_data_side.slice(0, only_data_side.indexOf("=")));
+				if (only_data_side.slice(0, only_data_side.indexOf("=")) == parameter) {
+					ret = only_data_side.slice(only_data_side.indexOf("=") + 1);
+				}
+			}
+			//alert(ret.toString());
+			return ret;
 		}
-	}
 
-/* 	
-// declare a global array with a capacity of 20
-let dev_state = new Array(20);
 
-// declare an index to keep track of the front of the queue
-let front = 0;
+		function get_colors(ev) {
+			colors = [];
+			elemClass = document.getElementsByClassName('color_section');
+			for (let index = 0; index < elemClass.length; index++) {
+				if (document.getElementById('get_only_raw').checked == true) {
+					const element = elemClass[index];
+					str_index = index.toString();
+					//parti_color = document.getElementById('color_input_'+str_index+str_index).value;
+					parti_color_range = document.getElementById('color_side_range_' + str_index + str_index).value;
+					new_Value = parti_color_range;
+					colors.push(new_Value);
+				} else {
+					const element = elemClass[index];
+					str_index = index.toString();
+					parti_color = document.getElementById('color_input_' + str_index + str_index).value;
+					parti_color_range = document.getElementById('color_side_range_' + str_index + str_index).value;
+					new_Value = (parti_color_range == 0 || parti_color_range == "") ? parti_color : parti_color + " " + parti_color_range + "%";
+					colors.push(new_Value);
+				}
+			}
+			// for (const iterator of elemClass) {
+			//     parti_color = document.getElementsByClassName('color_input1').style.color;
+			//     alert(parti_color);
+			//     parti_color_range = document.getElementsByClassName('color_side_range').style.color;
+			//     new_Value = (parti_color_range == 0 || parti_color_range == "") ? parti_color : parti_color + " " + parti_color_range +"%";
+			//     colors.push(new_Value);
+			// }
+			/* elemClass.forEach(element => {
+	
+				parti_color = element.getElementsByClassName('color_input').value;
+				parti_color_range = element.getElementsByClassName('color_side_range').value
+				new_Value = (parti_color_range == 0) ? parti_color : parti_color + " " + parti_color_range +"%";
+				colors.push(new_Value);
+			}); */
 
-// declare a function to add new elements to the array
-function dev_state_changed(state) {
-  // add the new element to the back of the queue
-  dev_state[(front + dev_state.length) % dev_state.length] = state;
-  // move the front of the queue forward
-  front = (front + 1) % dev_state.length;
-}
+			//alert(colors.toString());
+			return colors.toString();
+		}
 
-// example usage
-dev_state_changed('ready');
-dev_state_changed('running');
-dev_state_changed('stopped');
+		function the_add_colors(id, angle, color, type) {
+			id = (id.startsWith('#')) ? id.replace('#', '') : id;
+			if (type == 'linear') {
+				var repeat_struture = document.getElementById('the_chief_master_repeat');
+				var value_gotten = (repeat_struture.checked == true) ? "repeating-linear" : "linear";
+				// alert(value_gotten);
+				// alert(angle);
+				// alert(color);
+				// alert(type);
+				$(id.toString(), "id").style('#' + id + '{ \
+				background: '+ color + ';\
+				background: -webkit-'+ value_gotten + '-gradient(' + angle + ', ' + color + '); \
+				background: -o-'+ value_gotten + '-gradient(' + angle + ', ' + color + ');  \
+				background: -moz-'+ value_gotten + '-gradient(' + angle + ', ' + color + '); \
+				background: '+ value_gotten + '-gradient(' + angle + ', ' + color + '); \
+			}');
+			} else {
+				var repeat_struture = document.getElementById('the_chief_master_repeat');
+				var value_gotten = (repeat_struture.checked == true) ? "repeating-radial" : "radial";
+				$(id.toString(), "id").style('#' + id + '{ \
+				background: '+ color + ';\
+				background: -webkit-'+ value_gotten + '-gradient(' + angle + ', ' + color + '); \
+				background: -o-'+ value_gotten + '-gradient(' + angle + ', ' + color + ');  \
+				background: -moz-'+ value_gotten + '-gradient(' + angle + ', ' + color + '); \
+				background: '+ value_gotten + '-gradient(' + angle + ', ' + color + '); \
+			}');
+			}
+		}
 
-console.log(dev_state); // logs ['ready', 'running', 'stopped', undefined, undefined, ..., undefined]
 
-//Another Way of solving thesame problem
-// declare global array dev_state with maximum length of 20
-let dev_state = new Array(20);
+		function change_color_displayer(ev) {
+			var color = get_colors(ev);
+			// the_color_type = 'background: '+color+';\
+			// background: -webkit-linear-gradient(-90deg, '+color+'); \
+			// background: -o-linear-gradient(-90deg, '+color+');  \
+			// background: -moz-linear-gradient(-90deg, '+color+'); \
+			// background: linear-gradient(-90deg, '+color+');'; 
+			var angle = document.getElementById('colors_angle_getter').value;
+			var type = document.getElementById('type_color_getter').value;
+			the_add_colors('the_color_displayer', angle, color, type);
+			//document.getElementById('the_color_displayer').style.backgroundColor = color;
+		}
 
-// function to add state to dev_state array
-function dev_state_changed(state) {
-  // remove the first element if array is full
-  if (dev_state.length === 20) {
-    dev_state.shift();
-  }
-  // add state to the end of the array
-  dev_state.push(state);
-} */
-</script>
+		function add_colors_selector() {
+			var new_Elem = document.createElement('LABEL');
+			var already_exist = document.getElementById('already_existing_color_box');
+			var default_val = parseInt(already_exist.value); // This element is created with the fact that we have two already existing color selectors 0 and 1
+			default_val = default_val + 1;
+			var new_val = default_val.toString() + default_val.toString();
+			elem = `<span class="input_text_side">Color:</span>
+			<input class="color_input" id="color_input_`+ new_val + `" onchange="change_color_displayer(event)" type="color" value="testing" placeholder="colors picker"/>
+			<input class="color_side_range" id="color_side_range_`+ new_val + `" value="0" type="text"/>`;
+			new_Elem.setAttribute("class", 'color_section');
+			new_Elem.innerHTML = elem;
+			document.getElementById('the_color_Selection_boxes').append(new_Elem);
+			already_exist.value = default_val;
+		}
 
-<style>
-	.bottom_bar_end{
-		position: fixed;
-		background-color: black;
-		color: antiquewhite;
-		opacity: 0.4;
-		padding: 5px;
-		display: inline-block;
-		/* transform: translate(-50%,-50%); */
-		transform: translateX(-50%);
-		bottom: 0;
-		margin: auto;
-		text-align: center;
-	}
-	.the_display_enviroment{
-		background-color: black;
-		display: block;
-		width: 100vw;
-		height: 100vh;
-		overflow: auto;
-	}
 
-	.the_menu_icons{
-		padding: 7px;
-		font-size: 21px;
-	}
-</style>
+		function apply_the_color(ev) {
+			var secElem = document.getElementById(selectedId);
+			var color = get_colors(ev);
+			var angle = document.getElementById('colors_angle_getter').value;
+			var type = document.getElementById('type_color_getter').value;
+			//the_add_colors('the_color_displayer', angle, color, type);
+			the_add_colors(selectedId, angle, color, type);
+		}
+
+
+		function make_colorsBox_go() {
+			if (document.getElementById('get_only_raw').checked == true) {
+				elemClass = document.getElementsByClassName('color_input');
+				for (let index = 0; index < elemClass.length; index++) {
+					const element = elemClass[index];
+					element.style.display = 'none';
+
+					str_index = index.toString();
+					parti_color = document.getElementById('color_input_' + str_index + str_index).value;
+					parti_color_range = document.getElementById('color_side_range_' + str_index + str_index).value = parti_color;
+				}
+			} else {
+				elemClass = document.getElementsByClassName('color_input');
+				for (let index = 0; index < elemClass.length; index++) {
+					const element = elemClass[index];
+					element.style.display = 'inline';
+					str_index = index.toString();
+					parti_color_range = document.getElementById('color_side_range_' + str_index + str_index).value = '0';
+
+				}
+			}
+		}
+
+		function duplicate_element(elem, ref) {
+			var secElem = (elem) ? elem : document.getElementById(selectedId);
+			var newElem = secElem.cloneNode();
+			tag_name = newElem.tagName;
+			clone = document.getElementById(selectedId).cloneNode();
+			var ref = (ref) ? ref : secElem.parentElement;
+
+			elemId = generate_strings_id(7);
+			background = colorCodeGenetor(6);
+			newElem.setAttribute("id", elemId);
+			newElem.setAttribute("ondblclick", "change_selected(event, " + "'" + tag_name + "' , " + "'" + elemId + "'" + ")");
+			if (document.getElementById("settings_duplicate_background").checked == true) {
+				newElem.style.backgroundColor = background;
+			}
+			home_msg = ref.textContent;
+
+			if (home_msg.indexOf("This is the main dashboard arena") > -1) {
+				ref.innerHTML = "";
+				ref.appendChild(newElem, ref);
+				getElementStyleDetails(elemId);
+				getElementAttrDetails(elemId);
+				selectCreated(elemId, tag_name);
+			} else {
+				ref.appendChild(newElem, ref);
+				getElementStyleDetails(elemId);
+				getElementAttrDetails(elemId);
+				selectCreated(elemId, tag_name);
+			}
+
+		}
+
+		function clone_element(elem) {
+			var secElem = (elem) ? elem : document.getElementById(selectedId);
+			var newElem = secElem.cloneNode();
+			tag_name = newElem.tagName;
+			clone = document.getElementById(selectedId).cloneNode();
+
+			var ref = secElem.parentElement;
+
+			elemId = generate_strings_id(7);
+			background = colorCodeGenetor(6);
+			newElem.setAttribute("id", elemId);
+			newElem.setAttribute("ondblclick", "change_selected(event, " + "'" + tag_name + "' , " + "'" + elemId + "'" + ")");
+			if (document.getElementById("settings_duplicate_background").checked == true) {
+				newElem.style.backgroundColor = background;
+			}
+
+			return newElem;
+
+		}
+
+
+		function duplicate_children(elem, ref) {
+			var secElem = (elem) ? elem : document.getElementById(selectedId);
+			var ref = (ref) ? ref : secElem.parentElement;
+			var mainParent = clone_element(secElem);
+			count_children = secElem.childElementCount;
+
+			if (ref.textContent.indexOf("This is the main dashboard arena") > -1) {
+				ref.innerHTML = "";
+				ref.appendChild(mainParent, ref);
+
+				//getElementStyleDetails(elemId);
+				//getElementAttrDetails(elemId);
+				//selectCreated(elemId, tag_name);
+			} else {
+				ref.appendChild(mainParent, ref);
+				//getElementStyleDetails(elemId);
+				//getElementAttrDetails(elemId);
+				//selectCreated(elemId, tag_name);
+			}
+
+			//alert(count_children);
+			if (count_children > 0) {
+
+				array = secElem.children;
+				for (let index = 0; index < array.length; index++) {
+					const element = array[index];
+					//clone_elem = duplicate_children(element);
+					//ref.appendChild(mainParent, ref);
+					duplicate_children(element, mainParent);
+					//alert(element.id);
+				}
+			}
+		}
+
+		function showSettingsPage() {
+			document.getElementById("the_settings_section_page").style.display = "block";
+		}
+
+		function showPopUpById(id) {
+			document.getElementById(id).style.display = "block";
+		}
+
+		function add_FA_icon(icon_name) {
+			var secElem = document.getElementById(selectedId);
+			iconId = generate_strings_id(7);
+
+			tag_name = 'i'
+			var new_icon = document.createElement(tag_name);
+			new_icon.setAttribute("class", 'fa fa-' + icon_name);
+			new_icon.setAttribute("id", iconId);
+			new_icon.setAttribute("ondblclick", "change_selected(event, " + "'" + tag_name + "' , " + "'" + iconId + "'" + ")");
+
+			// method two
+			// var new_icon_named = 'fa fa-'+icon_name;
+			// var d_new_icon = '<i class="'+new_icon_named+'"></i>';
+			//secElem.innerHTML = d_new_icon;
+
+			secElem.append(new_icon);
+			document.getElementById("the_icon_displayer_pop_up").style.display = "none";
+		}
+
+
+		function load_Adder_maker(adder) {
+			var elem = document.getElementById("the_selected_adder_display");
+			var frame = document.createElement('iframe');
+			var adder_url = "";
+			if (adder == 'element') {
+				adder_url = "pop_up_frames/add_element.html";
+			} else if (adder == 'attribute') {
+				adder_url = "pop_up_frames/add_attribute.html";
+			} else if (adder == 'style') {
+				adder_url = "pop_up_frames/add_style.html";
+			} else if (adder == 'module') {
+				adder_url = "pop_up_frames/add_module.html";
+			} else {
+				adder_url = "pop_up_frames/add_element.html";
+			}
+
+			elem.innerHTML = '<iframe style="width: 100%; text-align: center;" src="' + adder_url + '"> </iframe>';
+
+		}
+
+		function now_display_adder_maker(event, adder) {
+			var head_adders = document.getElementsByClassName('the_adder_header_ adder_header_selected');
+			head_adders[0].setAttribute("class", "the_adder_header_");
+
+			event.target.setAttribute("class", "the_adder_header_ adder_header_selected");
+			load_Adder_maker(adder);
+		}
+
+		//TODO::Wanted to create something that will tell the tab to load when opening the pop-up. 
+		function show_icon_popup(area) {
+			document.getElementById("the_icon_displayer_pop_up").style.display = "block";
+			iconType = "FontAwesome";
+			display_this_icon_type(iconType);
+		}
+
+
+		function display_this_icon_type(iconType) {
+			var head_adders = document.getElementsByClassName('the_icon_header_ icon_header_selected');
+			head_adders[0].setAttribute("class", "the_icon_header_");
+
+			//instead of sending the event, what if we set some unique ID for all the arts/icon categories
+			document.getElementById("icon_type_id_" + iconType).setAttribute("class", "the_icon_header_ icon_header_selected");
+			load_icon_maker(iconType);
+		}
+
+		function load_icon_maker(iconType) {
+			display_by = document.getElementById("arrangement_type").value;
+			url_icon = '../../backend/icons/get_icon.php?echo=raw&display_by=' + display_by;
+
+			var elem = document.getElementById("the_selected_icon_displayer");
+			elem = sanitizeInput(elem);
+			var ret_value = "";
+			if (iconType == 'FontAwesome') {
+
+				$.post(url_icon, {
+					key: "gjhtiidsimi09403jfjkdknf",
+				},
+					function (data, status) {
+						//alert(data);
+						sanitizeInput(data);
+						elem.innerHTML = data;
+					});
+			} else if (iconType == 'GoogleIcon') {
+				elem.innerHTML = "Update Coming Soon.";
+			}
+		}
+
+
+		function handle_side_bars(restore_id) {
+			//alert("entered here");
+			if (restore_id == "leftBarRestore") {
+				//alert(document.getElementById('theLeftSideBar').style.display);
+				if ($("#theLeftSideBar").css("display") == 'none') {
+					document.getElementById('theLeftSideBar').style.display = "block";
+					document.getElementById('leftBarRestore').style.display = "none";
+					scaleViewLayoutAdjust();
+				}
+			}
+			else if (restore_id == "rightBarRestore") {
+				if ($("#theRightSideBar").css("display") == 'none') {
+					document.getElementById('theRightSideBar').style.display = "block";
+					document.getElementById('rightBarRestore').style.display = "none";
+					scaleViewLayoutAdjust();
+				}
+			}
+		}
+
+		function showTopBar() {
+			var topBar = document.getElementById("theTopBar");
+			// if (topBar.getAttribute("hidden")) {
+			// 	topBar.removeAttribute("hidden");
+			// }else{
+			// 	topBar.setAttribute("hidden", true);
+			// }
+			if (topBar.style.display == "" || topBar.style.display == "inline-block") {
+				topBar.style.display = "none"
+			} else {
+				topBar.style.display = "inline-block"
+			}
+		}
+
+		/* 	
+		// declare a global array with a capacity of 20
+		let dev_state = new Array(20);
+		
+		// declare an index to keep track of the front of the queue
+		let front = 0;
+		
+		// declare a function to add new elements to the array
+		function dev_state_changed(state) {
+		  // add the new element to the back of the queue
+		  dev_state[(front + dev_state.length) % dev_state.length] = state;
+		  // move the front of the queue forward
+		  front = (front + 1) % dev_state.length;
+		}
+		
+		// example usage
+		dev_state_changed('ready');
+		dev_state_changed('running');
+		dev_state_changed('stopped');
+		
+		console.log(dev_state); // logs ['ready', 'running', 'stopped', undefined, undefined, ..., undefined]
+		
+		//Another Way of solving thesame problem
+		// declare global array dev_state with maximum length of 20
+		let dev_state = new Array(20);
+		
+		// function to add state to dev_state array
+		function dev_state_changed(state) {
+		  // remove the first element if array is full
+		  if (dev_state.length === 20) {
+			dev_state.shift();
+		  }
+		  // add state to the end of the array
+		  dev_state.push(state);
+		} */
+	</script>
+
+	<style>
+		.bottom_bar_end {
+			position: fixed;
+			background-color: black;
+			color: antiquewhite;
+			opacity: 0.4;
+			padding: 5px;
+			display: inline-block;
+			/* transform: translate(-50%,-50%); */
+			transform: translateX(-50%);
+			bottom: 0;
+			margin: auto;
+			text-align: center;
+		}
+
+		.the_display_enviroment {
+			background-color: black;
+			display: block;
+			width: 100vw;
+			height: 100vh;
+			overflow: auto;
+		}
+
+		.the_menu_icons {
+			padding: 7px;
+			font-size: 21px;
+		}
+	</style>
 </head>
+
 <body>
 	<div class="the_top_bar" id="theTopBar">
 		<style>
@@ -1561,152 +1592,152 @@ function dev_state_changed(state) {
 				padding-top: 2px;
 				padding-bottom: 2px;
 				cursor: pointer;
-				}
+			}
 
-				.the_top_bar span {
+			.the_top_bar span {
 				padding: 1px;
-				}
+			}
 
-				
-.theTextPopUp {
-  width: 50%;
-  height: auto;
-  padding: 15px;
-  background-color: #000a8b;
-  color: blue;
-  border-radius: 12px;
-  position: absolute;
-  top: 20%;
-  left: 25%;
-  z-index: 1;
-  text-align: center;
-  vertical-align: center;
-  display: none;
-}
 
-.theTextPopUp input {
-  width: 80%;
-  padding: 15px;
-  border-radius: 12px;
-}
+			.theTextPopUp {
+				width: 50%;
+				height: auto;
+				padding: 15px;
+				background-color: #000a8b;
+				color: blue;
+				border-radius: 12px;
+				position: absolute;
+				top: 20%;
+				left: 25%;
+				z-index: 1;
+				text-align: center;
+				vertical-align: center;
+				display: none;
+			}
 
-.theTextPopUp textarea {
-  width: 80%;
-  padding: 15px;
-  border-radius: 12px;
-}
+			.theTextPopUp input {
+				width: 80%;
+				padding: 15px;
+				border-radius: 12px;
+			}
 
-.theTextPopUp button {
-  width: 80%;
-  padding: 15px;
-  background-color: #fff;
-  color: #000;
-}
+			.theTextPopUp textarea {
+				width: 80%;
+				padding: 15px;
+				border-radius: 12px;
+			}
 
-.theTextPopUp button:hover {
-  width: 80%;
-  padding: 15px;
-  background-color: green;
-  color: #fefefe;
-}
+			.theTextPopUp button {
+				width: 80%;
+				padding: 15px;
+				background-color: #fff;
+				color: #000;
+			}
 
-/* Style The Dropdown Button */
-.dropbtn {
-  /* background-color: #4CAF50; */
-  background-color: transparent;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+			.theTextPopUp button:hover {
+				width: 80%;
+				padding: 15px;
+				background-color: green;
+				color: #fefefe;
+			}
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  background-color: transparent;
-  position: relative;
-  display: inline-block;
-}
+			/* Style The Dropdown Button */
+			.dropbtn {
+				/* background-color: #4CAF50; */
+				background-color: transparent;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 500;
-}
+			/* The container <div> - needed to position the dropdown content */
+			.dropdown {
+				background-color: transparent;
+				position: relative;
+				display: inline-block;
+			}
 
-/* Links inside the dropdown */
-.dropdown-content span {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+				z-index: 500;
+			}
 
-/* Change color of dropdown links on hover */
-.dropdown-content span:hover {
-  background-color: #f1f1f1;
-}
+			/* Links inside the dropdown */
+			.dropdown-content span {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+			/* Change color of dropdown links on hover */
+			.dropdown-content span:hover {
+				background-color: #f1f1f1;
+			}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  /* background-color: #3e8e41; */
-  color: wheat;
-}
+			/* Show the dropdown menu on hover */
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
 
-.dropdown-content span .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+			/* Change the background color of the dropdown button when the dropdown content is shown */
+			.dropdown:hover .dropbtn {
+				/* background-color: #3e8e41; */
+				color: wheat;
+			}
 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
+			.dropdown-content span .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color: black;
+				color: #fff;
+				text-align: center;
+				padding: 5px 0;
+				border-radius: 6px;
 
-/* Show the tooltip text when you mouse over the tooltip container */
-.dropdown-content span:hover .tooltiptext {
-  visibility: visible;
-  /* top: -5px;
+				/* Position the tooltip text - see examples below! */
+				position: absolute;
+				z-index: 1;
+			}
+
+			/* Show the tooltip text when you mouse over the tooltip container */
+			.dropdown-content span:hover .tooltiptext {
+				visibility: visible;
+				/* top: -5px;
     left: 105%; */
 
-  /* Left
+				/* Left
 	top: -5px;
     right: 105%; */
 
-  /* Top
+				/* Top
 	width: 120px;
     bottom: 100%;
     left: 50%;
     margin-left: -60px; */
-}
+			}
 
-/* At the bottom of the tooltip */
-.dropdown-content span .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
+			/* At the bottom of the tooltip */
+			.dropdown-content span .tooltiptext::after {
+				content: " ";
+				position: absolute;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: black transparent transparent transparent;
+			}
 
-/* At the bottom of the tooltip */
-/* .dropdown-content span .tooltiptext::after {
+			/* At the bottom of the tooltip */
+			/* .dropdown-content span .tooltiptext::after {
     content: " ";
     position: absolute;
     top: 100%; 
@@ -1717,8 +1748,8 @@ function dev_state_changed(state) {
     border-color: black transparent transparent transparent;
 } */
 
-/*  To the left of the tooltip */
-/* .dropdown-content span .tooltiptext::after {
+			/*  To the left of the tooltip */
+			/* .dropdown-content span .tooltiptext::after {
     content: " ";
     position: absolute;
     top: 50%;
@@ -1728,78 +1759,79 @@ function dev_state_changed(state) {
     border-style: solid;
     border-color: transparent black transparent transparent;
 } 1200 */
-.pop-up {
-  color: black;
-  background-color: white;
-  border-color: 2px solid black;
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 0.5rem;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 100;
-  cursor: default;
-}
-.active {
-  opacity: 1;
-}
-				
-@media screen and (min-width: 0px) {
-  .the_top_bar {
-    height: 50px;
-  }
+			.pop-up {
+				color: black;
+				background-color: white;
+				border-color: 2px solid black;
+				position: absolute;
+				top: 2rem;
+				left: 50%;
+				transform: translateX(-50%);
+				padding: 0.5rem;
+				font-size: 0.75rem;
+				border-radius: 0.5rem;
+				opacity: 0;
+				transition: opacity 0.2s ease-in-out;
+				z-index: 100;
+				cursor: default;
+			}
 
-  .the_top_bar .dropdown {
-    display: none;
-  }
+			.active {
+				opacity: 1;
+			}
 
-  .the_top_bar span {
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-}
+			@media screen and (min-width: 0px) {
+				.the_top_bar {
+					height: 50px;
+				}
 
-@media screen and (min-width: 960px) {
-  .the_top_bar {
-    height: 50px;
-  }
+				.the_top_bar .dropdown {
+					display: none;
+				}
 
-  .the_top_bar .dropdown {
-    background-color: transparent;
-    position: relative;
-    display: inline-block;
-  }
+				.the_top_bar span {
+					position: relative;
+					display: inline-block;
+					padding: 10px;
+					font-size: 16px;
+					border: none;
+					cursor: pointer;
+				}
+			}
 
-}
+			@media screen and (min-width: 960px) {
+				.the_top_bar {
+					height: 50px;
+				}
 
-@media screen and (min-width: 1200px) {
-  .the_top_bar {
-    height: 60px;
-  }
+				.the_top_bar .dropdown {
+					background-color: transparent;
+					position: relative;
+					display: inline-block;
+				}
 
-  .the_top_bar .dropdown {
-    background-color: transparent;
-    position: relative;
-    display: inline-block;
-  }
+			}
 
-  .the_top_bar .dropdown span {
-    display: block;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
+			@media screen and (min-width: 1200px) {
+				.the_top_bar {
+					height: 60px;
+				}
 
-  /* .the_top_bar span{
+				.the_top_bar .dropdown {
+					background-color: transparent;
+					position: relative;
+					display: inline-block;
+				}
+
+				.the_top_bar .dropdown span {
+					display: block;
+					padding: 10px;
+					font-size: 16px;
+					border: none;
+					cursor: pointer;
+				}
+
+				/* .the_top_bar span{
 		position: relative;
     	display: inline-block;
 		padding: 10px;
@@ -1807,7 +1839,7 @@ function dev_state_changed(state) {
 		border: none;
 		cursor: pointer;
 	} */
-}
+			}
 		</style>
 
 		<div class="dropdown">
@@ -1815,8 +1847,8 @@ function dev_state_changed(state) {
 			<div class="dropdown-content">
 				<span onclick="newProject()"><i class="fa fa-file"></i>New</span>
 				<span onclick="saveDevArena()"><i class="fa fa-save"></i>Save
-          <span id="toolTipText" class="tooltiptext">more</span>
-         </span>
+					<span id="toolTipText" class="tooltiptext">more</span>
+				</span>
 
 				<span onclick="loadSaveContent()"><i class="fa fa-file-o"></i>Load Project</span>
 				<span onclick="loadSaveContent()"><i class="fa fa-file-text-o"></i>Open</span>
@@ -1863,7 +1895,8 @@ function dev_state_changed(state) {
 
 		<span onclick="show_icon_popup('the_icon_displayer_pop_up')"><i class="fa fa-paint-brush"></i>Arts/Icons</span>
 		<span onclick="showSettingsPage()"><i class="fa fa-cogs"></i>Settings</span>
-		<span onclick="showPopUpById('the_adder_displayer_pop_up'); now_display_adder_maker(event, 'element')"><i class="fa fa-plus"></i>Contribute</span>
+		<span onclick="showPopUpById('the_adder_displayer_pop_up'); now_display_adder_maker(event, 'element')"><i
+				class="fa fa-plus"></i>Contribute</span>
 		<div class="pop-up" id="popUp">Use this option to save your project to the serve to avoid loss of data.</div>
 
 		<!-- <span onclick="showPopUpById('the_adder_displayer_pop_up'); now_display_adder_maker(event, 'element')"><i
@@ -1898,11 +1931,11 @@ function dev_state_changed(state) {
 	<span><i class="fa fa-lock"></i>Secured</span> -->
 	</div>
 	<style>
-		.the_style_identity_bar{
+		.the_style_identity_bar {
 			position: absolute;
 			display: none;
 			width: 25%;
-			height:80vh;
+			height: 80vh;
 			background-color: #fff;
 			right: 0;
 			overflow-y: scroll;
@@ -1914,46 +1947,48 @@ function dev_state_changed(state) {
 			text-align: right;
 			z-index: 10;
 		}
-		.the_style_identity_bar .each_item{
+
+		.the_style_identity_bar .each_item {
 			padding: 5px;
 			overflow-x: hidden;
 		}
 
-		.the_style_identity_bar .each_item:hover{
+		.the_style_identity_bar .each_item:hover {
 			overflow-x: scroll;
 		}
 
-		.the_style_identity_bar .each_item label{
+		.the_style_identity_bar .each_item label {
 			width: 80px;
 			text-overflow: ellipsis;
-			overflow:hidden;
+			overflow: hidden;
 			white-space: nowrap;
 			margin-top: 4px;
 			vertical-align: bottom;
 			text-align: left;
 		}
 
-		.the_style_identity_bar .each_item label:hover{
-	  		overflow: visible; 
+		.the_style_identity_bar .each_item label:hover {
+			overflow: visible;
 			white-space: normal;
-			height:auto;
+			height: auto;
 		}
 
 
-		.the_style_identity_bar .each_item .the_check_side{
+		.the_style_identity_bar .each_item .the_check_side {
 			border-radius: 7px;
 			padding: 2px;
 		}
 
-		.the_style_identity_bar .each_item .the_input_side{
+		.the_style_identity_bar .each_item .the_input_side {
 			width: 180px;
 		}
 
-		.the_style_ui_display_items{
+		.the_style_ui_display_items {
 			width: 100%;
 			text-align: center;
 		}
-		.side_panel_controls_block{
+
+		.side_panel_controls_block {
 			/* width: 100%; */
 			/* background-color: #bebebe;  */
 			text-align: center;
@@ -1961,410 +1996,422 @@ function dev_state_changed(state) {
 	</style>
 
 
-<aside id="the_ui_style_bar" class="the_style_identity_bar">
-	<span class="side_panel_controls_block" style="display: inline-block; padding: 10px; text-align: right; opacity: 0.6;">
-		<!-- <span onclick="enableCustomiser('right')"
+	<aside id="the_ui_style_bar" class="the_style_identity_bar">
+		<span class="side_panel_controls_block"
+			style="display: inline-block; padding: 10px; text-align: right; opacity: 0.6;">
+			<!-- <span onclick="enableCustomiser('right')"
 			style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: blue; border-radius: 15px; color: #fff;"><i
 				class="fa fa-cog"></i></span> -->
-		<span onclick="removeSpecificId('the_ui_style_bar')"
-			style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px; color: #fff;"><i
-				class="fa fa-times"></i></span>
-	</span>
-	<br/>
+			<span onclick="removeSpecificId('the_ui_style_bar')"
+				style="display: inline-block; text-align: center; width: 40px; height: 40px; font-size: 18px; padding: 7px; background-color: red; border-radius: 15px; color: #fff;"><i
+					class="fa fa-times"></i></span>
+		</span>
+		<br />
 
 
-	<center>
-		<h6 id="the_style_identity_box"> The UI Dashboard : Selected</h6>
-	</center>
+		<center>
+			<h6 id="the_style_identity_box"> The UI Dashboard : Selected</h6>
+		</center>
 
-	<div id="the_side_ui_style" class="the_style_ui_display_items">
-		<ul>
-			<li class="each_item">
-				<input onchange="style_changed('background-color')" id="style_background-color_status"
-					class="the_check_side" checked value="yes" type="checkbox"
-					name="_background-color_state">
-				<label>Background Color</label>
-				<input onchange="style_changed('background-color')" id="style_background-color"
-					class="the_input_side" type="color" name="style_background-color_value">
-			</li>
+		<div id="the_side_ui_style" class="the_style_ui_display_items">
+			<ul>
+				<li class="each_item">
+					<input onchange="style_changed('background-color')" id="style_background-color_status"
+						class="the_check_side" checked value="yes" type="checkbox" name="_background-color_state">
+					<label>Background Color</label>
+					<input onchange="style_changed('background-color')" id="style_background-color"
+						class="the_input_side" type="color" name="style_background-color_value">
+				</li>
 
-			<li class="each_item">
-				<input onchange="style_changed('color')" id="style_color_status" class="the_check_side"
-					checked value="yes" type="checkbox" name="_color_state">
-				<label>Color</label>
-				<input onchange="style_changed('color')" id="style_color" class="the_input_side" type="color"
-					name="style_color_value">
-			</li>
+				<li class="each_item">
+					<input onchange="style_changed('color')" id="style_color_status" class="the_check_side" checked
+						value="yes" type="checkbox" name="_color_state">
+					<label>Color</label>
+					<input onchange="style_changed('color')" id="style_color" class="the_input_side" type="color"
+						name="style_color_value">
+				</li>
 
-			<li class="each_item">
-				<input onchange="style_changed('height')" id="style_height_status" class="the_check_side"
-					type="checkbox" checked value="yes" name="_height_state">
-				<label>Height</label>
-				<input onkeyup="style_changed('height')" id="style_height" list="size"
-					class="the_input_side" type="text" name="style_height_value">
-			</li>
+				<li class="each_item">
+					<input onchange="style_changed('height')" id="style_height_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_height_state">
+					<label>Height</label>
+					<input onkeyup="style_changed('height')" id="style_height" list="size" class="the_input_side"
+						type="text" name="style_height_value">
+				</li>
 
-			<li class="each_item">
-				<input onchange="style_changed('width')" id="style_width_status" class="the_check_side"
-					type="checkbox" checked value="yes" name="_width_state">
-				<label>Width</label>
-				<input onkeyup="style_changed('width')" id="style_width" class="the_input_side" type="text"
-					name="style_width_value">
-			</li>
+				<li class="each_item">
+					<input onchange="style_changed('width')" id="style_width_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_width_state">
+					<label>Width</label>
+					<input onkeyup="style_changed('width')" id="style_width" class="the_input_side" type="text"
+						name="style_width_value">
+				</li>
 
-			<li class="each_item">
-				<input onchange="style_changed('display')" id="style_display_status" class="the_check_side"
-					type="checkbox" checked value="yes" name="_display_state">
-				<label>Display</label>
-				<input onkeyup="style_changed('display')" id="style_display" class="the_input_side"
-					type="text" name="style_display_value" list="style_display_data_list">
-				<datalist id="style_display_data_list">
-					<optgroup label="Precomposed Values">
-						<option value="block">block</option>
-						<option value="inline">inline</option>
-						<option value="inline-block">inline-block</option>
-						<option value="flex">flex</option>
-						<option value="inline-flex">inline-flex</option>
-						<option value="grid">grid</option>
-						<option value="inline-grid">inline-grid</option>
-						<option value="flow-root">flow-root</option>
-					</optgroup>
-					<optgroup label="Box Generation">
+				<li class="each_item">
+					<input onchange="style_changed('display')" id="style_display_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_display_state">
+					<label>Display</label>
+					<input onkeyup="style_changed('display')" id="style_display" class="the_input_side" type="text"
+						name="style_display_value" list="style_display_data_list">
+					<datalist id="style_display_data_list">
+						<optgroup label="Precomposed Values">
+							<option value="block">block</option>
+							<option value="inline">inline</option>
+							<option value="inline-block">inline-block</option>
+							<option value="flex">flex</option>
+							<option value="inline-flex">inline-flex</option>
+							<option value="grid">grid</option>
+							<option value="inline-grid">inline-grid</option>
+							<option value="flow-root">flow-root</option>
+						</optgroup>
+						<optgroup label="Box Generation">
+							<option value="none">none</option>
+							<option value="contents">contents</option>
+						</optgroup>
+						<optgroup label="Two-value Syntax">
+							<option value="block flow">block flow</option>
+							<option value="inline flow">inline flow</option>
+							<option value="inline flow-root">inline flow-root</option>
+							<option value="block flex">block flex</option>
+							<option value="inline flex">inline flex</option>
+							<option value="block grid">block grid</option>
+							<option value="inline grid">inline grid</option>
+							<option value="block flow-root">block flow-root</option>
+						</optgroup>
+						<optgroup label="Other Values">
+							<option value="table">table</option>
+							<option value="table-row">table-row</option>
+							<option value="list-item">list-item</option>
+						</optgroup>
+						<optgroup label="Global values">
+							<option value="inherit">inherit</option>
+							<option value="initial">initial</option>
+							<option value="revert">revert</option>
+							<option value="revert-layer">revert-layer</option>
+							<option value="unset">unset</option>
+						</optgroup>
+					</datalist>
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('position')" id="style_position_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_position_state">
+					<label>Position</label>
+					<input onkeyup="style_changed('position')" id="style_position" class="the_input_side" type="text"
+						name="style_position_value" list="style_position_data_list">
+					<datalist id="style_position_data_list">
+						<option value="static">static</option>
+						<option value="relative">relative</option>
+						<option value="absolute">absolute</option>
+						<option value="fixed">fixed</option>
+						<option value="sticky">sticky</option>
+						<optgroup label="Global values">
+							<option value="inherit">inherit</option>
+							<option value="initial">initial</option>
+							<option value="revert">revert</option>
+							<option value="revert-layer">revert-layer</option>
+							<option value="unset">unset</option>
+						</optgroup>
+					</datalist>
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('border-radius')" id="style_border-radius_status"
+						class="the_check_side" type="checkbox" checked value="yes" name="_border-radius_state">
+					<label>Border Radius</label>
+					<input onkeyup="style_changed('border-radius')" id="style_border-radius" class="the_input_side"
+						type="text" name="style_border-radius_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('padding')" id="style_padding_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_padding_state">
+					<label>Padding</label>
+					<input onkeyup="style_changed('padding')" id="style_padding" class="the_input_side" type="text"
+						name="style_padding_value">
+				</li>
+
+
+				<li class="each_item">
+					<input onchange="style_changed('border')" id="style_border_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_border_state">
+					<label>Border</label>
+					<input onkeyup="style_changed('border')" id="style_border" class="the_input_side" type="text"
+						name="style_border_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('border-left')" id="style_border-left_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_border-left_state">
+					<label>Border Left</label>
+					<input onkeyup="style_changed('border-left')" id="style_border-left" class="the_input_side"
+						type="text" name="style_border-left_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('border-right')" id="style_border-right_status"
+						class="the_check_side" type="checkbox" checked value="yes" name="_border-right_state">
+					<label>Border Right</label>
+					<input onkeyup="style_changed('border-right')" id="style_border-right" class="the_input_side"
+						type="text" name="style_border-right_value">
+				</li>
+
+				<h3 id="the_fonts_subsection">Fonts</h3>
+				<li class="each_item">
+					<input onchange="inner_changed('font-text')" id="inner_font-text_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_font-text_state">
+					<label>Text</label>
+					<input onkeyup="inner_changed('font-text')" id="inner_font-text" class="the_input_side" type="text"
+						name="inner_font-text_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('font-size')" id="style_font-size_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_font-size_state">
+					<label>Font Size</label>
+					<input onkeyup="style_changed('font-size')" id="style_font-size" class="the_input_side" type="text"
+						name="style_font-size_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('font-weight')" id="style_font-weight_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_font-weight_state">
+					<label>Font Weight</label>
+					<input onkeyup="style_changed('font-weight')" id="style_font-weight" class="the_input_side"
+						type="text" name="style_font-weight_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('font-family')" id="style_font-family_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_font-family_state">
+					<label>Font Family</label>
+					<input onkeyup="style_changed('font-family')" id="style_font-family" class="the_input_side"
+						type="text" name="style_font-family_value">
+				</li>
+
+				<h3>Position</h3>
+
+				<li class="each_item">
+
+					<input onchange="style_changed('float')" id="style_float_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_float_state">
+					<label>Float</label>
+					<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text"
+						name="style_float_value" list="style_float_data_list">
+					<datalist id="style_float_data_list">
+						<option value="left">left</option>
+						<option value="right">right</option>
 						<option value="none">none</option>
-						<option value="contents">contents</option>
-					</optgroup>
-					<optgroup label="Two-value Syntax">
-						<option value="block flow">block flow</option>
-						<option value="inline flow">inline flow</option>
-						<option value="inline flow-root">inline flow-root</option>
-						<option value="block flex">block flex</option>
-						<option value="inline flex">inline flex</option>
-						<option value="block grid">block grid</option>
-						<option value="inline grid">inline grid</option>
-						<option value="block flow-root">block flow-root</option>
-					</optgroup>
-					<optgroup label="Other Values">
-						<option value="table">table</option>
-						<option value="table-row">table-row</option>
-						<option value="list-item">list-item</option>
-					</optgroup>
-					<optgroup label="Global values">
-						<option value="inherit">inherit</option>
-						<option value="initial">initial</option>
-						<option value="revert">revert</option>
-						<option value="revert-layer">revert-layer</option>
-						<option value="unset">unset</option>
-					</optgroup>
-				</datalist>
-			</li>
+						<option value="inline-start">inline-start</option>
+						<option value="inline-end">inline-end</option>
+						<optgroup label="Global values">
+							<option value="inherit">inherit</option>
+							<option value="initial">initial</option>
+							<option value="revert">revert</option>
+							<option value="revert-layer">revert-layer</option>
+							<option value="unset">unset</option>
+						</optgroup>
+					</datalist>
+				</li>
 
-			<li class="each_item">
-				<input onchange="style_changed('position')" id="style_position_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_position_state">
-				<label>Position</label>
-				<input onkeyup="style_changed('position')" id="style_position" class="the_input_side"
-					type="text" name="style_position_value" list="style_position_data_list">
-				<datalist id="style_position_data_list">
-					<option value="static">static</option>
-					<option value="relative">relative</option>
-					<option value="absolute">absolute</option>
-					<option value="fixed">fixed</option>
-					<option value="sticky">sticky</option>
-					<optgroup label="Global values">
-						<option value="inherit">inherit</option>
-						<option value="initial">initial</option>
-						<option value="revert">revert</option>
-						<option value="revert-layer">revert-layer</option>
-						<option value="unset">unset</option>
-					</optgroup>
-				</datalist>
-			</li>
-			
-			<li class="each_item">
-				<input onchange="style_changed('border-radius')" id="style_border-radius_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_border-radius_state">
-				<label>Border Radius</label>
-				<input onkeyup="style_changed('border-radius')" id="style_border-radius"
-					class="the_input_side" type="text" name="style_border-radius_value">
-			</li>
+				<li class="each_item">
+					<input onchange="style_changed('top')" id="style_top_status" class="the_check_side" type="checkbox"
+						checked value="yes" name="_top_state">
+					<label>Top</label>
+					<input onkeyup="style_changed('top')" id="style_top" class="the_input_side" type="text"
+						name="style_top_value">
+				</li>
 
-			<li class="each_item">
-				<input onchange="style_changed('padding')" id="style_padding_status" class="the_check_side"
-					type="checkbox" checked value="yes" name="_padding_state">
-				<label>Padding</label>
-				<input onkeyup="style_changed('padding')" id="style_padding" class="the_input_side"
-					type="text" name="style_padding_value">
-			</li>
+				<li class="each_item">
+					<input onchange="style_changed('bottom')" id="style_bottom_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_bottom_state">
+					<label>Bottom</label>
+					<input onkeyup="style_changed('bottom')" id="style_bottom" class="the_input_side" type="text"
+						name="style_bottom_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('left')" id="style_left_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_left_state">
+					<label>Left</label>
+					<input onkeyup="style_changed('left')" id="style_left" class="the_input_side" type="text"
+						name="style_left_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="style_changed('right')" id="style_right_status" class="the_check_side"
+						type="checkbox" checked value="yes" name="_right_state">
+					<label>Right</label>
+					<input onkeyup="style_changed('right')" id="style_right" class="the_input_side" type="text"
+						name="style_right_value">
+				</li>
+
+				<h3 id="the_image_subsection">Image</h3>
+				<li class="each_item">
+					<input onchange="attr_changed('src')" id="attr_src_status" class="the_check_side" type="checkbox"
+						checked value="yes" name="_src_state">
+					<label>Src</label>
+					<input onkeyup="attr_changed('src')" id="attr_src" class="the_input_side" type="text"
+						name="_src_value">
+				</li>
+
+				<li class="each_item">
+					<input onchange="attr_changed('alt')" id="attr_alt_status" class="the_check_side" type="checkbox"
+						checked value="yes" name="_alt_state">
+					<label>Alt</label>
+					<input onkeyup="attr_changed('alt')" placeholder="possible image description" id="attr_alt"
+						class="the_input_side" type="text" name="_alt_value">
+				</li>
 
 
-			<li class="each_item">
-				<input onchange="style_changed('border')" id="style_border_status" class="the_check_side"
-					type="checkbox" checked value="yes" name="_border_state">
-				<label>Border</label>
-				<input onkeyup="style_changed('border')" id="style_border" class="the_input_side"
-					type="text" name="style_border_value">
-			</li>
+			</ul>
 
-			<li class="each_item">
-				<input onchange="style_changed('border-left')" id="style_border-left_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_border-left_state">
-				<label>Border Left</label>
-				<input onkeyup="style_changed('border-left')" id="style_border-left" class="the_input_side"
-					type="text" name="style_border-left_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('border-right')" id="style_border-right_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_border-right_state">
-				<label>Border Right</label>
-				<input onkeyup="style_changed('border-right')" id="style_border-right"
-					class="the_input_side" type="text" name="style_border-right_value">
-			</li>
-
-			<h3 id="the_fonts_subsection">Fonts</h3>
-			<li class="each_item">
-				<input onchange="inner_changed('font-text')" id="inner_font-text_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_font-text_state">
-				<label>Text</label>
-				<input onkeyup="inner_changed('font-text')" id="inner_font-text" class="the_input_side"
-					type="text" name="inner_font-text_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('font-size')" id="style_font-size_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_font-size_state">
-				<label>Font Size</label>
-				<input onkeyup="style_changed('font-size')" id="style_font-size" class="the_input_side"
-					type="text" name="style_font-size_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('font-weight')" id="style_font-weight_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_font-weight_state">
-				<label>Font Weight</label>
-				<input onkeyup="style_changed('font-weight')" id="style_font-weight" class="the_input_side"
-					type="text" name="style_font-weight_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('font-family')" id="style_font-family_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_font-family_state">
-				<label>Font Family</label>
-				<input onkeyup="style_changed('font-family')" id="style_font-family" class="the_input_side"
-					type="text" name="style_font-family_value">
-			</li>
-
-			<h3>Position</h3>
-
-			<li class="each_item">
-
-				<input onchange="style_changed('float')" id="style_float_status" class="the_check_side"	type="checkbox" checked value="yes" name="_float_state">
-				<label>Float</label>
-				<input onkeyup="style_changed('float')" id="style_float" class="the_input_side" type="text" name="style_float_value" list="style_float_data_list">
-				<datalist id="style_float_data_list">
-					<option value="left">left</option>
-					<option value="right">right</option>
-					<option value="none">none</option>
-					<option value="inline-start">inline-start</option>
-					<option value="inline-end">inline-end</option>
-					<optgroup label="Global values">
-						<option value="inherit">inherit</option>
-						<option value="initial">initial</option>
-						<option value="revert">revert</option>
-						<option value="revert-layer">revert-layer</option>
-						<option value="unset">unset</option>
-					</optgroup>
-				</datalist>
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('top')" id="style_top_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_top_state">
-				<label>Top</label>
-				<input onkeyup="style_changed('top')" id="style_top"
-					class="the_input_side" type="text" name="style_top_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('bottom')" id="style_bottom_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_bottom_state">
-				<label>Bottom</label>
-				<input onkeyup="style_changed('bottom')" id="style_bottom"
-					class="the_input_side" type="text" name="style_bottom_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('left')" id="style_left_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_left_state">
-				<label>Left</label>
-				<input onkeyup="style_changed('left')" id="style_left"
-					class="the_input_side" type="text" name="style_left_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="style_changed('right')" id="style_right_status"
-					class="the_check_side" type="checkbox" checked value="yes" name="_right_state">
-				<label>Right</label>
-				<input onkeyup="style_changed('right')" id="style_right"
-					class="the_input_side" type="text" name="style_right_value">
-			</li>
-
-			<h3 id="the_image_subsection">Image</h3>
-			<li class="each_item">
-				<input onchange="attr_changed('src')" id="attr_src_status" class="the_check_side"
-					type="checkbox" checked value="yes" name="_src_state">
-				<label>Src</label>
-				<input onkeyup="attr_changed('src')" id="attr_src" class="the_input_side" type="text"
-					name="_src_value">
-			</li>
-
-			<li class="each_item">
-				<input onchange="attr_changed('alt')" id="attr_alt_status" class="the_check_side"
-					type="checkbox" checked value="yes" name="_alt_state">
-				<label>Alt</label>
-				<input onkeyup="attr_changed('alt')" placeholder="possible image description" id="attr_alt" class="the_input_side" type="text"
-					name="_alt_value">
-			</li>
-
-
-		</ul>
-
-	</div>
+		</div>
 	</aside>
 	<!-- this is the main body enviroment. -->
-	<div ondragover="elem_allowDrop(event)" ondblclick="change_selected(event, 'div', 'the_design_dashboard')" ondrop="elem_drop(event)"  class="the_display_enviroment" id="the_design_dashboard">
+	<div ondragover="elem_allowDrop(event)" ondblclick="change_selected(event, 'div', 'the_design_dashboard')"
+		ondrop="elem_drop(event)" class="the_display_enviroment" id="the_design_dashboard">
 		<!-- <span id="unique_span" onmouseenter="mouseEnterMe(event)" onmouseleave="mouseLeaveMe(event)" ondragstart="elem_drag(event, 'span')" draggable="true" style="height: 120px; width: 120px; background-color: blue; position: absolute;">
 		</span> -->
 	</div>
 
-    <center>
+	<center>
 		<div class="bottom_bar_end">
 			<span onclick="showTopBar()" class="the_menu_icons"><i class="fa fa-bars"></i></span>
 			<span onclick="changeMode(0)" class="the_menu_icons"><i class="fa fa-arrows-alt"></i></span>
 			<span onclick="changeMode(1)" class="the_menu_icons"><i class="fa fa-expand"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','sqaure', true)"><i class="fa fa-stop"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','circle', true)"><i class="fa fa-circle"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','image', true)"><i class="fa fa-plus"></i></span>
-			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','text', true)"><i class="fa fa-font"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','sqaure', true)"><i
+					class="fa fa-stop"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','circle', true)"><i
+					class="fa fa-circle"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','image', true)"><i
+					class="fa fa-plus"></i></span>
+			<span class="the_menu_icons" onclick="add_element_2_dashboard('div','text', true)"><i
+					class="fa fa-font"></i></span>
 			<span class="the_menu_icons" onclick="showSettingsPage()"><i class="fa fa-wrench"></i></span>
 		</div>
 	</center>
-<style>
+	<style>
+		/* pop up for the settings sections */
+		.the_settings_section {
+			width: 60%;
+			position: fixed;
+			display: none;
+			top: 20%;
+			left: 20%;
+			background-color: rgb(6, 194, 175, 0.9);
+			padding: 12px;
+			border-radius: 12px;
+			text-align: center;
+		}
 
-/* pop up for the settings sections */
-.the_settings_section{
-	width: 60%;
-	position:fixed;
-	display: none;
-	top: 20%;
-	left: 20%;	
-	background-color: rgb(6, 194, 175, 0.9);
-	padding: 12px;
-	border-radius: 12px;
-	text-align: center;
-}
+		.the_settings_section .setting_item {
+			padding: 12px;
+		}
 
-.the_settings_section .setting_item{
-	padding: 12px;
-}
+		.the_settings_section .settings_body {
+			background-color: rgb(6, 194, 175, 0.5);
+			width: 50%;
+			position: fixed;
+			left: 25%;
+			border-radius: 12px;
+			overflow-y: hidden;
+			height: 40vh;
+		}
 
-.the_settings_section .settings_body{
-	background-color: rgb(6, 194, 175, 0.5);
-	width: 50%;
-	position: fixed;
-	left: 25%;
-	border-radius: 12px;
-	overflow-y: hidden;
-	height: 40vh;
-}
+		.the_settings_section .settings_body:hover {
+			overflow-y: scroll;
+		}
 
-.the_settings_section .settings_body:hover{
-	overflow-y: scroll;
-}
+		.the_settings_section .settings_body .the_save_button {
+			padding: 12px;
+			width: 280px;
+			background-color: blue;
+			color: #fff;
+			font-weight: bold;
+		}
+	</style>
+	<!-- pop up for the settings sections -->
+	<div id="the_settings_section_page" class="the_settings_section">
+		<span onclick="removeSpecificId('the_settings_section_page')"
+			style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i
+				class="fa fa-times"></i> Close</span>
+		<div>
+			<h2>Project Settings</h2>
+		</div>
+		<div class="settings_body">
+			<br />
+			<ul>
+				<li class="setting_item">
+					<label>Default Height</label>
+					<input class="the_input_side" id="settings_height" value="120" type="text" name="">
+				</li>
 
-.the_settings_section .settings_body .the_save_button{
-	padding: 12px;
-	width: 280px;
-	background-color: blue;
-	color: #fff;
-	font-weight: bold;
-}
-</style>
-<!-- pop up for the settings sections -->
-<div id="the_settings_section_page" class="the_settings_section">
-	<span onclick="removeSpecificId('the_settings_section_page')" style="cursor: pointer; padding: 7px; float: right; background-color: red; border-radius: 15px; color: #fff;"><i class="fa fa-times"></i> Close</span>
-	<div>
-		<h2>Project Settings</h2>
+				<li class="setting_item">
+					<label>Default Width</label>
+					<input class="the_input_side" id="settings_width" value="120" type="text" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>Default Diameter</label>
+					<input class="the_input_side" id="settings_diameter" value="120" type="text" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>Default Diameter</label>
+					<input class="the_input_side" id="settings_font_size" value="16" type="text" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>Default image</label>
+					<input class="the_input_side" id="settings_image" value="../assets/img/hubpeople.png" type="text"
+						name="" accept="image/*">
+				</li>
+
+				<datalist id="setting_size">
+					<option value="px">Pixels</option>
+					<option value="%">Percentage</option>
+					<option value="em">em</option>
+					<option value="vh">View Port Height</option>
+				</datalist>
+				<li class="setting_item">
+					<label>Select Size Representation</label>
+					<input class="the_input_side" id="settings_size_representation" list="setting_size" value="px"
+						type="text" name="">
+				</li>
+
+				<datalist id="arrangement_type_list">
+					<option value="date-old">By Date - Older </option>
+					<option value="like" default>By Likes </option>
+					<option value="date-new">By Date - Older </option>
+				</datalist>
+				<li class="setting_item">
+					<label>Arrangement</label>
+					<input class="the_input_side" id="arrangement_type" list="arrangement_type_list" type="text"
+						value="like" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>on Create Background Change</label>
+					<input class="the_check_side" type="checkbox" id="settings_background" checked value="yes" name="">
+				</li>
+
+				<li class="setting_item">
+					<label>on Duplicate Background Change</label>
+					<input class="the_check_side" type="checkbox" id="settings_duplicate_background" checked value="yes"
+						name="">
+				</li>
+
+				<li class="setting_item">
+					<label>Create Children</label>
+					<input class="the_check_side" type="checkbox" id="create_children" value="no" name="">
+				</li>
+
+			</ul>
+			<button class="the_save_button">Save</button>
+			<br /><br />
+		</div>
 	</div>
-	<div class="settings_body">
-		<br/>
-		<ul>
-			<li class="setting_item">
-				<label>Default Height</label>
-				<input class="the_input_side" id="settings_height"  value="120" type="text" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>Default Width</label>
-				<input class="the_input_side" id="settings_width" value="120" type="text" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>Default Diameter</label>
-				<input class="the_input_side" id="settings_diameter" value="120" type="text" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>Default Diameter</label>
-				<input class="the_input_side" id="settings_font_size" value="16" type="text" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>Default image</label>
-				<input class="the_input_side" id="settings_image" value="../assets/img/hubpeople.png" type="text" name="" accept="image/*">
-			</li>
-
-			<datalist id="setting_size">
-				<option value="px">Pixels</option>
-				<option value="%">Percentage</option>
-				<option value="em">em</option>
-				<option value="vh">View Port Height</option>
-			</datalist>
-			<li class="setting_item">
-				<label>Select Size Representation</label>
-				<input class="the_input_side" id="settings_size_representation" list="setting_size" value="px" type="text" name="">
-			</li>
-
-			<datalist id="arrangement_type_list">
-				<option value="date-old">By Date - Older </option>
-				<option value="like" default>By Likes </option>
-				<option value="date-new">By Date - Older </option>
-			</datalist>
-			<li class="setting_item">
-				<label>Arrangement</label>
-				<input class="the_input_side" id="arrangement_type" list="arrangement_type_list" type="text" value="like" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>on Create Background Change</label>
-				<input class="the_check_side" type="checkbox" id="settings_background" checked value="yes" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>on Duplicate Background Change</label>
-				<input class="the_check_side" type="checkbox" id="settings_duplicate_background" checked value="yes" name="">
-			</li>
-
-			<li class="setting_item">
-				<label>Create Children</label>
-				<input class="the_check_side" type="checkbox" id="create_children" value="no" name="">
-			</li>
-
-		</ul>
-	<button class="the_save_button">Save</button>
-	<br/><br/>
-	</div>
-</div>
 </body>
-</html>
 
+</html>

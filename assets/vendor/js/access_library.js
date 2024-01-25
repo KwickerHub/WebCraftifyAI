@@ -301,7 +301,7 @@ var $ = function(selector, category){
 		value = (!value) ? 1 : (value/1000);
 		vis = (!vis) ? "visible" : (vis);
 		end_point = (!end_point)  ? 1 : end_point;
-			if(vis = "visible"){
+			if(vis === "visible"){
 				specs.element.setAttribute("style", ("display: block;  \
 			transition: opacity "+value+"s ease-in; -webkit-transition: opacity "+value+"s ease-in; \
 			-moz-transition: opacity "+value+"s ease-in; -o-transition: opacity "+value+"s ease-in; \
@@ -316,6 +316,7 @@ var $ = function(selector, category){
 
 		return specs;
 	}
+
 
 	//entrance 
 	specs.fadeIn = function(value, dis_type){
