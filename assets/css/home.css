@@ -2,8 +2,8 @@
 
 :root{
     --light-blue: #40C8E0;
-    --white: #ffffff;
-    --black: #000000;
+    --white: #fff;
+    --black: #000;
     --poppins: 'Poppins', sans-serif;
 
 }
@@ -25,55 +25,55 @@ div .row {
     color: var(--white);
     border: 1px solid var(--light-blue);
 }
-#white-btn{
+#white-btn {
     background-color: var(--white);
     color: var(--black);
     border: 1px solid var(--white);
 }
-.text-white{
+.text-white {
     color: var(--white);
 }
-.logo{
+.logo {
     font-family: var(--poppins);
     font-style: italic;
     font-weight: bold;
     font-size: 60px;
-    color: #FFFFFF;
+    color: #FFF;
 }
-nav ul li a{
+nav ul li a {
     color: var(--black);
 }
-.navbar .navbar-expand-lg .navbar-light{
+.navbar .navbar-expand-lg .navbar-light {
     background-color: transparent;
 }
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
     margin: 0 10px;
 }
-.banner{
-    background-image: url(../img/banner.png);
+.banner {
+    background-image: url("../img/banner.png");
     height: 100%;
     /* background-repeat: no-repeat; */
     background-size: cover;
     /* padding: 40px 0; */
 }
-.text-content{
+.text-content {
     padding-top: 200px ;
 
 }
-.bannar-heading{
+.bannar-heading {
     font-family:var(--poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
 }
-.banner-p{
+.banner-p {
     font-family:var(--poppins);
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     max-width: 90%;
 }
-.banner-btn{
+.banner-btn {
     background: #008EF5;
     color: var(--white);
     border-radius: 4px;
@@ -87,12 +87,12 @@ nav ul li a{
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.section-one, .section-two, .section-three, .section-four{
+.section-one, .section-two, .section-three, .section-four {
     margin-top: 50px;
     padding: 5px;
     /* background: #E5E5E5; */
 }
-.section-one .p-1{
+.section-one .p-1 {
     font-family: var(--poppins);
     font-style: normal;
     font-weight: bold;
@@ -107,68 +107,68 @@ nav ul li a{
     color: #2C2C2E;
     margin-top: 10px;
 }
-.section-two .p-1{
+.section-two .p-1 {
     font-family: var(--poppins);
     font-style: normal;
     font-weight: 450;
     font-size: 20px;
-    color: #666666;
+    color: #666;
 }
-.section-two .p-2{
+.section-two .p-2 {
     font-family: var(--poppins);
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
-    color: #666666;
+    color: #666;
 }
-.section-three .testimony{
+.section-three .testimony {
     margin-top: 25px;
     margin-bottom: 25px;
 }
-.section-three .testimony-text{
+.section-three .testimony-text {
     font-family: var(--poppins);
     font-style: normal;
     font-weight: 450;
     font-size: 18px;
-    color: #000000;
+    color: #000;
 }
-.testimony-coloured-1{
+.testimony-coloured-1 {
     color: var(--light-blue);
 }
-.testimony-coloured-2{
+.testimony-coloured-2 {
     color: orange;
 }
-.testimony-coloured-3{
+.testimony-coloured-3 {
     color: purple;
 }
-.section-three .testimony-person{
+.section-three .testimony-person {
     font-family: var(--poppins);
     font-style: normal;
     font-weight: 450;
     font-size: 20px;
     line-height: 33px;
-    color: #666666;
+    color: #666;
     margin-left: 20px;
     margin-top: 15px;
 }
-.section-four .box{
+.section-four .box {
     background-color: #E5E5E5;
     opacity: 60;
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
 }
-.section-four .box-sub{
+.section-four .box-sub {
     margin-bottom: 40px;
 }
-.section-four .box-p{
+.section-four .box-p {
     /* color: var(--light-blue); */
     font-family: var(--poppins);
     font-style: normal;
     font-weight: 450;
     font-size: 20px;
 }
-.section-four .box-p2{
+.section-four .box-p2 {
     width: 100%;
     color: var(--black);
     font-family: var(--poppins);
@@ -177,8 +177,8 @@ nav ul li a{
     line-height: 50px;
     letter-spacing: -0.02em;
 }
-.section-four .box-p3{
-    color: #666666;
+.section-four .box-p3 {
+    color: #666;
     font-family: var(--poppins);
     font-style: normal;
     font-weight: 450;
@@ -189,30 +189,30 @@ nav ul li a{
 
 
 @media (min-width: 768px) {
-    .text-content{
+    .text-content {
         padding-top: 250px ;
         padding-bottom: 100px;
     
     }
-    .bannar-heading{
+    .bannar-heading {
         font-size: 64px;
     }
-    .banner-p{
+    .banner-p {
         font-size: 30px;
         max-width: 80%;
     }
-    .banner-btn{
+    .banner-btn {
         padding: 10px 50px;
         font-size: 36px;
         margin-top: 20px;
     }
-    .section-four .box-p{
+    .section-four .box-p {
         font-size: 24px;
     }
-    .section-four .box-p2{
+    .section-four .box-p2 {
         line-height: 76px;
     }
-    .section-four .box-p3{
+    .section-four .box-p3 {
         font-size: 24px;
     }
 }
