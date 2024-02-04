@@ -1,0 +1,104 @@
+<div id="outer-container">
+    <div id="main-container">
+        <div id="upper-flex">
+            <div class="image-container">
+                <img class="image" src="./images_and_icons/332img1.jpg" alt="A woman meditating.">
+            </div>
+            <div class="image-container">
+                <img class="image" src="./images_and_icons/332img2.jpg" alt="A woman on the mountain doing a yoga pose.">
+            </div>
+        </div>
+        <div id="lower-grid">
+            <div id="highlight-content">
+                <h1>Pilates and Yoga Classes</h1>
+                <p>Subtext</p>
+                <button>LEARN MORE</button>
+            </div>
+            <div id="text-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #outer-container {
+        box-sizing: border-box;
+        padding: 4rem;
+        height: min-content;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main-container {
+        height: min-content;
+        width: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    #upper-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 5rem;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #lower-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1rem;
+    }
+
+    #highlight-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #highlight-content button {
+        background-color: #41648a;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        text-align: center;
+        width: 10rem;
+        border-radius: 5rem;
+    }
+
+    #text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .image {
+        width: 20rem;
+        height: 25rem;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+</style>
