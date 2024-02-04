@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="content">
+    <div class="left-card">
+      <span class="round"></span>
+      <div class="image-circle">
+        <img
+          src="https://images.pexels.com/photos/5570224/pexels-photo-5570224.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="decor"
+        />
+        <span class="round-filled"></span>
+      </div>
+    </div>
+
+    <div class="right-card">
+      <div class="top">
+        <h3>Contact Us</h3>
+
+        <p>Get best decor designers <br />where quality</p>
+      </div>
+
+      <hr />
+
+      <div class="bottom">
+        <div class="fields">
+          <span class="label">Contact:</span>
+          <span class="contact-number">123-456-7890</span>
+        </div>
+        <div class="fields">
+          <span class="label">Location:</span>
+          <span class="contact-number">Berlin</span>
+        </div>
+        <div class="fields">
+          <span class="label">Mail:</span>
+          <span class="contact-number">acb@berlin.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .image-circle img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+  }
+  hr {
+    background-color: #fa7a03;
+    height: 2px;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+
+  .left-card {
+    padding: 20px;
+    position: relative;
+  }
+
+  .content {
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 70%;
+    padding: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .round {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 8px solid #fa7a03;
+    margin-left: 30px;
+    display: flex;
+    left: 50px;
+  }
+
+  .round-filled {
+    height: 30px;
+    width: 30px;
+    background-color: #fa7a03;
+    border-radius: 50%;
+    display: flex;
+    z-index: 10px;
+    position: absolute;
+    bottom: 46px;
+  }
+</style>
