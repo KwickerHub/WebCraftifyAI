@@ -1,4 +1,4 @@
-/*jumbotron-------------------------------------------*/
+/* jumbotron------------------------------------------- */
 .jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -32,13 +32,11 @@
       font-weight: 500;
       line-height: 1.3;
     }
-    a,
-    li {
+    a, li {
       text-decoration: none;
       list-style: none;
     }
-    p,
-    span {
+    p, span {
       font-weight: 300;
       font-size: clamp(0.8rem, 4vw, 1.4rem);
     }

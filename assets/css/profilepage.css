@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
-:root{
+:root {
 	--logoColor: #eb4458;
 	--slate100: #f1f5f9;
 	--slate700: #334155;
@@ -15,8 +15,8 @@
 }
 
 *{
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 	box-sizing: border-box;
 	font-family: var(--poppins);
 }
@@ -72,8 +72,8 @@ header {
 
 img.profile-pic {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -138,5 +138,5 @@ img.profile-pic {
 	padding: 5px 10px;
 	margin: 5px;
 	color: var(--logoColor);
-	box-shadow: 0px 2px 2px var(--logoColor);
+	box-shadow: 0 2px 2px var(--logoColor);
 }
