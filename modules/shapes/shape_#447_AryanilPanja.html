@@ -18,13 +18,13 @@
         
         
         <div id="bg-front">
-            <div id="f1"> <img src="../../../study-logo.png" alt=""> <span style="position: absolute; top: 75%; left: 25%;">LEARNING</span></div>
-            <div id="f2"> <img src="../../../brain.png" alt=""> <span style="position: absolute; top: 75%; left: 28%;">THINKING</span></div>
-            <div id="f3"> <img src="../../../teacher.png" alt=""> <span style="position: absolute; top: 75%; left: 28%;">PRACTICE</span></div>
-            <div id="f4"> <img src="../../../vr.png" alt=""> <span style="position: absolute; top: 75%; left: 33%;">GAMES</span></div>
+            <div id="f1"> <img src="../../../study-logo.png" alt=""> <span>LEARNING</span></div>
+            <div id="f2"> <img src="../../../brain.png" alt=""> <span>THINKING</span></div>
+            <div id="f3"> <img src="../../../teacher.png" alt=""> <span>PRACTICE</span></div>
+            <div id="f4"> <img src="../../../vr.png" alt=""> <span>GAMES</span></div>
         </div>
         <div id="child">
-            <img src="../../../schoolboi.jpg" style=" position:absolute ;bottom: 4%; left:5%; width: 428px; height: 590px;" alt="">
+            <img src="../../../schoolboi.jpg" alt="">
         </div>
         <div id="bg-1">
             
@@ -64,6 +64,13 @@
         width: 450px;
         z-index: 2;
     }
+    #child img{
+        position:absolute ;
+        bottom: 4%; 
+        left:5%; 
+        width: 428px; 
+        height: 590px;
+    }
 
     #bg-front{
         display: flex;
@@ -93,46 +100,94 @@
         position: absolute;
         left: 0%;
         bottom: 0%;
-        background-color: rgb(100, 229, 238);
+        background-color: rgb(21, 239, 255);
         height: 200px;
         width: 225px;
     }
+    #f1 span{
+        position: relative !important;
+        left: 15% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
     #f2{
         position: absolute;
         left: 25%;
         bottom: 0%;
-        background-color: rgb(0, 255, 145);
+        background-color: rgb(255, 255, 14);
         height: 200px;
         width: 225px;
     }
+    #f2 span{
+        position: relative !important;
+        left: 20% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
     #f3{
         position: absolute;
         left: 50%;
         bottom: 0%;
-        background-color: blue;
+        background-color: rgb(255, 134, 245);
         height: 200px;
         width: 225px;
     }
+    #f3 span{
+        position: relative !important;
+        left: 20% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
     #f4{
         position: absolute;
         left: 75%;
         bottom: 0%;
-        background-color: rgb(192, 235, 19);
+        background-color: rgb(58, 160, 255);
         height: 200px;
         width: 225px;
     }
+    #f4 span{
+        position: relative !important;
+        left: 25% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
     #texts{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
     #txt-1{
+        
         position: absolute;
         top: 0%;
         height: 270px;
         width: 700px;
         background-color: rgb(255, 255, 255);
     }
+    #txt-1 p{
+        color: blue;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 800;
+    }
+
     #txt-2{
         position: absolute;
         top: 60%;
@@ -140,12 +195,23 @@
         width: 700px;
         background-color: rgb(255, 255, 255);
     }
+    #txt-2 p{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 500;
+    }
+
     #txt-3{
         position: absolute;
         top: 80%;
         height: 90px;
         width: 700px;
         background-color: rgb(255, 255, 255);
+    }
+    #txt-3 p{
+        color: grey;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 134% !important;
+        font-weight: 500;
     }
 
     #txt-1 p{
@@ -189,6 +255,27 @@
         height: 60%; 
         margin-top: 5%; 
         left: 20%;
+    }
+
+    #f1 span{
+        position: absolute; 
+        top: 75%; 
+        left: 25%;
+    }
+    #f2 span{
+        position: absolute; 
+        top: 75%; 
+        left: 28%;
+    }
+    #f3 span{
+        position: absolute; 
+        top: 75%; 
+        left: 28%;
+    }
+    #f4 span{
+        position: absolute; 
+        top: 75%; 
+        left: 33%;
     }
 
 </style>
