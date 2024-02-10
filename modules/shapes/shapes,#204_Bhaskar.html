@@ -1,0 +1,141 @@
+<style>
+  body {
+      margin: 0;
+      font-family: 'AR One Sans', sans-serif;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+  }
+
+  .image-section {
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      object-fit: contain;
+  }
+
+  .image-section img {
+      width: 100%;
+      height: 100%;
+      display: block;
+  }
+
+  .text-section {
+      padding: 20px;
+      grid-column: 1 / 3;
+      margin: auto;
+  }
+
+  .heading {
+      font-size: 2em;
+      margin-bottom: 20px;
+  }
+
+  .subtext {
+      margin-bottom: 20px;
+  }
+
+  .contact-btn {
+      margin: auto;
+      background-color: #0056b3;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+  }
+
+  @media (max-width: 768px) {
+      .container {
+          grid-template-columns: 1fr;
+      }
+
+      .text-section {
+          grid-column: 1;
+      }
+  }
+
+  .text-block {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #f0f0f0;
+      height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+  }
+
+
+  .text-block .heading {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 10px;
+  }
+
+  .text-block p {
+      color: #666;
+      font-size: 1em;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 80%;
+      margin: 0 auto;
+  }
+</style>
+
+<div class="text-section">
+  <h1 class="heading">Discover the glorious game of Cricket🏏...</h1>
+  <!-- <p class="subtext"></p> -->
+  <a href="https://simple.wikipedia.org/wiki/Comparison_of_baseball_and_cricket" class="contact-btn">Explore</a>
+</div>
+<div class="container">
+  <!-- First image -->
+  <div class="image-section">
+      <img src="https://www.sportsbusinessjournal.com/-/media/Images/Daily/2024/01/18/SOCIAL/SOCIAL-ICC-Populous.ashx"
+          alt="Stadium">
+  </div>
+  <!-- Text -->
+  <div class="text-block">
+    <h2 class="heading">Adventure Awaits!</h2>
+    <p>As we gear up for the momentous ICC T20 Cricket World Cup scheduled for this year, get ready to have the time of your life!
+        But what is this strange game you ask?</p>
+  </div>
+  <!-- Rules -->
+  <div class="text-block">
+    <h2 class="heading">Here are the major rules, explained in terms of Baseball:</h2>
+    <p>
+      <b>1. Bases and Creases:</b> <br />
+      -Cricket has two bases, marked by creases where batters stand. <br />
+      -Batters are safe when behind the crease; between creases, they can be run out. <br />
+      <b>2. Strikes and Stumps:</b> <br />
+      -Cricket uses physical stumps and bails on bases as a strike zone. <br />
+      -If the ball dislodges the bails, it's a strike; one strike can lead to being bowled out. <br />
+      <b>3. Catches:</b> <br />
+      -Batters can be caught out if a fielder catches a hit ball. <br />
+      -Unlike baseball, cricket players (except catchers) don't wear gloves, adding challenge to catching. <br />
+      <b>4. Scoring Runs:</b> <br />
+      -Cricket is played with bases fully loaded, and runs are scored by running between bases. <br />
+      -Batters don't return to the dugout after scoring; they stay on bases until put out. <br />
+      <b>5. Fielding and Runs:</b> <br />
+      -Cricket's field is fair, allowing batters to hit the ball in any direction. <br />
+      -Fielding strategies in cricket are more complex due to the larger playing area. <br />
+      <b>6. Winning the Game:</b> <br />
+      -Generally, the team with the most runs at the end wins. <br />
+      -Ties are possible, especially in longer formats, and the team with fewer outs may win in some cases.
+    </p>
+  </div>
+  <!-- Second image  -->
+  <div class="image-section">
+    <img src="https://t4.ftcdn.net/jpg/06/59/82/51/360_F_659825123_Dt2YYAY7dqud7HHFAznEI1jMFh3nPGhG.jpg"
+        alt="Trophy">
+  </div>
+</div>
