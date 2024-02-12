@@ -18,8 +18,8 @@
     
     <div class="black-half-section" id="black-half-section">
         <div class="black-content">
-            <h2>What did I say!?</h2>
-            <p>Stop CLICKING</p>
+            <h2 id="black-heading">What did I say!?</h2>
+            <p id="black-paragraph">Stop CLICKING</p>
         </div>
     </div>
     
@@ -40,29 +40,29 @@
 
     .blue-half-section {
         background-color: blue;
-        flex: 25%; /* Adjust as needed */
+        flex: 25%; 
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white; /* Text color for better readability */
+        color: white; 
     }
 
     .black-half-section {
-        background-color: white; /* Initially white */
-        flex: 25%; /* Adjust as needed */
-        display: none;/* Hidden until button is pressed once */
+        background-color: white; 
+        flex: 25%; 
+        display: none;
         justify-content: center;
         align-items: center;
-        color: white; /* Text color for better readability */
-        position: absolute; /* Set position to enable left property */
-        top: 0; /* Adjust as needed */
-        left: -100%; /* Initial position outside the viewport */
-        animation: slideIn 1s forwards; /* Apply animation to the black section */
+        color: white; 
+        position: absolute; 
+        top: 0; 
+        left: -100%; 
+        animation: slideIn 1s forwards; 
     }
 
     .white-half-section {
         background-color: white;
-        flex: 50%; /* Adjust as needed */
+        flex: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,15 +81,15 @@
         position: absolute;
     }
 
-    /* Animation keyframes */
+    /* Animation the black screen to pop up */
     @keyframes slideIn {
         0% {
-            background-color: white; /* Initially white */
-            left: -100%; /* Initially positioned outside the viewport */
+            background-color: white; 
+            left: -100%; 
         }
         100% {
-            background-color: black; /* Change background to black */
-            left: 0; /* Slides in to the viewport */
+            background-color: black; 
+            left: 0; 
         }
     }
 
@@ -99,7 +99,7 @@
 <!-- Javascript section-->
 <script>
     let clickCount = 0;
-
+    //Function that moves button 5 times then shows gif
     function handleButtonClick() {
         clickCount++;
 
@@ -107,13 +107,18 @@
             moveButton();
         } else if (clickCount == 5) {
             showRickRoll();
+            // Has a pop up to user
+            document.getElementById('black-heading').innerText = 'I told you so';
+            document.getElementById('black-paragraph').innerText = 'Now live in regret';
+            document.getElementById('black-half-section').style.display = 'flex';
             
         }
         if (clickCount == 1) {
         document.getElementById('black-half-section').style.display = 'flex'; // Shows the initially hidden section after first click
-    }
-    }
 
+    }
+    }
+    // Moves the button into positions only in the white area
     function moveButton() {
         const button = document.querySelector('.cta-button');
         const maxX = document.querySelector('.white-half-section').offsetWidth - button.offsetWidth;
@@ -124,7 +129,7 @@
         button.style.left = randomX + 'px';
         button.style.top = randomY + 'px';
     }
-
+    //Displaying the gif
     function showRickRoll() {
         const gifContainer = document.getElementById('gif-container');
         const gif = document.createElement('img');
