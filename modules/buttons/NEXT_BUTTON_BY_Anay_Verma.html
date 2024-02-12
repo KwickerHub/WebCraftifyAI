@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXT_BUTTON_BY_Anay_Verma</title>
+    <style>
+        .grabtn {
+            background: linear-gradient(to right, #9C27B0, #E040FB);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            width: 70px;
+            height: 25px;
+            position: relative;
+            text-align: right;
+            margin: 10px 30px;
+            cursor: pointer;
+        }
+
+        .grabtn:before {
+            content: '\25B6';
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%) scale(1.1);
+            position: absolute;
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+            font-size: 50px;   
+        }
+        .grabtn:after {
+            content: '\25B6';
+            color: purple;
+            font-size: 50px;
+            position: absolute;
+            left: -30px;
+            top: 43%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="grabtn"> NEXT </button>
+</body>
+
+</html>
