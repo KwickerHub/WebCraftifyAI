@@ -13,9 +13,24 @@
   </head>
   <body>
     <main class="flex">
-      <div>
+      <div class="left-side">
         <h1>Meet your home service experts</h1>
+        <p>Image from <a href="https://unsplash.com/">Unsplash</a></p>
+        <ul>
+          <li>
+            <img
+              class="checkbox"
+              src="images_and_icons/checkbox-checked-svgrepo-com.svg"
+              alt=""
+            />Emergency Repairs
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
+      <a href="#" class="learn-more">LEARN MORE</a>
       <img
         src="images_and_icons/kat-sazonova-XKcoiMKkERo-unsplash.jpg"
         alt="garage repair"
@@ -48,13 +63,31 @@
     padding: 0;
     font-family: "oswald";
   }
+  .left-side {
+    padding: 1rem 3rem;
+  }
   .flex {
     display: flex;
+  }
+  li {
+    display: flex;
+    align-items: center;
   }
   img {
     display: block;
     max-width: 100%;
     max-height: 100%;
     height: 100vh;
+  }
+  .checkbox {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+  a {
+    color: purple;
+  }
+  .learn-more {
+    text-decoration: none;
   }
 </style>
