@@ -55,10 +55,7 @@
         </ul>
         <a href="#" class="learn-more">LEARN MORE</a>
       </div>
-      <img
-        src="images_and_icons/kat-sazonova-XKcoiMKkERo-unsplash.jpg"
-        alt="garage repair"
-      />
+      <div class="bg"></div>
     </main>
 
     <script>
@@ -86,6 +83,10 @@
     margin: 0;
     padding: 0;
     font-family: "oswald";
+  }
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
   }
   .left-side {
     padding: 1rem 3rem;
@@ -117,5 +118,21 @@
     border: purple 2px solid;
     padding: 0.5rem 1rem;
     text-align: center;
+  }
+  .bg {
+    background-image: url("images_and_icons/kat-sazonova-XKcoiMKkERo-unsplash.jpg");
+    background-size: cover;
+    background-position: 30%;
+    height: 100vh;
+    min-width: 50vw;
+  }
+  @media only screen and (width < 1000px) {
+    main {
+      flex-direction: column-reverse;
+    }
+    .bg {
+      width: 100vw;
+      height: 15rem;
+    }
   }
 </style>
