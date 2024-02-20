@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="cardContainer">
+        <section class="card" id="card-gray">
+            <h1>Future Vision</h1>
+            <svg width="35" height="3">
+                <rect width="35" height="3" fill="white"></rect>
+            </svg>
+            <p>Our goal is to make the most accessible and useful products in the world</p>
+        </section>
+        <section class="card" id="card-red">
+            <h1>Product Design</h1>
+            <svg width="35" height="3">
+                <rect width="35" height="3" fill="white"></rect>
+            </svg>
+            <p>Design that will make even the most experienced artists flinch. Our talented team makes sure that the design meets your expectations.</p>
+        </section>
+        <section class="card" id="card-dark-blue">
+            <h1>Top Solutions</h1>
+            <svg width="35" height="3">
+                <rect width="35" height="3" fill="white"></rect>
+            </svg>
+            <p>Using complicated AI technology that is so hard to understand, we are the best in coming up with solutions!</p>
+        </section>
+    </div>
+</body>
+</html>
+
+<style>
+    *{
+        font-family: 'noto sans';
+    }
+    #cardContainer{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, 300px);
+    }
+    .card{
+        color: white;
+        padding: 0 20px;
+        padding-top: 35%;
+        height: 400px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    #card-gray{
+        background-color: gray;
+    }
+    #card-red{
+        background-color: red;
+    }
+    #card-dark-blue{
+        background-color: darkblue;
+    }
+    h1{
+        margin-top: 0;
+    }
+</style>
