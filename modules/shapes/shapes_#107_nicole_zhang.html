@@ -1,0 +1,61 @@
+<style>
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: Optima;
+    }
+  
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height:100%;
+    background-color: #f8c009;
+  }
+  
+  .text {
+    flex: 1;
+    padding-left: 20%;
+    padding-right: 1%;
+  }
+  
+  .image {
+    flex: 1;
+    padding: 1%;
+  } 
+
+  .readmore {
+    background-color: #e42d27;
+    color: white;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  .readmore:hover {
+    background-color: #f58c18;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+
+<div class="container">
+  <div class="text">
+    <h2>We create</h2>
+    <h1>online shops.</h1>
+    <p>Accusamus et iusto odio dignissimos <br> ducimus qui blanditiis praesentium.</p>
+    <a href="#" class="readmore">READ MORE</a>
+  </div>
+  <div class="image"> 
+    <img src="images_and_icons/shopping.jpg" height="70%">
+  </div>
+</div>
