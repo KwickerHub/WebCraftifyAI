@@ -1,11 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<style>
+    .parent
+    {
+        width: 290px;
+        height: 165px;
+        background-image:url(/modules/shapes/images_and_icons/industry.jpg);
+    }
+    .child
+    {
+        position: relative;
+        left: 150px;
+        width: 125px;
+        height: 165px;
+        background-color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    p
+    {
+        margin: 2px;
+    }
+    #p1
+    {
+        font-size: 10px;
+    }
+    #p2
+    {
+        font-size: 20px;
+        text-align: center;
+    }
+    #p3
+    {
+        font-size: 10px;
+        text-align: center;
+    }
+    #p4
+    {
+        font-size: 10px;
+        text-decoration: underline;
+    }
+</style>
+
+<div class="parent">
+    <div class="child">
+        <p id="p1">About Us</p>
+        <p id="p2">Industrial Solutions</p>
+        <p id="p3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, possimus.</p>
+        <p id="p4">Mark Reus</p>
+    </div>
+</div>
