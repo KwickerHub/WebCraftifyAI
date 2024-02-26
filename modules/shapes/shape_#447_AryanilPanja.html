@@ -1,0 +1,285 @@
+<div>
+    <div id="background">
+        <div id="texts">
+
+            <div id="txt-1">
+                <p>WHO SAID EDUCATION WAS BORING?</p>
+            </div>
+
+            <div id="txt-2">
+                <p>We Play and we Learn</p>
+            </div>
+
+            <div id="txt-3">
+                <p>-Imagine Dragons School</p>
+            </div>
+
+        </div>
+        
+        
+        <div id="bg-front">
+            <div id="f1"> <img src="./images_and_icons/study-logo.png" alt=""> <span>LEARNING</span></div>
+            <div id="f2"> <img src="./images_and_icons/brain.png" alt=""> <span>THINKING</span></div>
+            <div id="f3"> <img src="./images_and_icons/teacher.png" alt=""> <span>PRACTICE</span></div>
+            <div id="f4"> <img src="./images_and_icons/vr.png" alt=""> <span>GAMES</span></div>
+        </div>
+        <div id="child">
+            <img src="./images_and_icons/schoolboi.jpg" alt="">
+        </div>
+        <div id="bg-1">
+            
+            <!-- backgroundsquare block -->
+        </div>
+    </div>
+</div>
+
+<style>
+
+    #background{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #bg-1{
+        position: absolute;
+        display: flex;
+        top: 25%;
+        left: 20%;
+        /* float: left; */
+        /* flex-flow: column; */
+        height: 570px;
+        width: 440px;
+        background: linear-gradient(45deg, yellow,rgb(238, 123, 142));
+        z-index: 1;
+    }
+
+    #child{
+        position: absolute;
+        top: 20%;
+        left: 17%;
+        /* background-color: aqua; */
+        display: flex;
+        height: 550px;
+        width: 450px;
+        z-index: 2;
+    }
+    #child img{
+        position:absolute ;
+        bottom: 4%; 
+        left:5%; 
+        width: 428px; 
+        height: 590px;
+    }
+
+    #bg-front{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 5%;
+        left: 35%;
+        background-color: rgb(69, 226, 61);
+        display: flex;
+        height: 200px;
+        width: 900px;
+        z-index: 3;
+    }
+
+    #texts{
+        position: absolute;
+        top: 15%;
+        right: 17%;
+        background-color: rgb(10, 32, 225);
+        display: flex;
+        height: 450px;
+        width: 700px;
+        z-index: 3;
+    }
+
+    #f1{
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        background-color: rgb(21, 239, 255);
+        height: 200px;
+        width: 225px;
+    }
+    #f1 span{
+        position: relative !important;
+        left: 15% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
+    #f2{
+        position: absolute;
+        left: 25%;
+        bottom: 0%;
+        background-color: rgb(255, 255, 14);
+        height: 200px;
+        width: 225px;
+    }
+    #f2 span{
+        position: relative !important;
+        left: 20% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
+    #f3{
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+        background-color: rgb(255, 134, 245);
+        height: 200px;
+        width: 225px;
+    }
+    #f3 span{
+        position: relative !important;
+        left: 20% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
+    #f4{
+        position: absolute;
+        left: 75%;
+        bottom: 0%;
+        background-color: rgb(58, 160, 255);
+        height: 200px;
+        width: 225px;
+    }
+    #f4 span{
+        position: relative !important;
+        left: 25% !important;
+        font-size: 160%;
+        font-weight: 600;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: transparent ;
+        -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+
+    #texts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #txt-1{
+        
+        position: absolute;
+        top: 0%;
+        height: 270px;
+        width: 700px;
+        background-color: rgb(255, 255, 255);
+    }
+    #txt-1 p{
+        color: blue;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 800;
+    }
+
+    #txt-2{
+        position: absolute;
+        top: 60%;
+        height: 100px;
+        width: 700px;
+        background-color: rgb(255, 255, 255);
+    }
+    #txt-2 p{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 500;
+    }
+
+    #txt-3{
+        position: absolute;
+        top: 80%;
+        height: 90px;
+        width: 700px;
+        background-color: rgb(255, 255, 255);
+    }
+    #txt-3 p{
+        color: grey;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 134% !important;
+        font-weight: 500;
+    }
+
+    #txt-1 p{
+        margin-top: 0%;
+        font-size: 450%;
+    }
+
+    #txt-2 p{
+        margin-top: 3.5%;
+        font-size: 260%;
+    }
+
+    #txt-3 p{
+        margin-top: 5%;
+        font-size: 100%;
+    }
+
+    #f1 img{
+        position: absolute; 
+        background-color: transparent; 
+        height: 60%; 
+        margin-top: 5%;
+    }
+    #f2 img{
+        position: absolute; 
+        left: 14%; 
+        background-color: transparent; 
+        height: 60%; 
+        margin-top: 5%;
+    }
+    #f3 img{
+        position: absolute; 
+        background-color: transparent; 
+        height: 60%; 
+        margin-top: 5%; 
+        top: 2%;
+    }
+    #f4 img{
+        position: absolute; 
+        background-color: transparent; 
+        height: 60%; 
+        margin-top: 5%; 
+        left: 20%;
+    }
+
+    #f1 span{
+        position: absolute; 
+        top: 75%; 
+        left: 25%;
+    }
+    #f2 span{
+        position: absolute; 
+        top: 75%; 
+        left: 28%;
+    }
+    #f3 span{
+        position: absolute; 
+        top: 75%; 
+        left: 28%;
+    }
+    #f4 span{
+        position: absolute; 
+        top: 75%; 
+        left: 33%;
+    }
+
+</style>
+
+<script>
+
+</script>
