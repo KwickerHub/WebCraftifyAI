@@ -1,0 +1,130 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+</style>
+<style>
+  .shape-145-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .shape-145-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    --shape-145-primary-color: #ff964f;
+  }
+
+  .shape-145-container {
+    margin: auto;
+    display: flex;
+    max-height: 80%;
+  }
+
+  .shape-145-page p,
+  .shape-145-page h2 {
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .shape-145-page p {
+    line-height: 1.8;
+  }
+  .shape-145-page h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .shape-145-page h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+
+  .shape-145-container article {
+    flex: 0.4;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 70px;
+    justify-content: center;
+  }
+
+  .shape-145-container aside {
+    flex: 0.6;
+    display: flex;
+    align-items: center;
+  }
+  .shape-145-container aside img {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 50vh;
+    border-bottom-left-radius: 50vh;
+  }
+
+  .btn-light {
+    border: 0.1rem solid orange;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: inline-block;
+    width: 300px;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 2rem 2rem;
+    font-size: 1rem;
+    color: var(--shape-145-primary-color);
+    transition: all 0.2s;
+    background-color: white;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+
+  .btn-light:hover {
+    color: white;
+    background-color: var(--shape-145-primary-color);
+  }
+
+  @media screen and (max-width: 992px) {
+    .shape-145-container aside img,
+    .shape-145-container aside {
+      display: none;
+    }
+    .shape-145-container article {
+      margin: 25px;
+      flex: 0.8;
+    }
+    .shape-145-container {
+      justify-content: center;
+    }
+    .shape-145-page {
+      font-size: 12px;
+    }
+  }
+</style>
+
+<div class="shape-145-page">
+  <div class="shape-145-container">
+    <article>
+      <h2>Dentistry clinic</h2>
+      <h1>Cosmetic Dentistry</h1>
+      <p>
+        At our clinic, we prioritize your dental health and well-being. Our
+        experienced team is dedicated to providing top-quality care in a
+        comfortable environment. Schedule your appointment today and experience
+        the difference!
+      </p>
+      <button class="btn-light">Book a consultation</button>
+    </article>
+    <aside>
+      <img src="./images_and_icons/dentist-shape-145.webp" alt="dentist img" />
+    </aside>
+  </div>
+</div>
