@@ -1,0 +1,171 @@
+<div class="container">
+    <div class="first">
+        <img class="img_first" src="/Javascript/source1.jpg" alt="cat1">
+        <h2 class="head">Management Consulting</h2>
+        <p class="para_first">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt itaque excepturi nihil nulla.</p>
+        <button type="button">Learn More</button>
+    </div>
+    <div class="second">
+        <p class="para_second"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias porro saepe, labore repudiandae nobis voluptatibus assumenda incidunt officiis expedita consectetur!</i></p>
+        <img class="img_second" src="/Javascript/source2.jpg" alt="cat2">
+        <div class="box_color"></div>
+    </div>
+</div>
+
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+.img_first{
+    width: 390px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.head{
+    font-weight: 600;
+    font-size: xx-large;
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.para_first{
+    width: 85%;
+    font-size: small;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+button{
+    background-color: orangered;
+    border-radius: 30px;
+    color:whitesmoke;
+    border-color: orangered;
+    border: 0;
+    padding: 12px 35px;
+}
+
+.second{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.para_second{
+    background-color: white;
+    width: 280px;
+    height: 120px;
+    font-size: small;
+    font-weight: 300;
+    text-align: left;
+    line-height:1.7;
+    z-index: 2;
+    border-radius: 3px;
+    border: none;
+
+}
+
+.img_second{
+    width: 280px;
+    height: 290px;
+    z-index: 2;
+    border-radius: 3px;
+
+}
+
+.box_color{
+    position: absolute;
+    left:44%;
+    top: 25%;
+    background-color: orangered;
+    width: 260px;
+    height: 470px;
+    border-radius: 3px;
+    z-index: 1;
+    border: none;
+
+}
+
+/* Responsive Styling*/
+@media (max-width: 768px){
+    body{
+        margin: 0;
+        padding: 20px 30px; 
+        height: 60%;
+        width: 80%;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .first{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        gap: 10px;
+    }
+
+    .img_first{
+        width: 390px;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+
+    .para_first {
+        text-align: center;
+    }
+
+    .second{
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-left: 50px;
+    }
+
+    
+}  
+</style>
