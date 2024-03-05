@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Overlapping Design</title>
+</head>
+<body>
+<div class="container">
+    <img src="./images_and_icons/shark533.jpeg" class="image">
+     <div class="textBox">
+        <h1>The Ocean </h1>
+        <p>We're working hard to give you the best experience!</p>
+    </div>
+    <img src="./images_and_icons/ocean533.jpeg" class="image" style="top: 100px;">
+</div>
+</body>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    .image, .textBox {
+        position: absolute;
+        width: 50%;
+    }
+    .image {
+        top: 0;
+        z-index: 1;
+    }
+    .textBox {
+        top: 50px;
+        background: rgba(0, 0, 0, 0.686);
+        color: white;
+        padding: 20px;
+        z-index: 2;
+    }
+</style>
+</html>
