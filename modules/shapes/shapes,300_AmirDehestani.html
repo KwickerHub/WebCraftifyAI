@@ -1,0 +1,134 @@
+<div class="parent-div">
+    <div class="image-section">
+        <div class="image-circle-frame">
+            <img class="image-circle" src="./images_and_icons/mission.jpg">
+        </div>
+        <div class="full-circle"></div>
+        <div class="outer-hollow-circle-big">
+            <div class="inner-hollow-circle-big"></div>
+        </div>
+        <div class="outer-hollow-circle-small">
+            <div class="inner-hollow-circle-small"></div>
+        </div>
+    </div>
+    <div class="text-section">
+        <span class="mission">Our mission is to harmonize human design with digital tehcnology.</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor.</p>
+        <button class="start-here-button">START HERE</button>
+    </div>
+</div>
+
+<style>
+    .parent-div {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 50px;
+        position: relative;
+        width: 500px;
+    }
+
+    .image-circle-frame {
+        height: 350px;
+        width: 350px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        position: relative;
+        margin-right: 10px;
+        margin-left: auto;
+        z-index: 1;
+    }
+
+    .image-circle {
+        max-height: 100%;
+        clip-path: circle();
+    }
+
+    .full-circle {
+        height: 100px;
+        width: 100px;
+        background-color: #414ee1;
+        box-sizing: border-box;
+        border-radius: 50%;
+        position: absolute;
+        top: 320px;
+        left: 445px;
+        z-index: 2;
+    }
+
+    .outer-hollow-circle-big {
+        height: 120px;
+        width: 120px;
+        background-color: #414ee1;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 30px;
+        left: 160px;
+        z-index: 0;
+    }
+
+    .inner-hollow-circle-big {
+        height: 75px;
+        width: 75px;
+        background-color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+
+    .outer-hollow-circle-small {
+        height: 65px;
+        width: 65px;
+        background-color: #414ee1;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 440px;
+        left: 370px;
+    }
+
+    .inner-hollow-circle-small {
+        height: 40px;
+        width: 40px;
+        background-color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+
+    .text-section {
+        background-color: white;
+        height: 315px;
+        width: 300px;
+        box-sizing: border-box;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        position: relative;
+        bottom: 90px;
+        z-index: 2;
+        padding: 30px 25px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .mission {
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .start-here-button {
+        background-color: #414ee1;
+        color: #fff;
+        padding: 7px 25px;
+        border: none;
+        border-radius: 50px;
+        box-sizing: border-box;
+    }
+</style>
