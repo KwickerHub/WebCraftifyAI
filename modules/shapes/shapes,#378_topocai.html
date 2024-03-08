@@ -1,0 +1,140 @@
+<div class="container"> <!--or <article> element -->
+    <div class="shape378 circle"> <!--If img isn't working, so the "background-color" style will be seen-->
+      <img src="https://lh3.googleusercontent.com/a-/ALV-UjWnPg6d_X0pZaGpEeOyo-Y8JhBhfeExUxGevVGQ7ZA_pA" alt="" class="circle"> <!--I use https://www.avatarapi.com for an image resource for the template-->
+      <div class="circle shape-one"></div> <!--The small circle on left bottom-->
+      <div class="circle shape-two"><div class="circle shape-three"></div></div> <!--The other little big circle on right top-->
+      <div class="card text-flex">
+            <h2>How to Get Consulting Clients</h2>
+            <p><small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, ipsa</small></p>
+            <button>Read More</button>           
+      </div>
+    </div>
+</div>
+
+<style>
+
+.shape378 {
+    background-color: #76a;
+}
+
+.circle {
+    border-radius: 50%;
+
+    width: 40vw; /*The size must be an 1/1 values and applies for the entire shape*/
+    height: 40vw;
+}
+
+.circle img {
+    /*Keep the properties above this and their values*/
+    position: absolute;
+}
+
+.shape-one {
+    background-color: #4040BF;
+
+    /*Keep the properties above this and their values*/
+    width: 30%; /*Values are relative to .circle parent*/
+    height: 30%; 
+
+    position: relative;
+    top: 75%;
+    right: 5%;
+}
+
+.shape-three {
+    background-color: white;
+
+    /*Keep the value relatives to 1/1 (20% 20% | 10% 10% | etc)*/
+    width: 70%;
+    height: 70%;
+    /*Can you use this for center the white circle above this or the other method*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shape-two {
+  
+    background-color: #7569DA;
+
+    /*Keep the properties above this and their values*/
+    width: 39.8%;
+    height: 39.8%;
+
+    position: relative;
+    bottom: 38%;
+    left: 75%;
+    z-index: -1;
+    /*Can you use this for center the white circle above this
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.card {
+    /*You can modify this properties*/
+    background-image:linear-gradient(45deg, #7569DA, #4040BF);
+    border-radius: 13%;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+    /*Keep the properties above this and their values*/
+    position: relative;
+    left: 55%;
+    bottom: 10%;
+
+    width: 79%;
+    height: 60%;
+    overflow: auto;
+}
+
+.text-flex {
+    /*Keep the properties above this and their values*/
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+
+    max-width: 100%;
+    padding-top: 4%;
+    font-size: 1.7vmin;
+    
+}
+.text-flex p {
+    color: #cccccc;
+
+    /*Keep the properties above this and their values*/
+    margin-top: 0;
+}
+
+.text-flex h2, p {
+    /*Keep the properties above this and their values*/
+    margin-left: 5%;
+}
+
+.text-flex h2 {
+    margin-bottom: 0;
+}
+
+.card button {
+    background: #4141d6;
+    box-shadow: #4141d6 0 10px 20px -10px;
+    color: #FFFFFF;
+    
+    box-sizing: border-box;
+    border-radius: 999px;
+    border: 0;
+    max-width: 50%;
+
+    cursor: pointer;
+
+    font-size: 1.4vh;
+    line-height: 1vh;
+    outline: 0 solid transparent;
+    padding: 4% 1px;
+
+    /*Keep the properties above this and their values*/
+    margin-left: 5%;
+}
+</style>
