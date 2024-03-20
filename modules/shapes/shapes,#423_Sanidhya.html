@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="inner-container">
+        <div class="gray"></div>
+        <div class="orange"></div>
+        <div class="circle-image">
+            <img src="./images_and_icons/photographer.jpg" aclass="random-image">
+        </div>
+        <div class="text-container">
+            <h2 class="title">Experience a Custom Private Adventure Made Just For You</h2>
+            <p class="text">
+                Make your own trip
+            </p>
+            <span class="book-now-btn">BOOK NOW</span>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .inner-container {
+        position: relative;
+        width: 480px;
+        height: 350px;
+        background-color: #f9f9f9;
+    }
+
+    .gray {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: #f9f9f9;
+    }
+
+    .orange {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45%;
+        background-color: #e97611;
+    }
+
+    .circle-image {
+        position: absolute;
+        width: 255px;
+        height: 255px;
+        border-radius: 50%;
+        overflow: hidden;
+        top: 50%;
+        right: 40%;
+        transform: translate(72%,-65%);
+        display: flex;
+        z-index: 1;
+    }
+
+    .circle-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-container {
+        position: absolute;
+        border-radius: 30px;
+        width: 50%;
+        height:45%;
+        right: 53%;
+        top: 65%;
+        transform: translate(20%, -40%);
+        background-color: #ffffff;
+        padding: 0.5em;
+        z-index: 2;
+    }
+
+    .text-container h2 {
+        color: #000000;
+        margin-left: 20px;
+        font-size: 1.15em;
+        font-family: Arial;
+        font-weight: lighter;
+        margin-top: 15px;
+    }
+
+    .text-container p {
+        color: #000000;
+        margin-left: 20px;
+        font-size: 0.5em;
+        font-family: Arial;
+        font-weight: lighter;
+    }
+
+    .book-now-btn {
+        text-decoration: none;
+        background-color:#e97611;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 20px;
+        display: inline-block;
+        font-family: Arial;
+        font-weight: lighter;
+        transform: scale(1.25,1.25);
+        margin-left: 27px;
+        font-size: 0.5em;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+</style>
