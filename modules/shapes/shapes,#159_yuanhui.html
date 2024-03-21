@@ -1,0 +1,240 @@
+<style>
+    @import url("https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css");
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap");
+    
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-section,
+    .text-section {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-section {
+        z-index: 1;
+    }
+
+    .image-section img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .text-section {
+        z-index: 8;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        font-family: "Roboto Slab", serif;
+        font-size: 1.5rem;
+    }
+
+    .heading {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 5;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        padding: 1rem;
+
+        background-color: greenyellow;
+        color: white;
+        
+    }
+
+    .heading h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 96px;
+        font-weight: 200;
+        padding: 0;
+        margin: 0;
+    }
+
+    .heading img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #right-arrow {
+        color: white;
+        font-size: 50px;
+    }
+
+    #right-arrow:hover {
+        color: black;
+    }
+
+    .content {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 5;
+
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: row;
+
+        background-color: white;
+        color: black;
+        padding: 1rem;
+    }
+
+    .main-content {
+        grid-row-start: 2;
+        grid-row-end: 2;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-btn {
+        width: 8rem;
+        height: 3rem;
+        border: none;
+        border-radius: 10px;
+        margin-top: 2rem;
+
+        background-color: black;
+        color: white;
+        font-family: "Roboto Slab", serif;
+        font-size: 1rem;
+    }
+
+    .info-btn:hover {
+        background-color: green;
+    }
+
+    .social-media-icons {
+        grid-row-start: 3;
+
+        display: flex;
+        align-items:flex-end;
+        justify-content: flex-end;
+    }
+
+    .fa {
+        text-decoration: none;
+        color: black;
+        margin:0 1rem;
+        font-size: 2rem;
+    }
+
+    .fa:hover {
+        color: green;
+    }
+
+    @media screen and (max-width: 1172px) {
+        .heading h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 80px;
+            font-weight: 200;
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-section,
+        .text-section {
+            position: relative;
+            height: auto;
+            width: 100vw;
+        }
+
+        .text-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .text-section {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .heading h1 {
+            font-size: 60px;
+        }
+
+        .content {
+            justify-content: space-between;
+        }
+
+        .main-content,
+        .fa {
+            font-size: 1rem;
+        }
+
+        .info-btn {
+            font-size: .5rem;
+            margin-top: .5rem;
+
+            width: 6rem;
+            height: 2rem;
+        }
+    }
+
+    
+</style>
+
+
+
+<div class="container">
+    <div class="image-section">
+        <img src="./images_and_icons/broccoli.jpg" alt="broccoli" />
+    </div>
+
+    <div class="text-section">
+        <div class="heading">
+                <p>you are what you eat</p>
+                <h1>Broccoli Recipes</h1>
+                <a href="#" class="fa fa-angle-double-right" id="right-arrow"></a>
+            </div>
+
+            <div class="content">
+                <div class="main-content">
+                    <p>In broccoli's humble embrace lies a lesson for life: nurture, flavor, and nourish. 
+                        Just as we care for each floret, let us tend to our own well-being—mindfully preparing, 
+                        seasoning, and savoring life's richness.</p>
+                    <p>Alessandro Rossi</p>
+                    <button class="info-btn">View More</button>
+                </div>
+                
+                <div class="social-media-icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+    </div>
+    
+</div>
