@@ -1,0 +1,79 @@
+<div class="image-container">
+    <img class="image-style" src="./images_and_icons/srav.jpg" alt="Get great work">
+</div>
+<div class="text-section">
+    <span class="sravanth1">Web Development</span>
+    <span class="sravanth">Get great work for your BUDGET with us!</span>
+    <button class="appointment-button">Book an Appointment</button>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif; 
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); /* Adds a futuristic gradient background */
+}
+
+.image-container {
+    width: 100%;
+    height: 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; 
+}
+
+.image-style {
+    max-width: 85%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.image-style:hover {
+    transform: scale(1.05); 
+}
+
+.text-section {
+    width: 100%;
+    height: 40%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+
+}
+
+.sravanth1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sravanth {
+    font-size: 24px;
+}
+
+.appointment-button {
+    padding: 10px 20px;
+    background-color: #0AC4FF; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.appointment-button:hover {
+    background-color: #007BFF; 
+}
+</style>
