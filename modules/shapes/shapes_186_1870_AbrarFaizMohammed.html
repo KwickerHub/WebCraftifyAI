@@ -1,0 +1,146 @@
+<div class="main-container">
+    <div class="box1">
+        <div class="container1">
+            <span class="container1context">
+            <h1 class="title1">EXPANDING YOUR REACH</h1>
+            <h1 class="title2">Become A Volunteer</h1>
+            <p class="info">Ut enim ad minim veniam, quis nostrud exercitation<br/> ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="readmorebtn"><b>READ MORE</b></button>
+        </span>
+        </div>
+        <div class="container2">
+            <span class="container1context">
+                <h1 class="title1">EXPANDING YOUR REACH</h1>
+                <h1 class="title2">Weekly Podcasts</h1>
+                <input type="email" class="emailinput" placeholder="Enter a valid email address"><br/>
+                <button class="submit"><b>SUBMIT</b></button>
+            </span>
+        </div>
+    </div>
+    <div class="footertext"><a class="footerlink" href="">Hakuna Matata!!</a></div>
+    </div>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main-container{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #333333;
+        }
+        .box1{        
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            width: 100%;
+            height: 71%;
+        }
+        .container1, .container2{
+            margin: 0px;
+            padding: 0px;
+            flex: 1;       
+            text-align: center;    
+            color: white;
+        }
+        .container1{
+            background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), rgba(0, 0, 0, 0.6)), url("./images_and_icons/shapes_186_1870_AbrarFaizMohammed_img1.jpg");
+            background-position: 50% 50%;
+            background-size:contain;
+            background-repeat: no-repeat;
+            aspect-ratio: 1
+        }
+        .container2{
+            background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), rgba(0, 0, 0, 0.6)), url("./images_and_icons/shapes_186_1870_AbrarFaizMohammed_img2.jpg");
+            background-position: 50% 50%; 
+            background-size:contain;
+            background-repeat: no-repeat;
+            aspect-ratio: 1;
+        }
+        .container1context{
+            position: relative;
+            top: 20%;
+        }
+        .title1{
+            font-size: 25px;
+            z-index: -1000;
+            margin-bottom: 20px;
+            caret-color: transparent;
+        }
+        .title2{
+            font-size: 65px;
+            z-index: 1000;
+            margin-bottom: 20px;
+            caret-color: transparent;
+        }
+        .info{
+            font-size: 20px;
+            caret-color: transparent;
+            margin-bottom: 20px;
+        }
+        .readmorebtn{
+           background-color: transparent;
+           border: solid 2px white;
+           padding: 20px;
+           color: white;
+           cursor: pointer;
+           width: 220px;
+           height: 70px;
+           letter-spacing: 3px;
+           caret-color: transparent;
+        }
+        .readmorebtn:hover{
+            background-color: white;
+            color: black;
+        }
+        .emailinput{
+            width: 400px;
+            height: 65px;
+            padding: 0px 15px;
+            border: none;
+            outline: none;
+            margin-bottom: 10px;
+        }
+        input::placeholder{
+            font-size: 20px;
+            color: #e8e8e8;
+        }
+        .submit{        
+            width: 400px;
+            height: 65px;
+            padding: 0px 15px;
+            border: none;
+            outline: none;
+            background-color: #8cb9c5;
+            color: white;
+            caret-color: transparent;
+            cursor: pointer;
+        }
+        .submit:hover{
+            opacity: 0.9;
+        }
+        .footertext{
+            color: white;
+            margin: auto;
+            width: max-content;
+            position: relative;
+            caret-color: transparent;
+            top: 15%;
+        }
+        .footerlink{
+            text-decoration: none;
+            caret-color: transparent;
+            color: #8cb9c5;
+        }
+        .footerlink:hover{
+            color: #999999;
+        }
+        @media screen and (max-width: 1845px){
+            .box1{                
+            display: flex;
+            flex-direction: column;
+            }
+        }
+    </style>
