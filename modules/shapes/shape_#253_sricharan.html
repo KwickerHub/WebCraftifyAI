@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Website Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        #container {
+            background-image: url('./images_and_icons/bg_253.jpg'); /* Adjust the file name/path as necessary */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: black;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #text-container {
+            text-align: right;
+            padding-right: 5%;
+        }
+
+        .heading {
+            color: blue;
+            font-size: 65px;
+            letter-spacing: 2px;
+            left: -110px;
+            margin: 0;
+            position: relative; /* Position relative for alignment */
+        }
+        .heading1 {
+            color: blue;
+            font-size: 70px;
+            margin-left: -100px;
+            letter-spacing: 2px;
+            margin: 0;
+            position: relative; /* Position relative for alignment */
+        }
+
+        #sub-heading {
+            font-weight: 500; /* Lighter font-weight */
+            position: relative; /* Position relative to shift left */
+            left: -185px; /* Adjust this value as needed to move left */
+            margin-top: -20px; /* Adjust this value for desired spacing */
+        }
+
+        #attribution {
+            color: grey;
+            font-size: 16px; /* Smaller font size for attribution text */
+            position: relative;
+            left: -412px;
+            margin-top: 5px; /* Spacing after the 'in Minutes' text */
+        }
+
+        #download-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-left: -105px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin-top: 20px;
+        }
+
+        #download-button:hover {
+            background-color: darkblue;
+        }
+
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 40px; /* Smaller font size for mobile */
+            }
+            #text-container {
+                padding-right: 2%; /* Less padding on smaller screens */
+            }
+            #sub-heading {
+                left: -20px; /* Less shift on smaller screens */
+            }
+        }
+
+        /* Additional styles can be added here */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="text-container">
+            <h1 class="heading">Build Website</h1>
+            <h2 class="heading1" id="sub-heading">in Minutes</h2>
+            <p id="attribution">Image from <u>Freepik</u></p>
+            <button id="download-button">Download for Free</button>
+            <!-- Additional content can be placed here -->
+        </div>
+        <!-- Footer content can be placed here -->
+    </div>
+</body>
+</html>
