@@ -1,0 +1,77 @@
+<div class="image-container">
+    <img class="image-style" src="./images_and_icons/design.jpeg" alt="Get great work">
+    <div class="text-section">
+        <span class="sravanth1">Design Studio</span>
+        <span class="sravanth">Crafting Dreams: Where Imagination Meets Reality!</span>
+        <a href="#" class="Link">Learn more</a>
+    </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Comic Sans', sans-serif; 
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.text-section {
+    position: relative;
+    z-index: 2;
+    color: #000000; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sravanth1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sravanth {
+    font-size: 24px;
+}
+
+.Link {
+    padding: 10px 20px;
+    background-color: transparent; 
+    color: #06f0dd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; 
+    text-decoration: none;
+}
+
+.Link:hover {
+    color: #FF4500; 
+}
+
+
+</style>
