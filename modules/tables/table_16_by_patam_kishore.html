@@ -1,0 +1,117 @@
+
+    <title>Pricing Plans</title>
+    <body>
+        <h1>Pricing Plans</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Ab distinctio quisquam perferendis adipisci odio consequatur architecto voluptatibus culpa animi sed!</p>
+        <table>
+            <tr>
+                <th id="head-color1" class="head-color">Simple</th>
+                <th id="head-color2" class="head-color">Best</th>
+                <th id="head-color3" class="head-color">Standard</th>
+            </tr>
+            <tr>
+                <td>$39</td>
+                <td>$59</td>
+                <td>$139</td>
+            </tr>
+            <tr>
+                <td>Lorem, ipsum.</td>
+                <td>Lorem, ipsum.</td>
+                <td>Lorem, ipsum.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+            </tr>
+            <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+            </tr>
+            <tr class="button-row">
+                <td><a href="#" class="button" id="button-color1">Lorem, ipsum dolor.</a></td>
+                <td><a href="#" class="button" id="button-color2">Lorem, ipsum dolor.</a></td>
+                <td><a href="#" class="button" id="button-color3">Lorem, ipsum dolor.</a></td>
+            </tr>
+        </table>
+    </body>
+    
+    <style>
+        :root {
+            --main-font: Arial, sans-serif;
+            --main-color: #333;
+            --table-bg-even: #fff;
+            --table-bg-odd: #f2f2f2;
+            --button-border-radius: 5px;
+            --button-padding: 5px 10px;
+        }
+
+        body {
+            font-family: var(--main-font);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: var(--main-color);
+            margin-bottom: 0px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th {
+            font-size: 30px;
+        }
+
+        th,td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        
+
+        tr:nth-child(even) {
+            background-color: var(--table-bg-even);
+        }
+
+        tr:nth-child(odd) {
+            background-color: var(--table-bg-odd);
+        }
+
+        a.button {
+            text-decoration: none;
+            color: white;
+            padding: var(--button-padding);
+            border-radius: var(--button-border-radius);
+        }
+
+        .head-color {
+            color: white;
+        }
+
+        #head-color1,
+        #button-color1 {
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+
+        #head-color2,
+        #button-color2 {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        #head-color3,
+        #button-color3 {
+            background-color: rgba(255, 0, 0, 0.9);
+        }
+    </style>
+
+
+
+
+

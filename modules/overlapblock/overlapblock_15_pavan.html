@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Image Layout</title>
+<style>
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns the images to the left */
+    max-width: 300px; /* Sets the maximum width of the images */
+    margin: 0; /* Adjust or remove margin as necessary */
+    padding: 0; /* Adjust or remove padding as necessary */
+  }
+  .image-container img {
+    width: 100%; /* Makes the images take up 100% of the container width */
+    max-width: 100%; /* Ensures images are not larger than the container */
+    margin-bottom: 10px; /* Adds space between the images */
+  }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+
+  <img src="images_and_icons/p1.png" alt="First Image">
+
+
+  <img src="images_and_icons/p2.png" alt="Second Image">
+
+
+  <img src="images_and_icons/p3.png" alt="Third Image">
+
+  <img src="images_and_icons/p4.png" alt="Fourth Image">
+</div>
+
+</body>
+</html>

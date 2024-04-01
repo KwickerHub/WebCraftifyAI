@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promotion Plans</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+  }
+  .promotion-plans {
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+  }
+  .promotion-plans table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .promotion-plans th, .promotion-plans td {
+    padding: 15px;
+    border: #ddd;
+    background-color: #f4f4f4;
+  }
+  .promotion-plans th {
+    background-color: #4e73df; /* Blue background */
+    color: white;
+  }
+  .promotion-plans th:first-child {
+    background-color: #ffffff; /* White background for "COMPARE ALL PLANS" cell */
+    color: #333; /* Black text color */
+  }
+  .promotion-plans .starter-header {
+    background-color: #f6c23e; /* Yellow background for "STARTER" header */
+  }
+  .promotion-plans td.starter {
+    background-color: #fff3cd; /* Light yellow background for "STARTER" column */
+  }
+  .promotion-plans td.white-cell {
+    background-color: #ffffff; /* White background for specific cells */
+    color: #333; /* Black text color */
+  }
+  .promotion-plans td.choose-plan-cell {
+    background-color: #ffffff; /* White background for button cell */
+    border-bottom: none;
+  }
+  .promotion-plans td.white-cell1 {
+    background-color: #ffffff; /* White background for specific cells */
+    color: red; /* Black text color */
+  }
+  .choose-plan-btn {
+    padding: 10px 25px;
+    background-color: #e74a3b; /* Red background for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .promotion-plans caption {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="promotion-plans">
+  <table>
+    <caption>Promotion Plans</caption>
+    <thead>
+      <tr>
+        <th>COMPARE ALL PLANS</th>
+        <th>ENTERPRISE<br>(SEO + SMO + PAID)</th>
+        <th>ADVANCE<br>(SEO + SMO)</th>
+        <th class="starter-header">STARTER<br>(SEO + SMO)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1st Month Management Cost</td>
+        <td class="white-cell">$1,200</td>
+        <td class="white-cell">$900</td>
+        <td class="starter">$400</td>
+      </tr>
+      <tr>
+        <td>Following Month</td>
+        <td class="white-cell1">$900</td>
+        <td class="white-cell1">$700</td>
+        <td class="starter">$300</td>
+      </tr>
+      <tr>
+        <td>Delivery Time frame</td>
+        <td class="white-cell">3-6 Months</td>
+        <td class="white-cell">3-6 Months</td>
+        <td class="starter">3-6 Months</td>
+      </tr>
+      <tr>
+        <td>Total Targeted Keywords</td>
+        <td class="white-cell">40</td>
+        <td class="white-cell">30</td>
+        <td class="starter">25</td>
+      </tr>
+      <tr>
+        <td>Guaranteed Keywords Ranking in First Page of Google</td>
+        <td class="white-cell">28</td>
+        <td class="white-cell">20</td>
+        <td class="starter">18</td>
+      </tr>
+      <tr>
+        <td class="white-cell"></td>
+        <td class="white-cell"><a href="#" class="choose-plan-btn">CHOOSE PLAN</a></td>
+        <td class="white-cell"><a href="#" class="choose-plan-btn">CHOOSE PLAN</a></td>
+        <td class="starter"><a href="#" class="choose-plan-btn">CHOOSE PLAN</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

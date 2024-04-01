@@ -1,0 +1,73 @@
+<div id="img_container">
+    <img src="./images_and_icons/background_102.jpg" alt="">
+    <div class="text-overlay">
+        <p class="line1">Get free games and</p>
+        <p class="line2">in-game loot every</p>
+        <p class="line3">month</p>
+        <button class="button">Grab It..</button>
+    </div>
+</div>
+ 
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        overflow: hidden;
+    }
+ 
+    .img_container {
+        position: relative;
+    }
+ 
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+ 
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:white;
+    }
+ 
+    .line1,
+    .line2,
+    .line3 {
+        margin: 0;
+    }
+ 
+    .line1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+ 
+    .line2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+ 
+    .line3 {
+        font-size: 32px;
+    }
+ 
+    .button{
+        padding: 4px 8px;
+        border-radius: 9px;
+        margin: 8px;
+        font-size: 22px;
+        cursor: pointer;
+        background-color: rgb(6, 8, 8);
+        color: white
+    }
+</style>
+ 

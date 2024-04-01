@@ -1,0 +1,102 @@
+<div>
+    <style>
+        a {
+            text-decoration: unset;
+        }
+
+        #home-page-button {
+            display: inline-block;
+            border-radius: 20px;
+            background-color: #07b8d1;
+            padding: 20px 40px;
+            text-align: center;
+            position: relative;
+            align-content: center;
+        }
+
+        .arrow {
+
+            cursor: pointer;
+            height: 60px;
+            left: 17%;
+            position: absolute;
+            top: 48%;
+            transform: translateX(-50%) translateY(-50%);
+            transition: transform 0.1s;
+            width: 35px;
+
+        }
+
+        .arrow.oth {
+            transform: rotate(-180deg);
+            top: 1%;
+            right: 0 !important;
+            left: 80% !important;
+        }
+
+        .arrow-top,
+        .arrow-bottom {
+            background-color: #272727;
+            height: 5px;
+            left: -40px;
+            position: absolute;
+            top: 3%;
+            width: 60px;
+        }
+
+        .arrow-top:after,
+        .arrow-bottom:after {
+            background-color: #fff;
+            content: "";
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all 0.15s;
+        }
+
+        .arrow-top {
+            transform: rotate(55deg);
+            transform-origin: bottom right;
+        }
+
+        .arrow-top:after {
+            left: 100%;
+            right: 0;
+            transition-delay: 0s;
+        }
+
+        .arrow-bottom {
+            transform: rotate(-70deg);
+            transform-origin: top right;
+        }
+
+        .arrow-bottom:after {
+            left: 0;
+            right: 100%;
+            transition-delay: 0.15s;
+        }
+
+        svg {
+            fill: white;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 18px;
+            right: 5px;
+            z-index: 999999;
+        }
+    </style>
+    <div id="home-page-button">
+        <div class="arrow">
+            <div class="arrow-bottom"></div>
+        </div>
+        <a href="#">
+            <span style="color: white;">HOME PAGE</span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+            <path
+                d="M 24.962891 1.0546875 A 1.0001 1.0001 0 0 0 24.384766 1.2636719 L 1.3847656 19.210938 A 1.0005659 1.0005659 0 0 0 2.6152344 20.789062 L 4 19.708984 L 4 46 A 1.0001 1.0001 0 0 0 5 47 L 18.832031 47 A 1.0001 1.0001 0 0 0 19.158203 47 L 30.832031 47 A 1.0001 1.0001 0 0 0 31.158203 47 L 45 47 A 1.0001 1.0001 0 0 0 46 46 L 46 19.708984 L 47.384766 20.789062 A 1.0005657 1.0005657 0 1 0 48.615234 19.210938 L 41 13.269531 L 41 6 L 35 6 L 35 8.5859375 L 25.615234 1.2636719 A 1.0001 1.0001 0 0 0 24.962891 1.0546875 z M 25 3.3222656 L 44 18.148438 L 44 45 L 32 45 L 32 26 L 18 26 L 18 45 L 6 45 L 6 18.148438 L 25 3.3222656 z M 37 8 L 39 8 L 39 11.708984 L 37 10.146484 L 37 8 z M 20 28 L 30 28 L 30 45 L 20 45 L 20 28 z">
+            </path>
+        </svg>
+    </div>
+</div>

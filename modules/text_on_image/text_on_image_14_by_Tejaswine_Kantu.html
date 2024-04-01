@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('images_and_icons/background_14.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .circle-background {
+            background-color: #1b356a; /* Or any other color you prefer */
+            border-radius: 50%; /* Creates the circular shape */
+            width: 50vw; /* Adjust the size as needed */
+            height: 50vw; /* Adjust the size as needed */
+            position: absolute; /* Needed to position the text and button */
+            align-items: left;
+            left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 55px; 
+            box-sizing: border-box;
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%); /* Center the content inside the circle */
+            color: white;
+            width: calc(50vw - 40px); /* Adjust width based on parent size and desired padding */
+            padding: 15px; /* Padding inside the circle */
+            
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-family: sans-serif;
+           
+        }
+        p {
+            font-size: 1.5rem;
+            font-family: 'open sans',sans-serif;
+            display: block;
+            top: 25px;
+            margin-bottom: 1rem;
+            line-height: 2;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 10px;
+            margin-inline-end: 10px;
+        }
+        .image-credit {
+            position: absolute; 
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 0.8rem;
+            margin-top: 15px;
+        }
+        .button {
+            padding: 10px 40px;
+            border: 2px solid white; /* White border */
+            background-color: transparent;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            margin-top: 15px;
+            top: 125px;
+        }
+        .button:hover {
+            background-color: white; /* Change to white on hover */
+            color: navy; /* Text color changes on hover */
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="circle-background">
+        <div class="content">
+            <h1>Our Projects</h1>
+            <p>Habitant morbi tristique senectus et. Nec dui nunc mattis enim ut tellus. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam.</p>
+            <div class="image-credit">
+                <p>Image from <a href="https://www.freepik.com" class="freepik-link" target="_blank" style="color: white;">Freepik</a></p>
+             </div>
+            <button class="button"><a href="https://nicepage.site/" class="button-link" target="_blank" style="color: white;text-decoration: none;" >READ MORE</a></button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<div class="portfolio">
+    <div class="info-section">
+		<p class="hi">Hi I'm</p>
+        <h1 class="name">Shounak Kulkarni</h1>
+        <p class="title">Web Developer</p>
+        <p class="bio">Portfolio by Shounak.</p>
+         <table class="details">
+            <tr>
+                <td class="label">Date of Birth:</td>
+                <td class="value">January 1, 1990</td>
+            </tr>
+            <tr>
+                <td class="label">Address:</td>
+                <td class="value">123 Main St, Anytown, USA</td>
+            </tr>
+            <tr>
+                <td class="label">Email:</td>
+                <td class="value">john.doe@example.com</td>
+            </tr>
+            <tr>
+                <td class="label">Phone:</td>
+                <td class="value">(123) 456-7890</td>
+            </tr>
+        </table>
+    </div>
+    <div class="image-section">
+        <!-- Replace 'path_to_person_image.jpg' with the actual image path -->
+        <img src="./images_and_icons/skportfolioimage.jpg" alt="Profile Picture" class="profile-image">
+    </div>
+</div>
+
+<style>
+    /* Base styles */
+    * {
+        box-sizing: border-box;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+		background-color: #607d8b;
+    }
+
+    /* Portfolio styles */
+    .portfolio {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .info-section {
+        flex-basis: 50%;
+		margin: 5% 0% 5% 5%;
+    }
+
+    .image-section {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; /* Aligns the image to the bottom */
+        height: 100%; /* Full height of the parent */
+    }
+
+    .profile-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px; /* Optional, for rounded corners */
+    }
+
+    /* Info Section Styling */
+    .info-section h1.name {
+        font-size: 4rem; /* Increased size */
+		margin: 0 0 0.25rem 0;
+        /* padding-bottom: 0rem;  Padding below the name */
+    }
+	.info-section .hi {
+        font-size: 2rem; /* Half the size of the name */
+        padding-bottom: 0.5rem; /* Padding below the title */
+    }
+
+    .info-section p.title {
+        font-size: 1.5rem; /* Half the size of the name */
+        padding-bottom: 0.5rem; /* Padding below the title */
+    }
+
+    .info-section p {
+        padding: 0.25rem 0; /* Padding for all paragraphs */
+    }
+	
+    .details {
+        margin-top: 1rem;
+        border-collapse: collapse;
+        width: 50%; /* Table takes full width */
+    }
+
+    .details .label {
+        text-align: left;
+        padding: 0.25rem;
+        font-weight: bold;
+    }
+
+    .details .value {
+        text-align: left;
+        padding: 0.25rem;
+    }
+
+    /* Responsive design for smaller devices */
+    @media (max-width: 768px) {
+        .portfolio {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .info-section, .image-section {
+            flex-basis: auto;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            max-width: 80%;
+        }
+
+        .info-section h1.name {
+            font-size: 2rem; /* Adjusted size for smaller screens */
+        }
+
+        .info-section p.title {
+            font-size: 1rem; /* Adjusted size for smaller screens */
+        }
+    }
+</style>
+
+<script>
+    // Add your JavaScript here if needed
+</script>

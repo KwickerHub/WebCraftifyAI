@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+      
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('./images_and_icons/forest.jpg') center/cover no-repeat;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-weight: 400;
+            line-height: 1.1;
+            font-size: 4.5rem;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 20px;
+            font-style: italic;
+            white-space: nowrap;
+        }
+        .table-wrapper {
+            width: 80%;
+            overflow-x: auto;
+        }
+
+        .table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #000;
+            color: #fff;
+            overflow-x: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        .table thead tr{
+            background-color: #333;
+            color: #fff;  
+            border-bottom: 1px solid white; 
+        }
+        .table th{
+            padding: 12px 60px;
+            text-align: start;
+            white-space: nowrap;
+        }
+
+        tr {
+            background-color: #000;
+        }
+
+       
+
+        td {
+            padding: 10px;
+            border-style: dotted;
+            border-width: 1px;
+            border-spacing:2px;
+            text-align: center;
+        }
+
+        i.fa-check {
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+            color: #333;
+            font-weight: 400;
+            line-height: 1.1;
+            font-size: 2.5rem;
+        }
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Shared Hosting Plans</h1>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+        <div class="table-wrapper">
+     <table class="table">
+        <thead>
+        <tr>
+            <th>COLUMN 1</th>
+            <th>HATCHLING PLAN</th>
+            <th>BABY PLAN</th>
+            <th>BUSINESS PLAN</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr class="firstRow">
+            <td>Websites</td>
+            <td>Single</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+        </tr>
+        <tr class="secondRow">
+            <td>FREE 1 year domain registration</td>
+            <td><i class="fa-solid fa-check"></i></td>
+            <td><i class="fa-solid fa-check"></i></td>
+            <td><i class="fa-solid fa-check"></i></td>
+        </tr>
+        <tr class="thirdRow">
+            <td>One-click WordPress Installs</td>
+            <td><i class="fa-solid fa-check"></i></td>
+            <td><i class="fa-solid fa-check"></i></td>
+            <td><i class="fa-solid fa-check"></i></td>
+        </tr>
+        <tr class="fourthRow">
+            <td>FREE website & domain transfers</td>
+            <td><i class="fa-solid fa-check"></i></td>
+            <td><i class="fa-solid fa-check"></i></td>
+            <td><i class="fa-solid fa-check"></i></td>
+        </tr>
+        <tr class="fifthRow">
+            <td>FREE Dedicated IP</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa-solid fa-check"></i></td>
+        </tr>
+        <tr class="sixthRow">
+            <td>Free Upgrade to Positive SSL</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa-solid fa-check"></i></td>
+        </tr>
+       </tbody>
+     </table>
+    </div>
+    </div>
+</body>
+</html>

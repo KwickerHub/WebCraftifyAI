@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid_346</title>
+    <style>
+        body, h1, h2, h4, p {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        body {
+            height: 100vh;
+            text-align: center;
+            background-color: #DCDCDC	;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin: 0px 5%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .block {
+            margin-top: 20%;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 10px;
+            border-top: orange solid 10px;
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-weight: bolder;
+            font-size: 3rem;
+        }
+
+        .block h4 {
+            margin-top: auto; 
+            padding: 4px;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .block {
+                margin-top: 0; 
+            }
+
+            body {
+                align-items: flex-start; 
+                justify-content: flex-start; 
+            }
+        }
+
+        @media (min-width: 900px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Benifits of sport training</h1>
+    <div class="container">
+        <div class="block">
+            <h2>Agility</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Etiam id elit nunc. Nullam porta nisi erat, et eleifend elit maximus eu. 
+                Mauris rutrum feugiat risus sed aliquam. Fusce eu nisl pulvinar, blandit elit vel, blandit augue. 
+                Sed lectus nisi, dapibus sed vestibulum ut, convallis at magna. Donec ut odio libero.
+            </p>
+            <div class="bottom-element">
+                <h4>More</h4>
+            </div>
+        </div>
+        <div class="block">
+            <h2>Strength</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Vestibulum auctor mi eu nisl commodo porttitor. 
+                Pellentesque pretium dolor non pretium sollicitudin. 
+                Aliquam ac eros arcu. Duis malesuada elit placerat, mollis justo non, auctor neque. 
+                Phasellus sapien ipsum, tristique vel massa sed, aliquet cursus turpis. 
+                Nam luctus libero sit amet nulla.
+            </p>
+            <div class="bottom-element">
+                <h4>More</h4>
+            </div>
+        </div>
+        <div class="block">
+            <h2>Quickness</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra, elit ac blandit fermentum, augue nisl mollis risus, ut rhoncus sapien sapien vel elit. 
+                Aenean ante turpis, volutpat nec varius nec, egestas nec elit. Nunc blandit, nisi sit amet placerat tincidunt, elit lectus porta odio, ut elementum nunc massa id.
+            </p>
+            <div class="bottom-element">
+                <h4>More</h4>
+            </div>
+        </div>
+        <div class="block">
+            <h2>Power</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean urna nibh, tristique vitae tortor a, tristique porta dui. 
+                Sed dapibus sit amet diam quis vehicula. Integer ligula lacus, scelerisque id diam gravida, maximus eleifend ante. Nullam vulputate ultrices congue. 
+                Sed ornare consectetur nulla commodo gravida. Duis tristique erat sit amet.
+            </p>
+            <div class="bottom-element">
+                <h4>More</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

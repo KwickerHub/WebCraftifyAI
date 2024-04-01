@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      background-color: #ffd1dc; 
+    }
+
+    .grid-item {
+      padding: 20px;
+    }
+
+    .text-image-grid {
+      grid-column: span 1;
+    }
+
+    .image-grid {
+      grid-column: span 1;
+    }
+
+    .image-text-grid {
+      grid-column: span 1;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    
+    .text-image-grid img {
+      object-fit: cover;
+      object-position: center center;
+      width: 80%; 
+      height: 300px; 
+    }
+
+    
+    .image-text-grid img {
+      object-fit: cover;
+      object-position: center center;
+      width: 80%; 
+      height: 300px; 
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-item text-image-grid">
+    <p>Neque viverra justo nec ultrices dui <br>
+       sapien eget mi. Enim ut sem viverra <br>
+       aliquet eget sit. Nam at lectus urna duis <br>
+       convallis convallis tellus id interdum. <br>
+       Varius quam quisque id diam vel.</p>
+    <img src="images_and_icons/grid_341_image1.jpeg" alt="Image 1">
+  </div>
+
+  <div class="grid-item image-grid">
+    <img src="images_and_icons/grid_341_image2.jpeg" alt="Image 2">
+  </div>
+
+  <div class="grid-item image-text-grid">
+    <img src="images_and_icons/grid_341_image3.jpeg" alt="Image 3">
+    <p>Tellus in hac habitasse platea. Nisl nisi <br>
+       scelerisque eu ultrices vitae auctor eu. <br>
+       Sapien eget mi proin sed libero enim.</p>
+  </div>
+</body>
+</html>

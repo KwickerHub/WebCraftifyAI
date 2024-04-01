@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Studio</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-image: url('images_and_icons/70img.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .service {
+        text-align: center;
+        max-width: 260px; /* Increased width to accommodate larger titles */
+    }
+    .service h2 {
+        font-size: 1.2em; /* Adjusted font size to keep the title on one line */
+        position: relative;
+        margin: 20px 0; /* Add margin for spacing */
+    }
+    .service h2::before {
+        content: '';
+        position: absolute;
+        top: 0; /* Position at the top of the title */
+        left: 0; /* Align to the left side */
+        width: 100%; /* Full width line */
+        height: 4px; /* Height of the yellow line */
+        background-color: #FFD700; /* Yellow color */
+        margin-top: -10px; /* Position the line above the title */
+    }
+    .service p {
+        font-size: 0.9em;
+        margin: 20px 0; /* Space around the paragraph */
+    }
+    .service a {
+        text-decoration: underline;
+        color: white;
+        padding: 5px;
+        cursor: pointer;
+        background: none; /* Remove background for a text link appearance */
+        border: none; /* Remove border */
+        display: block; /* Ensure it's on its own line */
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="service">
+            <h2>Unlimited Classes</h2>
+            <p>Take part in as many of our group fitness classes as you like - they're open to everyone!</p>
+            <a href="#" role="button">Sign Up Now</a>
+        </div>
+        <div class="service">
+            <h2>Personal Training</h2>
+            <p>Get the one-on-one attention you need and work with our finest personal trainers.</p>
+            <a href="#" role="button">Book a Session</a>
+        </div>
+        <div class="service">
+            <h2>Studio Pilates</h2>
+            <p>Small group classes focusing on strength, flexibility and breathing to boost physical and mental wellbeing.</p>
+            <a href="#" role="button">Join Pilates</a>
+        </div>
+    </div>
+</body>
+</html>

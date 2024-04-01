@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barber Shop</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height */
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  body {
+    background: url('./images_and_icons/bg_15.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Align horizontally */
+    text-align: center;
+    color: white;
+  }
+
+  .content {
+    padding: 20px;
+    width: 100%;
+    max-width: 960px; /* Maximum width of the content */
+  }
+
+  .content h1 {
+    font-size: 2.8em; /* Slightly decreased font size */
+    margin-bottom: 0.5em;
+    font-weight: normal; /* Normal font weight */
+  }
+
+  .content p {
+    font-size: 1.4em; /* Increased font size for paragraph */
+    margin-bottom: 2em;
+  }
+
+  .buttons button {
+    background: white; /* Background set to white */
+    color: black; /* Text color set to black */
+    border: 2px solid white;
+    padding: 10px 20px; /* Slightly decreased padding */
+    font-size: 0.9em; /* Decreased font size for buttons */
+    text-transform: uppercase;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  .buttons button:hover {
+    background-color: #04b3c0; /* Light green background on hover */
+    color: black; /* Text color remains black on hover */
+  }
+
+  .image-credit {
+    color: white;
+    font-size: 1em; /* Slightly increased font size */
+    margin-top: 30px; /* Added space above the image credit */
+    display: block;
+  }
+
+  .image-credit a {
+    color: white;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <div class="content">
+    <h1>Full service barber shop & men’s grooming<br>studio</h1>
+    <p>Simple Text. Lorem ipsum dolor sit amet, consectetur adipiscing<br>lit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus<br>quis elementum.</p>
+    <div class="buttons">
+      <button id="view-pricing">View Pricing</button>
+      <button id="book-now">Book Now</button>
+    </div>
+    <p class="image-credit">Image from <a href="https://www.freepik.com/photos/business">Freepik</a></p>
+  </div>
+<script>
+  document.getElementById('view-pricing').addEventListener('click', function() {
+    window.location.href = 'https://nicepage.best/';
+  });
+
+  document.getElementById('book-now').addEventListener('click', function() {
+    window.location.href = 'https://nicepage.best/';
+  });
+</script>
+</body>
+</html>

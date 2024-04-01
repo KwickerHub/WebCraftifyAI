@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+      
+        .main {
+            display: flex;
+            flex-direction: column; /* Arrange children in a column */
+            align-items: center;
+            
+        }
+
+        .container{
+            width: 1140px; /* Take up full width */
+             /* Adjust the margin as needed */
+            position: relative;
+            display: block; /* Use flexbox to arrange children */
+           
+        }
+
+        .flexcard{
+            display: flex;
+            justify-content: space-between;
+        }
+        .card {
+            flex: 1; /* Take up flexible space */
+            margin-right: 20px; /* Adjust the margin between card and text */
+        }
+
+        .img {
+            width: 100px; /* Set the width to 100px */
+            height: 100px; /* Set the height to 100px */
+        }
+        
+        .text {
+            flex: 1; /* Take up flexible space */
+            padding-top: 10px;
+            padding-right: 70px;
+            padding-left: 70px;
+        }
+        
+        
+        .title,
+        .description {
+            color: #333;
+            font-size: 20px;
+            text-align: justify;
+        }
+        .header {
+            font-size: 50px;
+            margin-top: 0; /* Remove default margin from heading elements */
+        }
+
+        .description {
+            color: #050505;
+            line-height: 1.5;
+        }
+
+        .headercard {
+            flex: 1; 
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            
+
+        }
+
+        .headercard img {
+            width: 550px; /* Set the width to 100px */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .subheading1, .subheading2 {
+    width: 300px;
+    margin: 0px 40px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px; /* Adjust the margin-bottom value as needed */
+}
+
+        .subheading1,.subheading2 {
+        
+            text-align: center;
+            padding-top: 20px; 
+            padding-bottom: 20px;
+        }
+        .headingimage
+        {
+            display: inline-block;
+        }
+        .icon
+        {
+            width: 64px;
+            height : 64px;
+        }
+        .heading{
+            font-size: 30px;
+            margin-top: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .description,.description1{
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        .images {
+        text-align: center;
+        margin-top: 10px; /* Add margin-top to create space between subheading and images */
+        padding-top: 0px;
+}
+        .i{
+            width: 300px;   
+            height: 350px;
+        }
+    </style>
+</head>
+<body>  
+    <div class="main">
+        <div class="container">
+            <div class="flexcard">
+            <div class="headercard">
+                <img class="img" src="./images_and_icons/img331.jpg" alt="Image_1">
+            </div>
+            <div class="text">
+                <h1 class="title">About Us! </h1>
+                <h2 class="header">Our Team</h2>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.In hac habitasse platea dictumst. Quisque luctus mi velit, eu lobortis urna iaculis id. Fusce sit amet sem ultricies, dignissim mi a, posuere nisi. Vestibulum ut ante at urna placerat tristique non vel mauris. Pellentesque leo sem, iaculis non nisl nec, scelerisque lacinia quam. Pellentesque maximus velit quis urna varius, ullamcorper sagittis velit pellentesque. </p>
+            </div>
+        </div>
+        
+        <div class="flexcard">
+            <div class="subheading1">
+                <div class="headingimage">
+                    <img class="icon" src="./images_and_icons/331icon1.png" alt="Image_3">
+                </div>
+                <h4 class="heading">For You</h4>
+                <p class="description">But the majority have suffered alteration in some form.ages of Lorem Ipsum available, but the majority have suffered altera.ages of Lorem Ipsum available, but the majority have suffered altera</p>
+            </div>
+            <div class="images">
+                <img class="i" src="./images_and_icons/img331_2.jpg" alt="Image_2">
+            </div>
+            <div class="subheading2">
+                <div class="headingimage">
+                    <img class="icon" src="./images_and_icons/331icon2.png" alt="Image_3">
+                </div>
+                <h5 class="heading">We care</h5>
+                <p class="description1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered.ages of Lorem Ipsum.ges of Lorem Ipsum available, but the majority have suffered altera altera</p>
+            </div>
+            <div class="images">
+                <img class="i" src="./images_and_icons/img331_3.jpg" alt="Image_3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

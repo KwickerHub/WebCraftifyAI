@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="header">
+        <h1>Adarsh Designs</h1>
+    </div>
+    <div class="content">
+        <div class="image-container">
+            <img src="./images_and_icons/image18.jpg" alt="Interior Design">
+        </div>
+        <div class="text-container">
+            <h2>Heading-Tile</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro temporibus commodi quae, provident
+                aliquid in molestias dolorum numquam. Facilis, maxime perspiciatis? Hic quidem, itaque inventore ex
+                maxime dolor totam minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam est perferendis
+                itaque nemo provident fugit velit pariatur in quasi excepturi esse voluptatem nesciunt quae assumenda
+                repudiandae impedit, aliquid minus quibusdam.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    .image-container {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .image-container img:hover {
+        transform: scale(1.05);
+    }
+
+    .text-container {
+        flex: 1;
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #666;
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+        }
+
+        .text-container {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+</style>

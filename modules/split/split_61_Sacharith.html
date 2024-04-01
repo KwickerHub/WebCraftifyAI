@@ -1,0 +1,261 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div>
+  <!---YOUR CODE---->
+  <div class="main-container">
+    <div class="left-container">
+      <div class="left-container-content">
+        <h1 class="main-heading">Free <span class="street">Street</span></h1>
+        <h1 class="second-heading">Style</h1>
+        <p class="para">Discover the latest trends and express your unique style with our collection of Free Street
+          fashion. From urban streetwear to casual chic, we have everything you need to create your own fashion
+          statement. Shop now and unleash your inner style!</p>
+      </div>
+    </div>
+    <div class="right-container">
+      <img src="./images_and_icons/mask.png" alt="Man in a Mask">
+    </div>
+  </div>
+</div>
+
+<style>
+  /* YOUR STYLE */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .left-container {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .left-container-content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    padding-right: 5%;
+  }
+
+  .main-heading {
+    font-size: 5rem;
+    font-weight: 100;
+    color: #000;
+    line-height: 0.1px;
+  }
+
+  .street {
+    font-weight: 600;
+    animation: lights 5s 750ms linear infinite;
+  }
+
+  .second-heading {
+    font-size: 5rem;
+    font-weight: 100;
+    color: #000;
+  }
+
+  .para {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    text-align: end;
+    margin-top: 2rem;
+    line-height: 1.5em;
+  }
+
+  .right-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .right-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .right-container img:hover {
+    transform: scale(1.2);
+  }
+
+  @keyframes lights {
+    0% {
+      color: hsl(0, 0%, 0%);
+      text-shadow:
+        0 0 1em hsla(0, 0%, 35%, 0.2),
+        0 0 0.125em hsla(0, 0%, 17%, 0.3),
+        -1em -0.125em 0.5em hsla(0, 0%, 80%, 0),
+        1em 0.125em 0.5em hsla(0, 0%, 9%, 0);
+    }
+
+    30% {
+      color: hsl(0, 0%, 0%);
+      text-shadow:
+        0 0 1em hsla(0, 0%, 51%, 0.5),
+        0 0 0.125em hsla(0, 0%, 8%, 0.5),
+        -0.5em -0.125em 0.25em hsla(0, 0%, 14%, 0.2),
+        0.5em 0.125em 0.25em hsla(0, 0%, 8%, 0.4);
+    }
+
+    40% {
+      color: hsl(0, 0%, 0%);
+      text-shadow:
+        0 0 1em hsla(0, 0%, 27%, 0.5),
+        0 0 0.125em hsla(0, 0%, 22%, 0.5),
+        -0.25em -0.125em 0.125em hsla(0, 0%, 9%, 0.2),
+        0.25em 0.125em 0.125em hsla(0, 0%, 35%, 0.4);
+    }
+
+    70% {
+      color: hsl(0, 0%, 0%);
+      text-shadow:
+        0 0 1em hsla(0, 0%, 9%, 0.5),
+        0 0 0.125em hsla(0, 0%, 26%, 0.5),
+        0.5em -0.125em 0.25em hsla(0, 0%, 8%, 0.2),
+        -0.5em 0.125em 0.25em hsla(0, 0%, 4%, 0.4);
+    }
+
+    100% {
+      color: hsl(0, 0%, 0%);
+      text-shadow:
+        0 0 1em hsla(0, 0%, 49%, 0.2),
+        0 0 0.125em hsla(0, 0%, 4%, 0.3),
+        1em -0.125em 0.5em hsla(0, 0%, 9%, 0),
+        -1em 0.125em 0.5em hsla(0, 0%, 22%, 0);
+    }
+
+  }
+
+  @media (max-width: 809px) {
+
+    /* Your CSS rules for mobile devices */
+
+    .main-container {
+      flex-direction: column;
+    }
+
+    .left-container {
+      width: 100%;
+      height: 50%;
+    }
+
+    .left-container-content {
+      width: 80%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      flex-direction: column;
+    }
+
+    .main-heading {
+      font-size: 3rem;
+      font-weight: 100;
+      color: #000;
+      line-height: 0.1px;
+    }
+
+    .street {
+      font-weight: 600;
+      animation: lights 5s 750ms linear infinite;
+    }
+
+    .second-heading {
+      font-size: 3rem;
+      font-weight: 100;
+      color: #000;
+    }
+
+    .para {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #000;
+      text-align: end;
+      margin-top: 2rem;
+      line-height: 1.5em;
+    }
+
+    .para {
+      font-size: .6em;
+      line-height: 1.4;
+    }
+
+    .right-container {
+      width: 100%;
+      height: 50%;
+    }
+
+
+  }
+
+  @media (min-width: 810px) and (max-width: 1199px) {
+
+    /* Your CSS rules for tablets*/
+    .right-container {
+      width: 50%;
+      height: auto;
+      background-color: rgb(0, 0, 0);
+    }
+
+    .right-container-content {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-container {
+      width: 50%;
+      height: auto;
+    }
+
+    .left-container-content {
+      width: 80%;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      flex-direction: column;
+      padding-right: 5%;
+    }
+
+    .main-heading {
+      font-size: 4rem;
+      font-weight: 100;
+      color: #000;
+      line-height: 0.1px;
+    }
+
+    .second-heading {
+      font-size: 4rem;
+    }
+
+  }
+</style>
+
+<script>
+  // YOUR SCRIPT if any
+</script>

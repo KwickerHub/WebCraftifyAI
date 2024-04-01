@@ -26,28 +26,53 @@ print(r.text)
 
 
 #adding CSS Style
-file = open("css_styles.txt", 'r')
-cun = 0
-for i in file:
-    if "******" in i :
-        two_men =   i.split('******')
-        d_style_name = two_men[0].strip()
-        print()
-        #print(d_style_name + " --- "+ two_men[1].strip() )
-        cun = cun + 1
-        d_type = "others"
-        if( "height" in d_style_name or "width" in d_style_name or "size" in d_style_name or "radius" in d_style_name or "margin" in d_style_name or "padding" in d_style_name ):
-            d_type = "size"
-        elif ("color" in d_style_name):
-            d_type = "color"
-        elif ("image" in d_style_name):
-            d_type = "image"
-        elif ("display" in d_style_name or "overflow" in d_style_name or "position" in d_style_name or "float" in d_style_name):
-            d_type = "value"
 
-        payload = dict(style_name=d_style_name, type=d_type, description=two_men[1].strip())
-        r = requests.post('http://localhost/ACES_OPEN_SOURCE/backend/style/insert_style.php', data=payload)
-        print(r.text)
+cun = 0
+try:
+    with open("css_styles.css", 'r') as file:
+        for i in file:
+            if "******" in i:
+                two_men = i.split("******")
+                d_style_name = two_men[0].strip()
+                print()
+                # print(d_style_name + " --- "+ two_men[1].strip() )
+                cun = cun + 1
+                d_type = "others"
+                if (
+                    "height" in d_style_name
+                    or "width" in d_style_name
+                    or "size" in d_style_name
+                    or "radius" in d_style_name
+                    or "margin" in d_style_name
+                    or "padding" in d_style_name
+                ):
+                    d_type = "size"
+                elif "color" in d_style_name:
+                    d_type = "color"
+                elif "image" in d_style_name:
+                    d_type = "image"
+                elif (
+                    "display" in d_style_name
+                    or "overflow" in d_style_name
+                    or "position" in d_style_name
+                    or "float" in d_style_name
+                ):
+                    d_type = "value"
+
+                payload = dict(
+                    style_name=d_style_name, type=d_type, description=two_men[1].strip()
+                )
+                r = requests.post(
+                    "http://localhost/ACES_OPEN_SOURCE/backend/style/insert_style.php",
+                    data=payload,
+                    timeout=5,
+                )
+                print(r.text)
+except FileNotFoundError:
+    print("File not found. Please check the file path")
+except requests.exceptions.RequestException as e:
+    print(f"An error ocurred during the HTTP request: {e}")
+
 print(cun)
 #adding HTML TAGS
 """ #Adding HTML elements

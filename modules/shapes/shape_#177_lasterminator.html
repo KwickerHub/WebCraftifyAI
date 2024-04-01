@@ -1,0 +1,119 @@
+<style>
+    body {
+        margin: 0;
+        font-family: 'AR One Sans', sans-serif;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .text-section {
+        padding: 20px;
+        grid-column: 1 / 3;
+    }
+
+    .heading {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .subtext {
+        margin-bottom: 20px;
+    }
+
+    .contact-btn {
+        background-color: #0056b3;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        .text-section {
+            grid-column: 1;
+        }
+    }
+
+    .text-block {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #f0f0f0;
+        height: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    .text-block .heading {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .text-block p {
+        color: #666;
+        font-size: 1em;
+        line-height: 1.5;
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+</style>
+
+<div class="container">
+    <!-- First image -->
+    <div class="image-section">
+        <img src="https://images.pexels.com/photos/1268874/pexels-photo-1268874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Seagulls">
+    </div>
+    <!-- Second image -->
+    <div class="image-section">
+        <img src="https://images.pexels.com/photos/1007836/pexels-photo-1007836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Boat">
+    </div>
+    <!-- Text -->
+    <div class="text-block">
+        <h2 class="heading">Adventure Awaits</h2>
+        <p>Join us as we explore the uncharted territories and experience new cultures, cuisines, and conversations.
+            Pack your bags for an adventure of a lifetime!</p>
+    </div>
+    <!-- Third image  -->
+    <div class="image-section">
+        <img src="https://images.pexels.com/photos/1330219/pexels-photo-1330219.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Waves">
+    </div>
+    <div class="text-section">
+        <h1 class="heading">Discover the World</h1>
+        <!-- <p class="subtext"></p> -->
+        <a href="#" class="contact-btn">Explore</a>
+    </div>
+</div>

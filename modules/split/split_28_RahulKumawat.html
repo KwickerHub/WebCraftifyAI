@@ -1,0 +1,188 @@
+
+<head>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<div class="main">
+    <div class="first_half">
+        <div class="content">
+          <div class="our">Our Website is</div>
+          <div class="coming">COMING SOON</div>
+          <div class="we">we’re working hard to give you the best experience</div>
+          <div class="soical">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+          </div>
+      </div>
+    </div>
+    <div class="second_half">
+      <div class="second_content">
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Vitae, quam magnam repellat quos deserunt dolor neque vero porro veritatis
+           temporibus veniam itaque non, rem nulla 
+           explicabo blanditiis quidem illo minima.
+         </div>
+         <button class="Notify">NOTIFTY ME</button>
+        </div>
+    </div>     
+</div>
+
+
+<style>
+      * {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    }
+html{
+    font-size: 62.5%;
+}
+.main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+}
+.first_half{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    background-image:url(./images/istockphoto-152049724-170667a.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    width: 60%;
+    display: inline-block;
+    height: auto;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+   
+    
+}
+.our{
+    font-size: 2.5rem;
+    color: rgb(235, 232, 232);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+.coming{
+    font-size: 6rem;
+    color: aliceblue;
+    font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:600;
+  font-style: normal;
+    margin-top: 10px;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: relative;
+    
+}
+.coming::after{
+    content: "";
+    position: absolute;
+    width: 105%;
+    left: 0px;
+    bottom: 0px;
+    margin-right: 100px;
+    border: 1px solid white;
+}
+.we{
+    font-size: 2.5rem;
+    width: 70%;
+    color: rgb(213, 210, 210);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 6%;
+    margin-bottom: 15%;
+    
+
+}
+.soical{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    bottom: 0px;
+}
+.fa-brands{
+    color:white;
+    font-size: 3rem;
+
+}
+.second_half{
+    width: 30%;
+    height: 100%;
+    background-color: aliceblue;  
+    position: relative;
+}
+.second_content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+}
+.text{
+    margin-left: 10%;
+    color: rgb(186, 183, 183);
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.Notify{
+    margin-left: 10%;
+    padding: 7px 9px;
+    width: 30%;
+    height: 40px;
+    background-color: rgba(248, 65, 120, 1);
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+
+/* Use media queries to adjust font size based on viewport width */
+@media screen and (max-width: 1068px) {
+    html {
+      font-size: 8px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 865px) {
+    html {
+      font-size: 6px; /* Adjust font size for even smaller screens */
+    }
+  }
+  @media screen and (max-width: 628px) {
+    html {
+      font-size: 4.8px; /* Adjust font size for even smaller screens */
+    }
+  }
+  @media screen and (max-width: 500px) {
+    html {
+      font-size: 5px; /* Adjust font size for even smaller screens */
+    }
+    .main{
+        flex-direction: column;
+    }
+    .first_half{
+        width: 100%;
+    }
+    .second_half{
+        width: 100%;
+    }
+  }
+    </style>

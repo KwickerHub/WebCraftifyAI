@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camping Trip</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&family=Open+Sans:wght@200;300&family=Oswald:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap">
+  <style>
+    #body {
+      width: 100%;
+      height: max-content;
+      margin: 0;
+      color: #62b4ba;
+      font-family: "Oswald", sans-serif;
+    }
+    .main-title {
+      width: max-content;
+      text-align: center;
+      justify-content: center;
+      letter-spacing: 0.2rem;
+      margin: 2% auto;
+      color: black; /* Change the color to black */
+      font-family: 'Noto Sans Linear B', sans-serif; /* New font family */
+      font-size: 36px; /* Increased font size to 36 pixels */
+    }
+    .main_container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto;
+      gap: 2px;
+    }
+    .c1-r1, .c2-r2, .c3-r1, .c4-r2, .c1-r2, .c2-r1, .c3-r2, .c4-r1 {
+      height: 40%;
+    }
+    .sub_container {
+      width: 200px;
+      height: 70vh;
+      margin: 0%;
+      padding: 0%;
+      gap: 0;
+    }
+    .imageContainer {
+      width: 80%; /* Changed from 80% to 100% */
+      height: 80%;
+      border-radius: 50%;
+      margin: 0 auto; /* Added to center the image */
+    }
+    .img1 {
+      background-image: url("./images_and_icons/grid_324_plan your trip.jpeg");
+    }
+    .img2 {
+      background-image: url("./images_and_icons/grid_324_know your limits.jpeg");
+    }
+    .img3 {
+      background-image: url("./images_and_icons/grid_324_prepare-Gearup.jpeg");
+    }
+    .img4 {
+      background-image: url("./images_and_icons/grid_324_incase of emergency.jpeg");
+    }
+    .img1, .img2, .img3, .img4 {
+      background-size: 100% 100%;
+    }
+    .img-description {
+      width: 75%;
+      height: max-content;
+      margin: 0px auto;
+    }
+    .sub-title {
+      margin: 7px 10px;
+      letter-spacing: 1px;
+      font-weight: 200;
+      font-size: 18px; /* Adjust the font size as needed */
+      white-space: nowrap; /* Added to keep the text in a single line */
+      color: black; /* Change the color to black */
+    }
+    .sub-title-desc {
+      color: black;
+      font-size: 12px;
+      font-weight: normal;
+      margin: 0 10px;
+    }
+    .signature {
+      text-align: center;
+      margin: 0;
+      font-family: 'Monsieur La Doulaise', cursive;
+    }
+
+    @media screen and (max-width: 1025px) {
+      .main_container {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: none;
+        height: max-content;
+        justify-content: center;
+        transform: translate(-70px, 10px);
+      }
+      .imageContainer {
+        width: 155px;
+        height: 145px;
+      }
+      .img-description {
+        width: 150px;
+      }
+      .sub_container {
+        display: flex;
+        height: 200px;
+      }
+    }
+
+    @media screen and (width >1920px) {
+      .main_container {
+        margin-left:15%;
+      }
+      .imageContainer {
+        width:350px;
+        height:350px;
+      }
+      .sub-title {
+        font-size: 25px;
+      }
+      .sub-title-desc {
+        font-size: 12px;
+      }
+      .img-description {
+        width: 250px;
+      }
+      .signature {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="body">
+    <h1 class="main-title">How to plan a camping trip</h1>
+    <div class="main_container">
+      <div class="container1 sub_container">
+        <div class="c1-r1"><div class="imageContainer img1"></div></div>
+        <div class="c1-r2">
+          <div class="img-description">
+            <h3 class="sub-title">Plan your trip</h3>
+            <p class="sub-title-desc">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container2 sub_container">
+        <div class="c2-r1">
+          <div class="img-description">
+            <h3 class="sub-title">know your limits</h3>
+            <p class="sub-title-desc">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+          </div>
+        </div>
+        <div class="c2-r2"><div class="imageContainer img2"></div></div>
+      </div>
+      <div class="container3 sub_container">
+        <div class="c3-r1"><div class="imageContainer img3"></div></div>
+        <div class="c3-r2">
+          <div class="img-description">
+            <h3 class="sub-title">Incase of emergency</h3>
+            <p class="sub-title-desc">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container4 sub_container">
+        <div class="c4-r1">
+          <div class="img-description">
+            <h3 class="sub-title">prepare - Gearup</h3>
+            <p class="sub-title-desc"> Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+          </div>
+        </div>
+        <div class="c4-r2"><div class="imageContainer img4"></div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

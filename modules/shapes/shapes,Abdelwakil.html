@@ -1,0 +1,139 @@
+<style>
+    body {
+        margin:0;
+        padding:0;
+    }
+    .shape-01{
+        width:100vw;
+        height:100vh;
+        background: linear-gradient(45deg, #82c7f5, #fa796b);
+        font-family: 'Brush Script MT', cursive;
+        overflow:hidden;
+        overflow-y:scroll;
+    }
+    
+    .navbar-01 {
+        position:fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height:50px;
+        display:flex;
+        z-index: 1;
+        background-color:#edebeb;
+    }
+    
+    .navbar-01 a{
+        color: black;
+        transition: color 0.2s ease;
+        display: inline-block;
+        padding: 0.75rem 0.5rem;
+        text-decoration: none;
+    }
+    
+    .navbar-01 a:last-child{
+        margin-left:auto;
+		margin-right:1rem;
+    }
+    
+    .navbar-01 a:hover{
+        color: gray;
+		cursor: pointer;
+    }
+
+    .shape-01 .sec-01 {
+        margin-top:3rem;
+        width:100%;
+        height:60%;
+    }
+    
+    .shape-01 .sec-01-bg {
+        height:100%;
+        background-image: url(images_and_icons/back_s1.png);
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:60% 100%;
+    }
+    
+    .shape-01 .sec-02{
+        color: #fff;
+        padding: 50px;
+        padding-top:0;
+        text-align: center;
+        height: calc(40% - 150px);
+    }
+
+    .shape-01 h2 {
+        color: #fff;
+    }
+
+    .shape-01 p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #fff;
+    }
+
+    .shape-01 .cta-button {
+        display: block;
+		width: 9rem;
+		margin-left:auto;
+		margin-right:auto;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #fff;
+        color: #3498db;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 20px;
+        transition: transform 0.3s,color 0.3s;
+    }
+
+    .shape-01 .cta-button:hover {
+        background-color: #3498db;
+        color: #fff;
+		transform:scale(1.1);
+    }
+    @media screen and (orientation: portrait){
+        .shape-01 .sec-01-bg {
+            height:100%;
+            background-image: url(back_s1.png);
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+        }
+    }
+    @media screen and (orientation: landscape){
+        .shape-01 .sec-01 {
+            margin-top:3rem;
+            width:100%;
+            height:50%;
+        }
+        .shape-01 .sec-02{
+            padding: 10px;
+            padding-top:0;
+            height: 50%;
+        }
+    }
+</style>
+<div class="shape-01">
+    <nav class="navbar-01">
+        <a class="a" id="a1" >Home</a>
+        <a class="a" id="a2" >Services</a>
+        <a class="a" id="a3" >Contact</a>
+        <a class="a" id="a3" >Log In</a>
+    </nav>
+    <section class="sec-01">
+        <div class="sec-01-bg"></div>
+    </section>
+    <section class="sec-02">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet ...</p>
+        <a href="#" class="cta-button">Learn More</a>
+    </section>
+</div>
+<script>
+    let anch = document.querySelectorAll(".a");
+    anch.forEach(a => {
+        a.addEventListener('click', () => console.log("#"));
+    });
+</script>

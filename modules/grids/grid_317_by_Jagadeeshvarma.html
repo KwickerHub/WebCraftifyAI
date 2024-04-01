@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulting Services</title>
+<style>
+  /* Reset default browser styles */
+  body, h1, h2, ul, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Container for the whole page */
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* Header styles */
+  header {
+    text-align: center;
+    margin: 20px 0;
+  }
+  /* Grid layout for the services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+    margin-bottom: 30px;
+  }
+
+  /* Individual service card styles */
+  .service-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left; /* Align text to the left */
+  }
+
+  /* Image styles within each card */
+  .service-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  /* Heading within each card */
+  .service-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  /* Unordered list styles */
+  .service-card ul {
+    list-style: none;
+    padding: 0;
+  }
+.service-card li::before {
+    content: "\2713"; /* Unicode for checkmark */
+    color: white; /* White checkmark */
+    background-color: #007bff; /* Blue background */
+    border-radius: 50%; /* Make it round */
+    padding: 0.2em; /* Padding inside the circle */
+    margin-right: 0.5em; /* Space between the bullet and the text */
+    font-size: 0.8em; /* Adjust size as needed */
+    display: inline-block;
+    width: 1em; /* Ensures a round shape */
+    height: 1em; /* Ensures a round shape */
+    text-align: center;
+    line-height: 1em; /* Center the checkmark vertically */
+  }
+
+  /* List item styles */
+  .service-card li {
+    margin-bottom: 5px;
+    line-height: 1.6;
+  }
+
+  /* Button styles within each card */
+  .details-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-card.first-card {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Space between grid items */
+    margin-bottom: 20px;
+  }
+
+  /* Light blue background for the 2nd and 5th grid items */
+  .services-grid .service-card:nth-child(2),
+  .services-grid .service-card:nth-child(5) {
+    background-color: #ADD8E6; /* Example light blue color */
+  }
+/* Style for 3rd item with light yellow background */
+  .services-grid .service-card:nth-child(3) {
+    background-color: #FFFFE0; /* Light yellow */
+  }
+
+  /* Style for 4th and 6th items with light pink background */
+  .services-grid .service-card:nth-child(4),
+  .services-grid .service-card:nth-child(6) {
+    background-color: #FFB6C1; /* Light pink */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+   <!-- Service Card 0 -->
+  <div class="services-grid">
+    <!-- Modified Service Card 1 to be transparent -->
+    <div class="service-card first-card">
+      <h1>A leading consult services</h1>
+      Sample text. Click to select the Text Element.
+      <button class="details-btn">All Services</button>
+    </div>
+    <!-- Service Card 1 -->
+    <div class="service-card">
+      <img src="images_and_icons/1.png" alt="Strategy & Planning">
+      <h2>Strategy & Planning</h2>
+      <ul>
+        <li>Time for lead research, work</li>
+        <li>Trades & Stocks</li>
+        <li>Business Opportunities</li>
+      </ul>
+      <button class="details-btn">Get Details →</button>
+    </div>
+
+    <!-- Service Card 2 -->
+    <div class="service-card">
+      <img src="images_and_icons/2.png" alt="Investment Policy">
+      <h2>Investment Policy</h2>
+      <ul>
+        <li>Time for lead research, work</li>
+        <li>Trades & Stocks</li>
+        <li>Business Opportunities</li>
+      </ul>
+      <button class="details-btn">Get Details →</button>
+    </div>
+
+    <!-- Service Card 3 -->
+    <div class="service-card">
+      <img src="images_and_icons/3.png" alt="Tax Management">
+      <h2>Tax Management</h2>
+      <ul>
+        <li>Time for lead research, work</li>
+        <li>Trades & Stocks</li>
+        <li>Business Opportunities</li>
+      </ul>
+      <button class="details-btn">Get Details →</button>
+    </div>
+
+    <!-- Service Card 4 -->
+    <div class="service-card">
+      <img src="images_and_icons/4.png" alt="Financial Advice">
+      <h2>Financial Advice</h2>
+      <ul>
+        <li>Time for lead research, work</li>
+        <li>Trades & Stocks</li>
+        <li>Business Opportunities</li>
+      </ul>
+      <button class="details-btn">Get Details →</button>
+    </div>
+	<!-- Service Card 5 -->
+    <div class="service-card">
+      <img src="images_and_icons/5.png" alt="Financial Advice">
+      <h2>Investment Policy</h2>
+      <ul>
+        <li>Time for lead research, work</li>
+        <li>Trades & Stocks</li>
+        <li>Business Opportunities</li>
+      </ul>
+      <button class="details-btn">Get Details →</button>
+    </div>	
+  </div>		
+</body>
+</html>

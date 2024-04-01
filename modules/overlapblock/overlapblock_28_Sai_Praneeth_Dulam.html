@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Create Online Shops</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+        body, html {
+            height: 100%;
+            width:  100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+
+            background-image: url('./images_and_icons/shopping.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center; 
+            
+        }
+
+        .header {
+          
+            padding: 2em;
+            border-radius: 15px;
+            max-width: 40%; 
+            margin-left: 5%; 
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+        }
+
+        .header h1 {
+            font-size: 4em;
+            color: #333;
+            font-weight: normal; /* Montserrat regular weight for "We Create" */
+        }
+
+        .header h1 .online-shops {
+            font-weight: bold; /* Montserrat bold weight for "Online Shops" */
+        }
+
+        .header p {
+            font-size: 1em;
+            color: #333;
+            margin-top: 0.5em; /* Space between title and paragraph */
+        }
+
+        .order-button {
+            background-color: #ff6868;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+            outline: none;
+            margin-top: 20px;
+        }
+
+        .order-button:hover {
+            background-color: #e05757;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .header {
+                max-width: 80%;
+                margin-right: 10%; /*Spacing from the right edge */
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header h1 .online-shops {
+            font-weight: bold;
+            }
+            .header p {
+                font-size: 0.8em;
+            }
+            .order-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>We Create  </br>
+    <span class="online-shops">Online Shops</span>
+    </h1>
+    <p>Empower your brand with a bespoke online store, tailored to provide a seamless shopping experience for your customers.</p>
+    <button class="order-button">Order Now</button>
+</div>
+
+</body>
+</html>

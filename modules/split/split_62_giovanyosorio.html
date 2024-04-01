@@ -1,0 +1,127 @@
+
+<div>
+
+    <div class="main-container">
+      <div class="left-container">
+        <div class="left-container-content">
+          <h2 class="main-heading">About Us</h2>
+          <h1 class="second-heading">Awesome Chef Restaurant</h1>
+          <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellat vero cumque iusto illo eius fuga optio, quas voluptate consequatur illum quibusdam magni est aliquid. Necessitatibus deserunt ad laudantium adipisci!</p>
+              <button>
+        Follow us
+      </button>
+        </div>
+      </div>
+      <div class="right-container">
+        <img src="./images_and_icons/serving-food.jpg" alt="Serving-food">
+      </div>
+  
+    </div>
+  </div>
+  
+<style>
+    
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .left-container {
+    width: 50%;
+    height: 100%;
+    background-color: #322D29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-container-content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    padding-right: 5%;
+  }
+
+  .main-heading {
+    font-size: 3rem;
+    font-weight: 10;
+    color: #ffffff;
+    line-height: 0.1px;
+    text-align: center;
+    margin:140px;
+    margin-bottom: 50px;
+  }
+
+  .street {
+    font-weight: 600;
+    animation: lights 5s 750ms linear infinite;
+  }
+
+  .second-heading {
+    font-family: italic;
+    font-size: 3rem;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.5em;
+  
+  }
+
+  .right-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .right-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .right-container img:hover {
+    transform: scale(1.2);
+  }
+ 
+button{
+  margin:50px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #322D29;
+  color: white;
+}
+
+button:hover{
+  background-color: #47413a;
+}
+
+
+</style>

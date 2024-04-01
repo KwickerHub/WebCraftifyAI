@@ -1,0 +1,99 @@
+<div class="main-div">
+    <div class="right-div">
+      <img src="./images_and_icons/image21.jpg" alt="Image">
+    </div>
+    <div class="left-div">
+      <div class="big-text-div">
+        <h3>MINIMALIST <br>
+           INTERIOR</h3>
+       
+        <h2>DESIGN</h2>
+      </div>
+      <div class="small-text-div">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+  </div>
+
+<style>
+     * {
+      font-family: Arial, Helvetica, sans-serif;;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0; 
+    }
+
+    .main-div {
+      display: flex;
+      height: 100vh;
+    }
+
+    .right-div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; 
+    }
+
+    .right-div img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out; 
+      cursor: pointer; 
+    }
+
+    .right-div img:hover {
+      transform: scale(1.2); 
+    }
+
+    .left-div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      background-color: #000;
+      color: white;
+    }
+    h3{
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+    h2{
+      font-size: 2.9rem;
+      font-weight: 900;
+    }
+    .big-text-div {
+      text-align: end;
+      margin: 2vw;
+      margin-bottom: 20px;
+    }
+    p{
+      max-width: 50%;
+      margin: 2vw;
+    }
+    @media (max-width: 768px) {
+      .main-div {
+        flex-direction: column;
+      }
+
+      .right-div,
+      .left-div {
+        width: 100%;
+        height: 50vh;
+      }
+    }
+</style>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Screen Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+        }
+        .left, .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .left {
+            background-image: url('./images_and_icons/html-template-273158.jpg');
+            background-size: cover;
+        }
+        .right {
+            background-color: #f0f0f0;
+        }
+        .title, .description {
+            color: white;
+            text-align: center;
+            position: absolute;
+            bottom: 10%;
+        }
+        .description {
+            right: 5%;
+            left: 5%;
+            color: black; 
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <div class="title">
+            <h1>Minimal Landscape</h1>
+        </div>
+    </div>
+    <div class="right">
+        <div class="description">
+            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

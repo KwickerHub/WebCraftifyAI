@@ -1,36 +1,36 @@
 
 
 
- .brief_hint{
+ .brief_hint {
     /* width: 30%; */
     vertical-align: middle;
 }
 
-.brief_hint_textarea{
+.brief_hint_textarea {
     /* width: 30%; */
     vertical-align: top;
 }
 
-.text_input{
+.text_input {
     padding: 12px;
     border-radius: 5px;
     /* width: 50%; */
     width: 320px;
 }
 
-.button_input{
+.button_input {
     padding: 12px;
     border-radius: 5px;
     width: 50%;
     text-align: center;
-    background-color: rgb(106, 204, 103);
+    background-color: rgb(106 204 103);
 }
-.button_input:hover{
-    background-color: rgb(5, 46, 4);
+.button_input:hover {
+    background-color: rgb(5 46 4);
     color: #fff;
 }
 
-.the_Selected_displayer{
+.the_Selected_displayer {
     display: block;
     /* background-color: blue; */
     height: 35vh;

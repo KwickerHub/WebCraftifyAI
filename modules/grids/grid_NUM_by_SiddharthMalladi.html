@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Layout</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .grid-item {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item:nth-child(odd) {
+    background-color: #ffcc00;
+  }
+
+  .grid-item:nth-child(even) {
+    background-color: #cc0099;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.05);
+  }
+
+  .grid-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .grid-item h3 {
+    margin: 10px 0;
+    color: #ffffff;
+  }
+
+  .grid-item p {
+    color: #ffffff;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item" id="item1">
+    <img src="modules/grids/images_and_icons/image1male.png" alt="User 1">
+    <h3>John Doe, developer</h3>
+    <p>Quick tip creator started making blogs with tips from culinary professionals but kept having fun. Launches start-ups, gained new roles. They are loyal to us!</p>
+  </div>
+  <div class="grid-item" id="item2">
+    <img src="modules/grids/images_and_icons/image2female.png" alt="User 2">
+    <h3>Jane Smith, manager</h3>
+    <p>Another quick tip creator who started making vlogs about management and productivity. They are a significant asset to our team and community!</p>
+  </div>
+  <!-- Add more grid items as needed -->
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    gridItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.opacity = '0.8';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.opacity = '1';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

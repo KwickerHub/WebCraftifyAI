@@ -1,0 +1,101 @@
+<div class="module-container">
+    <div class="fitness-module">
+        <div class="fitness-content">
+            <h1>IT'S NOT FITNESS.<br>IT'S LIFE.</h1>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button class="fitness-btn">LEARN MORE</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .module-container {
+        background: url('https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat;
+        background-size: cover;
+        background-position: right;
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        background-color: #f8f9fa;
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fitness-module {
+        background-color: white;
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 50px; /* Add margin-bottom to provide some space from the bottom */
+        margin-right: 50px; /* Add margin-right to provide some space from the right */
+    }
+
+
+
+    .fitness-content {
+        max-width: 480px;
+        color: #333;
+    }
+
+    .fitness-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .fitness-content p {
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .fitness-btn {
+        padding: 10px 25px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .fitness-btn:hover {
+        background-color: #0056b3;
+    }
+
+    @media (max-width: 992px) {
+        .module-container {
+            padding: 30px;
+        }
+        .fitness-module {
+            flex-direction: column;
+            background-position: center;
+            padding: 30px;
+        }
+
+        .fitness-content {
+            max-width: none;
+            text-align: center;
+        }
+    }
+</style>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script>
+    // Your script here if needed
+</script>

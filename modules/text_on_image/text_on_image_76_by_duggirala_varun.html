@@ -1,0 +1,101 @@
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+        }
+        .background {
+            background-image: url('images_and_icons/background_76.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-left: 6%; 
+        }
+        .circle {
+            background-color: #8ef01e;
+            color: #000; 
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .percent {
+            font-size: 3em; 
+            margin-bottom: 0;
+        }
+        .offer-text {
+            font-size: 1.5em; 
+            margin-top: 0;
+        }
+        .title {
+            color: #fff;
+            margin: 10px;
+            font-size: 3em; 
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            color: #ccc;
+            margin-bottom: 20px;
+            font-size: 1.2em; 
+        }
+        .btn {
+            background-color: #ffc107;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            width: 150px;
+            height: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e0a800;
+        }
+    </style>
+
+    <div class="background">
+        <div class="container">
+            <div class="circle">
+                <div class="percent">40%</div>
+                <div class="offer-text">Business Lunch</div>
+            </div>
+            <p class="subtitle">New Restaurant</p>
+            <h1 class="title">Where every <br> ingredient <br>tells a story</h1>
+            <p class="subtitle">Lorem ipsum dolor</p>
+            <button class="btn" onclick="shopNow()">SHOP NOW</button>
+        </div>
+    </div>
+
+    <script>
+        function shopNow() {
+            alert('Heading to the shop!');
+        }
+    </script>
+

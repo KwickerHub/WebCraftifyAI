@@ -1,0 +1,49 @@
+<div>
+  <div class="container" id="container">
+    <div class="circle"></div>
+  </div>
+</div>
+<style>
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #009fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .circle {
+    animation: animCircle 7s linear;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  @keyframes animCircle {
+    0% {
+      width: 0px;
+      height: 0px;
+      background-color: rgb(200, 200, 200);
+      opacity: 1;
+    }
+    100% {
+      width: 1500px;
+      height: 1500px;
+      background-color: white;
+      opacity: 0;
+    }
+  }
+</style>
+<script>
+  const container = document.getElementById("container");
+  setInterval(() => {
+    const circle = document.createElement("div");
+    circle.classList.add("circle");
+    container.append(circle);
+  }, 1000);
+  setTimeout(() => {
+    let interval = setInterval(() => {
+      container.firstElementChild.remove();
+    }, 1000);
+  }, 7000);
+</script>

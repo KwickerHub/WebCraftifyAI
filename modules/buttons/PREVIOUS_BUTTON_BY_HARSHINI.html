@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previous Button</title>
+<style>
+  body{
+      background: #d9d9d9;
+  }
+  .button-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  .previous-btn {
+    position: relative;
+    padding: 10px 30px;
+    background-color: #0396c7;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0px 20px 20px 0px; /* Creates rounded edges */
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Hide overflow */
+  }
+  .previous-btn:hover {
+    background-color: #0396c7;
+  }
+  .previous-btn:active {
+    background-color: #0396c7;
+  }
+  
+  .btn-arrow2 {
+    position: absolute;
+    left: 42.75%;
+    top: 47.5%;
+    transform: translateY(-50%) scale(0.7);
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent; /* Size of the arrow head */
+    border-bottom: 30px solid transparent; /* Size of the arrow head */
+    border-right: 55px solid rgba(255, 255, 255, 0.7); /* Color and transparency of the arrow body */
+    border-radius: 8px; /* Adjust the radius as needed */
+    overflow: hidden; /* Hide overflow */
+    
+  }
+
+  .shadow-arrow {
+    position: absolute;
+    left: 42.75%;
+    top: 47.5%;
+    transform: translateY(-50%) scale(0.7);
+    width: 55px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    z-index: -1;
+
+  }
+
+  /*.btn-arrow {
+    position: absolute;
+    left: 25.75%;
+    top: 47.5%;
+    transform: translateY(-50%) scale(0.7);
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent; 
+    border-bottom: 30px solid transparent; 
+    border-right: 55px solid #0396c7;
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); 
+  }*/
+ .arrow-sty{
+
+  position: absolute;
+    left: 41.4%;
+    top: 3.5px;
+    z-index: 1;
+ }
+ .arrow-sty-1{
+
+position: absolute;
+    left: 41.5%;
+    top: 4.5px;
+    z-index: 2;
+
+}
+  .btn-arrow  {
+	position: relative;
+	background-color: rgb(255, 255, 255);
+	text-align: left;
+ 
+}
+.btn-arrow-1  {
+	position: relative;
+	background-color: rgb(255, 255, 255);
+  border-right: 1px solid black;
+    border-top: 1px solid black;
+	text-align: left;
+}
+.btn-arrow-2  {
+	position: relative;
+	background-color: #0396c7;
+
+	text-align: left;
+}
+.btn-arrow:before,
+.btn-arrow:after, .btn-arrow-1:before,.btn-arrow-1:after,.btn-arrow-2:before,.btn-arrow-2:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.btn-arrow,
+.btn-arrow:before,
+.btn-arrow:after {
+  width: 2em;
+  height: 2em;
+	border-top-right-radius: 30%;
+}
+.btn-arrow-1,
+.btn-arrow-1:before,
+.btn-arrow-1:after {
+  width: 1.8em;
+    height: 1.8em;
+    border-top-right-radius: 30%;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+.btn-arrow-2,
+.btn-arrow-2:before,
+.btn-arrow-2:after {
+  width: 1.8em;
+    height: 1.8em;
+    border-top-right-radius: 30%;
+    
+}
+.btn-arrow,.btn-arrow-1,.btn-arrow-2 {
+	transform: rotate(-150deg) skewX(-30deg) scale(1,.866);
+}
+.btn-arrow:before, .btn-arrow-1:before,.btn-arrow-2:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.btn-arrow:after,.btn-arrow-1:after,.btn-arrow-2:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+.arrow-sty-2{
+
+position: absolute;
+left: 41.1%;
+    top: -2.5px;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="button-container">
+  <button class="previous-btn" onclick="previous()">PREVIOUS</button>
+  <div class="arrow-sty">
+  <div class="btn-arrow"></div>
+  
+  </div>
+  <div class="arrow-sty-1">
+  <div class="btn-arrow-1"></div>
+  </div>
+  <div class="arrow-sty-2">
+    <div class="btn-arrow-2"></div>
+    </div>
+  <!--div class="btn-arrow2"></div>
+  <div class="shadow-arrow"></div-->
+</div>
+
+<script>
+  function previous() {
+    // JavaScript to handle the login action
+    alert("Perform previous action here.");
+  }
+</script>
+
+</body>
+</html>

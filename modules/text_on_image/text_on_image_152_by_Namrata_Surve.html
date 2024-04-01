@@ -1,0 +1,88 @@
+<div class="text-on-image-container">
+    <img src="./images_and_icons/back152.jpg" alt="Full Screen Image">
+    <div id="image-content">
+        <h1>Welcome to My Website</h1>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+        <button id="interactive-button" onclick="showAlert()">Click me!</button>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+
+
+	.text-on-image-container {
+		margin: 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: black;
+
+        
+
+
+	}
+
+	.text-on-image-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	#image-content {
+		position: absolute;
+		top: 30%;
+		left: 20%; /* Adjusted left value for shifting to the left */
+		text-align: left; /* Align text to the left */
+		animation: slideIn 1s forwards, fadeIn 1s forwards;
+	}
+
+	.text-on-image-container p{
+		width: 40%;
+	}
+
+	@keyframes slideIn {
+		from {
+			left: -100%;
+		}
+		to {
+			left: 10%; /* Adjusted left value for shifting to the left */
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	#interactive-button {
+		padding: 10px 20px;
+		font-size: 18px;
+		background-color: #6D403E;
+		color: black;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+	}
+
+	#interactive-button:hover {
+		background-color: white;
+	}
+</style>
+
+<script>
+    function showAlert() {
+        alert('You clicked the button!');
+    }
+</script>
+
+

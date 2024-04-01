@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .image,
+        .content {
+            flex: 1;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Adjusted to contain instead of cover */
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3.5em;
+            margin-bottom: 20px
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.3em;
+            font-weight: lighter;
+            margin-bottom: 50px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 3em;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.3em;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .content {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .image {
+                width: 100%; /* Set the width to 100% for smaller screens */
+                max-width: 600px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2em;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 0.8em;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="images_and_icons/background_116.png" alt="image of a person">
+        </div>
+        <div class="content">
+            <h1>Works for you,<br> even when you <br>aren't working</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+            <button class="button">learn more</button>
+        </div>
+    </div>
+</body>
+</html>
+

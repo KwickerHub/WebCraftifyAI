@@ -1,0 +1,99 @@
+<div class="background opaquebg">
+  <div class="box">
+    <h1 class="header">
+      <b>Repair & Access Services</b>
+    </h1>
+    <br /><br />
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+      repellendus quia doloribus ullam fugit perferendis, itaque repellat
+      quaerat, provident porro esse quo ad fugiat necessitatibus.
+    </p>
+    <p class="subtext">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <a href="#"><button class="btn">READ MORE</button></a>
+  </div>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url("images_and_icons/background-89.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .background::before {
+    background-color: rgba(0, 0, 0, 0.3);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .box {
+    align-items: left;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 50vw;
+    height: 50vh;
+    transform: translateY(50%);
+  }
+
+  h1 {
+    padding: 25px;
+    font-size: 3em;
+    width: 40vw;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: white;
+    text-align: center;
+  }
+
+  .description {
+    padding: 25px;
+    padding-top: 0;
+    width: 40vw;
+    text-align: justify;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .subtext {
+    padding: 25px;
+    padding-top: 22px;
+    width: 40vw;
+    text-align: justify;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .btn {
+    margin-top: 15px;
+    margin-left: 25px;
+    border: 2px solid white;
+    padding: 15px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>

@@ -1,0 +1,151 @@
+<style>
+    body {
+      font-family: 'Open Sans',sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .header {
+      background: white;
+      color: black;
+      padding: 10px 0;
+    }
+    .table-header {
+      display: flex;
+      font-family: 'Open Sans',sans-serif;
+      justify-content: space-between;
+      background: #f7743d;
+      color: white;
+      padding: 8px;
+      margin-bottom: 20px; /* Space between header and first row */
+      font-size: 14px;
+    }
+    .table-row {
+      display: flex;
+      font-family: 'Open Sans',sans-serif;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 8px;
+      font-size: 14px;
+    }
+    .table-row:last-child {
+      margin-bottom: 20px; /* Space between the last row and READ MORE */
+    }
+    .table-row > div, .table-header > div {
+      flex: 1;
+      text-align: left;
+    }
+    .table-row > div:last-child {
+      text-align: right;
+    }
+    .button {
+        background-color: #fff; /* White background */
+        border: 1px solid #000; /* Black border */
+        color: #000; /* Black text */
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    .button1 {
+        background-color: #f7743d; /* orangered background */
+        border: none;
+        color: white; /* White text */
+        padding: 10px 20px;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-top: 20px; /* Space between the last row and READ MORE */
+    }
+    .trip-name {
+        font-family: 'Open Sans',sans-serif;
+        color: #f7743d; /* The specified orange color */
+    }
+    .subheading {
+        text-align: center; /* Center the subheading text */
+        background: white;
+        color: black;
+        padding: 10px 0;
+        margin-top: -27px; /* Adjust the top margin to prevent overlap */
+        opacity: 0; /* Start with the subheading invisible */
+    }
+    .button:hover {
+        background-color: #A9A9A9; /* Grey background on hover */
+    }
+    .button:hover {
+        background-color: #A9A9A9; /* Grey background on hover */
+    }
+    .button1:hover {
+        background-color: #A9A9A9; /* Grey background on hover */
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Initial state for animation */
+    .header, .subheading, .button1 {
+        opacity: 0;
+    }
+
+    /* Animation for header and subheading */
+    .header, .subheading, .button1 {
+        animation: fadeIn 1s ease-out 1s forwards;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Africa Travel Deals</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+  </div>
+  <div class="subheading"> <!-- Centered subheading -->
+    <p>incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="table-header">
+    <div>DEPARTING</div>
+    <div>TRIP NAME</div>
+    <div>DAYS</div>
+    <div>FROM EUR</div>
+    <div></div> <!-- Empty div for alignment -->
+  </div>
+  <div class="table-row">
+    <div><b>18 SEP 2023</b></div>
+    <div class="trip-name"><b>Zanzibar to Victoria Falls</b></div>
+    <div>16</div>
+    <div><b>1.722 €</b></div>
+    <div><button class="button"><b>VIEW TRIP</b></button></div>
+  </div>
+  <div class="table-row">
+    <div><b>15 SEP 2023</b></div>
+    <div class="trip-name"><b>Zanzibar to Zanzibar North Coast</b></div>
+    <div>6</div>
+    <div><b>1.240 €</b></div>
+    <div><button class="button"><b>VIEW TRIP</b></button></div>
+  </div>
+  <div class="table-row">
+    <div><b>15 SEP 2023</b></div>
+    <div class="trip-name"><b>Nairobi to Nairobi</b></div>
+    <div>5</div>
+    <div><b>978 €</b></div>
+    <div><button class="button"><b>VIEW TRIP</b></button></div>
+  </div>
+  <div class="table-row">
+    <div><b>15 SEP 2023</b></div>
+    <div class="trip-name"><b>Cape Town to Cape Town</b></div>
+    <div>3</div>
+    <div><b>569 €</b></div>
+    <div><button class="button"><b>VIEW TRIP</b></button></div>
+  </div>
+  <!-- You can add more rows here following the same structure -->
+  <button class="button1"><b>READ MORE</b></button>
+</div>
+</body>

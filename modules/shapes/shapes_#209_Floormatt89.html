@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML Section-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Button</title>
+</head>
+<body>
+
+    <div class="blue-half-section">
+        <div class="blue-content">
+            <h2>Welcome to button clicking website</h2>
+            <p>However DO NOT click on the button</p>
+        </div>
+    </div>
+    
+    <div class="black-half-section" id="black-half-section">
+        <div class="black-content">
+            <h2 id="black-heading">What did I say!?</h2>
+            <p id="black-paragraph">Stop CLICKING</p>
+        </div>
+    </div>
+    
+    <div class="white-half-section">
+        <button onclick="handleButtonClick()" class="cta-button">Move Button</button>
+        <div id="gif-container"></div>
+    </div>
+
+</body>  
+<!-- CSS section -->
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+    }
+
+    .blue-half-section {
+        background-color: blue;
+        flex: 25%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white; 
+    }
+
+    .black-half-section {
+        background-color: white; 
+        flex: 25%; 
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: white; 
+        position: absolute; 
+        top: 0; 
+        left: -100%; 
+        animation: slideIn 1s forwards; 
+    }
+
+    .white-half-section {
+        background-color: white;
+        flex: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .cta-button {
+        display: block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 20px;
+        transition: transform 0.3s, color 0.3s;
+        position: absolute;
+    }
+
+    /* Animation the black screen to pop up */
+    @keyframes slideIn {
+        0% {
+            background-color: white; 
+            left: -100%; 
+        }
+        100% {
+            background-color: black; 
+            left: 0; 
+        }
+    }
+
+</style>
+
+
+<!-- Javascript section-->
+<script>
+    let clickCount = 0;
+    //Function that moves button 5 times then shows gif
+    function handleButtonClick() {
+        clickCount++;
+
+        if (clickCount != 5 ) {
+            moveButton();
+        } else if (clickCount == 5) {
+            showRickRoll();
+            // Has a pop up to user
+            document.getElementById('black-heading').innerText = 'I told you so';
+            document.getElementById('black-paragraph').innerText = 'Now live in regret';
+            document.getElementById('black-half-section').style.display = 'flex';
+            
+        }
+        if (clickCount == 1) {
+        document.getElementById('black-half-section').style.display = 'flex'; // Shows the initially hidden section after first click
+
+    }
+    }
+    // Moves the button into positions only in the white area
+    function moveButton() {
+        const button = document.querySelector('.cta-button');
+        const maxX = document.querySelector('.white-half-section').offsetWidth - button.offsetWidth;
+        const maxY = document.querySelector('.white-half-section').offsetHeight - button.offsetHeight;
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        button.style.left = randomX + 'px';
+        button.style.top = randomY + 'px';
+    }
+    //Displaying the gif
+    function showRickRoll() {
+        const gifContainer = document.getElementById('gif-container');
+        const gif = document.createElement('img');
+        gif.src = 'images_and_icons/rickroll.gif';
+        gif.alt = 'Rick Roll';
+        gif.style.display = 'block';
+        gif.style.margin = 'auto';
+        gifContainer.appendChild(gif);
+
+        const button = document.querySelector('.cta-button');
+        button.style.display = 'none';
+    }
+</script>
+</html>
+

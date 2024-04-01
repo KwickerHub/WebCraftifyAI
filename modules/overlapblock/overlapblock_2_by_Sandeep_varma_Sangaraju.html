@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Blocks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./images_and_icons/background_2.png') center center no-repeat;
+            background-size: cover;
+            position: relative; /* Set position to relative for absolute positioning inside */
+            min-height: 100vh; /* Minimum height to full viewport height */
+            padding-bottom: 50px; /* Space for footer text */
+        }
+        .service-blocks-container {
+            position: absolute;
+            top: 70%; /* Adjust this value to move the blocks down */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-around;
+            width: 70%; /* Adjust the width as necessary */
+        }
+        .service-block {
+            flex: 1;
+            width: 200px; /* adjust width as necessary */
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            background-color: #058fd9; /* Default color, override below */
+            height: 200px;
+            display: flex;
+            flex-direction: column; /* Stack children elements vertically */
+            justify-content: center;
+        }
+        
+        #block1 { background-color: #058fd9; }
+        #block2 { background-color: #69a9c9; }
+        #block3 { background-color: #e7ce11; }
+        .button {
+            background-color: #ffffff;
+            color: black;
+            border: none;
+            padding: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            display: block; /* Make buttons block to fill width */
+            width: 90%; /* This will make the button fill the width of its container */
+            box-sizing: border-box; /* This ensures padding is included in the width */
+            align-items: center; /* Vertical centering */
+            justify-content: center;
+            font-weight: bold; /* Horizontal centering */
+            font-size: 12px;
+            margin-top: auto;
+            position: relative; /* Position relative to the parent block */
+            bottom: 10px;
+        }
+        .footer-text {
+            text-align: center;
+            font-size: 0.8em;
+            padding: 10px;
+            background: #fffefe;
+            color: rgb(0, 0, 0);
+            width: 100%;
+            position: absolute; /* Positioned at the bottom of the body */
+            bottom: 0; /* At the bottom of the body */
+            color: #058fd9;
+            transform: translateX(-50%);
+            top: 90%; /* Adjust this value as needed to move the text down */
+            left: 50%;
+        }
+        @media screen and (max-width: 1024px) {
+            .service-blocks-container {
+                top: 50%; 
+                width: 90%; 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .service-block {
+                width: 100%; 
+                margin: 0 0 20px; 
+                
+                
+            }
+        }
+
+        
+        @media screen and (max-width: 600px) {
+            .service-block {
+                padding: 10px; 
+            }
+            .footer-text {
+                font-size: 1em; 
+                padding: 15px 0; 
+                position: relative; 
+                top: initial; 
+                left: initial; 
+                transform: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="service-blocks-container">
+    <div id="block1" class="service-block">
+        <h2>Accounting & Tax</h2>
+        <p>Stay ahead of tax complexities with our expert guidance. Ensure accuracy in your financial reporting. Benefit from customized tax strategies that fit your business needs.</p>
+        <button class="button">Read More</button>
+    </div>
+
+    <div id="block2" class="service-block">
+        <h2>Business Planning</h2>
+        <p>Transform your vision into a viable business plan. Gain insights into market trends and growth opportunities. Build a strong foundation with our strategic analysis and advice.</p>
+        <button class="button">Read More</button>
+    </div>
+
+    <div id="block3" class="service-block">
+        <h2>Employment Issues</h2>
+        <p>Solve employment challenges with our professional HR solutions. Stay compliant with current labor laws. Create a dynamic workplace with our policy and culture development guidance.</p>
+        <button class="button">Read More</button>
+    </div>
+</div>
+
+<div class="footer-text">
+    Image from <span class="Company">Company</span>.
+</div>
+
+</body>
+</html>

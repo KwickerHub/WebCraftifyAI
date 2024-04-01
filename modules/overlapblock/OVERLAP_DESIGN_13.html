@@ -1,0 +1,44 @@
+<style>
+    body {
+        background-color: #f4f4f4; 
+    }
+
+    .overlap-container {
+        position: relative;
+        width: 300px;
+        height: 300px; 
+        margin: auto;
+        top: 50px;
+        background-image: url('images_and_icons/DALL.png'); 
+        background-size: cover;
+        background-position: center;
+    }
+
+    .overlap-block {
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        background-color: rgba(255, 255, 255, 0.8); 
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .overlap-block:first-child {
+        top: 10%;
+        left: 10%;
+    }
+
+    .overlap-block:last-child {
+        bottom: 10%;
+        right: 10%;
+        z-index: 0;
+    }
+
+    
+</style>
+
+<div class="overlap-container">
+    <div class="overlap-block"></div>
+    <div class="overlap-block"></div>
+</div>

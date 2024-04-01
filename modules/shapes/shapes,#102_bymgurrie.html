@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div>
+    <!-- Image and Text Content -->
+    <div class="service-container">
+        <!-- Text Section -->
+        <div class="text-content">
+            <h1>Need a New Style? </h1>
+            <ul class="service-list">
+                <li> - Hair Cuts </li>
+                <li> - Shampoo and Style </li>
+                <li> - Braiding </li>
+                <li> - Special Events</li>
+                <li> - Wedings</li>
+            </ul>
+            <a href="https://www.modavitasalonspa.com/?gclid=Cj0KCQiAw6yuBhDrARIsACf94RU0C0FHyYo3IOZYLdzWvcxO2ZnFj_AGHCpMzw0hrj16jD3VXUbW8j4aAtA7EALw_wcB">
+            <button class="learn-more-btn">LEARN MORE</button>
+            </a>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Expert Holding Tool" class="center">
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-container {
+        justify-content: space-between;
+        padding: 80px;
+        box-sizing: border-box;
+        background-color: pink;
+    }
+    
+    .text-content {
+        max-width:1000%;
+    }
+    
+    .service-list {
+        list-style: none;
+        padding: 10;
+        margin: 0px 0;
+    }
+    
+    .service-list li {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .learn-more-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+    .image-content img {
+        max-width: 45%;
+        height: auto;
+    }
+
+    .center {
+      display: block;
+      margin-bottom: 50;
+      width: 50%;
+    }
+
+    @media (max-width: 770px) {
+        .service-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .text-content, .image-content img {
+            max-width: 100%;
+        }
+        
+        .learn-more-btn {
+            margin-top: 20px;
+        }
+    }
+</style>
+
+<script>
+    // Placeholder for any JavaScript you might want to add
+    document.querySelector('.learn-more-btn').addEventListener('click', function() {
+        alert('More information about the services. You are headed to a new page.');
+    });
+</script>
+</html>

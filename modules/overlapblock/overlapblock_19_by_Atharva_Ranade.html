@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .left-container {
+            margin-top: 20px;
+            display: grid;
+            position: relative;
+            top: 70px;
+            width: 550px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 25px;
+            margin-right: -50px;
+            float: left;
+            padding-left: 250px;
+            padding-top: 20px;
+            z-index: 1;
+        }
+        .text-block{
+            width:450px;
+            height: 50px;
+            padding-left: 250px;
+            padding-top: 150px;
+        }
+        .block {
+            height: 200px;
+            width: 200px;
+            background-color:  #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff; /* Text color */
+            z-index: 1;
+        }
+        
+        .right-container {
+            position: relative;
+            top: -120px;
+            float: right;
+            padding-right: 50px;
+            padding-bottom: 50px ;
+            width: 45%;
+            height: 100%;
+
+        }
+        h1{
+            position: relative;
+            margin: 0;
+            font-size: 60px;
+            font-weight: lighter;
+            transform: scale(0.95,1);
+            left:-10px;
+        }
+        p{
+            margin-top: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 100;
+        }
+        img{
+            width:100%;
+            height: 100%;
+        }
+        html, body { 
+  width: 100%; 
+  height: 100%; 
+} 
+figure{
+    text-align: center;
+    float: right;
+}
+figcaption{
+    color: black;
+    caption-side: bottom;
+}
+.icon{
+    width: 50%;
+    height: 50%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="text-block">
+        <h1>Just Train</h1>
+        <p>Change your body. Change your mindset. Our gym has everything you need to get results</p>
+    </div>
+    <div class="left-container">
+
+        <div class="block">
+            <figure>
+                <img class="icon" src="./images_and_icons/aboutus_19_Atharva_Ranade.svg">
+                <figcaption>About us</figcaption>
+            </figure>
+        </div>
+        <div class="block">
+            <figure>
+                <img class="icon" src="./images_and_icons/Services_19_Atharva_Ranade.svg">
+                <figcaption>Services</figcaption>
+            </figure>
+        </div>
+        <div class="block">
+            <figure>
+                <img class="icon" src="./images_and_icons/boxing_19_Atharva_Ranade.svg">   
+                <figcaption>Boxing</figcaption>
+            </figure>
+        </div>
+        <div class="block">
+            <figure>
+                <img class="icon" src="./images_and_icons/treadmill_19_Atharva_Ranade.svg">
+                <figcaption>Cardio</figcaption>
+            </figure>
+        </div>
+        <div class="block">
+            <figure>
+                <img class="icon" src="./images_and_icons/fitness_19_Atharva_Ranade.svg">
+                <figcaption>Fitness</figcaption>
+            </figure>
+        </div>
+        <div class="block">
+            <figure>
+                <img class="icon" src="./images_and_icons/weightloss_19_Atharva_Ranade.svg">
+                <figcaption>Weight loss</figcaption>
+            </figure>
+        </div>
+    </div>
+
+
+    <div class="right-container"><img  src="./images_and_icons/Background_19_Atharva_Ranade.png" alt="Your Image"></div>
+
+</body>
+</html>

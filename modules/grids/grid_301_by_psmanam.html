@@ -1,0 +1,117 @@
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .cont{
+    width: 70%;
+    margin: 0 auto;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .rows{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+  .name_cont{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .b_cont{
+    padding: 20px;
+  }
+  .b_cont h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .b_cont p{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .one{
+    background-color: #c947b4;
+    color: #fff;
+  }
+  .two{
+    background-color: #f1c50e;
+    color: #000;
+  }
+  .rows .img .profile-1, .rows .img .profile-2{
+    width: 238px;
+    height: 238px;
+    border-radius: 100%;
+    background-position: 50% 50%;
+    margin: 0 auto;
+    background-size: cover;
+  }
+  .rows .img .profile-1{
+    background-image: url(images_and_icons/grid_i1.jpg);
+  }
+  .rows .img .profile-2{
+    background-image: url(images_and_icons/grid_i2.jpg);
+  }
+  .rows .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  .cont button{
+    padding: 10px 0;
+    background-color: #f1c50e;
+    color: #000;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 13px;
+    font-weight: 700;
+    width: 15%;
+    margin: 0 auto;
+  }
+  .cont button:hover{
+    border-color: #000;
+  }
+
+  .new{
+    font-size: 36px;
+  }
+</style>
+<div>
+  <div class="cont">
+    <div class="rows">
+      <div class="b_cont">
+        <h2>1</h2>
+        <p class="new">Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Thank you developer for smart money.</p>
+      </div>
+      <div class="img">
+        <div class="profile-1"></div>
+      </div>
+      <div class="name_cont one">
+        <p>Mike perry, Developer <br> Developer</p>
+      </div>
+    </div>
+    <div class="rows">
+      <div class="name_cont two">
+        <p>Nina Scavo, manager</p>
+      </div>
+      <div class="img">
+        <div class="profile-2"></div>
+      </div>
+      <div class="b_cont">
+        <h2>2</h2>
+        <p class="new">Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Thank you developer for smart money.</p>
+      </div> 
+    </div>
+    <button>Read More</button>
+  </div>
+</div>

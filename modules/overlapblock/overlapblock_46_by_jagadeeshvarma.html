@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Layout</title>
+<style>
+  /* Base styles */
+  body, h1, p, a {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+
+  /* Container for overlapping images */
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px;
+    overflow: hidden; /* Prevents images from overflowing the container */
+  }
+
+  .image-container img.main-image {
+    width: 40%; /* Reduced main image width to 40% */
+    display: block;
+  }
+
+  .image-container img.overlap-image {
+    position: absolute;
+    width: 25%; /* Overlapping image width */
+    transition: all 0.3s ease;
+  }
+
+  .image-container img.top-right {
+    top: 1%;
+    right: 3%;
+  }
+
+  .image-container img.bottom-right {
+    bottom: -5%;
+    right: 25%;
+
+  }
+
+  /* Text content block */
+  .text-block {
+    position: bottom;
+    bottom: 50%; /* Position from bottom */
+    left: 5%; /* Position from left */
+    background: #fff;
+    padding: 2em;
+    max-width: 300px;
+    transition: all 0.3s ease;
+  }
+
+  /* Heading style */
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 0.5em;
+  }
+
+  /* Button style */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Hover animations */
+  .image-container:hover img.overlap-image {
+    transform: scale(1.05); /* Slightly enlarges the images */
+  }
+
+  .image-container:hover .text-block {
+    transform: scale(1.05); /* Slightly enlarges the text block */
+  }
+.pink-block {
+    position: absolute;
+    background-color: #ffc0cb; /* Light pink color */
+    /* Adjust the following properties as needed to position and size the pink block */
+    top: 30%; /* Position from the top */
+    right: 10%; /* Position from the right */
+    width: 28%; /* Width of the pink block */
+    height: 50%; /* Height of the pink block */
+    z-index: -20; /* Ensures the block is behind the images */
+  }
+
+
+</style>
+</head>
+<body>
+
+<div class="image-container">
+<div class="pink-block"></div>
+  <img src="women.png" alt="Woman Walking on Beach" class="main-image">
+  <img src="people.png" alt="People Playing on Beach" class="overlap-image top-right">
+  <img src="read.png" alt="Person Reading on Beach Chair" class="overlap-image bottom-right">
+  
+  <div class="text-block">
+    <h1>Find Travel Perfection With the Professionalism of Experts</h1>
+    <a href="#" class="btn">Find your tour</a>
+  </div>
+</div>
+
+</body>
+</html>

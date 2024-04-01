@@ -1,0 +1,101 @@
+<div id="image-container">
+    <p id="heading1">TRAVEL AGENCY</p>
+    <h2 id="heading2">Wanderlust</h2>
+    <h1 id="heading3">Wonderful tours</h1>
+    <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+    <button id="read-more-button">READ MORE</button>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+    
+    #image-container {
+        background-image: url('./images_and_icons/background_146.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #image-container * {
+        margin: 25px;
+    }
+
+    #heading1 {
+        font-size: 24px;
+    }
+
+    #heading2 {
+        font-family: 'Alex Brush', cursive;
+        font-size: 64px;
+    }
+
+    #heading3 {
+        font-size: 86px;
+    }
+
+    #description {
+        font-size: 18px;
+    }
+
+    #read-more-button {
+        padding: 15px 30px;
+        background-color: transparent;
+        font-size: 16px;
+        border: 3px solid white;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+        #image-container * {
+            margin: 10px 15px;
+        }
+        #heading1 {
+            font-size: 22px;
+        }
+        #heading2 {
+            font-size: 40px;
+        }
+        #heading3 {
+            font-size: 52px;
+        }
+        #description {
+            font-size: 16px;
+        }
+        #read-more-button {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        #image-container * {
+            margin: 10px 15px;
+        }
+        #heading1 {
+            font-size: 18px;
+        }
+        #heading2 {
+            font-size: 30px;
+        }
+        #heading3 {
+            font-size: 40px;
+        }
+        #description {
+            font-size: 14px;
+        }
+        #read-more-button {
+            font-size: 14px;
+        }
+    }
+</style>

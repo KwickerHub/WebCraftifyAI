@@ -1,0 +1,86 @@
+<div>
+    <!-- Image and Text Content -->
+    <div class="service-container">
+        <!-- Text Section -->
+        <div class="text-content">
+            <h1>Meet Your Home Service Experts</h1>
+            <ul class="service-list">
+                <li>Emergency Repairs</li>
+                <li>Electrical Repairs</li>
+                <li>Circuit Breakers</li>
+                <li>Ceiling Fans</li>
+                <li>Generators</li>
+            </ul>
+            <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="image-content">
+            <img src="https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Expert Holding Tool">
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+    }
+    
+    .text-content {
+        max-width: 50%;
+    }
+    
+    .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+    
+    .service-list li {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .learn-more-btn {
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+    .image-content img {
+        max-width: 45%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        .service-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .text-content, .image-content img {
+            max-width: 100%;
+        }
+        
+        .learn-more-btn {
+            margin-top: 20px;
+        }
+    }
+</style>
+
+<script>
+    // Placeholder for any JavaScript you might want to add
+    document.querySelector('.learn-more-btn').addEventListener('click', function() {
+        alert('More information about the services.');
+    });
+</script>

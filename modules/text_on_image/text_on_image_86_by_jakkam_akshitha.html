@@ -1,0 +1,52 @@
+<div class="ocean-view-module">
+    <h1 onclick="oceanClick()">
+        <span>ocean</span>
+    </h1>
+</div>
+
+<style>
+        * {
+        margin: 0;
+        padding: 0;
+    }
+    .ocean-view-module {
+        height: 100%; 
+        width: 100%; 
+        background-image: url('./images_and_icons/background_86.jpg'); 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        color: white;
+        padding-top: 10vh;
+        position: relative;
+    }
+
+    .ocean-view-module h1 {
+        font-size: 6em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .ocean-view-module h1:before,
+    .ocean-view-module h1:after {
+        content: '';
+        display: block;
+        width: 120px;
+        height: 2px;
+        background: white;
+        margin: 0 auto;
+    }
+</style>
+
+<script>
+    function oceanClick() {
+        alert('Ocean clicked!');
+    }
+</script>

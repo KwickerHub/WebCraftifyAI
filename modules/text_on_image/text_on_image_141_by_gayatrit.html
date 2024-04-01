@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interior Design Box</title>
+<style>
+    html {
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background-image: url('images_and_icons/background_141.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: brightness(80%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-family: Arial, sans-serif; /* Set the font for the entire body */
+    }
+
+    .box {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border: 0.7vw solid white;
+        height: 35vw;
+        width: 40vw;
+        padding: 1vw;
+        margin-right: 5vw;
+        text-align: left;
+        font-family: Arial, sans-serif; /* Ensure the font is Arial for the box */
+    }
+
+    .head, .middle, .end {
+        color: white;
+        margin: 1vw 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 10%; /* Align with the middle text */
+    }
+
+    .head {
+        font-size: 1.5vw;
+    }
+
+    .middle {
+        font-size: 5vw;
+        text-align: center; /* Center the text */
+        padding: 0; /* No padding for center-aligned text */
+    }
+
+    .end {
+        font-size: 1.5vw;
+        text-align: left; /* Align text to the left */
+    }
+
+    .end a {
+        text-decoration: underline;
+        color: white; /* Explicitly set the color for the link */
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <section class="head">INTERIOR DESIGN</section>
+    <section class="middle">Interior Design For Your Home</section>
+    <section class="end">
+        IMAGE FROM <a href="https://www.freepik.com">Freepik</a>
+    </section>
+</div>
+
+</body>
+</html>

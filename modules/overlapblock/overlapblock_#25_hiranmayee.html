@@ -1,0 +1,54 @@
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .top-block, .bottom-block {
+        position: absolute;
+        width: 100%;
+    }
+    .top-block {
+        background-color: rgb(215, 211, 211);
+        height: 30%;
+        top: 0;
+    }
+    .bottom-block {
+        background-color: black;
+        height: 70%;
+        bottom: 0;
+    }
+    .side-block {
+        position: absolute;
+        background-color:rgb(255, 191, 0);
+        width: 60%;
+        height: 100%;
+        top: 10%;
+        right: 0;
+    }
+    .box {
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="top-block"></div>
+    <div class="bottom-block"></div>
+    <div class="side-block">
+        <h2>ABOUT US</h2>
+        <h1>This place is special... </h1>
+        <p>Due to its commanding position, in the Second World War the Fort House was used by the military as an observation post and even had the roof reinforced to protect it from an aerial attack, with two feet of concrete, making it bomb proof from enemy aircraft.</p>
+        <a href="#" class="box">Read More</a>
+    </div>
+        
+</div>

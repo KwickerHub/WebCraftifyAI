@@ -1,0 +1,119 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: url('images_and_icons/issue_347_logos.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: black;
+        }
+        .header p {
+            font-size: 1.2rem;
+            color: black;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 0.5fr); 
+            gap: 0px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-top: -35px;
+            padding: 20px;
+            height: auto;
+            max-width: 500vw;
+        }
+
+        .image-box, .text-section {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px grey;
+            overflow: hidden;
+            height: 300px; 
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+        }
+        .text-section h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .text-section p {
+            color: #666;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px; 
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Consulting Services</h1>
+        <p>Best services provided here.</p>
+    </div>
+    <div class="container">
+        <div class="image-box">
+            <img src="images_and_icons/issue_347_icon1.jpg" alt="Team Meeting">
+        </div>
+        <div class="text-section">
+            <img src="images_and_icons/issue_347_icon2.png" alt="Strategy Icon" class="icon">
+            <h2>Strategy</h2>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        </div>
+        <div class="image-box">
+            <img src="images_and_icons/issue_347_icon3.jpg" alt="Single Person Working">
+        </div>
+        <div class="text-section">
+            <img src="images_and_icons/issue_347_icon4.png"Development Icon" class="icon">
+            <h2>Development</h2>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        </div>
+        <div class="image-box">
+            <img src="images_and_icons/issue_347_icon5.jpg"Operational Team">
+        </div>
+        <div class="text-section">
+            <img src="images_and_icons/issue_347_icon6.png" alt="Operations Icon" class="icon">
+            <h2>Operations</h2>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        </div>
+    </div>
+</body>
+

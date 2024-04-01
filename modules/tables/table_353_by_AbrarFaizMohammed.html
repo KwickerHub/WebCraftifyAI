@@ -1,0 +1,197 @@
+<script
+  src="https://kit.fontawesome.com/59fd3ac906.js"
+  crossorigin="anonymous"
+></script>
+<div class="main-container">
+  <h1 class="title">CHOOSE YOUR PLAN</h1>
+  <p class="title-desc">3 flexible plans to suit your fitness needs</p>
+  <div class="table-main-container">
+    <table class="table-main-contant">
+      <tr class="table-main-contant-row">
+        <th class="table-main-contant-head"></th>
+      </tr>
+      <tr class="table-main-contant-row">
+        <td class="table-main-contant-column">
+          ELITE Gyms &<br />
+          At Centre Group Classes
+        </td>
+      </tr>
+      <tr class="table-main-contant-row">
+        <td class="table-main-contant-column">PRO Gyms</td>
+      </tr>
+      <tr class="table-main-contant-row">
+        <td class="table-main-contant-column">Smart workout plan</td>
+      </tr>
+      <tr class="table-main-contant-row">
+        <td class="table-main-contant-column">24/7 ​At home workouts</td>
+      </tr>
+      <tr class="table-main-contant-row">
+        <td class="table-main-contant-column"></td>
+      </tr>
+    </table>
+    <div class="table-options-container">
+    <table class="table-options">
+      <tr class="table-options-row">
+        <th class="table-options-head">ELITE</th>
+        <th class="table-options-head">PRO</th>
+        <th class="table-options-head">HOME</th>
+      </tr>
+      <tr class="table-options-row">
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+        <td class="table-option-head-column">02 Sessions/<br />month</td>
+        <td class="table-option-head-column">
+          <i class="fa-regular fa-circle-xmark cross"></i>
+        </td>
+      </tr>
+      <tr class="table-options-row">
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+        <td class="table-option-head-column">
+          <i class="fa-regular fa-circle-xmark cross"></i>
+        </td>
+      </tr>
+      <tr class="table-options-row">
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+        <td class="table-option-head-column">
+          <i class="fa-regular fa-circle-xmark cross"></i>
+        </td>
+      </tr>
+      <tr class="table-options-row">
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+        <td class="table-option-head-column">
+          <i class="fa-solid fa-circle-check checkMark"></i><br />Unlimited
+        </td>
+      </tr>
+      <tr class="table-options-row">
+        <td class="table-option-head-column">Starting at $45 / month</td>
+        <td class="table-option-head-column">Starting at $25 / month</td>
+        <td class="table-option-head-column">Starting at $15 / month</td>
+      </tr>
+      <tr class="table-options-row-buttons">
+        <td class="table-option-buttons">
+          <div class="select-button" onclick="planSelected('ELITE')">BUY NOW</div>
+        </td>
+        <td class="table-option-buttons">
+          <div class="select-button" onclick="planSelected('PRO')">BUY NOW</div>
+        </td>
+        <td class="table-option-buttons">
+          <div class="select-button"  onclick="planSelected('HOME')">BUY NOW</div>
+        </td>
+      </tr>
+    </table>
+</div>
+  </div>
+</div>
+<style>
+  body {
+    margin: 0px;
+  }
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+  .title,
+  .title-desc {
+    text-align: center;
+  }
+  .table-main-container {
+    display: flex;
+    justify-content: center;
+  }
+  .table-main-contant,
+  .table-main-contant-head,
+  .table-main-contant-column,
+  .table-options,
+  .table-options-head,
+  .table-option-head-column {
+    border-bottom: solid 1px #999999;
+    border-collapse: collapse;
+    height: 30px;
+    font-size: 12px;
+  }
+  .table-main-contant,
+  .table-main-contant-row {
+    width: 250px;
+  }
+  .table-options,
+  .table-options-row,
+  .table-main-contant,
+  .table-main-contant-row {
+    height: 41px;
+  }
+  .table-options,
+  .table-options-row {
+    text-align: center;
+    width: 500px;
+  }
+  .table-options,
+  .table-options-row-buttons {
+    border-bottom: none;
+  }
+  .select-button {
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 12px;
+    width: 100px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: #93ced8;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  .select-button:hover {
+    background-color: #ff735c;
+  }
+  .checkMark {
+    color: #93ced8;
+  }
+  .cross {
+    color: #ff735c;
+  }
+  .table-options-container{
+    width: 500px;
+  }
+ 
+
+  @media(max-width:1025px) {
+    .table-options-container{
+        width: 150px;
+        overflow: hidden;
+        overflow-x:scroll;
+    }
+    .table-options-container::-webkit-scrollbar{
+        height: 2px;
+    }
+    .table-options-container::-webkit-scrollbar-thumb{
+        background-color: #93ced8;
+        border-radius: 12px;
+      }
+    .table-main-contant,
+  .table-main-contant-row {
+    width: 150px;
+  }
+  
+  }
+</style>
+<script>
+    function planSelected(planName)
+    {
+        alert(`Hey!!! Congratulations for selecting our ${planName} plan 🥳`);
+    }
+</script>

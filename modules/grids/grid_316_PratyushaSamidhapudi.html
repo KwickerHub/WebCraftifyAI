@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="container">
+    <div class="image-container"></div>
+    <div class="box-container">
+      <h2>We'd Like to Hear from You</h2>
+      <p>We are leaders in the manufacture and distribution of frozen doughs,&nbsp;with an extensive range of bread and pastries and a management&nbsp;oriented to satisfy the needs of our customers.</p>
+      <p>Image from <a href="https://nicepage.best">Freepik</a></p>
+      <p><img class="icon" src="/Users/pratyushasamidhapudi/Downloads/grid/phone.svg" alt="Phone" />+1 (234) 567-8910</p>
+    </div>
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      border: 80px solid #ddd;
+      box-sizing: border-box;
+      display: flex; /* Make the body a flex container */
+    }
+
+    .container {
+      display: flex; /* Make the container a flex container */
+      flex: 1; /* Allow the container to take up all available space */
+    }
+
+    .image-container {
+        flex: 1;
+        position: relative;
+        transition-duration: inherit;
+        background-image: url('/Users/pratyushasamidhapudi/Downloads/grid/baker.jpg');
+        height: 100%;
+        width: 65%;
+        box-sizing: border-box;
+        background-size: cover; /* Cover the entire container */
+        background-position: center; /* Center the image both horizontally and vertically */
+        background-repeat: no-repeat;
+        display: flex;
+      }
+
+    .box-container {
+      flex: 1;
+      position: relative;
+      transition-duration: inherit;
+      height: 100%;
+      box-sizing: border-box;
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      display: flex;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      flex-direction: column;
+      background-color: white; 
+      position: relative;
+      display: flex;
+      background-clip: padding-box;
+      background-origin: padding-box;
+      padding: 30px;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 30px;
+    }
+
+  </style>
+</body>
+
+</html>

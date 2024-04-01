@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('./images_and_icons/sample.jpg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: black;
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .content {
+      max-width: 800px;
+      text-align: left;
+      margin-left: 100px;
+      padding: 100px 20px 100px;
+    }
+
+    .content h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30px;
+    }
+
+    .content h1:nth-child(2) {
+      font-family: 'Calibri', sans-serif;
+      font-size: 30px;
+    }
+
+    .content h1:nth-child(n+3) {
+      font-family: 'Arial', sans-serif;
+      font-size: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #996515;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 15px;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #d2a26b;
+    }
+  </style>
+  <title>Add text to a background</title>
+</head>
+<body>
+
+<div class="content">
+ 
+  <h1>LEARN ANYTIME, ANYWHERE</h1>
+  <h1>LANGUAGE</h1>
+  <h1>LEARNING</h1>
+  <h1>ONLINE</h1>
+  <a href="#" class="button">Join Now</a>
+
+</div>
+
+</body>
+</html>

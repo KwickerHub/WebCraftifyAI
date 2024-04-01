@@ -1,0 +1,163 @@
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin: 50px auto;
+    padding: 70px 0;
+    grid-template-columns: 1fr;
+    background-color:white
+  }
+  .grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 50px;
+  }
+  h1{
+    font-size: 45px;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h3{
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .icon{
+    object-fit: cover;
+  }
+  .icon img{
+    width: 80px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .white-left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: left;
+    background-color:white;
+    border-radius: 15px;
+  }
+  .center-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    background-color:white;
+    border-radius: 15px;
+  }
+  .gray-right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
+    padding: 30px;
+    padding-left: auto;
+    background-color:rgb(218, 218, 218);
+    border-radius: 15px;
+  }
+  .gray-left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: left;
+    background-color:rgb(218, 218, 218);
+    border-radius: 15px;
+  }
+  .center-img{
+    padding: 30px;
+    text-align: center;
+    background-color:white;
+    border-radius: 15px;
+
+  }
+  .center-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+  }
+  .white-right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: right;
+    background-color:white;
+    border-radius: 15px;
+  }
+
+
+</style>
+<div>
+  <div class="container">
+
+    <div class="grid">
+      <div class="white-left">
+        <div class="icon">
+          <img
+            src="images_and_icons/icon_337.svg"
+          />
+        </div>
+        <h2>Management</h2>
+        <h3>description</h3>
+      </div>
+      <div class="center-text">
+        <h1>Our Call Service</h1>
+        <h1>World Quality</h1>
+        <h3>description</h3>
+      </div>
+      <div class="gray-right">
+        <div class="icon">
+          <img
+            src="images_and_icons/icon_337.svg", width="50px"
+          />
+        </div>
+        <h2>Support</h2>
+        <h3>description</h3>
+      </div>
+      <div class="gray-left">
+        <div class="icon">
+          <img
+            src="images_and_icons/icon_337.svg"
+          />
+        </div>
+        <h2>Website Design</h2>
+        <h3>description</h3>
+      </div>
+      <div class="center-img">
+        <img
+            src="images_and_icons/image_337.svg"
+        />
+
+      </div>
+      <div class="white-right">
+        <div class="icon">
+          <img
+            src="images_and_icons/icon_337.svg"
+          />
+        </div>
+        <h2>Online Research</h2>
+        <h3>description</h3>
+      </div>
+    </div>
+
+  </div>
+</div>

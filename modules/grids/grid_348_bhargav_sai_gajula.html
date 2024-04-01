@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Call Service Layout</title>
+<style>
+.container{
+        position: relative;
+        width: 1140px;
+        margin: 0 auto;
+    }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+  }
+  .gallery-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    min-height: fit-content;
+    max-width: 100%;
+    flex: 30 0 auto;
+  }
+
+  .gallery-item {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 0 0 30.33333333%;
+    max-width: 30.33333333%;
+    min-width: 30.33333333%;
+    /*height: 242px;*/
+    border: 15px solid transparent;
+  }
+
+ 
+  .gallery-item .img_1{
+    min-height: 294px;
+    background-image: url(images_and_icons/img_348_1.jpg);
+    background-position: 50% 50%;
+  
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-size: cover;
+    border-radius: 50px;
+
+  }
+  .gallery-item .img_2{
+    min-height: 294px;
+    background-image: url(images_and_icons/img_348_2.jpeg);
+    background-position: 50% 50%;
+  
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-size: cover;
+    border-radius: 50px;
+   
+  }
+  .gallery-item .img_3{
+    min-height: 294px;
+    background-image: url(images_and_icons/img_348_3.jpeg);
+    background-position: 50% 50%;
+  
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-size: cover;
+    border-radius: 50px;
+
+  }
+  .gallery-item .img_4{
+    min-height: 294px;
+    background-image: url(images_and_icons/img_348_4.jpeg);
+    background-position: 50% 50%;
+  
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-size: cover;
+    border-radius: 50px;
+  
+  }
+  .gallery-item .img_5{
+    min-height: 294px;
+    background-image: url(images_and_icons/img_348_5.jpeg);
+    background-position: 50% 50%;
+  
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-size: cover;
+    border-radius: 50px;
+   
+  }
+
+  .text-content {
+    padding: 30px;
+    font-size: 1.2rem; 
+    color: #ffffff;
+    background-color: #71c1d2;
+    text-align: center;
+    border-radius: 50px;
+    
+  }
+
+  .text-content h2 {
+    margin: 0.5em 0;
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+
+  .text-content p {
+    margin: 0.25em 0; 
+  }
+  .text-content .icon-1 {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-image: none;
+    margin: 3px auto 0;
+    padding: 13px;
+    color: #71c1d2 !important;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+.icon-1 .u-svg-link{
+    fill: #71c1d2;
+}
+.u-svg-content {
+    width: 0;
+    height: 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="gallery">
+    <div class="gallery-row">
+  <div class="gallery-item">
+
+    <div class="img_1">
+     </div>
+  </div>
+  <div class="gallery-item">
+    <div class="text-content">
+        <span class="icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 54.757 54.757" style=""><use xlink:href="#svg-2370"></use></svg><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" id="svg-2370" style="enable-background:new 0 0 54.757 54.757;"><g><path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
+            s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"></path><path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+            L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
+            C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
+            C45.576,13.08,46.321,24.468,41.099,31.431z"></path>
+    </g></svg></span>
+      <h2>Our call service<br/>world quality</h2>
+      <p>Sample text. Click to select the Text Element.</p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="img_2">
+    </div>
+  </div>
+  </div>
+  <div class="gallery-row">
+  <div class="gallery-item">
+    <div class="img_3">
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="img_4">
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="img_5">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

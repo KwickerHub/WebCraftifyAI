@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text and Trimmed Image Layout</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  .text-container {
+    background-color: #5a8a56; /* The green background color */
+    color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Align text to the left */
+    padding-left: 5%; /* Add some padding to the left */
+  }
+  .text-content {
+    max-width: 640px;
+  }
+  .image-container {
+    flex: 1;
+    background-image: url('./images_and_icons/issuue_140neethu.png'); /* The trimmed image */
+    background-size: cover;
+    background-position: center;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: white; /* White button background */
+    color: #347f37; /* Text color to contrast with white */
+    text-decoration: none;
+    border-radius: 0.3em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    border: 2px solid #347f37; /* Border for the button */
+  }
+  .button:hover {
+    background-color: #f5f5f5; /* Slight change on hover */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-container">
+    <div class="text-content">
+      <h1>7 Ways To Be <br>Happy Now</h1>
+      <p>Modern psychology research supports ancient wisdom: rituals and regular practices can actually change your brain to make you happier.</p>
+      <a href="#" class="button"><b>Learn More</b></a>
+    </div>
+  </div>
+  <div class="image-container">
+    <!-- The trimmed image will display here -->
+  </div>
+</div>
+
+</body>
+</html>

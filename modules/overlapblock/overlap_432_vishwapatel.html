@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background with Seasonal Grids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-i5Zq5R6ozmR8H2XuMQb4OzG2aZiH8lbLb0fI+LxD1z9u5FpAIdboIsPFO2jc2q2g93NEKsXByAzSdNH2IDJtRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .background-container {
+            background-image: url(images_and_icons/background_432.jpeg); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin-top: auto; 
+        }
+
+        .grid-item {
+            padding: 40px; 
+            text-align: center;
+            border-radius: 8px;
+            color: #fff; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .emoji {
+            font-size: 48px; 
+            margin-bottom: 10px;
+        }
+
+        .spring {
+            background-color: #7FBF7F; 
+        }
+
+        .summer {
+            background-color: #FAD02E; 
+        }
+
+        .autumn {
+            background-color: #E87722; 
+        }
+
+        
+        .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="grid-container">
+            <div class="grid-item spring">
+                <div class="emoji">🌸</div>
+                <h2>Spring</h2>
+                <p>Flowers blooming</p>
+            </div>
+            <div class="grid-item summer">
+                <div class="emoji">☀️</div>
+                <h2>Summer</h2>
+                <p>Sun and beach</p>
+            </div>
+            <div class="grid-item autumn">
+                <div class="emoji">🍂</div>
+                <h2>Autumn</h2>
+                <p>Falling leaves</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

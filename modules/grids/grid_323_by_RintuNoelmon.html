@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      padding: 20px;
+    }
+
+    .text-image-grid {
+      grid-column: span 1;
+    }
+
+    .image-grid {
+      grid-column: span 1;
+    }
+
+    .image-text-grid {
+      grid-column: span 1;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-item text-image-grid">
+    <p>Empowering women strengthens communities and
+        fuels progress, unlocking their potential is key to a
+        more equitable and prosperous future.</p>
+    <img src="images_and_icons/bg1_323_Rintu.jpg" alt="Image 1">
+  </div>
+
+  <div class="grid-item image-grid">
+    <img src="images_and_icons/bg2_323_Rintu.jpg" alt="Image 2">
+  </div>
+
+  <div class="grid-item image-text-grid">
+    <img src="images_and_icons/bg3_323_Rintu.jpg" alt="Image 3">
+    <p>Empowering women strengthens communities and
+        fuels progress, unlocking their potential is key to a
+        more equitable and prosperous future.</p>
+  </div>
+</body>
+</html>

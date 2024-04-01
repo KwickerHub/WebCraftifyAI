@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <!-- <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./blog.css" /> -->
+
+    <!-- Link Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #191627;
+}
+
+header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+  font-size: 35px;
+  line-height: 30px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #e6e5e5;
+}
+
+header p {
+  color: #e6e5e5;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+header p a {
+  cursor: pointer;
+  color: #e6e5e5;
+}
+
+.container {
+  /* border: 1px solid #999; */
+  margin: 50px 150px;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 60px; */
+}
+
+.left,
+.right {
+  width: 48%;
+}
+
+.blog {
+  border: 2px solid #999;
+  padding: 15px 30px;
+  background: #2c1c7c;
+  color: #ffeeaa;
+}
+
+.blog a,
+.blog p {
+  color: #f3e093;
+  margin: 8px 0;
+}
+
+.blog a {
+  transition: transform 0.5s ease;
+  margin: 4px 0;
+  display: inline-block;
+}
+
+.blog h2 {
+  margin: 5px 0;
+  color: #ff9100;
+}
+
+.blog h4 {
+  color: #ffff00;
+}
+
+.left {
+  border-radius: 0 10px 10px 0;
+}
+
+.right {
+  border-radius: 10px 0 0 10px;
+}
+
+.blog a:hover {
+  transform: scale(1.1);
+  border-bottom: 2px solid #ff00dd;
+}
+section {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 75% 25%;
+  grid-auto-rows: auto;
+  margin: 50px 150px;
+  color: #b0e9ff;
+  gap: 40px;
+}
+
+section h2,
+h3 {
+  color: yellow;
+  margin: 15px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+section .date {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 0 4px 0;
+}
+
+.text {
+  margin: 12px 0;
+}
+
+.borderText {
+  border: 1px solid #999;
+  margin: 10px 0;
+}
+
+section ul,
+section ol {
+  margin-left: 50px;
+}
+
+section .buttons button {
+  border-radius: 30%;
+  padding: 10px 20px;
+  color: #ffad61;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #999;
+  margin: 10px 8px 10px 0;
+  transition: background-color 0.5s ease;
+}
+
+section .buttons button:hover {
+  background-color: #fff;
+  color: blue;
+}
+
+section aside .archives {
+  margin: 60px 0;
+}
+section aside a {
+  display: block;
+  color: #398fff;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <p><a href="./index.html">Subscribe</a></p>
+      <h1>Blog Title</h1>
+      <p class="search"><i class="fa fa-search" aria-hidden="true"></i></p>
+    </header>
+
+    <section>
+      <div class="content">
+        <h2>Sample Blog Post</h2>
+        <p class="date">January 21/2023 by Priyansh</p>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A reiciendis
+          eligendi in placeat eius? Modi quibusdam laboriosam numquam debitis
+          vel. <br /><br />
+        </p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio fugit cum
+        praesentium iste id esse saepe minus ea sunt reiciendis et voluptate a
+        quas vero numquam voluptatibus aperiam possimus modi consectetur quam,
+        aliquid rerum ipsam incidunt placeat. Ex odit nostrum culpa expedita aut
+        pariatur cupiditate necessitatibus, nihil rerum, recusandae est?
+
+        <div class="borderText">
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            tempore placeat asperiores amet cupiditate, nihil possimus molestias
+            suscipit distinctio porro!
+          </p>
+        </div>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        sapiente saepe praesentium laudantium explicabo maiores distinctio
+        eveniet quam velit modi.
+
+        <h3>Heading</h3>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          provident eos voluptate quam est porro quaerat quae veniam ullam
+          ratione?
+        </p>
+
+        <h3>Sub Heading</h3>
+        <p class="text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, et!
+        </p>
+        <div class="borderText">
+          <p class="text">Example Blog Text</p>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          voluptate dolor saepe modi explicabo ducimus asperiores quam
+          consequatur. Suscipit, neque pariatur minus vel possimus molestiae.
+        </p>
+        <h3>Sub Heading</h3>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+          amet voluptatem. Corporis minus placeat a dicta ipsam mollitia ratione
+          eligendi consectetur, optio, dignissimos ex! Quos.
+        </p>
+        <ul>
+          <li>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
+            doloribus?
+          </li>
+          <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure suscipit
+          dolore nihil! Ipsam, veniam. Ullam!
+        </p>
+        <ol>
+          <li>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
+            doloribus?
+          </li>
+          <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ol>
+        <p class="text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis,
+          repudiandae!
+        </p>
+
+        <div class="buttons">
+          <button>Older Post</button>
+          <button>Newest Post</button>
+        </div>
+      </div>
+      <aside>
+        <div class="about">
+          <h3>About</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
+            ducimus fugit. Voluptatibus architecto voluptatum deleniti, quam
+            distinctio tenetur eaque sunt!
+          </p>
+        </div>
+
+        <div class="archives">
+          <h3>Archives</h3>
+          <a href="#">January</a>
+          <a href="#">February</a>
+          <a href="#">March</a>
+          <a href="#">April</a>
+          <a href="#">May</a>
+          <a href="#">June</a>
+          <a href="#">July</a>
+          <a href="#">August</a>
+          <a href="#">September</a>
+          <a href="#">October</a>
+          <a href="#">November</a>
+          <a href="#">December</a>
+        </div>
+
+        <div class="socials">
+          <h3>Elsewhere</h3>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+          <a href="#">Linked In</a>
+        </div>
+      </aside>
+    </section>
+  </body>
+</html>

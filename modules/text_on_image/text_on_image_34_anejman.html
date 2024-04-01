@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="text-content">
+      <h1>TURN YOUR IDEAS TO LIVE WEB EXPERIENCES</h1>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+      <p class="image-credit">Image from <a href="https://www.freepik.com" target="_blank">Freepik</a></p>
+      <div class="buttons">
+        <a href="#" class="button blue">learn more</a>
+        <a href="#" class="button green">learn more</a>
+      </div>
+  </div>
+</div>
+
+<style>
+  .container {
+      background: url('images_and_icons/background_34.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding-left: 5%;
+  }
+
+  .text-content {
+      max-width: 50%;
+  }
+
+  .text-content h1 {
+    font-family: Arial, sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  .text-content p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+  }
+
+  .buttons .button {
+    display: inline-block;
+    padding: 15px 60px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .buttons .blue {
+    background-color: #218AEC;
+    color: #fff;
+  }
+
+  .buttons .blue:hover {
+    background-color: #66aaea;
+  }
+
+  .buttons .green {
+    background-color: #84EC1B;
+    color: #2d2d2d;
+  }
+
+  .buttons .green:hover {
+    background-color: #c0e29f;
+  }
+
+  .image-credit {
+    font-size: 0.8em;
+    margin-top: 2em;
+  }
+
+  .image-credit a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .image-credit a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+      .text-content {
+          max-width: 100%;
+          padding: 0 10%;
+          text-align: center;
+      }
+
+      .container {
+          padding-left: 0;
+      }
+
+      .buttons {
+          justify-content: center;
+      }
+  }
+</style>

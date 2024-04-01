@@ -1,0 +1,162 @@
+
+<div class="container">
+    <div class="inner-container">
+      <div class="inner-top">
+        <div class="avatar-pic">
+          <img
+            src="https://images.pexels.com/photos/5246966/pexels-photo-5246966.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="player"
+          />
+          <span class="dot"></span>
+        </div>
+  
+      </div>
+  
+      <div class="content-data">
+        <div class="left-side">
+          <h3>About Club</h3>
+          <p>
+            This is a football club
+            <br />
+            It was formed in 1900
+            <br />
+            This club has won 13 league Cups
+            <br />
+            It is the best club in the world
+          </p>
+          <a class="readLink" href="#">Click Here To Read More</a>
+          <span class="btn-register">Register Here</span>
+        </div>
+  
+        <div class="right-side">
+          <ul>
+            <li>New Players</li>
+            <li>Season Matches</li>
+            <li>Played Matches</li>
+            <li>Lost Games</li>
+            <li>Club News</li>
+           
+          </ul>
+        </div>
+      </div>
+  
+      <div class="inner-bottom">
+        <span class="circle"></span>
+       
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
+      flex-wrap: wrap;
+    }
+  
+    .inner-container {
+      background-color: #eee;
+      position: absolute;
+      width: 40%;
+      padding-bottom:150px;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+     
+  
+    }
+  
+    .inner-top {
+      height: 200px;
+      position: relative;
+    }
+  
+    .circle {
+      height: 30px;
+      width: 30px;
+      border: 10px solid #0ebad0;
+      border-radius: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      margin-left: 15px;
+    }
+  
+    .left-side {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding-bottom:20px ;
+  
+    }
+    .avatar-pic .dot {
+      height: 80px;
+      width: 80px;
+      background-color: #0ebad0;
+      border-radius: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px; 
+      margin-left: 20px;
+      position: relative; 
+      
+    }
+  
+    .avatar-pic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10px;
+      position: absolute;
+      margin-left: 10%;
+      flex-wrap: wrap;
+      top: 50px;
+      margin-bottom: 20px;
+    }
+  
+    .avatar-pic img {
+      border: 5px solid #0ebad0;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      display: flex;
+      margin-right: 20px;
+      flex-wrap: wrap;
+    }
+  
+    .content-data {
+      background-color: white;
+      margin-left: 110px;
+      width: 70%;
+      box-sizing: border-box;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn-register {
+      height: 36px;
+      padding: 0 20%;
+      border-radius: 36px;
+      background: #41648a;
+      color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+    .right-side ul {
+      list-style-type: "-";
+      padding-left: 20px;
+    }
+    .readLink {
+      color: #0ebad0;
+      text-decoration: none;
+    }
+  </style>
+  

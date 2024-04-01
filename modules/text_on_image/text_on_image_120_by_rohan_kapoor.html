@@ -1,0 +1,66 @@
+<div class="main_body">
+<div class="text_container">
+    <p>Mobile<br/>application<br/>development</p>
+</div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap');
+    body{
+
+        margin:0;
+    }
+.main_body{
+    width: 100%;
+    height: 100%;
+    background-image: url("./images_and_icons/background_120.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+.text_container{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 250px;
+    height: 200px;
+    font-family: 'Cormorant', serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    border-bottom: dotted 3px white;
+}
+@media screen and (max-width:1025px) {
+    .main_body{
+    background-image: url("./images_and_icons/background2_120.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width:520px){
+    
+    .text_container{
+        width: 400px;
+        height: 350px;
+        font-size: 70px;
+        color: black;
+        border-bottom: dotted 4px black;
+
+    }
+}
+@media screen and (521px <= width <= 1025px){
+    
+    .text_container{
+        top: 5%;
+        width: 400px;
+        height: 240px;
+        font-size: 50px;
+        color: black;
+        border-bottom: dotted 4px black;
+
+    }
+}
+</style>

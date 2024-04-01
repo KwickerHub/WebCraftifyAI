@@ -1,0 +1,99 @@
+<div class="image-container">
+    <img class="image-style" src="./images_and_icons/education.jpeg" alt="Get great work">
+    <div class="text-section">
+        <span class="sravanth1">Quality Education</span>
+        <span class="sravanth">Education for Health and Well Being!</span>
+        <a href="#" class="Link">Learn more</a>
+    </div>
+    <div class="circle">
+        <span class="circle-text">Join Us Today!</span>
+    </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif; 
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.text-section {
+    position: relative;
+    z-index: 2;
+    color: #FFFFFF; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sravanth1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sravanth {
+    font-size: 24px;
+}
+
+.Link {
+    padding: 10px 20px;
+    background-color: transparent; 
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; 
+    text-decoration: none;
+}
+
+.Link:hover {
+    color: #FF4500; 
+}
+
+.circle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.circle-text {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+}
+</style>

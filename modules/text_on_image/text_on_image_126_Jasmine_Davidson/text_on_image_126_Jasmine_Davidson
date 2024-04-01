@@ -1,0 +1,43 @@
+<div class="image-container">
+    <img src="https://images01.nicepagecdn.com/page/53/15/html-template-5315896.jpg" alt="Background Image">
+    <div class="text-overlay">
+        <h1>Your Text Here</h1>
+        <p>Additional Text or Description</p>
+    </div>
+</div>
+
+<style>
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .text-overlay h1 {
+        font-size: 3em;
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    .text-overlay p {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+</style>

@@ -1,0 +1,127 @@
+<div id="container">
+    <div id="inner-container">
+        <h2 id="heading2" style="font-weight: bolder;">Life Coaching</h2>
+        <p id="text">Accumsan in nisl nisi scelerisque. Sapien
+            nec sagittis aliquam malesuada bibendum
+            arcu vitae. Maecenas ultricies mi eget mauris pharetra et ultrices neque. 
+        </p>
+        <p style="color: white;
+        font-size: 18px;letter-spacing: 1.5px;">Image from <a href="https://www.freepik.com" class="freepik-link" target="_blank">Freepik</a></p>
+        <button id="button">READ MORE</button>
+    </div>
+    
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+    
+    #container {
+        background-image: url('./images_and_icons/bg_53.jpeg');
+        height: 120%;
+        width: 100%;
+        color: black;
+        background-size: cover;
+    }
+
+    /* #container * {
+        margin: 20px;
+    } */
+    #inner-container{
+        font-family: sans-serif;
+        width: 38%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 15%;
+        bottom: 20%;
+        left: 7%;
+        color: white;
+    }
+
+    #heading2 {
+        font-family: sans-serif;
+        width: 30%;
+        font-weight: bold;
+        color: white;
+        font-size: 70px;
+        text-align: left;
+        text-decoration: solid;
+        margin-bottom: 20px;
+        
+    }
+    .freepik-link {
+        color: white; 
+        text-decoration: underline;
+        padding: 0px; 
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
+        padding-left: 0;
+        
+    }
+    #inner-container p:nth-of-type(2){
+        margin-right: 0;
+        padding-right: 0;
+    }
+   
+    #text {
+        max-width: 550px;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+        line-height: 150%;
+        letter-spacing: 1.5px;
+       
+    }
+
+    #button {
+        padding: 18px 30px;
+        background-color: transparent;
+        font-size: 17px;
+        width: 225px;
+        border: 3px solid white;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        margin-top: 10px;
+        letter-spacing: 2.7px;
+        border-radius: 15px;
+
+    }
+    
+
+    @media screen and (max-width: 768px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        
+        #heading2 {
+            font-size: 52px;
+        }
+       
+        #text {
+            font-size: 16px;
+        }
+        #button {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        #heading2 {
+            font-size: 40px;
+        }
+       
+        #text {
+            font-size: 14px;
+        }
+        #button {
+            font-size: 14px;
+        }
+    }
+</style>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Are</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white; /* White text color */
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0; /* No gap between blocks */
+    margin: auto;
+    max-width: 900px;
+  }
+  .container img {
+    width: 100%;
+    display: block;
+    vertical-align: middle; /* Remove space below images */
+    border: none; /* Remove any default border */
+  }
+  .container .text-block {
+    padding: 20px;
+    margin: 0; /* Remove default margins */
+  }
+  .container .comfortable {
+    background-color: #ffdab9; /* Peach background for 'Comfortable' */
+    position: relative; /* For button positioning */
+  }
+  .container .professional, .container .precise {
+    background-color: #f0f0f0; /* Light gray background for other blocks */
+    color: #333; /* Darker text color for contrast */
+  }
+  .title-section {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0; /* Remove default margin */
+  }
+  .title-section h1 {
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 0.8em;
+    opacity: 0.75;
+  }
+  .text-block h2 {
+    margin-top: 0;
+  }
+  .text-block p {
+    margin-bottom: 20px; /* Adjusted for button spacing */
+  }
+  .underline-button {
+    border: none;
+    background: none;
+    color: #333; /* Dark text color for the button */
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline; /* Keep the button inline with text */
+  }
+</style>
+</head>
+<body>
+<div class="title-section">
+    <h1>Who We Are</h1>
+    <p class="subtitle">A team dedicated to excellence and precision in everything we do.</p>
+</div>
+<div class="container">
+  <!-- Professional image block -->
+  <img src="images_and_icons/327im1.jpeg" alt="Image of a professional setting">
+  <div class="text-block professional">
+    <h2>Professional</h2>
+    <p>Our team presents unmatched professional expertise to ensure that every project is handled with excellence and attention to detail.</p>
+  </div>
+  <!-- Comfortable image block -->
+  <div class="text-block comfortable">
+    <h2>Comfortable</h2>
+    <p>We prioritize comfort, creating a relaxed and welcoming atmosphere that makes everyone feel at home.</p>
+    <button class="underline-button">Learn More</button>
+  </div>
+  <img src="/Users/jp/Downloads/327im2.jpeg" alt="Image of a comfortable setting">
+  <!-- Precise image block -->
+  <img src="/Users/jp/Downloads/327im3.jpeg" alt="Image of precise work">
+  <div class="text-block precise">
+    <h2>Precise</h2>
+    <p>Precision is at the core of our work, with every detail meticulously crafted for the perfect outcome.</p>
+  </div>
+</div>
+</body>
+</html>

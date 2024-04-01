@@ -1,0 +1,134 @@
+    <div class="bg">
+        <div class="white-bg"></div>
+    <div class="purple-bg"></div>
+    </div>
+    <div class="img"><img src="" /></div> <!-- IMAGE MUST BE 850x650PX-->
+    <div class="text-square">
+        <h2>August 02</h2>
+        <h1>Fashion Trends 2021</h1>
+        <h3><a href="url">Read the article</a></h3> 
+    </div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .bg {
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        z-index: -1;
+    }
+
+    .white-bg {
+        height: 100vh;
+        width: 40vw;
+    }
+
+    .purple-bg {
+        height: 100vh;
+        width: 60vw;
+        background-color: blueviolet;
+        animation-name: purple-square;
+        animation-duration: 1000ms;
+    }
+
+    @keyframes purple-square {
+        from {height: 0vh;}
+        to {height: 100vh;}
+    }
+
+
+    .img {
+        width: 850px;
+        height: 650px;
+        background-color: gray;
+        margin-left: 80px;
+        margin-top: 50px;
+        position:fixed;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20); 
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
+        animation: image 1000ms;
+        pointer-events: none;
+    }
+
+    @keyframes image {
+        from {opacity: 0%;}
+        to {opacity: 100%;}
+    }
+
+    .text-square {
+        position: absolute;
+        background-color: white;
+        height: 450px;
+        width: 500px;
+        margin-top: 140px;
+        right: 0;
+        margin-right: 200px;
+        text-align: right;
+        padding: 15px;
+        color: blueviolet;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20); 
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
+        animation: square 1000ms;
+    }
+
+    @keyframes square {
+        from {margin-right: 0;}
+        to {margin-right: 200px;}
+    }
+
+    h1 {
+        font-size: 85px;
+        word-spacing:100px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 35px;
+        margin-bottom: 0;
+    }
+
+    h3, a {
+        margin: 0;
+        text-decoration: none;
+        color: blueviolet;
+    }
+
+    a:hover {
+        text-decoration: underline 2px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .img {
+            width: 350px;
+            height: 300px;
+            margin-left: 0;
+            margin-top: 100px;
+        }
+
+        .text-square {
+            width: 300px;
+            height: 300px;
+            margin-top: 350px;
+            margin-right: 0;
+            right: 0;
+            animation: square-mobile 1000ms;
+        }
+
+        @keyframes square-mobile {
+        from {margin-right: -50px;}
+        to {margin-right: 0px;}
+    }
+
+        h1 {
+            font-size: 70px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+</style>

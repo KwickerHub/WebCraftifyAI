@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 30;
+            padding: 10;
+            display: flex;
+            height: 65vh;
+        }
+
+        .split-container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .split-section {
+            height: 100%;
+        }
+
+        .split-section:nth-child(1) {
+            width: 35%;
+            background: url('https://images.unsplash.com/photo-1525396524423-64f7b55f5b33?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+        }
+
+        .split-section:nth-child(2),
+        .split-section:nth-child(3) {
+            width: 55%;
+        }
+
+        .split-section:nth-child(2) {
+            background: url('https://images.unsplash.com/photo-1519074025331-81dcc0c0ee6a?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+        }
+
+        .split-section:nth-child(3) {
+            background: url('https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="split-container">
+        <div class="split-section"></div>
+        <div class="split-section"></div>
+        <div class="split-section"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,900&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<div class="background"></div>
+<div class="body">
+  <div class="container">
+    <div class="card">
+      <div class="box">
+        <div class="content">          
+          <img src="./images_and_icons/332-strategy.jpg" alt="Results" />
+          <h2>STRATEGY</h2>
+          <p class="white-txt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab
+            obcaecati accusamus modi tempora voluptates corporis atque vitae
+            nobis recusandae sapiente.
+          </p>
+          <a href="#">MORE</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <img class="icons" src="./images_and_icons/332-results.jpg" alt="Programs" />
+          <h2>RESULTS</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab
+            obcaecati accusamus modi tempora voluptates corporis atque vitae
+            nobis recusandae sapiente.
+          </p>
+          <a href="#">MORE</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <img src="./images_and_icons/332-expertise.jpg" alt="Coaching" />
+          <h2>EXPERTISE</h2>
+          <p class="white-txt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab
+            obcaecati accusamus modi tempora voluptates corporis atque vitae
+            nobis recusandae sapiente.
+          </p>
+          <a href="#">MORE</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <img src="./images_and_icons/332-support.jpg" alt="Events" width="400"/>
+          <h2>SUPPORT</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab
+            obcaecati accusamus modi tempora voluptates corporis atque vitae
+            nobis recusandae sapiente.
+          </p>
+          <a href="#">MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  .background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 30%;
+    background-color: #DFE4EA;
+    background-size: contain;
+    z-index: -1;
+  }
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    flex-direction: row;
+  }
+
+  .container .card {
+    position: relative;
+    min-width: 300px;
+    height: 440px;
+    /* box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+      inset -5px -5px 5px rgba(255, 255, 255, 0.5); */
+    border-radius: 10px;
+    margin: 30px;
+    /* background-color: blue;  */
+  }
+
+
+  .container .card:nth-child(1) {
+    background-color: #4197FA;
+  }
+
+  .container .card:nth-child(3) {
+    background-color: #4197FA;
+  }
+
+  .container .card:nth-child(2) {
+    margin-top: -10%;
+    background-color: white;
+  }
+
+  .container .card:nth-child(4) {
+    margin-top: -10%;
+    background-color: white;
+  }
+
+
+
+  .container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .card .box .content {
+    text-align: center;
+  }
+
+
+  .container .card .box .content img {
+    height: 100px;
+    width: 100px;
+    margin-top: 5%;
+    border-radius: 50%;
+  }
+
+  .container .card .box .content h2 {
+    margin-top: 20px;
+  }
+
+  .container .card .box .content p {
+    margin-top: 10px;
+  }
+
+  .white-txt {
+    color: white;
+  }
+
+  .container .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 10px;
+    color: black;
+  }
+</style>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overlap Block </title>
+
+  <style>
+    #animation-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    #background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlap-block {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      width: 70%;
+      left: 15%;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    #block1 {
+      top: 10%;
+    }
+
+    #block2 {
+      top: 40%;
+    }
+
+    #block3 {
+      top: 70%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="animation-container">
+    <img id="background-image" src="./images_and_icons/overlap_30_rahulchanumolu.jpg" alt="Background Image">
+    <div class="overlap-block" id="block1">Zen Escape: "Step into serenity, leave the world behind."</div>
+    <div class="overlap-block" id="block2">Blissful Body Retreat: "Nourish your body, revive your spirit, at the blissful retreat."</div>
+    <div class="overlap-block" id="block3">Mindful Moments: "Mindfulness begins with the first step into the spa oasis."</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const blocks = document.querySelectorAll(".overlap-block");
+
+      function showBlocks() {
+        blocks.forEach((block, index) => {
+          setTimeout(() => {
+            block.style.opacity = "1";
+            block.style.transform = "translateY(0)";
+          }, index * 500);
+        });
+      }
+
+      showBlocks();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<div class="split" id="left-panel"></div>
+<div class="split" id="middle-panel">middle</div>
+<div class="split" id="right-panel"></div>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    .split {
+        float: left;
+        width: 33.33%;
+        height: 100vh;
+        transition: width 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+    #left-panel {
+        background: url('modules/split/images_and_icons/golden_cute.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    #middle-panel {
+        background: url('modules/split/images_and_icons/himalayan_cat.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    #right-panel {
+        background: url('modules/split/images_and_icons/pitbull_baby.jpg') no-repeat center center;
+        background-size: cover;
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.split').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.width = "50%";
+            siblings(this).forEach(el => el.style.width = "25%");
+        });
+        item.addEventListener('mouseleave', function() {
+            const splits = document.querySelectorAll('.split');
+            splits.forEach(el => el.style.width = "33.33%");
+        });
+    });
+
+    function siblings(t) {
+        return Array.prototype.filter.call(t.parentNode.children, function(child){
+            return child !== t;
+        });
+    }
+</script>

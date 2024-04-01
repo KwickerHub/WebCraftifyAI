@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Tiles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    .container{
+        position: relative;
+    width: 960px;
+    margin: 0 auto;
+  }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 10px;
+      height: 50px;
+      margin-top: 20px;
+    }
+
+    .bg-img{
+    background-image: url(images_and_icons/grid_303.jpeg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: 50% 10%;
+
+ 
+    }
+    /* .grid-item:nth-child(1) {
+
+      height: 100px;
+    } */
+
+    .grid-item {
+      border: none;
+      padding: 50px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 250px;
+
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .grid-item.color{
+        background-color: #f1c50e;
+    }
+    .grid-item.color2{
+        background-color: #f2f2f2
+    }
+    .grid-item.diffrow {
+        height: 100px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+  <h2>Marketing</h2>
+
+  <p>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  </p>
+
+
+  <div class="grid">
+    <div class="grid-item color diffrow">
+      <h2> 1</h2>
+      <p>Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read.</p>
+    </div>
+
+    <div class="grid-item diffrow">
+
+    </div>
+
+    <div class="grid-item color2">
+      <h2>2</h2>
+      <p>Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read.</p>
+    </div>
+
+    <div class="grid-item bg-img" >
+        
+    </div>
+  </div>
+</div>
+</body>
+</html>

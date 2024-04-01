@@ -1,0 +1,175 @@
+<div id="body">
+    <h1 class="main-title">Running and jogging</h1>
+    <div class="main_container">
+      <div class="container1 sub_container">
+        <div class="c1-r1"><div class="imageContainer img1"></div></div>
+        <div class="c1-r2">
+          <div class="img-description">
+            <h3 class="sub-title">Jogging</h3>
+            <p class="sub-title-desc">Remember, the feeling you get from a good run is far better than the 
+              feeling you get from sitting around wishing you were running.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container2 sub_container">
+        <div class="c2-r1">
+          <div class="img-description">
+            <h3 class="sub-title">Workouts</h3>
+            <p class="sub-title-desc">Willpower is like a muscle, the more frequently you train it, the stronger it gets.</p>
+          </div>
+        </div>
+        <div class="c2-r2"><div class="imageContainer img2"></div></div>
+      </div>
+      <div class="container3 sub_container">
+        <div class="c3-r1"><div class="imageContainer img3"></div></div>
+        <div class="c3-r2">
+          <div class="img-description">
+            <h3 class="sub-title">Health Benefits</h3>
+            <p class="sub-title-desc">Every human being is the author of his own health or disease. The only way to keep your health is to eat what you don’t want, drink what you don’t like, and do what you’d rather not</p>
+          </div>
+        </div>
+      </div>
+      <div class="container4 sub_container">
+        <div class="c4-r1">
+          <div class="img-description">
+            <h3 class="sub-title">Weight Loss</h3>
+            <p class="sub-title-desc">Make time for it. Just get it done. Nobody ever got strong or got in shape by thinking about it. They did it.</p>
+          </div>
+        </div>
+        <div class="c4-r2"><div class="imageContainer img4"></div></div>
+      </div>
+    </div>
+    <div class="signature">
+       <h4 style="margin: 0;">By Abrar Faiz Mohammed</h4>
+    </div>
+  </div>
+  
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&family=Open+Sans:wght@200;300&family=Oswald:wght@500&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+    
+    #body {
+      width: 100%;
+      height: max-content;
+      margin: 0;
+      color: #62b4ba;
+      font-family: "Oswald", sans-serif;
+    }
+    .main-title {
+      width: max-content;
+      text-align: center;
+      justify-content: center;
+      letter-spacing: 0.2rem;
+      margin:2% auto;
+    }
+    .main_container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto;
+      gap: 2px;
+    }
+    .c1-r1,.c2-r2,.c3-r1,.c4-r2,.c1-r2,.c2-r1,.c3-r2,.c4-r1{
+      height: 40%;
+    }
+    .sub_container {
+      width: 200px;
+      height: 70vh;
+      margin: 0%;
+      padding: 0%;
+      gap: 50px;
+    }
+    .imageContainer {
+      width: 55%;
+      height: 90%;
+      border-radius: 50%;
+      margin: 0px auto;
+    }
+    .img1 {
+      background-image: url("./images_and_icons/grid_342_Jogging.jpg");
+    }
+    .img2 {
+      background-image: url("./images_and_icons/grid_342_workouts.jpg");
+    }
+    .img3 {
+      background-image: url("./images_and_icons/grid_342_HealthBenefits.jpg");
+    }
+    .img4 {
+      background-image: url("./images_and_icons/grid_342_WeightLoss.jpg");
+    }
+    .img1,
+    .img2,
+    .img3,
+    .img4 {
+      background-size: 100% 100%;
+    }
+    .img-description {
+      width: 75%;
+      height: max-content;
+      margin: 0px auto;
+    }
+    .sub-title
+    {
+      margin:7px 10px;
+      letter-spacing: 1px;
+      font-weight: 200;
+      font-size: 15px;
+    }
+    .sub-title-desc{
+      color: black;
+      font-size: 8px;
+      font-weight: normal;
+      margin: 0 10px;
+    }
+    .signature{
+      text-align: center;
+      margin: 0;
+      font-family: 'Monsieur La Doulaise', cursive;
+    }
+  
+    @media screen and (max-width: 1025px) {
+      .main_container {
+          display: grid;
+          grid-template-rows: auto auto auto auto;
+          grid-template-columns:none;
+          height: max-content;
+          justify-content: center;
+          transform: translate(-70px, 10px);
+        }
+        .imageContainer {
+          width: 155px;
+          height: 145px;
+        }
+        .img-description {
+          width: 150px;
+        }
+        .sub_container{
+          display: flex;
+          height: 200px;
+        }
+    }
+  
+    @media screen and (width >1920px) {
+      .main_container {
+          margin-left:15%;
+      }
+      .imageContainer {
+          width:350px;
+          height:350px;
+        }
+   .sub-title
+    {
+      font-size: 25px;
+    }
+    .sub-title-desc{
+      font-size: 12px;
+    }
+    .img-description {
+      width: 250px;
+    }
+    .signature{
+      font-size: 25px;
+    }
+  
+    }
+  </style>
+  

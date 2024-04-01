@@ -1,0 +1,150 @@
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+  }
+  .blue-container {
+    background-color: turquoise;
+    position: relative;
+    height: 60%;
+  }
+  .image {
+    width: 65%;
+    position: relative;
+    left: 30px;
+    top: 30px;
+    border-radius: 30px;
+  }
+
+  .white-container {
+    background-color: seashell;
+    height: 30%;
+  }
+  .content {
+    display: flexbox;
+    flex-direction: column;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    border-radius: 30px;
+    background-color: beige;
+    width: 40%;
+    height: 70%;
+
+    /* position:relative; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .inside {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+
+    justify-content: center;
+    place-items: center;
+    padding: 0%;
+  }
+  .capital {
+    font-family: "Courier New", Courier, monospace;
+    font-size: large;
+    text-align: left;
+  }
+  .span {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: xx-large;
+    color: orangered;
+    font-weight: bold;
+    margin-left: 0%;
+    text-align: left;
+    display: flexbox;
+    flex-wrap: wrap;
+  }
+  .button {
+    background-color: aquamarine;
+    border-radius: 10px;
+    height: 40px;
+    padding: 10px;
+  }
+  .manage {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+  }
+  @media (max-width: 768px) {
+    body {
+      margin: 0;
+      padding: 0;
+      height: 60%;
+      width: 80%;
+      display: flex;
+    }
+    .image {
+      width: 60%;
+      position: relative;
+      left: 30px;
+      top: 30px;
+      border-radius: 30px;
+    }
+    .button {
+      display: none;
+    }
+
+    .span {
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-size: medium;
+      color: orangered;
+      font-weight: bold;
+      margin-left: 0%;
+      text-align: left;
+      display: flexbox;
+      flex-wrap: wrap;
+    }
+
+    .manage {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: small;
+    }
+  }
+  @media (max-width: 592px) {
+    body {
+      margin: 0;
+      padding: 0;
+      height: 30%;
+      width: 60%;
+      display: flex;
+    }
+    .manage {
+      display: none;
+    }
+    .span {
+      display: none;
+    }
+    .content {
+      width: 30%;
+      height: 40%;
+    }
+    .capital {
+      font-family: "Courier New", Courier, monospace;
+      font-size: smaller;
+      text-align: left;
+    }
+  }
+</style>
+
+<div class="blue-container">
+  <img
+    src="./images_and_icons/source.jpg"
+    alt="Couple photo"
+    class="image"
+  />
+  <div class="content">
+    <div class="inside">
+      <p class="capital">TRAVEL AGENCY</p>
+      <span class="span">Get More Out Of Your Travel</span>
+      <p class="manage">Manage your <a href="#">account</a></p>
+      <button class="button">Learn More</button>
+    </div>
+  </div>
+</div>
+<div class="white-container"></div>

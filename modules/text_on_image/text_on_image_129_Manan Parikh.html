@@ -1,0 +1,122 @@
+<div class="main_container">
+    <div class="headerImg">
+        <img class="bakeryImage" src="images_and_icons/bakerysymbol.jpg">
+    </div>
+  <div class="main_text_div">
+    <h1 class="heading1">We make homemade breads</h1>
+    <h1 class="heading1">and cakes</h1>
+    <p class="text">Ut enim ad minim veniam, 
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit </p>
+    <div class="btngroup">
+        <button id="aboutButton">ABOUT US</button>
+        <button id="learnButton">ALL PRODUCTS</button>
+    </div>
+    
+  </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100&family=EB+Garamond:wght@500&display=swap');
+
+  body {
+    margin: 0;
+    background-image: url("images_and_icons/bakerhands.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .main_container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: -5%;
+  }
+
+.headerImg {
+    max-width: 100px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bakeryImage{
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 150%; 
+    margin: 0 0 50px -20%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; 
+}
+
+.main_text_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.heading1 {
+    font-size: 80px;
+    font-weight: 400;
+    font-family: 'EB Garamond', serif;
+    margin: -13px;
+    color: white;
+  }
+.text {
+    font-size: 20px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 100;
+    margin-top: 3%;
+    line-height: 35px;
+    text-wrap: balance;
+    margin-right: 50%;
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btngroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%
+}
+  
+  #aboutButton {
+    font-size: 16px;
+    width: 30%;
+    padding: 17px;
+    background: white;
+    border-color: white;
+    margin-top: 5%;
+    color: black;
+    font-weight: 700;
+    border-radius: 12px;
+    font-family: 'EB Garamond', serif;
+  }
+
+#learnButton {
+    font-size: 16px;
+    width: 30%;
+    padding: 17px;
+    background: none;
+    border-color: white;
+    margin-top: 5%;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    font-family: 'EB Garamond', serif;
+  }
+</style>

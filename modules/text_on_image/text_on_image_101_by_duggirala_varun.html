@@ -1,0 +1,91 @@
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            height: 100%;
+        }
+        .background-image {
+            background-image: url('images_and_icons/background_101.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            height: 100%;
+        }
+        .content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+        .face{
+            background-image: url('images_and_icons/person.png'); 
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            margin: 0 auto 20px; 
+           background-color: transparent;
+           margin-top: 70px;
+           
+        }
+        .music-icon {
+            background-image: url('images_and_icons/headphoens.png'); 
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            margin: 0 auto 20px; 
+        }
+        .title {
+            font-size: 4em;
+            margin-bottom: 0.5em;
+            width: 600px;
+        }
+        .description {
+            font-size: 1em;
+            margin-bottom: 1em;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none; 
+            color: white;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        .button-white {
+            background-color: white;
+            color: rgb(96, 58, 106);
+        }
+        .button-blue {
+            background-color: #653f68;
+        }
+        .button:hover {
+            opacity: 0.9;
+        }
+    </style>
+
+    <div class="background-image">
+        <div class="content">
+            <div class="music-icon"></div>
+            <h1 class="title">Music for Everyone</h1>
+            <p class="description">Explore a world of music. Anytime, anywhere.</p>
+            <a href="YOUR_LINK_HERE" class="button button-white">Discover More</a>
+            <a href="YOUR_LINK_HERE" class="button button-blue">Start Listening</a>
+            <div class="face"></div>
+        </div>
+    </div>

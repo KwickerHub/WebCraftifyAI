@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./images_and_icons/skback.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .container {
+			text-align: center;
+			padding-bottom: 20px;
+			padding-top: 20px; /* Add top padding for spacing */
+		}
+
+		h1 {
+			font-size: 3em; /* Adjusts the size of the text */
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 0;
+			font-family: 'Arial', sans-serif; /* Changes the font style */
+			font-weight: bold; /* Makes the font bold */
+			color: white; /* Changes the text color */
+			text-transform: uppercase; /* Transform text to uppercase */
+		}
+
+
+		p {
+			text-align: center;
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+			margin-bottom: 0;
+			color: white;
+		}
+        .learn-more-btn {
+            display: inline-block;
+            padding: 10px 10px;
+            margin-bottom: 100px; /* Spacing between button and boxes */
+            text-align: center;
+			width: 85px;
+            height: 20px;
+            background-color: white; /* Example button color */
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+		p1 {
+			text-align: center;
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 5px;
+			margin-bottom: 0;
+			color: white;
+		}
+        .boxes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+			margin-bottom: 25px;
+        }
+        .box {
+            width: 250px;
+            height: 250px;
+            margin: 0 10px;
+            background-size: cover;
+            position: relative;
+			border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.1);
+        }
+        .box:nth-child(1) {
+            background-image: url('./images_and_icons/skbox1.jpg'); /* Replace with your first image URL */
+        }
+        .box:nth-child(2) {
+            background-image: url('./images_and_icons/skbox2.jpg'); /* Replace with your second image URL */
+        }
+        .box:nth-child(3) {
+            background-image: url('./images_and_icons/skbox3.jpg'); /* Replace with your third image URL */	
+        }
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Property Management Services</h1> <!-- Heading -->
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p><!-- Informational text -->
+		<div class="container">
+
+        <a href="learn-more-link.html" class="learn-more-btn">Learn More</a> <!-- Learn More button -->
+
+
+        <div class="boxes">
+            <a href="link1.html" class="box"></a> <!-- Replace with your first link -->
+            <a href="link2.html" class="box"></a> <!-- Replace with your second link -->
+            <a href="link3.html" class="box"></a> <!-- Replace with your third link -->
+        </div>
+		<p1>Presented by contributor of this project</p1>
+    </div>
+</body>
+</html>

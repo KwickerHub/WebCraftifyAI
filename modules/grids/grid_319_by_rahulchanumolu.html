@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Grid with Header</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            border: 2px solid #333;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 40px;
+            color: rgb(218, 133, 48);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .grid-item {
+            background-color: rgb(218, 133, 48);
+            padding: 0; 
+            text-align: center;
+            transition: transform 0.3s ease;
+            font-size: 30px;
+            overflow: hidden;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Construction Projects</div>
+    <div class="grid">
+        <div class="grid-item">
+            <img src="images_and_icons/grid_319_1_rahulchanumolu.jpeg" alt="Image 1">
+        </div>
+        <div class="grid-item">
+            <p> Construction projects, orchestrated by skilled teams, seamlessly blend vision and craftsmanship, transforming blueprints into tangible structures that shape our cities and stand as monuments to human ingenuity.</p>
+        </div>
+        <div class="grid-item">
+            <img src="images_and_icons/grid_319_2_rahulchanumolu.jpeg" alt="Image 2">
+        </div>
+        <div class="grid-item">
+            <img src="images_and_icons/grid_319_3_rahulchanumolu.jpeg" alt="Image 3">
+        </div>
+        <div class="grid-item">
+            <p>Blueprints unfold, and construction sites echo with progress</p>
+        </div>
+        <div class="grid-item">
+            <img src="images_and_icons/grid_319_4_rahulchanumolu.jpeg" alt="Image 4">
+        <div>
+</div>
+
+</body>
+</html>

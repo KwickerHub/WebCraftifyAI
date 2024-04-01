@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div class="show">
+      <div class="container">
+        <div class="background_color"></div>
+        <div class="background"></div>
+        <div class="color_block">
+          <h1> Family Camp </h1>
+          <h3> Camping with family is a great way to re-connect with each other through a shared experience. When parents go to work, and kids go to school on a daily schedule, family members experience separate realities.</h3>
+          <h3> Learn more</h3>
+          <button>
+            Button
+          </button>       
+        </div>
+        <div class="image"></div>
+      </div>
+    </div>
+</html>
+
+<style>
+
+  .show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  h1{
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 5px;
+  }
+  h2{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h3{
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .container {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 8.5fr 0.5fr 3fr 2fr 2fr;
+    grid-template-rows: 1fr 1.5fr 2.2fr 1fr 1.2fr 0.1fr 1.8fr 0.9fr 1fr;
+    grid-template-areas: 
+    " . . . . . . ."
+    " . . . . . . ."
+    " bc bc bc bc bc bc bc"
+    " bc bc bc bc bc bc bc"
+    " bc bc bc bc bc bc bc"
+    " . . . . . . ."
+    " . . . . . . ."
+    " . . . . . . ."
+    " . . . . . . .";
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+
+  .background_color{
+    grid-area: bc;
+    background-color: rgb(133, 133, 110);
+  }
+
+  button{
+    margin: 20px;
+    height: 50px;
+    width: 170px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border-radius: 40px;
+    background-color:rgb(85, 88, 68);
+  }
+
+  .color_block {
+    grid-area: 4 / 3 / span 5 / span 1;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  .image{
+    grid-area: 5 / 5 / span 4 / span 2;
+    background-image: url("./images_and_icons/image_32.svg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .background {
+    grid-area: 2 / 2 / span 5 / span 4;
+    background-image: url("./images_and_icons/background_32.svg");
+    background-size: cover;
+    /*background-position: 70px;*/
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+</style>

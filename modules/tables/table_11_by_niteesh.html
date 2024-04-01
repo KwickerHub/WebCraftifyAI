@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Example</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center; /* Center align text */
+      width: 150px; /* Set width for the cells */
+      height: 30px; /* Set height for the cells */
+    }
+
+    th:nth-child(odd) {
+      background-color: lime;
+      color: black;
+    }
+
+    th:nth-child(even) {
+      background-color: black;
+      color: white;
+    }
+
+    tr:nth-child(2) td:nth-child(even) {
+      background-color:  rgb(227, 215, 215);
+    }
+
+    tr:nth-child(2) td:nth-child(odd) {
+      background-color: black;
+      color: white;
+    }
+
+    tr:nth-child(4) td:nth-child(even) {
+      background-color: rgb(227, 215, 215);
+    }
+
+    tr:nth-child(4) td:nth-child(odd) {
+      background-color: black;
+      color: white;
+    }
+    /* Remove borders */
+    th, td {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>COLUMN 1</th>
+        <th>COLUMN 2</th>
+        <th>COLUMN 3</th>
+        <th>COLUMN 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Item #1</td>
+        <td>Description</td>
+        <td>Discount:</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td>Item #2</td>
+        <td>Description</td>
+        <td>Discount:</td>
+        <td>$2.00</td>
+      </tr>
+      <tr>
+        <td>Item #3</td>
+        <td>Description</td>
+        <td>Discount:</td>
+        <td>$3.00</td>
+      </tr>
+      <tr>
+        <td>Item #4</td>
+        <td>Description</td>
+        <td>Discount:</td>
+        <td>$4.00</td>
+      </tr>
+      <tr>
+        <td><b>All Items</b></td>
+        <td><b>Description</b></td>
+        <td><b>Your Total:</b></td>
+        <td><b>$10.00</b></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

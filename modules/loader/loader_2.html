@@ -1,0 +1,104 @@
+<style>
+    body {
+        margin: 0;
+        height: 100vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    .progress-container {
+        position: relative;
+        width: 80%;
+        margin: 50px auto;
+      }
+      .progress-bar {
+        position: relative;
+        width: 15%;
+        height: 20px;
+        background: #ccc;
+        border-radius: 10px;
+        margin: 0 auto; 
+      }
+      .progress-fill {
+        height: 100%;
+        width: 0;
+        background: repeating-linear-gradient(90deg, rgb(237, 138, 39), orange 10px, transparent 10px, transparent 20px);
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .progress-dragger {
+        width: 20px;
+        height: 20px;
+        background-color: orange;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        cursor: pointer;
+        z-index: 2;
+      }
+      .percentage-circle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        top: -45px;
+        width: 35px;
+        height: 35px;
+        background-color: orange;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        overflow: hidden;
+        background-clip: content-box;
+        margin-bottom: 7px;
+      }
+     
+</style>
+
+<body>
+<div class="progress-container">
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+      <div class="percentage-circle">0%</div>
+      <div class="progress-dragger"></div>
+    </div>
+</div>
+</body>
+  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var progressBar = document.querySelector('.progress-bar');
+      var progressFill = document.querySelector('.progress-fill');
+      var dragger = document.querySelector('.progress-dragger');
+      var percentageCircle = document.querySelector('.percentage-circle');
+  
+      dragger.addEventListener('mousedown',function(event) {
+        event.preventDefault();
+        document.addEventListener('mousemove',handleDrag);
+        document.addEventListener('mouseup', function() {
+          document.removeEventListener('mousemove',handleDrag);
+        });
+      });
+  
+      function handleDrag(event) {
+        var progressBarRect = progressBar.getBoundingClientRect();
+        var newPosition = Math.min(Math.max(event.clientX-progressBarRect.left,0), progressBar.clientWidth);
+        var percentage = (newPosition/progressBar.clientWidth)*100;
+        dragger.style.left = newPosition-dragger.clientWidth/2 +'px';
+        percentageCircle.textContent = Math.round(percentage)+'%';
+        percentageCircle.style.left = newPosition - percentageCircle.clientWidth/2+'px';
+        progressFill.style.width = percentage+'%';
+ 
+      }
+    });
+</script>
+  
+  
+ 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CREATES Framework</title>
+<style>
+  .container {
+    display: flex; /* This allows for side-by-side positioning */
+    align-items: flex-start; /* This aligns the containers at the top */
+    padding-top: 50px; 
+  }
+ 
+  .image-container {
+    width: 250px; /* Width of the image container */
+    height: 513px; /* Height of the image container */ 
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will ensure the image covers the container */
+    background-color: white;
+  }
+  
+  .text-table-container {
+    width: 800px; /* Width of the right side container */
+    height: 513px; /* Height of the right side container */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:350;
+  }
+
+  .text-content {
+    /* You can style your text content here */
+    padding: 16px;
+    overflow: auto; /* Allows scrolling if the text is too long */
+    align-items: center;
+  }
+
+  .creates-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* This ensures the table respects the width of its container */
+    align-items: center;
+    border: none;
+  }
+  
+  .creates-table th,td {
+    background-color: white;
+    text-align: center;
+    padding: 10px;  
+  }
+
+  .creates-table th {
+    border-top: 2px solid black;
+    border-bottom:2px solid black;
+  }
+
+</style>
+</head>
+<body style="background-color:hsl(0, 0%, 12%);;">
+
+<div class="container">
+
+  <div class="image-container">
+    <img src=".\images_and_icons\Suvam_image.svg" alt="">
+  </div>
+
+  <div class="text-table-container">
+    <div class="text-content">
+      <p style="font-size:40px">The <b>CREATES</b> framework</p>
+      <p>We have experts who have been working for several years in digital marketing and branding with a number of renowned successful projects.</p>
+    </div>
+    <div><table class="creates-table">
+      <tr class="head-cls">
+        <th>COLUMN 1</th>
+        <th>COLUMN 2</th>
+        <th>COLUMN 3</th>
+        <th>COLUMN 4</th>
+      </tr>
+      <tr> 
+        <td>Item #1</td>
+        <td>Description</td>
+        <td>Description</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td>Item #2</td>
+        <td>Description</td>
+        <td>Description</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td>Item #3</td>
+        <td>Description</td>
+        <td>Description</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td>Item #4</td>
+        <td>Description</td>
+        <td>Description</td>
+        <td>Description</td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

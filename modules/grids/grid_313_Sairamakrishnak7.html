@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Club</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+  .profile-image {
+    width: 450px; /* Adjust size as needed */
+    height: 450px;
+    border-radius: 50%;
+    border: 7px solid #87CEEB; /* Sky blue color */
+    object-fit: cover;
+    position: absolute;
+    left: -300px; /* Adjust position as needed */
+    top: 20px;
+    z-index: 1;
+  }
+  .large-circle {
+    width: 130px; /* Adjust size as needed */
+    height: 130px;
+    background-color: #87CEEB; /* Sky blue color */
+    border-radius: 70%;
+    position: absolute;
+    left: 240px; /* Adjust position as needed */
+    top: 80px;
+    z-index: 0;
+  }
+  .medium-ring {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    border: 10px solid #87CEEB; /* Sky blue color */
+    border-radius: 50%;
+    position: absolute;
+    left: -300px; /* Adjust position as needed */
+    top: 500px;
+    z-index: 0;
+  }
+  .text-box {
+    width: 550px; /* Adjust width as needed */
+    background-color: white; /* White background for the text box */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: -80px;
+    margin-top: 350px; /* Adjust margin as needed */
+    z-index: 2;
+    display: flex;
+    justify-content: space-between; /* Creates space between text and bullet points */
+  }
+  .text-content {
+    width: 300%;
+    text-align: center;
+  }
+  .club-list {
+    width: 190%;
+    list-style-position: inside; /* Positions bullet points inside the list item */
+  }
+  .club-list li {
+    margin-bottom: 10px; /* Adds space between list items */
+  }
+  .button {
+    background-color: #009fdf;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 20px;
+    margin-top: 20px;
+    align-self: center;
+  }
+</style>
+</head>
+<body>
+    <div class="main-container">
+      <img src="./images_and_icons/313im .jpeg" alt="Profile Image" class="profile-image">
+      <div class="large-circle"></div>
+      <div class="medium-ring"></div>
+      <div class="text-box">
+        <div class="text-content">
+          <h1>About Club</h1>
+          <p>Welcome to the XYZ Club – your go-to community for health and outdoor activities. Our club is dedicated to providing members with a variety of sports and recreational activities, all aimed at promoting a healthy and active lifestyle. Join us for adventure, fitness, and fun!</p>
+          <a href="#" class="button">Read More</a>
+        </div>
+        <ul class="club-list">
+          <li>Road Running</li>
+          <li>Trail Running</li>
+          <li>Active Life</li> 
+          <li>Hiking and Outdoors</li>
+          <li>Walking</li>
+          <li>Travel</li>
+        </ul>
+
+      </div>
+    </div>
+    </body>
+</html>

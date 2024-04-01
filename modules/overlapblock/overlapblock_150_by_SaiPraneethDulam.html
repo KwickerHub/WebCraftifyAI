@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustration & Art Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); 
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        .text-overlay-container {
+            position: relative;
+            height: 100vh; 
+            background-image: url('./images_and_icons/sea_bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 40%; /* Adjust to match your exact positioning */
+            left: 10%; /* Aligning text to the left */
+            color: #333; /* Dark text color */
+            text-align: left;
+            max-width: 450px; /* Maximum text width before wrapping */
+        }
+
+        .orange-rectangle {
+            height: 1.5rem; /* Rectangle height */
+            width: 12rem; /* Rectangle width */
+            background-color: #e7820f; /* Orange color */
+            margin-bottom: 10px; /* Space between rectangle and text */
+        }
+
+        .main-title {
+            font-size: 4em;
+            line-height: 1.2; 
+            margin-bottom: 0.5em; 
+            color: white;
+        }
+
+        .sub-title {
+            font-size: 1em;
+            font-weight: normal; 
+            color: white; 
+        }
+
+        /* Responsive design adjustments */
+        @media only screen and (max-width: 768px) {
+            .text-overlay {
+                font-size: 1.5em;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="text-overlay-container">
+    <div class="text-overlay">
+        <div class="orange-rectangle"></div>
+        <div class="main-title">ILLUSTRATION & ART GUIDE</div>
+        <div class="sub-title">Explore the world of creativity with our comprehensive guide.</div>
+    </div>
+</div>
+
+</body>
+</html>
+ this is my code

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 01</title>
+    <style>
+        :root {
+            --primary-color: #359756;
+            --secondary-color: #e0dfdf;
+            --hover-color-dark: #333;
+            --hover-color-light: #BABABA;
+            --font-family: sans-serif;
+            --border-radius: 10px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: var(--font-family);
+        }
+        
+        .section-container{
+           
+        position: relative;
+        width: 1140px;
+        margin: 0 auto;
+    
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .image-section, .text-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text-section h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-section p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-section p span {
+            text-decoration: underline;
+            text-decoration-color: var(--primary-color);
+        }
+
+        .text-section button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-section .btw1 {
+            color: white;
+            background-color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        .text-section .btw2 {
+            background-color: var(--secondary-color);
+        }
+
+        .text-section .btw1:hover {
+            background-color: var(--hover-color-dark);
+        }
+
+        .text-section .btw2:hover {
+            background-color: var(--hover-color-light);
+        }
+    </style>
+</head>
+<body>
+    <div class="section-container">
+    <div class="container">
+        <div class="image-section">
+            <img src="./images_and_icons/img_01_bhargav.png" alt="image">
+        </div>
+        <div class="text-section">
+            <h1>Grow Your Brand with Our Studio</h1>
+            <p>Image from <span>Freepik</span></p>
+            <button class="btw1">Our Project</button>
+            <button class="btw2">Start a Project</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

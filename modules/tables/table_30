@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Table</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #container {
+      max-width: 800px; /* Adjust the width as needed */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .main-heading {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ff8c00; /* Orange color */
+      text-align: left;
+      padding: 12px; /* Adjust padding for larger cells */
+    }
+
+    th {
+      background-color: #d3d3d3; /* Light grey color */
+      text-align: center; /* Center the text within the cell */
+    }
+
+    .cta-button {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      width: 150px; /* Set a specific width, adjust as needed */
+      background-color: #ff8c00; /* Orange color */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin: 0 auto; /* Center the button */
+    }
+
+    /* Center the paragraph text */
+    p {
+      text-align: center;
+    }
+
+    /* Increase size and make bold */
+    td.price {
+      font-weight: bold;
+      font-size: 25px; /* Adjust the size as needed */
+      text-align: center; /* Center the text within the cell */
+    }
+
+    /* Center the content within the cells */
+    td.center-content {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+    <table>
+      <tr>
+        <th></th>
+        <th>BASIC</th>
+        <th>STANDARD</th>
+        <th>ADVANCED</th>
+      </tr>
+      <tr>
+        <td>Monthly Price</td>
+        <td class="price">$29</td>
+        <td class="price">$59</td>
+        <td class="price">$139</td>
+      </tr>
+      <tr>
+        <td>FEATURES</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Users</td>
+        <td class="center-content">1 full user</td>
+        <td class="center-content">5 full users</td>
+        <td class="center-content">Custom users</td>
+      </tr>
+      <tr>
+        <td>Unlimited read-only users</td>
+        <td class="center-content">1,000 Email Previews</td>
+        <td class="center-content">2,000 Email Previews</td>
+        <td class="center-content">Custom Email Previews</td>
+      </tr>
+      <tr>
+        <td>Contacts</td>
+        <td class="center-content">5 contacts per client</td>
+        <td class="center-content">25 contacts per client</td>
+        <td class="center-content">Unlimited contacts</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><a href="#" class="cta-button">Choose Plan</a></td>
+        <td><a href="#" class="cta-button">Choose Plan</a></td>
+        <td><a href="#" class="cta-button">Choose Plan</a></td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

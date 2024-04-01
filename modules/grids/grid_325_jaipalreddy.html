@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+  }
+  .services-header {
+    color: #000;
+    padding: 40px; /* Increased padding for a larger header */
+    font-size: 36px; /* Increased font size for "Our Services" */
+    text-align: center;
+    background-color: #fff; /* White background for the header */
+  }
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 10px;
+    padding: 20px;
+  }
+  .service-item, .service-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; /* White background for both */
+    border: 1px solid #ddd; /* Border to distinguish the blocks */
+    height: 200px; /* Set a fixed height or adjust as needed */
+  }
+  .service-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image covers the block without stretching */
+  }
+  .service-text {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .service-text.black-bg {
+    background-color: #000; /* Black background for "Home Repairs" */
+  }
+  .service-text.grey-bg {
+    background-color: #808080; /* Grey background for "Renovating Together" and "Housing Consulting" */
+  }
+  .service-text.yellow-bg {
+    background-color: #ffd700; /* Yellow background for "Home Accessibility" */
+  }
+  .button-row {
+    grid-column: 1 / -1; /* Span the full width of the grid */
+    text-align: center;
+    padding: 20px;
+  }
+  .button-link {
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="services-header">Our Services</div>
+
+<div class="services-container">
+  <!-- Row 1 -->
+  <div class="service-item">
+    <img src="images_and_icons/325im1.jpeg" alt="Home Repairs">
+  </div>
+  <div class="service-text black-bg">
+    <h3>Home Repairs</h3>
+    <p>Dedicated to repairing and maintaining your home to the highest standards.</p>
+  </div>
+  <div class="service-item">
+    <img src="images_and_icons/325im2.jpeg" alt="Renovating Together">
+  </div>
+  <div class="service-text grey-bg">
+    <h3>Renovating Together</h3>
+    <p>Collaborative and comprehensive approach to home renovation.</p>
+  </div>
+  
+  <!-- Row 2 -->
+  <div class="service-text grey-bg">
+    <h3>Housing Consulting</h3>
+    <p>Expert advice for your housing strategies and investment decisions.</p>
+  </div>
+  <div class="service-item">
+    <img src="images_and_icons/325im3.jpeg" alt="Housing Consulting">
+  </div>
+  <div class="service-text yellow-bg">
+    <h3>Home Accessibility</h3>
+    <p>Improving the accessibility of your home for comfort and convenience.</p>
+  </div>
+  <div class="service-item">
+    <img src="images_and_icons/325im4.jpeg" alt="Home Accessibility">
+  </div>
+  
+  <!-- Button Row -->
+  <div class="button-row">
+    <button class="button-link">Read More About Our Services</button>
+  </div>
+</div>
+</body>
+</html>

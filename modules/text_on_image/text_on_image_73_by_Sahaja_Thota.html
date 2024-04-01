@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Leader in Solar</title>
+<style>
+  /* Add your CSS styling here */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  .main-content {
+    background-image: url('images_and_icons/73.jpeg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative; /* For the positioning of the boxes */
+  }
+  .text-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0;
+    width: 480px;
+    height: 300px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute; /* Absolute position for overlapping */
+    top: 45%; /* Align center vertically */
+    left: 260px; /* 20px from the left side */
+    transform: translateY(-50%); /* Center it correctly on the Y-axis */
+    z-index: 2; /* Higher than the shadow */
+    text-align: left; /* Text aligned to the left */
+  }
+  .text-box-shadow { /* CSS for the orange shadow */
+    background: rgb(240, 107, 6);
+    width: 530px; /* Slightly wider than the text box to appear like a shadow */
+    height: 300px; /* Slightly higher than the text box to appear like a shadow */
+    border-radius: 0;
+    position: absolute; /* Absolute position for overlapping */
+    top: 53%; /* Align center vertically */
+    left: 200px; /* Slightly to the right of the text box for shadow effect */
+    transform: translateY(-50%) translateX(5px) translateY(10px); /* Offset the shadow */
+    z-index: 1; /* Lower than the text box, so it appears like a shade */
+  }
+  .btn {
+    background-color: rgb(240, 107, 6); /* A shade of orange for the button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    width: 210px;
+    height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 65px; 
+    font-size: 25px;/* Spacing between the button and text */
+  }
+  .paragraph {
+    width: 340px; 
+    top: 130px;
+    font-size: 16px;/* Set the desired width for the paragraph */
+  }
+  .image-source { 
+    position: absolute;
+    bottom: 120px;
+    left: 20px;
+
+  }
+</style>
+</head>
+<body>
+
+<div class="main-content">
+  <div class="text-box-shadow"></div> <!-- Orange shadow box -->
+  <div class="text-box">
+    <h1>A Leader in Solar</h1>
+    <p class="paragraph">Industry-leading products and customer service solutions, with a demonstrated commitment to sustainability.</p>
+    <div class="image-source">
+      Image from <a href="https://www.freepik.com/" target="_blank">Freepik</a>
+    </div>
+    <button class="btn">CONTACT US</button>
+  </div>
+</div>
+
+</body>
+</html>

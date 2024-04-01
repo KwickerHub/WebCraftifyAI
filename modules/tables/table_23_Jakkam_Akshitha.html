@@ -1,0 +1,144 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promotion Plans</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+  }
+  .container {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+  }
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  .pricing-table thead th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+  }
+  .pricing-table thead th:not(:first-child) {
+    color: white;
+    background-color: #4e4e4e; /* Default color, to be overridden */
+  }
+  .pricing-table thead th:nth-child(2) {
+    background-color: #8A2BE2; /* Enterprise color */
+  }
+  .pricing-table thead th:nth-child(3) {
+    background-color: #DAA520; /* Advanced color */
+  }
+  .pricing-table thead th:nth-child(4) {
+    background-color: #e97aca; /* Startup color */
+  }
+  .pricing-table td, .pricing-table th {
+    padding: 20px;
+    text-align: center;
+  }
+  .pricing-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+  }
+  .pricing-table .checkmark {
+    color: green;
+  }
+  .pricing-table .xmark {
+    color: red;
+  }
+  .btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+  }
+  .btn-enterprise {
+    background-color: #aca7b0;
+  }
+  .btn-advanced {
+    background-color: #DAA520;
+  }
+  .btn-startup {
+    background-color: #aca7b0;
+  }
+  .pricing-table .enm {
+    color: #8A2BE2;
+    font-size: x-large;
+  }s
+  .pricing-table .pink {
+    color: #bc3fbe;
+    font-size: x-large;
+  }
+</style>
+<body>
+
+<div class="container">
+  <h1 class="title">Promotion Plans</h1>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Compare All Plans</th>
+        <th>Enterprise</th>
+        <th>Advanced</th>
+        <th>Startup</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Top Search Management Cost</td>
+        <td>$1,000</td>
+        <td>$500</td>
+        <td>$300</td>
+      </tr>
+      <tr>
+        <td>Following Month</td>
+        <td class="enm">$900</td>
+        <td class="enm" style="color: blue;">$400</td>
+        <td class="enm" style="color: #bc3fbe;">$200</td>
+      </tr>
+      <tr>
+        <td>Delivery Time Frame</td>
+        <td>3-6 Months</td>
+        <td>3-6 Months</td>
+        <td>3-6 Months</td>
+      </tr>
+      <tr>
+        <td>Support</td>
+        <td class="checkmark">&#10004;</td>
+        <td class="checkmark">&#10004;</td>
+        <td class="xmark">&#10008;</td>
+      </tr>
+      <tr>
+        <td>Certification</td>
+        <td class="checkmark">&#10004;</td>
+        <td class="checkmark">&#10004;</td>
+        <td class="xmark">&#10008;</td>
+      </tr>
+      <tr>
+        <td>Guaranteed Keyword Ranking on First Page of Google</td>
+        <td>20 Keywords</td>
+        <td>10 Keywords</td>
+        <td class="xmark">&#10008;</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><a href="#enterprise-plan" class="btn btn-enterprise">GET PLAN</a></td>
+        <td><a href="#advanced-plan" class="btn btn-advanced">GET PLAN</a></td>
+        <td><a href="#startup-plan" class="btn btn-startup">GET PLAN</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

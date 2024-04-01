@@ -3,7 +3,7 @@
 This is a repository for the front end of the Software Aids project. 👋 The Aim of this project is to make it extremely easy for people around the world to create and build web pages/content.
 
 ## Setup 🎯
-To avoid the stress, If you know; That your intentions are purely to use this software and not necessarily to contribute, Visit http://kwickerhub.com and begin using the software. It is safe, simple, and less stressful.
+To avoid the stress, If you know; That your intentions are purely to use this software and not necessarily to contribute, Visit https://roynek.com/kwickerhub/WebCraftifyAI/ and begin using the software. It is safe, simple, and less stressful.
 
 But if you want to contribute, please follow the steps below.
 

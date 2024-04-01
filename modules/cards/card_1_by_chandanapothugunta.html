@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #001a33; /* Dark Blue Background */
+      color: white;
+    }
+
+    .card {
+      text-align: left; /* Align text to the left */
+      max-width: 300px;
+      padding: 20px;
+      background-color: #001f3f; /* Dark Bluish Shade */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 600px; /* Increased height */
+      display: flex;
+      flex-direction: column; /* Arrange items vertically */
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .head {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: white;
+      font-size: 28px; 
+      font-family: Arial, sans-serif; 
+      font-weight: normal;
+      text-decoration: underline;
+    }
+
+    .text {
+      margin-bottom: 20px;
+      color: #87CEFA; /* Light Blue Color */
+      font-family: Arial, sans-serif; 
+      font-weight: normal;
+      font-style: inherit;
+      font-size: 15px;
+    }
+
+    .ethText {
+      display: flex;
+      align-items: center; /* Align items vertically */
+      margin-bottom: 60px; /* Add more spacing between sections */
+      position: relative;
+    }
+
+    .ethImage {
+      max-width: 40px; /* Set the maximum width of the first image */
+      height: auto;
+      border-radius: 50%; /* Make the image circular */
+      overflow: hidden; /* Hide overflow to make it circular */
+      margin-right: 20px; /* Add more spacing between the circular image and text */
+    }
+
+    .ethImage img {
+      width: 100%; /* Make the image fill the circular container */
+      height: auto;
+    }
+
+    .daysLeftImage {
+      max-width: 30px; /* Adjusted maximum width for the second image */
+      height: auto;
+      margin-left: 40px; /* Increased spacing between the image and text */
+      margin-right: 20px;
+    }
+
+    .ethValue,
+    .daysLeft {
+      color: #87CEFA; /* Light Blue Color */
+      font-family: Arial, sans-serif; 
+      font-weight: normal;
+      font-style: inherit;
+      font-size: 15px;
+      margin: 0; /* Remove default margin for better alignment */
+    }
+
+    .line {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #ad9380; /* Line color */
+      top: 90%; /* Adjusted position - move the line more downward */
+    }
+
+    .additionalText {
+      display: flex;
+      align-items: center; /* Align items vertically */
+    }
+
+    .additionalText .ethImage {
+      max-width: 40px; /* Adjusted maximum width for the last image */
+      border-radius: 50%; /* Make the last image more circular */
+      overflow: hidden; /* Hide overflow to make it circular */
+      margin-right: 30px; /* Add more spacing between the circular image and text */
+    }
+
+    .additionalTextText {
+      color: #87CEFA; /* Light Blue Color */
+      font-family: Arial, sans-serif; 
+      font-weight: normal;
+      font-style: inherit;
+      font-size: 15px;
+      margin: 0; /* Remove default margin for better alignment */
+      text-decoration: underline; /* Underline the text */
+    }
+  </style>
+  <script>
+    function previousCard() {
+      console.log("Previous button clicked");
+    }
+
+    function nextCard() {
+      console.log("Next button clicked");
+    }
+  </script>
+</head>
+<body>
+  <div class="card">
+    <img src="./images_and_icons/square.jpg" alt="Card Image">
+    <div class="head">Equilibrium #3429</div>
+    <div class="text">
+      <p>Our Equilibrium collection promotes <br>
+         balance and calm.</p>
+    </div>
+    <div class="ethText">
+      <div class="ethImage">
+        <img src="./images_and_icons/card1.jpg" alt="Ethereum Symbol Image">
+      </div>
+      <div class="ethValue">0.041ETH</div>
+      <div class="line"></div>
+      <div class="daysLeftImage">
+        <img src="./images_and_icons/card2.jpg" alt="Another Image">
+      </div>
+      <div class="daysLeft">3 days left</div>
+    </div>
+    <div class="additionalText">
+      <div class="ethImage">
+        <img src="./images_and_icons/card3.jpg" alt="Circular Image">
+      </div>
+      <div class="additionalTextText">Creation of <u>Jules Wyvern</u></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<div id="container">
+    <div id="inner-container">
+        <p id="heading1">WELCOME</p>
+        <h2 id="heading2">Luxury Curly</h2>
+        <h1 id="heading3">Hair Salon</h1>
+        <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+            consequat. nisi ut aliquip ex ea commodo consequat. 
+        </p>
+        <p id="text">Lorem ipsum dolor</p>
+        <button id="button">READ MORE</button>
+    </div>
+    
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+    
+    #container {
+        background-image: url('./images_and_icons/bg_111.jpeg');
+        height: 120%;
+        width: 100%;
+        color: black;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: 'Kaisei Opti', serif;
+    }
+
+    #container * {
+        margin: 20px;
+    }
+    #inner-container{
+        background-size: cover;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    #heading1 {
+        font-size: 24px;
+        letter-spacing: 4px;
+        margin-top: 30px;
+        margin-bottom: -30px;
+    }
+
+    #heading2 {
+        /* font-family: 'Alex Brush', cursive; */
+        font-size: 70px;
+    }
+
+    #heading3 {
+        font-size: 65px;
+        font-weight: 100;
+        margin-top: -45;
+    }
+
+    #text {
+        /* width: 400px; */
+        max-width: 550px;
+        text-align:center;
+        font-size: 18px;
+    }
+
+    #button {
+        padding: 15px 30px;
+        background-color: transparent;
+        font-size: 18px;
+        width: 225px;
+        border: 3px solid black;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: -2px;
+    }
+
+    @media screen and (max-width: 768px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        #heading1 {
+            font-size: 22px;
+        }
+        #heading2 {
+            font-size: 52px;
+        }
+        #heading3 {
+            font-size: 60px;
+        }
+        #text {
+            font-size: 16px;
+        }
+        #button {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        #container * {
+            margin: 10px 15px;
+        }
+        #heading1 {
+            font-size: 18px;
+        }
+        #heading2 {
+            font-size: 40px;
+        }
+        #heading3 {
+            font-size: 52px;
+        }
+        #text {
+            font-size: 14px;
+        }
+        #button {
+            font-size: 14px;
+        }
+    }
+</style>

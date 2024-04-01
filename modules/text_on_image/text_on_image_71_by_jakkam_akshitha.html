@@ -1,0 +1,75 @@
+<div class="background">
+    <div class="container">
+        <img class="logo" src="./images_and_icons/logo.png" alt="Company Logo">
+        <h1><u>Reinvent What Your <br> Business Could Be</u></h1>
+        <button class="btn">ABOUT US</button>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</div>
+
+<style>
+    * {
+        margin : 0;
+        padding: 0;
+    }
+    .background {
+        background-image: url('./images_and_icons/background_71.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .background::before{
+        background-color: rgba(0, 0, 0, 0.3);
+        content: "";
+        display: block;
+        height: 100%;
+        widows: 100%;
+        position: absolute;
+
+    }
+
+    .container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .logo{
+        width: 120px;
+        height: 120px;
+        margin-bottom: 30px;
+    }
+
+    h1{
+        width: 550px;
+        font-size: 3em;
+        color: white;
+        letter-spacing: 5px;
+    }
+
+    .btn{
+        background-color: #b3ff00;
+        border-radius: 5px;
+        border : none ;
+        width: 150px;
+        height: 50px;
+        padding: 18px;
+        margin-top: 50px;
+        font-weight: bold;
+
+    }
+
+    p{
+        color: white;
+        margin-top: 30px;
+    }
+</style>

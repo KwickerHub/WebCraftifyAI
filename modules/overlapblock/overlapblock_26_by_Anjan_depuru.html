@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa G in Kaunas</title>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('./images_and_icons/home.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    color: rgb(4, 1, 1);
+}
+
+header h1 {
+    font-size: 4.2em;
+}
+
+header p {
+    font-size: 1em;
+    line-height: 1.8em;
+    max-height: 5em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin: 0 auto;
+    width: 80%;
+    color: white;
+}
+
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+    background-color: #0056b3;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.card {
+    width: 20%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    margin-top: -100px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card:nth-child(1) { background-image: url('./images_and_icons/home1.avif'); }
+.card:nth-child(2) { background-image: url('./images_and_icons/home2.jpg'); }
+.card:nth-child(3) { background-image: url('./images_and_icons/home.jpg'); }
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Distribute items from left to right */
+    align-items: center;
+    width: 90%; /* Ensure the list covers full width */
+}
+
+.footer-list li {
+    margin-right: 10px;
+}
+
+.footer-list li:last-child {
+    margin-right: 0;
+}
+
+.footer-list a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: #ccc;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-socials img {
+    margin: 0 10px;
+    width: 30px;
+    height: auto;
+}
+/* Existing CSS */
+
+/* ... */
+
+/* Media Query for screens up to 700 pixels wide */
+@media screen and (max-width: 700px) {
+  .card-container {
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+  }
+
+  .card {
+    width: calc(100% - 40px); /* Adjust the width so one card takes full width */
+    margin: 10px 20px; /* Adjust margin for spacing */
+  }
+}
+
+/* Media Query for screens up to 400 pixels wide */
+@media screen and (max-width: 400px) {
+  .card-container {
+    flex-direction: column; /* Align cards vertically */
+  }
+
+  .card {
+    width: calc(100% - 40px); /* Each card takes full width of the container */
+    margin: 10px 20px; /* Adjust margin for spacing */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>VILLA G IN KAUNAS</h1>
+    <p>Villa G is located in Kaunas, Lithuania and is seated on the river bank of<br>
+      <p> its largest river Nemunas. The river offers an exceptional view from the house, however, <p>it is facing the North side of the site while the street is on the South.</p>
+    <a href="#learn-more" class="learn-more-button">Learn More</a>
+</header>
+
+<section class="card-container">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+</section>
+
+<footer>
+    <ul class="footer-list">
+        <li><a href="link-to-real-estate-agency.html">Real Estate Agency</a></li>
+        <li><a href="link-to-home-1.html">Home 1</a></li>
+        <li><a href="link-to-page-1.html">Page 1</a></li>
+        <li><a href="link-to-page-2.html">Page 2</a></li>
+        <li><a href="link-to-page-3.html">Page 3</a></li>
+        <li><a href="link-to-page-4.html">Page 4</a></li>
+        <li><a href="link-to-page-5.html">Page 5</a></li>
+        <li><a href="link-to-page-6.html">Page 6</a></li>
+    </ul>
+    <div class="footer-socials">
+        <a href="your-facebook-url"><img src="./images_and_icons/facebook.png" alt="Facebook"></a>
+        <a href="your-twitter-url"><img src="./images_and_icons/twitter.png" alt="Twitter"></a>
+        <a href="your-instagram-url"><img src="./images_and_icons/instagram.png" alt="Instagram"></a>
+        <a href="your-linkedin-url"><img src="./images_and_icons/linkdin.png" alt="LinkedIn"></a>
+    </div>
+</footer>
+
+</body>
+</html>
+

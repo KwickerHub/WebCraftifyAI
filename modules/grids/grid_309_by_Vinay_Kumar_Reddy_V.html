@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* .grid-item:hover {
+            transform: scale(1.05);
+        } */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 15px 80px; 
+            background-color: #3151aa;
+            color: white;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        a.button1 {
+            display: inline-block;
+            padding: 15px 30px; 
+            background-color: #3151aa;
+            color: white;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover, .button1:hover {
+            background-color: #1f3a64; 
+        }
+
+        .icon {
+            margin-right: 5px;
+            font-size: 50px;
+        }
+
+        .paragraph-lines {
+            line-height: 1.5;
+        }
+
+        @media (max-width: 720px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <title>Responsive Grid Example</title>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <h2>Manage Booking</h2>
+        <div class="paragraph-lines">
+            <p>Complete the form to review,</p>
+            <p> cancel or extend your </p>
+            <p>booking</p>
+        </div>
+        <form>
+            <input class="input" placeholder="Enter the valid Email Address">
+            <a href="#" class="button">SUBMIT</a>
+        </form>
+    </div>
+    <div class="grid-item">
+        <i class="icon fab fa-whatsapp"></i>
+        <h2>Whatsapp Support</h2>
+        <p>Add us on Whatsapp&send </p>
+        <p>queries for instant reply </p>
+        <a href="tel:+999999999" class="button1">+12-345-678-89089</a>
+    </div>
+    <div class="grid-item">
+        <i class="icon fas fa-comments"></i>
+        <h2>Live Chat</h2>
+        <p>The fastest way to get in</p>
+        <p>touch with an expert</p>
+        <a href="#" class="button1">LIVE CHAT</a>
+    </div>
+</div>
+
+</body>
+</html>

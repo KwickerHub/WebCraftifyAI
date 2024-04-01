@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add this CSS to your <head> section or a separate .css file */
+
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Use a font of your choice */
+            color: #333;
+            /* Dark grey text */
+            background-color: #000000;
+            /* Warm beige background similar to the image */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+        color : #FFFFFF;
+        }
+        p {
+        color : #FFFFFF;
+        }
+
+        /* Grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Creates two columns */
+            /* Space below the title */
+        }
+
+        /* Grid item styles */
+        .grid-item {
+            background-color: #fff;
+            /* White background for grid items */
+            /* Subtle shadow around grid items */
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+
+        /* Image styles */
+        .grid-item img {
+            width: 100%;
+            /* Make images responsive */
+            height: auto;
+            /* Space below the image */
+        }
+
+        /* Headings within grid items */
+        .grid-item h3 {
+            color: #000000;
+            /* Example color for headings */
+            margin: 20px 0 10px 0;
+            /* Space around heading */
+            text-align: left;
+            margin-left: 10px;
+
+        }
+
+        /* Paragraph styles within grid items */
+        .grid-item p {
+            line-height: 1.6;
+            /* Spacing for readability */
+            color: #000000;
+            justify-content: center;
+    		align-items: center;
+            margin: 0 10px;
+            /* Lighter grey for the paragraph text */
+        }
+
+        /* Title styles */
+        .title {
+            /* Large font size for the title */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            /* Space below the title */
+        }
+        #text2 {
+        background-color:#f2b685;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                /* Stack columns on top of each other on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-image">
+    <div class= "title">
+    <h1>Who We Are</h1>
+    <p> ckjasd ckjadshodsi dsajncosd </p>
+    </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="./images_and_icons/grid1.jpeg">
+            </div>
+            <div class="grid-item">
+                <h3>Comfortable</h3>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="grid-item" id="text2">
+                <h3>Professional</h3>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./images_and_icons/image2-grid2.jpeg">
+            </div>
+            <div class="grid-item">
+                <img src="./images_and_icons/image3-grid3.jpeg">
+            </div>
+            <div class="grid-item">
+                <h3>Precise</h3>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

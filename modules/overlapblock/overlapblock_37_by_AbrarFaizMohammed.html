@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Lap Block Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&family=Open+Sans:wght@300&display=swap');
+      .sub_containers{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+        margin: 0;
+        width: max-content;
+        height: max-content;
+        position: absolute;
+        left: 2%;
+        z-index: 2;
+      }
+      .sub_c1, .sub_c2{
+        width: 250px;
+        height: 200px;
+        color: white;
+        padding: 15px;
+      }
+      .sub_c1{
+        background-color:#c7511d;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .sub_c2{
+        background-color:#41807c;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .sub_c_title{
+        letter-spacing: 4px;
+        font-size: 12px;
+      }
+      .more_Info{
+        font-family: 'Noto Sans Linear B', sans-serif;
+        font-weight: 600px;
+      }
+      .more_link{
+        text-decoration: none;
+        color: white;
+        width: max-content;
+      }
+      .more_link_text{
+        border-bottom: 1px solid white;
+        width: max-content;
+      }
+      .main-ImageContainer{
+        width:99%;
+        height:90%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+        background-color:#e5e4e2;
+        background-image: url("./images_and_icons/backgroundImage_37.jpg");
+        background-size: 100% 100%;
+        margin:0 auto;
+      }
+/*design for mobile screens*/
+      @media only screen and (max-width:600px) {
+        .sub_containers{
+            display: grid;
+            grid-template-columns: auto;
+             gap: 30px;  
+             left: 0;
+             right: 0;
+             margin:0px auto;
+        }
+        .main-ImageContainer{
+            width:100%;
+            height:55%;
+        }
+      }
+/*design for tablets*/
+@media only screen and (600px <= width <= 950px) {
+    .main-ImageContainer{
+        width:100%;
+        height:75%;
+        left: 0;
+        right: 0;
+        margin:0px auto;
+        top: 10%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="sub_containers">
+        <div class="sub_c1">
+            <h3 class="sub_c_title">ACADEMIC CAMP</h3>
+            <p class="more_Info">Teenagers are more independent than younger children</p>
+            <p class="more_link_text"><a href="" class="more_link">more</a></p>
+        </div>
+        <div class="sub_c2">
+            <h3 class="sub_c_title">SUMMER PROGRAMS</h3>
+            <p class="more_Info">A leadership program, where teens develop civic leadership skills</p>
+            <p class="more_link_text"><a href="" class="more_link">more</a></p>
+        </div>
+    </div>
+    <div class="main-ImageContainer"></div>
+</body>
+</html>

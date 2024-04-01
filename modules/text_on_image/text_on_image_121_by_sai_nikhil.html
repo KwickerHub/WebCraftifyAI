@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text on Image with Icon</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .image-container {
+      position: relative;
+      background: url('images_and_icons/background_image_121.jpeg') no-repeat center center fixed; 
+      background-size: cover;
+      height: 100vh;
+    }
+    .quote-icon {
+      position: absolute;
+      top: 43%; /* Adjust as needed to place the icon above the text */
+      left: 10%; /* Center the icon horizontally */
+      transform: translateX(-50%); /* Adjust horizontal centering */
+      width: 100px; /* Adjust as needed */
+      height: auto;
+      
+    }
+    .text-box {
+      position: absolute;
+      bottom: 10%; /* Adjust this value to match the text position in your reference image */
+      left: 5%; /* Adjust this value to match the text position in your reference image */
+      color: #ffffff;
+      max-width: 40%; /* Adjust width as needed */
+      font-size: 1rem;
+    }
+    
+    .quote {
+      font-size: 1.5em; /* Adjust size as needed */
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    
+    .author {
+      font-size: 1em; /* Adjust size as needed */
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+    
+    .source {
+      font-size: 0.85em; /* Adjust size as needed */
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <img src="images_and_icons/image_121.png" alt="Quote Icon" class="quote-icon"> <!-- Include the quote icon image -->
+    <div class="text-box">
+      <p class="quote">&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisi a laoreet efficitur, arcu risus vehicula eros, sit amet vestibulum turpis tortor quis ex.&rdquo;</p>
+      <p class="author">- John Doe, CEO</p>
+      <p class="source">Image Source</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,100 @@
+<div class="church-welcome-module">
+    <div class="welcome-content">
+        <h1 class="welcome-title">
+            <div class="welcome-text">WELCOME TO</div>
+            <div class="church-text">CHRISTIAN CHURCH</div>
+        </h1>
+        <!-- <p>Our doors are open to everyone to celebrate with us.</p> -->
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+        <button class="read-more-btn" onclick="readMore()">READ MORE</button>
+    </div>
+</div>
+
+<style>
+        * {
+        margin : 0;
+        padding: 0;
+    }
+    .church-welcome-module {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url('images_and_icons/background_32.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        padding-left: 5%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .welcome-content {
+        max-width: 1200px;
+        width: 100%;
+        padding-top: 10vh;
+    }
+
+    .welcome-title {
+        margin: 0;
+    }
+
+    .welcome-text,
+    .church-text {
+        font-size: 3.5rem;
+        color: white;
+        display: block;
+        margin: 0;
+    }
+
+    .church-text {
+        font-weight: bold;
+    }
+
+    .church-welcome-module p {
+        font-size: 1.2rem;
+        color: white;
+        margin-top: 2rem;
+    }
+
+    .read-more-btn {
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 4rem;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .read-more-btn:hover {
+        background-color: white; /* Change background to white */
+        color: #333; /* Change text color to dark */
+        border-color: white; /* Ensure border color matches the background */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .welcome-text,
+        .church-text {
+            font-size: 2rem;
+        }
+
+        .church-welcome-module p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .read-more-btn {
+            margin-top: 2rem;
+        }
+    }
+</style>
+
+<script>
+    function readMore() {
+        alert('Read More button clicked!');
+    }
+</script>

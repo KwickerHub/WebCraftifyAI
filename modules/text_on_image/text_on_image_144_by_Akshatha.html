@@ -1,0 +1,107 @@
+<style>
+  .background-image {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .background-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .circle-container {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .circle svg {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 10px;
+  }
+
+  .circle image{
+    width: 100%;
+    height: auto;
+  }
+ 
+  .circle span {
+    display: flex;
+  text-align: center;
+  margin-top: 150px;
+}
+
+
+</style>
+
+
+<div class="background-image">
+  <img src='./images_and_icons/background_144.jpg' alt="Background Image">
+  <div class="text-overlay">
+    <h1>Future </h1>
+    <h2 style="text-decoration: solid;"> Legends </h2>
+    <p>Discovering the perfect setting for surfing and our core roots and spirit that provides a one-of-a-kind connection to the ocean.</p>
+    <button style="background-color: darkmagenta; padding: 10px">View More</button>
+  </div>
+
+  <div class="circle-container">
+    <div> 
+      <div class="circle">
+        <svg viewBox="0 0 24 24"> 
+        <image href="./images_and_icons/image_144_1.jpg" x="0" y="0"  />
+        </svg>
+      </div> 
+      <div> <span style= "margin: 40px; color: darkmagenta; font-weight: bold; ">Lessons</span> </div>
+      </div>
+ 
+    <div class="content">
+      <div class="circle">
+        <svg viewBox="0 0 24 24"> 
+          <image href="./images_and_icons/image_144_2.jpg" x="0" y="0" width="70%" height="70%" />
+        </svg>
+      </div>
+      <div> <span style= "margin: 40px; color: darkmagenta; font-weight: bold;">Programs</span> </div>
+    </div>
+
+    <div class="content">
+      <div class="circle">
+        <svg viewBox="0 0 24 24"> 
+        <image href="./images_and_icons/image_144_3.jpg" x="0" y="0" width="70%" height="70%" />
+      </svg>
+      </div>
+      <div> <span style= "margin: 40px; color: darkmagenta; font-weight: bold;">Membership</span> </div>
+      </div>
+    </div>
+ 
+</div>
+

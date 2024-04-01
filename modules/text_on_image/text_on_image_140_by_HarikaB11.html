@@ -1,0 +1,185 @@
+<div class="page-container">
+  <div class="top-container">
+    <div class="image-container">
+      <img src="./images_and_icons/text_on_image_140_by_HarikaB11_worker.png" alt="Worker Image" class="worker-image">
+    </div>
+    <div class="text-container">
+      <h2>ABOUT US</h2>
+      <h1>Plan. Perform. Inspire.</h1>
+      <p>Our company is a relationship-based company, ensuring that we focus on delivering and maintaining long-term relationships with all of our business partners.</p>
+      <button class="read-more-btn">READ MORE</button>
+    </div>
+  </div>
+
+  <div class="services-container">
+    <div class="service-block">
+      <div class="icon-wrapper">
+        <img src="./images_and_icons/text_on_image_140_by_HarikaB11_icon1.svg" alt="Analysis Icon">
+      </div>
+      <h3>ANALYSIS</h3>
+      <p>Experts are here to advise with utmost dedication & respect.</p>
+      <button class="more-btn">MORE</button>
+    </div>
+    <div class="service-block">
+      <div class="icon-wrapper">
+        <img src="./images_and_icons/text_on_image_140_by_HarikaB11_icon2.svg" alt="Planning Icon">
+      </div>
+      <h3>PLANNING</h3>
+      <p>Strategic and tactical planning to navigate complex challenges.</p>
+      <button class="more-btn">MORE</button>
+    </div>
+    <div class="service-block">
+      <div class="icon-wrapper">
+        <img src="./images_and_icons/text_on_image_140_by_HarikaB11_icon3.svg" alt="Design Icon">
+      </div>
+      <h3>DESIGN</h3>
+      <p>Innovative designs that stand out in the marketplace.</p>
+      <button class="more-btn">MORE</button>
+    </div>
+    <div class="service-block">
+      <div class="icon-wrapper">
+        <img src="./images_and_icons/text_on_image_140_by_HarikaB11_icon4.svg" alt="Building Icon">
+      </div>
+      <h3>BUILDING</h3>
+      <p>Constructing solutions that last and perform well.</p>
+      <button class="more-btn">MORE</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .top-container {
+    flex: 1;
+    display: flex;
+    background: #f8f9fa;
+  }
+
+  
+  .text-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-height: 350px; 
+    max-width: 1100px;
+  }
+
+  .text-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services-container {
+    display: flex;
+    height: 50%;
+    background: #ffcc00;
+  }
+
+  .service-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: background-color 0.3s;
+    border: none;
+  }
+
+  .service-block:nth-child(1) { background-color: #e6b800; }
+  .service-block:nth-child(2) { background-color: #ebbf00; }
+  .service-block:nth-child(3) { background-color: #f0c600; }
+  .service-block:nth-child(4) { background-color: #f5cd00; }
+
+  /*.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }*/
+
+  .icon-wrapper {
+  width: 60px; 
+  height: 60px; 
+  border-radius: 60%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden; 
+}
+
+  .service-block h3 {
+    margin: 10px 0;
+  }
+
+  .service-block p {
+    text-align: center;
+  }
+
+  .more-btn {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .read-more-btn {
+    background-color: #e6b800;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+  /*img.worker-image {
+    max-width: 100%;
+    max-height: 100%;
+  }*/
+
+  img.worker-image {
+    max-width: 250%;
+    max-height: 125%;
+    object-fit: contain;
+  }
+
+  .icon-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+}
+
+</style>
+
+<script>
+  // empty
+</script>
+
+

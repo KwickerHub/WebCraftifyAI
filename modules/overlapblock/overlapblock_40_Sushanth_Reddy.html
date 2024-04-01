@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlap Layout with Image</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;1,400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .top {
+            background: url('https://www.ifastfitness.com/cdn/shop/articles/couple_fitness.jpg?v=1642574134') no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .bottom {
+            background-color: white;
+            position: relative;
+            z-index: 30;
+            height: 30vh;
+            width: 100vw;
+        }
+
+        .bottom-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            padding: 50px 50px 50px 350px;
+            background-color: pink;
+            color: white;
+            top: -150px;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            align-items: flex-start;
+        }
+
+        #btn {
+            line-height: 3;
+            background-color: white;
+            color: pink;
+            padding: 5px 30px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+
+        .bottom-left-image {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyZWERhOFV9c9VgMUpgYk-WqOVwiJHNkdzow&usqp=CAU') no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: 250px;
+            left: 30px;
+            width: 300px;
+            height: 400px;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+    </div>
+    <div class="bottom">
+        <div class="bottom-left-image">
+        </div>
+        <div class="bottom-wrapper">
+            <h1>GET OUR CONSULTATION</h1>
+            <p>Unlock your fitness potential with our personalized coaching. Our expert trainers are here to guide you
+                on a transformational journey toward health and strength.</p>
+            <button id="btn">LEARN MORE</button>
+        </div>
+    </div>
+</body>
+
+</html>

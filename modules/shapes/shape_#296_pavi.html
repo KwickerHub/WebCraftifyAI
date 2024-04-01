@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+        }
+
+        .yellow-section {
+            background-color: yellow;
+            flex: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-section {
+            background-color: white;
+            flex: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: red; /* Change color as needed */
+            border-radius: 50%;
+            position: absolute;
+            right: -50px; /* Adjust the position as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="yellow-section">
+        <!-- Content for the yellow section goes here -->
+        <h2>Our Company</h2>
+        <h3>Builds a Better</h3>
+        <h3> World</h3>
+    </div>
+
+    <div class="white-section">
+        <div class="circle"></div>
+        <!-- Content for the white section goes here -->
+        <p>Read More </p>
+    </div>
+
+</body>
+</html>
