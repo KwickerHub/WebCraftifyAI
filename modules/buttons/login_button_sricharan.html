@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customized Button</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .custom-button-container {
+      text-align: center;
+      position: relative;
+    }
+
+    .custom-login-btn {
+      padding: 10px 30px;
+      background-color: #03c79e;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      outline: none;
+      font-size: 14px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .custom-login-btn:hover,
+    .custom-login-btn:active {
+      background-color: #03c79e;
+    }
+
+    .custom-circle-element {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-135%, -50%) scale(0.7);
+      width: 48px;
+      height: 48px;
+      background-color: white;
+      border: none;
+      border-radius: 50%;
+    }
+
+    .custom-circle-element:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      background-color: white;
+      border: 0.5px solid black;
+      border-radius: 50%;
+      box-sizing: border-box;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .custom-second-circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-145%, -59%) scale(0.7);
+      width: 54px;
+      height: 54px;
+      background-color: #03c79e;
+      background-color: rgba(3, 199, 158, 0.8);
+      border: none;
+      border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+<div class="custom-button-container">
+  <button class="custom-login-btn" onclick="login()">LOGIN</button>
+  <div class="custom-circle-element"></div>
+  <div class="custom-second-circle"></div>
+</div>
+</body>
+</html>
