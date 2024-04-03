@@ -1,0 +1,95 @@
+<div class="main-container">
+    <div class="partation-container">
+       <div class="iteams container1">
+           <div class="circle"></div>
+           <h2 class="title">Our Company Builds a Better World</h2>
+           <p class="information">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           
+           <button class="readmorebtn">READ MORE</button>
+       </div>
+       <div class="iteams"><div class="teamImage-container"></div></div>
+       <!--  -->
+    </div>
+</div>
+
+<style>
+   .main-container{
+       margin: 0px;
+       padding: 0px;
+       width: 100%;
+       height: 100%;
+       background-image: linear-gradient(#FDFFFC 0%, #FDFFFC 50%, #E5E8E8  50%, #E5E8E8  100%);
+   }
+   .partation-container{
+       display: flex;
+       justify-content: center; 
+       position: relative;
+       top: 3%;
+       margin:auto;      
+       width: 60%;
+       height: 80%;
+   }
+   .iteams{
+       flex:1;
+   }
+   .container1{
+       padding: 15px 20px;
+   }
+   .circle{
+       width: 80px;
+       height: 80px;
+       border-radius: 50%;
+       background-color: rgb(8, 8, 124);
+   }
+   .title{
+       width: 410px;
+       font-size: 3rem;
+       color: rgb(8, 8, 124);
+       line-height: 1.1;
+       margin-top: 10px;
+   }
+   .information{
+       font-size: 20px;
+       line-height: 2;
+       color: #36454F;
+   }
+   .readmorebtn{
+       width: 200px;
+       padding:20px 0;
+       border-radius: 30px;
+       border:solid 2px rgb(8, 8, 124);
+       outline: none;
+       background-color: transparent;
+       color: rgb(8, 8, 124);
+       letter-spacing: 1px;
+       font-weight: 600;
+       cursor: pointer;
+       margin-top: 15px;
+   }
+   .readmorebtn:hover{
+       background-color: rgb(8, 8, 124);
+       color: white;
+   }
+   .teamImage-container{
+       width: 100%;
+       height: 80%;
+       position: relative;
+       top: 15%;
+       border-radius: 50%;
+       background-image: url(./images_and_icons/shapes_428_2782_AbrarFaizMohammed_Img.jpg);
+       background-size: cover;
+       background-position: center;
+       z-index: 1000;
+   }
+
+@media screen and (max-width:1200px){
+   .partation-container{
+       display: flex;
+       flex-direction: column;   
+   }
+   .teamImage-container{
+       width: 100%;
+       height: 100%;
+   }
+}
+</style>
