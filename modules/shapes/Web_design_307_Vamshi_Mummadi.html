@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main_container">
+        <div class="inner_container">
+            <div class="image_container">
+                <div class="image">
+                    <img src="image.jpg" class="img" alt="Image Loading">
+                </div>
+                <div class="background">
+
+                </div>
+            </div>
+            <div class="text_container">
+                <div class="text_inner_box">
+                    <p class="heading">About Us</p>
+                    <p class="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="hyperlink">Image from <a href="/">Freepik</a></p>
+                    <button class="button">LEARN MORE</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+    body{
+        margin: 0;
+        font-family: 'Poppins', 'Roboto', sans-serif; 
+        overflow: hidden;
+        overflow-y: hidden;
+    }
+    .inner_container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .image_container {
+        flex: 1; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+        width: 500px;
+        height: 500px;
+        top: 30px;
+        left:120px;
+    }
+    .text_container {
+        flex: 1; 
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        position: relative;
+        left: 30px;
+    }
+    .image{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 40px;
+    }
+    .background{
+        width:55%;
+        padding-top: 55%;
+        position: relative;
+        z-index: 1;
+        background-color: #ff7d05;
+        border-radius: 50%;
+        bottom: 30px;
+    }
+    .img{
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        border-radius: 50%;
+    }
+    .heading{
+        font-size: 50px;
+    }
+
+    .content{
+        padding-right: 370px;
+    }
+    .button{
+        margin-top: 20px;
+        height: 50px;
+        width: 170px;
+        color: white;
+        background-color: #ff7d05;
+        font-weight: 600;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 932px) and (max-height: 430px) {
+        .inner_container {
+          flex-direction: column;
+        }
+      
+        .image_container, .text_container {
+          width: 100%;
+          height: auto;
+        }
+      
+        .image_container {
+          order: 2;
+          margin-top: 20px; /* Adjust margin as needed */
+        }
+      
+        .text_container {
+          order: 1;
+          margin-bottom: 20px; /* Adjust margin as needed */
+        }
+      
+        .background {
+          width: 50%; /* Adjust as needed */
+          padding-top: 50%; /* Adjust as needed */
+          bottom: 15px; /* Adjust as needed */
+        }
+      
+        .image_container, .text_container {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .image {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          z-index: 2;
+        }
+      
+        .text_container {
+          left: 0;
+          width: 100%;
+          padding-left: 20px; /* Adjust padding as needed */
+          padding-right: 20px; /* Adjust padding as needed */
+        }
+      
+        .main_container {
+          overflow: hidden;
+          overflow-y: scroll; /* Allow vertical scrolling if content exceeds viewport height */
+        }
+      }
+            
+</style>
+
+
+</html>
