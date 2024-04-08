@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main_container">
+        <div class="inner_container">
+            <div class="ring1"></div>
+            <div class="ring2"></div>
+            <div class="image_container">
+                <img class="image" src="image.jpg" alt="Image Loading">
+            </div>
+            <div class="text_container">
+                <div class="inner_text">
+                    <div>
+                        <p class="heading">Contact Us</p>
+                    </div>
+                    <div>
+                        <p class="content">We are here to meet any business need and to promote your company online!</p>
+                    </div>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="contact">
+                        <p><b>Phone:</b><a href="/"> 1 (232) 252 55 22</a></p>
+                        <p><b>Location:</b> 75 Street Sample, WI 63025</p>
+                        <p><b>Mail:</b><a href="/"> template@sample.com</a></p>
+                    </div>
+    
+                    <div>
+                        <p class="hyperlink">Image from <a href="/">Freepik</a></p>
+                    </div>
+                </div>
+            </div>    
+    
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body{
+        margin: 0;
+    }
+    .main_container{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: relative;
+    }
+    
+    .ring1{
+        height:90px;
+        width: 90px;
+        border-radius: 50%;
+        border: solid 30px orange;
+        background: transparent;
+        position: relative;
+        top: -230px;
+        left: 170px;
+    }
+    .ring2{
+        position: relative;
+        height:90px;
+        width:90px;
+        border-radius: 50%;
+        background:orange;
+        z-index: 100;
+        bottom: -200px;
+        left: 170px;
+
+    }
+
+
+    .inner_container{
+        display: flex;
+        position: relative;
+        top: 170px;
+        gap: 20px; 
+        justify-content:center; 
+        align-items: center; 
+
+
+    }
+
+    .image_container {
+        position: relative;
+        z-index: -100;
+    }
+
+    .text_container {
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+    .inner_text{
+        padding: 50px 200px 50px 0px;
+    }
+
+    .image {
+        position: relative;
+        border-radius: 50%;
+        height: 400px;
+        width: 400px;
+        margin: 20px;
+
+    }
+
+    .line {
+        height: 7px;
+        border: 0;
+        background: orange;
+        margin: 5px 0; 
+    }
+
+    .heading{
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .content{
+        font-size: 20px;
+    }
+
+    .contact{
+        font-size: 18px;
+    }
+
+    .hyperlink{
+        font-size: 10px;
+    }
+
+
+
+</style>
