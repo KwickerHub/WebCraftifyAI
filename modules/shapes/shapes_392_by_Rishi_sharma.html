@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="main_body">
+        <div class="left_part">
+            <h2>ABC Company</h2>
+            <p>
+                Lorem ipsum dolor sit amet,consectetur adipisicing elit. Sed tenetur, est cum voluptate id molestiae!
+            </p>
+            <button id="left_part_button">Button</button>
+        </div>
+        <div class="right_part">
+            <div class="img_dot"></div>
+            <img id="right_part_img" src="images_and_icons/shapes for 392 .jpeg" alt="woman.jpeg">
+        </div>
+    </div>
+</div>
+
+<style>
+    .container{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_body{
+        height: 400px;
+        width: 560px;
+        background-image: linear-gradient(to top, rgb(209, 27, 27) 30%, white 30%);
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    .left_part{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 37px 107px 5px;
+        line-height: 20px;
+    }
+
+    #left_part_button{
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 50px;
+        border-style: none;
+        cursor: pointer;
+    }
+
+    .right_part{
+        width: 300px;
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    #right_part_img{
+    border: 10px solid rgb(255, 255, 255);
+    object-fit: cover;
+    height: 280px;
+    width: 280px;
+    object-position: -115px;
+    border-radius: 145px;
+    }
+
+    .img_dot{
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: rgb(224, 29, 29);
+    margin: 15px 0 0 206px;
+    position: absolute;
+    }
+</style>
