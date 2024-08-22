@@ -29,7 +29,21 @@ window.onload = function () {
   $.get("../../backend/profile_page.php", {
     
   },
+
+  // Sanitize user input  
+  function sanitizeInput(input) {
+		
+    // Encode special characters
+  input = input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    // Remove any script tags
+  input = input.replace(/<\/?script>/gi, "");
+
+  return input;
+},
+
   function(data, status){
+    sanitizeInput(data)
     dataJson = JSON.parse(data);
     if(dataJson["status"] == "True"){
             alert(data);

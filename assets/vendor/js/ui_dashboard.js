@@ -76,6 +76,7 @@ function setup(){
         project_name: project_name, 
         key: "gjhtiidsimi09403jfjkdknf",
     },
+
     function(data, status){
         if (status){
             //alert(data);
@@ -95,6 +96,7 @@ function setup(){
                 function(data, status){
                     //dataJson = JSON.parse(data);
                     //alert(data);
+                    data = sanitizeInput(data);
                     if (status){
                         if (data != "") {
                             $('#the_dev_dashboard').html(data);	
@@ -166,6 +168,7 @@ function setup(){
       key: "gjhtiidsimi09403jfjkdknf",
     },
     function (data, status) {
+      data = sanitizeInput(data);
       if (status) {
         $(".full_right_aside_section").html(data);
         $("#The_right_header_side").text(tag);
@@ -212,6 +215,7 @@ function setup(){
       //dataJson = JSON.parse(data);
       //alert(data);
       //result = data["result"];
+      data = sanitizeInput(data);
       if (status) {
         $(".full_left_aside_section").html(data);
         $("#The_left_header_side").text(tag);
@@ -374,11 +378,11 @@ function generate_strings_id(length) {
   var code = "";
   for (var i = 0; i < length; i++) {
     if (i == 0) {
-      code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
+      code += alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
     } else if (Math.floor(Math.random() * 2) == 1) {
-      code = code + Math.floor(Math.random() * 10).toString();
+      code += Math.floor(Math.random() * 10).toString();
     } else {
-      code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
+      code += alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
     }
   }
   return code;
@@ -390,10 +394,10 @@ function colorCodeGenetor(length) {
   code = "";
   for (i = 0; i < length; i++) {
     if (Math.floor(Math.random() * 2) == 1) {
-      code = code + Math.floor(Math.random() * 10).toString();
+      code += Math.floor(Math.random() * 10).toString();
     } else {
       //alhpa_lets.g
-      code = code + alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
+      code += alhpa_lets[Math.floor(Math.random() * alhpa_lets.length)];
     }
   }
   return "#" + code;
@@ -471,7 +475,9 @@ function elem_drop(ev) {
 
 function getElementStyleDetails(elem_id) {
   elem = document.getElementById(elem_id);
-  if (!elem) return []; // Element does not exist, empty list.
+  if (!elem) {
+    return [];
+  } // Element does not exist, empty list.
   var win = document.defaultView || window,
     style,
     styleNode = [];
@@ -638,7 +644,9 @@ function removeSelected() {
 
 function change2codeMode() {
   var bodyElem = document.getElementById("the_dev_dashboard");
+  bodyElem = sanitizeInput(bodyElem);
   var body = bodyElem.innerHTML;
+  body = sanitizeInput(body);
   //alert(body);
   //var textArea = document.getElementById("the_textarea_4_view");
   if ( view_mode == 1 ){
@@ -686,6 +694,7 @@ function change2webMode() {
   }else{
     if (typeof textArea != "undefined" && textArea != null) {
       var para = document.getElementById("the_textarea_4_view").value;
+      para = sanitizeInput(para);
       bodyElem.innerHTML = para;
     } else {
       console.log("Mode Error: In trying to change from code to web mode");
@@ -709,8 +718,12 @@ function getCookie(cname) {
   //console.log(ca);
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
-    while (c.charAt(0) == " ") c = c.substring(1);
-    if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    while (c.charAt(0) == " ") {
+        c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
   }
   return "";
 }
@@ -770,6 +783,7 @@ function loadSaveContentAsCookie() {
 
     if (checkCookie(cname) == true) {
       var gottenStuff = atob(getCookie(cname));
+      gottenStuff = sanitizeInput(gottenStuff);
       document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
     } else {
       alert("Sorry, this project could not be retrieved.");
@@ -779,10 +793,22 @@ function loadSaveContentAsCookie() {
 
     if (checkCookie(currentPage) == true) {
       var gottenStuff = atob(getCookie(currentPage));
+      gottenStuff = sanitizeInput(gottenStuff);
       //alert(gottenStuff);
       document.getElementById("the_dev_dashboard").innerHTML = gottenStuff;
     }
   }
+}
+
+function sanitizeInput(input) {
+		
+  // Encode special characters
+  input = input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+  // Remove any script tags
+  input = input.replace(/<\/?script>/gi, "");
+
+  return input;
 }
 
 function replaceSelected() {
@@ -826,13 +852,11 @@ function removetheSideBars(side) {
         document.getElementById("leftBarRestore").style.display = "block";
         scaleViewLayoutAdjust();
       }
-    } else if (id == "theRightSideBar") {
-      if ($("#theRightSideBar").css("display") == "block") {
-        document.getElementById("theRightSideBar").style.display = "none";
-        document.getElementById("rightBarRestore").style.display = "block";
-        scaleViewLayoutAdjust();
-      }
-    }
+    } else if (id == "theRightSideBar" && $("#theRightSideBar").css("display") == "block") {
+                 document.getElementById("theRightSideBar").style.display = "none";
+                 document.getElementById("rightBarRestore").style.display = "block";
+                 scaleViewLayoutAdjust();
+           }
   } else {
     x = "You pressed Cancel!";
   }
@@ -967,6 +991,7 @@ function loadAllLeftSides(ev) {
       //dataJson = JSON.parse(data);
       //alert(data);
       //result = data["result"];
+      data = sanitizeInput(data);
       if (status) {
         $(".full_left_aside_section").html(data);
         $("#The_left_header_side").text(tag);
@@ -1010,6 +1035,7 @@ function loadAllRightSides(ev) {
       key: "gjhtiidsimi09403jfjkdknf",
     },
     function (data, status) {
+      data = sanitizeInput(data);
       if (status) {
         $(".full_right_aside_section").html(data);
         $("#The_right_header_side").text(tag);
@@ -1048,6 +1074,7 @@ function loadElements(){
       //dataJson = JSON.parse(data);
       //alert(data);
       //result = data["result"];
+      data = sanitizeInput(data);
       if (status){
           $('.the_bottom_bar').html(data);
           //$('#The_left_header_side').text(tag);
@@ -1160,6 +1187,7 @@ function loadSaveContent(){
                     function(data, status){
                         //dataJson = JSON.parse(data);
                         //alert(data);
+                        data = sanitizeInput(data);
                         if (status){
                             if (data != "") {
                                 $('#the_dev_dashboard').html(data);	
@@ -1235,20 +1263,18 @@ function get_url_data(parameter) {
   var only_data_side = currentPage.slice(get_all_data + 1);
   //alert(only_data_side);
   if (only_data_side.includes("&")) {
-    splited_data = only_data_side.split("&");
-    for (let index = 0; index < splited_data.length; index++) {
-      const element = splited_data[index];
-      //alert(element.slice(0, element.indexOf("=")));
-      if (element.slice(0, element.indexOf("=")) == parameter) {
-        ret = element.slice(element.indexOf("=") + 1);
+      splited_data = only_data_side.split("&");
+      for (let index = 0; index < splited_data.length; index++) {
+        const element = splited_data[index];
+        //alert(element.slice(0, element.indexOf("=")));
+        if (element.slice(0, element.indexOf("=")) == parameter) {
+          ret = element.slice(element.indexOf("=") + 1);
+        }
       }
     }
-  } else {
-    //alert(only_data_side.slice(0, only_data_side.indexOf("=")));
-    if (only_data_side.slice(0, only_data_side.indexOf("=")) == parameter) {
-      ret = only_data_side.slice(only_data_side.indexOf("=") + 1);
-    }
-  }
+  else if (only_data_side.slice(0, only_data_side.indexOf("=")) == parameter) {
+        ret = only_data_side.slice(only_data_side.indexOf("=") + 1);
+      }
   //alert(ret.toString());
   return ret;
 }
@@ -1409,7 +1435,7 @@ function add_colors_selector() {
   var new_Elem = document.createElement("LABEL");
   var already_exist = document.getElementById("already_existing_color_box");
   var default_val = parseInt(already_exist.value); // This element is created with the fact that we have two already existing color selectors 0 and 1
-  default_val = default_val + 1;
+  default_val += 1;
   var new_val = default_val.toString() + default_val.toString();
   elem =
     `<span class="input_text_side">Color:</span>
@@ -1663,6 +1689,7 @@ function load_icon_maker(iconType) {
     "../../backend/icons/get_icon.php?echo=raw&display_by=" + display_by;
 
   var elem = document.getElementById("the_selected_icon_displayer");
+  elem = sanitizeInput(elem);
   var ret_value = "";
   if (iconType == "FontAwesome") {
     $.post(
@@ -1672,6 +1699,7 @@ function load_icon_maker(iconType) {
       },
       function (data, status) {
         //alert(data);
+        data = sanitizeInput(data);
         elem.innerHTML = data;
       }
     );
@@ -1689,13 +1717,11 @@ function handle_side_bars(restore_id) {
       document.getElementById("leftBarRestore").style.display = "none";
       scaleViewLayoutAdjust();
     }
-  } else if (restore_id == "rightBarRestore") {
-    if ($("#theRightSideBar").css("display") == "none") {
-      document.getElementById("theRightSideBar").style.display = "block";
-      document.getElementById("rightBarRestore").style.display = "none";
-      scaleViewLayoutAdjust();
-    }
-  }
+  } else if (restore_id == "rightBarRestore" && $("#theRightSideBar").css("display") == "none") {
+               document.getElementById("theRightSideBar").style.display = "block";
+               document.getElementById("rightBarRestore").style.display = "none";
+               scaleViewLayoutAdjust();
+         }
 }
 
 var toolTipText = document.getElementById("toolTipText");
