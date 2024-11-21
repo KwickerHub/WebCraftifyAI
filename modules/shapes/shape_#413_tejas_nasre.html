@@ -1,0 +1,129 @@
+<style>
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+
+  .img-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .info-container {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .info-container h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+  }
+
+  .info-container h1 span {
+    color: #ff6b6b;
+  }
+
+  .info-container p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
+
+  .info-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .info-container button:hover {
+    background-color: #ff4d4d;
+  }
+
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+    }
+
+    .img-container {
+      width: 100%;
+    }
+
+    .info-container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .info-container h1 {
+      font-size: 2rem;
+    }
+
+    .info-container p {
+      font-size: 1rem;
+    }
+
+    .info-container button {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .info-container h1 {
+      font-size: 1.5rem;
+    }
+
+    .info-container p {
+      font-size: 0.8rem;
+    }
+
+    .info-container button {
+      font-size: 0.8rem;
+    }
+  }
+</style>
+<body>
+  <div class="main-container">
+    <div class="img-container">
+      <img
+        src="https://images.pexels.com/photos/16416872/pexels-photo-16416872/free-photo-of-computer-with-two-monitors-displaying-chatgpt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="img"
+      />
+    </div>
+    <div class="info-container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quibusdam
+        vero perferendis tenetur omnis
+      </p>
+      <h1>Online Testing<span>Platform</span></h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quidem
+        itaque in rerum, illum cum inventore est vel pariatur nostrum nulla
+        distinctio quae laboriosam ipsum voluptates exercitationem accusamus non
+        impedit?
+      </p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <button>Sign In</button>
+    </div>
+  </div>
+</body>
