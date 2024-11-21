@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .split-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('/modules/split/images_and_icons/istockphoto-152049724-170667a.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.split-section {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: flex 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+        .split-section:hover {
+            flex: 3;
+        }
+        .split-section:nth-child(1) {
+        background-image: url('./images_and_icons/twocolor.jpeg');
+        }
+
+        .split-section:nth-child(2) {
+        background-image: url('./images_and_icons/2d-gradient-2.png');
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+        }
+        button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 80%;
+        background-color: #4CAF50; /* This sets the background color */
+        color: white; /* This sets the text color */
+        border: none; /* Removes the default button border */
+        cursor: pointer; /* Changes the cursor when you hover over the button */
+        }
+
+        button:hover {
+        background-color: #45a049; /* Changes the background color when you hover over the button */
+}
+        
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="split-container">
+        <div class="split-section form">
+            <h1 >Login</h1><br />
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="split-section form">
+            <h1>Sign Up</h1>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'WebCraftifyAI\assets\vendor\js\particlesjs-config.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
+</body>
+</html>
