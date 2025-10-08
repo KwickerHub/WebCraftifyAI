@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shapes Module - By Shristi</title>
+  <style>
+    /* Center the shape */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    /* Circle shape */
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #ff6f61;
+      border-radius: 50%;
+      position: relative;
+      animation: moveCircle 3s infinite alternate;
+    }
+
+    /* Animation */
+    @keyframes moveCircle {
+      0% { transform: translateY(0) scale(1); background-color: #ff6f61; }
+      50% { transform: translateY(150px) scale(1.2); background-color: #61b2ff; }
+      100% { transform: translateY(0) scale(1); background-color: #ff6f61; }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+
+  <script>
+    // Example JS: click to change shape color
+    const circle = document.querySelector('.circle');
+    circle.addEventListener('click', () => {
+      circle.style.backgroundColor = circle.style.backgroundColor === 'purple' ? '#ff6f61' : 'purple';
+    });
+  </script>
+</body>
+</html>
