@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Experience</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 900px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .container {
+            margin: 1.8rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .heading {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 2.3rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-a {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+            padding-right: 10px;
+        }
+
+        .text-b {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+            padding-left:10px;
+        }
+
+        .image-container {
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            background-color: rgb(0, 150, 224);
+            color: white;
+            font-size: 1rem;
+            height: 3.1rem;
+            width: 10rem;
+            border-radius: 6.3rem;
+            border: 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(0, 120, 204);
+        }
+        .button-wrapper {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">With a wide range of world cuisines to choose from, we guarantee you a sumptuous feast experience in our restaurant!</div>
+        <div>
+            <div class="text-a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus aliquid natus provident dolores praesentium, sunt vero hic earum iusto harum amet quas placeat voluptatum accusantium explicabo beatae inventore eum corporis dignissimos nesciunt eveniet fuga non voluptatibus? Reiciendis explicabo aliquid delectus modi, fugiat inventore incidunt.</div>
+        </div>
+        <div>
+            <div class="text-b">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio perspiciatis delectus magni quos sapiente veniam. Eius sapiente, rerum sequi porro harum consequuntur sunt illo impedit exercitationem! Qui amet similique accusantium!</div>
+            <div class="button-wrapper">
+            <button>Click Here</button></div>
+        </div>
+        <div class="image-container">
+            <img src="./images_and_icons/cuisines_image.png" alt="Cuisines Image">
+        </div>
+    </div>
+</body>
+</html>
