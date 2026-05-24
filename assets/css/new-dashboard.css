@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #130606;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2px 6%;
+}
+img.logo {
+  display: block;
+  height: 24px;
+  cursor: pointer;
+  margin-right: inherit;
+}
+.navigate_links ul {
+  list-style: none;
+}
+.navigate_links li {
+  display: inline-block;
+
+  padding: 2px 20px;
+}
+.navigate_links ul li a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: whitesmoke;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  padding: 0px 8px 0px 0px;
+  border-right: 1px solid white;
+}
+.navigate_links ul li a:hover {
+  color: #2980b9;
+  border: 2px solid blue;
+  box-shadow: 3px 3px 3px rgb(116, 176, 109), 3px 3px 3px blue;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 8px;
+}
+button {
+  margin-left: 70px;
+  padding: 9px 12px;
+  border-radius: 15px;
+  background-color: #2980b9;
+  color: rgb(243, 236, 236);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  background-color: rgb(108, 156, 125);
+  color: black;
+}
+
+i {
+  color: white;
+}
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class when the user clicks on the button) */
+.show {
+  display: block;
+}
+
+.menus {
+  list-style-type: none;
+}
+.menu-item {
+  margin-left: -40px;
+  position: relative;
+  /* Add some space for the icon */
+}
+.menu-item i {
+  position: absolute;
+  right: 0;
+  top: 30%;
+
+  font-size: 16px; /* Adjust icon size */
+}
+
+.menus2 {
+  margin-left: 60px;
+  margin-right: 60px;
+}
