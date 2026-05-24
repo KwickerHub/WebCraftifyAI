@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Running and Jogging</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&family=Open+Sans:wght@200;300&family=Oswald:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap">
+<style>
+  body {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    color: #62b4ba;
+  }
+  #body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .main-title {
+    margin: 20px 0;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+  }
+  .main_container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+  }
+  .sub_container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imageContainer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+  .img-description {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .sub-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .sub-title-desc {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+  }
+  .signature {
+    margin-top: 20px;
+    font-family: 'Monsieur La Doulaise', cursive;
+  }
+
+  .img1 {
+    background-image: url("./images_and_icons/grid_342_Jogging.jpg");
+  }
+
+  .img2 {
+    margin-top: 40px;
+    background-image: url("./images_and_icons/grid_342_workouts.jpg");
+  }
+
+  .img3 {
+    background-image: url("./images_and_icons/grid_342_HealthBenefits.jpg");
+  }
+
+  .img4 {
+    margin-top: 40px;
+    background-image: url("./images_and_icons/grid_342_WeightLoss.jpg");
+  }
+
+  @media screen and (max-width: 1025px) {
+    .main_container {
+      grid-template-columns: 1fr;
+    }
+    .sub_container {
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <div id="body">
+    <h1 class="main-title">Running and Jogging</h1>
+    <div class="main_container">
+      <div class="container1 sub_container">
+        <div class="imageContainer img1"></div>
+        <div class="img-description">
+          <h3 class="sub-title">Jogging</h3>
+          <p class="sub-title-desc">Remember, the feeling you get from a good run is far better than the feeling you get from sitting around wishing you were running.</p>
+        </div>
+      </div>
+      <div class="container2 sub_container">
+        <div class="img-description">
+          <h3 class="sub-title">Workouts</h3>
+          <p class="sub-title-desc">Willpower is like a muscle, the more frequently you train it, the stronger it gets.</p>
+        </div>
+        <div class="imageContainer img2"></div>
+      </div>
+      <div class="container3 sub_container">
+        <div class="imageContainer img3"></div>
+        <div class="img-description">
+          <h3 class="sub-title">Health Benefits</h3>
+          <p class="sub-title-desc">Every human being is the author of his own health or disease. The only way to keep your health is to eat what you don’t want, drink what you don’t like, and do what you’d rather not.</p>
+        </div>
+      </div>
+      <div class="container4 sub_container">
+        <div class="img-description">
+          <h3 class="sub-title">Weight Loss</h3>
+          <p class="sub-title-desc">Make time for it. Just get it done. Nobody ever got strong or got in shape by thinking about it. They did it.</p>
+        </div>
+        <div class="imageContainer img4"></div>
+      </div>
+    </div>
+    <div class="signature">
+       <h4>By Author</h4>
+    </div>
+  </div>
+</body>
+</html>
