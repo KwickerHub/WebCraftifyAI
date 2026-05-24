@@ -1,0 +1,88 @@
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 8px solid rgb(82, 82, 241);
+  }
+  
+  .left-column {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .right-column {
+    flex: 2;
+    padding: 20px;
+    
+  }
+  
+  .profile-image {
+    width:560px;
+    height: 560px;
+    
+  }
+  
+ /* .contact-info {
+    margin-left: 56%;
+  }*/
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
+  .contact-info p i {
+    margin-right: 5px;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn i {
+    margin-right: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+</style>
+
+
+
+
+<div class="container">
+    <div class="left-column">
+      <img src="images_and_icons/graphic designer.jpeg" alt="Profile Image" class="profile-image">
+      
+    </div>
+    <div class="right-column">
+      <h1>John Doe</h1>
+      <p>Graphic Designer</p>
+      <p>Welcome to my portfolio website. Here you can find examples of my work and learn more about me.</p>
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> +1234567890</p>
+        <p><i class="fas fa-envelope"></i> example@gmail.com</p>
+        <a href="cv.pdf" class="btn"><i class="fas fa-download"></i> Download CV</a>
+      </div>
+      <a href="portfolio.html" class="btn">View Portfolio</a>
+    </div>
+</div>
