@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/new-dashboard.css"
+    />
+    <!-- Basic styling  -->
+  </head>
+  <body>
+    <header>
+      <i class="fa fa-home fa-2x" style="margin-right: 14px"></i>
+      &nbsp;&nbsp;
+      <div class="icons-container">
+        <img
+          class="logo"
+          onmouseover="toggleDown()"
+          src="/assets/img/brand_kwickerhub/kwickerhub.png"
+          alt="Loading image"
+        />
+
+        <div id="myDropdown" class="dropdown-content">
+          <ul class="menus">
+            <li class="menu-item">
+              <a href="#"
+                >File &nbsp<i
+                  class="fa fa-chevron-right"
+                  style="color: black"
+                ></i
+              ></a>
+            </li>
+            <li class="menu-item">
+              <a href="#"
+                >Edit<i
+                  class="fa fa-chevron-right"
+                  style="margin-left: 80px; color: black"
+                ></i
+              ></a>
+            </li>
+            <li class="menu-item">
+              <a href="#"
+                >View &nbsp<i
+                  class="fa fa-chevron-right"
+                  style="color: black"
+                ></i
+              ></a>
+            </li>
+            <li class="menu-item">
+              <a href="#"
+                >Preference<i
+                  class="fa fa-chevron-right"
+                  style="color: black"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menus2">
+        <nav class="navigate_links">
+          <ul>
+            <li style="margin-right: -20px">
+              <a href="./dashboard.html">Home</a>
+            </li>
+
+            <li style="margin-right: -20px">
+              <a href="./aboutus.html">About Us</a>
+            </li>
+            <li style="margin-right: -20px">
+              <a href="contacts.html">Contact Us</a>
+            </li>
+            <li style="margin-right: -20px"><a href="./help.html">Help</a></li>
+            <li style="margin-right: 40px">
+              <a href="./signup.html">Sign Up</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a class="signin" href="./login.html">
+        <button>Sign In</button>
+      </a>
+    </header>
+
+    <script>
+      function toggleDown() {
+        const dropdownContent = document.getElementById("myDropdown");
+        dropdownContent.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

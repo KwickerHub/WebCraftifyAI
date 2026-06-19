@@ -41,11 +41,12 @@ html {
   bottom: 0;
   left: 0;
   background-color: #000;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 .the_left_bar {
   display: block;
+  margin-left: auto;
   background-color: #bebebe;
   overflow: hidden;
   height: 80vh;
@@ -81,7 +82,7 @@ html {
   background: rgb(132 131 211);
 }
 .the_left_bar:hover {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .the_right_bar {
   float: right;
@@ -117,15 +118,15 @@ html {
   background: rgb(132 131 211);
 }
 .the_right_bar:hover {
-  overflow: scroll;
+  overflow: auto;
 }
 
 .the_panel_selector {
   max-width: 95%;
   min-width: 60%;
 }
-.each_item + .each_item{
-	margin-top: 4px;
+.each_item + .each_item {
+  margin-top: 4px;
 }
 
 .the_selected_displayer .each_item {
@@ -134,32 +135,32 @@ html {
   white-space: nowrap;
 }
 .the_selected_displayer .each_item:hover {
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
-.the_selected_displayer .each_item label{
-	width: 80px;
-	text-overflow: ellipsis;
-  overflow:hidden;
+.the_selected_displayer .each_item label {
+  width: 80px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
   margin-top: 4px;
   vertical-align: bottom;
 }
 
-.the_selected_displayer .each_item label:hover{
-	  overflow: visible; 
-    white-space: normal;
-    height:auto;
+.the_selected_displayer .each_item label:hover {
+  overflow: hidden;
+  white-space: normal;
+  height: auto;
 }
 
-.the_selected_displayer .each_item .the_input_side{
-  width: 180px;
-
+.the_selected_displayer .each_item .the_input_side {
+  width: 80px;
 }
 
 .the_bottom_bar .the_bottom_elems {
-  border-radius: 12px;
+  border-radius: 8px;
   border: 2px solid #432424;
+  margin-top: 9px;
   background-color: #000;
   display: inline-block;
   position: static;
@@ -169,32 +170,31 @@ html {
 }
 
 .the_bottom_bar .the_bottom_elems_block {
-  border-radius: 12px;
-  border: 2px solid #432424;
-  background-color: green;
+  border-radius: 8px;
+  border: 1px solid #432424;
+  background-color: rgb(244, 244, 244);
   display: inline-block;
   position: static;
-  color: #fff;
+  color: #5d5d5d;
   padding: 8px;
   cursor: pointer;
 }
 
 .the_panel_submitter {
-  padding: 13px;
+  padding: 12px;
   display: block;
   background-color: darkblue;
-  color: #fedfed;
+  color: #ececec;
   border-radius: 12px;
   font-weight: bold;
 }
 
 .the_add_child_button {
-  padding: 13px;
+  padding: 8px;
   display: block;
-  background-color: green;
-  color: #fedfed;
+  background-color: rgb(59, 78, 139);
+  color: #eaeaea;
   border-radius: 12px;
-  font-weight: bold;
 }
 
 .the_dev_body {
@@ -202,7 +202,7 @@ html {
   color: #000;
   border: 2px solid #940948;
   height: 80vh;
-  max-width: 60%;
+  max-width: 80%;
   display: inline-block;
   text-align: left;
   overflow: scroll;
@@ -239,8 +239,8 @@ html {
 .theTextPopUp {
   width: 50%;
   height: auto;
-  padding: 15px;
-  background-color: #000a8b;
+  padding: 2px;
+  background-color: #1b5149;
   color: blue;
   border-radius: 12px;
   position: absolute;
@@ -253,28 +253,30 @@ html {
 }
 
 .theTextPopUp input {
+  margin-bottom: 12px;
   width: 80%;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
 }
 
 .theTextPopUp textarea {
   width: 80%;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 6px;
 }
 
 .theTextPopUp button {
   width: 80%;
-  padding: 15px;
-  background-color: #fff;
-  color: #000;
+  padding: 10px;
+  background-color: #061a0d;
+  color: #fcfcfc;
 }
 
 .theTextPopUp button:hover {
   width: 80%;
-  padding: 15px;
-  background-color: green;
+  padding: 12px;
+  background-color: rgb(21, 59, 21);
   color: #fefefe;
 }
 
@@ -764,34 +766,31 @@ html {
 }
 
 /*media queries for settings body*/
-@media only screen and (max-width: 900px){
-	
-	.the_settings_section .settings_body{
-		left: 10%;
-		width: 80%;
-		top: 24%;
-
-	}
-	.settings_body ul{
-		margin-bottom:1%;
-		padding-left: 9%;
-	}
-	.the_settings_section .setting_item {
-		padding:2%;
-	}
-	#the_settings_section_page{
-	top: 18%;
+@media only screen and (max-width: 900px) {
+  .the_settings_section .settings_body {
+    left: 10%;
+    width: 80%;
+    top: 24%;
+  }
+  .settings_body ul {
+    margin-bottom: 1%;
+    padding-left: 9%;
+  }
+  .the_settings_section .setting_item {
+    padding: 2%;
+  }
+  #the_settings_section_page {
+    top: 18%;
     left: 12.5%;
-		width: 75%;
-    padding: 2%;	
-	}
-	.the_input_side{
-		display: block; 
-		margin:auto; 
-	}
-	.the_settings_section .settings_body .the_save_button{
-		width: 40%;
-		padding: 2%;
-
-	}
+    width: 75%;
+    padding: 2%;
+  }
+  .the_input_side {
+    display: block;
+    margin: auto;
+  }
+  .the_settings_section .settings_body .the_save_button {
+    width: 40%;
+    padding: 2%;
+  }
 }
